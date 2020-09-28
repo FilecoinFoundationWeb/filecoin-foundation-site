@@ -1,0 +1,20 @@
+:root {
+    --primary: #02D2D6;
+    --site-bg: black;
+    --site-text: #eee;
+    --site-text-grey: #ccc;
+
+    --code-bg: #2d2d2d;
+    --kbd-color: #7ec699;
+    --code-color: #e2777a;
+
+
+    --black: #000;
+    --white: #fff;
+    --gray: #595959;
+
+    --mobile-width: 767px; 
+}
+
+@custom-media --viewport-medium (min-width: 600px);
+@custom-media --viewport-large (min-width: 1200px);

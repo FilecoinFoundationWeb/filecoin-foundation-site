@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container bg-black">
+    <div class="bg-black text-white d-flex h-100p bg-fip-particles bg-no-rp bg-pos-fip">
+        {% include 'header.njk' %}
+
+        <div class="main-content d-flex flex-column align-items-left m-10">
+            <h4 class="mt-180 text-seagreen pb-10">FIPs</h4>
+            <hr class="w-80 bd-none bd-top">
+            <h1 class="ts-35 fw-light pt-10 mr-150">Filecoin Improvement Proposals (FIPs) </h1>
+            <h1 class="ts-35 fw-light pt-10 mr-150">What are FIPs?</h1>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+                Filecoin Improvement Proposals (FIPs) are standards specifying potential new features or processes for Filecoin. FIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for Filecoin are discussed and developed through the FIP process.</p>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+                Anyone within the Filecoin community has the ability to create an FIP. Guidelines for writing FIPs are included in FIP 1. The FIP should provide a concise technical specification of the feature and its rationale. The FIP author is responsible for building consensus within the community and documenting dissenting opinions. Given the high technical bar for submitting a well-formed FIP, historically, most FIP authors have been application or protocol developers.</p>
+            <h1 class="ts-35 fw-light pt-10 mr-150">Why do FIPs matter?</h1>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+                FIPs play a central role in how changes happen and are documented on Filecoin. They are the way for people to propose, debate, and adopt changes. There are different types of FIPs, such as core FIPs for low-level protocol changes that affect consensus and require a network upgrade. Every network upgrade consists of a set of FIPs that need to be implemented by each Filecoin client on the network. This implies that to stay in consensus with other clients on the Filecoin mainnet, client developers need to make sure they have all implemented the required FIPs.
+            </p>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+                Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin: anyone is free to propose one, and then various stakeholders in the community will discuss to determine whether it should be adopted as a standard or included in a network upgrade. Non-core FIPs don't have to be adopted by all applications, but core FIPs must be widely adopted (because all nodes must upgrade to stay part of the same network) -- therefore core FIPs require broader consensus within the community than non-core FIPs.
+            </p>
+            <h1 class="ts-35 fw-light pt-10 mr-150">History of FIPs</h1>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+                The Filecoin Improvement Proposals (FIPs) Github repository was created in March 2019 and launched in September 2020. The FIP process is based on the Ethereum Improvement Proposals (EIPs) process, which is itself based on the Bitcoin Improvement Proposals (BIPs) process and the Python Enhancement Proposals (PEPs) process.
+            </p>
+            <p class="ts-20 fw-light line-height-15 mt-40 mr-150 pb-20">
+              
+            </p>
+            <h1 class="ts-20 fw-bold pt-10 mr-150">
+                If you’re interested in participating, check out the FIP section of the Filecoin Discussion forum.
+            </h1>
+            <a href="https://discuss.filecoin.io/c/fip/20" class="border-none text-white bg-black br-radius-100 br-2 pr-50 pl-50 pt-10 pb-10 mt-30 text-decoration-none">
+                Participate
+            </a>
+
+            <h4 class="">Also see: </h4>
+            <a href="https://github.com/filecoin-project/FIPs" class="text-seagreen">How to create a FIP</s>
+        </div>
+    </div>
+</div>
+{% include 'footer.njk' %}

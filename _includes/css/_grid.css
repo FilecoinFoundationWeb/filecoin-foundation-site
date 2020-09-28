@@ -1,0 +1,9 @@
+* {
+    border: 0;
+    box-sizing: border-box
+}
+
+body {
+    background: var(--site-bg);
+    color: #eee
+}
