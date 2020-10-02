@@ -9,9 +9,6 @@ main {
     flex: 1;
     margin-top: var(--header-height);
     padding: 1rem;
-    transition: 0.2s ease-in-out;
-    transition-property: margin;
-    will-change: margin;
 }
 footer {
     padding-top: 1rem;
