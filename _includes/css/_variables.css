@@ -1,22 +1,20 @@
 :root {
-    /* https://www.colorhexa.com/02d2d6 */
-    --primary: rgb(2,210,214);
-    --primary-transparent: rgba(2, 210, 214, 0.87);
+    --primary: #02D2D6;
+    --site-bg: black;
+    --site-text: #eee;
+    --site-text-grey: #ccc;
 
-    --cl-text-emphasis: rgba(255, 255, 255, 1);
-    --cl-text: rgba(255, 255, 255, 0.87);
-    --cl-text-disabled: rgba(255, 255, 255, 0.60);
+    --code-bg: #2d2d2d;
+    --kbd-color: #7ec699;
+    --code-color: #e2777a;
 
-    --cl-selected: var(--primary-transparent);
-    
-    --cl-bg: rgba(0,0,0,1);
-    --cl-bg-alt: rgba(255, 255, 255, 0.05);
-    --cl-bg-emphasis: rgba(255, 255, 255, 0.1);
+
+    --black: #000;
+    --white: #fff;
+    --gray: #595959;
 
     --mobile-width: 767px; 
-    --nav-width: 370px;
-    --header-height: 80px;
 }
 
-@custom-media --viewport-medium (min-width: 767px);
+@custom-media --viewport-medium (min-width: 600px);
 @custom-media --viewport-large (min-width: 1200px);

@@ -9,7 +9,7 @@ const fileName = "script.js";
 
 module.exports = class {
   async data () {
-    const rawFilepath = path.join(__dirname, `../_includes/js/${fileName}`);
+    const rawFilepath = path.join(__dirname, `_includes/js/${fileName}`);
     return {
       permalink: `js/${fileName}`,
       rawFilepath,

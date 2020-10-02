@@ -8,7 +8,7 @@ const fileName = "styles.css";
 
 module.exports = class {
   async data () {
-    const rawFilepath = path.join(__dirname, `../_includes/css/${fileName}`);
+    const rawFilepath = path.join(__dirname, `_includes/css/${fileName}`);
     return {
       permalink: `css/${fileName}`,
       rawFilepath,
@@ -22,7 +22,7 @@ module.exports = class {
       require('postcss-import'),
       require('postcss-preset-env')({ stage: 1 })
     ])
-    .process(rawCss, { from: rawFilepath, map: { inline: true } })
+    .process(rawCss, { from: rawFilepath })
     .then(result => result.css);
   };
 }
