@@ -1,0 +1,84 @@
+figure {
+    margin: 1.5rem;
+}
+figure > img {
+    display: block;
+    margin: 0 auto;
+}
+figcaption {
+    color: var(--cl-text-disabled);
+    margin-top: .75rem;
+    font-size: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+hr {
+    border: none;
+    border-top: 1px solid var(--cl-bg-emphasis);
+}
+
+::selection {
+    background: var(--cl-selected);
+}
+
+details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cl-bg-alt);
+    padding: 10px 10px 0;
+    margin: 1em 0;
+    border-radius: 6px;
+    overflow: hidden;
+    outline: none;
+}
+
+details[open] {
+    padding: 10px;
+}
+
+details > :last-child {
+    margin-bottom: 0;
+}
+
+details[open] summary {
+    margin-bottom: 10px;
+}
+
+summary {
+    outline: none;
+    display: list-item;
+    background-color: var(--cl-bg-emphasis);
+    padding: 10px;
+    margin: -10px -10px 0;
+}
+
+details > :not(summary) {
+    margin-top: 0;
+}
+
+summary::-webkit-details-marker {
+    color: var(--cl-text);
+}
+
+/* Scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cl-bg-alt);
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: var(--cl-bg-emphasis);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cl-bg-emphasis);
+}
