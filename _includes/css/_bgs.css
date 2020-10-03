@@ -4,7 +4,7 @@
         background-size: auto;
         background-origin: border-box;
         background-position: 0 50%;
-        background-image:url(/svg/bg-fips.svg)
+        background-image:url(/assets/svg/bg-fips.svg)
     }
     .bg-team,
     .bg-contact,
@@ -16,27 +16,27 @@
         background-size: auto;
         background-origin: border-box;
         background-position: 100% 0;
-        background-image:url(/svg/bg-philosophy.svg)
+        background-image:url(/assets/svg/bg-philosophy.svg)
     }
     .bg- {
         background-repeat: no-repeat;
         background-size: auto;
         background-origin: border-box;
         background-position: 100% 0;
-        background-image:url(/svg/bg-index.svg)
+        background-image:url(/assets/svg/bg-index.svg)
     }
     .bg-about {
         background-repeat: no-repeat;
         background-size: auto;
         background-origin: border-box;
         background-position: 100% 0;
-        background-image:url(/svg/bg-about.svg)
+        background-image:url(/assets/svg/bg-about.svg)
     }
     .bg-community {
         background-repeat: no-repeat;
         background-size: auto;
         background-origin: border-box;
         background-position: 0 50%;
-        background-image:url(/svg/bg-community.svg)
+        background-image:url(/assets/svg/bg-community.svg)
     }
 }

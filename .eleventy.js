@@ -1,7 +1,7 @@
 const { DateTime } = require('luxon');
 const { URL } = require('url');
 
-absoluteUrl = function (url, base) {
+const absoluteUrl = function (url, base) {
     try {
         return new URL(url, base).toString();
     } catch (e) {
@@ -10,6 +10,7 @@ absoluteUrl = function (url, base) {
 };
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(require('./_11ty/svg'), {src: 'assets/svg'})
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
     
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -23,11 +24,9 @@ module.exports = function (eleventyConfig) {
             ' LLLL dd, yyyy'
         );
     });
-    eleventyConfig.addNunjucksFilter('absoluteUrl', (href, base) =>
-        absoluteUrl(href, base)
-    );
+    eleventyConfig.addNunjucksFilter('absoluteUrl', absoluteUrl);
 
-    eleventyConfig.addPassthroughCopy({ '_includes/static': '/' });
+    eleventyConfig.addPassthroughCopy({ 'static': '/' });
     return {
         templateFormats: ['md', 'njk', 'html', 'liquid', '11ty.js']
     };
