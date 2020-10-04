@@ -42,3 +42,13 @@
     font-weight: 600;
     color: var(--cl-text-emphasis);
 }
+
+.Icon {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}

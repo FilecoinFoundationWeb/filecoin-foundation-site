@@ -1,3 +1,11 @@
+.bg-nav {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    background-position: 0 50%;
+    background-image:url(/assets/svg/bg-fips.svg)
+}
+
 @media (--viewport-medium) {
     .bg-fips {
         background-repeat: no-repeat;
@@ -13,28 +21,28 @@
     .bg-policy,
     .bg-philosophy {
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: 70%;
         background-origin: border-box;
         background-position: 100% 0;
         background-image:url(/assets/svg/bg-philosophy.svg)
     }
     .bg- {
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: 80%;
         background-origin: border-box;
         background-position: 100% 0;
         background-image:url(/assets/svg/bg-index.svg)
     }
     .bg-about {
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: 30%;
         background-origin: border-box;
         background-position: 100% 0;
         background-image:url(/assets/svg/bg-about.svg)
     }
     .bg-community {
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: 40%;
         background-origin: border-box;
         background-position: 0 50%;
         background-image:url(/assets/svg/bg-community.svg)
