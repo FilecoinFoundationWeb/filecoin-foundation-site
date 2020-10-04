@@ -33,11 +33,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
     <meta property="og:title" content="{{ titleFull }}">
+    <meta property="og:description" content="{{ desc | escape }}">
     <meta property="og:image" content="{{ img | absoluteUrl(metadata.url) }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
+    <meta property="twitter:title" content="{{ titleFull }}">
+    <meta property="twitter:description" content="{{ desc | escape }}">
     <meta property="twitter:site" content="@{{ metadata.author.twitterHandle }}">
     <meta property="twitter:creator" content="@{{ metadata.author.twitterHandle }}">
     <meta property="twitter:image" content="{{ img | absoluteUrl(metadata.url) }}">
