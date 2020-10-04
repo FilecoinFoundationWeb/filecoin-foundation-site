@@ -11,6 +11,7 @@ const absoluteUrl = function (url, base) {
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(require('./_11ty/svg'), {src: 'assets/svg'})
+    eleventyConfig.addPlugin(require('./_11ty/html'))
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
     
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
