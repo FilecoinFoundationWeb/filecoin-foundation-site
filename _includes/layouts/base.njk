@@ -11,30 +11,44 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
-    <title>{{ metadata.title | escape }}
-      |
-      {{ title | escape }}</title>
 
-    <meta property="og:title" content="{{ metadata.title | escape }} | {{ title | escape }}">
+    {% set img = metadata.image or image %}
     {% set desc = renderData.description or description %}
     {% if not desc %}
       {% set desc = content | striptags | truncate(140) %}
     {% endif %}
-    {% if desc %}
-      <meta name="description" content="{{ desc | escape  }}">
-      <meta property="og:description" content="{{ desc | escape }}">
+    {% set titleParts = [metadata.title, title] %}
+    {% if not page.fileSlug %}
+      {% set titleFull = metadata.title %}
+    {% else %}
+      {% set titleFull = titleParts | join(" | ") %}
+
     {% endif %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@{{ metadata.author.twitterHandle }}">
-    <meta name="twitter:creator" content="@{{ metadata.author.twitterHandle }}">
-    {% if image %}
-      <meta property="og:image" content="{{ image | absoluteUrl(metadata.url) }}">
-    {% endif %}
+
+    <title>{{ titleFull }}</title>
+    <meta name="title" content="{{ titleFull }}">
+    <meta name="description" content="{{ desc | escape  }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
+    <meta property="og:title" content="{{ titleFull }}">
+    <meta property="og:description" content="{{ desc | escape }}">
+    <meta property="og:image" content="{{ img | absoluteUrl(metadata.url) }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ metadata.url }}{{ canonicalUrl or page.url }}">
+    <meta property="twitter:title" content="{{ titleFull }}">
+    <meta property="twitter:description" content="{{ desc | escape }}">
+    <meta property="twitter:site" content="@{{ metadata.author.twitterHandle }}">
+    <meta property="twitter:creator" content="@{{ metadata.author.twitterHandle }}">
+    <meta property="twitter:image" content="{{ img | absoluteUrl(metadata.url) }}">
 
     <link rel="canonical" href="{{ metadata.url }}{{ canonicalUrl or page.url }}">
     <!-- This is a blog and so it SHOULD be safe and it is nice for the web to send referrers cross-origin. However, if you use sensitive data in URLs, consider changing this to a value like `origin-when-cross-origin` https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy -->
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="preconnect" href="/" crossorigin>
+    <link rel="preconnect" href="/" crossorigin="crossorigin">
   </head>
   <body class="bg-{{ page.fileSlug }}">
     <header>
@@ -49,14 +63,14 @@
       {% if not page.fileSlug %}
         <article>
           {{ content | safe }}
-          <article>
-          {% else %}
-            <article style="margin-top:95px">
-              <h1 class="Title">{{ title or (page.fileSlug | title) }}</h1>
-              {{ content | safe }}
-              <article>
-                {% endif%}
-              </main>
-              <footer></footer>
-            </body>
-          </html>
+        <article>
+      {% else %}
+        <article style="margin-top:95px">
+          <h1 class="Title">{{ title or (page.fileSlug | title) }}</h1>
+          {{ content | safe }}
+        <article>
+      {% endif %}
+    </main>
+    <footer></footer>
+  </body>
+</html>
