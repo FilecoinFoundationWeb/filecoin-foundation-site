@@ -11,7 +11,7 @@ module.exports = class {
   async data () {
     const rawFilepath = path.join(__dirname, `../_includes/js/${fileName}`);
     return {
-      permalink: `js/${fileName}`,
+      permalink: `assets/js/${fileName}`,
       rawFilepath,
       eleventyExcludeFromCollections: true
     };
