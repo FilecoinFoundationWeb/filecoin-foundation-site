@@ -20,7 +20,8 @@ module.exports = class {
   async render ({ rawCss, rawFilepath }) {
     return await postcss([
       require('postcss-import'),
-      require('postcss-preset-env')({ stage: 1 })
+      require('postcss-preset-env')({ stage: 1 }),
+      require('postcss-csso')
     ])
     .process(rawCss, { from: rawFilepath, map: { inline: true } })
     .then(result => result.css);

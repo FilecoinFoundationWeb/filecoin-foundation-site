@@ -1,5 +1,6 @@
 ---
 layout: base
+title: Philosophy
 ---
 
 ## The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.

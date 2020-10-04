@@ -1,5 +1,6 @@
 ---
 layout: base
+title: Grants
 ---
 
 ## Submissions to Wave 5 of the Filecoin Dev Grants program are currently underway. [See here for the full list of proposals we are seeking to fund](https://github.com/filecoin-project/devgrants/blob/master/rfps/new-wave-5-rfps.md). 

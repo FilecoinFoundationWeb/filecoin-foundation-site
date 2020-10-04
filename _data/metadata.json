@@ -1,25 +1,26 @@
 {
-    "title": "Title of the website. Update me.",
-    "url": "https://update-me.com",
-    "domain": "update-me.com",
-    "description": "Description of the website. Update me.",
+    "title": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "domain": "fil.org",
+    "image": "/maskable_icon.png",
+    "description": "The Filecoin Foundation (FF) is an independent organization dedicated to developing Filecoin and related technologies. The Foundation does this by coordinating and supporting the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.",
     "genre": "Insert a schema.org genre",
     "googleAnalyticsId": "GA ID. Update me",
     "feed": {
       "subtitle": "Subtitle. Update me.",
       "filename": "feed.xml",
       "path": "/feed/feed.xml",
-      "id": "https://update-me.com"
+      "id": "https://fil.org"
     },
     "jsonfeed": {
       "path": "/feed/feed.json",
-      "url": "https://update-me.com/feed/feed.json"
+      "url": "https://fil.org/feed/feed.json"
     },
     "author": {
-      "name": "Author Name. Update me.",
-      "twitterHandle": "update_me"
+      "name": "Filecoin Foundation",
+      "twitterHandle": "Filecoin"
     },
     "publisher": {
-      "name": "Publisher name. Update me."
+      "name": "Filecoin Foundation"
     }
   }
