@@ -1,5 +1,9 @@
 const { DateTime } = require('luxon');
 const { URL } = require('url');
+const { promisify } = require("util");
+const fs = require("fs");
+const hasha = require("hasha");
+const readFile = promisify(require("fs").readFile);
 
 const absoluteUrl = function (url, base) {
     try {
@@ -26,6 +30,21 @@ module.exports = function (eleventyConfig) {
         );
     });
     eleventyConfig.addNunjucksFilter('absoluteUrl', absoluteUrl);
+    eleventyConfig.addNunjucksAsyncFilter("addHash", function (
+        absolutePath,
+        callback
+      ) {
+        readFile(`_site${absolutePath}`, {
+          encoding: "utf-8",
+        })
+          .then((content) => {
+            return hasha.async(content);
+          })
+          .then((hash) => {
+            callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
+          })
+          .catch((error) => callback(error));
+      });
 
     eleventyConfig.addPassthroughCopy({ 'static': '/' });
     return {

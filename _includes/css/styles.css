@@ -64,20 +64,20 @@ nav {
         background: transparent;
     }
 }
-nav ul:first-of-type {
+nav > ul:first-of-type {
     margin-top: 110px;
 }
-nav ul:first-of-type li {
+nav > ul:first-of-type li {
     margin-bottom: 15px;
     font-size: 17px;
     font-weight: 600;
     line-height: 22px;
 }
-nav ul:first-of-type a {
+nav > ul:first-of-type a {
     color: var(--cl-text-emphasis);
     text-decoration: none;
 }
-nav ul:first-of-type a:hover {
+nav > ul:first-of-type a:hover {
     color: var(--primary);
     text-decoration: none;
 }
@@ -86,22 +86,20 @@ nav .footer {
     position: fixed;
     bottom: 0;
     font-size: 60%;
+    padding-bottom: 1rem;
+}
+nav ul {
+    margin: 0;
 }
 nav .footer li {
+    padding-right: 0.5rem;
     display: inline;
 }
-
-nav li:before {
-    font-size: initial;
-    vertical-align: initial;
-    content: '';
-    color: initial;
-    text-align: initial;
-    margin-right: initial;
-    width: initial;
-    height: initial;
-    line-height: initial;
-    margin-left: initial;
+nav .footer li:not(:first-child) {
+    padding-left: 0.5rem;
+}
+nav .footer li:not(:last-child) {
+    border-right: 1px solid white;
 }
 
 #menu-toggle {
