@@ -24,6 +24,5 @@
     "build": "eleventy",
     "serve": "eleventy --serve"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
