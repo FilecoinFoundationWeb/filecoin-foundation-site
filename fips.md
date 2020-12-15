@@ -5,7 +5,9 @@ title: Filecoin Improvement Proposals (FIPs)
 
 ## What are FIPs? 
 
-Filecoin Improvement Proposals (FIPs) are standards specifying potential new features or processes for Filecoin. FIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for Filecoin are discussed and developed through the FIP process.
+The Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with the open-source ethos. The Filecoin Improvement Proposals process (FIPs) is a way for community members to propose changes to the Filecoin network. 
+
+FIPs are standards specifying potential new features or processes for Filecoin. FIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for Filecoin are discussed and developed through the FIP process.
 
 Anyone within the Filecoin community has the ability to create an FIP. Guidelines for writing FIPs are included in FIP 1. The FIP should provide a concise technical specification of the feature and its rationale. The FIP author is responsible for building consensus within the community and documenting dissenting opinions. Given the high technical bar for submitting a well-formed FIP, historically, most FIP authors have been application or protocol developers.
 
