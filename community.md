@@ -51,7 +51,7 @@ The Filecoin community includes thousands of developers, technologists, users, a
         <p>
             This dashboard provides the latest update of the Filecoin Chain.
         </p>
-        <a href="https://filscan.io/#/home" class="Button">
+        <a href="https://filfox.info/en" class="Button">
             Read More
         </a>
     </div>
