@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Blog
+title: blog
 ---
 
-## Blog
+## blog
 
 ### Please find the lateset blog entries from the Filecoin Foundation below.
 
