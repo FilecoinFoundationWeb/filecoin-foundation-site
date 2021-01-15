@@ -19,7 +19,7 @@ In the next day or so, the FF and the FFDW will be receiving their first transfe
 
 Foundations are critical to the success of blockchain networks. They safeguard the network, drive governance, and promote ecosystem growth. We have ambitious missions, and we are thrilled to dive into the work. Follow our journeys on this blog. We look forward to sharing our progress with you!
 
-Read more <a href="https://filecoinfoundation.medium.com/">here</a>
+Read more <a href="https://filecoinfoundation.medium.com/">here</a>.
 
 ***
 
