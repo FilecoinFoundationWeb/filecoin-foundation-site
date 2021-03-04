@@ -33,7 +33,7 @@ Root Key Holders, Notaries, Clients, and Miners, interact through the allocation
 
 Join #fil-plus on the official Filecoin Slack and participate in our bi-weekly community governance calls every other Tuesday - use the [Filecoin community calendar](https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t) to join.
 
-* The official client and notary portal is hosted via the official foundation website at https://plus.fil.org
+* [The official client and notary portal, hosted via the Foundation website](https://blog.cosmos.network/progress-report-interchain-nft-metadata-standards-94770dfe3bb1)
 * [FIP0003 proposing the program](https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0003.md)
 * [Client onboarding repository](https://github.com/filecoin-project/filecoin-plus-client-onboarding)
 * [Notary governance repository](https://github.com/filecoin-project/notary-governance/)
