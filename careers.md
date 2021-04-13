@@ -11,7 +11,7 @@ Filecoin Foundation is an equal opportunity employer. Developing and maintaining
 
 We are a fully remote organization and consider candidates regardless of geographic location.
 
-[Open position are available here] 
-(https://jobs.lever.co/filecoin/)
+Open position are available
+<a href="https://jobs.lever.co/filecoin/"> here </a>. 
 
 
