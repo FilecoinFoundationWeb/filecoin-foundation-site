@@ -14,4 +14,6 @@ We are a fully remote organization and consider candidates regardless of geograp
 Open position are available
 <a href="https://jobs.lever.co/filecoin/"> here </a>. 
 
+We have also prepared a Fielcoin Primer Kit for interseted applicants <a href="https://drive.google.com/file/d/1A6qdZ6z474eVGYrmLT1WC_pcp-Ab14vp/view"> here </a>.
+
 
