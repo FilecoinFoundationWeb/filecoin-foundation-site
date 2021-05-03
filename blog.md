@@ -3,7 +3,7 @@ layout: base
 title: Blog
 ---
 
-## Filecoin Foundation and Filecoin Foundation for the Decentralized Web Expand Boards
+##  <a href="https://filecoinfoundation.medium.com/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-expand-boards-96ac29ce0150">Filecoin Foundation and Filecoin Foundation for the Decentralized Web Expand Boards</a> 
 ### Published April 21st, 2021 
 
 <img src="https://miro.medium.com/max/1400/1*keqUQILr3JvS6nQ_e7nAQQ.png" style="width:1079px;height:567px;">
