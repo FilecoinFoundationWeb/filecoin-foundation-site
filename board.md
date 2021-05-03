@@ -1,4 +1,7 @@
-
+---
+layout: base
+title: Board
+---
 
 ##  <a href="https://filecoinfoundation.medium.com/filecoin-foundation-board-of-directors-ed13da68c66a">Filecoin Foundation and Filecoin Foundation for the Decentralized Web Board and Advisors</a> 
 ### Published April 21st, 2021 
