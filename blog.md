@@ -29,7 +29,7 @@ Filecoin is a peer-to-peer network that stores files, with built-in economic inc
 About The Filecoin Foundation for the Decentralized Web
 The mission of the Filecoin Foundation for the Decentralized Web is to ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.
 
-Read more <a href="https://filecoinfoundation.medium.com/">here</a>.
+<b> See all blog posts here </b> <a href="https://filecoinfoundation.medium.com/">here</a>.
 
 ***
 
