@@ -3,21 +3,31 @@ layout: base
 title: Blog
 ---
 
-## Filecoin Foundation and Filecoin Foundation for the Decentralized Web Gain Momentum 
-### Published Janurary 15th, 2021 
+## Filecoin Foundation and Filecoin Foundation for the Decentralized Web Expand Boards
+### Published April 21st, 2021 
 
 
-In 2017, the creators of Filecoin envisioned that an independent Filecoin Foundation would serve as the long-term governance body for the Filecoin Ecosystem. They gave the Foundation the mandate to “grow an open ecosystem for decentralized storage” and to “give developers an open and sustainable platform to build, enhance and monetize those services.” They wanted the Foundation to be modeled on Foundations for other open source projects like the Apache Software Foundation, the Mozilla Foundation and the Linux Foundation. 
+Big announcements today from the Filecoin Foundation and FFDW! Nicole Wong, former deputy U.S. chief technology officer, has joined the board of the Filecoin Foundation (FF). Kristin Smith, executive director of the Blockchain Association, has joined the board of the Filecoin Foundation for the Decentralized Web (FFDW). This comes on the heels of FF’s announcement last month that Brewster Kahle, founder of the Internet Archive, and Wendy Hanamura, director of partnerships at the Internet Archive, have joined its board of advisors.
 
-In October,<a href="https://www.youtube.com/watch?v=Sakannch1Dw&feature=emb_title"> we announced the details</a> of the <a href="https://fil.org/">Filecoin Foundation (FF)</a> and its mission. The Filecoin Foundation is an independent organization on a mission to accelerate the growth of Filecoin and related technologies to create a decentralized, efficient, and robust foundation for humanity’s information. The Foundation will build and support the Filecoin community. There are so many stakeholders in the Filecoin ecosystem: miners, developers, researchers, token holders, clients, users. We want to support all of them.  
+Wong joins the board of FF, which includes Board Chair Marta Belcher, general counsel and head of policy at Protocol Labs; Brian Behlendorf, executive director of Hyperledger; and Marcia Hofmann, a technology policy attorney. Smith joins the FFDW board, which includes Belcher as board chair; Behlendorf; and Rainey Reitman, a digital rights activist.
 
-The FF has a sister charitable organization, the Filecoin Foundation for the Decentralized Web (FFDW). The mission of the FFDW is to ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.
+Kahle and Hanamura join an impressive group of advisors to FF and FFDW that includes Ethereum co-founder Joseph Lubin, digital rights activist Danny O’Brien, Brex General Counsel Katie Biber, Anchorage General Counsel Georgia Quinn, Global Blockchain Business Council CEO Sandra Ro, Murmuration Labs CEO Alex Feerst, and Sheila Warren of the World Economic Forum (FFDW only).
 
-We also  <a href="https://www.youtube.com/watch?v=6OY4xAs3Grg&feature=emb_title">announced the incredible teams</a> making up the FF and FFDW in October, and those teams are <a href="https://filecoinfoundation.medium.com/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-gain-momentum-76a51f3e7abc">continuing to grow</a>. 
+Wong is a former vice president and deputy general counsel for Google, as well as former legal director for products at Twitter. She previously served as deputy U.S. chief technology officer during the Obama administration.
 
-In the next day or so, the FF and the FFDW will be receiving their first transfers of Filecoin tokens, totaling approximately 1 million FIL tokens for FF and 951,268 FIL tokens for FFDW. This represents a small percentage of the Foundations’ 100 million FIL allocation--as laid out in the <a href="https://coinlist.co/assets/index/filecoin_index/Protocol%20Labs%20-%20SAFT%20-%20Private%20Placement%20Memorandum-bbd65da01fdc4a15219c49ad20fb9e28681adec9fae744c41cccd124545c4c73.pdf">Filecoin PPM</a> --which the Foundations will continue to receive over time. 
+“I’m excited to join the Filecoin Foundation board and support its mission to build a more robust, more decentralized web, powered by the Filecoin network,” said Nicole Wong. “Filecoin has the potential to be a transformative technology — revolutionizing how we share, store, and transfer data online, and restoring user trust and ownership over information online.”
 
-Foundations are critical to the success of blockchain networks. They safeguard the network, drive governance, and promote ecosystem growth. We have ambitious missions, and we are thrilled to dive into the work. Follow our journeys on this blog. We look forward to sharing our progress with you!
+A Fortune 40 Under 40 recipient, Smith is the founding executive director of the Blockchain Association, a trade association representing more than three dozen of the world’s most prominent blockchain companies.
+
+“Being a part of such an important mission — fostering and developing the Web3 ecosystem — means a lot to me,” said Kristin Smith. “In my day-to-day work, I have the privilege of promoting the most interesting and innovative blockchain projects to date. And now, as an FFDW board member, I’ll have an opportunity to expand this work, especially in education and research.”
+
+“We are thrilled to welcome these industry leaders to FF and FFDW,” said Marta Belcher, board chair of FF and FFDW. “We are so excited about the amazing group of people we are bringing together to help advance our missions of preserving humanity’s most important information and decentralizing the Web.”
+Find information about FF and FFDW’s board members and advisors here.
+
+<b> About the Filecoin Foundation </b>
+Filecoin is a peer-to-peer network that stores files, with built-in economic incentives to ensure files are stored reliably over time. The mission of the Filecoin Foundation is to accelerate the growth of Filecoin and related technologies to create a decentralized, efficient, and robust foundation for humanity’s information.
+About The Filecoin Foundation for the Decentralized Web
+The mission of the Filecoin Foundation for the Decentralized Web is to ensure the permanent preservation of humanity’s most important information by stewarding the development of open source software and open protocols for decentralized data storage and retrieval networks.
 
 Read more <a href="https://filecoinfoundation.medium.com/">here</a>.
 
