@@ -6,7 +6,7 @@ title: Blog
 ## Filecoin Foundation and Filecoin Foundation for the Decentralized Web Expand Boards
 ### Published April 21st, 2021 
 
-<img src="https://miro.medium.com/max/1400/1*keqUQILr3JvS6nQ_e7nAQQ.png" style="width:104px;height:142px;">
+<img src="https://miro.medium.com/max/1400/1*keqUQILr3JvS6nQ_e7nAQQ.png" style="width:1079px;height:56px;">
 
 Big announcements today from the Filecoin Foundation and FFDW! Nicole Wong, former deputy U.S. chief technology officer, has joined the board of the Filecoin Foundation (FF). Kristin Smith, executive director of the Blockchain Association, has joined the board of the Filecoin Foundation for the Decentralized Web (FFDW). This comes on the heels of FF’s announcement last month that Brewster Kahle, founder of the Internet Archive, and Wendy Hanamura, director of partnerships at the Internet Archive, have joined its board of advisors.
 
