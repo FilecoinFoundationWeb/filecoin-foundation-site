@@ -7,7 +7,7 @@ title: Contacts
 
 ### For questions on the Filecoin Foundation, please email us at [hello@fil.org](mailto:hello@fil.org).
 
-<svg class="Icon"><use xlink:href="/symbol-defs.svg#icon-twitter"></use></svg> [Filecoin Twitter](https://twitter.com/Filecoin)  
+<svg class="Icon"><use xlink:href="/symbol-defs.svg#icon-twitter"></use></svg> [Filecoin Twitter](https://twitter.com/FilFoundation)  
 
 <svg class="Icon"><use xlink:href="/symbol-defs.svg#icon-youtube"></use></svg> [Filecoin Youtube](https://www.youtube.com/c/FilecoinProject/about)  
 
