@@ -10,9 +10,9 @@ As the Filecoin Ecosystem continues to grow, more projects are being developed t
 In addition to the recent launch of Fil+ to maximize incentives for storing useful data on Filecoin, and Phase 2 of the ongoing Slingshot storage competition, Filecoin Dev Grant projects are also paving the way for interesting use cases and tooling for the protocol. Over the past year, the Dev Grant program has awarded about 40 projects to date, out of 140 total proposals submitted by the community.
 
 Outlook for Wave 6
-Have an interesting idea for a storage application, developer tool or experimental project idea? Grant proposals for Wave 6 are due Jan 15th at 23:59 PDT for priority consideration. Apply at filecoin.io/grants by making a PR to the dev grants repo. For questions, reach out to us in Filecoin Slack in the #fil-devgrants channel or contact devgrants@filecoin.org.
+Have an interesting idea for a storage application, developer tool or experimental project idea? Grant proposals for Wave 8 are due June 30, 2021 at 23:59 PDT for priority consideration. Apply at filecoin.io/grants by making a PR to the dev grants repo. For questions, reach out to us in Filecoin Slack in the #fil-devgrants channel or contact devgrants@filecoin.org.
 
-See our [Proposal Guidelines](https://github.com/filecoin-project/devgrants/blob/master/rfps/new-wave-4-rfps.md#proposal-guidelines) about how to apply.
+See our [Proposal Guidelines](https://github.com/filecoin-project/devgrants/blob/master/rfps/new-wave-8-rfps.md#proposal-guidelines) about how to apply.
 
 Have a question about anything? Email devgrants@filecoin.org
 
