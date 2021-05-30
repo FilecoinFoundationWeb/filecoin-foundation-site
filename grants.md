@@ -3,7 +3,7 @@ layout: base
 title: Grants
 ---
 
-## Submissions to Wave 6 grant proposals are due January 15, 2021 for priority consideration. We will continue to evaluate new proposals after that deadline as capacity allows. [See here for the full list of proposals we are seeking to fund](https://github.com/filecoin-project/devgrants#submit-a-proposal-for-open-grants). 
+## Submissions to Wave 8 grant proposals are due June 30, 2021 for priority consideration. We will continue to evaluate new proposals after that deadline as capacity allows. [See here for the full list of proposals we are seeking to fund](https://github.com/filecoin-project/devgrants#submit-a-proposal-for-open-grants). 
 
 As the Filecoin Ecosystem continues to grow, more projects are being developed that facilitate an exciting range of storage applications, developer tools and integration experiments.
 
