@@ -35,8 +35,6 @@ Wendy Hanamura, Director of Partnerships, Internet Archive
 
 Joe Lubin, Founder of ConsenSys and Cofounder of Ethereum
 
-Danny O’Brien, Digital Rights Activist
-
 Georgia Quinn, General Counsel, Anchorage
 
 Sandra Ro, CEO, Global Blockchain Business Council
