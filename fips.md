@@ -20,11 +20,4 @@ Along with providing a technical specification for changes, FIPs are the unit ar
 ## History of FIPs
 The Filecoin Improvement Proposals (FIPs) Github repository was created in March 2019 and launched in September 2020. The FIP process is based on the Ethereum Improvement Proposals (EIPs) process, which is itself based on the Bitcoin Improvement Proposals (BIPs) process and the Python Enhancement Proposals (PEPs) process.
 
-### If you’re interested in participating, check out the FIP section of the Filecoin Discussion forum.
-
-<a href="https://discuss.filecoin.io/c/fip/20" class="Button">
-    Participate
-</a>
-
-### Also see:
 <a href="https://github.com/filecoin-project/FIPs">How to create a FIP</a>
