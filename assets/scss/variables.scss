@@ -1,0 +1,335 @@
+// ///////////////////////////////////////////////////////// [Variables] General
+// -----------------------------------------------------------------------------
+// --------------------------------------------------------------------- General
+$containerWidth: 68.75rem; // 1100px
+$containerWidthPlusOnePixel: 75.0625rem;
+$containerSingleColumn: 4.1665%;
+$standardGutter: 0.75rem;
+$underlineSpacing: 0.1875rem;
+
+$borderRadius_Medium: 0.25rem;
+
+// --------------------------------------------------------------------- Colours
+$gray50: #FAFAFA;
+$gray100: #F5F5F5;
+$gray200: #EEEEEE;
+$gray300: #E0E0E0;
+$gray400: #BDBDBD;
+$gray500: #9E9E9E;
+$gray600: #757575;
+$gray700: #616161;
+$gray800: #424242;
+$gray900: #212121;
+
+// ----------------------------------------------------------------- Breakpoints
+$breakpoint_Tiny: 25.9375rem; // 415px
+$breakpoint_Mini: 40rem; // 640px
+$breakpoint_Small: 53.125rem; // 850px
+$breakpoint_Medium: 64rem; // 1024px
+$breakpoint_Large: 75rem; // 1200px
+$breakpoint_Xlarge: 90rem; // 1440px
+$breakpoint_UltraLarge: 140.625rem; // 2250px
+
+// ////////////////////////////////////////////////////// [Variables] Typography
+// -----------------------------------------------------------------------------
+// -------------------------------------------------------------------- Families
+$font_Primary: 'Helvetica', sans-serif;
+$font_Secondary: 'Helvetica', sans-serif, monospace;
+
+// ---------------------------------------------------------------------- Sizing
+// fontSize_Mini | 11pt
+// fontSize_Small | 13pt
+// fontSize_Regular | 16pt
+// fontSize_Medium | 18pt
+// fontSize_Large | 20pt
+// fontSize_Larger | 22pt
+// fontSize_ExtraLarge | 24pt
+// fontSize_ExtraMediumLarge | 28pt
+// fontSize_ExtraExtraLarge | 40pt
+
+$fontSize_Mini: 0.6875rem;
+$fontSize_Small: 0.8125rem;
+$fontSize_Regular: 1rem;
+$fontSize_Medium: 1.125rem;
+$fontSize_Large: 1.25rem;
+$fontSize_Larger: 1.375rem;
+$fontSize_ExtraLarge: 1.5rem;
+$fontSize_ExtraMediumLarge: 1.75rem;
+$fontSize_ExtraExtraLarge: 2.5rem;
+
+// ---------------------------------------------------------------------- Weight
+$fontWeight_Regular: 400;
+$fontWeight_Medium: 500;
+$fontWeight_SemiBold: 600;
+
+// --------------------------------------------------------------------- Leading
+$leading_Tiny: 1;
+$leading_Mini: 1.2;
+$leading_Small: 1.4;
+$leading_Regular: 1.5;
+$leading_Medium: 1.6;
+$leading_Large: 2;
+$leading_ExtraLarge: 2.2;
+$leading_ExtraExtraLarge: 2.4;
+
+// -------------------------------------------------------------- Letter Spacing
+$letterSpacing_Regular: 0.02em;
+
+// ////////////////////////////////////////////////////////////////////// Mixins
+// --------------------------------------------------------------------- Styling
+@mixin shadow1 {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@mixin focus_BoxShadow_Small {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@mixin focus_BoxShadow_Regular {
+  box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+@mixin focus_BoxShadow_Link {
+  box-shadow: 0 0 0 5px rgba(0, 123, 255, 0.5);
+  border-radius: 0.125rem;
+}
+
+@mixin selection_Dark {
+  ::-moz-selection { background: $translucentWhite; color: black; }
+  ::selection { background: $translucentWhite; color: black; }
+}
+
+@mixin selection_Light {
+  ::-moz-selection { background: $translucentBlack; color: white; }
+  ::selection { background: $translucentBlack; color: white; }
+}
+
+@mixin selection_Invisible {
+  ::-moz-selection { background: transparent; color: transparent; }
+  ::selection { background: transparent; color: transparent; }
+}
+
+@mixin centerImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// --------------------------------------------------------------------- General
+@mixin optional-at-root($sel) { @at-root #{if(not &, $sel, selector-append(&, $sel))} { @content; } }
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') { @content; }
+  @include optional-at-root(':-moz-placeholder') { @content; }
+  @include optional-at-root('::-moz-placeholder') { @content; }
+	@include optional-at-root(':-ms-input-placeholder') { @content; }
+	@include optional-at-root('::-ms-input-placeholder') { @content; }
+  @include optional-at-root('::placeholder') { @content; }
+}
+
+// --------------------------------------------------------------- Media Queries
+@mixin tiny { @media screen and (max-width: $breakpoint_Tiny) { @content; } }
+@mixin mini { @media screen and (max-width: $breakpoint_Mini) { @content; } }
+@mixin small { @media screen and (max-width: $breakpoint_Small) { @content; } }
+@mixin medium { @media screen and (max-width: $breakpoint_Medium) { @content; } }
+@mixin large { @media screen and (max-width: $breakpoint_Large) { @content; } }
+@mixin xlarge { @media screen and (max-width: $breakpoint_Xlarge) { @content; } }
+@mixin ultraLarge { @media screen and (max-width: $breakpoint_UltraLarge) { @content; } }
+
+@mixin containerMaxMQ { @media screen and (max-width: $containerWidth) { @content; } }
+@mixin containerMinMQ { @media screen and (max-width: $containerWidthPlusOnePixel) { @content; } }
+@mixin customMaxMQ($width) { @media screen and (max-width: $width) { @content; } }
+@mixin customMinMQ($width) { @media screen and (min-width: $width) { @content; } }
+
+@mixin FireFox {
+  @-moz-document url-prefix() { @content; }
+}
+
+@mixin Edge {
+  @supports (-ms-ime-align:auto) { @content; }
+}
+
+@mixin Safari9 {
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit) { @content; }
+}
+
+@mixin Safari7Plus($item) {
+  _::-webkit-full-page-media, _:future, :root #{$item} { @content; }
+}
+
+@mixin Safari9Plus($item) {
+  _:default:not(:root:root), #{$item} { @content; }
+}
+
+@mixin IE10and11 {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { @content; }
+}
+
+@mixin iOSonly {
+  @supports (-webkit-overflow-scrolling: touch) { @content; }
+}
+
+@mixin everythingExceptIOS {
+  @supports not (-webkit-overflow-scrolling: touch) { @content; }
+}
+
+// ------------------------------------------------------ Typography | Font Size
+@mixin fontSize_Mini { font-size: $fontSize_Mini; }
+@mixin fontSize_Small { font-size: $fontSize_Small; }
+@mixin fontSize_Regular { font-size: $fontSize_Regular; }
+@mixin fontSize_Medium { font-size: $fontSize_Medium; }
+@mixin fontSize_Large { font-size: $fontSize_Large; }
+@mixin fontSize_Larger { font-size: $fontSize_Larger; }
+@mixin fontSize_ExtraLarge { font-size: $fontSize_ExtraLarge; }
+@mixin fontSize_ExtraMediumLarge { font-size: $fontSize_ExtraMediumLarge; }
+@mixin fontSize_ExtraExtraLarge { font-size: $fontSize_ExtraExtraLarge; }
+
+// -------------------------------------------------------- Typography | Leading
+@mixin leading_Tiny { line-height: $leading_Tiny; }
+@mixin leading_Mini { line-height: $leading_Mini; }
+@mixin leading_Small { line-height: $leading_Small; }
+@mixin leading_Regular { line-height: $leading_Regular; }
+@mixin leading_Medium { line-height: $leading_Medium; }
+@mixin leading_Large { line-height: $leading_Large; }
+@mixin leading_ExtraLarge { line-height: $leading_ExtraLarge; }
+@mixin leading_ExtraExtraLarge { line-height: $leading_ExtraExtraLarge; }
+
+// --------------------------------------------------------------------- Styling
+@mixin borderRadius_Small { border-radius: $borderRadius_Small; }
+@mixin borderRadius_Medium { border-radius: $borderRadius_Medium; }
+@mixin borderRadius_Large { border-radius: $borderRadius_Large; }
+
+@mixin highlight {
+  color: black;
+  font-weight: 700;
+}
+
+// ------------------------------------------------------------------- Animation
+@mixin animation ($animate...) {
+  $max: length($animate);
+  $animations: '';
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max { $animations: #{$animations + ", "}; }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin animationName($animationName) { -webkit-animation-name: $animationName; animation-name: $animationName; } // string
+@mixin animationDuration($animationDuration) { -webkit-animation-duration: $animationDuration; animation-duration: $animationDuration; } // num in ms or s
+@mixin animationDirection($animationDirection) { -webkit-animation-direction: $animationDirection; animation-direction: $animationDirection; } // 'normal', 'reverse', 'alternate', 'alternate-reverse'
+@mixin animationDelay($animationDelay) { -webkit-animation-delay: $animationDelay; animation-delay: $animationDelay; }
+@mixin animationIterationCount($animationIterationCount) { -webkit-animation-iteration-count: $animationIterationCount; animation-iteration-count: $animationIterationCount; } // num or 'infinite'
+@mixin animationTimingFunction($animationTimingFunction) { -webkit-animation-timing-function: $animationTimingFunction; animation-timing-function: $animationTimingFunction; } // bezier curve or 'linear'
+@mixin animationFillMode($animationFillMode) { -webkit-animation-fill-mode: $animationFillMode; animation-fill-mode: $animationFillMode; } // forwards or backwards or both
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} { @content; }
+  @-moz-keyframes #{$animationName} { @content; }
+  @-o-keyframes #{$animationName} { @content; }
+  @keyframes #{$animationName} { @content; }
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin transformOrigin($transformOrigin) {
+	   -moz-transform-origin: $transformOrigin;
+	     -o-transform-origin: $transformOrigin;
+	    -ms-transform-origin: $transformOrigin;
+	-webkit-transform-origin: $transformOrigin;
+          transform-origin: $transformOrigin;
+}
+
+// ------------------------------------------------------------------- Gradients
+@mixin oceanBlueGradient {
+  background: linear-gradient(75deg, $azure, $ocean);
+}
+
+@mixin lightBluePurpleGradient {
+  background: linear-gradient(90deg, $paleCornflower, $blizzard);
+}
+
+@mixin lightBlueGradient {
+  background: linear-gradient(75deg, $morningSky, $frostbite);
+}
+
+// --------------------------------------------------------------------- Borders
+
+@mixin oceanBorderGradient {
+  border: 10px solid;
+  border-image-slice: 1 !important;
+  border-width: 3px;
+  border-image-source: linear-gradient(25deg, $azure, $ocean);
+}
+
+@mixin whiteBorderBack {
+  border: 1px solid $white;
+}
+
+@mixin whiteBorderFront {
+  border: 2px solid $white;
+}
+
+// ------------------------------------------------------------ Layered Elements
+
+@mixin tripleLayer {
+  position: relative;
+  @include whiteBorderFront;
+  border-radius: 0;
+  transform: unset;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: $bottomLayerOffsetTop;
+    left: $bottomLayerOffsetLeft;
+    border: 1px solid $white;
+    background-color: $jaguar;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: $middleLayerOffsetTop;
+    left: $middleLayerOffsetLeft;
+    border: 1px solid $white;
+    z-index: -1;
+  }
+}
+
+// ------------------------------------------------------------------------ Text
+
+@mixin nonCardText {
+  font-family: $font_Primary;
+  font-size: $fontSize_Medium;
+  font-weight: $fontWeight_Regular;
+  letter-spacing: $letter_SpacingRegular;
+  line-height: $leading_Medium;
+}
+
+@mixin secondaryHeader {
+  font-family: $font_Primary;
+  font-size: $fontSize_ExtraLarge;
+  font-weight: $fontWeight_SemiBold;
+  letter-spacing: $letter_SpacingRegular;
+  line-height: $leading_Regular;
+}
+
+@mixin cardText {
+  font-family: $font_Secondary;
+  font-size: $fontSize_Small;
+  font-weight: $fontWeight_Regular;
+  letter-spacing: 0;
+  line-height: $leading_Small;
+}

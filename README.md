@@ -1,15 +1,3 @@
-# Install
+# Filecoin Foundation Website
 
-Install nodejs https://nodejs.org/en/download/
-
-## Build 
-
-```bash
-npm run build
-```
-
-## Serve
-
-```bash
-npm run serve
-```
+Primary website for the Filecoin Foundation

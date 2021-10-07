@@ -1,0 +1,37 @@
+// /////////////////////////////////////////////////////////////////////// Fonts
+// -----------------------------------------------------------------------------
+$fontAssetPath: '~assets/fonts';
+
+//////////////////////////////////////////////////////////////////// Suisse Intl
+// @font-face {
+//   font-family: 'SuisseIntl';
+//   src: url('#{$fontAssetPath}/SuisseIntl/SuisseIntl-Regular.otf') format('opentype');
+//   font-weight: 400;
+// }
+
+// ///////////////////////////////////////////////////////////////////// General
+// -----------------------------------------------------------------------------
+html, body {
+  background-color: black;
+  color: white;
+  ::-moz-selection { background: white; color: black; }
+  ::selection { background: white; color: black; }
+}
+
+#__nuxt {}
+
+#__layout {
+  position: relative;
+  z-index: 5;
+}
+
+[class~="grid"],
+[class*="grid-"],
+[class*="grid_"] {
+  padding: 0 4.1665%;
+  [class~="grid"],
+  [class*="grid-"],
+  [class*="grid_"] {
+    padding: 0;
+  }
+}
