@@ -6,7 +6,7 @@
 
     <!-- Example of how to add layers to element "test-content"-->
     <div class="grid">
-      <div class="col-5">
+      <div class="col">
         <div class="layers-content-wrapper">
           <div class="test-content">
             Lorem ipsum dolor sit ametempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 
 .page-index {
-  color: $blackPearl;
+  @include bodyText;
 }
 
 .placeholder-header {

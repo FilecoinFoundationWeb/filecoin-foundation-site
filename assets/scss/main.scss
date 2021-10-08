@@ -20,6 +20,7 @@ $fontAssetPath: '~assets/fonts';
 html, body {
   background-color: $blackPearl;
   color: white;
+  font-family: $font_Primary;
   ::-moz-selection { background: white; color: black; }
   ::selection { background: white; color: black; }
 }
