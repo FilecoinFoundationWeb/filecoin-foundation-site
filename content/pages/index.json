@@ -54,7 +54,7 @@
           "label": {
             "type": "A",
             "action": "video",
-            "icon": "play"
+            "icon": "play",
             "text": "Watch now",
             "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
           },
@@ -160,7 +160,7 @@
             }
           ]
         }
-      },
+      }
     ],
     [
       {
@@ -184,7 +184,7 @@
             }
           ]
         }
-      },
+      }
     ],
     [
       {
