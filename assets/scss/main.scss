@@ -2,18 +2,25 @@
 // -----------------------------------------------------------------------------
 $fontAssetPath: '~assets/fonts';
 
-//////////////////////////////////////////////////////////////////// Suisse Intl
-// @font-face {
-//   font-family: 'SuisseIntl';
-//   src: url('#{$fontAssetPath}/SuisseIntl/SuisseIntl-Regular.otf') format('opentype');
-//   font-weight: 400;
-// }
+//////////////////////////////////////////////////////////////////////// Archivo
+@font-face {
+  font-family: 'Archivo';
+  src: url('#{$fontAssetPath}/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('#{$fontAssetPath}/Archivo-Italic/Archivo-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 100 900;
+}
 
 // ///////////////////////////////////////////////////////////////////// General
 // -----------------------------------------------------------------------------
 html, body {
-  background-color: black;
-  color: white;
+  @include bodyText;
+  background-color: $blackPearl;
   ::-moz-selection { background: white; color: black; }
   ::selection { background: white; color: black; }
 }

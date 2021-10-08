@@ -21,6 +21,16 @@ $gray700: #616161;
 $gray800: #424242;
 $gray900: #212121;
 
+$white: #FFFFFF;
+$polar: #EFF6FC;
+$hawkesBlue: #D8EBFB;
+$jordyBlue: #73B4ED;
+$azureRadiance: #0090FF;
+$denim: #154ED9;
+$kleinBlue: #0621A4;
+$deepCove: #06094E;
+$blackPearl: #08072E;
+
 // ----------------------------------------------------------------- Breakpoints
 $breakpoint_Tiny: 25.9375rem; // 415px
 $breakpoint_Mini: 40rem; // 640px
@@ -33,8 +43,7 @@ $breakpoint_UltraLarge: 140.625rem; // 2250px
 // ////////////////////////////////////////////////////// [Variables] Typography
 // -----------------------------------------------------------------------------
 // -------------------------------------------------------------------- Families
-$font_Primary: 'Helvetica', sans-serif;
-$font_Secondary: 'Helvetica', sans-serif, monospace;
+$font_Primary: 'Archivo';
 
 // ---------------------------------------------------------------------- Sizing
 // fontSize_Mini | 11pt
@@ -46,6 +55,7 @@ $font_Secondary: 'Helvetica', sans-serif, monospace;
 // fontSize_ExtraLarge | 24pt
 // fontSize_ExtraMediumLarge | 28pt
 // fontSize_ExtraExtraLarge | 40pt
+// fontSize_Huge | 55pt
 
 $fontSize_Mini: 0.6875rem;
 $fontSize_Small: 0.8125rem;
@@ -56,6 +66,7 @@ $fontSize_Larger: 1.375rem;
 $fontSize_ExtraLarge: 1.5rem;
 $fontSize_ExtraMediumLarge: 1.75rem;
 $fontSize_ExtraExtraLarge: 2.5rem;
+$fontSize_Huge: 3.4375rem;
 
 // ---------------------------------------------------------------------- Weight
 $fontWeight_Regular: 400;
@@ -68,12 +79,14 @@ $leading_Mini: 1.2;
 $leading_Small: 1.4;
 $leading_Regular: 1.5;
 $leading_Medium: 1.6;
+$leading_MediumLarge: 1.8;
 $leading_Large: 2;
 $leading_ExtraLarge: 2.2;
 $leading_ExtraExtraLarge: 2.4;
 
 // -------------------------------------------------------------- Letter Spacing
 $letterSpacing_Regular: 0.02em;
+$letterSpacing_Large: 0.03em;
 
 // ////////////////////////////////////////////////////////////////////// Mixins
 // --------------------------------------------------------------------- Styling
@@ -248,88 +261,66 @@ $letterSpacing_Regular: 0.02em;
           transform-origin: $transformOrigin;
 }
 
-// ------------------------------------------------------------------- Gradients
-@mixin oceanBlueGradient {
-  background: linear-gradient(75deg, $azure, $ocean);
-}
-
-@mixin lightBluePurpleGradient {
-  background: linear-gradient(90deg, $paleCornflower, $blizzard);
-}
-
-@mixin lightBlueGradient {
-  background: linear-gradient(75deg, $morningSky, $frostbite);
-}
-
-// --------------------------------------------------------------------- Borders
-
-@mixin oceanBorderGradient {
-  border: 10px solid;
-  border-image-slice: 1 !important;
-  border-width: 3px;
-  border-image-source: linear-gradient(25deg, $azure, $ocean);
-}
-
-@mixin whiteBorderBack {
-  border: 1px solid $white;
-}
-
-@mixin whiteBorderFront {
-  border: 2px solid $white;
-}
-
-// ------------------------------------------------------------ Layered Elements
-
-@mixin tripleLayer {
-  position: relative;
-  @include whiteBorderFront;
-  border-radius: 0;
-  transform: unset;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: $bottomLayerOffsetTop;
-    left: $bottomLayerOffsetLeft;
-    border: 1px solid $white;
-    background-color: $jaguar;
-    z-index: -1;
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: $middleLayerOffsetTop;
-    left: $middleLayerOffsetLeft;
-    border: 1px solid $white;
-    z-index: -1;
-  }
-}
-
-// ------------------------------------------------------------------------ Text
-
-@mixin nonCardText {
+// ------------------------------------------------------------------ Typography
+@mixin blueHeadings {
   font-family: $font_Primary;
-  font-size: $fontSize_Medium;
-  font-weight: $fontWeight_Regular;
-  letter-spacing: $letter_SpacingRegular;
-  line-height: $leading_Medium;
-}
-
-@mixin secondaryHeader {
-  font-family: $font_Primary;
-  font-size: $fontSize_ExtraLarge;
-  font-weight: $fontWeight_SemiBold;
-  letter-spacing: $letter_SpacingRegular;
+  font-size: $fontSize_Regular;
+  font-weight: $fontWeight_Medium;
   line-height: $leading_Regular;
+  letter-spacing: $letterSpacing_Large;
+  color: $azureRadiance;
 }
 
-@mixin cardText {
-  font-family: $font_Secondary;
+@mixin allCapsText {
+  font-family: $font_Primary;
   font-size: $fontSize_Small;
+  font-weight: $fontWeight_SemiBold;
+  line-height: $leading_ExtraLarge;
+  letter-spacing: $letterSpacing_Large;
+  color: $azureRadiance;
+}
+
+@mixin mainHeading {
+  font-family: $font_Primary;
+  font-size: $fontSize_Huge;
+  font-weight: $fontWeight_SemiBold;
+  line-height: $leading_Mini;
+  letter-spacing: $letterSpacing_Regular;
+  color: $blackPearl;
+}
+
+@mixin buttonText {
+  font-family: $font_Primary;
+  font-size: $fontSize_Regular;
+  font-weight: $fontWeight_Medium;
+  line-height: $leading_ExtraLarge;
+  letter-spacing: $letterSpacing_Large;
+  color: $kleinBlue;
+}
+
+@mixin boldedText {
+  font-family: $font_Primary;
+  font-size: $fontSize_Regular;
+  font-weight: $fontWeight_Medium;
+  line-height: $leading_ExtraLarge;
+  letter-spacing: $letterSpacing_Large;
+  color: $kleinBlue;
+}
+
+@mixin bodyText {
+  font-family: $font_Primary;
+  font-size: $fontSize_Regular;
   font-weight: $fontWeight_Regular;
-  letter-spacing: 0;
-  line-height: $leading_Small;
+  line-height: $leading_MediumLarge;
+  letter-spacing: $letterSpacing_Large;
+  color: $blackPearl;
+}
+
+@mixin subheading {
+  font-family: $font_Primary;
+  font-size: $fontSize_Large;
+  font-weight: $fontWeight_Regular;
+  line-height: $leading_MediumLarge;
+  letter-spacing: $letterSpacing_Large;
+  color: $blackPearl;
 }
