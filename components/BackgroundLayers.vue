@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div class="background-layers">
+
     <div
       v-for="(layer, i) in layers"
       :key="layer.color"
       :class="`layer shadow-${layer.index}`"
       :style="layerStyle(i + 1, i, layer.color)">
     </div>
+
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
     borderRadius: {
       type: Number,
       required: false,
-      default: 50
+      default: 10
     },
     layersArray: {
       type: Array,
@@ -70,7 +72,7 @@ export default {
       const l = `left: ${-1 * index * this.offset}rem;`
       const z = `z-index: ${-1 * (order + 1)};`
       const c = `background-color: ${color};`
-      const b = `border-radius: ${(2 * this.offset) + (1 * this.offset * index)}rem;`
+      const b = `border-radius: ${this.borderRadius + (2 * this.offset) + (1 * this.offset * index)}rem;`
       return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
     }
   }
@@ -79,7 +81,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .layer {
   position: absolute;
 }
@@ -115,5 +116,4 @@ export default {
 .shadow-8 {
   filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.8));
 }
-
 </style>

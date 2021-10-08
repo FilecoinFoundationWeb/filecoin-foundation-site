@@ -47,4 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page-section {
+  position: relative;
+  z-index: 5;
+}
 </style>

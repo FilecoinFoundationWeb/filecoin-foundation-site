@@ -7,6 +7,8 @@
       :key="index"
       :section="section" />
 
+    <BackgroundLayers :layers-array="[2, 3, 4, 5, 6]" />
+
   </div>
 </template>
 
@@ -17,13 +19,15 @@ import { mapGetters } from 'vuex'
 import IndexPageData from '@/content/pages/index.json'
 
 import PageSection from '@/components/PageSection'
+import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
   name: 'PageIndex',
 
   components: {
-    PageSection
+    PageSection,
+    BackgroundLayers
   },
 
   async fetch ({ store }) {
@@ -50,4 +54,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.background-layers {
+  position: absolute;
+  top: 15rem;
+  left: calc(50% - (68rem / 2) + 10rem);
+  width: 100vw;
+  height: 100vw;
+}
 </style>
