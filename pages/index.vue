@@ -1,13 +1,19 @@
 <template>
   <div class="page page-index">
 
-    <PageSection
-      v-for="(section, index) in sections"
-      :id="`section-${index + 1}`"
-      :key="index"
-      :section="section" />
+    <div class="main-content">
 
-    <BackgroundLayers :layers-array="[2, 3, 4, 5, 6]" />
+      <PageSection
+        v-for="(section, index) in sections"
+        :id="`section-${index + 1}`"
+        :key="index"
+        :section="section" />
+
+      <BackgroundLayers
+        id="page-index-background-layers"
+        :layers-array="[2, 3, 4, 5, 6]" />
+
+    </div>
 
   </div>
 </template>
@@ -15,8 +21,10 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
+import CloneDeep from 'lodash/cloneDeep'
 
 import IndexPageData from '@/content/pages/index.json'
+import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
 
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -33,6 +41,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'index', data: IndexPageData })
+    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiverDeeperData })
   },
 
   computed: {
@@ -43,7 +52,12 @@ export default {
       return this.$GetSeo(this.tag)
     },
     sections () {
-      return this.siteContent.index.page_content
+      const content = CloneDeep(this.siteContent.index.page_content)
+      const len = content.length
+      const last = content[len - 1]
+      const replace = this.siteContent['section-dive-deeper'].concat(last)
+      content.splice(len - 1, 1, replace)
+      return content
     }
   },
 
@@ -54,11 +68,147 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.background-layers {
+$backgroundLayerOffset: 1.75rem * 5;
+$backgroundLayersTop: calc(#{$navigationHeight + $backgroundLayerOffset});
+$backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
+
+// ///////////////////////////////////////////////////////////////////// General
+.page-index {
+  padding-top: $navigationHeight;
+  padding-bottom: calc(#{$backgroundLayersTop} + 10rem);
+}
+
+.main-content {
+  position: relative;
+  margin-top: $backgroundLayerOffset;
+}
+
+#section-1 {
+  padding-top: 7rem; // 1.75rem * 4
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: $backgroundLayersLeft;
+    width: calc(100% + 3.5rem);
+    height: calc(100% + 3.5rem);
+    background-color: rgb(239, 246, 252);
+    border-radius: 14rem 0 0 5rem;
+    filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
+    z-index: -1;
+  }
+}
+
+#section-2 {
+  padding: 7.5rem 0;
+}
+
+#section-3 {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: $backgroundLayersLeft;
+    width: calc(100% + 3.5rem);
+    height: calc(100% + 3.5rem);
+    background-color: rgb(239, 246, 252);
+    border-radius: 5rem 0 0 14rem;
+    filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
+    z-index: -1;
+  }
+}
+
+// /////////////////////////////////////////////////////////// Background Layers
+#page-index-background-layers {
   position: absolute;
-  top: 15rem;
-  left: calc(50% - (68rem / 2) + 10rem);
-  width: 100vw;
-  height: 100vw;
+  top: 0;
+  left: $backgroundLayersLeft;
+  width: 100%;
+  height: calc(100% + #{$backgroundLayersTop / 2} - 1.75rem * 2);
+}
+
+// ////////////////////////////////////////////////////// Section Customizations
+::v-deep #hero {
+  padding: 0;
+}
+
+::v-deep #intro_1 {
+  .blocks {
+    &.right {
+      padding: 2rem 0;
+      color: white;
+    }
+  }
+  .background-layers {
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+  }
+}
+
+::v-deep #banner_1 {
+  .blocks {
+    &.left {
+      padding: 2rem 0;
+      color: white;
+    }
+  }
+  .background-layers {
+    position: absolute;
+    top: 0;
+    left: -7rem;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+  }
+}
+
+::v-deep #explore_1 {
+  margin: 5rem 0;
+  .blocks {
+    &.right {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
+  }
+  .column-content {
+    &.right {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5rem;
+        width: 100vw;
+        height: calc(100%);
+        border-radius: 9.125rem 0 0 9.125rem;
+        background-color: $blackPearl;
+      }
+    }
+  }
+}
+
+::v-deep #get_involved {
+  .blocks {
+    &.right {
+      padding: 7rem 0;
+    }
+  }
+  .background-layers {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+  }
+}
+
+::v-deep #dive_deeper_intro,
+::v-deep #dive_deeper_video_1,
+::v-deep #dive_deeper_video_2 {
+  padding-bottom: 0;
 }
 </style>

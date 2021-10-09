@@ -47,8 +47,7 @@ Primary website for the Filecoin Foundation
 ```js
 {
   type: 'image',
-  src: String, // if external image, put here (`src` takes precedence over `name`)
-  name: String // if internal asset, put filename here
+  src: String
 }
 ```
 
