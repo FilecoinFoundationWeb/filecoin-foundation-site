@@ -55,8 +55,8 @@ Primary website for the Filecoin Foundation
 
 ```js
 {
-  type: String, // "A", "B" or "C"
-  action: String, // "link", "nuxt-link" or "video"
+  type: String, // letter of the alphabet like "A" or "B"
+  action: String, // "link", "nuxt-link", "button" or "video"
   icon: String,
   text: String,
   url: String // if action === "video", this is the URL to the video

@@ -25,7 +25,7 @@ export default {
   // },
 
   props: {
-    button: {
+    button: { // A → Tier 1, B → Tier 2, C → Site Navigation
       type: Object,
       required: true
     }
@@ -36,7 +36,7 @@ export default {
       return this.button.type
     },
     action () {
-      return this.button.action
+      return this.button.action || 'button'
     },
     tag () {
       const action = this.action
@@ -63,5 +63,13 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
-.button {}
+.button {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  &.type__C { // Navigation link styling
+    @include fontSize_Medium;
+    @include fontWeight_Medium;
+  }
+}
 </style>

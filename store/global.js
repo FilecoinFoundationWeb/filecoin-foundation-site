@@ -11,11 +11,7 @@ const state = () => ({
 // ///////////////////////////////////////////////////////////////////// Getters
 // -----------------------------------------------------------------------------
 const getters = {
-  siteContent: state => state.siteContent,
-  navigation: (state) => {
-    const siteContent = state.siteContent
-    return siteContent.hasOwnProperty('general') ? siteContent.general.navigation : false
-  }
+  siteContent: state => state.siteContent
 }
 
 // ///////////////////////////////////////////////////////////////////// Actions

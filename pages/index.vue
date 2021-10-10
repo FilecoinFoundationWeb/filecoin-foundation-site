@@ -74,7 +74,6 @@ $backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 // ///////////////////////////////////////////////////////////////////// General
 .page-index {
-  padding-top: $navigationHeight;
   padding-bottom: calc(#{$backgroundLayersTop} + 10rem);
 }
 

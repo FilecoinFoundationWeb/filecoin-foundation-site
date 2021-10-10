@@ -10,30 +10,36 @@
     "image": ""
   },
   "navigation": {
-    "index": {
-      "type": "nuxt-link",
-      "href": "/"
-    },
     "header": [
       {
-        "type": "nuxt-link",
-        "href": "/about"
+        "type": "C",
+        "action": "nuxt-link",
+        "url": "/about",
+        "text": "About"
       },
       {
-        "type": "nuxt-link",
-        "href": "/governance"
+        "type": "C",
+        "action": "nuxt-link",
+        "url": "/governance",
+        "text": "Governance"
       },
       {
-        "type": "nuxt-link",
-        "href": "/ecosystem"
+        "type": "C",
+        "action": "nuxt-link",
+        "url": "/ecosystem",
+        "text": "Ecosystem"
       },
       {
-        "type": "nuxt-link",
-        "href": "/grants"
+        "type": "C",
+        "action": "nuxt-link",
+        "url": "/grants",
+        "text": "Grants"
       },
       {
-        "type": "nuxt-link",
-        "href": "/get-involved"
+        "type": "C",
+        "action": "nuxt-link",
+        "url": "/get-involved",
+        "text": "Get Involved"
       }
     ],
     "footer": {}
