@@ -67,6 +67,12 @@ export default {
 }
 
 // ////////////////////////////////////////////////////////////////// Navigation
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .nav-link {
   &:not(:last-child) {
     margin-right: 3.125rem;
