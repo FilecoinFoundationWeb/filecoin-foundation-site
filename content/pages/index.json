@@ -67,7 +67,8 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6, 5, 4, 2, 1],
-                "offset": 1.375
+                "offset": 1.375,
+                "reverse": true
               }
             }
           ]
@@ -120,7 +121,8 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6, 5, 4, 2, 1],
-                "offset": 1.375
+                "offset": 1.375,
+                "reverse": true
               }
             }
           ]
@@ -343,7 +345,8 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6, 5, 4],
-                "offset": 1.375
+                "offset": 1.375,
+                "reverse": true
               }
             }
           ]

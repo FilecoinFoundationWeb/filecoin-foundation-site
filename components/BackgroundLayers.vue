@@ -4,7 +4,7 @@
     <div
       v-for="(layer, i) in layers"
       :key="layer.color"
-      :class="`layer shadow-${layer.index}`"
+      :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength}`, { reverse }]"
       :style="layerStyle(i + 1, i, layer.color)">
     </div>
 
@@ -31,6 +31,16 @@ export default {
       type: Number,
       required: false,
       default: 1.75
+    },
+    reverse: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    shadowStrength: {
+      type: String, // 'small', 'large'
+      required: false,
+      default: 'large'
     }
     // shadowsArray: {
     //   type: Array,
@@ -81,39 +91,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// ////////////////////////////////////////////////////////////////////// Layers
 .layer {
   position: absolute;
-}
-
-.shadow-1 {
-  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-}
-
-.shadow-2 {
-  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
-}
-
-.shadow-3 {
-  filter: drop-shadow(0 0 0.55rem rgba(0, 0, 0, 0.3));
-}
-
-.shadow-4 {
-  filter: drop-shadow(0 0 0.60rem rgba(0, 0, 0, 0.4));
-}
-
-.shadow-5 {
-  filter: drop-shadow(0 0 0.7rem rgba(0, 0, 0, 0.5));
-}
-
-.shadow-6 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.6));
-}
-
-.shadow-7 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.7));
-}
-
-.shadow-8 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.8));
+  &.shadow-strength-small {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+  }
+  &.shadow-strength-large {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  }
+  &.reverse {
+    filter: none;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+  }
 }
 </style>

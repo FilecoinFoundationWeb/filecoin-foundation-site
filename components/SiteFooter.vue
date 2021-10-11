@@ -13,7 +13,8 @@
 
     <BackgroundLayers
       :layers-array="[1, 2, 3, 4, 5, 6]"
-      :offset="1.25" />
+      :offset="1.25"
+      shadow-strength="small" />
 
   </footer>
 </template>
