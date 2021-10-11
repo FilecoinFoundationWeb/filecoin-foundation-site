@@ -1,5 +1,5 @@
 <template>
-  <div :class="['card', `type-${type}`]">
+  <div :class="['card', `type__${type}`]">
 
     <img
       v-if="img"
@@ -57,16 +57,9 @@ export default {
   &:nth-child(odd) {
     margin-right: 3rem;
   }
-  &.type-A {
-    .title {
-      @include titleBlue;
-    }
-    .description {
-      color: white;
-    }
-  }
 }
 
+// ///////////////////////////////////////////////////////////////////// Content
 .image {
   margin-bottom: 0.5rem;
   &.size-full {
@@ -79,5 +72,16 @@ export default {
 
 .title {
   margin-bottom: 0.5rem;
+}
+
+// ////////////////////////////////////////////////////////////////// Variations
+// -------------------------------------------------------------------- [Type] A
+.type__A {
+  .title {
+    @include titleBlue;
+  }
+  .description {
+    color: white;
+  }
 }
 </style>

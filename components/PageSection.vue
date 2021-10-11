@@ -18,14 +18,14 @@
             :data-push-right="getColumnPushCount(block[column], 'right')">
             <div :class="['column-content', column]">
 
-              <!-- ================================================ Blocks -->
+              <!-- ================================================== Blocks -->
               <div :class="['blocks', column]">
                 <component
                   :is="getComponentName(block[column])"
                   v-bind="{ block: block[column] }" />
               </div>
 
-              <!-- ======================================== Customizations -->
+              <!-- ========================================== Customizations -->
               <template v-if="block[column].customizations">
                 <component
                   :is="component.name"
