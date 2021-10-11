@@ -68,18 +68,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$backgroundLayerOffset: 1.75rem * 5;
-$backgroundLayersTop: calc(#{$navigationHeight + $backgroundLayerOffset});
-$backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
+$backgroundLayers__Offset: 1.75rem * 5;
+$backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset});
+$backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 // ///////////////////////////////////////////////////////////////////// General
 .page-index {
-  padding-bottom: calc(#{$backgroundLayersTop} + 10rem);
+  padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
 }
 
 .main-content {
   position: relative;
-  margin-top: $backgroundLayerOffset;
+  margin-top: $backgroundLayers__Offset;
 }
 
 #section-1 {
@@ -88,7 +88,7 @@ $backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     content: '';
     position: absolute;
     top: 0;
-    left: $backgroundLayersLeft;
+    left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
     background-color: rgb(239, 246, 252);
@@ -107,7 +107,7 @@ $backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     content: '';
     position: absolute;
     top: 0;
-    left: $backgroundLayersLeft;
+    left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
     background-color: rgb(239, 246, 252);
@@ -121,9 +121,9 @@ $backgroundLayersLeft: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 #page-index-background-layers {
   position: absolute;
   top: 0;
-  left: $backgroundLayersLeft;
+  left: $backgroundLayers__Left;
   width: 100%;
-  height: calc(100% + #{$backgroundLayersTop / 2} - 1.75rem * 2);
+  height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
 }
 
 // ////////////////////////////////////////////////////// Section Customizations

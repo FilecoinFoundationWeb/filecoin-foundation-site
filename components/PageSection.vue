@@ -6,37 +6,36 @@
       :id="block.id"
       :key="blockIndex"
       class="content-section">
-      <div :class="getGridClasses(block.grid)">
+      <div v-if="block.type !== 'custom'" :class="getGridClasses(block.grid)">
 
-        <template v-if="block.type !== 'custom'">
-          <template v-for="(column, columnIndex) in columns">
-            <div
-              v-if="columnExists(block, column)"
-              :key="columnIndex"
-              :class="getColumnCount(block[column])"
-              :data-push-left="getColumnPushCount(block[column], 'left')"
-              :data-push-right="getColumnPushCount(block[column], 'right')">
-              <div :class="['column-content', column]">
+        <template
+          v-for="(column, columnIndex) in columns">
+          <div
+            v-if="columnExists(block, column)"
+            :key="columnIndex"
+            :class="getColumnCount(block[column])"
+            :data-push-left="getColumnPushCount(block[column], 'left')"
+            :data-push-right="getColumnPushCount(block[column], 'right')">
+            <div :class="['column-content', column]">
 
-                <!-- ================================================ Blocks -->
-                <div :class="['blocks', column]">
-                  <component
-                    :is="getComponentName(block[column])"
-                    v-bind="{ block: block[column] }" />
-                </div>
-
-                <!-- ======================================== Customizations -->
-                <template v-if="block[column].customizations">
-                  <component
-                    :is="component.name"
-                    v-for="(component, componentIndex) in block[column].customizations"
-                    :key="componentIndex"
-                    v-bind="component.props" />
-                </template>
-
+              <!-- ================================================ Blocks -->
+              <div :class="['blocks', column]">
+                <component
+                  :is="getComponentName(block[column])"
+                  v-bind="{ block: block[column] }" />
               </div>
+
+              <!-- ======================================== Customizations -->
+              <template v-if="block[column].customizations">
+                <component
+                  :is="component.name"
+                  v-for="(component, componentIndex) in block[column].customizations"
+                  :key="componentIndex"
+                  v-bind="component.props" />
+              </template>
+
             </div>
-          </template>
+          </div>
         </template>
 
       </div>
