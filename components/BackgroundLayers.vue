@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div class="background-layers">
+
     <div
       v-for="(layer, i) in layers"
       :key="layer.color"
-      :class="`layer shadow-${layer.index}`"
+      :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength}`, { reverse }]"
       :style="layerStyle(i + 1, i, layer.color)">
     </div>
+
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
     borderRadius: {
       type: Number,
       required: false,
-      default: 50
+      default: 10
     },
     layersArray: {
       type: Array,
@@ -29,6 +31,16 @@ export default {
       type: Number,
       required: false,
       default: 1.75
+    },
+    reverse: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    shadowStrength: {
+      type: String, // 'small', 'large'
+      required: false,
+      default: 'large'
     }
     // shadowsArray: {
     //   type: Array,
@@ -70,7 +82,7 @@ export default {
       const l = `left: ${-1 * index * this.offset}rem;`
       const z = `z-index: ${-1 * (order + 1)};`
       const c = `background-color: ${color};`
-      const b = `border-radius: ${(2 * this.offset) + (1 * this.offset * index)}rem;`
+      const b = `border-radius: ${this.borderRadius + (2 * this.offset) + (1 * this.offset * index)}rem;`
       return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
     }
   }
@@ -79,41 +91,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+// ////////////////////////////////////////////////////////////////////// Layers
 .layer {
   position: absolute;
+  &.shadow-strength-small {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+  }
+  &.shadow-strength-large {
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+  }
+  &.reverse {
+    filter: none;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+  }
 }
-
-.shadow-1 {
-  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-}
-
-.shadow-2 {
-  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
-}
-
-.shadow-3 {
-  filter: drop-shadow(0 0 0.55rem rgba(0, 0, 0, 0.3));
-}
-
-.shadow-4 {
-  filter: drop-shadow(0 0 0.60rem rgba(0, 0, 0, 0.4));
-}
-
-.shadow-5 {
-  filter: drop-shadow(0 0 0.7rem rgba(0, 0, 0, 0.5));
-}
-
-.shadow-6 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.6));
-}
-
-.shadow-7 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.7));
-}
-
-.shadow-8 {
-  filter: drop-shadow(0 0 0.9rem rgba(0, 0, 0, 0.8));
-}
-
 </style>
