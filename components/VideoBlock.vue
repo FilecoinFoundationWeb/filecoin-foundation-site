@@ -1,6 +1,10 @@
 <template>
   <div class="block video-block">
 
+    <div class="overlay">
+      <IconPlay class="play-icon" />
+    </div>
+
     <img :src="preview_image" class="preview-image" />
 
   </div>
@@ -8,15 +12,15 @@
 
 <script>
 // ====================================================================== Import
-// import Button from '@/components/Button'
+import IconPlay from '@/components/icons/Play'
 
 // ====================================================================== Export
 export default {
   name: 'TextBlock',
 
-  // components: {
-  //   Button
-  // },
+  components: {
+    IconPlay
+  },
 
   props: {
     block: {
@@ -46,14 +50,54 @@ export default {
 // ///////////////////////////////////////////////////////////////////// General
 .video-block {
   @include borderRadius_Large;
+  position: relative;
   padding: 1rem;
   background-color: $hawkesBlue;
   box-shadow: 3px 3px 6px rgb(0 0 0 / 10%) inset;
+  cursor: pointer;
+  &:hover {
+    .overlay {
+      transition: 250ms ease-in;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .play-icon {
+      transition: 250ms ease-in;
+      transform: scale(1.1);
+    }
+  }
 }
 
+// ///////////////////////////////////////////////////////////////////// Overlay
+.overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+  transition: 250ms ease-out;
+}
+
+::v-deep .play-icon {
+  width: 3rem;
+  transition: 250ms ease-out;
+  path {
+    fill: white;
+  }
+}
+
+// /////////////////////////////////////////////////////////////// Preview Image
 .preview-image {
   @include borderRadius_Large;
+  position: relative;
   display: block;
   width: 100%;
+  z-index: 5;
 }
 </style>

@@ -31,7 +31,7 @@ export default {
   },
 
   props: {
-    button: { // A → Tier 1, B → Tier 2, C → Site navigation, D → Tier 2 w/o border
+    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border
       type: Object,
       required: true
     }
@@ -214,7 +214,7 @@ $layerOffset: 0.25rem;
 }
 
 // -------------------------------------------------------------------- [Type] C
-.type__C { // Navigation link styling
+.type__C {
   @include fontSize_Medium;
   @include fontWeight_Medium;
   color: white;
