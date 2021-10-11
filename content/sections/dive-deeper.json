@@ -14,9 +14,7 @@
   },
   {
     "id": "dive_deeper_video_1",
-    "grid": {
-      "middle": true
-    },
+    "grid": ["middle"],
     "left": {
       "type": "video_block",
       "cols": {
@@ -49,9 +47,7 @@
   },
   {
     "id": "dive_deeper_video_2",
-    "grid": {
-      "middle": true
-    },
+    "grid": ["middle"],
     "left": {
       "type": "video_block",
       "cols": {

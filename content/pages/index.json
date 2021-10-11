@@ -35,9 +35,7 @@
       },
       {
         "id": "intro_1",
-        "grid": {
-          "middle": true
-        },
+        "grid": ["middle"],
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -63,7 +61,16 @@
             "text": "Watch now",
             "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
           },
-          "description": "Join us as Thomas Jefferson argues with Alexander Hamilton in Washington D.C."
+          "description": "Join us as Thomas Jefferson argues with Alexander Hamilton in Washington D.C.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4, 2, 1],
+                "offset": 1.375
+              }
+            }
+          ]
         }
       },
       {
@@ -107,14 +114,21 @@
             "num": "col-7",
             "push_left": "off-4"
           },
-          "description": "FF provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive."
+          "description": "FF provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4, 2, 1],
+                "offset": 1.375
+              }
+            }
+          ]
         }
       },
       {
         "id": "explore_1",
-        "grid": {
-          "middle": true
-        },
+        "grid": ["middle"],
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -222,9 +236,7 @@
       },
       {
         "id": "team_intro",
-        "grid": {
-          "middle": true
-        },
+        "grid": ["middle"],
         "left": {
           "type": "image_block",
           "cols": {
@@ -256,9 +268,7 @@
     [
       {
         "id": "get_involved",
-        "grid": {
-          "middle": true
-        },
+        "grid": ["middle"],
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -326,6 +336,15 @@
               "img_size": "full",
               "title": "Learn more on ProtoSchool",
               "description": "Participate in one of many online forums about Filecoin"
+            }
+          ],
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4],
+                "offset": 1.375
+              }
             }
           ]
         }
