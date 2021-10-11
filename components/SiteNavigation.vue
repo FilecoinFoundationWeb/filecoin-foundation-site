@@ -53,10 +53,6 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
-#site-navigation {
-  color: white;
-}
-
 .content {
   display: flex;
   flex-direction: row;

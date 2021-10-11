@@ -25,6 +25,7 @@
           "ctas": [
             {
               "type": "A",
+              "theme": "dark",
               "action": "nuxt-link",
               "text": "Get Involved",
               "url": "/get-involved"

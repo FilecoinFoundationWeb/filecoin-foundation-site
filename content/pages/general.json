@@ -13,30 +13,35 @@
     "header": [
       {
         "type": "C",
+        "theme": "light",
         "action": "nuxt-link",
         "url": "/about",
         "text": "About"
       },
       {
         "type": "C",
+        "theme": "light",
         "action": "nuxt-link",
         "url": "/governance",
         "text": "Governance"
       },
       {
         "type": "C",
+        "theme": "light",
         "action": "nuxt-link",
         "url": "/ecosystem",
         "text": "Ecosystem"
       },
       {
         "type": "C",
+        "theme": "light",
         "action": "nuxt-link",
         "url": "/grants",
         "text": "Grants"
       },
       {
         "type": "C",
+        "theme": "light",
         "action": "nuxt-link",
         "url": "/get-involved",
         "text": "Get Involved"
