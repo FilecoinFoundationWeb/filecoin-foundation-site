@@ -9,15 +9,7 @@
         "push_left": "off-1"
       },
       "heading": "Dive deeper",
-      "subheading": "Join our talks, instructional videos, community meetings and other events to explore them <a href=\"\" target=\"_blank\">visit our Youtube channel</a>",
-      "ctas": [
-        {
-          "type": "A",
-          "action": "link",
-          "text": "Get Involved",
-          "url": "/get-involved"
-        }
-      ]
+      "subheading": "Join our talks, instructional videos, community meetings and other events to explore them <a href=\"\" target=\"_blank\">visit our Youtube channel</a>"
     }
   },
   {
@@ -45,7 +37,8 @@
       "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217",
       "ctas": [
         {
-          "type": "A",
+          "type": "B",
+          "theme": "dark",
           "action": "video",
           "icon": "play",
           "text": "Watch video",
@@ -79,7 +72,8 @@
       "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
       "ctas": [
         {
-          "type": "A",
+          "type": "B",
+          "theme": "dark",
           "action": "video",
           "icon": "play",
           "text": "Watch video",

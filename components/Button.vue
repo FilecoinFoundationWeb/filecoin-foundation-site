@@ -5,6 +5,12 @@
     :href="tag === 'a' ? url : undefined"
     :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]">
 
+    <div
+      v-if="icon"
+      :class="['icon', icon]">
+      <IconPlay v-if="icon === 'play'" />
+    </div>
+
     <span class="text">
       {{ text }}
     </span>
@@ -14,18 +20,18 @@
 
 <script>
 // ====================================================================== Import
-// import Button from '@/components/Button'
+import IconPlay from '@/components/icons/Play'
 
 // ====================================================================== Export
 export default {
   name: 'Button',
 
-  // components: {
-  //   Button
-  // },
+  components: {
+    IconPlay
+  },
 
   props: {
-    button: { // A → Tier 1, B → Tier 2, C → Site Navigation
+    button: { // A → Tier 1, B → Tier 2, C → Site navigation, D → Tier 2 w/o border
       type: Object,
       required: true
     }
@@ -70,6 +76,15 @@ $layerOffset: 0.25rem;
 // ///////////////////////////////////////////////////////////////////// General
 .button {
   @include leading_Tiny;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  svg {
+    display: block;
+  }
 }
 
 .text {
@@ -153,7 +168,52 @@ $layerOffset: 0.25rem;
     border-radius: inherit;
   }
 }
-// -------------------------------------------------------------------- [Type] B
+
+// ---------------------------------------------------------------- [Type] B & D
+.type__B,
+.type__D {
+  @include fontWeight_Medium;
+  color: white;
+  &.theme__dark {
+    color: $kleinBlue;
+    border-color: $kleinBlue;
+    ::v-deep .icon {
+      svg path {
+        fill: $kleinBlue;
+      }
+    }
+  }
+  ::v-deep .icon {
+    margin-right: 0.5rem;
+    &.play {
+      width: 0.875rem;
+    }
+    &.info {
+      width: 1rem;
+    }
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.type__B {
+  @include fontSize_Small;
+  padding: 10px 1.125rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3rem;
+  .text {
+    padding-top: 1px;
+  }
+}
+
+.type__D {
+  @include fontSize_Large;
+}
+
+// -------------------------------------------------------------------- [Type] C
 .type__C { // Navigation link styling
   @include fontSize_Medium;
   @include fontWeight_Medium;

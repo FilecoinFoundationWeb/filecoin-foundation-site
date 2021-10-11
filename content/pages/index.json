@@ -25,7 +25,7 @@
           "ctas": [
             {
               "type": "A",
-              "theme": "dark",
+              "theme": "light",
               "action": "nuxt-link",
               "text": "Get Involved",
               "url": "/get-involved"
@@ -56,7 +56,8 @@
             "push_left": "off-3"
           },
           "label": {
-            "type": "A",
+            "type": "D",
+            "theme": "light",
             "action": "video",
             "icon": "play",
             "text": "Watch now",
@@ -87,7 +88,8 @@
           "description": "Join Protocol Labs general counsel Marta Belcher to learn about the Filecoin Foundation (FF).",
           "ctas": [
             {
-              "type": "A",
+              "type": "B",
+              "theme": "dark",
               "action": "video",
               "icon": "play",
               "text": "Watch video",
