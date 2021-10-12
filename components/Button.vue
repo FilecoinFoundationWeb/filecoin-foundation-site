@@ -196,8 +196,10 @@ $layerOffset: 0.25rem;
     color: $kleinBlue;
     border-color: $kleinBlue;
     ::v-deep .icon {
-      svg path {
-        fill: $kleinBlue;
+      svg {
+        .triangle-outline {
+          fill: $kleinBlue;
+        }
       }
     }
   }
@@ -208,9 +210,6 @@ $layerOffset: 0.25rem;
     }
     &.info {
       width: 1rem;
-    }
-    svg path {
-      fill: white;
     }
   }
 }

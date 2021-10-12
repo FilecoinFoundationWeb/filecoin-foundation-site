@@ -103,9 +103,6 @@ export default {
 ::v-deep .play-icon {
   width: 3rem;
   transition: 250ms ease-out;
-  path {
-    fill: white;
-  }
 }
 
 // /////////////////////////////////////////////////////////////// Preview Image
