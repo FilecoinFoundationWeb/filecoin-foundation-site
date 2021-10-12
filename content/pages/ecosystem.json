@@ -1,0 +1,252 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "page_content": [
+    [
+      {
+        "id": "hero",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-2"
+          },
+          "heading": "Ecosystem",
+          "subheading": "We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success."
+        },
+        "right": {
+          "type": "image_block",
+          "src": "/images/placeholder-image.png",
+          "cols": {
+            "num": "col-5",
+            "push_left": "off-1"
+          },
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [1],
+                "offset": 1.375
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "intro_1",
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-7",
+            "push_left": "off-5"
+          },
+          "description": "More than 100 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4, 3],
+                "offset": 1.375,
+                "reverse": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "cta_banner_1",
+        "left": {
+          "type": "image_block",
+          "src": "/icons/upstairs.png",
+          "cols": {
+            "num": "col-5",
+            "push_left": "off-2"
+          }
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-1"
+          },
+          "label": "Governed by you",
+          "heading": "Onward and upward",
+          "subheading": "The Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with the open-source ethos.",
+          "description": "We believe Filecoin and Web3 can be part of a better future for storing humanity’s most important information.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
+          ]
+        }
+      },
+      {
+        "id": "panel_1",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-7",
+            "push_left": "off-2"
+          },
+          "heading": "Ecosystem Advisors",
+          "subheading": "The Filecoin Foundation Ecosystem Advisors are committed to providing resources, community support, and guidance to groups building on Web3.",
+          "customizations": [
+            {
+              "name": "SliderBlock",
+              "props": {
+                "block": {
+                  "cards": [
+                    {
+                      "type": "B",
+                      "img": "/images/placeholder-image.png",
+                      "title": "Colin Evran",
+                      "description": "Ecosystem Lead, Protocol Labs"
+                    },
+                    {
+                      "type": "B",
+                      "img": "/images/placeholder-image.png",
+                      "title": "Michelle Lee",
+                      "description": "Ecosystem Lead, Protocol Labs"
+                    },
+                    {
+                      "type": "B",
+                      "img": "/images/placeholder-image.png",
+                      "title": "Stefaan Vervaet",
+                      "description": "Ecosystem Lead, Protocol Labs"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "resources",
+        "grid": ["middle"],
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3",
+            "push_left": "off-1"
+          },
+          "label": "Resources",
+          "heading": "How to get involved and key links",
+          "description": "Join <span style='color: white;'>#fil-plus</span> on the official Filecoin Slack and participate in our bi-weekly community governance calls every other Tuesday",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "text": "Join the Community",
+              "url": "/get-involved"
+            }
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6",
+            "push_left": "off-2"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "/icons/pencil.png",
+              "img_size": "full",
+              "title": "Filecoin Notary Portal",
+              "description": "The official client and notary portal, hosted by the Filecoin website"
+            },
+            {
+              "type": "A",
+              "img": "/icons/multi-person.png",
+              "img_size": "full",
+              "title": "Filecoin Plus Github",
+              "description": "FIP0003 proposing the program"
+            },
+            {
+              "type": "A",
+              "img": "/icons/speech-bubble.png",
+              "img_size": "full",
+              "title": "Contribute to the Filecoin project",
+              "description": "Participate in one of many online forums about Filecoin"
+            },
+            {
+              "type": "A",
+              "img": "/icons/hands-raised.png",
+              "img_size": "full",
+              "title": "Participate online",
+              "description": "Participate in one of many online forums about Filecoin"
+            },
+            {
+              "type": "A",
+              "img": "/icons/tool.png",
+              "img_size": "full",
+              "title": "Help mine or build with Filecoin",
+              "description": "Participate in one of many online forums about Filecoin"
+            },
+            {
+              "type": "A",
+              "img": "/icons/magnifying-glass.png",
+              "img_size": "full",
+              "title": "Learn more on ProtoSchool",
+              "description": "Participate in one of many online forums about Filecoin"
+            }
+          ],
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6],
+                "offset": 1.375,
+                "reverse": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "events-hackathons",
+        "type": "custom",
+        "heading": "Events & Hackathons",
+        "cta": {
+          "type": "A",
+          "action": "nuxt-link",
+          "text": "Browse all Events",
+          "url": "/events"
+        },
+        "events": [
+          {
+            "image": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc",
+            "date": "October 20, 2021",
+            "title": "Center for Democracy and Technology’s 2021 Tech Prom"
+          },
+          {
+            "date": "October 20, 2021",
+            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
+          }
+        ]
+      }
+    ]
+  ]
+}
