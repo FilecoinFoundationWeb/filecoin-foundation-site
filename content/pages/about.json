@@ -25,7 +25,7 @@
         },
         "right": {
           "type": "video_block",
-          "preview_image": "/images/placeholder-image.png",
+          "preview_image": "/images/About/preview-about@2x.png",
           "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys",
           "cols": {
             "num": "col-5",
@@ -60,7 +60,7 @@
         "id": "cta_1",
         "left": {
           "type": "image_block",
-          "src": "/images/placeholder-image.png",
+          "src": "/images/About/computer@2x.png",
           "cols": {
             "num": "col-5",
             "push_left": "off-2"
@@ -161,25 +161,25 @@
                   "cards": [
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/About/marta-belcher@2x.png",
                       "title": "Marta Belcher",
                       "description": "General Counsel, Protocol Labs (Board Chair)"
                     },
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/About/marcia-hoffman@2x.png",
                       "title": "Marcia Hoffman",
                       "description": ""
                     },
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/About/brian_behlendorf_headshot-1@2x.png",
                       "title": "Brian Behlendorf",
                       "description": ""
                     },
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/About/nicole-wong@2x.png",
                       "title": "Nicole Wong",
                       "description": ""
                     }
@@ -223,43 +223,43 @@
           "cards": [
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/katiebiber.png",
               "img_size": "full",
               "description": "<b>Katie Biber</b>General Counsel, Brex"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/alex-feerst@2x.png",
               "img_size": "full",
               "description": "<b>Alex Feerst</b>CEO, Murmuration Labs"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/wendy-hanamura@2x.png",
               "img_size": "full",
               "description": "<b>Wendy Hanamura</b>Director of Partnerships, Internet Archive"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/brewster-kahle@2x.png",
               "img_size": "full",
               "description": "<b>Brewster Kahle</b>Founder, Internet Archive"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/joe-lubin@2x.png",
               "img_size": "full",
               "description": "<b>Joe Lubin</b>Founder of ConsenSys and Cofounder of Ethereum"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/georgia-quinn@2x.png",
               "img_size": "full",
               "description": "<b>Georgia Quinn</b>General Counsel, Anchorage"
             },
             {
               "type": "C",
-              "img": "/images/placeholder-image.png",
+              "img": "/images/About/sandra-ro@2x.png",
               "img_size": "full",
               "description": "<b>Sandra Ro</b>CEO, Global Blockchain Business Council"
             }

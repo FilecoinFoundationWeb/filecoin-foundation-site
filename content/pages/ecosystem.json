@@ -25,7 +25,7 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/images/placeholder-image.png",
+          "src": "/images/Ecosystem/meeting2x.png",
           "cols": {
             "num": "col-5",
             "push_left": "off-1"
@@ -114,19 +114,19 @@
                   "cards": [
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/Ecosystem/colinevran@2x.png",
                       "title": "Colin Evran",
                       "description": "Ecosystem Lead, Protocol Labs"
                     },
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/Ecosystem/mosh@2x.png",
                       "title": "Michelle Lee",
                       "description": "Ecosystem Lead, Protocol Labs"
                     },
                     {
                       "type": "B",
-                      "img": "/images/placeholder-image.png",
+                      "img": "/images/Ecosystem/stefaan-vervaet.png",
                       "title": "Stefaan Vervaet",
                       "description": "Ecosystem Lead, Protocol Labs"
                     }
