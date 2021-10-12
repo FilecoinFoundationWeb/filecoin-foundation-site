@@ -3,7 +3,8 @@
     :is="tag"
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
-    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]">
+    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]"
+    @click="openModal">
 
     <div
       v-if="icon"
@@ -20,6 +21,8 @@
 
 <script>
 // ====================================================================== Import
+import { mapActions } from 'vuex'
+
 import IconPlay from '@/components/icons/Play'
 
 // ====================================================================== Export
@@ -65,6 +68,20 @@ export default {
     },
     theme () {
       return this.button.theme || 'light'
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      setModal: 'global/setModal'
+    }),
+    openModal () {
+      if (this.action === 'video') {
+        this.setModal({
+          action: 'video',
+          url: this.url
+        })
+      }
     }
   }
 }
