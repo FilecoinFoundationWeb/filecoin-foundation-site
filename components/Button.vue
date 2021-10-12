@@ -192,9 +192,27 @@ $layerOffset: 0.25rem;
 .type__D {
   @include fontWeight_Medium;
   color: white;
+  &:hover {
+    ::v-deep .icon {
+      svg {
+        .triangle {
+          fill: white;
+        }
+      }
+    }
+  }
   &.theme__dark {
     color: $kleinBlue;
     border-color: $kleinBlue;
+    &:hover {
+      ::v-deep .icon {
+        svg {
+          .triangle {
+            fill: $kleinBlue;
+          }
+        }
+      }
+    }
     ::v-deep .icon {
       svg {
         .triangle-outline {

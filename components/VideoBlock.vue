@@ -76,9 +76,12 @@ export default {
       transition: 250ms ease-in;
       background-color: rgba(0, 0, 0, 0.3);
     }
-    .play-icon {
+    ::v-deep .play-icon {
       transition: 250ms ease-in;
       transform: scale(1.1);
+      .triangle {
+        fill: white;
+      }
     }
   }
 }

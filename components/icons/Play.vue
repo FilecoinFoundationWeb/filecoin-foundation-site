@@ -20,6 +20,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// ///////////////////////////////////////////////////////////////////// General
+.triangle,
+.triangle-outline {
+  transition: 250ms ease-in-out;
+}
+
 .triangle {
   fill: transparent;
 }
