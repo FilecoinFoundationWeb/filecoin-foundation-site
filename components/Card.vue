@@ -115,7 +115,9 @@ export default {
 // -------------------------------------------------------------------- [Type] A
 .type__A {
   .title {
-    @include titleBlue;
+    @include fontWeight_Medium;
+    @include leading_Regular;
+    color: $azureRadiance;
   }
   .description {
     color: white;

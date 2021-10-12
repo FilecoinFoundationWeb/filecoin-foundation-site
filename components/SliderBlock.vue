@@ -47,10 +47,10 @@ export default {
 }
 
 .card {
-  width: calc(50% - 1.5rem);
+  width: calc(50% - 3rem);
   margin-bottom: 3rem;
   &:nth-child(odd) {
-    margin-right: 3rem;
+    margin-right: 6rem;
   }
 }
 </style>

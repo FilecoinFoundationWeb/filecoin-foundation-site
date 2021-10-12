@@ -114,6 +114,7 @@ export default {
   position: relative;
   display: block;
   width: 100%;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
   z-index: 5;
 }
 </style>

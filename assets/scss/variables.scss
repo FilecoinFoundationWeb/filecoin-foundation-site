@@ -242,14 +242,8 @@ $letterSpacing_Large: 0.03em;
 @mixin label { // small all-caps label that appears above headings
   font-size: $fontSize_Small;
   font-weight: $fontWeight_SemiBold;
-  line-height: $leading_ExtraLarge;
-  text-transform: uppercase;
-}
-
-@mixin titleBlue { // blue titles usually found in dark-themed slider cards
-  font-weight: $fontWeight_Medium;
   line-height: $leading_Regular;
-  color: $azureRadiance;
+  text-transform: uppercase;
 }
 
 @mixin buttonText {

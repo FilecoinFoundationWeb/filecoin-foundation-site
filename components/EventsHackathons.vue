@@ -95,6 +95,7 @@ export default {
   &:last-child {
     position: relative;
     top: -8rem;
+    background-color: $denim;
   }
 }
 </style>

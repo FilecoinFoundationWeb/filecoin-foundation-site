@@ -109,7 +109,7 @@ export default {
 
 .label {
   @include label;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .heading {
@@ -121,8 +121,12 @@ export default {
   }
 }
 
-.subheading {
+::v-deep .subheading {
   @include subheading;
   margin-bottom: 1rem;
+  a {
+    @include fontWeight_SemiBold;
+    color: $azureRadiance;
+  }
 }
 </style>
