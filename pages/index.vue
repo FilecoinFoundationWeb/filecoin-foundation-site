@@ -207,7 +207,8 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 ::v-deep #dive_deeper_intro,
 ::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
+::v-deep #dive_deeper_video_2,
+::v-deep #events-hackathons {
   padding-bottom: 0;
 }
 </style>

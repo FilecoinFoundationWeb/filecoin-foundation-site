@@ -55,7 +55,9 @@ export default {
   // ---------------------------------------------------------------------------
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/moment-module#readme
+    '@nuxtjs/moment'
   ],
   // /////////////////////////////////////////////////////////// Nuxt.js Modules
   // ---------------------------------------------------------------------------
@@ -83,6 +85,12 @@ export default {
     pagination: {
       include: true
     }
+  },
+  // ///////////////////////////////////////////////////////// [Module] MomentJS
+  // ---------------------- Doc: https://github.com/nuxt-community/moment-module
+  moment: {
+    timezone: true,
+    defaultTimezone: 'UTC'
   },
   // //////////////////////////////////////////////////////////// [Module] Axios
   // -------------------------------------- See https://axios.nuxtjs.org/options

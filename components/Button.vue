@@ -76,7 +76,7 @@ $layerOffset: 0.25rem;
 // ///////////////////////////////////////////////////////////////////// General
 .button {
   @include leading_Tiny;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 }

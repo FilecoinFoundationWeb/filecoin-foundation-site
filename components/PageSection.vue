@@ -6,8 +6,8 @@
       :id="block.id"
       :key="blockIndex"
       class="content-section">
-      <div v-if="block.type !== 'custom'" :class="getGridClasses(block.grid)">
 
+      <div v-if="block.type !== 'custom'" :class="getGridClasses(block.grid)">
         <template
           v-for="(column, columnIndex) in columns">
           <div
@@ -37,8 +37,13 @@
             </div>
           </div>
         </template>
-
       </div>
+
+      <component
+        :is="block.component"
+        v-else
+        v-bind="block.props" />
+
     </section>
 
   </section>
@@ -50,6 +55,7 @@ import TextBlock from '@/components/TextBlock'
 import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
+import EventsHackathons from '@/components/EventsHackathons'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
@@ -61,6 +67,7 @@ export default {
     ImageBlock,
     VideoBlock,
     SliderBlock,
+    EventsHackathons,
     BackgroundLayers
   },
 
