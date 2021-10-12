@@ -1,6 +1,8 @@
 <template>
   <div class="page page-index">
 
+    <Modal />
+
     <div class="main-content">
 
       <PageSection
@@ -26,6 +28,7 @@ import CloneDeep from 'lodash/cloneDeep'
 import IndexPageData from '@/content/pages/index.json'
 import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
 
+import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -34,6 +37,7 @@ export default {
   name: 'PageIndex',
 
   components: {
+    Modal,
     PageSection,
     BackgroundLayers
   },
@@ -59,10 +63,6 @@ export default {
       content.splice(len - 1, 1, replace)
       return content
     }
-  },
-
-  mounted () {
-    console.log(this.sections)
   }
 }
 </script>

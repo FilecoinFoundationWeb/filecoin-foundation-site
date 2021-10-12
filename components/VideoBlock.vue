@@ -1,5 +1,7 @@
 <template>
-  <div class="block video-block">
+  <div
+    class="block video-block"
+    @click="openModal">
 
     <div class="overlay">
       <IconPlay class="play-icon" />
@@ -12,11 +14,13 @@
 
 <script>
 // ====================================================================== Import
+import { mapActions } from 'vuex'
+
 import IconPlay from '@/components/icons/Play'
 
 // ====================================================================== Export
 export default {
-  name: 'TextBlock',
+  name: 'VideoBlock',
 
   components: {
     IconPlay
@@ -41,6 +45,18 @@ export default {
     },
     subtext () {
       return this.block.subtext
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      setModal: 'global/setModal'
+    }),
+    openModal () {
+      this.setModal({
+        action: 'video',
+        url: this.url
+      })
     }
   }
 }
