@@ -79,7 +79,7 @@ export default {
     ::v-deep .play-icon {
       transition: 250ms ease-in;
       transform: scale(1.1);
-      .triangle {
+      .icon__play__triangle-inner {
         fill: white;
       }
     }

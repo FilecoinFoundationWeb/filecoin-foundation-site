@@ -10,6 +10,7 @@
       v-if="icon"
       :class="['icon', icon]">
       <IconPlay v-if="icon === 'play'" />
+      <IconInfo v-if="icon === 'info'" />
     </div>
 
     <span class="text">
@@ -24,13 +25,15 @@
 import { mapActions } from 'vuex'
 
 import IconPlay from '@/components/icons/Play'
+import IconInfo from '@/components/icons/Info'
 
 // ====================================================================== Export
 export default {
   name: 'Button',
 
   components: {
-    IconPlay
+    IconPlay,
+    IconInfo
   },
 
   props: {
@@ -195,8 +198,12 @@ $layerOffset: 0.25rem;
   &:hover {
     ::v-deep .icon {
       svg {
-        .triangle {
+        .icon__play__triangle-inner,
+        .icon__info__circle-inner {
           fill: white;
+        }
+        .icon__info__letter-i {
+          fill: $kleinBlue;
         }
       }
     }
@@ -207,15 +214,21 @@ $layerOffset: 0.25rem;
     &:hover {
       ::v-deep .icon {
         svg {
-          .triangle {
+          .icon__play__triangle-inner,
+          .icon__info__circle-inner {
             fill: $kleinBlue;
+          }
+          .icon__info__letter-i {
+            fill: white;
           }
         }
       }
     }
     ::v-deep .icon {
       svg {
-        .triangle-outline {
+        .icon__play__triangle-outer,
+        .icon__info__circle-outer,
+        .icon__info__letter-i {
           fill: $kleinBlue;
         }
       }
