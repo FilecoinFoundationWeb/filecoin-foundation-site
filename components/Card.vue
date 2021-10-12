@@ -102,7 +102,7 @@ export default {
     height: 17.25rem;
     top: 0;
     border-radius: 11.375rem;
-    transition: ease-out 300ms;
+    transition: ease-in-out 350ms;
   }
   &:hover {
     .image {
@@ -118,8 +118,9 @@ export default {
   .description {
     position: absolute;
     text-align: center;
-    width: calc(100% - 26px);
-    top: 12.25rem;
+    padding: 0 1rem;
+    width: calc(100% - 26px - 2rem);
+    bottom: 6.25rem;
     color: white;
     z-index: -1;
   }

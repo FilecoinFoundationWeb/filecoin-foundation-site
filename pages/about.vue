@@ -132,6 +132,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   margin-bottom: 9.875rem;
   .video-block {
     background-color: $jordyBlue;
+    height: 100%;
   }
 }
 
@@ -194,7 +195,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   .background-layers {
     position: absolute;
     top: 0;
-    left: -16rem;
+    left: -12rem;
     width: 100vw;
     height: 100%;
     z-index: 5;
@@ -202,8 +203,11 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #panel_1 {
+  .heading {
+    width: 50%;
+  }
   .slider-block {
-    margin-top: 12.75rem;
+    margin-top: 10.75rem;
   }
   .card-list {
     position: relative;
