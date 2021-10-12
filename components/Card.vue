@@ -106,7 +106,7 @@ export default {
   }
   &:hover {
     .image {
-      top: calc(-7rem - 13px);
+      top: calc(-6rem - 13px);
     }
   }
   .title {

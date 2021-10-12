@@ -130,8 +130,29 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 ::v-deep #hero {
   padding: 0;
   margin-bottom: 9.875rem;
+  .subheading {
+    line-height: 1.5;
+  }
+  .column-content {
+    // width: 50vw;
+    &.left {
+      padding-top: 5.5rem;
+    }
+    &.right {
+      width: 48vw;
+      height: 100%;
+      left: 1.75rem;
+    }
+  }
+  .right,
+  .image-block {
+    width: 100%;
+    height: 100%;
+  }
   .image {
-    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
   }
 }
 
@@ -172,7 +193,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 ::v-deep #panel_1 {
   .slider-block {
-    margin-top: 12.75rem;
+    margin-top: 8.75rem;
   }
   .card-list {
     flex-wrap: unset;
