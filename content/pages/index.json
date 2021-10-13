@@ -81,7 +81,8 @@
             "push_left": "off-2"
           },
           "preview_image": "/images/page-index/intro-2-video-preview.png",
-          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys",
+          "tint": true
         },
         "right": {
           "type": "text_block",
@@ -230,6 +231,7 @@
           },
           "preview_image": "/images/page-index/team-video-preview.png",
           "url": "https://youtu.be/6OY4xAs3Grg",
+          "tint": true,
           "subtext": {
             "type": "D",
             "action": "video",
