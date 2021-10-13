@@ -90,7 +90,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     top: 0;
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: 100%;
     background-color: $hawkesBlue;
     border-radius: 14rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
@@ -99,7 +99,8 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 #section-2 {
-  padding: 7.5rem 0;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
 }
 
 #section-3 {

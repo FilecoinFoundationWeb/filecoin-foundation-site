@@ -90,7 +90,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     top: 0;
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: 100%;
     background-color: $hawkesBlue;
     border-radius: 14rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
@@ -99,7 +99,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 #section-2 {
-  padding: 7.5rem 0;
+  padding-top: 1rem;
 }
 
 #section-3 {
@@ -129,12 +129,11 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #hero {
   padding: 0;
-  margin-bottom: 9.875rem;
+  margin-bottom: 10rem;
   .subheading {
     line-height: 1.5;
   }
   .column-content {
-    // width: 50vw;
     &.left {
       padding-top: 5.5rem;
     }
@@ -157,6 +156,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #intro_1 {
+  margin-top: 3rem;
   margin-bottom: 7.5rem;
   .blocks {
     &.left {
