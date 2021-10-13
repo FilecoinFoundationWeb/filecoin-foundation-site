@@ -1,13 +1,17 @@
 <template>
-  <div
-    class="block video-block"
-    @click="openModal">
+  <div class="block video-block">
 
-    <div class="overlay">
-      <IconPlay class="play-icon" />
+    <div class="preview-container" @click="openModal">
+      <div class="overlay">
+        <IconPlay class="play-icon" />
+      </div>
+      <img :src="preview_image" class="preview-image" />
     </div>
 
-    <img :src="preview_image" class="preview-image" />
+    <Button
+      v-if="subtext"
+      :button="subtext"
+      class="subtext" />
 
   </div>
 </template>
@@ -16,14 +20,14 @@
 // ====================================================================== Import
 import { mapActions } from 'vuex'
 
-import IconPlay from '@/components/icons/Play'
+import Button from '@/components/Button'
 
 // ====================================================================== Export
 export default {
   name: 'VideoBlock',
 
   components: {
-    IconPlay
+    Button
   },
 
   props: {
@@ -64,7 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
-.video-block {
+.preview-container {
   @include borderRadius_Large;
   position: relative;
   padding: 1rem;
@@ -116,5 +120,31 @@ export default {
   width: 100%;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
   z-index: 5;
+}
+
+// ///////////////////////////////////////////////////////////////////// Subtext
+::v-deep .subtext {
+  margin-top: 0.75rem;
+  margin-left: 1.5rem;
+  &:hover {
+    .icon {
+      svg {
+        .icon__play__triangle-inner {
+          fill: $azureRadiance;
+        }
+      }
+    }
+  }
+  .icon {
+    svg {
+      .icon__play__triangle-outer {
+        fill: $azureRadiance;
+      }
+    }
+  }
+  .text {
+    @include fontSize_Regular;
+    color: $azureRadiance;
+  }
 }
 </style>

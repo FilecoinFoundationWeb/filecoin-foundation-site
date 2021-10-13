@@ -230,8 +230,13 @@
           },
           "preview_image": "/images/page-index/team-video-preview.png",
           "url": "https://youtu.be/6OY4xAs3Grg",
-          "icon": "play",
-          "subtext": "Watch: Introducing the Filecoin Foundation Team"
+          "subtext": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "Watch: Introducing the Filecoin Foundation Team",
+            "url": "https://youtu.be/6OY4xAs3Grg"
+          }
         }
       },
       {
