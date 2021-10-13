@@ -1,6 +1,8 @@
 <template>
   <div class="page page-index">
 
+    <Modal />
+
     <div class="main-content">
 
       <PageSection
@@ -26,6 +28,7 @@ import CloneDeep from 'lodash/cloneDeep'
 import IndexPageData from '@/content/pages/index.json'
 import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
 
+import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -34,6 +37,7 @@ export default {
   name: 'PageIndex',
 
   components: {
+    Modal,
     PageSection,
     BackgroundLayers
   },
@@ -59,10 +63,6 @@ export default {
       content.splice(len - 1, 1, replace)
       return content
     }
-  },
-
-  mounted () {
-    console.log(this.sections)
   }
 }
 </script>
@@ -90,7 +90,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     top: 0;
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: 100%;
     background-color: rgb(239, 246, 252);
     border-radius: 14rem 0 0 5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
@@ -99,7 +99,8 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 #section-2 {
-  padding: 7.5rem 0;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
 }
 
 #section-3 {
@@ -132,6 +133,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #intro_1 {
+  padding-top: 7.5rem;
   .blocks {
     &.right {
       padding: 2rem 0;
@@ -146,6 +148,10 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     height: 100%;
     z-index: 5;
   }
+}
+
+::v-deep #intro_2 {
+  padding: 10rem 0;
 }
 
 ::v-deep #banner_1 {
@@ -166,7 +172,8 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #explore_1 {
-  margin: 5rem 0;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
   .blocks {
     &.right {
       padding-top: 5rem;
@@ -189,6 +196,14 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   }
 }
 
+::v-deep #team_video {
+  padding-top: 0;
+}
+
+::v-deep #team_intro {
+  padding-bottom: 7.5rem;
+}
+
 ::v-deep #get_involved {
   .blocks {
     &.right {
@@ -207,7 +222,8 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 ::v-deep #dive_deeper_intro,
 ::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
+::v-deep #dive_deeper_video_2,
+::v-deep #events-hackathons {
   padding-bottom: 0;
 }
 </style>

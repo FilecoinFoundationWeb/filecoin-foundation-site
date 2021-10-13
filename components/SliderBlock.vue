@@ -39,10 +39,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// ///////////////////////////////////////////////////////////////////// General
+// /////////////////////////////////////////////////////////////////////// Cards
 .card-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.card {
+  width: calc(50% - 3rem);
+  margin-bottom: 3rem;
+  &:nth-child(odd) {
+    margin-right: 6rem;
+  }
 }
 </style>

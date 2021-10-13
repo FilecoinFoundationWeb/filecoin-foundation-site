@@ -3,12 +3,14 @@
     :is="tag"
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
-    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]">
+    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]"
+    @click="openModal">
 
     <div
       v-if="icon"
       :class="['icon', icon]">
       <IconPlay v-if="icon === 'play'" />
+      <IconInfo v-if="icon === 'info'" />
     </div>
 
     <span class="text">
@@ -20,14 +22,18 @@
 
 <script>
 // ====================================================================== Import
+import { mapActions } from 'vuex'
+
 import IconPlay from '@/components/icons/Play'
+import IconInfo from '@/components/icons/Info'
 
 // ====================================================================== Export
 export default {
   name: 'Button',
 
   components: {
-    IconPlay
+    IconPlay,
+    IconInfo
   },
 
   props: {
@@ -66,6 +72,20 @@ export default {
     theme () {
       return this.button.theme || 'light'
     }
+  },
+
+  methods: {
+    ...mapActions({
+      setModal: 'global/setModal'
+    }),
+    openModal () {
+      if (this.action === 'video') {
+        this.setModal({
+          action: 'video',
+          url: this.url
+        })
+      }
+    }
   }
 }
 </script>
@@ -76,7 +96,7 @@ $layerOffset: 0.25rem;
 // ///////////////////////////////////////////////////////////////////// General
 .button {
   @include leading_Tiny;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
@@ -175,12 +195,42 @@ $layerOffset: 0.25rem;
 .type__D {
   @include fontWeight_Medium;
   color: white;
+  &:hover {
+    ::v-deep .icon {
+      svg {
+        .icon__play__triangle-inner,
+        .icon__info__circle-inner {
+          fill: white;
+        }
+        .icon__info__letter-i {
+          fill: $kleinBlue;
+        }
+      }
+    }
+  }
   &.theme__dark {
     color: $kleinBlue;
     border-color: $kleinBlue;
+    &:hover {
+      ::v-deep .icon {
+        svg {
+          .icon__play__triangle-inner,
+          .icon__info__circle-inner {
+            fill: $kleinBlue;
+          }
+          .icon__info__letter-i {
+            fill: white;
+          }
+        }
+      }
+    }
     ::v-deep .icon {
-      svg path {
-        fill: $kleinBlue;
+      svg {
+        .icon__play__triangle-outer,
+        .icon__info__circle-outer,
+        .icon__info__letter-i {
+          fill: $kleinBlue;
+        }
       }
     }
   }
@@ -191,9 +241,6 @@ $layerOffset: 0.25rem;
     }
     &.info {
       width: 1rem;
-    }
-    svg path {
-      fill: white;
     }
   }
 }

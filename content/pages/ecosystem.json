@@ -171,42 +171,42 @@
             {
               "type": "A",
               "img": "/icons/pencil.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Filecoin Notary Portal",
               "description": "The official client and notary portal, hosted by the Filecoin website"
             },
             {
               "type": "A",
               "img": "/icons/plus.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Filecoin Plus Github",
               "description": "FIP0003 proposing the program"
             },
             {
               "type": "A",
               "img": "/icons/upstairs.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Client Onboarding Repo",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             },
             {
               "type": "A",
               "img": "/icons/stamp.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Notary Governance Repo",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             },
             {
               "type": "A",
               "img": "/icons/key.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Root Key Holder Governance",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             },
             {
               "type": "A",
               "img": "/icons/calendar.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Community Calendar",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             }

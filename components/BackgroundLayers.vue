@@ -42,11 +42,6 @@ export default {
       required: false,
       default: 'large'
     }
-    // shadowsArray: {
-    //   type: Array,
-    //   required: false,
-    //   default: () => [1, 2, 3, 4, 5, 6]
-    // }
   },
 
   data () {
@@ -64,14 +59,6 @@ export default {
       }
       return arr
     }
-    // shadows () {
-    //   const arr = []
-    //   for (let i = 0; i < this.layersArray.length; i++) {
-    //     const ind = Math.max(Math.min(this.layersArray[i], 6), 1)
-    //     arr.push({ index: ind, color: this.colors[ind - 1] })
-    //   }
-    //   return arr
-    // }
   },
 
   methods: {
