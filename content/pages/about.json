@@ -1,0 +1,288 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "page_content": [
+    [
+      {
+        "id": "hero",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-2"
+          },
+          "heading": "About us",
+          "subheading": "The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks."
+        },
+        "right": {
+          "type": "video_block",
+          "preview_image": "/images/About/preview-about@2x.png",
+          "url": "https://youtu.be/6OY4xAs3Grg",
+          "cols": {
+            "num": "col-5",
+            "push_left": "off-1"
+          }
+        }
+      },
+      {
+        "id": "intro_1",
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-7",
+            "push_left": "off-5"
+          },
+          "label": "Our Mission",
+          "description": "The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4, 3],
+                "offset": 1.375,
+                "reverse": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "cta_1",
+        "left": {
+          "type": "image_block",
+          "src": "/images/About/computer@2x.png",
+          "cols": {
+            "num": "col-5",
+            "push_left": "off-2"
+          }
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-1"
+          },
+          "label": "Internet of Everyone",
+          "heading": "The Filecoin Foundation does not own Filecoin, operate it, or manage it.",
+          "subheading": "It is one of many organizations that cares deeply about Filecoin — its potential, and the values it represents.",
+          "description": "However, the foundation has a unique position within that ecosystem to help cultivate research, development, and community engagement.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Join the Community",
+              "url": "/get-involved"
+            }
+          ]
+        }
+      },
+      {
+        "id": "banner_1",
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-7",
+            "push_left": "off-4"
+          },
+          "description": "In addition to providing funding, FF supports a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6],
+                "offset": 1.375,
+                "reverse": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "cta_2",
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-2"
+          },
+          "label": "Collective Action",
+          "heading": "The Foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem."
+        },
+        "right": {
+          "type": "image_block",
+          "src": "/icons/square-connection.png",
+          "cols": {
+            "num": "col-5",
+            "push_left": "off-1"
+          }
+        }
+      },
+      {
+        "id": "panel_1",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-9",
+            "push_left": "off-2"
+          },
+          "heading": "Board of Directors",
+          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
+          "customizations": [
+            {
+              "name": "SliderBlock",
+              "props": {
+                "block": {
+                  "cards": [
+                    {
+                      "type": "B",
+                      "img": "/images/About/marta-belcher@2x.png",
+                      "title": "Marta Belcher",
+                      "description": "General Counsel, Protocol Labs (Board Chair)"
+                    },
+                    {
+                      "type": "B",
+                      "img": "/images/About/marcia-hoffman@2x.png",
+                      "title": "Marcia Hoffman",
+                      "description": ""
+                    },
+                    {
+                      "type": "B",
+                      "img": "/images/About/brian-behlendorf@2x.png",
+                      "title": "Brian Behlendorf",
+                      "description": ""
+                    },
+                    {
+                      "type": "B",
+                      "img": "/images/About/nicole-wong@2x.png",
+                      "title": "Nicole Wong",
+                      "description": ""
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "explore_1",
+        "grid": ["middle"],
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3",
+            "push_left": "off-1"
+          },
+          "label": "Advisors",
+          "heading": "FF is guided by an extraordinary and accomplished group of advisers",
+          "description": "Leaders from across web3 and the open source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a style='color: white;'>our talks</a> featuring contributions from our advisory panel and become part of the conversation in <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX' style='color: white;'>#fil-plus</a> on the official Filecoin Slack."
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6",
+            "push_left": "off-2"
+          },
+          "cards": [
+            {
+              "type": "C",
+              "img": "/images/About/katiebiber.png",
+              "img_size": "full",
+              "description": "<b>Katie Biber</b>General Counsel, Brex"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/alex-feerst@2x.png",
+              "img_size": "full",
+              "description": "<b>Alex Feerst</b>CEO, Murmuration Labs"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/wendy-hanamura@2x.png",
+              "img_size": "full",
+              "description": "<b>Wendy Hanamura</b>Director of Partnerships, Internet Archive"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/brewster-kahle@2x.png",
+              "img_size": "full",
+              "description": "<b>Brewster Kahle</b>Founder, Internet Archive"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/joe-lubin@2x.png",
+              "img_size": "full",
+              "description": "<b>Joe Lubin</b>Founder of ConsenSys and Cofounder of Ethereum"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/georgia-quinn@2x.png",
+              "img_size": "full",
+              "description": "<b>Georgia Quinn</b>General Counsel, Anchorage"
+            },
+            {
+              "type": "C",
+              "img": "/images/About/sandra-ro@2x.png",
+              "img_size": "full",
+              "description": "<b>Sandra Ro</b>CEO, Global Blockchain Business Council"
+            }
+          ],
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6, 5, 4],
+                "border-radius": 5,
+                "offset": 1.375,
+                "reverse": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "events-hackathons",
+        "type": "custom",
+        "heading": "Events & Hackathons",
+        "cta": {
+          "type": "A",
+          "action": "nuxt-link",
+          "text": "Browse all Events",
+          "url": "/events"
+        },
+        "events": [
+          {
+            "image": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc",
+            "date": "October 20, 2021",
+            "title": "Center for Democracy and Technology’s 2021 Tech Prom"
+          },
+          {
+            "date": "October 20, 2021",
+            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
+          }
+        ]
+      }
+    ]
+  ]
+}
