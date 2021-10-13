@@ -102,8 +102,8 @@ Primary website for the Filecoin Foundation
   type: 'video_block',
   preview_image: String,
   url: String,
-  icon: String,
-  subtext: String
+  subtext: <Button>,
+  tint: Boolean
 }
 ```
 

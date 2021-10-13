@@ -77,6 +77,7 @@ $fontSize_Huge: 3.4375rem;
 $fontWeight_Regular: 400;
 $fontWeight_Medium: 500;
 $fontWeight_SemiBold: 600;
+$fontWeight_Bold: 700;
 
 // --------------------------------------------------------------------- Leading
 $leading_Tiny: 1;
@@ -207,6 +208,7 @@ $letterSpacing_Large: 0.03em;
 @mixin fontWeight_Regular { font-weight: $fontWeight_Regular; }
 @mixin fontWeight_Medium { font-weight: $fontWeight_Medium; }
 @mixin fontWeight_SemiBold { font-weight: $fontWeight_SemiBold; }
+@mixin fontWeight_Bold { font-weight: $fontWeight_Bold; }
 
 // -------------------------------------------------------- Typography | Leading
 @mixin leading_Tiny { line-height: $leading_Tiny; }
@@ -240,14 +242,8 @@ $letterSpacing_Large: 0.03em;
 @mixin label { // small all-caps label that appears above headings
   font-size: $fontSize_Small;
   font-weight: $fontWeight_SemiBold;
-  line-height: $leading_ExtraLarge;
-  text-transform: uppercase;
-}
-
-@mixin titleBlue { // blue titles usually found in dark-themed slider cards
-  font-weight: $fontWeight_Medium;
   line-height: $leading_Regular;
-  color: $azureRadiance;
+  text-transform: uppercase;
 }
 
 @mixin buttonText {

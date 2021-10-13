@@ -25,7 +25,6 @@
           "ctas": [
             {
               "type": "A",
-              "theme": "light",
               "action": "nuxt-link",
               "text": "Get Involved",
               "url": "/get-involved"
@@ -55,7 +54,6 @@
           },
           "label": {
             "type": "D",
-            "theme": "light",
             "action": "video",
             "icon": "play",
             "text": "Watch now",
@@ -66,7 +64,7 @@
             {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 2, 1],
+                "layers-array": [8, 6, 5, 4, 3, 2],
                 "offset": 1.375,
                 "reverse": true
               }
@@ -82,8 +80,9 @@
             "num": "col-6",
             "push_left": "off-2"
           },
-          "preview_image": "/images/placeholder-image.png",
-          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+          "preview_image": "/images/page-index/intro-2-video-preview.png",
+          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys",
+          "tint": true
         },
         "right": {
           "type": "text_block",
@@ -101,7 +100,7 @@
               "action": "video",
               "icon": "play",
               "text": "Watch video",
-              "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+              "url": "https://youtu.be/Sakannch1Dw"
             }
           ]
         }
@@ -120,7 +119,7 @@
             {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 2, 1],
+                "layers-array": [8, 6, 5, 4, 3, 2],
                 "offset": 1.375,
                 "reverse": true
               }
@@ -230,10 +229,16 @@
             "num": "col-10",
             "push_left": "off-2"
           },
-          "preview_image": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc",
-          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys",
-          "icon": "play",
-          "subtext": "Watch: Introducing the Filecoin Foundation Team"
+          "preview_image": "/images/page-index/team-video-preview.png",
+          "url": "https://youtu.be/6OY4xAs3Grg",
+          "tint": true,
+          "subtext": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "Watch: Introducing the Filecoin Foundation Team",
+            "url": "https://youtu.be/6OY4xAs3Grg"
+          }
         }
       },
       {
@@ -245,7 +250,7 @@
             "num": "col-4",
             "push_left": "off-2"
           },
-          "src": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc"
+          "src": "/images/page-index/filecoin-logomark-large.png"
         },
         "right": {
           "type": "text_block",
@@ -300,44 +305,44 @@
             {
               "type": "A",
               "img": "/icons/calendar.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Attend an event",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Join to or watch one of Filecoin’s official events"
             },
             {
               "type": "A",
               "img": "/icons/multi-person.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Join a meetup group",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Find a group of people in your area who connect regularly"
             },
             {
               "type": "A",
               "img": "/icons/speech-bubble.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Contribute to the Filecoin project",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Shape the future by contributing to Filecoin’s code, research or docs"
             },
             {
               "type": "A",
               "img": "/icons/hands-raised.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Participate in one of the many online forums about Filecoin, events or the Filecoin Slack Channel"
             },
             {
               "type": "A",
               "img": "/icons/tool.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Help mine or build with Filecoin",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Dive right in and become an essential part of the ecosystem"
             },
             {
               "type": "A",
               "img": "/icons/magnifying-glass.png",
-              "img_size": "full",
+              "img_size": "regular",
               "title": "Learn more on ProtoSchool",
-              "description": "Participate in one of many online forums about Filecoin"
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool"
             }
           ],
           "customizations": [
@@ -357,24 +362,55 @@
       {
         "id": "events-hackathons",
         "type": "custom",
-        "heading": "Events & Hackathons",
-        "cta": {
-          "type": "A",
-          "action": "nuxt-link",
-          "text": "Browse all Events",
-          "url": "/events"
-        },
-        "events": [
-          {
-            "image": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc",
-            "date": "October 20, 2021",
-            "title": "Center for Democracy and Technology’s 2021 Tech Prom"
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4",
+              "push_left": "off-1"
+            },
+            "heading": "Events & Hackathons",
+            "cta": {
+              "type": "A",
+              "action": "nuxt-link",
+              "text": "Browse all Events",
+              "url": "/events"
+            }
           },
-          {
-            "date": "October 20, 2021",
-            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
+          "events": {
+            "cols": {
+              "num": "col-8",
+              "push_left": "off-4"
+            },
+            "cards": [
+              {
+                "type": "D",
+                "img": "/images/events/center-for-democracy-and-technologys-2021-tech-prom.png",
+                "date": "October 20, 2021",
+                "title": "Center for Democracy and Technology’s 2021 Tech Prom",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://cdt.org/event/2021-tech-prom/"
+                }
+              },
+              {
+                "type": "D",
+                "date": "October 20, 2021",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+                }
+              }
+            ]
           }
-        ]
+        }
       }
     ]
   ]

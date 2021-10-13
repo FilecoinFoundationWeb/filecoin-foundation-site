@@ -5,13 +5,15 @@ import GeneralSiteData from '@/content/pages/general.json'
 // /////////////////////////////////////////////////////////////////////// State
 // -----------------------------------------------------------------------------
 const state = () => ({
-  siteContent: {}
+  siteContent: {},
+  modal: false
 })
 
 // ///////////////////////////////////////////////////////////////////// Getters
 // -----------------------------------------------------------------------------
 const getters = {
-  siteContent: state => state.siteContent
+  siteContent: state => state.siteContent,
+  modal: state => state.modal
 }
 
 // ///////////////////////////////////////////////////////////////////// Actions
@@ -36,6 +38,10 @@ const actions = {
   // //////////////////////////////////////////////////////////// setSiteContent
   setSiteContent ({ commit }, payload) {
     commit('SET_SITE_CONTENT', payload)
+  },
+  // ////////////////////////////////////////////////////////////////// setModal
+  setModal ({ commit }, payload) {
+    commit('SET_MODAL', payload)
   }
 }
 
@@ -47,6 +53,9 @@ const mutations = {
   },
   SET_SITE_CONTENT (state, payload) {
     state.siteContent[payload.key] = payload.data
+  },
+  SET_MODAL (state, payload) {
+    state.modal = payload
   }
 }
 
