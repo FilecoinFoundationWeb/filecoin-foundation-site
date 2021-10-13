@@ -79,14 +79,15 @@
           "layout": "small",
           "cols": {
             "num": "col-3",
-            "push_left": "off-5"
+            "push_left": "off-4"
           }
         },
         "right": {
           "type": "text_block",
           "layout": "small",
           "cols": {
-            "num": "col-4"
+            "num": "col-4",
+            "push_left": "off-1"
           },
           "subheading": "What exactly is an FIP?",
           "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIP’s allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin."
@@ -151,16 +152,17 @@
           "layout": "small",
           "cols": {
             "num": "col-3",
-            "push_left": "off-5"
+            "push_left": "off-4"
           }
         },
         "right": {
           "type": "text_block",
           "layout": "small",
           "cols": {
-            "num": "col-4"
+            "num": "col-4",
+            "push_left": "off-1"
           },
-          "description": "Filecoin is a decentralized storage network for humanity’s most important information, so ensuring the network is secure and trustable is paramount to its success."
+          "subheading": "Filecoin is a decentralized storage network for humanity’s most important information, so ensuring the network is secure and trustable is paramount to its success."
         }
       },
       {
@@ -172,7 +174,7 @@
             "num": "col-6",
             "push_left": "off-6"
           },
-          "description": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, pentesters and researchers to audit our code and practices.<br><br><div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div><br><br>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program, which rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
+          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, pentesters and researchers to audit our code and practices.<div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program, which rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -207,16 +209,17 @@
           "layout": "small",
           "cols": {
             "num": "col-3",
-            "push_left": "off-5"
+            "push_left": "off-4"
           }
         },
         "right": {
           "type": "text_block",
           "layout": "small",
           "cols": {
-            "num": "col-4"
+            "num": "col-4",
+            "push_left": "off-1"
           },
-          "description": "Filecoin Plus is a pragmatic solution to the technically challenging problem of verifying that a particular set of data is useful in a permissionless, incentive-compatible, pseudonymous network, and presents a path for incentivizing using the network in productive ways."
+          "subheading": "Filecoin Plus is a pragmatic solution to the technically challenging problem of verifying that a particular set of data is useful in a permissionless, incentive-compatible, pseudonymous network, and presents a path for incentivizing using the network in productive ways."
         }
       },
       {
@@ -281,17 +284,27 @@
           "layout": "small",
           "cols": {
             "num": "col-3",
-            "push_left": "off-5"
+            "push_left": "off-4"
           }
         },
         "right": {
           "type": "text_block",
           "layout": "small",
           "cols": {
-            "num": "col-4"
+            "num": "col-4",
+            "push_left": "off-1"
           },
           "subheading": "Community governance calls happen every other Tuesday.",
-          "description": "Visit the <a href='https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Filecoin community calendar</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>"
+          "description": "Visit the <a href='https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Filecoin community calendar</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "theme": "dark",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
+          ]
         }
       },
       {
@@ -302,6 +315,61 @@
           "cols": {
             "num": "col-8",
             "push_left": "off-4"
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "events-hackathons",
+        "type": "custom",
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4",
+              "push_left": "off-6"
+            },
+            "heading": "Events & Hackathons",
+            "cta": {
+              "type": "A",
+              "action": "nuxt-link",
+              "text": "Browse all Events",
+              "url": "/events"
+            }
+          },
+          "events": {
+            "cols": {
+              "num": "col-8",
+              "push_left": "off-4"
+            },
+            "cards": [
+              {
+                "type": "D",
+                "img": "/images/events/center-for-democracy-and-technologys-2021-tech-prom.png",
+                "date": "October 20, 2021",
+                "title": "Center for Democracy and Technology’s 2021 Tech Prom",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://cdt.org/event/2021-tech-prom/"
+                }
+              },
+              {
+                "type": "D",
+                "date": "October 20, 2021",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+                }
+              }
+            ]
           }
         }
       }

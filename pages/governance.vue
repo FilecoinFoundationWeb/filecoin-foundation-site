@@ -74,8 +74,8 @@ export default {
 $backgroundLayers__Offset: 1.75rem * 5;
 $backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset});
 $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
-$backgroundFill__Left: calc(50% - (#{$containerWidth} / 2) + (3 * 1.75rem));
-$indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
+$backgroundFill__Left: calc(50% - (#{$containerWidth} / 2) + (4 * 1.75rem));
+$indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 // ///////////////////////////////////////////////////////////////////// General
 
@@ -101,7 +101,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
     top: 0;
     left: $backgroundFill__Left;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: calc(100% + 4.5rem);
     background-color: $blackPearl;
     border-radius: 0 0 0 8.5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
@@ -110,12 +110,14 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 }
 
 #section-3 {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 4.125rem;
 }
 
 #section-3,
 #section-4,
-#section-5 {
+#section-5,
+#section-6,
+#section-7 {
   &:before {
     content: '';
     position: absolute;
@@ -129,18 +131,9 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
   }
 }
 
-#section-6 {
+#section-7 {
   &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: $indentedFill__Left;
-    width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
-    background-color: $blackPearl;
     border-radius: 0 0 0 8.5rem;
-    filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-    z-index: -10;
   }
 }
 
@@ -166,6 +159,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 // ----------------------------------------------------------------- [Section] 2
 ::v-deep #hero {
   padding: 0;
+  margin-bottom: 2.4375rem;
   .column-content {
     &.left {
       height: 100%;
@@ -182,17 +176,35 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 
 ::v-deep #hero_text {
   padding: 0;
+  margin-bottom: 4.25rem;
+  text-align: right;
 }
 // ----------------------------------------------------------------- [Section] 3
 ::v-deep #panel-1-title {
   padding: 0;
+  margin-bottom: 1.5rem;
 }
 
 ::v-deep #panel-1-info-top {
   padding: 0;
+  margin-bottom: 3.25rem;
+  .image {
+    transform: rotateZ(6deg) translate(2rem, 4.375rem) scale(1.2);
+  }
+}
+
+::v-deep #panel-1-info-middle {
+  padding: 0;
+  margin-bottom: 3.25rem;
+}
+
+::v-deep #panel-1-info-bottom {
+  padding: 0;
+  margin-bottom: 3.25rem;
 }
 
 ::v-deep #panel-1-banner-image {
+  padding: 0;
   .image {
     width: 62vw;
     border-radius: 20vw 0 0 20vw;
@@ -201,11 +213,15 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 
 // ----------------------------------------------------------------- [Section] 4
 ::v-deep #panel-2-title {
-  padding: 0;
+  padding: 5.5rem 0 0 0;
+  margin-bottom: 1rem;
 }
 
 ::v-deep #panel-2-info-top {
   padding: 0;
+  .image {
+    transform: scale(0.85) translateX(2rem);
+  }
 }
 
 ::v-deep #panel-2-main {
@@ -228,6 +244,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
     .image-wrapper {
       display: flex;
       flex-direction: row;
+      margin: 4.5rem 0 2rem 0;
       .image {
         padding-right: 2rem;
         width: 50%;
@@ -259,7 +276,33 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 }
 
 // ----------------------------------------------------------------- [Section] 5
+::v-deep #panel-3-title {
+  padding: 3.75rem 0 0 0;
+}
+
+::v-deep #panel-3-info-top {
+  padding: 3.75rem 0 0 0;
+  .column-content {
+    &.left {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .image {
+    transform: scale(1.3);
+  }
+}
+
+::v-deep #panel-3-info-middle {
+  padding: 3.75rem 0 0 0;
+  .subheading {
+    @include fontSize_ExtraLarge;
+    letter-spacing: $letterSpacing_Large;
+  }
+}
+
 ::v-deep #panel-3-info-bottom {
+  padding: 3.75rem 0 0 0;
   .card-list {
     flex-direction: column;
   }
@@ -292,7 +335,20 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
 }
 
 ::v-deep #panel-4-info {
-  padding: 0;
+  padding: 1rem 0 0 0;
+  margin-bottom: 4rem;
+  .image {
+    transform: scale(1.2) translate(0.75rem, 1.25rem);
+  }
+  .subheading {
+    @include fontSize_ExtraLarge;
+    line-height: $leading_Small;
+  }
+  .description {
+    @include fontSize_Large;
+    line-height: $leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+  }
   a {
     color: $denim;
   }
@@ -302,6 +358,13 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (13 * 1.75rem));
   .image {
     width: 62vw;
     border-radius: 20vw 0 0 20vw;
+  }
+}
+
+// ----------------------------------------------------------------- [Section] 7
+::v-deep #events-hackathons {
+  .events {
+    margin-top: 11rem;
   }
 }
 
