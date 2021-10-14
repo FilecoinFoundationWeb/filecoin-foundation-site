@@ -9,44 +9,107 @@
     "type": "website",
     "image": ""
   },
-  "navigation": {
-    "header": [
+  "social": [
+    {
+      "type": "X",
+      "action": "a",
+      "url": "https://www.reddit.com/r/filecoin/",
+      "component": "RedditIcon"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "url": "https://twitter.com/FilFoundation",
+      "component": "TwitterIcon"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "url": "https://www.linkedin.com/company/68020800/admin/",
+      "component": "LinkedInIcon"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA",
+      "component": "YoutubeIcon"
+    }
+  ],
+  "navigation": [
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/about",
+      "text": "About"
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/governance",
+      "text": "Governance"
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/ecosystem",
+      "text": "Ecosystem"
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/grants",
+      "text": "Grants"
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/get-involved",
+      "text": "Get Involved"
+    }
+  ],
+  "footer": {
+    "text": [
+      "Contact Us",
+      "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
+      "For more information on Dev Grants, <a href='mailto:devgrants@fil.org'>email us</a>."
+    ],
+    "links": [
       {
-        "type": "C",
-        "theme": "light",
+        "type": "F",
+        "theme": "dark",
         "action": "nuxt-link",
-        "url": "/about",
-        "text": "About"
+        "url": "http://ffdweb.org",
+        "text": "Filecoin Foundation for the Decentralized Web"
       },
       {
-        "type": "C",
-        "theme": "light",
+        "type": "F",
+        "theme": "dark",
         "action": "nuxt-link",
-        "url": "/governance",
-        "text": "Governance"
-      },
-      {
-        "type": "C",
-        "theme": "light",
-        "action": "nuxt-link",
-        "url": "/ecosystem",
-        "text": "Ecosystem"
-      },
-      {
-        "type": "C",
-        "theme": "light",
-        "action": "nuxt-link",
-        "url": "/grants",
-        "text": "Grants"
-      },
-      {
-        "type": "C",
-        "theme": "light",
-        "action": "nuxt-link",
-        "url": "/get-involved",
-        "text": "Get Involved"
+        "url": "https://forkast.news/podcast/the-future-rules/",
+        "text": "Future Rules Podcast"
       }
     ],
-    "footer": {}
+    "panel_bottom": {
+      "links": [
+        {
+          "type": "F",
+          "action": "nuxt-link",
+          "url": "/policy",
+          "text": "Data & Privacy Policy"
+        },
+        {
+          "type": "F",
+          "action": "nuxt-link",
+          "url": "/terms",
+          "text": "Terms of Use"
+        }
+      ],
+      "copyright_text": "Content on this site is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a>."
+    }
   }
 }

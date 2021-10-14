@@ -7,16 +7,18 @@
     @click="openModal">
 
     <div
-      v-if="icon"
+      v-if="type !== 'X' && icon"
       :class="['icon', icon]">
       <IconPlay v-if="icon === 'play'" />
       <IconInfo v-if="icon === 'info'" />
       <IconPlus v-if="icon === 'plus'" />
     </div>
 
-    <span class="text">
+    <span v-if="type !== 'X'" class="text">
       {{ text }}
     </span>
+
+    <slot v-if="type === 'X'" />
 
   </component>
 </template>
@@ -40,7 +42,7 @@ export default {
   },
 
   props: {
-    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border | (E) → load more
+    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border | (E) → Load more | (F) → Footer | (X) → No styling + slot
       type: Object,
       required: true
     }
