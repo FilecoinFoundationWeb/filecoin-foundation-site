@@ -18,7 +18,9 @@
               :class="['tab', { selected: slide.label === content.label }]"
               @click="select(slide.label)">
               <img :src="slide.icon"></img>
-              <div class="label">{{ slide.label }}</div>
+              <div class="label">
+                {{ slide.label }}
+              </div>
             </div>
           </div>
         </div>
@@ -35,8 +37,12 @@
                 <img :src="content.icon"></img>
               </div>
               <div class="text">
-                <div class="label">{{ content.label }}</div>
-                <div class="description">{{ content.description }}</div>
+                <div class="label">
+                  {{ content.label }}
+                </div>
+                <div class="description">
+                  {{ content.description }}
+                </div>
               </div>
             </div>
 
