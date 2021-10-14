@@ -194,7 +194,8 @@
           },
           "card": {
             "cols": {
-              "num": "col-5"
+              "num": "col-7",
+              "push_left": "off-1"
             }
           },
           "slides": [

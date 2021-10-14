@@ -231,6 +231,10 @@ export default {
   }
 }
 
+::v-deep #tabbed-slider {
+  padding: 3.875rem 0 2rem 0;
+}
+
 ::v-deep #info-1 {
   .blocks {
     &.left {
@@ -260,10 +264,6 @@ export default {
     width: 100vw;
     height: 100%;
   }
-}
-
-::v-deep #get_involved {
-
 }
 
 </style>
