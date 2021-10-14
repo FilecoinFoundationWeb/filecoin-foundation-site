@@ -103,7 +103,7 @@
             },
             {
               "type": "A",
-              "description": "For more information on grants, <a href='mailto:devgrants@fil.org'>email us.</a>"
+              "description": "<span class='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us.</a></span>"
             }
           ]
         }
@@ -116,8 +116,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-8",
-            "push_left": "off-3"
+            "num": "col-10",
+            "push_left": "off-2"
           },
           "label": "Our Mission",
           "description": "The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
@@ -125,7 +125,7 @@
             {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [6],
+                "layers-array": [8, 6],
                 "offset": 1.375
               }
             }
@@ -294,7 +294,8 @@
               "props": {
                 "layers-array": [8, 6],
                 "offset": 1.375,
-                "reverse": true
+                "reverse": true,
+                "border-radius": 5
               }
             }
           ]
