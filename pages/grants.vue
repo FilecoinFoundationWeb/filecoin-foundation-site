@@ -33,7 +33,6 @@ import GrantsPageData from '@/content/pages/grants.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
-import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
@@ -41,8 +40,7 @@ export default {
 
   components: {
     Modal,
-    PageSection,
-    BackgroundLayers
+    PageSection
   },
 
   async fetch ({ store }) {

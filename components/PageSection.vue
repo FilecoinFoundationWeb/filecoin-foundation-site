@@ -57,6 +57,7 @@ import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
 import CardListBlock from '@/components/CardListBlock'
 import EventsHackathons from '@/components/EventsHackathons'
+import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
@@ -70,6 +71,7 @@ export default {
     SliderBlock,
     CardListBlock,
     EventsHackathons,
+    TabbedSlider,
     BackgroundLayers
   },
 

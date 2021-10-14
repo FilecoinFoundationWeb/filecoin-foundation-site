@@ -183,6 +183,42 @@
     ],
     [
       {
+        "id": "tabbed-slider",
+        "type": "custom",
+        "component": "TabbedSlider",
+        "props": {
+          "tabs": {
+            "cols": {
+              "num": "col-3"
+            }
+          },
+          "card": {
+            "cols": {
+              "num": "col-5"
+            }
+          },
+          "slides": [
+            {
+              "label": "Education",
+              "icon": "icons/graduation-cap.png",
+              "description": "These projects fall into two broad categories.  The first category seeks to educate the public about how the internet works and how decentralized and open source technologies benefit businesses, citizens, and governments.  The second category seeks to educate and support current and future developers in how to best use decentralized and open technologies."
+            },
+            {
+              "label": "Research",
+              "icon": "icons/magnifying-glass.png",
+              "description": "These projects support efforts to store research data using decentralized web storage in ways that make the data easily shared and accessed. Additionally, they explore methods to improve and expand decentralized web data retrieval and storage with outputs that are freely and publicly accessible."
+            },
+            {
+              "label": "Development",
+              "icon": "icons/beaker.png",
+              "description": "These projects drive the creation and development of technologies that will enable decentralized file storage of humanity’s most important information. They may encourage and fund the essential interoperability glue connecting elements of the decentralized web."
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
         "id": "info-1",
         "left": {
           "type": "video_block",
