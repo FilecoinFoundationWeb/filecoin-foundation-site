@@ -27,8 +27,8 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
-import Button from '@/components/Button'
 
+import Button from '@/components/Button'
 import LogoHorizontal from '@/components/LogoHorizontal'
 
 // ====================================================================== Export
@@ -45,7 +45,7 @@ export default {
       siteContent: 'global/siteContent'
     }),
     links () {
-      return this.siteContent.general.navigation.header
+      return this.siteContent.general.navigation
     }
   }
 }
