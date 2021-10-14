@@ -33,6 +33,42 @@ import GovernancePageData from '@/content/pages/governance.json'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
+// =================================================================== Functions
+const stickyElementInViewport = () => {
+  let el = document.getElementById('sticky-info')
+  let top = el.offsetTop
+  const sticky = el.firstChild
+  const threshold = window.pageYOffset + 120
+
+  while (el.offsetParent) {
+    el = el.offsetParent
+    top += el.offsetTop
+  }
+
+  let end = document.getElementById('section-7')
+  let bottom = end.offsetTop
+
+  while (end.offsetParent) {
+    end = end.offsetParent
+    bottom += end.offsetTop
+  }
+
+  bottom += 80
+
+  if (top < threshold && bottom > threshold) {
+    const h = threshold - top
+    sticky.style.top = h + 'px'
+  } else if (bottom < threshold) {
+    if (sticky.style.top !== (bottom - top + 'px')) {
+      sticky.style.top = bottom - top + 'px'
+    }
+  } else {
+    if (sticky.style.top !== 0) {
+      sticky.style.top = 0
+    }
+  }
+}
+
 // ====================================================================== Export
 export default {
   name: 'PageGovernance',
@@ -40,6 +76,12 @@ export default {
   components: {
     PageSection,
     BackgroundLayers
+  },
+
+  data () {
+    return {
+      scroll: false
+    }
   },
 
   async fetch ({ store }) {
@@ -56,16 +98,18 @@ export default {
     },
     sections () {
       const content = CloneDeep(this.siteContent.governance.page_content)
-      // const len = content.length
-      // const last = content[len - 1]
-      // const replace = this.siteContent['section-dive-deeper'].concat(last)
-      // content.splice(len - 1, 1, replace)
       return content
     }
   },
 
   mounted () {
-    console.log(this.sections)
+    this.scroll = () => { stickyElementInViewport() }
+    // window.addEventListener('scroll', this.$throttle(this.scroll, 50))
+    window.addEventListener('scroll', this.scroll)
+  },
+
+  beforeDestroy () {
+    if (this.scroll) { window.removeEventListener('scroll', this.scroll) }
   }
 }
 </script>
@@ -80,7 +124,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 // ///////////////////////////////////////////////////////////////////// General
 
 .page-governance {
-  padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
+  // padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
   color: $white;
 }
 
@@ -180,9 +224,47 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   text-align: right;
 }
 // ----------------------------------------------------------------- [Section] 3
+
+::v-deep #sticky-info {
+  position: relative;
+  .sticky-content {
+    position: absolute;
+    top: 0;
+    left: -4rem;
+    transition: 100ms ease;
+  }
+}
+
 ::v-deep #panel-1-title {
   padding: 0;
   margin-bottom: 1.5rem;
+  .column-content {
+    &.left {
+      .description {
+        position: sticky;
+        top: 10px;
+        p {
+          margin: 0.625rem 0;
+          @include fontSize_ExtraLarge;
+          @include fontWeight_Medium;
+          letter-spacing: $letterSpacing_Regular;
+          line-height: $leading_Regular;
+        }
+        ul {
+          padding-left: 0.75rem;
+          margin: 0;
+        }
+        li {
+          margin: 0.625rem 0;
+          @include fontSize_Regular;
+          @include fontWeight_Medium;
+          letter-spacing: $letterSpacing_Large;
+          line-height: $leading_MediumLarge;
+          list-style: none;
+        }
+      }
+    }
+  }
 }
 
 ::v-deep #panel-1-info-top {
