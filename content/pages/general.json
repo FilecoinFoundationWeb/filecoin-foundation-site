@@ -13,6 +13,12 @@
     {
       "type": "X",
       "action": "a",
+      "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
+      "component": "GithubIcon"
+    },
+    {
+      "type": "X",
+      "action": "a",
       "url": "https://www.reddit.com/r/filecoin/",
       "component": "RedditIcon"
     },
