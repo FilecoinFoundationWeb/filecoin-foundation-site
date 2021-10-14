@@ -55,6 +55,7 @@ import TextBlock from '@/components/TextBlock'
 import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
+import CardListBlock from '@/components/CardListBlock'
 import EventsHackathons from '@/components/EventsHackathons'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -67,6 +68,7 @@ export default {
     ImageBlock,
     VideoBlock,
     SliderBlock,
+    CardListBlock,
     EventsHackathons,
     BackgroundLayers
   },
@@ -109,6 +111,7 @@ export default {
         case 'image_block' : name = 'ImageBlock'; break
         case 'video_block' : name = 'VideoBlock'; break
         case 'slider_block' : name = 'SliderBlock'; break
+        case 'card_list_block' : name = 'CardListBlock'; break
       }
       return name
     }

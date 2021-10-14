@@ -8,11 +8,12 @@ $containerWidthPlusOnePixel: 75.0625rem;
 $containerSingleColumn: 4.1665%;
 $standardGutter: 0.75rem;
 $underlineSpacing: 0.1875rem;
+$navigationHeight: 6.25rem;
 
 $borderRadius_Small: 0.3125rem;
 $borderRadius_Medium: 0.25rem;
 $borderRadius_Large: 0.625rem;
-$navigationHeight: 6.25rem;
+$borderRadius_ExtraLarge: 0.875rem;
 
 // --------------------------------------------------------------------- Colours
 $gray50: #FAFAFA;
@@ -262,6 +263,7 @@ $letterSpacing_Large: 0.03em;
 @mixin borderRadius_Small { border-radius: $borderRadius_Small; }
 @mixin borderRadius_Medium { border-radius: $borderRadius_Medium; }
 @mixin borderRadius_Large { border-radius: $borderRadius_Large; }
+@mixin borderRadius_ExtraLarge { border-radius: $borderRadius_ExtraLarge; }
 
 @mixin highlight {
   color: black;
