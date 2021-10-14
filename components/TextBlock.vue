@@ -16,9 +16,8 @@
     <component
       :is="headingLevel"
       v-if="heading"
-      :class="['heading', headingLevel]">
-      {{ heading }}
-    </component>
+      :class="['heading', headingLevel]"
+      v-html="heading" />
 
     <div
       v-if="subheading"

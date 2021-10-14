@@ -11,6 +11,7 @@
       :class="['icon', icon]">
       <IconPlay v-if="icon === 'play'" />
       <IconInfo v-if="icon === 'info'" />
+      <IconPlus v-if="icon === 'plus'" />
     </div>
 
     <span class="text">
@@ -26,6 +27,7 @@ import { mapActions } from 'vuex'
 
 import IconPlay from '@/components/icons/Play'
 import IconInfo from '@/components/icons/Info'
+import IconPlus from '@/components/icons/Plus'
 
 // ====================================================================== Export
 export default {
@@ -33,11 +35,12 @@ export default {
 
   components: {
     IconPlay,
-    IconInfo
+    IconInfo,
+    IconPlus
   },
 
   props: {
-    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border
+    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border | (E) → load more
       type: Object,
       required: true
     }
@@ -79,6 +82,7 @@ export default {
       setModal: 'global/setModal'
     }),
     openModal () {
+      this.$emit('buttonClicked', this.button)
       if (this.action === 'video') {
         this.setModal({
           action: 'video',
@@ -181,6 +185,9 @@ $layerOffset: 0.25rem;
       box-shadow: 0 0 6px rgba(6, 9, 78, 1);
     }
   }
+  .icon {
+    display: none;
+  }
   .text {
     padding: 10px 1.25rem 9px;
     background-color: white;
@@ -231,6 +238,9 @@ $layerOffset: 0.25rem;
         .icon__info__letter-i {
           fill: $kleinBlue;
         }
+        .icon__plus__line {
+          stroke: $kleinBlue;
+        }
       }
     }
   }
@@ -255,10 +265,20 @@ $layerOffset: 0.25rem;
   .text {
     padding-top: 1px;
   }
+  ::v-deep .icon {
+    &.plus {
+      width: 0.75rem;
+    }
+  }
 }
 
 .type__D {
   @include fontSize_Large;
+  ::v-deep .icon {
+    &.plus {
+      width: 1rem;
+    }
+  }
 }
 
 // -------------------------------------------------------------------- [Type] C
@@ -268,6 +288,36 @@ $layerOffset: 0.25rem;
   color: white;
   &.theme__dark {
     color: $blackPearl;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] E
+.type__E {
+  @include borderRadius_ExtraLarge;
+  @include fontSize_Small;
+  @include fontWeight_SemiBold;
+  position: relative;
+  margin: 0.5rem;
+  padding: 1.25rem 2.25rem;
+  background-color: $kleinBlue;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15) inset;
+  &:before {
+    @include borderRadius_Large;
+    content: '';
+    position: absolute;
+    width: calc(100% - 0.5rem * 2);
+    height: calc(100% - 0.5rem * 2);
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: $denim;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15) inset;
+    z-index: 5;
+  }
+  .icon {
+    display: none;
   }
 }
 </style>
