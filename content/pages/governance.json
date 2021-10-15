@@ -214,7 +214,7 @@
         "id": "panel-3-info-top",
         "left": {
           "type": "image_block",
-          "src": "icons/plus.png",
+          "src": "icons/cross.png",
           "layout": "small",
           "cols": {
             "num": "col-3",
@@ -262,7 +262,7 @@
             },
             {
               "type": "A",
-              "img": "/icons/plus.png",
+              "img": "/icons/cross.png",
               "img_size": "mini",
               "title": "Filecoin Plus Notary",
               "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/'>notary governance repository.</a>"
@@ -282,7 +282,11 @@
             "push_left": "off-6"
           },
           "heading": "Get Involved",
-          "description": "<img src='icons/outline-github.png'></img><img src='icons/outline-reddit.png'></img><img src='icons/outline-twitter.png'></img><img src='icons/outline-linkedin.png'></img><img src='icons/outline-youtube.png'></img>"
+          "customizations": [
+            {
+              "name": "SocialIcons"
+            }
+          ]
         }
       },
       {
@@ -339,13 +343,7 @@
               "num": "col-4",
               "push_left": "off-6"
             },
-            "heading": "Events & Hackathons",
-            "cta": {
-              "type": "A",
-              "action": "nuxt-link",
-              "text": "Browse all Events",
-              "url": "/events"
-            }
+            "heading": "Events & Hackathons"
           },
           "events": {
             "cols": {

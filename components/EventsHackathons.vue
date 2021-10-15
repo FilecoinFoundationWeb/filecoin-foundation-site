@@ -12,7 +12,7 @@
             {{ heading }}
           </div>
 
-          <div class="button-row">
+          <div v-if="cta" class="button-row">
             <Button :button="cta" />
           </div>
 

@@ -35,38 +35,50 @@ import BackgroundLayers from '@/components/BackgroundLayers'
 
 // =================================================================== Functions
 const stickyElementInViewport = () => {
-  let el = document.getElementById('sticky-info')
-  let top = el.offsetTop
-  const sticky = el.firstChild
+  const element = document.getElementById('sticky-info')
+  const coords = getElementDocumentCoords(element)
+  const elementTop = coords.top
+  const elementLeft = coords.left
+  const sticky = element.firstChild
   const threshold = window.pageYOffset + 120
 
-  while (el.offsetParent) {
-    el = el.offsetParent
-    top += el.offsetTop
-  }
+  const section = document.getElementById('section-6')
+  const sectionTop = getElementDocumentCoords(section).top
 
-  let end = document.getElementById('section-7')
-  let bottom = end.offsetTop
-
-  while (end.offsetParent) {
-    end = end.offsetParent
-    bottom += end.offsetTop
-  }
-
-  bottom += 80
-
-  if (top < threshold && bottom > threshold) {
-    const h = threshold - top
-    sticky.style.top = h + 'px'
-  } else if (bottom < threshold) {
-    if (sticky.style.top !== (bottom - top + 'px')) {
-      sticky.style.top = bottom - top + 'px'
+  if (elementTop < threshold && sectionTop > threshold) {
+    if (!sticky.classList.contains('info-fixed')) {
+      sticky.classList.add('info-fixed')
+      sticky.style.transform = `translate(${elementLeft}px, 0px)`
+    }
+  } else if (sectionTop < threshold) {
+    if (sticky.classList.contains('info-fixed')) {
+      sticky.classList.remove('info-fixed')
+      sticky.style.transform = `translate(0px, ${sectionTop - elementTop}px)`
     }
   } else {
-    if (sticky.style.top !== 0) {
-      sticky.style.top = 0
+    if (sticky.classList.contains('info-fixed')) {
+      sticky.classList.remove('info-fixed')
+      sticky.style.transform = 'translate(0px, 0px)'
     }
   }
+}
+
+const getElementDocumentCoords = (elem) => {
+  const box = elem.getBoundingClientRect()
+
+  const body = document.body
+  const docEl = document.documentElement
+
+  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop
+  const scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft
+
+  const clientTop = docEl.clientTop || body.clientTop || 0
+  const clientLeft = docEl.clientLeft || body.clientLeft || 0
+
+  const top = box.top + scrollTop - clientTop
+  const left = box.left + scrollLeft - clientLeft
+
+  return { top: Math.round(top), left: Math.round(left) }
 }
 
 // ====================================================================== Export
@@ -80,7 +92,8 @@ export default {
 
   data () {
     return {
-      scroll: false
+      scroll: false,
+      resize: false
     }
   },
 
@@ -104,12 +117,14 @@ export default {
 
   mounted () {
     this.scroll = () => { stickyElementInViewport() }
-    // window.addEventListener('scroll', this.$throttle(this.scroll, 50))
     window.addEventListener('scroll', this.scroll)
+    this.resize = () => { stickyElementInViewport() }
+    window.addEventListener('resize', this.resize)
   },
 
   beforeDestroy () {
     if (this.scroll) { window.removeEventListener('scroll', this.scroll) }
+    if (this.resize) { window.removeEventListener('resize', this.resize) }
   }
 }
 </script>
@@ -225,13 +240,21 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 // ----------------------------------------------------------------- [Section] 3
 
+::v-deep .anchor {
+  position: relative;
+}
+
 ::v-deep #sticky-info {
   position: relative;
   .sticky-content {
     position: absolute;
     top: 0;
     left: -4rem;
-    transition: 100ms ease;
+    // transition: 100ms ease;
+    &.info-fixed {
+      position: fixed;
+      top: 120px;
+    }
   }
 }
 
@@ -410,9 +433,8 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 // ----------------------------------------------------------------- [Section] 6
 ::v-deep #panel-4-title {
   padding: 0;
-  img {
-    width: 1.375rem;
-    margin-right: 0.625rem;
+  .social-icons {
+    width: 75%;
   }
 }
 
