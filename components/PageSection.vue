@@ -56,6 +56,7 @@ import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
 import CardListBlock from '@/components/CardListBlock'
+import FloatingMenu from '@/components/FloatingMenu'
 import SocialIcons from '@/components/SocialIcons'
 import EventsHackathons from '@/components/EventsHackathons'
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -70,6 +71,7 @@ export default {
     VideoBlock,
     SliderBlock,
     CardListBlock,
+    FloatingMenu,
     SocialIcons,
     EventsHackathons,
     BackgroundLayers

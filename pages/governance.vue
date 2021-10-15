@@ -48,8 +48,8 @@ const stickyElementInViewport = () => {
   if (elementTop < threshold && sectionTop > threshold) {
     if (!sticky.classList.contains('info-fixed')) {
       sticky.classList.add('info-fixed')
-      sticky.style.transform = `translate(${elementLeft}px, 0px)`
     }
+    sticky.style.transform = `translate(${elementLeft}px, 0px)` // outside of if statement for resize
   } else if (sectionTop < threshold) {
     if (sticky.classList.contains('info-fixed')) {
       sticky.classList.remove('info-fixed')
@@ -240,17 +240,12 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 // ----------------------------------------------------------------- [Section] 3
 
-::v-deep .anchor {
-  position: relative;
-}
-
 ::v-deep #sticky-info {
   position: relative;
   .sticky-content {
     position: absolute;
     top: 0;
     left: -4rem;
-    // transition: 100ms ease;
     &.info-fixed {
       position: fixed;
       top: 120px;

@@ -68,7 +68,31 @@
             "num": "col-3",
             "push_left": "off-1"
           },
-          "description": "<div id='sticky-info'><div class='sticky-content'><p>Improving Filecoin</p><ul><li>What exactly is an FIP?</li><li>How are FIP’s prioritized?</li><li>Can I submit an FIP?</li></ul><p>Security</p><ul><li>Filecoin Bounty Program</li></ul><p>Filecoin Plus</p><ul><li>How does it work?</li><li>Apply for a DataCap</li><li>Filecoin Plus Notary</li></ul><p>Get Involved</p><ul><li>Weekly Governance Calls</li></ul></div></div>"
+          "customizations": [
+            {
+              "name": "FloatingMenu",
+              "props": {
+                "entries": [
+                  {
+                    "heading": "Improving Filecoin",
+                    "items": ["What exactly is an FIP?", "How are FIP’s prioritized?", "Can I submit an FIP?"]
+                  },
+                  {
+                    "heading": "Security",
+                    "items": ["Filecoin Bounty Program"]
+                  },
+                  {
+                    "heading": "Filecoin Plus",
+                    "items": ["How does it work?", "Apply for a DataCap", "Filecoin Plus Notary"]
+                  },
+                  {
+                    "heading": "Get Involved",
+                    "items": ["Weekly Governance Calls"]
+                  }
+                ]
+              }
+            }
+          ]
         },
         "right": {
           "type": "text_block",
