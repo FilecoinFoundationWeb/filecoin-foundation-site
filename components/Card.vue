@@ -1,8 +1,14 @@
 <template>
   <div :class="['card', `type__${type}`, { 'with-image': img }]">
 
+    <div
+      v-if="img && imgType === 'background_image'"
+      :style="{ backgroundImage: `url('${img}')`, backgroundPosition: imgBackgroundPosition }"
+      :class="['image', `size-${imgSize}`, { 'background-image': imgType === 'background_image' }]">
+    </div>
+
     <img
-      v-if="img"
+      v-if="img && imgType !== 'background_image'"
       :src="img"
       :class="['image', `size-${imgSize}`]" />
 
@@ -14,30 +20,43 @@
 
     <div class="content">
 
-      <div
-        v-if="date && !label"
-        class="date"
-        v-html="getDate('small')">
+      <div class="panel-left">
+
+        <slot name="card__A" />
+
+        <div
+          v-if="date && !label"
+          class="date"
+          v-html="getDate('small')">
+        </div>
+
+        <div v-else class="label">
+          {{ label }}
+        </div>
+
+        <div v-if="title" class="title">
+          {{ title }}
+        </div>
+
+        <div
+          v-if="description && type !== 'D'"
+          class="description"
+          v-html="description">
+        </div>
+
+        <Button
+          v-if="cta"
+          :button="cta"
+          class="cta" />
+
       </div>
 
-      <div v-else class="label">
-        {{ label }}
+      <div v-if="description" class="panel-right">
+        <div
+          class="description"
+          v-html="description">
+        </div>
       </div>
-
-      <div v-if="title" class="title">
-        {{ title }}
-      </div>
-
-      <div
-        v-if="description"
-        class="description"
-        v-html="description">
-      </div>
-
-      <Button
-        v-if="cta"
-        :button="cta"
-        class="cta" />
 
     </div>
 
@@ -60,6 +79,11 @@ export default {
     card: {
       type: Object,
       required: true
+    },
+    forceImageType: {
+      type: String,
+      required: false,
+      default: 'img'
     }
   },
 
@@ -72,6 +96,14 @@ export default {
     },
     imgSize () {
       return this.card.img_size || 'full'
+    },
+    imgType () {
+      const force = this.forceImageType
+      if (force !== 'img') { return force }
+      return this.card.img_type
+    },
+    imgBackgroundPosition () {
+      return this.card.img_background_position || 'center center'
     },
     title () {
       return this.card.title
@@ -92,10 +124,25 @@ export default {
 
   methods: {
     getDate (format) {
-      const date = new Date(this.date)
-      const moment = this.$moment.utc(date)
-      if (format === 'large') { return `${moment.format('MM/DD')}<br />${moment.format('YYYY')}` }
-      return moment.format('MMMM DD, YYYY')
+      const date = this.date
+      const start = Array.isArray(date) ? this.$moment.utc(new Date(date[0])) : this.$moment.utc(new Date(date))
+      const end = Array.isArray(date) ? this.$moment.utc(new Date(date[1])) : false
+      if (format === 'large') { // big date
+        return `${start.format('MM/DD')}<br />${start.format('YYYY')}`
+      }
+      let isPast = this.$moment.utc(new Date()).isAfter(start, 'day')
+      let pastTag = isPast ? '(Past) ' : ''
+      if (end) { // range, two dates
+        isPast = this.$moment.utc(new Date()).isAfter(end, 'day')
+        pastTag = isPast ? '(Past) ' : ''
+        if (start.year() === end.year()) { // same year
+          return `${pastTag}${start.format('MMM D')} - ${end.format('MMM D YYYY')}`
+        } else { // different years
+          return `${pastTag}${start.format('MMM D YYYY')} - ${end.format('MMM D YYYY')}`
+        }
+      } else { // single date, no range
+        return `${pastTag}${start.format('MMMM D YYYY')}`
+      }
     }
   }
 }
@@ -113,6 +160,10 @@ export default {
   }
   &.size-mini {
     width: 1.375rem;
+  }
+  &.background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -207,6 +258,9 @@ export default {
 // -------------------------------------------------------------------- [Type] D
 .card.type__D {
   @include borderRadius_Large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 36rem;
   padding: 0.25rem;
   color: white;
@@ -215,17 +269,28 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    .content {
+      height: auto;
+    }
   }
   .image {
     @include borderRadius_Large;
     display: block;
-    margin-bottom: 5rem;
+    height: 16.25rem;
+    margin-bottom: 4rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: calc(100% - 16.25rem - 4rem);
     padding: 2.5rem;
     padding-top: 0;
+  }
+  .panel-right {
+    display: none;
   }
   .date,
   .label {
@@ -242,9 +307,13 @@ export default {
     line-height: 1;
   }
   .title {
-    @include fontSize_ExtraLarge;
+    @include fontSize_Large;
     @include fontWeight_Medium;
     @include leading_Small;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .cta {
     margin-top: 0.5rem;

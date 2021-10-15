@@ -3,7 +3,7 @@
     :is="tag"
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
-    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`]"
+    :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`, { selected }]"
     @click="openModal">
 
     <div
@@ -12,6 +12,8 @@
       <IconPlay v-if="icon === 'play'" />
       <IconInfo v-if="icon === 'info'" />
       <IconPlus v-if="icon === 'plus'" />
+      <IconCode v-if="icon === 'code'" />
+      <IconTicket v-if="icon === 'ticket'" />
     </div>
 
     <span v-if="type !== 'X'" class="text">
@@ -30,6 +32,8 @@ import { mapActions } from 'vuex'
 import IconPlay from '@/components/icons/Play'
 import IconInfo from '@/components/icons/Info'
 import IconPlus from '@/components/icons/Plus'
+import IconCode from '@/components/icons/Code'
+import IconTicket from '@/components/icons/Ticket'
 
 // ====================================================================== Export
 export default {
@@ -38,13 +42,30 @@ export default {
   components: {
     IconPlay,
     IconInfo,
-    IconPlus
+    IconPlus,
+    IconCode,
+    IconTicket
   },
 
   props: {
-    button: { // (A) → Tier 1 | (B) → Tier 2 | (C) → Site navigation | (D) → Tier 2 w/o border | (E) → Load more | (F) → Footer | (X) → No styling + slot
+    /*
+      (A) → Tier 1
+      (B) → Tier 2
+      (C) → Site navigation
+      (D) → Tier 2 w/o border
+      (E) → Load more
+      (F) → Footer
+      (G) → Events & Hackathons navigation
+      (X) → No styling + slot
+    */
+    button: {
       type: Object,
       required: true
+    },
+    selected: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
@@ -271,6 +292,9 @@ $layerOffset: 0.25rem;
     &.plus {
       width: 0.75rem;
     }
+    &.ticket {
+      width: 1.125rem;
+    }
   }
 }
 
@@ -279,6 +303,9 @@ $layerOffset: 0.25rem;
   ::v-deep .icon {
     &.plus {
       width: 1rem;
+    }
+    &.ticket {
+      width: 1.375rem;
     }
   }
 }
@@ -320,6 +347,55 @@ $layerOffset: 0.25rem;
   }
   .icon {
     display: none;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] F
+.type__F {
+  @include fontSize_Small;
+  opacity: 0.85;
+  &:hover {
+    opacity: 1;
+  }
+  .text {
+    white-space: nowrap;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] E
+.type__G {
+  @include fontSize_ExtraExtraLarge;
+  @include fontWeight_Medium;
+  @include leading_Tiny;
+  position: relative;
+  opacity: 0.5;
+  &:hover,
+  &.selected {
+    opacity: 1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.25rem;
+    background-color: $denim;
+    border-radius: 0.25rem;
+    transform: translateY(0.5rem);
+    opacity: 0;
+    pointer-eventS: none;
+  }
+  &.selected {
+    &:after {
+      opacity: 1;
+    }
+  }
+  .icon {
+    margin-right: 0.5rem;
+    &.code {
+      width: 2.25rem;
+    }
   }
 }
 </style>

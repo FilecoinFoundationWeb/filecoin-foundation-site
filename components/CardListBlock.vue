@@ -6,9 +6,15 @@
       <div
         v-for="(card, index) in list"
         :key="index"
-        class="col-4 card-column">
+        :class="['card-column', index === 0 ? firstColumnNum : 'col-4']">
 
-        <Card :card="card" />
+        <Card
+          :card="card"
+          :force-image-type="forceImageType">
+          <template v-if="card.event_type === 'hackathon'" #card__A>
+            <IconCode class="icon-code" />
+          </template>
+        </Card>
 
       </div>
 
@@ -28,6 +34,7 @@
 // ====================================================================== Import
 import Card from '@/components/Card'
 import Button from '@/components/Button'
+import IconCode from '@/components/icons/Code'
 
 // ====================================================================== Export
 export default {
@@ -35,13 +42,24 @@ export default {
 
   components: {
     Card,
-    Button
+    Button,
+    IconCode
   },
 
   props: {
     block: {
       type: Object,
       required: true
+    },
+    firstColumnNum: {
+      type: String,
+      required: false,
+      default: 'col-4'
+    },
+    forceImageType: {
+      type: String,
+      required: false,
+      default: 'img'
     }
   },
 
@@ -67,6 +85,12 @@ export default {
     },
     showLoadMoreButton () {
       return this.cards.length > this.current
+    }
+  },
+
+  watch: {
+    cards (newCards) {
+      this.list = this.cards.slice(0, this.current)
     }
   },
 
@@ -111,5 +135,9 @@ export default {
 .button-row {
   justify-content: center;
   margin-top: -2rem;
+}
+
+.icon-code {
+  width: 1.25rem;
 }
 </style>

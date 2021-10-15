@@ -165,21 +165,14 @@ $backgroundLayer__Height: 12.25rem;
   flex-direction: row;
 }
 
-.panel-bottom-nav-link,
 .copyright-text {
   @include fontSize_Small;
   opacity: 0.85;
 }
 
 ::v-deep .panel-bottom-nav-link {
-  &:hover {
-    opacity: 1;
-  }
   &:not(:last-child) {
     margin-right: 2rem;
-  }
-  .text {
-    white-space: nowrap;
   }
 }
 

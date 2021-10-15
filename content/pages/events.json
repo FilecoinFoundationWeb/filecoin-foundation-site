@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "page_content": {
+    "navigation": [
+      {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "text": "Events",
+        "slug": "event"
+      },
+      {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "icon": "code",
+        "text": "Hackathons",
+        "slug": "hackathon"
+      },
+      {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "text": "All",
+        "slug": "all"
+      }
+    ]
+  }
+}
