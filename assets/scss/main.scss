@@ -40,6 +40,9 @@ html, body {
   &.no-cursor {
     cursor: none;
   }
+  * {
+    box-sizing: border-box;
+  }
 }
 
 a, button {
