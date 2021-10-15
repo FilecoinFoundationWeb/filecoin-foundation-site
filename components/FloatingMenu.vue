@@ -6,7 +6,7 @@
         :key="entry.heading">
         <div
           class="heading"
-          @click="jumpToSection(entry.heading)">
+          @click="jumpToSection(entry.id)">
           {{ entry.heading }}
         </div>
         <ul>
@@ -22,6 +22,19 @@
 </template>
 
 <script>
+// =================================================================== Functions
+const getElementTop = (elem) => {
+  const box = elem.getBoundingClientRect()
+  const body = document.body
+  const docEl = document.documentElement
+
+  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop
+  const clientTop = docEl.clientTop || body.clientTop || 0
+  const top = box.top + scrollTop - clientTop
+
+  return Math.round(top)
+}
+
 // ====================================================================== Export
 export default {
   name: 'FloatingMenu',
@@ -35,8 +48,9 @@ export default {
 
   methods: {
     jumpToSection (section) {
-      console.log(section)
-      this.$scrollToY(0)
+      const element = document.getElementById(section)
+      const top = getElementTop(element)
+      this.$scrollToY(top)
     }
   }
 }
@@ -46,6 +60,7 @@ export default {
 // ///////////////////////////////////////////////////////////////////// General
 .heading {
   cursor: pointer;
+  z-index: 10000;
 }
 
 </style>

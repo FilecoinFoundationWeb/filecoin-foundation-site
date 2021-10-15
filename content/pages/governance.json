@@ -75,19 +75,23 @@
                 "entries": [
                   {
                     "heading": "Improving Filecoin",
-                    "items": ["What exactly is an FIP?", "How are FIP’s prioritized?", "Can I submit an FIP?"]
+                    "items": ["What exactly is an FIP?", "How are FIP’s prioritized?", "Can I submit an FIP?"],
+                    "id": "section-3"
                   },
                   {
                     "heading": "Security",
-                    "items": ["Filecoin Bounty Program"]
+                    "items": ["Filecoin Bounty Program"],
+                    "id": "section-4"
                   },
                   {
                     "heading": "Filecoin Plus",
-                    "items": ["How does it work?", "Apply for a DataCap", "Filecoin Plus Notary"]
+                    "items": ["How does it work?", "Apply for a DataCap", "Filecoin Plus Notary"],
+                    "id": "section-5"
                   },
                   {
                     "heading": "Get Involved",
-                    "items": ["Weekly Governance Calls"]
+                    "items": ["Weekly Governance Calls"],
+                    "id": "section-6"
                   }
                 ]
               }

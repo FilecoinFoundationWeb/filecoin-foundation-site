@@ -189,6 +189,11 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     z-index: -10;
   }
 }
+#section-4,
+#section-5,
+#section-6 {
+  z-index: 1;
+}
 
 #section-7 {
   &:before {
@@ -242,13 +247,30 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 ::v-deep #sticky-info {
   position: relative;
+  z-index: 10000;
   .sticky-content {
     position: absolute;
     top: 0;
     left: -4rem;
+    z-index: 10000;
     &.info-fixed {
       position: fixed;
       top: 120px;
+    }
+    .heading {
+      @include fontSize_ExtraLarge;
+      @include fontWeight_Medium;
+      @include leading_Regular;
+    }
+    ul {
+      padding-left: 0.75rem;
+    }
+    li {
+      list-style: none;
+      @include fontSize_Regular;
+      @include fontWeight_Medium;
+      @include leading_MediumLarge;
+      letter-spacing: $letterSpacing_Large;
     }
   }
 }
