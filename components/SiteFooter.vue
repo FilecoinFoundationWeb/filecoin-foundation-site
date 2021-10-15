@@ -1,26 +1,76 @@
 <template>
   <footer id="site-footer">
 
-    <div class="grid-equalHeight">
-      <div class="col" data-push-left="off-2">
-        <div class="footer-content">
+    <section class="site-footer-section-top">
 
-          → Footer ←
+      <div class="grid-middle">
+        <div class="col-4" data-push-left="off-2">
+          <div class="footer-content left">
+
+            <div
+              v-for="(item, index) in text"
+              :key="index"
+              class="text-item"
+              v-html="item">
+            </div>
+
+          </div>
+        </div>
+        <div class="col-5" data-push-left="off-1">
+          <div class="footer-content right">
+
+            <nav class="navigation">
+              <Button
+                v-for="(link, index) in links"
+                :key="`footer-nav-link-${index}`"
+                :button="link"
+                class="footer-nav-link">
+                {{ link.text }}
+              </Button>
+            </nav>
+
+            <SocialIcons />
+
+          </div>
+        </div>
+      </div>
+
+      <BackgroundLayers
+        :layers-array="[1, 2, 3, 4, 5, 6]"
+        :offset="1.25"
+        shadow-strength="small" />
+
+    </section>
+
+    <div class="grid">
+      <div class="col" data-push-left="off-1">
+        <div class="panel-bottom-content">
+
+          <nav class="panel-bottom-navigation">
+            <Button
+              v-for="(link, index) in panelBottomLinks"
+              :key="`panel-bottom-nav-link-${index}`"
+              :button="link"
+              class="panel-bottom-nav-link">
+              {{ link.text }}
+            </Button>
+          </nav>
+
+          <div class="copyright-text" v-html="panelBottomCopyrightText"></div>
 
         </div>
       </div>
     </div>
-
-    <BackgroundLayers
-      :layers-array="[1, 2, 3, 4, 5, 6]"
-      :offset="1.25"
-      shadow-strength="small" />
 
   </footer>
 </template>
 
 <script>
 // ====================================================================== Import
+import { mapGetters } from 'vuex'
+
+import Button from '@/components/Button'
+import SocialIcons from '@/components/SocialIcons'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
@@ -28,7 +78,33 @@ export default {
   name: 'SiteFooter',
 
   components: {
+    Button,
+    SocialIcons,
     BackgroundLayers
+  },
+
+  computed: {
+    ...mapGetters({
+      siteContent: 'global/siteContent'
+    }),
+    footer () {
+      return this.siteContent.general.footer
+    },
+    text () {
+      return this.footer.text
+    },
+    links () {
+      return this.footer.links
+    },
+    panelBottom () {
+      return this.footer.panel_bottom
+    },
+    panelBottomLinks () {
+      return this.panelBottom.links
+    },
+    panelBottomCopyrightText () {
+      return this.panelBottom.copyright_text
+    }
   }
 }
 </script>
@@ -38,23 +114,80 @@ $backgroundLayer__Height: 12.25rem;
 
 // ///////////////////////////////////////////////////////////////////// General
 #site-footer {
-  position: relative;
-  height: 30rem;
   padding-bottom: 2rem;
   color: white;
 }
 
-[class~="grid"], [class*="grid-"], [class*="grid_"],
-[class~=col], [class*=col-], [class*=col_],
-.footer-content {
-  height: 100%;
+.site-footer-section-top {
+  position: relative;
 }
 
-.footer-content {
+// /////////////////////////////////////////////////////// [Footer Content] Left
+::v-deep .text-item {
+  @include fontSize_Large;
+  @include leading_Medium;
+  &:first-child {
+    @include fontWeight_SemiBold;
+  }
+  &:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+  a {
+    @include fontWeight_SemiBold;
+    color: $azureRadiance;
+  }
+}
+
+// ////////////////////////////////////////////////////// [Footer Content] Right
+.footer-nav-link {
+  @include leading_Regular;
+  color: $azureRadiance;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.social-icons {
+  margin-top: 1.5rem
+}
+
+// //////////////////////////////////////////////////////////////// Panel Bottom
+.panel-bottom-content {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5.75rem;
+}
+
+.panel-bottom-navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.panel-bottom-nav-link,
+.copyright-text {
+  @include fontSize_Small;
+  opacity: 0.85;
+}
+
+::v-deep .panel-bottom-nav-link {
+  &:hover {
+    opacity: 1;
+  }
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+  .text {
+    white-space: nowrap;
+  }
+}
+
+::v-deep .copyright-text {
+  padding-left: 3rem;
+  a {
+    @include fontWeight_SemiBold;
+  }
 }
 
 // /////////////////////////////////////////////////////////// Background Layers

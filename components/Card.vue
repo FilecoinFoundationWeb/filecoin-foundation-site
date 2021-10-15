@@ -15,9 +15,13 @@
     <div class="content">
 
       <div
-        v-if="date"
+        v-if="date && !label"
         class="date"
         v-html="getDate('small')">
+      </div>
+
+      <div v-else class="label">
+        {{ label }}
       </div>
 
       <div v-if="title" class="title">
@@ -77,6 +81,9 @@ export default {
     },
     date () {
       return this.card.date
+    },
+    label () {
+      return this.card.label
     },
     cta () {
       return this.card.cta
@@ -200,6 +207,7 @@ export default {
 // -------------------------------------------------------------------- [Type] D
 .card.type__D {
   @include borderRadius_Large;
+  height: 36rem;
   padding: 0.25rem;
   color: white;
   background-color: $azureRadiance;
@@ -219,10 +227,12 @@ export default {
     padding: 2.5rem;
     padding-top: 0;
   }
-  .date {
+  .date,
+  .label {
     @include fontSize_Small;
     @include fontWeight_Bold;
     margin-bottom: 0.5rem;
+    opacity: 0.7;
   }
   .date-large {
     @include fontWeight_Bold;
