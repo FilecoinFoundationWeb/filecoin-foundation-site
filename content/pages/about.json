@@ -142,40 +142,41 @@
             "push_left": "off-2"
           },
           "heading": "Board of Directors",
-          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
-          "customizations": [
+          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web."
+        }
+      },
+      {
+        "id": "panel_1_cards",
+        "left": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-9",
+            "push_left": "off-1"
+          },
+          "cards": [
             {
-              "name": "SliderBlock",
-              "props": {
-                "block": {
-                  "cards": [
-                    {
-                      "type": "B",
-                      "img": "/images/About/marta-belcher@2x.png",
-                      "title": "Marta Belcher",
-                      "description": "General Counsel, Protocol Labs (Board Chair)"
-                    },
-                    {
-                      "type": "B",
-                      "img": "/images/About/marcia-hoffman@2x.png",
-                      "title": "Marcia Hoffman",
-                      "description": ""
-                    },
-                    {
-                      "type": "B",
-                      "img": "/images/About/brian-behlendorf@2x.png",
-                      "title": "Brian Behlendorf",
-                      "description": ""
-                    },
-                    {
-                      "type": "B",
-                      "img": "/images/About/nicole-wong@2x.png",
-                      "title": "Nicole Wong",
-                      "description": ""
-                    }
-                  ]
-                }
-              }
+              "type": "B",
+              "img": "/images/About/marta-belcher@2x.png",
+              "title": "Marta Belcher",
+              "description": "General Counsel, Protocol Labs (Board Chair)"
+            },
+            {
+              "type": "B",
+              "img": "/images/About/marcia-hoffman@2x.png",
+              "title": "Marcia Hoffman",
+              "description": "Lorem Ipsum"
+            },
+            {
+              "type": "B",
+              "img": "/images/About/brian-behlendorf@2x.png",
+              "title": "Brian Behlendorf",
+              "description": "Lorem Ipsum"
+            },
+            {
+              "type": "B",
+              "img": "/images/About/nicole-wong@2x.png",
+              "title": "Nicole Wong",
+              "description": "Lorem Ipsum"
             }
           ]
         }
