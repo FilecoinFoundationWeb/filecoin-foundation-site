@@ -132,8 +132,10 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   padding: 0;
   margin-bottom: 9.875rem;
   .video-block {
-    background-color: $jordyBlue;
     height: 100%;
+    .preview-container {
+      background-color: $jordyBlue;
+    }
   }
 }
 
@@ -204,16 +206,21 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #panel_1 {
+  padding-bottom: 0;
   .heading {
     width: 50%;
   }
+}
+
+::v-deep #panel_1_cards {
+  padding-top: 0;
+  padding-bottom: 10rem;
   .slider-block {
-    margin-top: 10.75rem;
+    margin-top: 6.75rem;
   }
   .card-list {
     position: relative;
     flex-wrap: unset;
-    left: -6rem;
   }
 }
 
