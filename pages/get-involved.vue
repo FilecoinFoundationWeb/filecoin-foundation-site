@@ -11,7 +11,8 @@
 
       <BackgroundLayers
         id="page-get-involved-background-layers"
-        :layers-array="[5, 6]" />
+        :layers-array="[5, 6]"
+        :offset="{ mini: 0.25 }" />
 
     </div>
 

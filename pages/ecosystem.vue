@@ -11,7 +11,8 @@
 
       <BackgroundLayers
         id="page-ecosystem-background-layers"
-        :layers-array="[3, 4, 5, 6]" />
+        :layers-array="[3, 4, 5, 6]"
+        :offset="{ mini: 0.25 }" />
 
     </div>
 
