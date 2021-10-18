@@ -29,16 +29,7 @@
           "cols": {
             "num": "col-5",
             "push_left": "off-1"
-          },
-          "customizations": [
-            {
-              "name": "BackgroundLayers",
-              "props": {
-                "layers-array": [1],
-                "offset": 1.375
-              }
-            }
-          ]
+          }
         }
       },
       {
@@ -105,34 +96,35 @@
             "push_left": "off-2"
           },
           "heading": "Ecosystem Advisors",
-          "subheading": "The Filecoin Foundation Ecosystem Advisors are committed to providing resources, community support, and guidance to groups building on Web3.",
-          "customizations": [
+          "subheading": "The Filecoin Foundation Ecosystem Advisors are committed to providing resources, community support, and guidance to groups building on Web3."
+        }
+      },
+      {
+        "id": "panel_1_cards",
+        "left": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-9",
+            "push_left": "off-3"
+          },
+          "cards": [
             {
-              "name": "SliderBlock",
-              "props": {
-                "block": {
-                  "cards": [
-                    {
-                      "type": "B",
-                      "img": "/images/Ecosystem/colinevran@2x.png",
-                      "title": "Colin Evran",
-                      "description": "Ecosystem Lead, Protocol Labs"
-                    },
-                    {
-                      "type": "B",
-                      "img": "/images/Ecosystem/mosh@2x.png",
-                      "title": "Michelle Lee",
-                      "description": "Ecosystem Lead, Protocol Labs"
-                    },
-                    {
-                      "type": "B",
-                      "img": "/images/Ecosystem/stefaan-vervaet.png",
-                      "title": "Stefaan Vervaet",
-                      "description": "Ecosystem Lead, Protocol Labs"
-                    }
-                  ]
-                }
-              }
+              "type": "B",
+              "img": "/images/Ecosystem/colinevran@2x.png",
+              "title": "Colin Evran",
+              "description": "Ecosystem Lead, Protocol Labs"
+            },
+            {
+              "type": "B",
+              "img": "/images/Ecosystem/mosh@2x.png",
+              "title": "Michelle Lee",
+              "description": "Ecosystem Lead, Protocol Labs"
+            },
+            {
+              "type": "B",
+              "img": "/images/Ecosystem/stefaan-vervaet.png",
+              "title": "Stefaan Vervaet",
+              "description": "Ecosystem Lead, Protocol Labs"
             }
           ]
         }

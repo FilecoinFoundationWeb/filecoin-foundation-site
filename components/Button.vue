@@ -125,7 +125,6 @@ $layerOffset: 0.25rem;
   @include leading_Tiny;
   display: inline-flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .icon {
@@ -300,6 +299,7 @@ $layerOffset: 0.25rem;
 
 .type__D {
   @include fontSize_Large;
+  align-items: flex-start;
   ::v-deep .icon {
     &.plus {
       width: 1rem;
@@ -307,6 +307,9 @@ $layerOffset: 0.25rem;
     &.ticket {
       width: 1.375rem;
     }
+  }
+  .text {
+    text-align: left;
   }
 }
 

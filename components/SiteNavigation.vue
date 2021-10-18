@@ -59,6 +59,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: $navigationHeight;
+  .nuxt-link-active {
+    z-index: 10;
+  }
 }
 
 // //////////////////////////////////////////////////////////////////////// Logo
