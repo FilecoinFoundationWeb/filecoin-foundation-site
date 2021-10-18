@@ -59,6 +59,7 @@ import CardListBlock from '@/components/CardListBlock'
 import FloatingMenu from '@/components/FloatingMenu'
 import SocialIcons from '@/components/SocialIcons'
 import EventsHackathons from '@/components/EventsHackathons'
+import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
@@ -74,6 +75,7 @@ export default {
     FloatingMenu,
     SocialIcons,
     EventsHackathons,
+    TabbedSlider,
     BackgroundLayers
   },
 
