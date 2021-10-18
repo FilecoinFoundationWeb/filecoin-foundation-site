@@ -1,6 +1,8 @@
 <template>
   <div class="page page-get-involved">
 
+    <Modal />
+    
     <div class="main-content">
 
       <PageSection
@@ -26,6 +28,7 @@ import CloneDeep from 'lodash/cloneDeep'
 import GetInvolvedPageData from '@/content/pages/get-involved.json'
 import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
+import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -34,6 +37,7 @@ export default {
   name: 'PageIndex',
 
   components: {
+    Modal,
     PageSection,
     BackgroundLayers
   },

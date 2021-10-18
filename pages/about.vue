@@ -1,5 +1,7 @@
 <template>
   <div class="page page-about">
+    
+    <Modal />
 
     <div class="main-content">
 
@@ -26,6 +28,7 @@ import CloneDeep from 'lodash/cloneDeep'
 import AboutPageData from '@/content/pages/about.json'
 import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
+import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -34,6 +37,7 @@ export default {
   name: 'PageIndex',
 
   components: {
+    Modal,
     PageSection,
     BackgroundLayers
   },
