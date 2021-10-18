@@ -6,16 +6,14 @@ import GeneralSiteData from '@/content/pages/general.json'
 // -----------------------------------------------------------------------------
 const state = () => ({
   siteContent: {},
-  modal: false,
-  layerWidth: 1.375
+  modal: false
 })
 
 // ///////////////////////////////////////////////////////////////////// Getters
 // -----------------------------------------------------------------------------
 const getters = {
   siteContent: state => state.siteContent,
-  modal: state => state.modal,
-  layerWidth: state => state.layerWidth
+  modal: state => state.modal
 }
 
 // ///////////////////////////////////////////////////////////////////// Actions
@@ -44,10 +42,6 @@ const actions = {
   // ////////////////////////////////////////////////////////////////// setModal
   setModal ({ commit }, payload) {
     commit('SET_MODAL', payload)
-  },
-  // ///////////////////////////////////////////////////////////// setLayerWidth
-  setLayerWidth ({ commit }, payload) {
-    commit('SET_LAYER_WIDTH', payload)
   }
 }
 
@@ -62,9 +56,6 @@ const mutations = {
   },
   SET_MODAL (state, payload) {
     state.modal = payload
-  },
-  SET_LAYER_WIDTH (state, payload) {
-    state.layerWidth = payload
   }
 }
 

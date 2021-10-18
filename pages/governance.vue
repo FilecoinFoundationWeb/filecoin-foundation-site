@@ -11,12 +11,14 @@
 
       <BackgroundLayers
         id="page-governance-body-layer"
-        :layers-array="[2]" />
+        :layers-array="[2]"
+        :offset="{ mini: 0.25 }" />
 
       <BackgroundLayers
         id="page-governance-background-layers"
         :layers-array="[6, 5, 4, 3]"
-        :reverse="true" />
+        :reverse="true"
+        :offset="{ mini: 0.25 }" />
 
     </div>
 

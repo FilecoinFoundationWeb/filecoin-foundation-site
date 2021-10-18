@@ -37,8 +37,8 @@
 
       <BackgroundLayers
         :layers-array="[1, 2, 3, 4, 5, 6]"
-        :offset="1.25"
-        shadow-strength="small" />
+        shadow-strength="small"
+        :offset="{ mini: 0.25 }" />
 
     </section>
 
