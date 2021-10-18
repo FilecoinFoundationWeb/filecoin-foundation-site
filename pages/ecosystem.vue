@@ -149,10 +149,9 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     height: 100%;
   }
   .image {
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    border-radius: 25vw 3rem 3rem 25vw;
     border: 1.375rem solid #EFF6FC;
-    border-radius: 200px;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
   }
 }

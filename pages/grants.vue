@@ -110,26 +110,19 @@ export default {
   padding: 0;
   .column-content {
     &.right {
-      width: 48vw;
-      height: 100%;
       left: 3rem;
     }
   }
-  .right,
-  .image-block {
-    width: 100%;
-    height: 100%;
-  }
   .image {
-    width: 100%;
-    height: 100%;
-    border-radius: 20vw;
+    width: 50vw;
+    border-radius: 25vw 3rem 3rem 25vw;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
   }
   .background-layers {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% + 25rem);
     height: 100%;
   }
 }
