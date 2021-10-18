@@ -26,7 +26,7 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import IndexPageData from '@/content/pages/index.json'
-import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
+import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -45,7 +45,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'index', data: IndexPageData })
-    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiverDeeperData })
+    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
   computed: {
