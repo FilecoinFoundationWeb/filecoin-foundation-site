@@ -74,7 +74,7 @@ $borderWidth: 1rem;
 
 // ///////////////////////////////////////////////////////////////////// General
 .preview-container {
-  @include borderRadius_Large;
+  @include borderRadius_Medium;
   position: relative;
   padding: $borderWidth;
   background-color: $hawkesBlue;

@@ -111,7 +111,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
-    background-color: $hawkesBlue;
+    background-color: $polar;
     border-radius: 5rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
@@ -132,8 +132,10 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   padding: 0;
   margin-bottom: 9.875rem;
   .video-block {
-    background-color: $jordyBlue;
     height: 100%;
+    .preview-container {
+      background-color: $jordyBlue;
+    }
   }
 }
 
@@ -204,16 +206,21 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #panel_1 {
+  padding-bottom: 0;
   .heading {
     width: 50%;
   }
+}
+
+::v-deep #panel_1_cards {
+  padding-top: 0;
+  padding-bottom: 10rem;
   .slider-block {
-    margin-top: 10.75rem;
+    margin-top: 6.75rem;
   }
   .card-list {
     position: relative;
     flex-wrap: unset;
-    left: -6rem;
   }
 }
 

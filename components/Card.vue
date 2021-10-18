@@ -190,23 +190,30 @@ export default {
 // -------------------------------------------------------------------- [Type] B
 .card.type__B {
   position: relative;
-  padding: 0 13px;
-  margin: 0 0.5rem;
+  padding: 0 12px;
+  margin: 0 0.5rem !important;
+  width: 25% !important;
   .image {
     position: relative;
-    width: 11.375rem;
-    height: 17.25rem;
-    top: 0;
+    width: 100%;
+    transform: translateY(0);
     border-radius: 11.375rem;
     transition: ease-in-out 350ms;
+    margin-bottom: 0;
   }
   &:hover {
     .image {
-      top: calc(-6rem - 13px);
+      transform: translateY(-100px);
     }
   }
   .title {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
     margin-top: 1.875rem;
+    @include fontSize_Regular;
     @include fontWeight_SemiBold;
     color: $kleinBlue;
     text-align: center;
@@ -216,17 +223,18 @@ export default {
     text-align: center;
     padding: 0 1rem;
     width: calc(100% - 26px - 2rem);
-    bottom: 6.25rem;
+    bottom: 1.25rem;
     color: white;
     z-index: -1;
+    @include fontSize_Small;
   }
   &:before {
     content: '';
     position: absolute;
     width: 100%;
-    height: calc(10.25rem + 13px);
+    height: 61%;
     left: 0;
-    top: 7rem;
+    top: 39%;
     background-color: $kleinBlue;
     z-index: -1;
     border-radius: 0 0 calc(11.375rem + 26px) calc(11.375rem + 26px);
