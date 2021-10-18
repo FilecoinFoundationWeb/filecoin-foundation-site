@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-index-background-layers"
         :layers-array="[2, 3, 4, 5, 6]"
-        :offset="{ mini: 0.25 }" />
+        :offset="pageBackgroundLayersOffset" />
 
     </div>
 
@@ -41,6 +41,14 @@ export default {
     Modal,
     PageSection,
     BackgroundLayers
+  },
+
+  data () {
+    return {
+      pageBackgroundLayersOffset: {
+        tiny: 0.25
+      }
+    }
   },
 
   async fetch ({ store }) {

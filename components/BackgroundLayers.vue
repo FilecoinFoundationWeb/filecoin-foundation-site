@@ -14,12 +14,14 @@
 <script>
 // =================================================================== Functions
 const setBackgroundLayerWidth = (instance) => {
+  let reset = true
   for (const breakpoint in instance.breakpoints) {
     if (window.matchMedia(`(max-width: ${breakpoint})`).matches) {
+      if (reset) { reset = false }
       if (instance.layerWidth !== instance.breakpoints[breakpoint]) {
         instance.layerWidth = instance.breakpoints[breakpoint]
       }
-    } else {
+    } else if (reset) {
       if (instance.layerWidth !== 1.375) {
         instance.layerWidth = 1.375
       }
@@ -103,6 +105,7 @@ export default {
 
   methods: {
     layerStyle (index, order, color) {
+      console.log(this.layerWidth)
       const w = `width: calc(100% + ${2 * index * this.layerWidth}rem);`
       const h = `height: calc(100% + ${2 * index * this.layerWidth}rem);`
       const t = `top: ${-1 * index * this.layerWidth}rem;`
