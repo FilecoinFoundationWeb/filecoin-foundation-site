@@ -125,6 +125,13 @@ export default {
     height: 100%;
     border-radius: 20vw;
   }
+  .background-layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 // ----------------------------------------------------------------- [Section] 2

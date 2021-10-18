@@ -126,7 +126,8 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6],
-                "offset": 1.375
+                "offset": 1.375,
+                "reverse": true
               }
             }
           ]
