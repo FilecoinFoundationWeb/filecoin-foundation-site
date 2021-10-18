@@ -25,11 +25,19 @@
         },
         "right": {
           "type": "video_block",
-          "preview_image": "/images/About/preview-about@2x.png",
-          "url": "https://youtu.be/6OY4xAs3Grg",
           "cols": {
             "num": "col-5",
             "push_left": "off-1"
+          },
+          "preview_image": "/images/About/preview-about@2x.png",
+          "url": "https://youtu.be/6OY4xAs3Grg",
+          "tint": true,
+          "subtext": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "Watch: Introducing the Filecoin Foundation Team",
+            "url": "https://youtu.be/6OY4xAs3Grg"
           }
         }
       },
@@ -150,7 +158,7 @@
         "left": {
           "type": "slider_block",
           "cols": {
-            "num": "col-9",
+            "num": "col-10",
             "push_left": "off-1"
           },
           "cards": [
