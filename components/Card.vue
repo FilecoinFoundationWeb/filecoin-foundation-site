@@ -51,7 +51,7 @@
 
       </div>
 
-      <div v-if="description" class="panel-right">
+      <div v-if="description && type !== 'B'" class="panel-right">
         <div
           class="description"
           v-html="description">
@@ -222,7 +222,9 @@ export default {
     position: absolute;
     text-align: center;
     padding: 0 1rem;
-    width: calc(100% - 26px - 2rem);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 1.25rem;
     color: white;
     z-index: -1;
