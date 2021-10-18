@@ -51,7 +51,7 @@ export default {
     })
   },
 
-  mounted() {
+  mounted () {
     setBackgroundLayerWidth(this)
     this.resize = () => { setBackgroundLayerWidth(this) }
     window.addEventListener('resize', this.resize)
