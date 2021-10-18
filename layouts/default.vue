@@ -19,7 +19,7 @@ import SiteFooter from '@/components/SiteFooter'
 
 // =================================================================== Functions
 const setBackgroundLayerWidth = (instance) => {
-  if (window.matchMedia('(max-width: 25.9375rem)').matches) {
+  if (window.matchMedia('(max-width: 40rem)').matches) {
     if (instance.layerWidth !== 0.25) {
       instance.setLayerWidth(0.25)
     }
