@@ -110,7 +110,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
-    background-color: $hawkesBlue;
+    background-color: $polar;
     border-radius: 5rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
