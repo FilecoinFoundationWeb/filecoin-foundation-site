@@ -12,6 +12,9 @@
 </template>
 
 <script>
+// ===================================================================== Imports
+import { mapGetters } from 'vuex'
+
 // ====================================================================== Export
 export default {
   name: 'BackgroundLayers',
@@ -26,11 +29,6 @@ export default {
       type: Array,
       required: false,
       default: () => [1, 2, 3, 4, 5, 6]
-    },
-    offset: {
-      type: Number,
-      required: false,
-      default: 1.75
     },
     reverse: {
       type: Boolean,
@@ -51,6 +49,9 @@ export default {
   },
 
   computed: {
+    ...mapGetters({
+      offset: 'global/layerWidth'
+    }),
     layers () {
       const arr = []
       for (let i = 0; i < this.layersArray.length; i++) {
