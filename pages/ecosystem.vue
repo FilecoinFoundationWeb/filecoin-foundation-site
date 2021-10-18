@@ -110,7 +110,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
-    background-color: $hawkesBlue;
+    background-color: $polar;
     border-radius: 5rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
@@ -151,7 +151,9 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
   .image {
     width: 100%;
     height: 100%;
+    border: 1.375rem solid #EFF6FC;
     border-radius: 200px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
   }
 }
 
@@ -192,10 +194,17 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 }
 
 ::v-deep #panel_1 {
+  padding-bottom: 0;
+}
+
+::v-deep #panel_1_cards {
+  padding-top: 0;
+  padding-bottom: 9rem;
   .slider-block {
-    margin-top: 8.75rem;
+    margin-top: 6.75rem;
   }
   .card-list {
+    position: relative;
     flex-wrap: unset;
   }
 }
