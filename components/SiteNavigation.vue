@@ -320,6 +320,7 @@ export default {
 
 ::v-deep .mega-menu {
   padding: $navigationHeight 3rem 3rem 3rem;
+  padding-top: $navigationHeight !important;
   .accordion-section {
     &.open {
       margin-bottom: 1rem;
