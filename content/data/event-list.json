@@ -116,6 +116,7 @@
     "type": "D",
     "event_type": "hackathon",
     "img": "/images/events/filecoin-club.png",
+    "img_background_position": "left center",
     "date": ["October 1, 2021", "December 31, 2021"],
     "title": "Filecoin Club",
     "description": "Encode Club, a community of university students, researchers, and developers building in blockchain, is introducing Filecoin Club to educate the next generation of students about Filecoin’s technology.",
