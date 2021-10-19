@@ -37,6 +37,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
   height: 100%;
   @include mini {
     flex-direction: column;
@@ -49,6 +50,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  width: 100%;
   min-width: 85%;
   @include tiny {
     width: 100%;
@@ -57,15 +59,20 @@ export default {
 
 .mega-menu {
   display: block;
-  position: absolute;
+  position: fixed;
   padding: 3rem 5rem 3rem 5rem;
-  width: calc(104.1665vw + 2rem);
-  // height: calc(100vh - 9rem);
-  left: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  // left: 100vw;
+  transform: translateY(-100vh);
+  // background-color: rgba(0, 0, 0, 0.9);
   transition: 250ms ease-in;
+  z-index: 100;
   &.nav-panel-open {
-    left: calc(-0.041665 * 100vw - 2rem);
+    // left: calc(-0.041665 * 100vw - 2rem);
+    transform: translateY(0);
   }
 }
 
