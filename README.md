@@ -1,6 +1,6 @@
 # Filecoin Foundation Website
 
-Primary website for the Filecoin Foundation
+Website for the Filecoin Foundation
 
 ## Components
 
