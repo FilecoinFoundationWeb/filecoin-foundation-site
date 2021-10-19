@@ -91,6 +91,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ///////////////////////////////////////////////////////////////////// General
 .page-index {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
+  @include medium {
+    padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium} + 5rem);
+  }
+  @include mini {
+    padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
+  }
 }
 
 .main-content {

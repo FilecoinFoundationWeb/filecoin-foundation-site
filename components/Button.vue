@@ -362,11 +362,11 @@ $layerOffset: 0.25rem;
 .type__F {
   @include fontSize_Small;
   opacity: 0.85;
+  @include small {
+    @include fontSize_Regular;
+  }
   &:hover {
     opacity: 1;
-  }
-  .text {
-    white-space: nowrap;
   }
 }
 

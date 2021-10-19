@@ -88,6 +88,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 .page-get-involved {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
   color: white;
+  @include medium {
+    padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium});
+  }
+  @include mini {
+    padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini});
+  }
 }
 
 .main-content {

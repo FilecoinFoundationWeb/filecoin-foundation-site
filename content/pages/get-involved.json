@@ -52,7 +52,7 @@
           "type": "card_list_block",
           "cols": {
             "num": "col-12_md-11",
-            "push_left": "off-0_md-1"
+            "push_left": "off-1"
           },
           "load_more_button": {
             "type": "E",

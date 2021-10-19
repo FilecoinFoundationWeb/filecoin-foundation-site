@@ -4,7 +4,7 @@
     <section class="site-footer-section-top">
 
       <div class="grid-middle">
-        <div class="col-4" data-push-left="off-2">
+        <div class="col-4_mi-8_ti-10" data-push-left="off-2">
           <div class="footer-content left">
 
             <div
@@ -16,7 +16,7 @@
 
           </div>
         </div>
-        <div class="col-5" data-push-left="off-1">
+        <div class="col-5_mi-8_ti-10" data-push-left="off-1_sm-2">
           <div class="footer-content right">
 
             <nav class="navigation">
@@ -44,7 +44,7 @@
     </section>
 
     <div class="grid">
-      <div class="col" data-push-left="off-1">
+      <div class="col-12_sm-4_mi-8_ti-10" data-push-left="off-1_sm-2">
         <div class="panel-bottom-content">
 
           <nav class="panel-bottom-navigation">
@@ -133,6 +133,11 @@ $backgroundLayer__Height: 12.25rem;
   &:not(:last-child) {
     margin-bottom: 1.25rem;
   }
+  &:not(:first-child) {
+    @include small {
+      @include fontSize_Medium;
+    }
+  }
   a {
     @include fontWeight_SemiBold;
     color: $azureRadiance;
@@ -148,8 +153,14 @@ $backgroundLayer__Height: 12.25rem;
   }
 }
 
-.social-icons {
-  margin-top: 1.5rem
+::v-deep .social-icons {
+  margin-top: 1.5rem;
+  @include small {
+    .social-icon {
+      flex: 1;
+      width: auto;
+    }
+  }
 }
 
 // //////////////////////////////////////////////////////////////// Panel Bottom
@@ -159,26 +170,38 @@ $backgroundLayer__Height: 12.25rem;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 5.75rem;
+  @include small {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
 }
 
 .panel-bottom-navigation {
   display: flex;
   flex-direction: row;
-}
-
-.copyright-text {
-  @include fontSize_Small;
-  opacity: 0.85;
+  @include small {
+    flex-wrap: wrap;
+  }
 }
 
 ::v-deep .panel-bottom-nav-link {
+  opacity: 0.75;
   &:not(:last-child) {
     margin-right: 2rem;
+    @include small {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 ::v-deep .copyright-text {
+  @include fontSize_Small;
+  opacity: 0.5;
   padding-left: 3rem;
+  @include small {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
   a {
     @include fontWeight_SemiBold;
   }
@@ -188,8 +211,17 @@ $backgroundLayer__Height: 12.25rem;
 .background-layers {
   position: absolute;
   top: calc(50% - #{math.div($backgroundLayer__Height, 2)});
-  right: calc(100% - (#{$containerWidth} / 2) + 16rem);
+  right: calc(50% + 30rem);
   width: 100%;
   height: $backgroundLayer__Height;
+  @include containerMaxMQ {
+    right: 0;
+    left: -100%;
+  }
+  @include mini {
+    left: calc(-100% + 2rem);
+    top: 0;
+    height: 100%;
+  }
 }
 </style>
