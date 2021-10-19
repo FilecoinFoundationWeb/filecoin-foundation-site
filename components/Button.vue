@@ -376,7 +376,14 @@ $layerOffset: 0.25rem;
   @include fontWeight_Medium;
   @include leading_Tiny;
   position: relative;
+  align-items: center;
   opacity: 0.5;
+  @include mini {
+    @include fontSize_ExtraLarge;
+  }
+  @include tiny {
+    @include fontSize_Large;
+  }
   &:hover,
   &.selected {
     opacity: 1;
@@ -403,6 +410,9 @@ $layerOffset: 0.25rem;
     margin-right: 0.5rem;
     &.code {
       width: 2.25rem;
+      @include mini {
+        width: 1.5rem;
+      }
     }
   }
 }
