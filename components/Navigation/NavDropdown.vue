@@ -7,6 +7,12 @@
       :disabled="link.disabled"
       :class="['nav-link', (toggleFirstOnHover ? 'top-level' : 'click-toggle')]"
       @click="toggleDropDown(!toggleFirstOnHover)">
+      <div class="arrow">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+      </div>
       <span class="text">{{ link.text }}</span>
       <div
         v-if="!toggleFirstOnHover"
@@ -194,7 +200,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .nav-hover-wrapper,
 .nav-active-wrapper {
   position: relative;
@@ -205,12 +210,21 @@ export default {
 }
 
 .nav-hover-wrapper {
-  &:hover .nav-dropdown {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(-50%, 0rem);
-    z-index: 0;
-    transition: 250ms ease-in;
+  &:hover {
+    .nav-dropdown,
+    .nav-link.top-level .arrow {
+      visibility: visible;
+      opacity: 1;
+      transition: 250ms ease-in;
+    }
+    .nav-dropdown {
+      transform: translate(-50%, 0rem);
+      z-index: 5;
+    }
+    .nav-link.top-level .arrow {
+      transform: translate(-50%, 0rem) rotate(45deg);
+      z-index: 10;
+    }
   }
 }
 
@@ -274,12 +288,16 @@ li {
   transition: 250ms ease-out;
 }
 
-.nav-dropdown {
+::v-deep .nav-dropdown {
   display: inline-block;
   top: 3.5rem;
   .extras {
     position: relative;
     z-index: 10;
+  }
+  .title {
+    display: inline-block;
+    margin-bottom: 1rem;
   }
 }
 
@@ -314,6 +332,52 @@ li {
       padding-top: 0.75rem;
       .top-level {
         width: fit-content;
+      }
+    }
+  }
+  .nav-link.top-level {
+    position: relative;
+    .arrow {
+      position: absolute;
+      top: 27px;
+      left: 50%;
+      width: 17px;
+      height: 17px;
+      transform: translate(-50%, 1rem) rotate(45deg);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 2;
+      transition: 250ms ease-out;
+      @include small {
+        display: none;
+      }
+      .layer {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 2px 0 0 0;
+        &:first-child {
+          top: 0;
+          left: 0;
+          background-color: $azureRadiance;
+          z-index: 0;
+        }
+        &:nth-child(2) {
+          background-color: $denim;
+          transform: translate(3px, 3px);
+          z-index: 1;
+        }
+        &:nth-child(3) {
+          background-color: $kleinBlue;
+          transform: translate(7px, 7px);
+          z-index: 2;
+        }
+        &:last-child {
+          background-color: $blackPearl;
+          transform: translate(11px, 11px);
+          z-index: 3;
+        }
       }
     }
   }

@@ -356,8 +356,8 @@ export default {
       width: 2rem;
     }
     .title {
-      padding-left: 3.5rem;
       @include fontWeight_Medium;
+      padding-left: 3.5rem;
     }
     .text {
       display: none;
@@ -371,17 +371,17 @@ export default {
       display: none;
     }
     .text {
+      @include leading_Large;
       padding-left: 3.5rem;
       letter-spacing: $letterSpacing_Large;
-      @include leading_Large;
     }
     ul {
       padding-left: 3.5rem;
       list-style: none;
     }
     li {
-      font-size: 0.875rem;
       @include fontWeight_Medium;
+      font-size: 0.875rem;
       letter-spacing: $letterSpacing_Large;
       margin: 0.5rem 0;
     }
