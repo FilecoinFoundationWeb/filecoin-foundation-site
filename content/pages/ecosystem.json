@@ -25,7 +25,7 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/images/Ecosystem/meeting2.png",
+          "src": "/images/ecosystem/meeting2.png",
           "cols": {
             "num": "col-5",
             "push_left": "off-1"
@@ -47,7 +47,9 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6, 5, 4, 3],
-                "offset": 1.375,
+                "offset": {
+                  "mini": 0.25
+                },
                 "reverse": true
               }
             }
@@ -110,19 +112,19 @@
           "cards": [
             {
               "type": "B",
-              "img": "/images/Ecosystem/colinevran@2x.png",
+              "img": "/images/ecosystem/colinevran@2x.png",
               "title": "Colin Evran",
               "description": "Ecosystem Lead, Protocol Labs"
             },
             {
               "type": "B",
-              "img": "/images/Ecosystem/mosh@2x.png",
+              "img": "/images/ecosystem/mosh@2x.png",
               "title": "Michelle Lee",
               "description": "Ecosystem Lead, Protocol Labs"
             },
             {
               "type": "B",
-              "img": "/images/Ecosystem/stefaan-vervaet.png",
+              "img": "/images/ecosystem/stefaan-vervaet.png",
               "title": "Stefaan Vervaet",
               "description": "Ecosystem Lead, Protocol Labs"
             }
@@ -208,7 +210,9 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6],
-                "offset": 1.375,
+                "offset": {
+                  "mini": 0.25
+                },
                 "reverse": true
               }
             }

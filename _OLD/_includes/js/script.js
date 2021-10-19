@@ -1,1 +1,0 @@
-const {add} = require('./add')

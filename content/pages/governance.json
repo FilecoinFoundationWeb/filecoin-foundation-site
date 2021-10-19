@@ -228,7 +228,9 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [4, 5, 6],
-                "offset": 1.375,
+                "offset": {
+                  "mini": 0.25
+                },
                 "border-radius": 6.375
               }
             }
