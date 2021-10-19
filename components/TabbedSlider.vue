@@ -114,6 +114,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+[class~="grid"], [class*="grid-"], [class*="grid_"] {
+  @include small {
+    flex-direction: column;
+  }
+}
+
 .column-content {
 
   &.tabs {
@@ -162,6 +169,9 @@ export default {
     .card-content {
       display: flex;
       flex-direction: row;
+      @include tiny {
+        flex-direction: column;
+      }
       .text {
         display: block;
         .label {

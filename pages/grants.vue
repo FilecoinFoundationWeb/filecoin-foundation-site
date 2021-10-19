@@ -77,6 +77,12 @@ export default {
 
 #section-1 {
   padding-top: 9rem + $navigationHeight;
+  @include small {
+    padding-top: 3rem + $navigationHeight;
+  }
+  @include mini {
+    padding-top: 1.5rem + $navigationHeight;
+  }
 }
 
 #section-2 {
@@ -104,6 +110,15 @@ export default {
   }
 }
 
+::v-deep {
+  .subheading {
+    @include mini {
+      @include fontSize_Medium;
+      @include leading_Medium;
+    }
+  }
+}
+
 // ////////////////////////////////////////////////////// Section Customizations
 // ----------------------------------------------------------------- [Section] 1
 ::v-deep #hero {
@@ -111,12 +126,27 @@ export default {
   .column-content {
     &.right {
       left: 3rem;
+      @include small {
+        left: 0;
+        margin-bottom: 5rem;
+      }
+      @include mini {
+        margin-bottom: 3rem;
+      }
     }
   }
   .image {
     width: 50vw;
     border-radius: 25vw 3rem 3rem 25vw;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+    @include small {
+      width: 100vw;
+    }
+  }
+  [class~="grid"], [class*="grid-"], [class*="grid_"] {
+    @include small {
+      flex-direction: column-reverse;
+    }
   }
   .background-layers {
     position: absolute;
@@ -124,6 +154,11 @@ export default {
     left: 0;
     width: calc(100% + 25rem);
     height: 100%;
+  }
+  .subheading {
+    @include mini {
+      margin-bottom: 2.25rem;
+    }
   }
 }
 
@@ -138,6 +173,9 @@ export default {
     &.left {
       .image {
         transform: scale(1.4) translateY(25%);
+        @include small {
+          transform: scale(1) translateY(0);
+        }
       }
     }
   }
@@ -169,9 +207,16 @@ export default {
 
 ::v-deep #banner-1 {
   padding: 2rem;
+  @include tiny {
+    padding: 2rem 0;
+  }
+
   .blocks {
     &.left {
       padding: 2.625rem;
+      @include tiny {
+        padding: 4rem 0;
+      }
       .label {
         font-size: 0.9375rem;
       }
@@ -187,6 +232,11 @@ export default {
     width: 100vw;
     height: 100%;
     z-index: 5;
+    @include tiny {
+      .layers {
+        border-radius: 5rem 0 0 5rem;
+      }
+    }
   }
 }
 
@@ -196,6 +246,9 @@ export default {
     &.right {
       .slider-block {
         margin-top: 17.125rem;
+        @include tiny {
+          margin-top: 0;
+        }
       }
     }
   }
