@@ -299,7 +299,8 @@ $layerOffset: 0.25rem;
 
 .type__D {
   @include fontSize_Large;
-  align-items: flex-start;
+  @include leading_Small;
+  align-items: center;
   ::v-deep .icon {
     &.plus {
       width: 1rem;

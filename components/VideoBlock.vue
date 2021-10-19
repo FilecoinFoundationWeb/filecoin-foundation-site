@@ -70,16 +70,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$borderWidth: 1rem;
+$borderWidth__Large: 1rem;
+$borderWidth__Mini: 0.5rem;
 
 // ///////////////////////////////////////////////////////////////////// General
 .preview-container {
   @include borderRadius_Medium;
   position: relative;
-  padding: $borderWidth;
+  padding: $borderWidth__Large;
   background-color: $hawkesBlue;
   box-shadow: 3px 3px 6px rgb(0 0 0 / 10%) inset;
   cursor: pointer;
+  @include mini {
+    padding: $borderWidth__Mini;
+  }
   &:hover {
     .overlay {
       transition: 250ms ease-in;
@@ -120,14 +124,20 @@ $borderWidth: 1rem;
 // /////////////////////////////////////////////////////////////// Preview Image
 .tint {
   position: absolute;
-  top: $borderWidth;
-  left: $borderWidth;
-  width: calc(100% - #{$borderWidth * 2});
-  height: calc(100% - #{$borderWidth * 2});
+  top: $borderWidth__Large;
+  left: $borderWidth__Large;
+  width: calc(100% - #{$borderWidth__Large * 2});
+  height: calc(100% - #{$borderWidth__Large * 2});
   border-radius: inherit;
   background-color: #00437C;
   opacity: 0.075;
   z-index: 10;
+  @include mini {
+    top: $borderWidth__Mini;
+    left: $borderWidth__Mini;
+    width: calc(100% - #{$borderWidth__Mini * 2});
+    height: calc(100% - #{$borderWidth__Mini * 2});
+  }
 }
 
 .preview-image {

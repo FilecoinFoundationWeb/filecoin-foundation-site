@@ -230,6 +230,10 @@ $letterSpacing_Large: 0.03em;
   letter-spacing: $letterSpacing_Regular;
 }
 
+@mixin h1_small {
+  font-size: $fontSize_ExtraExtraLarge;
+}
+
 @mixin h2 {
   font-size: $fontSize_Larger;
   font-weight: $fontWeight_Medium;

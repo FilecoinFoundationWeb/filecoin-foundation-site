@@ -51,7 +51,9 @@
 
       </div>
 
-      <div v-if="description && type !== 'B'" class="panel-right">
+      <div
+        v-if="description && type !== 'B' && type !== 'A'"
+        class="panel-right">
         <div
           class="description"
           v-html="description">
@@ -174,9 +176,6 @@ export default {
 // ////////////////////////////////////////////////////////////////// Variations
 // -------------------------------------------------------------------- [Type] A
 .card.type__A {
-  &:nth-child(odd) {
-    margin-right: 3rem;
-  }
   .title {
     @include fontWeight_Medium;
     @include leading_Regular;

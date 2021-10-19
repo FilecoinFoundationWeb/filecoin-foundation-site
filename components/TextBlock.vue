@@ -103,6 +103,9 @@ export default {
   .description {
     @include fontSize_Large;
     @include leading_Regular;
+    @include mini {
+      @include fontSize_Medium;
+    }
   }
 }
 
