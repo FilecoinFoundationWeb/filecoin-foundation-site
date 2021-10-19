@@ -314,12 +314,12 @@ export default {
   z-index: 1000;
   @include small {
     padding: 0 1rem;
+    margin-bottom: 0;
   }
 }
 
 ::v-deep .mega-menu {
-  padding: 3rem;
-  padding-top: $navigationHeight;
+  padding: $navigationHeight 3rem 3rem 3rem;
   .accordion-section {
     &.open {
       margin-bottom: 1rem;
