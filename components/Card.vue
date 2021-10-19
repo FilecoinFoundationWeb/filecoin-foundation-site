@@ -39,7 +39,7 @@
         </div>
 
         <div
-          v-if="description && type !== 'D'"
+          v-if="description && type !== 'D' && type !== 'C'"
           class="description"
           v-html="description">
         </div>
@@ -51,7 +51,9 @@
 
       </div>
 
-      <div v-if="description && type !== 'B'" class="panel-right">
+      <div
+        v-if="description && type !== 'B' && type !== 'A'"
+        class="panel-right">
         <div
           class="description"
           v-html="description">
@@ -174,9 +176,6 @@ export default {
 // ////////////////////////////////////////////////////////////////// Variations
 // -------------------------------------------------------------------- [Type] A
 .card.type__A {
-  &:nth-child(odd) {
-    margin-right: 3rem;
-  }
   .title {
     @include fontWeight_Medium;
     @include leading_Regular;
@@ -229,6 +228,13 @@ export default {
     color: white;
     z-index: -1;
     @include fontSize_Small;
+    @include small {
+      bottom: 2.25rem;
+    }
+    @include tiny {
+      @include fontSize_Mini;
+      bottom: 1.25rem;
+    }
   }
   &:before {
     content: '';
@@ -248,12 +254,34 @@ export default {
 .card.type__C {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: calc(50% - 3rem);
+  @include small {
+    width: calc(50% - 3rem);
+  }
+  &:nth-child(odd) {
+    @include small {
+      margin-right: 2rem;
+    }
+    @include mini{
+      margin-right: 4rem;
+    }
+    @include tiny{
+      margin-right: 2rem;
+    }
+  }
+  @include tiny {
+    flex-direction: column;
+  }
   .image {
     width: 4rem;
     height: 6.25rem;
     border-radius: 4rem;
     margin-bottom: unset;
+    @include tiny {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .description {
     margin: 0 1rem;
@@ -262,6 +290,10 @@ export default {
     justify-content: center;
     color: white;
     font-size: 0.8125rem;
+    @include tiny {
+      margin: 1rem 0;
+      text-align: center;
+    }
   }
 }
 

@@ -4,7 +4,7 @@
     <div
       v-for="(layer, i) in layers"
       :key="layer.color"
-      :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength}`, { reverse }]"
+      :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength} border-radius-direction-${borderRadiusDirection}`, { reverse }]"
       :style="layerStyle(i + 1, i, layer.color)">
     </div>
 
@@ -60,6 +60,11 @@ export default {
       type: String, // 'small', 'large'
       required: false,
       default: 'large'
+    },
+    borderRadiusDirection: {
+      type: String, // 'forward', 'reverse'
+      required: false,
+      default: 'forward'
     }
   },
 
@@ -132,6 +137,14 @@ export default {
   &.reverse {
     filter: none;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+  }
+  &.border-radius-direction-forward {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  &.border-radius-direction-reverse {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
   }
 }
 </style>

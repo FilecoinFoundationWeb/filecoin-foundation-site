@@ -303,7 +303,8 @@ $layerOffset: 0.25rem;
 
 .type__D {
   @include fontSize_Large;
-  align-items: flex-start;
+  @include leading_Small;
+  align-items: center;
   ::v-deep .icon {
     &.plus {
       width: 1rem;
@@ -361,11 +362,11 @@ $layerOffset: 0.25rem;
 .type__F {
   @include fontSize_Small;
   opacity: 0.85;
+  @include small {
+    @include fontSize_Regular;
+  }
   &:hover {
     opacity: 1;
-  }
-  .text {
-    white-space: nowrap;
   }
 }
 

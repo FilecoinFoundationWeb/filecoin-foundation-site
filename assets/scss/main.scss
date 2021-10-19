@@ -112,6 +112,9 @@ a, button {
 // -----------------------------------------------------------------------------
 h1, .h1 {
   @include h1;
+  @include small {
+    @include h1_small;
+  }
 }
 
 h2, .h2 {
@@ -139,6 +142,9 @@ h2, .h2 {
   flex-direction: row;
   align-items: center;
   margin-top: 1rem;
+  @include tiny {
+    margin-top: 1.25rem;
+  }
   .button {
     &:not(:last-child) {
       margin-right: 1rem;

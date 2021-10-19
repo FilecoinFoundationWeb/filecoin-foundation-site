@@ -17,8 +17,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-7",
-            "push_left": "off-2"
+            "num": "col-7_sm-9_mi-11",
+            "push_left": "off-2_mi-1"
           },
           "heading": "Let’s build the internet of everyone",
           "subheading": "The Filecoin Foundation is the steward of the Filecoin community. We aspire to put the power of humanity’s most important information back into the hands of everyone.",
@@ -39,8 +39,8 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-3",
-            "push_left": "off-2"
+            "num": "col-3_sm-6_mi-8",
+            "push_left": "off-2_mi-1"
           },
           "heading": "What we do",
           "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web."
@@ -49,7 +49,7 @@
           "type": "text_block",
           "layout": "compact",
           "cols": {
-            "num": "col-4",
+            "num": "col-4_sm-8_mi-9",
             "push_left": "off-3"
           },
           "label": {
@@ -66,6 +66,7 @@
               "props": {
                 "layers-array": [8, 6, 5, 4, 3, 2],
                 "offset": {
+                  "medium": 0.75,
                   "mini": 0.25
                 },
                 "reverse": true
@@ -79,8 +80,8 @@
         "left": {
           "type": "video_block",
           "cols": {
-            "num": "col-6",
-            "push_left": "off-2"
+            "num": "col-6_sm-10_mi-11",
+            "push_left": "off-2_mi-1"
           },
           "preview_image": "/images/page-index/intro-2-video-preview.png",
           "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys",
@@ -90,8 +91,8 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-3",
-            "push_left": "off-1"
+            "num": "col-3_sm-10_mi-9",
+            "push_left": "off-1_sm-2_mi-1"
           },
           "heading": "Introducing the Filecoin Foundation with Marta Belcher",
           "description": "Join Protocol Labs general counsel Marta Belcher to learn about the Filecoin Foundation (FF).",
@@ -113,8 +114,8 @@
           "type": "text_block",
           "layout": "compact",
           "cols": {
-            "num": "col-7",
-            "push_left": "off-4"
+            "num": "col-7_mi-9",
+            "push_left": "off-4_mi-3"
           },
           "description": "FF provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive.",
           "customizations": [
@@ -123,6 +124,7 @@
               "props": {
                 "layers-array": [8, 6, 5, 4, 3, 2],
                 "offset": {
+                  "medium": 0.75,
                   "mini": 0.25
                 },
                 "reverse": true
@@ -138,7 +140,7 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-3",
+            "num": "col-3_sm-10_mi-9",
             "push_left": "off-1"
           },
           "label": "Resources",
@@ -148,8 +150,8 @@
         "right": {
           "type": "slider_block",
           "cols": {
-            "num": "col-6",
-            "push_left": "off-2"
+            "num": "col-6_sm-8_ti-9",
+            "push_left": "off-2_sm-4_mi-2_ti-2"
           },
           "cards": [
             {
@@ -230,8 +232,8 @@
         "left": {
           "type": "video_block",
           "cols": {
-            "num": "col-10",
-            "push_left": "off-2"
+            "num": "col-10_mi-11",
+            "push_left": "off-2_mi-1"
           },
           "preview_image": "/images/page-index/team-video-preview.png",
           "url": "https://youtu.be/6OY4xAs3Grg",
@@ -247,12 +249,12 @@
       },
       {
         "id": "team_intro",
-        "grid": ["middle"],
+        "grid": ["middle", "center"],
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-4",
-            "push_left": "off-2"
+            "num": "col-4_sm-6_mi-7_ti-10",
+            "push_left": "off-2_mi-1"
           },
           "src": "/images/page-index/filecoin-logomark-large.png"
         },
@@ -260,8 +262,8 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-5",
-            "push_left": "off-1"
+            "num": "col-5_sm-9_mi-10_ti-11",
+            "push_left": "off-1_sm-2_mi-1"
           },
           "heading": "Meet the Filecoin Team",
           "description": "The Filecoin team continues to expand a growing workforce of professionals dedicated to research, development and community engagement around open source, decentralized storage, and nurturing  the Filecoin ecosystem. We’re still looking for talented grant program managers, communications professionals and more to join us in this mission.",
@@ -284,7 +286,7 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-3",
+            "num": "col-3_sm-10",
             "push_left": "off-1"
           },
           "label": "Get Involved",
@@ -302,7 +304,7 @@
         "right": {
           "type": "slider_block",
           "cols": {
-            "num": "col-6",
+            "num": "col-6_sm-10",
             "push_left": "off-2"
           },
           "cards": [
@@ -355,6 +357,7 @@
               "props": {
                 "layers-array": [8, 6, 5, 4],
                 "offset": {
+                  "medium": 0.75,
                   "mini": 0.25
                 },
                 "reverse": true
@@ -372,8 +375,8 @@
         "props": {
           "intro": {
             "cols": {
-              "num": "col-4",
-              "push_left": "off-1"
+              "num": "col-4_sm-8_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
             },
             "heading": "Events & Hackathons",
             "cta": {
@@ -385,8 +388,8 @@
           },
           "events": {
             "cols": {
-              "num": "col-8",
-              "push_left": "off-4"
+              "num": "col-8_sm-10_ti-11",
+              "push_left": "off-4_sm-2_mi-1"
             },
             "cards": [
               {

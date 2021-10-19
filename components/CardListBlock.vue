@@ -6,7 +6,7 @@
       <div
         v-for="(card, index) in list"
         :key="index"
-        :class="['card-column', index === 0 ? firstColumnNum : 'col-4']">
+        :class="['card-column', index === 0 ? firstColumnNum : 'col-4_sm-6_mi-12']">
 
         <Card
           :card="card"
@@ -54,7 +54,7 @@ export default {
     firstColumnNum: {
       type: String,
       required: false,
-      default: 'col-4'
+      default: 'col-4_sm-6_mi-12'
     },
     forceImageType: {
       type: String,
@@ -114,29 +114,6 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
-.card-column {
-  &:nth-child(3n + 2) {
-    margin-top: -3rem;
-  }
-  &:nth-child(2n + 1),
-  &:nth-child(6n - 2) {
-    .card {
-      background-color: $kleinBlue;
-    }
-  }
-  &:nth-child(6n + 1),
-  &:nth-child(6n - 1) {
-    .card {
-      background-color: $deepCove;
-    }
-  }
-}
-
-.button-row {
-  justify-content: center;
-  margin-top: -2rem;
-}
-
 .icon-code {
   width: 1.25rem;
 }
