@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-about-background-layers"
         :layers-array="[3, 4, 5, 6]"
-        :offset="{ mini: 0.25 }" />
+        :offset="{ mini: 0.25, small: 1.375 }" />
 
     </div>
 
@@ -206,6 +206,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   padding: 0;
   margin-bottom: 9.875rem;
   @include mini {
+    margin-top: 3rem;
     margin-bottom: 0;
   }
   .video-block {
