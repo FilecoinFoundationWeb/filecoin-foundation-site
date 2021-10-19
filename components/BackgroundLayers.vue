@@ -105,7 +105,6 @@ export default {
 
   methods: {
     layerStyle (index, order, color) {
-      console.log(this.layerWidth)
       const w = `width: calc(100% + ${2 * index * this.layerWidth}rem);`
       const h = `height: calc(100% + ${2 * index * this.layerWidth}rem);`
       const t = `top: ${-1 * index * this.layerWidth}rem;`
