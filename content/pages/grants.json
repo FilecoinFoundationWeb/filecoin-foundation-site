@@ -197,13 +197,14 @@
         "props": {
           "tabs": {
             "cols": {
-              "num": "col-3"
+              "num": "col-3_sm-10_ti-12",
+              "push_left": "off-0_sm-1_ti-0"
             }
           },
           "card": {
             "cols": {
-              "num": "col-7_mi-10",
-              "push_left": "off-1_mi-2"
+              "num": "col-7_md-6_sm-10_mi-10",
+              "push_left": "off-1_md-2_sm-1_mi-2"
             }
           },
           "slides": [
