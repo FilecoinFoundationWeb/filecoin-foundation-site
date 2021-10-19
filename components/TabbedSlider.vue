@@ -114,6 +114,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+[class~="grid"], [class*="grid-"], [class*="grid_"] {
+  @include small {
+    flex-direction: column;
+  }
+}
+
 .column-content {
 
   &.tabs {
@@ -121,14 +128,20 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    @include small {
+      flex-direction: row;
+    }
     .tab {
       position: relative;
       display: flex;
       flex-direction: row;
       padding: 2rem;
       width: 100%;
-      height: 2.875rem;
       cursor: pointer;
+      @include small {
+        padding: 0;
+        margin-bottom: 4rem;
+      }
       &.selected {
         &:before {
           content: '';
@@ -140,28 +153,57 @@ export default {
           background-color: $kleinBlue;
           border-radius: 4rem 0 0 4rem;
           z-index: -1;
+          @include small {
+            width: 0;
+            height: 0;
+          }
+        }
+        @include small {
+          img {
+            display: none;
+          }
+          .label {
+            visibility: visible;
+          }
         }
       }
       img {
         position: absolute;
         top: 50%;
         left: 2rem;
-        width: 2.875rem;
-        transform: translateY(-50%);
+        height: 2.875rem;
+        transform: translateX(0) translateY(-50%);
+        @include small {
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
       }
       .label {
         @include fontSize_ExtraLarge;
         @include fontWeight_Medium;
         padding-left: 4.375rem;
+        @include small {
+          visibility: hidden;
+          padding-left: 0;
+          margin: auto;
+        }
+        @include mini {
+          @include fontSize_Large;
+        }
       }
     }
   }
 
   &.card {
-    padding-top: 1rem;
+    padding: 4rem 0 3rem 0rem;
+    position: relative;
     .card-content {
       display: flex;
       flex-direction: row;
+      transition: 300ms ease;
+      @include mini {
+        flex-direction: column;
+      }
       .text {
         display: block;
         .label {
@@ -175,20 +217,25 @@ export default {
           letter-spacing: $letterSpacing_Large;
         }
       }
-      .image-wrapper {
-        min-width: 29%;
-      }
       img {
-        position: relative;
         width: 5.3125rem;
-        left: 25%;
+        margin: 0 2rem;
+        @include mini {
+          margin: 0;
+        }
       }
     }
     .background-layers {
       position: absolute;
-      width: 100%;
+      width: 100vw;
       height: 100%;
       top: 0;
+      @include mini {
+        left: -3rem;
+      }
+      @include tiny {
+        left: -1rem;
+      }
     }
   }
 }
