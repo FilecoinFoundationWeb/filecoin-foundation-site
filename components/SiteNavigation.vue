@@ -1,0 +1,84 @@
+<template>
+  <div id="site-navigation">
+    <div class="grid-noGutter">
+      <div class="col">
+        <div class="content">
+
+          <nuxt-link to="/">
+            <LogoHorizontal id="logo-horizontal" />
+          </nuxt-link>
+
+          <nav class="navigation">
+            <Button
+              v-for="(link, index) in links"
+              :key="index"
+              :button="link"
+              class="nav-link">
+              {{ link.text }}
+            </Button>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// ====================================================================== Import
+import { mapGetters } from 'vuex'
+
+import Button from '@/components/Button'
+import LogoHorizontal from '@/components/LogoHorizontal'
+
+// ====================================================================== Export
+export default {
+  name: 'SiteNavigation',
+
+  components: {
+    LogoHorizontal,
+    Button
+  },
+
+  computed: {
+    ...mapGetters({
+      siteContent: 'global/siteContent'
+    }),
+    links () {
+      return this.siteContent.general.navigation
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+// ///////////////////////////////////////////////////////////////////// General
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: $navigationHeight;
+  .nuxt-link-active {
+    z-index: 10;
+  }
+}
+
+// //////////////////////////////////////////////////////////////////////// Logo
+#logo-horizontal {
+  height: 2.5rem;
+}
+
+// ////////////////////////////////////////////////////////////////// Navigation
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-link {
+  &:not(:last-child) {
+    margin-right: 3.125rem;
+  }
+}
+</style>

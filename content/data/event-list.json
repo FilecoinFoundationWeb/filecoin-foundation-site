@@ -1,0 +1,201 @@
+[
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/2021-tech-prom.png",
+    "date": "October 20, 2021",
+    "title": "2021 Tech Prom",
+    "description": "Tech Prom is an invitation-only evening bringing together guests from across the tech policy community.",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "ticket",
+      "text": "Invitation-only",
+      "url": "https://cdt.org/event/2021-tech-prom/"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/hyperledger-global-forum.jpg",
+    "date": ["June 8, 2021", "June 10, 2021"],
+    "title": "Hyperledger Global Forum",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=B8lDaJcSiX0"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/ethereal-2021.png",
+    "date": "May 6, 2021",
+    "title": "Ethereal 2021",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Stream",
+      "url": "https://www.youtube.com/watch?v=JRsvz6pRtZE&t=454s"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "",
+    "date": "March 6, 2021",
+    "title": "GBBC Virtual Members Forum",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Stream",
+      "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/cryptocurrency-in-the-age-of-mass-surveillance.png",
+    "date": "June 21, 2020",
+    "title": "Cryptocurrency in the Age of Mass Surveillance",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "",
+    "date": "Mar 5, 2021",
+    "title": "GBBC Virtual Members Forum with Marta Belcher, Board Chair at the Filecoin Foundation",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/cryptocurrency-in-the-age-of-mass-surveillance.png",
+    "date": "June 21, 2021",
+    "title": "Cryptocurrency in the Age of Mass Surveillance",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "",
+    "date": "June 21, 2021",
+    "title": "Cryptocurrency in the Age of Mass Surveillance",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "/images/events/filecoin-club.png",
+    "img_background_position": "left center",
+    "date": ["October 1, 2021", "December 31, 2021"],
+    "title": "Filecoin Club",
+    "description": "Encode Club, a community of university students, researchers, and developers building in blockchain, is introducing Filecoin Club to educate the next generation of students about Filecoin’s technology.",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "ticket",
+      "text": "Buy your pass",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["August 1, 2021", "October 31, 2021"],
+    "title": "Asia Hackathon Season 2021",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["July 30, 2021", "August 20, 2021"],
+    "title": "HackFS",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["July 8, 2021", "August 20, 2021"],
+    "title": "Hackathon Browsers 3000",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["July 1, 2021", "August 31, 2021"],
+    "title": "NFT Vision Hack",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["May 1, 2021", "July 18, 2021"],
+    "title": "Filecoin Grant Global Online Hackathon",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": ""
+    }
+  }
+]
