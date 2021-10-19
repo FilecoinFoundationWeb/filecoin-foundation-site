@@ -57,9 +57,9 @@
             "action": "video",
             "icon": "play",
             "text": "Watch now",
-            "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+            "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA/videos"
           },
-          "description": "Join us as Thomas Jefferson argues with Alexander Hamilton in Washington D.C.",
+          "description": "Crypto and the New Internet Economy",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -94,8 +94,8 @@
             "num": "col-3_sm-10_mi-9",
             "push_left": "off-1_sm-2_mi-1"
           },
-          "heading": "Introducing the Filecoin Foundation with Marta Belcher",
-          "description": "Join Protocol Labs general counsel Marta Belcher to learn about the Filecoin Foundation (FF).",
+          "heading": "Learn more about the Foundation, including its history, its mandate, and its mission.",
+          "description": "",
           "ctas": [
             {
               "type": "B",
