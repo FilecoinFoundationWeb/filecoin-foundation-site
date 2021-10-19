@@ -218,20 +218,18 @@ export default {
     padding: 2rem 3.375rem 2rem 5.375rem;
     background-color: $denim;
     border: 5px solid $azureRadiance;
-    border-top: none;
-    border-radius: 0 0 5.25rem 5.25rem;
+    border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
     color: $white;
     &:before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 5px;
       left: 5px;
       width: calc(100% - 20px);
-      height: calc(100% - 10px);
+      height: calc(100% - 20px);
       background-color: $blackPearl;
       border: 5px solid $kleinBlue;
-      border-top: none;
-      border-radius: 0 0 4.75rem 4.75rem;
+      border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
     }
     .extras {
       min-width: 15rem;
@@ -321,6 +319,8 @@ export default {
 ::v-deep .mega-menu {
   padding: $navigationHeight 3rem 3rem 3rem;
   padding-top: $navigationHeight !important;
+  top: -1rem;
+  height: calc(100% + 1rem);
   .accordion-section {
     &.open {
       margin-bottom: 1rem;
