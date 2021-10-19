@@ -49,6 +49,7 @@
               "props": {
                 "layers-array": [8, 6, 5, 4, 3],
                 "offset": {
+                  "medium": 0.75,
                   "mini": 0.25
                 },
                 "reverse": true
@@ -63,7 +64,7 @@
           "type": "image_block",
           "src": "/icons/upstairs.png",
           "cols": {
-            "num": "col-5_sm-6_mi-6",
+            "num": "col-5_sm-4_mi-6",
             "push_left": "off-2_mi-1"
           }
         },
@@ -142,7 +143,7 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10_mi-9",
-            "push_left": "off-1"
+            "push_left": "off-1_sm-2"
           },
           "label": "Resources",
           "heading": "How to get involved and key links",

@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-ecosystem-background-layers"
         :layers-array="[3, 4, 5, 6]"
-        :offset="{ mini: 0.25 }" />
+        :offset="pageBackgroundLayersOffset" />
 
     </div>
 
@@ -41,6 +41,15 @@ export default {
     Modal,
     PageSection,
     BackgroundLayers
+  },
+
+  data () {
+    return {
+      pageBackgroundLayersOffset: {
+        medium: 1,
+        mini: 0.25
+      }
+    }
   },
 
   async fetch ({ store }) {
@@ -82,10 +91,6 @@ $backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset__De
 $backgroundLayers__Left__Desktop: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 $backgroundLayers__Left__Medium: 1rem * 6;
 $backgroundLayers__Left__Mini: 0.25rem * 6;
-//old
-// $backgroundLayers__Offset: 1.75rem * 5;
-// $backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset});
-// $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 
 // ///////////////////////////////////////////////////////////////////// General
 .page-ecosystem {
@@ -209,7 +214,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   padding: 0;
   margin-bottom: 10rem;
   @include small {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
   @include mini {
     margin-bottom: 0;
@@ -223,14 +228,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     line-height: 1.5;
   }
   .column-content {
-    &.left {
-      @include small {
-        padding-top: 0rem;
-      }
-      @include mini {
-        padding-top: 3rem;
-      }
-    }
     &.right {
       width: 48vw;
       height: 100%;
@@ -263,6 +260,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   margin-top: 3rem;
   margin-bottom: 7.5rem;
   @include small {
+    margin-top: 0;
     margin-bottom: 2rem;
   }
   @include mini {
