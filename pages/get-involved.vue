@@ -67,7 +67,18 @@ export default {
     },
     sections () {
       const content = CloneDeep(this.siteContent.get_involved.page_content)
-      return [content[0].concat(this.siteContent['section-dive-deeper'])]
+      const diveDeeperContent = CloneDeep(this.siteContent['section-dive-deeper'])
+      diveDeeperContent.forEach((section) => {
+        if (section.left && section.left.type === 'text_block') {
+          section.left.theme = 'light'
+          section.left.button_theme = 'light'
+        }
+        if (section.right && section.right.type === 'text_block') {
+          section.right.theme = 'light'
+          section.right.button_theme = 'light'
+        }
+      })
+      return [content[0].concat(diveDeeperContent)]
     }
   }
 }

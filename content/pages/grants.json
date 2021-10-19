@@ -17,7 +17,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-4"
+            "num": "col-4_sm-10",
+            "push_left": "off-0_sm-1"
           },
           "heading": "Grants",
           "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.",
@@ -35,15 +36,17 @@
           "type": "image_block",
           "src": "images/page-grants/intro.png",
           "cols": {
-            "num": "col-6",
-            "push_left": "off-2"
+            "num": "col-6_sm-12",
+            "push_left": "off-2_sm-1"
           },
           "customizations": [
             {
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [5, 6],
-                "offset": 1.375
+                "offset": {
+                  "mini": 0.75
+                }
               }
             }
           ]
@@ -57,7 +60,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-4"
+            "num": "col-4_mi-10",
+            "push_left": "off-0_sm-1"
           },
           "heading": "Developer Grants",
           "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem."
@@ -69,15 +73,15 @@
           "type": "image_block",
           "src": "icons/hands-opening.png",
           "cols": {
-            "num": "col-3",
-            "push_left": "off-2"
+            "num": "col-3_mi-6",
+            "push_left": "off-2_mi-3"
           }
         },
         "right": {
           "type": "slider_block",
           "cols": {
-            "num": "col-4",
-            "push_left": "off-3"
+            "num": "col-4_mi-10",
+            "push_left": "off-3_sm-2_mi-1"
           },
           "cards": [
             {
@@ -116,8 +120,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-10",
-            "push_left": "off-2"
+            "num": "col-10_mi-10",
+            "push_left": "off-2_mi-2"
           },
           "label": "Our Mission",
           "description": "The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
@@ -126,7 +130,9 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6],
-                "offset": 1.375,
+                "offset": {
+                  "mini": 1.375
+                },
                 "reverse": true
               }
             }
@@ -141,7 +147,8 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-4"
+            "num": "col-4_mi-10",
+            "push_left": "off-0_sm-1"
           },
           "heading": "Community Grants",
           "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open source communities.<br><br>Our initiatives seek to:"
@@ -149,8 +156,8 @@
         "right": {
           "type": "slider_block",
           "cols": {
-            "num": "col-4",
-            "push_left": "off-4"
+            "num": "col-4_mi-10",
+            "push_left": "off-4_sm-2_mi-1"
           },
           "cards": [
             {
@@ -190,13 +197,14 @@
         "props": {
           "tabs": {
             "cols": {
-              "num": "col-3"
+              "num": "col-3_sm-10_ti-12",
+              "push_left": "off-0_sm-1_ti-0"
             }
           },
           "card": {
             "cols": {
-              "num": "col-7",
-              "push_left": "off-1"
+              "num": "col-7_md-6_sm-10_mi-10",
+              "push_left": "off-1_md-2_sm-1_mi-2"
             }
           },
           "slides": [
@@ -225,7 +233,7 @@
         "left": {
           "type": "video_block",
           "cols": {
-            "num": "col-6",
+            "num": "col-6_sm-10",
             "push_left": "off-1"
           },
           "preview_image": "/images/page-grants/grants-video-preview.png",
@@ -235,7 +243,7 @@
           "type": "text_block",
           "layout": "small",
           "cols": {
-            "num": "col-4",
+            "num": "col-4_sm-10",
             "push_left": "off-1"
           },
           "label": "What We Do",
@@ -261,8 +269,8 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-3",
-            "push_left": "off-1"
+            "num": "col-3_sm-10",
+            "push_left": "off-0_sm-1"
           },
           "heading": "Learn how to get involved in the Filecoin Community",
           "description": "The Filecoin community includes thousands of developers, technologists, users, and enthusiasts all over the world.",
@@ -279,8 +287,8 @@
         "right": {
           "type": "slider_block",
           "cols": {
-            "num": "col-6",
-            "push_left": "off-2"
+            "num": "col-6_sm-10_mi-8_ti-10",
+            "push_left": "off-3_sm-2_mi-3_ti-2"
           },
           "cards": [
             {
@@ -331,7 +339,9 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": [8, 6],
-                "offset": 1.375,
+                "offset": {
+                  "mini": 1.375
+                },
                 "reverse": true,
                 "border-radius": 5
               }
@@ -366,7 +376,8 @@
             "cards": [
               {
                 "type": "D",
-                "img": "/images/events/center-for-democracy-and-technologys-2021-tech-prom.png",
+                "img": "/images/events/2021-tech-prom.png",
+                "img_type": "background_image",
                 "date": "October 20, 2021",
                 "title": "Center for Democracy and Technology’s 2021 Tech Prom",
                 "cta": {

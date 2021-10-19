@@ -1,5 +1,5 @@
 <template>
-  <div :class="['block text-block', `layout__${layout}`]">
+  <div :class="['block text-block', `layout__${layout}`, `theme__${theme}`]">
 
     <div v-if="label" class="label">
       <span
@@ -68,8 +68,16 @@ export default {
     layout () {
       return this.block.layout
     },
+    theme () {
+      return this.block.theme || 'dark'
+    },
+    buttonTheme () {
+      return this.block.button_theme
+    },
     label () {
-      return this.block.label
+      const label = this.block.label
+      if (typeof label === 'object') { label.theme = this.buttonTheme }
+      return label
     },
     heading () {
       return this.block.heading
@@ -91,7 +99,8 @@ export default {
       return this.block.description
     },
     ctas () {
-      return this.block.ctas
+      if (!this.block.ctas) { return undefined }
+      return this.block.ctas.map(cta => ({ ...cta, theme: this.buttonTheme || cta.theme }))
     }
   }
 }
@@ -99,6 +108,18 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
+.text-block {
+  &.theme__light {
+    color: white;
+    ::v-deep .subheading {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+// ///////////////////////////////////////////////////////////////////// Layouts
 .layout__compact {
   .description {
     @include fontSize_Large;
@@ -109,6 +130,7 @@ export default {
   }
 }
 
+// ///////////////////////////////////////////////////////////////////// Content
 .label {
   @include label;
   margin-bottom: 0.5rem;
