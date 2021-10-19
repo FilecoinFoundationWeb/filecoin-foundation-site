@@ -203,6 +203,9 @@ export default {
   &:hover {
     .image {
       transform: translateY(-100px);
+      @include tiny {
+        transform: translateY(-70px);
+      }
     }
   }
   .title {
@@ -216,6 +219,9 @@ export default {
     @include fontWeight_SemiBold;
     color: $kleinBlue;
     text-align: center;
+    @include tiny {
+      @include fontSize_Small;
+    }
   }
   .description {
     position: absolute;
