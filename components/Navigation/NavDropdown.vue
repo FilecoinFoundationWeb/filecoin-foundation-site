@@ -1,0 +1,371 @@
+<template>
+  <div :class="rootLinkClassList">
+
+    <component
+      :is="toggleFirstOnHover ? 'nuxt-link' : 'div'"
+      :to="link.disabled ? '' : link.url"
+      :disabled="link.disabled"
+      :class="['nav-link', (toggleFirstOnHover ? 'top-level' : 'click-toggle')]"
+      @click="toggleDropDown(!toggleFirstOnHover)">
+      <span class="text">{{ link.text }}</span>
+      <div
+        v-if="!toggleFirstOnHover"
+        :class="['chevron', dropdownOpen ? 'up' : 'down']"></div>
+    </component>
+
+    <div
+      v-if="link.hasOwnProperty('links')"
+      ref="firstPane"
+      :class="firstLevelClassList"
+      :style="`left: ${panelLeft};`">
+
+      <div
+        v-if="link.description"
+        class="extras"
+        v-html="link.description">
+      </div>
+
+      <ul v-if="Array.isArray(link.links)">
+        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
+          <div class="first-level-wrapper">
+
+            <component
+              :is="sublink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+              :to="sublink.disabled ? '' : sublink.url"
+              :disabled="sublink.disabled"
+              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+              {{ sublink.text }}
+            </component>
+
+            <div
+              v-if="sublink.hasOwnProperty('links') && nestedDisplay"
+              ref="secondPane"
+              :class="[listDisplayType, { 'scroll': scroll }]"
+              :style="`max-height: ${maxHeight}; left: ${popoutLeft};`">
+              <ul v-if="Array.isArray(sublink.links)" :style="`min-width: ${minWidth};`">
+                <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
+
+                  <component
+                    :is="poplink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+                    :disabled="poplink.disabled"
+                    class="nav-link second-level">
+                    {{ poplink.label }}
+                  </component>
+
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</template>
+
+<script>
+// =================================================================== Functions
+const detectPanelOutsideViewport = (instance) => {
+  const rect = instance.$refs.firstPane.getBoundingClientRect()
+  if (rect.left + rect.width > window.innerWidth) {
+    instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
+  } else if (instance.panelLeft !== '50%') {
+    instance.panelLeft = '50%'
+  }
+}
+
+const detectPopoutOutsideViewport = (instance) => {
+  if (instance.$refs.secondPane.length) {
+    const rect = instance.$refs.secondPane[0].getBoundingClientRect()
+    if (rect.left + rect.width > window.innerWidth) {
+      const x = instance.scroll ? '-1rem' : '0rem' // this will account for the width of the scroll bar
+      instance.popoutLeft = 'calc(' + x + ' - 100%)'
+    } else if (instance.popoutLeft !== '100%') {
+      instance.popoutLeft = '100%'
+    }
+  }
+}
+
+// ===================================================================== Exports
+export default {
+  name: 'NavDropdown',
+
+  props: {
+    link: {
+      type: Object,
+      required: false,
+      default: () => {}
+    },
+    scroll: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+    panel: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    behavior: {
+      type: String,
+      required: false,
+      default: 'hover'
+    },
+    nestedDisplay: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
+  },
+
+  data () {
+    return {
+      maxHeight: 'unset',
+      minWidth: 'unset',
+      panelLeft: '50%',
+      popoutLeft: '100%',
+      dropdownOpen: false,
+      resize: false
+    }
+  },
+
+  computed: {
+    listDisplayType () {
+      return this.panel ? 'nav-panel' : 'nav-popout'
+    },
+    rootLinkClassList () {
+      const mouseBehavior = this.toggleFirstOnHover ? 'hover' : 'active'
+      const hasSubLinks = this.link.hasOwnProperty('links') ? 'has-nested-links' : ''
+      const dropdownState = this.dropdownOpen ? 'open' : ''
+      return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
+    },
+    firstLevelClassList () {
+      return this.nestedDisplay ? 'nav-dropdown dropdown-background' : 'nav-panel'
+    },
+    toggleFirstOnHover () {
+      if (this.link.hasOwnProperty('links')) {
+        return this.behavior !== 'active'
+      }
+      return true
+    }
+  },
+
+  mounted () {
+    this.$nextTick(() => {
+      if (this.$refs.popouts) {
+        if (this.panel) {
+          const widths = []
+          this.$refs.popouts.forEach((item) => {
+            widths.push(item.firstChild.getBoundingClientRect().width)
+          })
+          this.minWidth = 3 * Math.max(...widths) + 'px'
+        } else if (this.scroll) {
+          this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
+        }
+      }
+      if (this.panel) {
+        if (this.$refs.firstPane) {
+          detectPanelOutsideViewport(this)
+          this.resize = () => { detectPanelOutsideViewport(this) }
+          window.addEventListener('resize', this.resize)
+        }
+      } else {
+        if (this.$refs.secondPane) {
+          detectPopoutOutsideViewport(this)
+          this.resize = () => { detectPopoutOutsideViewport(this) }
+          window.addEventListener('resize', this.resize)
+        }
+      }
+    })
+  },
+
+  beforeDestroy () {
+    if (this.resize) { window.removeEventListener('resize', this.resize) }
+  },
+
+  methods: {
+    toggleDropDown (val) {
+      if (val) { this.dropdownOpen = !this.dropdownOpen }
+    }
+  }
+}
+
+</script>
+
+<style lang="scss" scoped>
+
+.nav-hover-wrapper,
+.nav-active-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+}
+
+.nav-hover-wrapper {
+  &:hover .nav-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0rem);
+    z-index: 0;
+    transition: 250ms ease-in;
+  }
+}
+
+.nav-active-wrapper {
+  &.open .nav-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+    z-index: 0;
+    transition: 250ms ease-in;
+  }
+  .click-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chevron {
+    margin-left: 0.75rem;
+    border-color: white;
+    opacity: 0.8;
+  }
+}
+
+.first-level-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+  &:hover .nav-popout {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+    z-index: 0;
+    transition: 350ms ease-in-out;
+  }
+}
+
+ul {
+  padding: 1.0rem;
+}
+.ul-second {
+  padding: 0 1.0rem;
+}
+li {
+  list-style-type: none;
+  &:last-child {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.nav-dropdown,
+.nav-popout {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 1rem);
+  z-index: -1;
+  transition: 250ms ease-out;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  top: 3.5rem;
+  .extras {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.nav-popout {
+  top: -1rem;
+  & li {
+    padding: 0.5rem 0;
+    &:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+  &.scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .inner-wrap {
+    margin: 1.0rem 1.0rem 1.0rem 0;
+  }
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.nav-item-wrapper {
+  @include small {
+    display: block;
+    &.has-nested-links {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.75rem;
+      .top-level {
+        width: fit-content;
+      }
+    }
+  }
+  .nav-panel {
+    display: inline-block;
+    ul {
+      display: flex;
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include mini {
+        margin: 0;
+      }
+    }
+    li {
+      display: inline-block;
+      margin: 0.25rem 0;
+      width: 50%;
+      @include small {
+        margin: 0;
+        width: 33%;
+      }
+      @include mini {
+        margin: 0;
+        width: 50%;
+      }
+    }
+  }
+}
+
+.nav-link {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+$scrollbarBG: transparent;
+$thumbBG: rgba(255, 255, 255, 0.4);
+div::-webkit-scrollbar {
+  width: 8px;
+}
+div {
+  scrollbar-width: thin;
+  scrollbar-color: $thumbBG $scrollbarBG;
+}
+div::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+div::-webkit-scrollbar-thumb {
+  background-color: $thumbBG;
+  border-radius: 6px;
+  border: 3px solid $scrollbarBG;
+}
+
+</style>
