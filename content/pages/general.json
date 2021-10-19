@@ -56,15 +56,19 @@
       "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
       "links": [
         {
+          "url": "/",
           "text": "Board of Directors"
         },
         {
+          "url": "/",
           "text": "Advisors"
         },
         {
+          "url": "/",
           "text": "Community"
         },
         {
+          "url": "/",
           "text": "Blog"
         }
       ]
@@ -78,15 +82,19 @@
       "description": "<img src='icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
+          "url": "/",
           "text": "Improving Filecoin"
         },
         {
+          "url": "/",
           "text": "Security"
         },
         {
+          "url": "/",
           "text": "Filecoin Plus"
         },
         {
+          "url": "/",
           "text": "Get Involved"
         }
       ]
@@ -100,9 +108,13 @@
       "description": "<img src='icons/multi-circle.png' class='image'></img><span class='title'>Ecosystem</span><p class='text'>We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.</p>",
       "links": [
         {
+          "action": "nuxt-link",
+          "url": "/",
           "text": "Ecosystem Advisors"
         },
         {
+          "action": "nuxt-link",
+          "url": "/",
           "text": "Resources"
         }
       ]
@@ -116,12 +128,15 @@
       "description": "<img src='icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
       "links": [
         {
+          "url": "/",
           "text": "Developer Grants"
         },
         {
+          "url": "/",
           "text": "Request for Proposals"
         },
         {
+          "url": "/",
           "text": "Community Grants"
         }
       ]
@@ -135,15 +150,19 @@
       "description": "<img src='icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
+          "url": "/",
           "text": "Careers"
         },
         {
+          "url": "/",
           "text": "Resources"
         },
         {
+          "url": "/",
           "text": "Contact Us"
         }
-      ]
+      ],
+      "sidebar": true
     }
   ],
   "footer": {

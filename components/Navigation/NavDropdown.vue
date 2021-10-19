@@ -36,7 +36,7 @@
           <div class="first-level-wrapper">
 
             <component
-              :is="sublink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+              :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
               :to="sublink.disabled ? '' : sublink.url"
               :disabled="sublink.disabled"
               :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
