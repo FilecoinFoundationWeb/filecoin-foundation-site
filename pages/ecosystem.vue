@@ -153,9 +153,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     top: 0.5rem;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: calc(100% + 4rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 14rem;
+    border-radius: 5rem 0 0 13rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {

@@ -155,9 +155,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     top: 0;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 3.5rem);
+    height: calc(100% + 4rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 14rem;
+    border-radius: 5rem 0 0 13rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
@@ -346,7 +346,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #team_intro {
+::v-deep #grants {
   padding-bottom: 7.5rem;
   @include small {
     padding-top: 3rem;
@@ -373,10 +373,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     &.right {
       padding: 7rem 0;
       @include small {
-        margin-top: 5rem;
+        margin-top: 7rem;
         padding-bottom: 3rem;
       }
       @include mini {
+        margin-top: 5rem;
         padding-bottom: 5rem;
       }
       @include tiny {

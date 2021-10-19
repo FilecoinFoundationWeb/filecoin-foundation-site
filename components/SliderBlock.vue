@@ -47,14 +47,14 @@ export default {
 }
 
 .card {
-  width: calc(50% - 3rem);
+  width: calc(50% - 1.5rem);
   margin-bottom: 3rem;
   @include mini {
     width: 100%;
     margin-bottom: 2rem;
   }
   &:nth-child(odd) {
-    margin-right: 6rem;
+    margin-right: 3rem;
     @include mini {
       margin-right: 0;
     }
