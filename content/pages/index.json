@@ -394,7 +394,8 @@
             "cards": [
               {
                 "type": "D",
-                "img": "/images/events/center-for-democracy-and-technologys-2021-tech-prom.png",
+                "img": "/images/events/2021-tech-prom.png",
+                "img_type": "background_image",
                 "date": "October 20, 2021",
                 "title": "Center for Democracy and Technology’s 2021 Tech Prom",
                 "cta": {
