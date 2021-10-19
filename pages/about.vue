@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-about-background-layers"
         :layers-array="[3, 4, 5, 6]"
-        :offset="{ mini: 0.25, small: 1.375 }" />
+        :offset="pageBackgroundLayersOffset" />
 
     </div>
 
@@ -41,6 +41,15 @@ export default {
     Modal,
     PageSection,
     BackgroundLayers
+  },
+
+  data () {
+    return {
+      pageBackgroundLayersOffset: {
+        medium: 1,
+        mini: 0.25
+      }
+    }
   },
 
   async fetch ({ store }) {
@@ -158,6 +167,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include medium {
       left: $backgroundLayers__Left__Medium;
       border-bottom-left-radius: 12rem;
+      height: calc(100% + 3.5rem);
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
@@ -166,17 +176,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include tiny {
       border-bottom-left-radius: 5rem;
     }
-  }
-}
-
-::v-deep .heading {
-  @include tiny {
-    @include fontSize_ExtraExtraLarge;
-  }
-}
-::v-deep .subheading {
-  @include tiny {
-    @include fontSize_Medium;
   }
 }
 
@@ -205,9 +204,15 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 ::v-deep #hero {
   padding: 0;
   margin-bottom: 9.875rem;
+  @include small {
+    margin-bottom: 3rem;
+  }
   @include mini {
     margin-top: 3rem;
     margin-bottom: 0;
+  }
+  @include tiny {
+    margin-top: 0;
   }
   .video-block {
     height: 100%;
@@ -219,8 +224,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #intro_1 {
   margin-bottom: 7.5rem;
+  @include small {
+    margin-bottom: 0rem;
+  }
   @include mini {
-    margin-bottom: 0;
     padding-bottom: 0;
   }
   .blocks {
@@ -255,14 +262,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #cta_1 {
+  @include small {
+    padding-bottom: 3rem;
+  }
   .blocks {
     &.right {
       margin-top: 1rem;
-    }
-  }
-  .heading {
-    @include mini  {
-      @include fontSize_ExtraLarge;
     }
   }
   .subheading {
@@ -316,12 +321,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #cta_2 {
   @include small {
-    padding-top: 0;
-  }
-  .heading {
-    @include mini {
-      @include fontSize_ExtraLarge;
-    }
+    padding: 0;
   }
   [class~="grid"], [class*="grid-"], [class*="grid_"] {
     @include small {
@@ -330,26 +330,27 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   .image {
     @include small {
-      width: unset;
-      margin-bottom: 1rem;
+      margin-bottom: 4rem;
+    }
+    @include mini {
+      margin-bottom: 3rem;
     }
     @include tiny {
-      width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 }
 
 ::v-deep #panel_1 {
   padding-bottom: 0;
-  .heading {
-    width: 50%;
-  }
 }
 
 ::v-deep #panel_1_cards {
   padding-top: 0;
   padding-bottom: 10rem;
+  @include small {
+    padding-bottom: 5rem;
+  }
   .slider-block {
     margin-top: 6.75rem;
   }
@@ -369,11 +370,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #explore_1 {
-  .heading {
-    @include mini {
-      @include fontSize_ExtraLarge;
-    }
-  }
   .blocks {
     &.left {
       @include small {
@@ -384,7 +380,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       }
     }
     &.right {
-      padding: 7rem 0;
+      padding-top: 7rem;
+      padding-bottom: 5rem;
+      @include small {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
     }
   }
   .background-layers {
