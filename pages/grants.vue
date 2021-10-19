@@ -88,10 +88,20 @@ export default {
 #section-2 {
   padding-top: 15rem;
   margin-bottom: 1.5rem;
+  @include mini {
+    padding-top: 5.5rem;
+  }
 }
 
 #section-3 {
   margin-bottom: 7.625rem;
+  @include mini {
+    margin-bottom: 4.75rem;
+  }
+}
+
+#section-6 {
+  padding-top: 6rem;
 }
 
 .stripes {
@@ -107,6 +117,12 @@ export default {
     width: 3.125rem;
     height: 100%;
     background: linear-gradient(180deg, $deepCove 0%, $kleinBlue 32%, $azureRadiance 61%, $hawkesBlue 100%);
+    @include small {
+      background: linear-gradient(180deg, $deepCove 0%, $kleinBlue 100%);
+    }
+    @include mini {
+      display: none;
+    }
   }
 }
 
@@ -115,6 +131,7 @@ export default {
     @include mini {
       @include fontSize_Medium;
       @include leading_Medium;
+      letter-spacing: $letterSpacing_Large;
     }
   }
 }
@@ -169,12 +186,16 @@ export default {
 
 ::v-deep #gallery-1-cards {
   padding: 4rem 0 0 0;
+  @include mini {
+    padding: 3rem 0 0 0;
+  }
   .column-content {
     &.left {
       .image {
         transform: scale(1.4) translateY(25%);
         @include small {
-          transform: scale(1) translateY(0);
+          transform: scale(1.3) translateY(0);
+          margin-bottom: 6rem;
         }
       }
     }
@@ -193,8 +214,15 @@ export default {
     .title {
       @include fontSize_ExtraLarge;
       color: $white;
+      @include mini {
+        @include fontSize_Large;
+        margin-bottom: 0.75rem;
+      }
     }
     .description {
+      @include mini {
+        margin-bottom: 2rem;
+      }
       .more-info {
         @include fontSize_Large;
       }
@@ -222,6 +250,9 @@ export default {
       }
       .description {
         @include fontSize_ExtraLarge;
+        @include mini {
+          @include fontSize_Large;
+        }
       }
     }
   }
@@ -246,7 +277,7 @@ export default {
     &.right {
       .slider-block {
         margin-top: 17.125rem;
-        @include tiny {
+        @include mini {
           margin-top: 0;
         }
       }
@@ -305,7 +336,15 @@ export default {
 }
 
 ::v-deep #explore-panel {
+  @include mini {
+    padding-top: 0;
+  }
   .column-content {
+    &.left {
+      @include small {
+        padding-bottom: 5rem;
+      }
+    }
     &.right {
       padding: 5.375rem 0 1.375rem 0;
     }
