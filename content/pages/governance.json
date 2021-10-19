@@ -394,16 +394,15 @@
             "cards": [
               {
                 "type": "D",
-                "img": "/images/events/2021-tech-prom.png",
-                "img_type": "background_image",
-                "date": "October 20, 2021",
-                "title": "Center for Democracy and Technology’s 2021 Tech Prom",
+                "date": "October 18, 2021",
+                "title": "Web3 Recruiting Happy Hour",
                 "cta": {
                   "type": "B",
                   "action": "a",
                   "icon": "info",
                   "text": "More info",
-                  "url": "https://cdt.org/event/2021-tech-prom/"
+                  "url": "https://www.eventbrite.com/e/web3-recruiting-happy-hour-tickets-180240844217",
+                  "target": "_blank"
                 }
               },
               {
@@ -415,7 +414,8 @@
                   "action": "a",
                   "icon": "info",
                   "text": "More info",
-                  "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
+                  "target": "_blank"
                 }
               }
             ]
