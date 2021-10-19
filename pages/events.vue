@@ -46,6 +46,7 @@ import EventListData from '@/content/data/event-list.json'
 import Button from '@/components/Button'
 import CardListBlock from '@/components/CardListBlock'
 
+// =================================================================== Functions
 const sortEventsByDate = (events) => {
   return events.sort((current, next) => {
     let currentDate = current.date

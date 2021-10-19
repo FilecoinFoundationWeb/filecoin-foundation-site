@@ -3,6 +3,7 @@
     :is="tag"
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
+    :target="target"
     :class="['button', `type__${type}`, `action__${action}`, `theme__${theme}`, { selected }]"
     @click="openModal">
 
@@ -85,6 +86,9 @@ export default {
         default : tag = 'button'; break
       }
       return tag
+    },
+    target () {
+      return this.button.target
     },
     icon () {
       return this.button.icon

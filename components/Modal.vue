@@ -2,12 +2,13 @@
   <div
     id="modal"
     :class="{ active: modal }"
-    @click="closeModal()">
+    @click="closeModal"
+    @keyup.esc="closeModal">
 
     <section id="modal-video">
 
       <div class="toolbar">
-        <button class="close-button" @click="closeModal()">
+        <button class="close-button" @click="closeModal">
           Close
         </button>
       </div>
@@ -52,6 +53,15 @@ export default {
     url () {
       return this.modal.url
     }
+  },
+
+  mounted () {
+    window.addEventListener('keydown', (e) => {
+      const key = e.key || e.keyCode
+      if (key === 'Escape' || key === 'Esc' || key === 27) {
+        this.closeModal()
+      }
+    })
   },
 
   methods: {
