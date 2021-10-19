@@ -153,33 +153,60 @@ export default {
 
 // ///////////////////////////////////////////////////////////////// Events List
 ::v-deep .card-list-block {
-  .card-column:first-child .card {
-    .image {
-      height: 20rem;
-      margin-bottom: 4rem;
-    }
-    .content {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      height: calc(100% - 20rem - 4rem);
-    }
-    .panel-left,
-    .panel-right {
-      width: 50%;
-    }
-    .panel-left {
-      padding-right: 2rem;
-      .description {
-        display: none;
+  .card-column {
+    &:first-child {
+      .card {
+        background-color: $denim;
+        .image {
+          height: 20rem;
+          margin-bottom: 4rem;
+        }
+        .content {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          height: calc(100% - 20rem - 4rem);
+        }
+        .panel-left,
+        .panel-right {
+          width: 50%;
+        }
+        .panel-left {
+          padding-right: 2rem;
+          .description {
+            display: none;
+          }
+        }
+        .panel-right {
+          display: block;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
       }
     }
-    .panel-right {
-      display: block;
+    &:nth-child(2),
+    &:nth-child(n + 3):nth-child(3n + 2) {
+      .card {
+        position: relative;
+        transform: translateY(3rem);
+      }
     }
-    .title {
-      -webkit-line-clamp: 2;
+    &:nth-child(n + 3):nth-child(2n + 2) {
+      .card {
+        background-color: $kleinBlue;
+      }
     }
+    &:nth-child(2),
+    &:nth-child(n + 3):nth-child(6n) {
+      .card {
+        background-color: $jordyBlue;
+      }
+    }
+  }
+  .button-row {
+    justify-content: center;
+    margin-top: 5rem;
   }
 }
 </style>

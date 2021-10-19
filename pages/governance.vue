@@ -687,5 +687,4 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     }
   }
 }
-
 </style>
