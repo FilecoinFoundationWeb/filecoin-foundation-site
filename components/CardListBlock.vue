@@ -20,9 +20,10 @@
 
     </div>
 
-    <div class="button-row">
+    <div
+      v-if="showLoadMoreButton"
+      class="button-row">
       <Button
-        v-if="showLoadMoreButton"
         :button="loadMoreButton"
         @buttonClicked="loadMoreCards" />
     </div>

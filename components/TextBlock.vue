@@ -71,9 +71,12 @@ export default {
     theme () {
       return this.block.theme || 'dark'
     },
+    buttonTheme () {
+      return this.block.button_theme
+    },
     label () {
       const label = this.block.label
-      if (typeof label === 'object') { label.theme = this.theme }
+      if (typeof label === 'object') { label.theme = this.buttonTheme }
       return label
     },
     heading () {
@@ -97,7 +100,7 @@ export default {
     },
     ctas () {
       if (!this.block.ctas) { return undefined }
-      return this.block.ctas.map(cta => ({ ...cta, theme: this.theme }))
+      return this.block.ctas.map(cta => ({ ...cta, theme: this.buttonTheme || cta.theme }))
     }
   }
 }

@@ -328,6 +328,9 @@ export default {
     margin-bottom: 4rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    @include mini {
+      margin-bottom: 2rem;
+    }
   }
   .content {
     display: flex;
@@ -336,6 +339,9 @@ export default {
     height: calc(100% - 16.25rem - 4rem);
     padding: 2.5rem;
     padding-top: 0;
+    @include mini {
+      height: calc(100% - 16.25rem - 2rem);
+    }
   }
   .panel-right {
     display: none;

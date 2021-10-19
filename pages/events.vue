@@ -18,14 +18,14 @@
     </section>
 
     <section id="events-list">
-      <div class="grid">
+      <div class="grid-noGutter">
         <div class="col">
           <div class="card-list">
 
             <CardListBlock
               :block="block"
               force-image-type="background_image"
-              first-column-num="col-8" />
+              first-column-num="col-8_sm-12" />
 
           </div>
         </div>
@@ -132,12 +132,19 @@ export default {
 .page-events {
   color: white;
   margin-bottom: 10rem;
+  @include mini {
+    margin-bottom: 5rem;
+  }
 }
 
 // ////////////////////////////////////////////////////////////////// Navigation
 #events-navigation {
   margin-top: 7rem;
   margin-bottom: 5rem;
+  @include mini {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .navigation {
@@ -148,6 +155,15 @@ export default {
 .nav-link {
   &:not(:last-child) {
     margin-right: 4rem;
+    @include small {
+      margin-right: 3rem;
+    }
+    @include mini {
+      margin-right: 2rem;
+    }
+    @include tiny {
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -160,16 +176,27 @@ export default {
         .image {
           height: 20rem;
           margin-bottom: 4rem;
+          @include mini {
+            height: 16.25rem;
+            margin-bottom: 2rem;
+          }
         }
         .content {
           display: flex;
           flex-direction: row;
           align-items: flex-end;
           height: calc(100% - 20rem - 4rem);
+          @include mini {
+            flex-direction: column;
+            height: calc(100% - 16.25rem - 2rem);
+          }
         }
         .panel-left,
         .panel-right {
           width: 50%;
+          @include mini {
+            width: 100%;
+          }
         }
         .panel-left {
           padding-right: 2rem;
@@ -179,6 +206,9 @@ export default {
         }
         .panel-right {
           display: block;
+          @include mini {
+            margin-top: 1rem;
+          }
         }
         .title {
           -webkit-line-clamp: 2;
@@ -190,6 +220,9 @@ export default {
       .card {
         position: relative;
         transform: translateY(3rem);
+        @include containerMaxMQ {
+          transform: translateY(0rem);
+        }
       }
     }
     &:nth-child(n + 3):nth-child(2n + 2) {
@@ -207,6 +240,9 @@ export default {
   .button-row {
     justify-content: center;
     margin-top: 5rem;
+    @include mini {
+      margin-top: 3rem;
+    }
   }
 }
 </style>
