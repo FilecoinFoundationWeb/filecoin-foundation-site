@@ -27,7 +27,7 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import IndexPageData from '@/content/pages/index.json'
-import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
+import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -54,7 +54,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'index', data: IndexPageData })
-    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiverDeeperData })
+    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
   computed: {
@@ -100,7 +100,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: 100%;
-    background-color: rgb(239, 246, 252);
+    background-color: $polar;
     border-radius: 14rem 0 0 5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
@@ -120,7 +120,7 @@ $backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
     left: $backgroundLayers__Left;
     width: calc(100% + 3.5rem);
     height: calc(100% + 3.5rem);
-    background-color: rgb(239, 246, 252);
+    background-color: $polar;
     border-radius: 5rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;

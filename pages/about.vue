@@ -1,5 +1,7 @@
 <template>
   <div class="page page-about">
+    
+    <Modal />
 
     <div class="main-content">
 
@@ -25,8 +27,9 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import AboutPageData from '@/content/pages/about.json'
-import SectionDiverDeeperData from '@/content/sections/dive-deeper.json'
+import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
+import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
@@ -35,6 +38,7 @@ export default {
   name: 'PageIndex',
 
   components: {
+    Modal,
     PageSection,
     BackgroundLayers
   },
@@ -42,7 +46,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'about', data: AboutPageData })
-    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiverDeeperData })
+    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
   computed: {
