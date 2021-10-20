@@ -75,6 +75,10 @@ export default {
       content.splice(len - 1, 1, replace)
       return content
     }
+  },
+
+  mounted () {
+    console.log(this.$CompileSeo(this.$GetSeo(this.tag)))
   }
 }
 </script>
