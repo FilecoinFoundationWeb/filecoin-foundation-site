@@ -73,10 +73,6 @@ export default {
       content.splice(len - 1, 1, replace)
       return content
     }
-  },
-
-  mounted () {
-    console.log(this.sections)
   }
 }
 </script>
