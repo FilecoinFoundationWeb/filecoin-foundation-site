@@ -48,8 +48,16 @@
                     <div class="accordion-content-wrapper">
                       <div v-html="link.description"></div>
                       <ul v-if="Array.isArray(link.links)">
-                        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-                          {{ sublink.text }}
+                        <li
+                          v-for="sublink in link.links"
+                          :key="`${link.text}-${sublink.text}`">
+                          <component
+                            :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
+                            :to="sublink.disabled ? '' : sublink.url"
+                            :disabled="sublink.disabled"
+                            :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                            {{ sublink.text }}
+                          </component>
                         </li>
                       </ul>
                     </div>
@@ -136,6 +144,16 @@ export default {
     navItemsClasses () {
       const classes = this.mobilePanelOpen ? 'mobile-panel open' : 'mobile-planel closed'
       return this.mobile ? classes : 'navigation'
+    }
+  },
+
+  watch: {
+    '$route' (newRoute, oldRoute) {
+      const newHash = newRoute.hash
+      const oldHash = oldRoute.hash
+      if (newHash !== oldHash) {
+        this.toggleMobileNav()
+      }
     }
   },
 
