@@ -29,7 +29,7 @@
         "id": "mobile_image_banner",
         "left": {
           "type": "image_block",
-          "src": "/images/Governance/hero-image@2x.png",
+          "src": "/images/governance/hero-image@2x.png",
           "cols": {
             "num": "col-4_mi-11",
             "push_left": "off-3_mi-1"
@@ -49,7 +49,7 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/images/Governance/hero-image@2x.png",
+          "src": "/images/governance/hero-image@2x.png",
           "cols": {
             "num": "col-4_md-5 mi-hidden",
             "push_left": "off-1_sm-1"
@@ -210,7 +210,7 @@
         "id": "panel-1-banner-image",
         "left": {
           "type": "image_block",
-          "src": "images/Governance/group@2x.png",
+          "src": "images/governance/group@2x.png",
           "cols": {
             "num": "col-8_mi-11",
             "push_left": "off-4_mi-1"
@@ -408,7 +408,7 @@
         "id": "panel-4-banner-image",
         "left": {
           "type": "image_block",
-          "src": "images/Governance/panel-4-banner.png",
+          "src": "images/governance/panel-4-banner.png",
           "cols": {
             "num": "col-8_mi-11",
             "push_left": "off-4_mi-1"
