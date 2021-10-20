@@ -157,9 +157,8 @@
           "ctas": [
             {
               "type": "A",
-              "action": "nuxt-link",
               "text": "Join the Community",
-              "url": "/get-involved"
+              "url": "//filecoin.io/slack"
             }
           ]
         },

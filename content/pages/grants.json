@@ -64,7 +64,7 @@
             "push_left": "off-0_sm-1"
           },
           "heading": "Developer Grants",
-          "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem."
+          "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web."
         }
       },
       {
@@ -89,13 +89,13 @@
               "img": "icons/money-bag.png",
               "img_size": "full",
               "title": "Open Grants",
-              "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants of up to $30,000 USD are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
+              "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
             },
             {
               "type": "A",
               "img": "icons/pencil.png",
               "img_size": "full",
-              "title": "Request for Proposal",
+              "title": "Requests for Proposal",
               "description": "These grants generally have clearly scoped deliverables, milestones, and funding limits. While there is some flexibility in RFP deliverables, we expect teams will deliver what is in scope in the RFP."
             },
             {
@@ -124,7 +124,7 @@
             "push_left": "off-2_mi-2"
           },
           "label": "Our Mission",
-          "description": "The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -165,21 +165,21 @@
               "img": "icons/arrow-up.png",
               "img_size": "full",
               "title": "Accelerate the adoption of open, decentralized technologies",
-              "description": "<ul><li>Lorem ipsum dolor sit amet,</li><li>Adipiscing elit, sed do eiusmod</li><li>Incididunt ut labore et dolore magna</li></ul>"
+              "description": ""
             },
             {
               "type": "A",
               "img": "icons/multi-circle.png",
               "img_size": "full",
               "title": "Build communities that are mutually supportive and self-sustaining",
-              "description": "<ul><li>Lorem ipsum dolor sit amet,</li><li>Adipiscing elit, sed do eiusmod</li><li>Incididunt ut labore et dolore magna</li></ul>"
+              "description": ""
             },
             {
               "type": "A",
               "img": "icons/speech-bubble.png",
               "img_size": "full",
               "title": "Communicate the benefits of decentralization and open sourcing to wider audiences",
-              "description": "<ul><li>Lorem ipsum dolor sit amet,</li><li>Adipiscing elit, sed do eiusmod</li><li>Incididunt ut labore et dolore magna</li></ul>"
+              "description": ""
             },
             {
               "type": "A",
@@ -209,19 +209,19 @@
           },
           "slides": [
             {
-              "label": "Education",
-              "icon": "icons/graduation-cap.png",
-              "description": "These projects fall into two broad categories.  The first category seeks to educate the public about how the internet works and how decentralized and open-source technologies benefit businesses, citizens, and governments.  The second category seeks to educate and support current and future developers in how to best use decentralized and open technologies."
+              "label": "Support",
+              "icon": "icons/crest.png",
+              "description": "There are stakeholders in the Filecoin ecosystem: Storage Providers, Developers, Researchers, Token Holders, Clients, Users. We want to support them all."
             },
             {
-              "label": "Research",
-              "icon": "icons/magnifying-glass.png",
-              "description": "These projects support efforts to store research data using decentralized web storage in ways that make the data easily shared and accessed. Additionally, they explore methods to improve and expand decentralized web data retrieval and storage with outputs that are freely and publicly accessible."
+              "label": "Growth",
+              "icon": "icons/hands-raised.png",
+              "description": "We accelerate the growth of the Filecoin ecosystem through partnerships and collaborations."
             },
             {
-              "label": "Development",
-              "icon": "icons/beaker.png",
-              "description": "These projects drive the creation and development of technologies that will enable decentralized file storage of humanity’s most important information. They may encourage and fund the essential interoperability glue connecting elements of the decentralized web."
+              "label": "Governance",
+              "icon": "icons/multi-person.png",
+              "description": "As an open-source project, it is vital that Filecoin has transparent, community-driven governance. The Foundation facilitates the governance process, including the Filecoin Improvement Proposals process."
             }
           ]
         }
@@ -237,7 +237,7 @@
             "push_left": "off-1"
           },
           "preview_image": "/images/page-grants/grants-video-preview.png",
-          "url": "https://youtu.be/6OY4xAs3Grg"
+          "url": "https://www.youtube.com/watch?v=-kxNpRiEd_c"
         },
         "right": {
           "type": "text_block",
@@ -253,9 +253,10 @@
             {
               "type": "A",
               "theme": "dark",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Learn More",
-              "url": "/get-involved"
+              "target": "_blank",
+              "url": "//docs.filecoin.io/store/filecoin-plus"
             }
           ]
         }
