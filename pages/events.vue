@@ -68,6 +68,7 @@ export default {
 
   data () {
     return {
+      tag: 'events',
       selected: 'event'
     }
   },
@@ -78,13 +79,14 @@ export default {
     await store.dispatch('global/getBaseData', { key: 'event_list', data: EventListData })
   },
 
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    },
     pageContent () {
       return this.siteContent.events.page_content
     },

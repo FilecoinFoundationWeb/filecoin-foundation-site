@@ -9,7 +9,11 @@ export default {
   // ---------------------------------------------------------- [Runtime] Public
   publicRuntimeConfig: {
     nodeEnv: process.env.NODE_ENV,
-    serverEnv: process.env.SERVER_ENV
+    serverEnv: process.env.SERVER_ENV,
+    seo: {
+      siteName: 'Filecoin Foundation',
+      siteUrl: 'https://fil.org'
+    }
   },
   // --------------------------------------------------------- [Runtime] Private
   privateRuntimeConfig: {},
@@ -97,7 +101,9 @@ export default {
   axios: {},
   // /////////////////////////////////// Plugins to load before mounting the App
   // ---------------------------------------------------------------------------
-  plugins: [],
+  plugins: [
+    '~/plugins/seo'
+  ],
   // /////////////////////////////////////////////////////// Router + Middleware
   // ---------------------------------------------------------------------------
   router: {},

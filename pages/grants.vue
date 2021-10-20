@@ -43,18 +43,25 @@ export default {
     PageSection
   },
 
+  data () {
+    return {
+      tag: 'grants'
+    }
+  },
+
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'grants', data: GrantsPageData })
+  },
+
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
   },
 
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    },
     sections () {
       const content = CloneDeep(this.siteContent.grants.page_content)
       return content
