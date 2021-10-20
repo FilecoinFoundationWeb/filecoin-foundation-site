@@ -90,7 +90,7 @@ export default {
 }
 
 .card {
-  width: calc(50% - 2rem);
+  width: calc(50% - 0.5rem);
   @include small {
     width: 75%;
   }

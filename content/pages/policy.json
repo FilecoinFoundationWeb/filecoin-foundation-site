@@ -1,0 +1,12 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  }
+}

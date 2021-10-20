@@ -18,7 +18,7 @@
         id="page-governance-background-layers"
         :layers-array="[6, 5, 4, 3]"
         :reverse="true"
-        :offset="{ mini: 0.25 }" />
+        :offset="pageBackgroundLayersOffset" />
 
     </div>
 
@@ -95,7 +95,11 @@ export default {
   data () {
     return {
       scroll: false,
-      resize: false
+      resize: false,
+      pageBackgroundLayersOffset: {
+        medium: 0.5,
+        mini: 0.25
+      }
     }
   },
 
@@ -134,7 +138,11 @@ export default {
 <style lang="scss" scoped>
 $backgroundLayers__Offset: 1.75rem * 5;
 $backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset});
-$backgroundLayers__Left: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
+
+$backgroundLayers__Left__Desktop: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
+$backgroundLayers__Left__Medium: 0.5rem * 5;
+$backgroundLayers__Left__Mini: 0.25rem * 5;
+
 $backgroundFill__Left: calc(50% - (#{$containerWidth} / 2) + (4 * 1.75rem));
 $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
@@ -234,13 +242,18 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-#page-governance-body-layer {
+::v-deep #page-governance-body-layer {
   position: absolute;
   top: 0;
   left: 0;
   width: calc(100% + 16rem);
   height: calc(100% + #{$backgroundLayers__Top / 2} + 1.75rem * 2);
   z-index: -11;
+  @include small {
+    .layer {
+      border-radius: 0 !important;
+    }
+  }
   @include mini {
     left: -12rem;
     width: calc(100% + 24rem);
@@ -250,11 +263,14 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 #page-governance-background-layers {
   position: absolute;
   top: 0;
-  left: $backgroundLayers__Left;
+  left: $backgroundLayers__Left__Desktop;
   width: calc(100% + 20rem);
   height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
+  @include medium {
+    left: $backgroundLayers__Left__Medium;
+  }
   @include mini {
-    left: 1.25rem;
+    left: $backgroundLayers__Left__Mini;
   }
 }
 
@@ -670,11 +686,18 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 // ----------------------------------------------------------------- [Section] 7
 ::v-deep #events-hackathons {
+  padding-top: 0;
+  @include small {
+    padding-bottom: 0;
+  }
   @include mini {
-    padding: 7rem 0 0 0;
+    padding-top: 5rem;
   }
   .events {
     margin-top: 11rem;
+    @include small {
+      margin-top: 0;
+    }
     @include mini {
       flex-direction: column;
     }

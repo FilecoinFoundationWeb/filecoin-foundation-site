@@ -49,7 +49,6 @@
             <BackgroundLayers
               v-if="backgroundlayers"
               :layers-array="[8, 6]"
-              :offset="1.375"
               :border-radius="5" />
 
           </div>

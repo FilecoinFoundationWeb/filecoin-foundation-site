@@ -160,6 +160,8 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 #site-navigation {
+  position: relative;
+  z-index: 1000;
   &.noscroll {
     @include small {
       position: fixed;
