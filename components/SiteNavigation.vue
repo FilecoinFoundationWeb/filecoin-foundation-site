@@ -51,13 +51,13 @@
                         <li
                           v-for="sublink in link.links"
                           :key="`${link.text}-${sublink.text}`">
-                          <component
-                            :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
-                            :to="sublink.disabled ? '' : sublink.url"
-                            :disabled="sublink.disabled"
+
+                          <Button
+                            :button="sublink"
                             :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
                             {{ sublink.text }}
-                          </component>
+                          </Button>
+
                         </li>
                       </ul>
                     </div>
