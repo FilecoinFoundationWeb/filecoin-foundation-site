@@ -455,7 +455,7 @@
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Attend an event",
-              "description": "Join to or watch one of Filecoin’s official events"
+              "description": "Check out past and upcoming events"
             },
             {
               "type": "A",
@@ -469,20 +469,20 @@
               "img": "/icons/speech-bubble.png",
               "img_size": "regular",
               "title": "Contribute to the Filecoin project",
-              "description": "Shape the future by contributing to Filecoin’s code, research or docs"
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs"
             },
             {
               "type": "A",
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events or the Filecoin Slack Channel"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack Channel"
             },
             {
               "type": "A",
               "img": "/icons/tool.png",
               "img_size": "regular",
-              "title": "Help mine or build with Filecoin",
+              "title": "Become a storage provider or builder",
               "description": "Dive right in and become an essential part of the ecosystem"
             },
             {
