@@ -387,28 +387,28 @@
             "cards": [
               {
                 "type": "D",
-                "date": "October 18, 2021",
-                "title": "Web3 Recruiting Happy Hour",
-                "cta": {
-                  "type": "B",
-                  "action": "a",
-                  "icon": "info",
-                  "text": "More info",
-                  "url": "https://www.eventbrite.com/e/web3-recruiting-happy-hour-tickets-180240844217",
-                  "target": "_blank"
-                }
-              },
-              {
-                "type": "D",
                 "date": "October 20, 2021",
                 "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
                 "cta": {
                   "type": "B",
                   "action": "a",
+                  "target": "_blank",
                   "icon": "info",
                   "text": "More info",
-                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
-                  "target": "_blank"
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                }
+              },
+              {
+                "type": "D",
+                "date": "October 26, 2021",
+                "title": "Filecoin Plus Community Governance Call",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
                 }
               }
             ]
