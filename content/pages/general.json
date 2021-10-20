@@ -15,35 +15,40 @@
       "action": "a",
       "target": "_blank",
       "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
-      "component": "GithubIcon"
+      "component": "GithubIcon",
+      "label": "GitHub"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.reddit.com/r/filecoin/",
-      "component": "RedditIcon"
+      "component": "RedditIcon",
+      "label": "Reddit"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://twitter.com/FilFoundation",
-      "component": "TwitterIcon"
+      "component": "TwitterIcon",
+      "label": "Twitter"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.linkedin.com/company/68020800/admin/",
-      "component": "LinkedInIcon"
+      "component": "LinkedInIcon",
+      "label": "LinkedIn"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA",
-      "component": "YoutubeIcon"
+      "component": "YoutubeIcon",
+      "label": "YouTube"
     }
   ],
   "navigation": [
@@ -52,42 +57,128 @@
       "theme": "light",
       "action": "nuxt-link",
       "url": "/about",
-      "text": "About"
+      "text": "About",
+      "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
+      "links": [
+        {
+          "url": "/",
+          "text": "Board of Directors"
+        },
+        {
+          "url": "/",
+          "text": "Advisors"
+        },
+        {
+          "url": "/",
+          "text": "Community"
+        },
+        {
+          "url": "/",
+          "text": "Blog"
+        }
+      ]
     },
     {
       "type": "C",
       "theme": "light",
       "action": "nuxt-link",
       "url": "/governance",
-      "text": "Governance"
+      "text": "Governance",
+      "description": "<img src='icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "links": [
+        {
+          "url": "/",
+          "text": "Improving Filecoin"
+        },
+        {
+          "url": "/",
+          "text": "Security"
+        },
+        {
+          "url": "/",
+          "text": "Filecoin Plus"
+        },
+        {
+          "url": "/",
+          "text": "Get Involved"
+        }
+      ]
     },
     {
       "type": "C",
       "theme": "light",
       "action": "nuxt-link",
       "url": "/ecosystem",
-      "text": "Ecosystem"
+      "text": "Ecosystem",
+      "description": "<img src='icons/multi-circle.png' class='image'></img><span class='title'>Ecosystem</span><p class='text'>We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.</p>",
+      "links": [
+        {
+          "action": "nuxt-link",
+          "url": "/",
+          "text": "Ecosystem Advisors"
+        },
+        {
+          "action": "nuxt-link",
+          "url": "/",
+          "text": "Resources"
+        }
+      ]
     },
     {
       "type": "C",
       "theme": "light",
       "action": "nuxt-link",
       "url": "/grants",
-      "text": "Grants"
+      "text": "Grants",
+      "description": "<img src='icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
+      "links": [
+        {
+          "url": "/",
+          "text": "Developer Grants"
+        },
+        {
+          "url": "/",
+          "text": "Request for Proposals"
+        },
+        {
+          "url": "/",
+          "text": "Community Grants"
+        }
+      ]
     },
     {
       "type": "C",
       "theme": "light",
       "action": "nuxt-link",
       "url": "/get-involved",
-      "text": "Get Involved"
+      "text": "Get Involved",
+      "description": "<img src='icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "links": [
+        {
+          "url": "/",
+          "text": "Careers"
+        },
+        {
+          "url": "/",
+          "text": "Resources"
+        },
+        {
+          "url": "/",
+          "text": "Contact Us"
+        },
+        {
+          "url": "/events",
+          "text": "Events"
+        }
+      ],
+      "sidebar": true
     }
   ],
   "footer": {
     "text": [
       "Contact Us",
       "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
-      "For more information on Dev Grants, <a href='mailto:devgrants@fil.org'>email us</a>."
+      "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
     ],
     "links": [
       {

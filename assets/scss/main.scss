@@ -45,13 +45,16 @@ html, body {
   }
 }
 
-a, button {
+a, button, ul {
   background-color: transparent;
   text-decoration: none;
   color: inherit;
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+a, button {
   cursor: pointer;
 }
 

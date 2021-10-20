@@ -18,7 +18,7 @@ Website for the Filecoin Foundation
       "push_left": "off-2"
     },
     "preview_image": "/images/placeholder-image.png",
-    "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+    "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
   },
   "right": {
     "type": "text_block",
@@ -33,7 +33,7 @@ Website for the Filecoin Foundation
       "action": "video",
       "icon": "play",
       "text": "Watch now",
-      "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
     },
     "description": "Join us as Thomas Jefferson argues with Alexander Hamilton in Washington D.C.",
     "customizations": [

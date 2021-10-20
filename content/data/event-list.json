@@ -2,16 +2,17 @@
   {
     "type": "D",
     "event_type": "event",
-    "img": "/images/events/2021-tech-prom.png",
     "date": "October 20, 2021",
-    "title": "2021 Tech Prom",
-    "description": "Tech Prom is an invitation-only evening bringing together guests from across the tech policy community.",
+    "title": "Filecoin Orbit Lounge at DC Fintech Week",
+    "img": "/images/events/2021-filecoin-orbit-lounge-event.png",
+    "description": "DC Fintech Week convenes nonprofits, technologists, entrepreneurs and regulators to discuss emerging policy issues",
     "cta": {
       "type": "B",
       "action": "a",
       "icon": "ticket",
-      "text": "Invitation-only",
-      "url": "https://cdt.org/event/2021-tech-prom/"
+      "text": "Register",
+      "target": "_blank",
+      "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
     }
   },
   {
@@ -38,36 +39,48 @@
       "type": "B",
       "action": "a",
       "icon": "play",
-      "text": "Watch Stream",
+      "text": "Watch Recording",
       "url": "https://www.youtube.com/watch?v=JRsvz6pRtZE&t=454s"
     }
   },
   {
     "type": "D",
     "event_type": "event",
-    "img": "",
-    "date": "March 6, 2021",
-    "title": "GBBC Virtual Members Forum",
-    "cta": {
-      "type": "B",
-      "action": "a",
-      "icon": "play",
-      "text": "Watch Stream",
-      "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM"
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "img": "/images/events/cryptocurrency-in-the-age-of-mass-surveillance.png",
-    "date": "June 21, 2020",
-    "title": "Cryptocurrency in the Age of Mass Surveillance",
+    "date": "May 11, 2021",
+    "title": "Filecoin Plus Day",
     "cta": {
       "type": "B",
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "date": "August 31, 2021",
+    "title": "August 2021 Notary Governance Meeting",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/storage-provider-working-group.png",
+    "date": "August 25, 2021",
+    "title": "Storage Provider Working Group Meeting",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=zGUIUVN75gA"
     }
   },
   {
@@ -81,35 +94,20 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM"
     }
   },
   {
     "type": "D",
     "event_type": "event",
-    "img": "/images/events/cryptocurrency-in-the-age-of-mass-surveillance.png",
-    "date": "June 21, 2021",
-    "title": "Cryptocurrency in the Age of Mass Surveillance",
+    "date": "April 13, 2021",
+    "title": "April 2021 Notary Governance Meeting",
     "cta": {
       "type": "B",
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "img": "",
-    "date": "June 21, 2021",
-    "title": "Cryptocurrency in the Age of Mass Surveillance",
-    "cta": {
-      "type": "B",
-      "action": "a",
-      "icon": "play",
-      "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.youtube.com/watch?v=BIvFtwCeOjU"
     }
   },
   {
@@ -124,14 +122,13 @@
       "type": "B",
       "action": "a",
       "icon": "ticket",
-      "text": "Buy your pass",
-      "url": ""
+      "text": "Buy your tickets",
+      "url": "https://www.encode.club/filecoin-club"
     }
   },
   {
     "type": "D",
     "event_type": "hackathon",
-    "img": "",
     "date": ["August 1, 2021", "October 31, 2021"],
     "title": "Asia Hackathon Season 2021",
     "cta": {
@@ -139,13 +136,12 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://events.filecoin.io/asia-hackathon-season"
     }
   },
   {
     "type": "D",
     "event_type": "hackathon",
-    "img": "",
     "date": ["July 30, 2021", "August 20, 2021"],
     "title": "HackFS",
     "cta": {
@@ -153,7 +149,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.youtube.com/watch?v=RWxd9X2bKfo"
     }
   },
   {
@@ -167,7 +163,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://events.protocol.ai/2021/browsers3000/"
     }
   },
   {
@@ -181,7 +177,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.nftvisionhack.com/"
     }
   },
   {
@@ -195,7 +191,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
-      "url": ""
+      "url": "https://www.eventbrite.com/e/share-115k-prizes-filecoin-grant-online-hackathon-may-1-july-18-registration-159309796891"
     }
   }
 ]

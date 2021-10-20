@@ -88,8 +88,8 @@ export default {
 #section-2 {
   padding-top: 15rem;
   margin-bottom: 1.5rem;
-  @include mini {
-    padding-top: 5.5rem;
+  @include small {
+    padding-top: 5rem;
   }
 }
 
@@ -289,6 +289,9 @@ export default {
   .card {
     margin: 0 0 4.5rem 0;
     width: 100%;
+    @include mini {
+      margin-bottom: 1.5rem;
+    }
     .image {
       width: 3.375rem;
     }
@@ -317,11 +320,28 @@ export default {
 
 ::v-deep #tabbed-slider {
   padding: 3.875rem 0 2rem 0;
+  @include small {
+    padding-top: 0;
+  }
+  @include mini {
+    padding-top: 3rem;
+  }
 }
 
 ::v-deep #info-1 {
+  @include small {
+    padding-top: 0;
+  }
+  [class~="grid"], [class*="grid-"], [class*="grid_"] {
+    @include small {
+      flex-direction: column-reverse;
+    }
+  }
   .blocks {
     &.left {
+      @include small {
+        margin-top: 2rem;
+      }
       .preview-container {
         background-color: $kleinBlue;
       }
@@ -342,7 +362,7 @@ export default {
   .column-content {
     &.left {
       @include small {
-        padding-bottom: 5rem;
+        padding-bottom: 3rem;
       }
     }
     &.right {
@@ -352,10 +372,22 @@ export default {
   .background-layers {
     position: absolute;
     top: 0;
-    left: -2rem;
+    left: -1rem;
     width: 100vw;
     height: 100%;
   }
 }
 
+::v-deep #events-hackathons {
+  padding-bottom: 0;
+  .events {
+    margin-top: 6rem;
+    @include small {
+      margin-top: 2rem;
+    }
+    @include mini {
+      margin-top: 0;
+    }
+  }
+}
 </style>
