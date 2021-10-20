@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Filecoin Foundation",
-    "description": "Primary website for the Filecoin Foundation"
+    "title": "Filecoin Foundation - Data & Privacy Policy",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
-    "site_name": "Filecoin Foundation",
-    "url": "https://fil.org",
+    "site_name": "Filecoin Foundation - Data & Privacy Policy",
+    "url": "https://fil.org/policy",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   }
 }

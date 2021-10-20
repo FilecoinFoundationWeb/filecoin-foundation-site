@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Filecoin Foundation",
+    "title": "Filecoin Foundation - Terms of Use",
     "description": "Primary website for the Filecoin Foundation"
   },
   "og": {
-    "site_name": "Filecoin Foundation",
-    "url": "https://fil.org",
+    "site_name": "Filecoin Foundation - Terms of Use",
+    "url": "https://fil.org/terms",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   }
 }

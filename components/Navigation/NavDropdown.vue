@@ -37,13 +37,11 @@
           <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
             <div class="first-level-wrapper">
 
-              <component
-                :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
-                :to="sublink.disabled ? '' : sublink.url"
-                :disabled="sublink.disabled"
+              <Button
+                :button="sublink"
                 :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
                 {{ sublink.text }}
-              </component>
+              </Button>
 
               <div
                 v-if="sublink.hasOwnProperty('links') && nestedDisplay"
@@ -54,7 +52,7 @@
                   <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
 
                     <component
-                      :is="poplink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+                      :is="poplink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
                       :disabled="poplink.disabled"
                       class="nav-link second-level">
                       {{ poplink.label }}
@@ -89,6 +87,7 @@
 <script>
 // ===================================================================== Imports
 import SocialIcons from '@/components/SocialIcons'
+import Button from '@/components/Button'
 
 // =================================================================== Functions
 const detectPanelOutsideViewport = (instance) => {
@@ -117,7 +116,8 @@ export default {
   name: 'NavDropdown',
 
   components: {
-    SocialIcons
+    SocialIcons,
+    Button
   },
 
   props: {

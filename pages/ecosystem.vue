@@ -35,7 +35,7 @@ import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PageIndex',
+  name: 'PageEcosystem',
 
   components: {
     Modal,
@@ -45,6 +45,7 @@ export default {
 
   data () {
     return {
+      tag: 'ecosystem',
       pageBackgroundLayersOffset: {
         medium: 1,
         mini: 0.25
@@ -58,13 +59,14 @@ export default {
     await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    },
     sections () {
       const content = CloneDeep(this.siteContent.ecosystem.page_content)
       const len = content.length

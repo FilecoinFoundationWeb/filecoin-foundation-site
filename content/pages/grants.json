@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Filecoin Foundation",
-    "description": "Primary website for the Filecoin Foundation"
+    "title": "Filecoin Foundation - Grants",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
-    "site_name": "Filecoin Foundation",
-    "url": "https://fil.org",
+    "site_name": "Filecoin Foundation - Grants",
+    "url": "https://fil.org/grants",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   },
   "page_content": [
     [
@@ -34,7 +34,7 @@
         },
         "right": {
           "type": "image_block",
-          "src": "images/page-grants/intro.png",
+          "src": "/images/page-grants/intro.png",
           "cols": {
             "num": "col-6_sm-12",
             "push_left": "off-2_sm-1"
@@ -71,7 +71,7 @@
         "id": "gallery-1-cards",
         "left": {
           "type": "image_block",
-          "src": "icons/hands-opening.png",
+          "src": "/icons/hands-opening.png",
           "cols": {
             "num": "col-3_mi-6",
             "push_left": "off-2_mi-3"
@@ -86,21 +86,21 @@
           "cards": [
             {
               "type": "A",
-              "img": "icons/money-bag.png",
+              "img": "/icons/money-bag.png",
               "img_size": "full",
               "title": "Open Grants",
               "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
             },
             {
               "type": "A",
-              "img": "icons/pencil.png",
+              "img": "/icons/pencil.png",
               "img_size": "full",
               "title": "Requests for Proposal",
               "description": "These grants generally have clearly scoped deliverables, milestones, and funding limits. While there is some flexibility in RFP deliverables, we expect teams will deliver what is in scope in the RFP."
             },
             {
               "type": "A",
-              "img": "icons/money-sign.png",
+              "img": "/icons/money-sign.png",
               "img_size": "full",
               "title": "Microgrants",
               "description": "The Filecoin Foundation awards grants to early-stage projects that have developed initial protocols using Filecoin."
@@ -162,21 +162,21 @@
           "cards": [
             {
               "type": "A",
-              "img": "icons/arrow-up.png",
+              "img": "/icons/arrow-up.png",
               "img_size": "full",
               "title": "Accelerate the adoption of open, decentralized technologies",
               "description": ""
             },
             {
               "type": "A",
-              "img": "icons/multi-circle.png",
+              "img": "/icons/multi-circle.png",
               "img_size": "full",
               "title": "Build communities that are mutually supportive and self-sustaining",
               "description": ""
             },
             {
               "type": "A",
-              "img": "icons/speech-bubble.png",
+              "img": "/icons/speech-bubble.png",
               "img_size": "full",
               "title": "Communicate the benefits of decentralization and open sourcing to wider audiences",
               "description": ""
@@ -210,17 +210,17 @@
           "slides": [
             {
               "label": "Support",
-              "icon": "icons/crest.png",
+              "icon": "/icons/crest.png",
               "description": "There are stakeholders in the Filecoin ecosystem: Storage Providers, Developers, Researchers, Token Holders, Clients, Users. We want to support them all."
             },
             {
               "label": "Growth",
-              "icon": "icons/hands-raised.png",
+              "icon": "/icons/hands-raised.png",
               "description": "We accelerate the growth of the Filecoin ecosystem through partnerships and collaborations."
             },
             {
               "label": "Governance",
-              "icon": "icons/multi-person.png",
+              "icon": "/icons/multi-person.png",
               "description": "As an open-source project, it is vital that Filecoin has transparent, community-driven governance. The Foundation facilitates the governance process, including the Filecoin Improvement Proposals process."
             }
           ]

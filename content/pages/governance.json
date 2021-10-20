@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Filecoin Foundation",
-    "description": "Primary website for the Filecoin Foundation"
+    "title": "Filecoin Foundation - Governance",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
-    "site_name": "Filecoin Foundation",
-    "url": "https://fil.org",
+    "site_name": "Filecoin Foundation - Governance",
+    "url": "https://fil.org/governance",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   },
   "page_content": [
     [
@@ -159,7 +159,7 @@
         "id": "panel-1-info-top",
         "left": {
           "type": "image_block",
-          "src": "icons/pencil.png",
+          "src": "/icons/pencil.png",
           "layout": "small",
           "cols": {
             "num": "col-3_mi-12",
@@ -210,7 +210,7 @@
         "id": "panel-1-banner-image",
         "left": {
           "type": "image_block",
-          "src": "images/governance/group@2x.png",
+          "src": "/images/governance/group@2x.png",
           "cols": {
             "num": "col-8_mi-11",
             "push_left": "off-4_mi-1"
@@ -235,7 +235,7 @@
         "id": "panel-2-info-top",
         "left": {
           "type": "image_block",
-          "src": "icons/shield.png",
+          "src": "/icons/shield.png",
           "layout": "small",
           "cols": {
             "num": "col-3_mi-5",
@@ -261,7 +261,7 @@
             "num": "col-6_mi-9",
             "push_left": "off-6_mi-3"
           },
-          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
+          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='/icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
           "data_id": "section-4-a",
           "customizations": [
             {
@@ -295,7 +295,7 @@
         "id": "panel-3-info-top",
         "left": {
           "type": "image_block",
-          "src": "icons/cross.png",
+          "src": "/icons/cross.png",
           "layout": "small",
           "cols": {
             "num": "col-3_mi-7",
@@ -377,7 +377,7 @@
         "id": "panel-4-info",
         "left": {
           "type": "image_block",
-          "src": "icons/hands-raised.png",
+          "src": "/icons/hands-raised.png",
           "layout": "small",
           "cols": {
             "num": "col-3_mi-7",
@@ -408,7 +408,7 @@
         "id": "panel-4-banner-image",
         "left": {
           "type": "image_block",
-          "src": "images/governance/panel-4-banner.png",
+          "src": "/images/governance/panel-4-banner.png",
           "cols": {
             "num": "col-8_mi-11",
             "push_left": "off-4_mi-1"

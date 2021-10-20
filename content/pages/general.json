@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Filecoin Foundation",
-    "description": "Primary website for the Filecoin Foundation"
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
     "site_name": "Filecoin Foundation",
     "url": "https://fil.org",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   },
   "social": [
     {
@@ -58,19 +58,32 @@
       "action": "nuxt-link",
       "url": "/about",
       "text": "About",
-      "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
+      "description": "<img src='/icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
       "links": [
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/about/#panel_1",
           "text": "Board of Directors"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/about/#explore_1",
           "text": "Advisors"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/about/#dive_deeper_intro",
           "text": "Community"
+        },
+        {
+          "type": "X",
+          "action": "a",
+          "target": "_blank",
+          "url": "//filecoinfoundation.medium.com",
+          "text": "Blog"
         }
       ]
     },
@@ -80,21 +93,29 @@
       "action": "nuxt-link",
       "url": "/governance",
       "text": "Governance",
-      "description": "<img src='icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "description": "<img src='/icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/governance/#panel-1-title",
           "text": "Improving Filecoin"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/governance/#panel-2-title",
           "text": "Security"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/governance/#panel-3-title",
           "text": "Filecoin Plus"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/governance/#panel-4-title",
           "text": "Get Involved"
         }
@@ -106,14 +127,16 @@
       "action": "nuxt-link",
       "url": "/ecosystem",
       "text": "Ecosystem",
-      "description": "<img src='icons/multi-circle.png' class='image'></img><span class='title'>Ecosystem</span><p class='text'>We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.</p>",
+      "description": "<img src='/icons/multi-circle.png' class='image'></img><span class='title'>Ecosystem</span><p class='text'>We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.</p>",
       "links": [
         {
+          "type": "X",
           "action": "nuxt-link",
           "url": "/ecosystem/#panel_1",
           "text": "Ecosystem Advisors"
         },
         {
+          "type": "X",
           "action": "nuxt-link",
           "url": "/ecosystem/#resources",
           "text": "Resources"
@@ -126,17 +149,23 @@
       "action": "nuxt-link",
       "url": "/grants",
       "text": "Grants",
-      "description": "<img src='icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
+      "description": "<img src='/icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
       "links": [
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/grants/#section-2",
           "text": "Developer Grants"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/grants/#gallery-1-cards",
           "text": "Request for Proposals"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/grants/#section-4",
           "text": "Community Grants"
         }
@@ -148,21 +177,29 @@
       "action": "nuxt-link",
       "url": "/get-involved",
       "text": "Get Involved",
-      "description": "<img src='icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "description": "<img src='/icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/get-involved/#careers_intro",
           "text": "Careers"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/get-involved/#get_involved",
           "text": "Resources"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "#site-footer",
           "text": "Contact Us"
         },
         {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/events",
           "text": "Events"
         }

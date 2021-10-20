@@ -94,6 +94,7 @@ export default {
 
   data () {
     return {
+      tag: 'governance',
       scroll: false,
       resize: false,
       pageBackgroundLayersOffset: {
@@ -108,13 +109,14 @@ export default {
     await store.dispatch('global/getBaseData', { key: 'governance', data: GovernancePageData })
   },
 
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    },
     sections () {
       const content = CloneDeep(this.siteContent.governance.page_content)
       return content

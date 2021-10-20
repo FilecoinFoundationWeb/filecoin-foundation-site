@@ -45,6 +45,7 @@ export default {
 
   data () {
     return {
+      tag: 'index',
       pageBackgroundLayersOffset: {
         medium: 1,
         mini: 0.25
@@ -58,13 +59,14 @@ export default {
     await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    },
     sections () {
       const content = CloneDeep(this.siteContent.index.page_content)
       const len = content.length
