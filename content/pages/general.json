@@ -71,13 +71,6 @@
         {
           "url": "/about/#dive_deeper_intro",
           "text": "Community"
-        },
-        {
-          "type": "X",
-          "action": "a",
-          "url": "https://filecoinfoundation.medium.com",
-          "target": "_blank",
-          "text": "Blog"
         }
       ]
     },
