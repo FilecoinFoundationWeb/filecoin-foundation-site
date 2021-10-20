@@ -69,8 +69,6 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
-
 import TermsPageData from '@/content/pages/terms.json'
 
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -85,6 +83,7 @@ export default {
 
   data () {
     return {
+      tag: 'terms',
       pageBackgroundLayersOffset: {
         medium: 1,
         mini: 0.25
@@ -97,13 +96,8 @@ export default {
     await store.dispatch('global/getBaseData', { key: 'terms', data: TermsPageData })
   },
 
-  computed: {
-    ...mapGetters({
-      siteContent: 'global/siteContent'
-    }),
-    seo () {
-      return this.$GetSeo(this.tag)
-    }
+  head () {
+    return this.$CompileSeo(this.$GetSeo(this.tag))
   }
 }
 </script>

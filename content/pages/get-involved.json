@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Filecoin Foundation",
-    "description": "Primary website for the Filecoin Foundation"
+    "title": "Filecoin Foundation - Get Involved",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
-    "site_name": "Filecoin Foundation",
-    "url": "https://fil.org",
+    "site_name": "Filecoin Foundation - Get Involved",
+    "url": "https://fil.org/get-involved",
     "type": "website",
-    "image": ""
+    "image": "/images/open-graph.png"
   },
   "page_content": [
     [
