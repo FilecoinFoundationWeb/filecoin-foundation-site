@@ -42,7 +42,7 @@
             "push_left": "off-2_mi-1"
           },
           "heading": "Careers",
-          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we’re hiring product managers, developer evangelists and startup operators as we continue to promote the Filecoin ecosystem and the broader Web3 movement. Check out our open roles."
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we’re hiring product managers, developer evangelists and startup operators as we continue to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
         }
       },
       {
@@ -432,7 +432,7 @@
           },
           "label": "Get Involved",
           "heading": "How to get involved and key links",
-          "description": "The Filecoin community includes thousands of developers, technologists, users, and enthusiasts all over the world. <br /><br />Join <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX' style='color: white;'>#fil-plus</a> on the official Filecoin Slack and participate in our bi-weekly community governance calls every other Tuesday",
+          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
           "ctas": [
             {
               "type": "A",

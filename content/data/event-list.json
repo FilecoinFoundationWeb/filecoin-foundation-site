@@ -2,21 +2,6 @@
   {
     "type": "D",
     "event_type": "event",
-    "img": "/images/events/2021-tech-prom.png",
-    "date": "October 20, 2021",
-    "title": "2021 Tech Prom",
-    "description": "Tech Prom is an invitation-only evening bringing together guests from across the tech policy community.",
-    "cta": {
-      "type": "B",
-      "action": "a",
-      "icon": "ticket",
-      "text": "Invitation-only",
-      "url": "https://cdt.org/event/2021-tech-prom/"
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
     "img": "/images/events/hyperledger-global-forum.jpg",
     "date": ["June 8, 2021", "June 10, 2021"],
     "title": "Hyperledger Global Forum",

@@ -42,7 +42,7 @@
             "num": "col-7_mi-8",
             "push_left": "off-5_mi-4"
           },
-          "description": "More than 100 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
+          "description": "More than 230 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -75,10 +75,10 @@
             "num": "col-4_sm-9_mi-10",
             "push_left": "off-1_sm-2_mi-1"
           },
-          "label": "Governed by you",
+          "label": "Community Governance",
           "heading": "Onward and upward",
           "subheading": "The Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with the open-source ethos.",
-          "description": "We believe Filecoin and Web3 can be part of a better future for storing humanity’s most important information.",
+          "description": "We believe Filecoin and web3 can be part of a better future for storing humanity’s most important information.",
           "ctas": [
             {
               "type": "A",
@@ -122,13 +122,19 @@
               "type": "B",
               "img": "/images/ecosystem/mosh@2x.png",
               "title": "Michelle Lee",
-              "description": "Ecosystem Lead, Protocol Labs"
+              "description": "Product, Protocol Labs"
             },
             {
               "type": "B",
               "img": "/images/ecosystem/stefaan-vervaet.png",
               "title": "Stefaan Vervaet",
-              "description": "Ecosystem Lead, Protocol Labs"
+              "description": "Ecosystems and Partnerships, Protocol Labs"
+            },
+            {
+              "type": "B",
+              "img": "/images/ecosystem/dietrich-ayala.jpg",
+              "title": "Dietrich Ayala",
+              "description": "IPFS Ecosystem Growth Engineer, Protocol Labs"
             }
           ]
         }
@@ -147,7 +153,7 @@
           },
           "label": "Resources",
           "heading": "How to get involved and key links",
-          "description": "Join <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX' style='color: white;'>#fil-plus</a> on the official Filecoin Slack and participate in our bi-weekly community governance calls every other Tuesday",
+          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
           "ctas": [
             {
               "type": "A",
@@ -175,36 +181,36 @@
               "type": "A",
               "img": "/icons/plus.png",
               "img_size": "regular",
-              "title": "Filecoin Plus Github",
-              "description": "FIP0003 proposing the program"
+              "title": "Filecoin Plus GitHub",
+              "description": "The hub for client applications for DataCap at a large scale"
             },
             {
               "type": "A",
               "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+              "description": "Putting the power in the hands of clients and incentivizing storage providers"
             },
             {
               "type": "A",
               "img": "/icons/stamp.png",
               "img_size": "regular",
               "title": "Notary Governance Repo",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+              "description": "Join the Filecoin notary conversation on GitHub"
             },
             {
               "type": "A",
               "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+              "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions"
             },
             {
               "type": "A",
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Community Calendar",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+              "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
             }
           ],
           "customizations": [
@@ -234,11 +240,6 @@
           "url": "/events"
         },
         "events": [
-          {
-            "image": "https://miro.medium.com/max/1400/0*0Y1EX6VkR4hTxCLc",
-            "date": "October 20, 2021",
-            "title": "Center for Democracy and Technology’s 2021 Tech Prom"
-          },
           {
             "date": "October 20, 2021",
             "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
