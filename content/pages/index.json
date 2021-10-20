@@ -46,20 +46,12 @@
           "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web."
         },
         "right": {
-          "type": "text_block",
-          "layout": "compact",
+          "type": "image_block",
           "cols": {
             "num": "col-4_sm-8_mi-9",
             "push_left": "off-3"
           },
-          "label": {
-            "type": "D",
-            "action": "video",
-            "icon": "play",
-            "text": "Watch now",
-            "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA/videos"
-          },
-          "description": "Crypto and the New Internet Economy",
+          "src": "/images/page-index/ff-multistoke.svg",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -256,7 +248,7 @@
             "num": "col-4_sm-6_mi-7_ti-10",
             "push_left": "off-2_sm-1"
           },
-          "src": "/images/page-index/grants-hands.svg"
+          "src": "/images/page-index/grants-hands-multistroke.svg"
         },
         "right": {
           "type": "text_block",

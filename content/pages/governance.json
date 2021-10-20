@@ -138,7 +138,7 @@
             "push_left": "off-1_mi-3"
           },
           "subheading": "What exactly is a FIP?",
-          "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIP’s allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin."
+          "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIPs allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin."
         }
       },
       {
@@ -222,7 +222,7 @@
             "num": "col-6_mi-9",
             "push_left": "off-6_mi-3"
           },
-          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, pentesters and researchers to audit our code and practices.<div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program, which rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
+          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -282,7 +282,7 @@
             "push_left": "off-6_mi-3"
           },
           "subheading": "How does it work?",
-          "description": "Filecoin Plus maximizes the amount of useful storage on Filecoin by adding a layer of social trust to the network and introducing a novel resource called DataCap.<br><br>Clients looking to onboard storage onto the network apply to community-selected Notaries to receive DataCap, which can be used to incentivize storage providers to take storage deals. You can learn more in our Filecoin Plus GitHub repo."
+          "description": "Filecoin Plus maximizes the amount of useful storage on Filecoin by adding a layer of social trust to the network and introducing a novel resource called DataCap.<br><br>Clients looking to onboard storage onto the network apply to community-selected Notaries to receive DataCap, which can be used to incentivize storage providers to take storage deals. You can learn more in the Filecoin Plus GitHub repo."
         }
       },
       {
