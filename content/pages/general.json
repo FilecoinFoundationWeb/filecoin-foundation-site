@@ -53,9 +53,9 @@
   ],
   "navigation": [
     {
-      "type": "X",
+      "type": "C",
       "theme": "light",
-      "action": "a",
+      "action": "nuxt-link",
       "url": "/about",
       "text": "About",
       "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
@@ -73,7 +73,9 @@
           "text": "Community"
         },
         {
-          "url": "https://filecoinfoundation.medium.comtest",
+          "type": "X",
+          "action": "a",
+          "url": "https://filecoinfoundation.medium.com",
           "target": "_blank",
           "text": "Blog"
         }
