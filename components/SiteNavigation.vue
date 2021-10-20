@@ -335,84 +335,9 @@ export default {
 }
 
 // ////////////////////////////////////////////////////// mobile navigation menu
-::v-deep .top-panel {
-  z-index: 1000;
-  @include small {
-    padding: 0 1rem;
-    margin-bottom: 0;
-  }
-}
-
-::v-deep .mega-menu {
-  padding: $navigationHeight 3rem 3rem 3rem;
-  padding-top: $navigationHeight !important;
-  top: -1rem;
-  height: calc(100% + 1rem);
-  .accordion-section {
-    &.open {
-      margin-bottom: 1rem;
-      .accordion-header {
-        &:after {
-          transition: 250ms ease-in;
-          transform: rotate(0deg);
-        }
-      }
-    }
-  }
-  .accordion-header {
-    padding: 1rem 0;
-    position: relative;
-    cursor: pointer;
-    &:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 0.3125rem;
-      width: 1.125rem;
-      height: 100%;
-      background: url('~assets/svgs/chevrondown.svg') no-repeat right center;
-      transform: rotate(-180deg);
-      transition: 250ms ease-out;
-    }
-    .image {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 2rem;
-    }
-    .title {
-      @include fontWeight_Medium;
-      padding-left: 3.5rem;
-    }
-    .text {
-      display: none;
-    }
-  }
-  .accordion-content {
-    .image {
-      display: none;
-    }
-    .title {
-      display: none;
-    }
-    .text {
-      @include leading_Large;
-      padding-left: 3.5rem;
-      letter-spacing: $letterSpacing_Large;
-    }
-    ul {
-      padding-left: 3.5rem;
-      list-style: none;
-    }
-    li {
-      @include fontWeight_Medium;
-      font-size: 0.875rem;
-      letter-spacing: $letterSpacing_Large;
-      margin: 0.5rem 0;
-    }
-  }
-}
+// ::v-deep .mega-menu {
+//
+//
+// }
 
 </style>
