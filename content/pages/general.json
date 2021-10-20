@@ -77,6 +77,13 @@
           "action": "nuxt-link",
           "url": "/about/#dive_deeper_intro",
           "text": "Community"
+        },
+        {
+          "type": "X",
+          "action": "a",
+          "target": "_blank",
+          "url": "//filecoinfoundation.medium.com",
+          "text": "Blog"
         }
       ]
     },
