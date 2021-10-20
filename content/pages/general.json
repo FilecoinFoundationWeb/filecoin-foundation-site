@@ -61,19 +61,20 @@
       "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
       "links": [
         {
-          "url": "/",
+          "url": "/about/#panel_1",
           "text": "Board of Directors"
         },
         {
-          "url": "/",
+          "url": "/about/#explore_1",
           "text": "Advisors"
         },
         {
-          "url": "/",
+          "url": "/about/#dive_deeper_intro",
           "text": "Community"
         },
         {
-          "url": "/",
+          "url": "//filecoinfoundation.medium.com",
+          "target": "_blank",
           "text": "Blog"
         }
       ]
@@ -87,19 +88,19 @@
       "description": "<img src='icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
-          "url": "/",
+          "url": "/governance/#panel-1-title",
           "text": "Improving Filecoin"
         },
         {
-          "url": "/",
+          "url": "/governance/#panel-2-title",
           "text": "Security"
         },
         {
-          "url": "/",
+          "url": "/governance/#panel-3-title",
           "text": "Filecoin Plus"
         },
         {
-          "url": "/",
+          "url": "/governance/#panel-4-title",
           "text": "Get Involved"
         }
       ]
@@ -114,12 +115,12 @@
       "links": [
         {
           "action": "nuxt-link",
-          "url": "/",
+          "url": "/ecosystem/#panel_1",
           "text": "Ecosystem Advisors"
         },
         {
           "action": "nuxt-link",
-          "url": "/",
+          "url": "/ecosystem/#resources",
           "text": "Resources"
         }
       ]
@@ -133,15 +134,15 @@
       "description": "<img src='icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
       "links": [
         {
-          "url": "/",
+          "url": "/grants/#section-2",
           "text": "Developer Grants"
         },
         {
-          "url": "/",
+          "url": "/grants/#gallery-1-cards",
           "text": "Request for Proposals"
         },
         {
-          "url": "/",
+          "url": "/grants/#section-4",
           "text": "Community Grants"
         }
       ]
@@ -155,15 +156,15 @@
       "description": "<img src='icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
         {
-          "url": "/",
+          "url": "/get-involved/#careers_intro",
           "text": "Careers"
         },
         {
-          "url": "/",
+          "url": "/get-involved/#get_involved",
           "text": "Resources"
         },
         {
-          "url": "/",
+          "url": "#site-footer",
           "text": "Contact Us"
         },
         {
@@ -184,15 +185,17 @@
       {
         "type": "F",
         "theme": "dark",
-        "action": "nuxt-link",
-        "url": "http://ffdweb.org",
+        "action": "a",
+        "url": "//ffdweb.org",
+        "target": "_blank",
         "text": "Filecoin Foundation for the Decentralized Web"
       },
       {
         "type": "F",
         "theme": "dark",
-        "action": "nuxt-link",
-        "url": "https://forkast.news/podcast/the-future-rules/",
+        "action": "a",
+        "target": "_blank",
+        "url": "//forkast.news/podcast/the-future-rules/",
         "text": "Future Rules Podcast"
       }
     ],

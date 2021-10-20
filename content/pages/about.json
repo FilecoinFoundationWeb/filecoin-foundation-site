@@ -177,19 +177,19 @@
               "type": "B",
               "img": "/images/about/marcia-hofmann@2x.png",
               "title": "Marcia Hofmann",
-              "description": "Lorem Ipsum"
+              "description": "Electronic Privacy Attorney"
             },
             {
               "type": "B",
               "img": "/images/about/brian-behlendorf@2x.png",
               "title": "Brian Behlendorf",
-              "description": "Lorem Ipsum"
+              "description": "Executive Director, Hyperledger"
             },
             {
               "type": "B",
               "img": "/images/about/nicole-wong@2x.png",
               "title": "Nicole Wong",
-              "description": "Lorem Ipsum"
+              "description": "Former Deputy U.S. Chief Technology Officer"
             }
           ]
         }
