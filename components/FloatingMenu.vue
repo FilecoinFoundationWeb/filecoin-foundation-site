@@ -2,8 +2,8 @@
   <div id="sticky-info">
     <div class="sticky-content">
       <div
-        v-for="entry in entries"
-        :key="entry.heading">
+        v-for="(entry, entryIndex) in entries"
+        :key="`entry-${entryIndex}`">
         <div
           class="heading"
           @click="jumpToSection(entry.id)">
@@ -11,9 +11,10 @@
         </div>
         <ul>
           <li
-            v-for="item in entry.items"
-            :key="item">
-            {{ item }}
+            v-for="(item, itemIndex) in entry.items"
+            :key="`entry-${itemIndex}`"
+            @click="jumpToSection(item.id)">
+            {{ item.text }}
           </li>
         </ul>
       </div>
@@ -22,19 +23,6 @@
 </template>
 
 <script>
-// =================================================================== Functions
-const getElementTop = (elem) => {
-  const box = elem.getBoundingClientRect()
-  const body = document.body
-  const docEl = document.documentElement
-
-  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop
-  const clientTop = docEl.clientTop || body.clientTop || 0
-  const top = box.top + scrollTop - clientTop
-
-  return Math.round(top)
-}
-
 // ====================================================================== Export
 export default {
   name: 'FloatingMenu',
@@ -48,9 +36,8 @@ export default {
 
   methods: {
     jumpToSection (section) {
-      const element = document.getElementById(section)
-      const top = getElementTop(element)
-      this.$scrollToY(top)
+      const element = document.getElementById(section) || document.querySelector(`[data-id='${section}']`)
+      this.$scrollToElement(element, 0, -50)
     }
   }
 }
