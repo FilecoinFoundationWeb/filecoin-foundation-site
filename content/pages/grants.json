@@ -151,7 +151,7 @@
             "push_left": "off-0_sm-1"
           },
           "heading": "Community Grants",
-          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open source communities.<br><br>Our initiatives seek to:"
+          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open-source communities.<br><br>Our initiatives seek to:"
         },
         "right": {
           "type": "slider_block",
@@ -211,7 +211,7 @@
             {
               "label": "Education",
               "icon": "icons/graduation-cap.png",
-              "description": "These projects fall into two broad categories.  The first category seeks to educate the public about how the internet works and how decentralized and open source technologies benefit businesses, citizens, and governments.  The second category seeks to educate and support current and future developers in how to best use decentralized and open technologies."
+              "description": "These projects fall into two broad categories.  The first category seeks to educate the public about how the internet works and how decentralized and open-source technologies benefit businesses, citizens, and governments.  The second category seeks to educate and support current and future developers in how to best use decentralized and open technologies."
             },
             {
               "label": "Research",

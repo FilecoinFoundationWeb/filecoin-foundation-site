@@ -9,7 +9,7 @@
         "push_left": "off-1_sm-2_mi-1"
       },
       "heading": "Dive deeper",
-      "subheading": "Join our talks, community meetings and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+      "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
     }
   },
   {
@@ -22,7 +22,7 @@
         "push_left": "off-1_sm-2_mi-1"
       },
       "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
-      "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
     },
     "right": {
       "type": "text_block",
@@ -40,7 +40,7 @@
           "action": "video",
           "icon": "play",
           "text": "Watch video",
-          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+          "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
         }
       ]
     }
@@ -55,7 +55,7 @@
         "push_left": "off-1_sm-2_mi-1"
       },
       "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
-      "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
     },
     "right": {
       "type": "text_block",
@@ -73,7 +73,7 @@
           "action": "video",
           "icon": "play",
           "text": "Watch video",
-          "url": "https://www.youtube.com/watch?v=s6ScieEs5Ys"
+          "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
         }
       ]
     }

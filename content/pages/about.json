@@ -21,7 +21,7 @@
             "push_left": "off-2_mi-1"
           },
           "heading": "About us",
-          "subheading": "The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks."
+          "subheading": "The Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
         },
         "right": {
           "type": "video_block",
@@ -51,7 +51,7 @@
             "push_left": "off-5_mi-4"
           },
           "label": "Our Mission",
-          "description": "The foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "description": "The foundation’/s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -108,7 +108,7 @@
             "num": "col-7_mi-8",
             "push_left": "off-4_mi-4"
           },
-          "description": "In addition to providing funding, FF supports a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
+          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -133,7 +133,7 @@
             "push_left": "off-2_mi-1"
           },
           "label": "Collective Action",
-          "heading": "The Foundation’s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "heading": "The Foundation helps the Filecoin community solve problems and facilitates collective action.",
           "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem."
         },
         "right": {
@@ -175,8 +175,8 @@
             },
             {
               "type": "B",
-              "img": "/images/about/marcia-hoffman@2x.png",
-              "title": "Marcia Hoffman",
+              "img": "/images/about/marcia-hofmann@2x.png",
+              "title": "Marcia Hofmann",
               "description": "Lorem Ipsum"
             },
             {
@@ -208,7 +208,7 @@
           },
           "label": "Advisors",
           "heading": "The Filecoin Foundation is guided by an extraordinary and accomplished group of advisers",
-          "description": "Leaders from across web3 and the open source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a style='color: white;'>our talks</a> featuring contributions from our advisory panel and become part of the conversation in <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX' style='color: white;'>#fil-plus</a> on the official Filecoin Slack."
+          "description": "Leaders from across web3 and the open-source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a target='_blank' href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' style='color: white;'>our talks</a> featuring contributions from our advisory panel and be part of the conversation on <a href='https://filecoinproject.slack.com/messages/CEHHJNJS3/' style='color: white;' target='_blank'>Filecoin's Slack.</a>"
         },
         "right": {
           "type": "slider_block",
