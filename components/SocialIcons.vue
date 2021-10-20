@@ -6,7 +6,13 @@
       :key="index"
       :button="icon"
       class="social-icon">
+
       <component :is="icon.component" />
+
+      <div class="label">
+        {{ icon.label }}
+      </div>
+
     </Button>
 
   </div>
@@ -60,5 +66,9 @@ export default {
   &:not(:last-child) {
     margin-right: 1rem;
   }
+}
+
+.label {
+  display: none;
 }
 </style>

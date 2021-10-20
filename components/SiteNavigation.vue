@@ -205,17 +205,15 @@ export default {
 ::v-deep .nav-link {
   color: $white;
   &.first-level {
-    opacity: 0.75;
-    &:hover {
-      opacity: 1.0;
-    }
+    @include fontWeight_Medium;
+    transition: 250ms ease-in-out;
   }
 }
 
 ::v-deep {
   .nav-dropdown,
   .mega-menu {
-    padding: 2rem 3.375rem 2rem 5.375rem;
+    // padding: 2rem 3.375rem 2rem 5.375rem;
     background-color: $denim;
     border: 5px solid $azureRadiance;
     border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
@@ -244,7 +242,18 @@ export default {
       width: 2rem;
     }
     ul {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
       padding: 0;
+      &:hover {
+        .nav-link.first-level {
+          opacity: 0.75;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
     .first-level-wrapper {
       padding: 0.25rem 0;

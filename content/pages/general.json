@@ -15,35 +15,40 @@
       "action": "a",
       "target": "_blank",
       "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
-      "component": "GithubIcon"
+      "component": "GithubIcon",
+      "label": "GitHub"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.reddit.com/r/filecoin/",
-      "component": "RedditIcon"
+      "component": "RedditIcon",
+      "label": "Reddit"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://twitter.com/FilFoundation",
-      "component": "TwitterIcon"
+      "component": "TwitterIcon",
+      "label": "Twitter"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.linkedin.com/company/68020800/admin/",
-      "component": "LinkedInIcon"
+      "component": "LinkedInIcon",
+      "label": "LinkedIn"
     },
     {
       "type": "X",
       "action": "a",
       "target": "_blank",
       "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA",
-      "component": "YoutubeIcon"
+      "component": "YoutubeIcon",
+      "label": "YouTube"
     }
   ],
   "navigation": [

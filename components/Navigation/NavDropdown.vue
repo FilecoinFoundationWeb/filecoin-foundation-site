@@ -25,52 +25,71 @@
       :class="firstLevelClassList"
       :style="`left: ${panelLeft};`">
 
-      <div
-        v-if="link.description"
-        class="extras"
-        v-html="link.description">
+      <div class="nav-dropdown-panel-left">
+
+        <div
+          v-if="link.description"
+          class="extras"
+          v-html="link.description">
+        </div>
+
+        <ul v-if="Array.isArray(link.links)">
+          <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
+            <div class="first-level-wrapper">
+
+              <component
+                :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
+                :to="sublink.disabled ? '' : sublink.url"
+                :disabled="sublink.disabled"
+                :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                {{ sublink.text }}
+              </component>
+
+              <div
+                v-if="sublink.hasOwnProperty('links') && nestedDisplay"
+                ref="secondPane"
+                :class="[listDisplayType, { 'scroll': scroll }]"
+                :style="`max-height: ${maxHeight}; left: ${popoutLeft};`">
+                <ul v-if="Array.isArray(sublink.links)" :style="`min-width: ${minWidth};`">
+                  <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
+
+                    <component
+                      :is="poplink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+                      :disabled="poplink.disabled"
+                      class="nav-link second-level">
+                      {{ poplink.label }}
+                    </component>
+
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+
       </div>
 
-      <ul v-if="Array.isArray(link.links)">
-        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-          <div class="first-level-wrapper">
-
-            <component
-              :is="sublink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
-              :to="sublink.disabled ? '' : sublink.url"
-              :disabled="sublink.disabled"
-              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-              {{ sublink.text }}
-            </component>
-
-            <div
-              v-if="sublink.hasOwnProperty('links') && nestedDisplay"
-              ref="secondPane"
-              :class="[listDisplayType, { 'scroll': scroll }]"
-              :style="`max-height: ${maxHeight}; left: ${popoutLeft};`">
-              <ul v-if="Array.isArray(sublink.links)" :style="`min-width: ${minWidth};`">
-                <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
-
-                  <component
-                    :is="poplink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
-                    :disabled="poplink.disabled"
-                    class="nav-link second-level">
-                    {{ poplink.label }}
-                  </component>
-
-                </li>
-              </ul>
-            </div>
-
+      <div
+        v-if="link.hasOwnProperty('sidebar') && link.sidebar"
+        class="nav-dropdown-panel-right">
+        <div class="nav-dropdown-panel-right-wrapper">
+          <div class="panel-right-title">
+            Community Links
           </div>
-        </li>
-      </ul>
+          <SocialIcons />
+        </div>
+      </div>
+
     </div>
 
   </div>
 </template>
 
 <script>
+// ===================================================================== Imports
+import SocialIcons from '@/components/SocialIcons'
+
 // =================================================================== Functions
 const detectPanelOutsideViewport = (instance) => {
   const rect = instance.$refs.firstPane.getBoundingClientRect()
@@ -96,6 +115,10 @@ const detectPopoutOutsideViewport = (instance) => {
 // ===================================================================== Exports
 export default {
   name: 'NavDropdown',
+
+  components: {
+    SocialIcons
+  },
 
   props: {
     link: {
@@ -265,10 +288,11 @@ export default {
 }
 
 ul {
-  padding: 1.0rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 .ul-second {
-  padding: 0 1.0rem;
+  padding: 0 1rem;
 }
 li {
   list-style-type: none;
@@ -289,15 +313,71 @@ li {
 }
 
 ::v-deep .nav-dropdown {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   top: 3.5rem;
   .extras {
     position: relative;
     z-index: 10;
   }
   .title {
+    @include fontWeight_Medium;
     display: inline-block;
     margin-bottom: 1rem;
+  }
+  .social-icons {
+    flex-direction: column;
+    align-items: flex-start;
+    .social-icon {
+      align-items: center;
+      width: auto;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      svg {
+        width: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+    .label {
+      @include fontSize_Small;
+      @include fontWeight_SemiBold;
+      display: block;
+    }
+  }
+}
+
+.nav-dropdown-panel-left {
+  padding: 2rem 3rem 2rem 5rem;
+  + .nav-dropdown-panel-right {
+    margin-left: -2rem;
+  }
+}
+
+.nav-dropdown-panel-right {
+  position: relative;
+  padding: 2rem 3rem 2rem 2rem;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 20px);
+    background: $deepCove;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 71px;
+    z-index: 1;
+  }
+  .nav-dropdown-panel-right-wrapper {
+    position: relative;
+    z-index: 2;
+    .panel-right-title {
+      @include fontWeight_Medium;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -339,44 +419,63 @@ li {
     position: relative;
     .arrow {
       position: absolute;
-      top: 27px;
+      top: 29px;
       left: 50%;
-      width: 17px;
-      height: 17px;
-      transform: translate(-50%, 1rem) rotate(45deg);
       visibility: hidden;
+      pointer-events: none;
       opacity: 0;
       z-index: 2;
+      transform: translate(-50%, 1rem) rotate(45deg);
       transition: 250ms ease-out;
       @include small {
         display: none;
       }
       .layer {
         position: absolute;
+        top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 2px 0 0 0;
-        &:first-child {
+        width: 21px;
+        padding-bottom: 21px;
+        overflow: hidden;
+        transform-origin: 100% 0;
+        border-top-left-radius: 1px;
+        &:after {
+          content: '';
+          position: absolute;
           top: 0;
-          left: 0;
-          background-color: $azureRadiance;
+          right: 8px;
+          width: 100%;
+          height: 141%;
+          transform-origin: inherit;
+          transform: rotate(45deg);
+        }
+        &:first-child {
+          transform: translate(-2px, -2px);
           z-index: 0;
+          &:after {
+            background-color: $azureRadiance;
+          }
         }
         &:nth-child(2) {
-          background-color: $denim;
-          transform: translate(3px, 3px);
+          transform: translate(2px, 2px);
           z-index: 1;
+          &:after {
+            background-color: $denim;
+          }
         }
         &:nth-child(3) {
-          background-color: $kleinBlue;
-          transform: translate(7px, 7px);
+          transform: translate(6px, 6px);
           z-index: 2;
+          &:after {
+            background-color: $kleinBlue;
+          }
         }
         &:last-child {
-          background-color: $blackPearl;
-          transform: translate(11px, 11px);
+          transform: translate(9px, 9px);
           z-index: 3;
+          &:after {
+            background-color: $blackPearl;
+          }
         }
       }
     }
@@ -385,7 +484,7 @@ li {
     display: inline-block;
     ul {
       display: flex;
-      margin-top: 0.5rem;
+      margin-top: 1.5rem;
       margin-left: 1rem;
       flex-direction: row;
       flex-wrap: wrap;
