@@ -54,7 +54,7 @@
                   <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
 
                     <component
-                      :is="poplink.hasOwnProperty.url ? 'nuxt-link' : 'div'"
+                      :is="poplink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
                       :disabled="poplink.disabled"
                       class="nav-link second-level">
                       {{ poplink.label }}
