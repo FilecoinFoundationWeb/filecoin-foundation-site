@@ -86,21 +86,21 @@
           "cards": [
             {
               "type": "A",
-              "img": "icons/money-bag.png",
+              "img": "/icons/money-bag.png",
               "img_size": "full",
               "title": "Open Grants",
               "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
             },
             {
               "type": "A",
-              "img": "icons/pencil.png",
+              "img": "/icons/pencil.png",
               "img_size": "full",
               "title": "Requests for Proposal",
               "description": "These grants generally have clearly scoped deliverables, milestones, and funding limits. While there is some flexibility in RFP deliverables, we expect teams will deliver what is in scope in the RFP."
             },
             {
               "type": "A",
-              "img": "icons/money-sign.png",
+              "img": "/icons/money-sign.png",
               "img_size": "full",
               "title": "Microgrants",
               "description": "The Filecoin Foundation awards grants to early-stage projects that have developed initial protocols using Filecoin."
@@ -162,21 +162,21 @@
           "cards": [
             {
               "type": "A",
-              "img": "icons/arrow-up.png",
+              "img": "/icons/arrow-up.png",
               "img_size": "full",
               "title": "Accelerate the adoption of open, decentralized technologies",
               "description": ""
             },
             {
               "type": "A",
-              "img": "icons/multi-circle.png",
+              "img": "/icons/multi-circle.png",
               "img_size": "full",
               "title": "Build communities that are mutually supportive and self-sustaining",
               "description": ""
             },
             {
               "type": "A",
-              "img": "icons/speech-bubble.png",
+              "img": "/icons/speech-bubble.png",
               "img_size": "full",
               "title": "Communicate the benefits of decentralization and open sourcing to wider audiences",
               "description": ""
