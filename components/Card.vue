@@ -181,8 +181,11 @@ export default {
     @include leading_Regular;
     color: $azureRadiance;
   }
-  .description {
+  ::v-deep .description {
     color: white;
+    a {
+      color: $jordyBlue;
+    }
   }
 }
 

@@ -335,7 +335,7 @@
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href=\"#\">Filecoin Slack Channel</a>"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
             },
             {
               "type": "A",
