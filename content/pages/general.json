@@ -56,7 +56,7 @@
       "type": "X",
       "theme": "light",
       "action": "a",
-      "url": "/abouttest",
+      "url": "/about",
       "text": "About",
       "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
       "links": [
