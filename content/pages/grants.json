@@ -210,17 +210,17 @@
           "slides": [
             {
               "label": "Support",
-              "icon": "icons/crest.png",
+              "icon": "/icons/crest.png",
               "description": "There are stakeholders in the Filecoin ecosystem: Storage Providers, Developers, Researchers, Token Holders, Clients, Users. We want to support them all."
             },
             {
               "label": "Growth",
-              "icon": "icons/hands-raised.png",
+              "icon": "/icons/hands-raised.png",
               "description": "We accelerate the growth of the Filecoin ecosystem through partnerships and collaborations."
             },
             {
               "label": "Governance",
-              "icon": "icons/multi-person.png",
+              "icon": "/icons/multi-person.png",
               "description": "As an open-source project, it is vital that Filecoin has transparent, community-driven governance. The Foundation facilitates the governance process, including the Filecoin Improvement Proposals process."
             }
           ]
