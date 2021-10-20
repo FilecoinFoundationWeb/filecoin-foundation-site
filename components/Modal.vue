@@ -144,5 +144,9 @@ export default {
   transform: translateY(2rem);
   z-index: 10;
   transition: 250ms ease-out;
+  @include small {
+    width: 100%;
+    padding: 0 2rem;
+  }
 }
 </style>
