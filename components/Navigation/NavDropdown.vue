@@ -226,7 +226,7 @@ export default {
 .nav-hover-wrapper,
 .nav-active-wrapper {
   position: relative;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   @include small {
     padding: 0.375rem 0;
   }

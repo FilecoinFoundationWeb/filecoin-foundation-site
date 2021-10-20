@@ -199,7 +199,6 @@ export default {
 }
 
 ::v-deep .nav-item-wrapper {
-  padding: 1rem 0;
   &:before {
     content: '';
     position: absolute;
