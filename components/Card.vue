@@ -1,5 +1,5 @@
 <template>
-  <div :class="['card', `type__${type}`, { 'with-image': img }]">
+  <div :class="['card', `type__${type}`, { 'with-image': img }]" :data-id="dataIdAttribute">
 
     <div
       v-if="img && imgType === 'background_image'"
@@ -121,6 +121,9 @@ export default {
     },
     cta () {
       return this.card.cta
+    },
+    dataIdAttribute () {
+      return this.card.data_id
     }
   },
 

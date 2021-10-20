@@ -86,23 +86,59 @@
                 "entries": [
                   {
                     "heading": "Improving Filecoin",
-                    "items": ["What exactly is a FIP?", "How are FIPs prioritized?", "Can I submit a FIP?"],
-                    "id": "section-3"
+                    "id": "section-3",
+                    "items": [
+                      {
+                        "text": "What exactly is an FIP?",
+                        "id": "section-3-a"
+                      },
+                      {
+                        "text": "How are FIP’s prioritized?",
+                        "id": "section-3-b"
+                      },
+                      {
+                        "text": "Can I submit an FIP?",
+                        "id": "section-3-c"
+                      }
+                    ]
                   },
                   {
                     "heading": "Security",
-                    "items": ["Filecoin Bounty Program"],
-                    "id": "section-4"
+                    "id": "section-4",
+                    "items": [
+                      {
+                        "text": "Filecoin Bounty Program",
+                        "id": "section-4-a"
+                      }
+                    ]
                   },
                   {
                     "heading": "Filecoin Plus",
-                    "items": ["How does it work?", "Apply for DataCap", "Filecoin Plus Notary"],
-                    "id": "section-5"
+                    "id": "section-5",
+                    "items": [
+                      {
+                        "text": "How does it work?",
+                        "id": "section-5-a"
+                      },
+                      {
+                        "text": "Apply for a DataCap",
+                        "id": "section-5-b"
+                      },
+                      {
+                        "text": "Filecoin Plus Notary",
+                        "id": "section-5-c"
+                      }
+                    ]
                   },
                   {
                     "heading": "Get Involved",
-                    "items": ["Weekly Governance Calls"],
-                    "id": "section-6"
+                    "id": "section-6",
+                    "items": [
+                      {
+                        "text": "Weekly Governance Calls",
+                        "id": "section-6"
+                      }
+                    ]
                   }
                 ]
               }
@@ -138,7 +174,8 @@
             "push_left": "off-1_mi-3"
           },
           "subheading": "What exactly is a FIP?",
-          "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIPs allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin."
+          "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIPs allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin.",
+          "data_id": "section-3-a"
         }
       },
       {
@@ -150,8 +187,9 @@
             "num": "col-4_mi-9",
             "push_left": "off-6_mi-1"
           },
-          "subheading": "How are FIPs prioritized?",
-          "description": "There are different types of FIPs, such as core FIPs for low-level protocol changes that affect consensus and require a network upgrade.<br><br>Every network upgrade consists of a set of FIPs that need to be implemented by each Filecoin client on the network. This implies that to stay in consensus with other clients on the Filecoin mainnet, client developers need to make sure they have all implemented the required FIPs.<br><br>Non-core FIPs don’t have to be adopted by all applications, but core FIPs must be widely adopted (because all nodes must upgrade to stay part of the same network) — therefore core FIPs require broader consensus within the community than non-core FIPs."
+          "subheading": "How are FIP’s prioritized?",
+          "description": "There are different types of FIPs, such as core FIPs for low-level protocol changes that affect consensus and require a network upgrade.<br><br>Every network upgrade consists of a set of FIPs that need to be implemented by each Filecoin client on the network. This implies that to stay in consensus with other clients on the Filecoin mainnet, client developers need to make sure they have all implemented the required FIPs.<br><br>Non-core FIPs don’t have to be adopted by all applications, but core FIPs must be widely adopted (because all nodes must upgrade to stay part of the same network) — therefore core FIPs require broader consensus within the community than non-core FIPs.",
+          "data_id": "section-3-b"
         }
       },
       {
@@ -163,8 +201,9 @@
             "num": "col-4_mi-9",
             "push_left": "off-8_mi-3"
           },
-          "subheading": "Can I submit a FIP?",
-          "description": "Yes, anyone is free to propose one, and then various stakeholders in the community will discuss to determine whether it should be adopted as a standard or included in a network upgrade.<br><br>To participate, head over to the FIPs section of the Filecoin Project repo or connect with the community on Slack."
+          "subheading": "Can I submit an FIP?",
+          "description": "Yes, anyone is free to propose one, and then various stakeholders in the community will discuss to determine whether it should be adopted as a standard or included in a network upgrade.<br><br>To participate, head over to the FIPs section of the Filecoin Project repo or connect with the community on Slack.",
+          "data_id": "section-3-c"
         }
       },
       {
@@ -223,6 +262,7 @@
             "push_left": "off-6_mi-3"
           },
           "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
+          "data_id": "section-4-a",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -282,7 +322,8 @@
             "push_left": "off-6_mi-3"
           },
           "subheading": "How does it work?",
-          "description": "Filecoin Plus maximizes the amount of useful storage on Filecoin by adding a layer of social trust to the network and introducing a novel resource called DataCap.<br><br>Clients looking to onboard storage onto the network apply to community-selected Notaries to receive DataCap, which can be used to incentivize storage providers to take storage deals. You can learn more in the Filecoin Plus GitHub repo."
+          "description": "Filecoin Plus maximizes the amount of useful storage on Filecoin by adding a layer of social trust to the network and introducing a novel resource called DataCap.<br><br>Clients looking to onboard storage onto the network apply to community-selected Notaries to receive DataCap, which can be used to incentivize storage providers to take storage deals. You can learn more in the Filecoin Plus GitHub repo.",
+          "data_id": "section-5-a"
         }
       },
       {
@@ -299,14 +340,16 @@
               "img": "/icons/filecoin-layered.png",
               "img_size": "mini",
               "title": "Apply for DataCap",
-              "description": "If you are looking to apply for DataCap as a client, head over to the <a href='http://plus.fil.org/'>Filecoin Plus app portal.</a>"
+              "description": "If you are looking to apply for DataCap as a client, head over to the <a href='http://plus.fil.org/'>Filecoin Plus app portal.</a>",
+              "data_id": "section-5-b"
             },
             {
               "type": "A",
               "img": "/icons/cross.png",
               "img_size": "mini",
               "title": "Filecoin Plus Notary",
-              "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/'>notary governance repository.</a>"
+              "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/'>notary governance repository.</a>",
+              "data_id": "section-5-c"
             }
           ]
         }

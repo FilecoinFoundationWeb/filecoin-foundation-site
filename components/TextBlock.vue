@@ -1,5 +1,5 @@
 <template>
-  <div :class="['block text-block', `layout__${layout}`, `theme__${theme}`]">
+  <div :class="['block text-block', `layout__${layout}`, `theme__${theme}`]" :data-id="dataIdAttribute">
 
     <div v-if="label" class="label">
       <span
@@ -101,6 +101,9 @@ export default {
     ctas () {
       if (!this.block.ctas) { return undefined }
       return this.block.ctas.map(cta => ({ ...cta, theme: this.buttonTheme || cta.theme }))
+    },
+    dataIdAttribute () {
+      return this.block.data_id
     }
   }
 }
