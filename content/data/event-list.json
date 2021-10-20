@@ -1,0 +1,197 @@
+[
+  {
+    "type": "D",
+    "event_type": "event",
+    "date": "October 20, 2021",
+    "title": "Filecoin Orbit Lounge at DC Fintech Week",
+    "img": "/images/events/2021-filecoin-orbit-lounge-event.png",
+    "description": "DC Fintech Week convenes nonprofits, technologists, entrepreneurs and regulators to discuss emerging policy issues",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "ticket",
+      "text": "Register",
+      "target": "_blank",
+      "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/hyperledger-global-forum.jpg",
+    "date": ["June 8, 2021", "June 10, 2021"],
+    "title": "Hyperledger Global Forum",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=B8lDaJcSiX0"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/ethereal-2021.png",
+    "date": "May 6, 2021",
+    "title": "Ethereal 2021",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=JRsvz6pRtZE&t=454s"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "date": "May 11, 2021",
+    "title": "Filecoin Plus Day",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "date": "August 31, 2021",
+    "title": "August 2021 Notary Governance Meeting",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "/images/events/storage-provider-working-group.png",
+    "date": "August 25, 2021",
+    "title": "Storage Provider Working Group Meeting",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=zGUIUVN75gA"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "img": "",
+    "date": "Mar 5, 2021",
+    "title": "GBBC Virtual Members Forum with Marta Belcher, Board Chair at the Filecoin Foundation",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "date": "April 13, 2021",
+    "title": "April 2021 Notary Governance Meeting",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=BIvFtwCeOjU"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "/images/events/filecoin-club.png",
+    "img_background_position": "left center",
+    "date": ["October 1, 2021", "December 31, 2021"],
+    "title": "Filecoin Club",
+    "description": "Encode Club, a community of university students, researchers, and developers building in blockchain, is introducing Filecoin Club to educate the next generation of students about Filecoin’s technology.",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "ticket",
+      "text": "Buy your tickets",
+      "url": "https://www.encode.club/filecoin-club"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "date": ["August 1, 2021", "October 31, 2021"],
+    "title": "Asia Hackathon Season 2021",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://events.filecoin.io/asia-hackathon-season"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "date": ["July 30, 2021", "August 20, 2021"],
+    "title": "HackFS",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.youtube.com/watch?v=RWxd9X2bKfo"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["July 8, 2021", "August 20, 2021"],
+    "title": "Hackathon Browsers 3000",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://events.protocol.ai/2021/browsers3000/"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["July 1, 2021", "August 31, 2021"],
+    "title": "NFT Vision Hack",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.nftvisionhack.com/"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "img": "",
+    "date": ["May 1, 2021", "July 18, 2021"],
+    "title": "Filecoin Grant Global Online Hackathon",
+    "cta": {
+      "type": "B",
+      "action": "a",
+      "icon": "play",
+      "text": "Watch Recording",
+      "url": "https://www.eventbrite.com/e/share-115k-prizes-filecoin-grant-online-hackathon-may-1-july-18-registration-159309796891"
+    }
+  }
+]

@@ -1,0 +1,404 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "page_content": [
+    [
+      {
+        "id": "hero",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_sm-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Grants",
+          "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.",
+          "ctas": [
+            {
+              "type": "B",
+              "action": "nuxt-link",
+              "icon": "info",
+              "text": "Request Info",
+              "url": "/get-involved"
+            }
+          ]
+        },
+        "right": {
+          "type": "image_block",
+          "src": "images/page-grants/intro.png",
+          "cols": {
+            "num": "col-6_sm-12",
+            "push_left": "off-2_sm-1"
+          },
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [5, 6],
+                "offset": {
+                  "mini": 0.75
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "gallery-1-header",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_sm-6_mi-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Developer Grants",
+          "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web."
+        }
+      },
+      {
+        "id": "gallery-1-cards",
+        "left": {
+          "type": "image_block",
+          "src": "icons/hands-opening.png",
+          "cols": {
+            "num": "col-3_mi-6",
+            "push_left": "off-2_mi-3"
+          }
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-3_sm-2_mi-1"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "icons/money-bag.png",
+              "img_size": "full",
+              "title": "Open Grants",
+              "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
+            },
+            {
+              "type": "A",
+              "img": "icons/pencil.png",
+              "img_size": "full",
+              "title": "Requests for Proposal",
+              "description": "These grants generally have clearly scoped deliverables, milestones, and funding limits. While there is some flexibility in RFP deliverables, we expect teams will deliver what is in scope in the RFP."
+            },
+            {
+              "type": "A",
+              "img": "icons/money-sign.png",
+              "img_size": "full",
+              "title": "Microgrants",
+              "description": "The Filecoin Foundation awards grants to early-stage projects that have developed initial protocols using Filecoin."
+            },
+            {
+              "type": "A",
+              "description": "<span class='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us.</a></span>"
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "banner-1",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-10_mi-10",
+            "push_left": "off-2_mi-2"
+          },
+          "label": "Our Mission",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6],
+                "offset": {
+                  "mini": 1.375
+                },
+                "reverse": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "gallery-2",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Community Grants",
+          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open-source communities.<br><br>Our initiatives seek to:"
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-4_sm-2_mi-1"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "icons/arrow-up.png",
+              "img_size": "full",
+              "title": "Accelerate the adoption of open, decentralized technologies",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "img": "icons/multi-circle.png",
+              "img_size": "full",
+              "title": "Build communities that are mutually supportive and self-sustaining",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "img": "icons/speech-bubble.png",
+              "img_size": "full",
+              "title": "Communicate the benefits of decentralization and open sourcing to wider audiences",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "description": "For more information on grants, <a href='mailto:devgrants@fil.org'>email us.</a>"
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "tabbed-slider",
+        "type": "custom",
+        "component": "TabbedSlider",
+        "props": {
+          "tabs": {
+            "cols": {
+              "num": "col-3_sm-10_ti-12",
+              "push_left": "off-0_sm-1_ti-0"
+            }
+          },
+          "card": {
+            "cols": {
+              "num": "col-7_md-6_sm-10_mi-10",
+              "push_left": "off-1_md-2_sm-1_mi-2"
+            }
+          },
+          "slides": [
+            {
+              "label": "Support",
+              "icon": "icons/crest.png",
+              "description": "There are stakeholders in the Filecoin ecosystem: Storage Providers, Developers, Researchers, Token Holders, Clients, Users. We want to support them all."
+            },
+            {
+              "label": "Growth",
+              "icon": "icons/hands-raised.png",
+              "description": "We accelerate the growth of the Filecoin ecosystem through partnerships and collaborations."
+            },
+            {
+              "label": "Governance",
+              "icon": "icons/multi-person.png",
+              "description": "As an open-source project, it is vital that Filecoin has transparent, community-driven governance. The Foundation facilitates the governance process, including the Filecoin Improvement Proposals process."
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "info-1",
+        "left": {
+          "type": "video_block",
+          "cols": {
+            "num": "col-6_sm-10",
+            "push_left": "off-1"
+          },
+          "preview_image": "/images/page-grants/grants-video-preview.png",
+          "url": "https://www.youtube.com/watch?v=-kxNpRiEd_c"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_sm-10",
+            "push_left": "off-1"
+          },
+          "label": "What We Do",
+          "subheading": "Filecoin Plus: Incentivize Useful Storage on Filecoin",
+          "description": "A brief overview of the motivation, principles, and mechanisms of Filecoin Plus, and how it incentivizes useful storage on the network.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "dark",
+              "action": "a",
+              "text": "Learn More",
+              "target": "_blank",
+              "url": "//docs.filecoin.io/store/filecoin-plus"
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "explore-panel",
+        "grid": ["middle"],
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Learn how to get involved in the Filecoin community",
+          "description": "The Filecoin community includes thousands of developers, technologists, users, and enthusiasts all over the world.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "dark",
+              "action": "nuxt-link",
+              "text": "Learn More",
+              "url": "/get-involved"
+            }
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6_sm-10_mi-8_ti-10",
+            "push_left": "off-2_mi-3_ti-2"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "/icons/calendar.png",
+              "img_size": "regular",
+              "title": "Attend an event",
+              "description": "Check out past and upcoming events"
+            },
+            {
+              "type": "A",
+              "img": "/icons/multi-person.png",
+              "img_size": "regular",
+              "title": "Join a meetup group",
+              "description": "Find a group of people in your area who connect regularly"
+            },
+            {
+              "type": "A",
+              "img": "/icons/speech-bubble.png",
+              "img_size": "regular",
+              "title": "Contribute to the Filecoin project",
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs"
+            },
+            {
+              "type": "A",
+              "img": "/icons/hands-raised.png",
+              "img_size": "regular",
+              "title": "Participate online",
+              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
+            },
+            {
+              "type": "A",
+              "img": "/icons/tool.png",
+              "img_size": "regular",
+              "title": "Become a storage provider or builder",
+              "description": "Dive right in and become an essential part of the ecosystem"
+            },
+            {
+              "type": "A",
+              "img": "/icons/magnifying-glass.png",
+              "img_size": "regular",
+              "title": "Learn more on ProtoSchool",
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool"
+            }
+          ],
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6],
+                "offset": {
+                  "mini": 1.375
+                },
+                "reverse": true,
+                "border-radius": 5
+              }
+            }
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "events-hackathons",
+        "type": "custom",
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4_mi-10"
+            },
+            "heading": "Events & Hackathons"
+          },
+          "events": {
+            "cols": {
+              "num": "col-8_sm-10_ti-11",
+              "push_left": "off-3_sm-2_mi-1"
+            },
+            "cards": [
+              {
+                "type": "D",
+                "date": "October 20, 2021",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                }
+              },
+              {
+                "type": "D",
+                "date": "October 26, 2021",
+                "title": "Filecoin Plus Community Governance Call",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  ]
+}

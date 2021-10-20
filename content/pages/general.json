@@ -1,0 +1,220 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "social": [
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
+      "component": "GithubIcon",
+      "label": "GitHub"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.reddit.com/r/filecoin/",
+      "component": "RedditIcon",
+      "label": "Reddit"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://twitter.com/FilFoundation",
+      "component": "TwitterIcon",
+      "label": "Twitter"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.linkedin.com/company/68020800/admin/",
+      "component": "LinkedInIcon",
+      "label": "LinkedIn"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA",
+      "component": "YoutubeIcon",
+      "label": "YouTube"
+    }
+  ],
+  "navigation": [
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/about",
+      "text": "About",
+      "description": "<img src='icons/multi-person.png' class='image'></img><span class='title'>About</span><p class='text'>The Foundation coordinates and supports the creation and improvement of open source software and open protocols for decentralized data storage and retrieval networks.</p>",
+      "links": [
+        {
+          "url": "/about/#panel_1",
+          "text": "Board of Directors"
+        },
+        {
+          "url": "/about/#explore_1",
+          "text": "Advisors"
+        },
+        {
+          "url": "/about/#dive_deeper_intro",
+          "text": "Community"
+        },
+        {
+          "url": "//filecoinfoundation.medium.com",
+          "target": "_blank",
+          "text": "Blog"
+        }
+      ]
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/governance",
+      "text": "Governance",
+      "description": "<img src='icons/shield.png' class='image'></img><span class='title'>Governance</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "links": [
+        {
+          "url": "/governance/#panel-1-title",
+          "text": "Improving Filecoin"
+        },
+        {
+          "url": "/governance/#panel-2-title",
+          "text": "Security"
+        },
+        {
+          "url": "/governance/#panel-3-title",
+          "text": "Filecoin Plus"
+        },
+        {
+          "url": "/governance/#panel-4-title",
+          "text": "Get Involved"
+        }
+      ]
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/ecosystem",
+      "text": "Ecosystem",
+      "description": "<img src='icons/multi-circle.png' class='image'></img><span class='title'>Ecosystem</span><p class='text'>We support a vibrant decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.</p>",
+      "links": [
+        {
+          "action": "nuxt-link",
+          "url": "/ecosystem/#panel_1",
+          "text": "Ecosystem Advisors"
+        },
+        {
+          "action": "nuxt-link",
+          "url": "/ecosystem/#resources",
+          "text": "Resources"
+        }
+      ]
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/grants",
+      "text": "Grants",
+      "description": "<img src='icons/money-bag.png' class='image'></img><span class='title'>Grants</span><p class='text'>The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.</p>",
+      "links": [
+        {
+          "url": "/grants/#section-2",
+          "text": "Developer Grants"
+        },
+        {
+          "url": "/grants/#gallery-1-cards",
+          "text": "Request for Proposals"
+        },
+        {
+          "url": "/grants/#section-4",
+          "text": "Community Grants"
+        }
+      ]
+    },
+    {
+      "type": "C",
+      "theme": "light",
+      "action": "nuxt-link",
+      "url": "/get-involved",
+      "text": "Get Involved",
+      "description": "<img src='icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
+      "links": [
+        {
+          "url": "/get-involved/#careers_intro",
+          "text": "Careers"
+        },
+        {
+          "url": "/get-involved/#get_involved",
+          "text": "Resources"
+        },
+        {
+          "url": "#site-footer",
+          "text": "Contact Us"
+        },
+        {
+          "url": "/events",
+          "text": "Events"
+        }
+      ],
+      "sidebar": true
+    }
+  ],
+  "footer": {
+    "text": [
+      "Contact Us",
+      "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
+      "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
+    ],
+    "links": [
+      {
+        "type": "F",
+        "theme": "dark",
+        "action": "a",
+        "url": "//ffdweb.org",
+        "target": "_blank",
+        "text": "Filecoin Foundation for the Decentralized Web"
+      },
+      {
+        "type": "F",
+        "theme": "dark",
+        "action": "a",
+        "target": "_blank",
+        "url": "//forkast.news/podcast/the-future-rules/",
+        "text": "Future Rules Podcast"
+      }
+    ],
+    "panel_bottom": {
+      "links": [
+        {
+          "type": "F",
+          "action": "nuxt-link",
+          "url": "/policy",
+          "text": "Data & Privacy Policy"
+        },
+        {
+          "type": "F",
+          "action": "nuxt-link",
+          "url": "/terms",
+          "text": "Terms of Use"
+        }
+      ],
+      "copyright_text": "Content on this site is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a>."
+    }
+  }
+}

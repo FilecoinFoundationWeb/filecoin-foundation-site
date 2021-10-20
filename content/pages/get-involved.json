@@ -1,0 +1,200 @@
+{
+  "seo": {
+    "title": "Filecoin Foundation",
+    "description": "Primary website for the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": ""
+  },
+  "page_content": [
+    [
+      {
+        "id": "hero",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-5_sm-8_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "Get <br /> Involved",
+          "subheading": "The <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_mi-5_ti-7",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "src": "/images/page-get-involved/raised-hands-large.png"
+        }
+      },
+      {
+        "id": "careers_intro",
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-7_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "Careers",
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
+        }
+      },
+      {
+        "id": "careers_list",
+        "grid": ["noGutter"],
+        "left": {
+          "type": "card_list_block",
+          "cols": {
+            "num": "col-12_md-11",
+            "push_left": "off-1"
+          },
+          "load_more_button": {
+            "type": "E",
+            "action": "load",
+            "theme": "dark",
+            "text": "See more"
+          },
+          "display": {
+            "initial": 6,
+            "next": 6
+          },
+          "cards": [
+            {
+              "type": "D",
+              "date": "September 4, 2021",
+              "label": "San Francisco, Remote",
+              "title": "Communications Associate",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
+              }
+            },
+            {
+              "type": "D",
+              "date": "September 20, 2021",
+              "label": "San Francisco, Remote",
+              "title": "Developer Grants Coordinator",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/d7fa677a-5d92-4043-929c-56d6cb7bc73b"
+              }
+            },
+            {
+              "type": "D",
+              "date": "October 8, 2021",
+              "label": "San Francisco, Remote",
+              "title": "Program Manager, Filecoin Developer Grants",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "get_involved",
+        "grid": ["middle"],
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_md-4_mi-10",
+            "push_left": "off-1"
+          },
+          "label": "Get Involved",
+          "heading": "How to get involved and key links",
+          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "a",
+              "theme": "dark",
+              "target": "_blank",
+              "text": "Join the Community",
+              "url": "//filecoin.io/slack"
+            }
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6",
+            "push_left": "off-2_md-1_mi-3"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "/icons/calendar.png",
+              "img_size": "regular",
+              "title": "Attend an event",
+              "description": "Join or watch a Filecoin ecosystem event"
+            },
+            {
+              "type": "A",
+              "img": "/icons/multi-person.png",
+              "img_size": "regular",
+              "title": "Join a meetup group",
+              "description": "Find a group of people in your area who connect regularly"
+            },
+            {
+              "type": "A",
+              "img": "/icons/speech-bubble.png",
+              "img_size": "regular",
+              "title": "Contribute to the Filecoin project",
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs"
+            },
+            {
+              "type": "A",
+              "img": "/icons/hands-raised.png",
+              "img_size": "regular",
+              "title": "Participate online",
+              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
+            },
+            {
+              "type": "A",
+              "img": "/icons/tool.png",
+              "img_size": "regular",
+              "title": "Become a storage provider or builder",
+              "description": "Dive right in and become an essential part of the ecosystem"
+            },
+            {
+              "type": "A",
+              "img": "/icons/magnifying-glass.png",
+              "img_size": "regular",
+              "title": "Learn more on ProtoSchool",
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool"
+            }
+          ],
+          "customizations": [
+            {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": [8, 6],
+                "offset": {
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  ]
+}
