@@ -168,7 +168,7 @@ $backgroundLayer__Height: 12.25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 5.75rem;
   @include small {
     flex-direction: column;
@@ -179,6 +179,7 @@ $backgroundLayer__Height: 12.25rem;
 .panel-bottom-navigation {
   display: flex;
   flex-direction: row;
+  align-items: center;
   @include small {
     flex-wrap: wrap;
   }
@@ -196,6 +197,7 @@ $backgroundLayer__Height: 12.25rem;
 
 ::v-deep .copyright-text {
   @include fontSize_Small;
+  @include leading_Regular;
   opacity: 0.5;
   padding-left: 3rem;
   @include small {

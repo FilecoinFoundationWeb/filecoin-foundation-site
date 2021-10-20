@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-about">
+  <div class="page page-terms">
 
     <div class="main-content">
 
@@ -70,19 +70,16 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
-// import CloneDeep from 'lodash/cloneDeep'
 
 import TermsPageData from '@/content/pages/terms.json'
 
-// import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PageIndex',
+  name: 'PageTerms',
 
   components: {
-    // PageSection,
     BackgroundLayers
   },
 
@@ -121,8 +118,6 @@ $backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset__De
 $backgroundLayers__Left__Desktop: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
 $backgroundLayers__Left__Medium: 1rem * 6;
 $backgroundLayers__Left__Mini: 0.25rem * 6;
-
-$offsetPadding: 20rem;
 
 // ///////////////////////////////////////////////////////////////////// General
 .page-terms {
@@ -163,7 +158,6 @@ p a {
 .main-content {
   position: relative;
   padding-top: 7rem; // 1.75rem * 4
-  padding-bottom: $offsetPadding;
   margin-top: $backgroundLayers__Offset__Desktop;
   @include medium {
     margin-top: $backgroundLayers__Offset__Medium;
@@ -171,10 +165,6 @@ p a {
   @include mini {
     margin-top: $backgroundLayers__Offset__Mini;
     padding-top: 5rem;
-    padding-bottom: 15rem;
-  }
-  @include tiny {
-    padding-bottom: 10rem;
   }
   &:before {
     content: '';
@@ -182,7 +172,7 @@ p a {
     top: 0;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% - 12.5rem);
+    height: calc(100% + 5.5rem);
     background-color: $hawkesBlue;
     border-radius: 12.75rem 0 0 12.75rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
@@ -199,7 +189,6 @@ p a {
     @include tiny {
       border-top-left-radius: 5rem;
       border-bottom-left-radius: 4.75rem;
-      height: calc(100% - 7.5rem);
     }
   }
 }
@@ -210,7 +199,7 @@ p a {
   top: 0;
   left: $backgroundLayers__Left__Desktop;
   width: 100%;
-  height: calc(100% + #{$backgroundLayers__Top / 2} - #{$offsetPadding});
+  height: calc(100% + #{$backgroundLayers__Top / 2} - 2rem);
   @include medium {
     left: $backgroundLayers__Left__Medium;
   }
@@ -218,7 +207,6 @@ p a {
     left: $backgroundLayers__Left__Mini;
   }
   @include tiny {
-    height: calc(100% + #{$backgroundLayers__Top / 2} - 15rem);
     .layer {
       border-top-left-radius: 5rem !important;
       border-bottom-left-radius: 5rem !important;
