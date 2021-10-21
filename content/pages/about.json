@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Filecoin Foundation - About",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "About - Filecoin Foundation",
+    "description": "The Filecoin Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
   },
   "og": {
-    "site_name": "Filecoin Foundation - About",
+    "site_name": "About - Filecoin Foundation",
     "url": "https://fil.org/about",
     "type": "website",
     "image": "/images/open-graph.png"
