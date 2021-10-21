@@ -186,7 +186,6 @@ export default {
       position: fixed;
       z-index: 10000;
       top: 0;
-      overflow-y: scroll;
       width: 100%;
     }
   }
