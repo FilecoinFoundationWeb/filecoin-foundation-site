@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Filecoin Foundation - Grants",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "Grants - Filecoin Foundation",
+    "description": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem."
   },
   "og": {
-    "site_name": "Filecoin Foundation - Grants",
+    "site_name": "Grants - Filecoin Foundation",
     "url": "https://fil.org/grants",
     "type": "website",
     "image": "/images/open-graph.png"
