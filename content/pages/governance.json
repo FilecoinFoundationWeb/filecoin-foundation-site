@@ -439,6 +439,8 @@
                 "type": "D",
                 "date": "October 20, 2021",
                 "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "img_type": "background_image",
                 "cta": {
                   "type": "B",
                   "action": "a",
