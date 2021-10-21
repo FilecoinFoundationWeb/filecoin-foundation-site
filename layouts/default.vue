@@ -22,6 +22,12 @@ export default {
   components: {
     SiteNavigation,
     SiteFooter
+  },
+
+  mounted () {
+    const hash = this.$route.hash.replace('#', '')
+    const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
+    this.$scrollToElement(element, 0, -50)
   }
 }
 </script>
