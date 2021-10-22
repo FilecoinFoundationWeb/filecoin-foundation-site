@@ -165,6 +165,10 @@ export default {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
     @include small {
       width: 100vw;
+      border-radius: 40vw 3rem 3rem 40vw;
+    }
+    @include mini {
+      border-radius: 50vw 3rem 3rem 50vw;
     }
   }
   [class~="grid"], [class*="grid-"], [class*="grid_"] {
@@ -236,7 +240,11 @@ export default {
     }
   }
   a {
+    @include fontWeight_Medium;
     color: $azureRadiance;
+    &.lighter {
+      color: $jordyBlue;
+    }
   }
 }
 

@@ -354,11 +354,16 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
       padding-left: 0.75rem;
     }
     li {
+      margin: 0.5rem 0;
       list-style: none;
       @include fontSize_Regular;
       @include fontWeight_Medium;
       @include leading_MediumLarge;
       letter-spacing: $letterSpacing_Large;
+      cursor: pointer;
+      &:last-child {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
@@ -368,33 +373,6 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   margin-bottom: 1.5rem;
   @include mini {
     margin-bottom: 0.5rem;
-  }
-  .column-content {
-    &.left {
-      .description {
-        position: sticky;
-        top: 10px;
-        p {
-          margin: 0.625rem 0;
-          @include fontSize_ExtraLarge;
-          @include fontWeight_Medium;
-          letter-spacing: $letterSpacing_Regular;
-          line-height: $leading_Regular;
-        }
-        ul {
-          padding-left: 0.75rem;
-          margin: 0;
-        }
-        li {
-          margin: 0.625rem 0;
-          @include fontSize_Regular;
-          @include fontWeight_Medium;
-          letter-spacing: $letterSpacing_Large;
-          line-height: $leading_MediumLarge;
-          list-style: none;
-        }
-      }
-    }
   }
 }
 

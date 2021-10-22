@@ -26,7 +26,7 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/images/ecosystem/meeting2.png",
+          "src": "/images/ecosystem/hero-image@2x.png",
           "cols": {
             "num": "col-5_md-9_mi-10",
             "push_left": "off-1_md-2_mi-1"
