@@ -51,7 +51,7 @@
             "push_left": "off-5_mi-4"
           },
           "label": "Our Mission",
-          "description": "The foundation’/s key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -207,7 +207,7 @@
             "push_left": "off-1_sm-2"
           },
           "label": "Advisors",
-          "heading": "The Filecoin Foundation is guided by an extraordinary and accomplished group of advisers",
+          "heading": "The Filecoin Foundation is guided by an extraordinary and accomplished group of advisors",
           "description": "Leaders from across web3 and the open-source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a target='_blank' href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' style='color: white;'>our talks</a> featuring contributions from our advisory panel and be part of the conversation on <a href='https://filecoinproject.slack.com/messages/CEHHJNJS3/' style='color: white;' target='_blank'>Filecoin's Slack.</a>"
         },
         "right": {
