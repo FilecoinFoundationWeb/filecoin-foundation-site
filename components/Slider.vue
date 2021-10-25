@@ -68,9 +68,7 @@ export default {
 
   methods: {
     slideDimensions () {
-      console.log('func')
       if (this.$parent.$refs.display) {
-        console.log('hit')
         this.$nextTick(() => {
           const rect = this.$parent.$refs.display.getBoundingClientRect()
           this.slideWidth = Math.round(rect.width)
