@@ -94,8 +94,6 @@ const detectPanelOutsideViewport = (instance) => {
   const rect = instance.$refs.firstPane.getBoundingClientRect()
   if (rect.left + rect.width > window.innerWidth) {
     instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
-  } else if (instance.panelLeft !== '50%') {
-    instance.panelLeft = '50%'
   }
 }
 
@@ -238,7 +236,7 @@ export default {
     .nav-link.top-level .arrow {
       visibility: visible;
       opacity: 1;
-      transition: 250ms ease-in;
+      transition: transform 250ms ease-in, opacity 250ms ease-out;
     }
     .nav-dropdown {
       transform: translate(-50%, 0rem);
@@ -257,7 +255,7 @@ export default {
     opacity: 1;
     transform: translateY(0rem);
     z-index: 0;
-    transition: 250ms ease-in;
+    transition: transform 250ms ease-in, opacity 250ms ease-out;
   }
   .click-toggle {
     display: flex;
@@ -283,7 +281,7 @@ export default {
     opacity: 1;
     transform: translateY(0rem);
     z-index: 0;
-    transition: 350ms ease-in-out;
+    transition: transform 350ms ease-in-out, opacity 250ms ease-out;
   }
 }
 
@@ -309,7 +307,7 @@ li {
   opacity: 0;
   transform: translate(-50%, 1rem);
   z-index: -1;
-  transition: 250ms ease-out;
+  transition: transform 250ms ease-out, opacity 250ms ease-out;
 }
 
 ::v-deep .nav-dropdown {

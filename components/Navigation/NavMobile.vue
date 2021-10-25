@@ -1,14 +1,16 @@
 <template>
   <nav class="site-nav" role="navigation">
 
-    <div class="top-panel">
+    <div :class="['top-panel', { 'top-open': mobilePanelOpened }]">
       <slot name="sitelogo"></slot>
 
       <slot name="action"></slot>
     </div>
 
     <div :class="[ 'mega-menu', { 'nav-panel-open': mobilePanelOpened } ]">
-      <slot name="navitems"></slot>
+      <div class="mobile-panel-wrapper">
+        <slot name="navitems"></slot>
+      </div>
     </div>
 
   </nav>
@@ -51,6 +53,7 @@ export default {
   align-items: center;
   margin-bottom: 1rem;
   width: 100%;
+  height: 100%;
   min-width: 85%;
   z-index: 1000;
   @include small {
@@ -65,7 +68,7 @@ export default {
 ::v-deep .mega-menu {
   display: block;
   position: fixed;
-  padding: 3rem 5rem 3rem 5rem;
+  // padding: 3rem 5rem 3rem 5rem;
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -77,8 +80,8 @@ export default {
   z-index: 100;
 
   // --------
-  padding: $navigationHeight 3rem 3rem 3rem;
-  padding-top: $navigationHeight !important;
+  // padding: $navigationHeight 3rem 3rem 3rem;
+  // padding-top: $navigationHeight !important;
   top: -1rem;
   height: calc(100% + 1rem);
   // --------
@@ -124,7 +127,7 @@ export default {
     }
     .title {
       @include fontWeight_Medium;
-      padding-left: 3.5rem;
+      padding-left: 3.25rem;
     }
     .text {
       display: none;
@@ -139,12 +142,13 @@ export default {
     }
     .text {
       @include leading_Large;
-      padding-left: 3.5rem;
+      padding-left: 4.5rem;
+      padding-right: 1rem;
       margin-bottom: 1rem;
       letter-spacing: $letterSpacing_Large;
     }
     ul {
-      padding-left: 3.5rem;
+      padding-left: 4.5rem;
       list-style: none;
     }
     li {
@@ -156,13 +160,12 @@ export default {
       }
     }
   }
-
 }
 
-.mobile-panel {
-  display: none;
-  &.open {
-    display: block;
-  }
-}
+// .mobile-panel {
+//   display: none;
+//   &.open {
+//     display: block;
+//   }
+// }
 </style>

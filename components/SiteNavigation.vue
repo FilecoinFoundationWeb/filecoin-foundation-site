@@ -16,7 +16,7 @@
             <template #navitems>
               <nav
                 v-if="!mobile"
-                :class="navItemsClasses">
+                class="navigation">
                 <NavDropdown
                   v-for="(link, index) in links"
                   :key="index"
@@ -29,41 +29,44 @@
                 </NavDropdown>
               </nav>
 
-              <Zero_Core__Accordion
+              <nav
                 v-if="mobile"
-                v-slot="{ active }">
-                <Zero_Core__Accordion_Section
-                  v-for="(link, index) in links"
-                  :key="index"
-                  :active="active"
-                  :selected="true"
-                  class="nav-accordion-item">
-                  <Zero_Core__Accordion_Header>
-                    <div
-                      class="mobile-nav-heading"
-                      v-html="link.description">
-                    </div>
-                  </Zero_Core__Accordion_Header>
-                  <Zero_Core__Accordion_Content>
-                    <div class="accordion-content-wrapper">
-                      <div v-html="link.description"></div>
-                      <ul v-if="Array.isArray(link.links)">
-                        <li
-                          v-for="sublink in link.links"
-                          :key="`${link.text}-${sublink.text}`">
+                class="mobile-panel">
+                <Zero_Core__Accordion
+                  v-slot="{ active }">
+                  <Zero_Core__Accordion_Section
+                    v-for="(link, index) in links"
+                    :key="index"
+                    :active="active"
+                    :selected="true"
+                    class="nav-accordion-item">
+                    <Zero_Core__Accordion_Header>
+                      <div
+                        class="mobile-nav-heading"
+                        v-html="link.description">
+                      </div>
+                    </Zero_Core__Accordion_Header>
+                    <Zero_Core__Accordion_Content>
+                      <div class="accordion-content-wrapper">
+                        <div v-html="link.description"></div>
+                        <ul v-if="Array.isArray(link.links)">
+                          <li
+                            v-for="sublink in link.links"
+                            :key="`${link.text}-${sublink.text}`">
 
-                          <Button
-                            :button="sublink"
-                            :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-                            {{ sublink.text }}
-                          </Button>
+                            <Button
+                              :button="sublink"
+                              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                              {{ sublink.text }}
+                            </Button>
 
-                        </li>
-                      </ul>
-                    </div>
-                  </Zero_Core__Accordion_Content>
-                </Zero_Core__Accordion_Section>
-              </Zero_Core__Accordion>
+                          </li>
+                        </ul>
+                      </div>
+                    </Zero_Core__Accordion_Content>
+                  </Zero_Core__Accordion_Section>
+                </Zero_Core__Accordion>
+              </nav>
             </template>
 
             <template #action>
@@ -140,10 +143,6 @@ export default {
     },
     navigationComponentType () {
       return this.mobile ? 'NavMobile' : 'NavDesktop'
-    },
-    navItemsClasses () {
-      const classes = this.mobilePanelOpen ? 'mobile-panel open' : 'mobile-planel closed'
-      return this.mobile ? classes : 'navigation'
     }
   },
 
@@ -180,12 +179,13 @@ export default {
 #site-navigation {
   position: relative;
   z-index: 1000;
+  @include small {
+  }
   &.noscroll {
     @include small {
       position: fixed;
       z-index: 10000;
       top: 0;
-      overflow-y: scroll;
       width: 100%;
     }
   }
@@ -249,13 +249,7 @@ export default {
 }
 
 ::v-deep {
-  .nav-dropdown,
-  .mega-menu {
-    // padding: 2rem 3.375rem 2rem 5.375rem;
-    background-color: $denim;
-    border: 5px solid $azureRadiance;
-    border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
-    color: $white;
+  .nav-dropdown {
     &:before {
       content: '';
       position: absolute;
@@ -267,6 +261,17 @@ export default {
       border: 5px solid $kleinBlue;
       border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
     }
+  }
+}
+
+::v-deep {
+  .nav-dropdown,
+  .mega-menu {
+    // padding: 2rem 3.375rem 2rem 5.375rem;
+    background-color: $denim;
+    border: 5px solid $azureRadiance;
+    border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+    color: $white;
     .extras {
       min-width: 15rem;
     }
@@ -312,20 +317,13 @@ export default {
   .middle,
   &:after {
     position: absolute;
-    width: 34px;
+    width: 20px;
     height: 4px;
-    background-image: url("data:image/svg+xml,<svg class='middle' xmlns='http://www.w3.org/2000/svg' width='34' height='4' viewBox='0 0 34 4'><line x2='30' transform='translate(2 2)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='2'/></svg>");
+    background-image: url("data:image/svg+xml,<svg class='middle' xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4'><line x2='16' transform='translate(2 2)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='3'/></svg>");
     transition: 300ms cubic-bezier(0.4, 0.0, 0.2, 1.0);
   }
   .middle {
     top: 9px;
-  }
-  &:after {
-    content: '';
-    top: 18px;
-    opacity: 1;
-    transform: scale(1);
-    background-image: url("data:image/svg+xml,<svg class='middle' xmlns='http://www.w3.org/2000/svg' width='34' height='4' viewBox='0 0 34 4'><line x2='20' transform='translate(12 2)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='2'/></svg>");
   }
   &.close-icon {
     .top {
@@ -355,9 +353,59 @@ export default {
 }
 
 // ////////////////////////////////////////////////////// mobile navigation menu
-// ::v-deep .mega-menu {
-//
-//
-// }
+::v-deep .site-nav {
+  @include small {
+    background-color: $blackPearl;
+  }
+}
+
+::v-deep .top-panel {
+  transition: 200ms ease;
+  transition-delay: 200ms;
+  background-color: transparent;
+  &.top-open {
+    @include small {
+      background-color: $blackPearl;
+    }
+  }
+}
+
+::v-deep .mega-menu {
+  left: 0;
+  background-color: $denim;
+  border: 5px solid $azureRadiance;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
+}
+
+::v-deep .mobile-panel-wrapper {
+  display: block;
+  overflow: auto;
+  position: relative;
+  width: calc(100% - 10px);
+  left: 5px;
+  top: -10px;
+  background-color: $blackPearl;
+  border: 5px solid $kleinBlue;
+  border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: $blackPearl;
+    z-index: 100;
+  }
+}
+
+::v-deep .mobile-panel {
+  display: block;
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 3rem 2rem 2rem 3rem;
+  padding-top: calc(6.25rem + 15px);
+}
 
 </style>
