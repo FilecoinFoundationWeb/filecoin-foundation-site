@@ -26,6 +26,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=B8lDaJcSiX0"
     }
   },
@@ -40,6 +41,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=JRsvz6pRtZE&t=454s"
     }
   },
@@ -53,6 +55,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
     }
   },
@@ -66,6 +69,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
     }
   },
@@ -80,6 +84,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=zGUIUVN75gA"
     }
   },
@@ -94,6 +99,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM"
     }
   },
@@ -107,6 +113,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=BIvFtwCeOjU"
     }
   },
@@ -123,6 +130,7 @@
       "action": "a",
       "icon": "ticket",
       "text": "Buy your tickets",
+      "target": "_blank",
       "url": "https://www.encode.club/filecoin-club"
     }
   },
@@ -136,6 +144,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://events.filecoin.io/asia-hackathon-season"
     }
   },
@@ -149,6 +158,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.youtube.com/watch?v=RWxd9X2bKfo"
     }
   },
@@ -163,6 +173,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://events.protocol.ai/2021/browsers3000/"
     }
   },
@@ -177,6 +188,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.nftvisionhack.com/"
     }
   },
@@ -191,6 +203,7 @@
       "action": "a",
       "icon": "play",
       "text": "Watch Recording",
+      "target": "_blank",
       "url": "https://www.eventbrite.com/e/share-115k-prizes-filecoin-grant-online-hackathon-may-1-july-18-registration-159309796891"
     }
   }
