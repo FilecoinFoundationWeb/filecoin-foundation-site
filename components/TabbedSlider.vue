@@ -11,7 +11,9 @@
           :class="tabs.cols.num"
           :data-push-left="tabs.cols.push_left"
           :data-push-right="tabs.cols.push_right">
-          <div class="column-content tabs">
+          <div
+            ref="selector"
+            class="column-content tabs">
             <div
               v-for="slide in slides"
               :key="slide.label"
@@ -29,9 +31,12 @@
           :class="card.cols.num"
           :data-push-left="card.cols.push_left"
           :data-push-right="card.cols.push_right">
-          <div class="column-content card">
+          <div
+            class="column-content card"
+            :style="`height: ${content.height}px;`">
             <div
               v-if="content.description"
+              ref="display"
               class="card-content">
               <div class="image-wrapper">
                 <img :src="content.icon"></img>
@@ -194,11 +199,12 @@ export default {
   }
 
   &.card {
-    padding: 4rem 0 3rem 0rem;
     position: relative;
+    transition: 200ms ease;
     .card-content {
       display: flex;
       flex-direction: row;
+      padding: 4rem 0;
       transition: 300ms ease;
       @include mini {
         flex-direction: column;
