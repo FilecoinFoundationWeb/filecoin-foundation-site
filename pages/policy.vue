@@ -9,7 +9,7 @@
 
             <h1>Privacy policy</h1>
 
-            <h2>Filecoin Foundation respects your privacy. Here’s our privacy policy for your use of the Services (as defined in our Terms of Service and your use of the fil.org website.</h2>
+            <h2>Filecoin Foundation respects your privacy. Here’s our privacy policy for your use of the Services (as defined in our Terms of Service) and your use of the fil.org website.</h2>
 
             <h2>Personally Identifiable Information</h2>
 
