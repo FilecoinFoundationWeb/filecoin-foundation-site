@@ -157,6 +157,9 @@
           "ctas": [
             {
               "type": "A",
+              "action": "a",
+              "theme": "dark",
+              "target": "_blank",
               "text": "Join the Community",
               "url": "//filecoin.io/slack"
             }
