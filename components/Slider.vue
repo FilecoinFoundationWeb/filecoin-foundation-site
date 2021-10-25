@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// =================================================================== Functions
 // ====================================================================== Export
 export default {
   name: 'Slider',
@@ -22,6 +23,14 @@ export default {
     }
   },
 
+  data () {
+    return {
+      slideWidth: 0,
+      slideHeight: 0,
+      resize: false
+    }
+  },
+
   computed: {
     slides () {
       const data = {}
@@ -32,9 +41,42 @@ export default {
     },
     content () {
       if (this.slides.hasOwnProperty(this.selected)) {
-        return this.slides[this.selected]
+        const content = this.slides[this.selected]
+        content.width = this.slideWidth
+        content.height = this.slideHeight
+        return content
       }
       return false
+    }
+  },
+
+  watch: {
+    selected () {
+      this.slideDimensions()
+    }
+  },
+
+  mounted () {
+    setTimeout(() => { this.slideDimensions() }, 200)
+    this.resize = () => { this.slideDimensions() }
+    window.addEventListener('resize', this.resize)
+  },
+
+  beforeDestroy () {
+    if (this.resize) { window.removeEventListener('resize', this.resize) }
+  },
+
+  methods: {
+    slideDimensions () {
+      console.log('func')
+      if (this.$parent.$refs.display) {
+        console.log('hit')
+        this.$nextTick(() => {
+          const rect = this.$parent.$refs.display.getBoundingClientRect()
+          this.slideWidth = Math.round(rect.width)
+          this.slideHeight = Math.round(rect.height)
+        })
+      }
     }
   }
 }
