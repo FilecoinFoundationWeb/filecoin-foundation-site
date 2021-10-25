@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Filecoin Foundation - Events",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "Events - Filecoin Foundation",
+    "description": "Browse official events, talks and hackathons from the Filecoin Foundation."
   },
   "og": {
-    "site_name": "Filecoin Foundation - Events",
+    "site_name": "Events - Filecoin Foundation",
     "url": "https://fil.org/events",
     "type": "website",
     "image": "/images/open-graph.png"

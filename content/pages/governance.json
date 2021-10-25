@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Filecoin Foundation - Governance",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "Governance - Filecoin Foundation",
+    "description": "As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
   },
   "og": {
-    "site_name": "Filecoin Foundation - Governance",
+    "site_name": "Governance - Filecoin Foundation",
     "url": "https://fil.org/governance",
     "type": "website",
     "image": "/images/open-graph.png"
@@ -439,6 +439,8 @@
                 "type": "D",
                 "date": "October 20, 2021",
                 "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "img_type": "background_image",
                 "cta": {
                   "type": "B",
                   "action": "a",

@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Filecoin Foundation - Home",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "Home - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone."
   },
   "og": {
-    "site_name": "Filecoin Foundation - Home",
+    "site_name": "Home - Filecoin Foundation",
     "url": "https://fil.org",
     "type": "website",
     "image": "/images/open-graph.png"
@@ -389,6 +389,8 @@
                 "type": "D",
                 "date": "October 20, 2021",
                 "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "img_type": "background_image",
                 "cta": {
                   "type": "B",
                   "action": "a",
