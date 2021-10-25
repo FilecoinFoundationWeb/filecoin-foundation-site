@@ -158,7 +158,7 @@
             {
               "type": "A",
               "action": "a",
-              "theme": "dark",
+              "theme": "light",
               "target": "_blank",
               "text": "Join the Community",
               "url": "//filecoin.io/slack"
