@@ -52,7 +52,7 @@
       </div>
 
       <div
-        v-if="description && type !== 'B' && type !== 'A'"
+        v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
         class="panel-right">
         <div
           class="description"
@@ -374,6 +374,87 @@ export default {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .cta {
+    margin-top: 0.5rem;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] E
+.card.type__E {
+  @include borderRadius_Large;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 36rem;
+  margin: 0 0.5rem 3rem 0.5rem !important;
+  width: 30%;
+  padding: 0.25rem;
+  color: $blackPearl;
+  background-color: $white;
+  &:not(.with-image) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .content {
+      height: auto;
+    }
+  }
+  .image {
+    @include borderRadius_Large;
+    display: block;
+    height: 16.25rem;
+    margin-bottom: 4rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    @include mini {
+      margin-bottom: 2rem;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: calc(100% - 16.25rem - 4rem);
+    padding: 2.5rem;
+    padding-top: 0;
+    @include mini {
+      height: calc(100% - 16.25rem - 2rem);
+    }
+  }
+  .panel-right {
+    display: none;
+  }
+  .date,
+  .label {
+    @include fontSize_Small;
+    @include fontWeight_Bold;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .date-large {
+    @include fontWeight_Bold;
+    @include fontSize_ExtraExtraLarge;
+    padding: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+  .title {
+    @include fontSize_Regular;
+    @include fontWeight_SemiBold;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+    color: $kleinBlue;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .description {
+    @include fontSize_Small;
+    @include fontWeight_Regular;
+    @include leading_Medium;
+    letter-spacing: $letterSpacing_Large;
   }
   .cta {
     margin-top: 0.5rem;

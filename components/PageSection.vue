@@ -55,6 +55,7 @@ import TextBlock from '@/components/TextBlock'
 import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
+import PaginatedCards from '@/components/PaginatedCards'
 import CardListBlock from '@/components/CardListBlock'
 import FloatingMenu from '@/components/FloatingMenu'
 import SocialIcons from '@/components/SocialIcons'
@@ -71,6 +72,7 @@ export default {
     ImageBlock,
     VideoBlock,
     SliderBlock,
+    PaginatedCards,
     CardListBlock,
     FloatingMenu,
     SocialIcons,
@@ -117,6 +119,7 @@ export default {
         case 'image_block' : name = 'ImageBlock'; break
         case 'video_block' : name = 'VideoBlock'; break
         case 'slider_block' : name = 'SliderBlock'; break
+        case 'paginated_cards' : name = 'PaginatedCards'; break
         case 'card_list_block' : name = 'CardListBlock'; break
       }
       return name
