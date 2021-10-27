@@ -26,8 +26,12 @@ export default {
 
   mounted () {
     const hash = this.$route.hash.replace('#', '')
-    const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
-    this.$scrollToElement(element, 0, -50)
+    if (hash) {
+      const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
+      if (element) {
+        this.$scrollToElement(element, 0, -50)
+      }
+    }
   }
 }
 </script>
