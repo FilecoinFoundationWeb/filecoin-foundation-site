@@ -14,10 +14,10 @@
       <div class="grid">
         <div class="col-6" data-push-left="off-2">
           <Zero_Core__FilterBar
-            :filter-value="filterValue"
-            id="zero-filter-bar">
+            id="zero-filter-bar"
+            :filter-value="filterValue">
             <template #icon>
-              <img src="~assets/svgs/searchicon.svg"/>
+              <img src="~assets/svgs/searchicon.svg" />
             </template>
           </Zero_Core__FilterBar>
         </div>
@@ -368,6 +368,5 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     border: none;
   }
 }
-
 
 </style>
