@@ -29,7 +29,7 @@
                 </NavDropdown>
               </nav>
 
-              <nav
+              <Zero_Core__Accordion
                 v-if="mobile"
                 v-slot="{ active }">
                 <Zero_Core__Accordion_Section
@@ -397,8 +397,10 @@ export default {
   overflow: auto;
   position: relative;
   width: calc(100% - 10px);
+  min-height: calc(100% + 5px);
   left: 5px;
-  top: -10px;
+  top: -5px;
+  padding: $navigationHeight 2.5rem 2.5rem 2.5rem;
   background-color: $blackPearl;
   border: 5px solid $kleinBlue;
   border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
