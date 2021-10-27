@@ -48,11 +48,10 @@
                     <div class="accordion-content-wrapper">
                       <div v-html="link.description"></div>
                       <ul v-if="Array.isArray(link.links)">
-                        <li>
+                        <li @click="toggleMobileNav">
                           <Button
                             :button="convertMainLinkToSublink(link)"
-                            class="nav-link first-level"
-                            @buttonClicked="toggleMobileNav">
+                            class="nav-link first-level">
                             {{ link.text }}
                           </Button>
                         </li>
