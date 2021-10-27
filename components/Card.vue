@@ -8,9 +8,16 @@
     </div>
 
     <img
-      v-if="img && imgType !== 'background_image'"
+      v-if="img && imgType !== 'background_image' && imgType !== 'nuxt_link'"
       :src="img"
       :class="['image', `size-${imgSize}`]" />
+
+    <nuxt-link
+      v-if="img && imgType === 'nuxt_link'"
+      :to="cta.url"
+      class="link">
+      <img :src="img" :class="['image', `size-${imgSize}`]" />
+    </nuxt-link>
 
     <div
       v-if="date && !img"
@@ -145,8 +152,10 @@ export default {
         } else { // different years
           return `${pastTag}${start.format('MMM D YYYY')} - ${end.format('MMM D YYYY')}`
         }
-      } else { // single date, no range
+      } else if (this.type !== 'E') { // single date, no range
         return `${pastTag}${start.format('MMMM D YYYY')}`
+      } else {
+        return `${start.format('MMMM D YYYY')}`
       }
     }
   }
@@ -385,59 +394,65 @@ export default {
   @include borderRadius_Large;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  // height: 36rem;
+  justify-content: flex-start;
+  height: 27rem;
   margin: 0 0.5rem 3rem 0.5rem !important;
   width: 30%;
-  padding: 0.25rem;
+  padding: 0.75rem;
   color: $blackPearl;
   background-color: $white;
-  &:not(.with-image) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .content {
-      height: auto;
-    }
-  }
+  // &:not(.with-image) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   .content {
+  //     height: auto;
+  //   }
+  // }
   .image {
     @include borderRadius_Large;
     display: block;
-    height: 16.25rem;
-    margin-bottom: 4rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    @include mini {
-      margin-bottom: 2rem;
-    }
+    height: 12.875rem;
+    margin-bottom: 0;
+    // @include mini {
+    //   margin-bottom: 2rem;
+    // }
   }
   .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: calc(100% - 16.25rem - 4rem);
-    padding: 2.5rem;
-    padding-top: 0;
-    @include mini {
-      height: calc(100% - 16.25rem - 2rem);
-    }
+    display: block;
+    // flex-direction: column;
+    // justify-content: flex-end;
+    // height: calc(100% - 16.25rem - 4rem);
+    padding: 0.625rem;
+    padding-top: 1.25rem;
+    // @include mini {
+    //   height: calc(100% - 16.25rem - 2rem);
+    // }
   }
+  // .panel-left {
+  //   margin-top: 1.25rem;
+  // }
   .panel-right {
     display: none;
   }
   .date,
   .label {
     @include fontSize_Small;
-    @include fontWeight_Bold;
+    @include fontWeight_Regular;
+    letter-spacing: $letterSpacing_Large;
     margin-bottom: 0.5rem;
     opacity: 0.7;
   }
   .date-large {
     @include fontWeight_Bold;
     @include fontSize_ExtraExtraLarge;
-    padding: 3.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1;
+    display: block;
+    // margin-bottom: 2.875rem;
+    height: 12.875rem;
+    // margin: auto;
+    // padding: 3.5rem;
+    // margin-bottom: 1.5rem;
+    // line-height: 1;
   }
   .title {
     @include fontSize_Regular;
@@ -460,4 +475,5 @@ export default {
     margin-top: 0.5rem;
   }
 }
+
 </style>

@@ -1,36 +1,28 @@
 <template>
-  <div class="page page-blog">
+  <div class="page page-singular">
 
     <Modal />
 
     <div class="main-content">
 
       <PageSection
-        v-if="featuredPost"
-        id="featured-section"
-        :section="featuredPost">
+        v-if="postHeading"
+        id="post-heading-section"
+        :section="postHeading">
       </PageSection>
 
-      <div class="grid">
-        <div class="col-6" data-push-left="off-2">
-          <Zero_Core__FilterBar
-            :filter-value="filterValue"
-            id="zero-filter-bar">
-            <template #icon>
-              <img src="~assets/svgs/searchicon.svg"/>
-            </template>
-          </Zero_Core__FilterBar>
-        </div>
-      </div>
-
-      <PageSection
-        v-if="blogPosts"
-        id="blogposts-section"
-        :section="blogPosts">
-      </PageSection>
+      <section id="post-body-section">
+        <section id="post-body" class="content-section">
+          <div class="grid">
+            <div class="col-10" data-push-left="off-1">
+              <nuxt-content :document="postBody" />
+            </div>
+          </div>
+        </section>
+      </section>
 
       <BackgroundLayers
-        id="page-blog-background-layers"
+        id="page-singular-background-layers"
         :layers-array="[3, 4, 5, 6]"
         :offset="pageBackgroundLayersOffset" />
 
@@ -52,7 +44,7 @@ import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PageBlog',
+  name: 'PageSingular',
 
   components: {
     Modal,
@@ -60,9 +52,13 @@ export default {
     BackgroundLayers
   },
 
-  async asyncData ({ $content }) {
-    const markdownFiles = await $content('blog').without(['body']).fetch()
-    return { markdownFiles }
+  async asyncData ({ $content, app, store, route, error }) {
+    try {
+      const markdown = await $content(`blog/${route.params.id}`).fetch()
+      return { markdown }
+    } catch (e) {
+      return error('This project does not exist')
+    }
   },
 
   data () {
@@ -86,87 +82,37 @@ export default {
 
   computed: {
     ...mapGetters({
-      siteContent: 'global/siteContent',
-      filterValue: 'core/filterValue'
+      siteContent: 'global/siteContent'
     }),
-    posts () {
-      const arr = []
-      for (let i = 0; i < this.markdownFiles.length; i++) {
-        const post = this.markdownFiles[i]
-        const card = {
-          type: 'E',
-          img: post.image,
-          img_type: 'nuxt_link',
-          title: post.title,
-          description: post.description,
-          date: post.date || post.createdAt,
-          cta: {
-            type: 'H',
-            action: 'nuxt-link',
-            text: 'Read more',
-            url: `/${post.slug}`
-          }
-        }
-        arr.push(card)
-      }
-      return arr
-    },
-    featuredPost () {
-      let featured
-      for (let i = 0; i < this.markdownFiles.length; i++) {
-        if (this.markdownFiles[i].featured) {
-          featured = this.markdownFiles[i]
-          break
-        }
-      }
-      if (featured) {
-        const section = {
-          id: 'featured-post',
-          grid: ['middle'],
-          left: {
-            type: 'text_block',
-            layout: 'large',
-            cols: {
-              num: 'col-5'
-            },
-            heading: featured.title,
-            subheading: featured.description,
-            label: 'Featured Blog',
-            ctas: [
-              {
-                type: 'B',
-                action: 'nuxt-link',
-                text: 'Read more',
-                icon: 'play',
-                url: `/${featured.slug}`
-              }
-            ]
-          },
-          right: {
-            type: 'image_block',
-            src: featured.image,
-            cols: {
-              num: 'col-7',
-              push_left: 'off-0'
-            }
-          }
-        }
-        return [section]
-      }
-      return false
-    },
-    blogPosts () {
+    postHeading () {
       const section = {
-        id: 'blogposts-list',
+        id: 'post-heading',
+        grid: ['middle'],
         left: {
-          type: 'paginated_cards',
+          type: 'text_block',
+          layout: 'large',
           cols: {
-            num: 'col-12'
+            num: 'col-5'
           },
-          cards: this.posts
+          heading: this.markdown.title,
+          subheading: this.markdown.description,
+          label: this.markdown.featured ? 'Featured Blog' : '',
+          date: this.markdown.date || this.markdown.createdAt,
+          description: this.markdown.author
+        },
+        right: {
+          type: 'image_block',
+          src: this.markdown.image,
+          cols: {
+            num: 'col-7',
+            push_left: 'off-0'
+          }
         }
       }
       return [section]
+    },
+    postBody () {
+      return this.markdown
     }
   }
 }
@@ -184,7 +130,7 @@ $backgroundLayers__Left__Medium: 1rem * 6;
 $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 // ///////////////////////////////////////////////////////////////////// General
-.page-blog {
+.page-singular {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
   @include medium {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium} + 5rem);
@@ -205,82 +151,42 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#featured-section {
+#post-heading-section {
   padding-top: 7rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: $backgroundLayers__Left__Desktop;
-  //   width: calc(100% + 3.5rem);
-  //   height: 100%;
-  //   background-color: $hawkesBlue;
-  //   border-radius: 14rem 0 0 14rem;
-  //   filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-  //   z-index: -1;
-  //   @include medium {
-  //     left: $backgroundLayers__Left__Medium;
-  //     border-top-left-radius: 12.75rem;
-  //   }
-  //   @include mini {
-  //     left: $backgroundLayers__Left__Mini;
-  //     border-top-left-radius: 10.75rem;
-  //   }
-  //   @include tiny {
-  //     border-radius: 5rem 0 0 5rem;
-  //   }
-  // }
 }
 
-#section-2 {
-  padding-top: 1rem;
-  @include small {
-    padding-bottom: 0;
-  }
-}
-
-#section-3 {
+#post-body-section {
+  position: relative;
+  padding: 6.625rem 0;
   &:before {
     content: '';
     position: absolute;
-    top: 0.5rem;
+    top: 0;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 4rem);
-    background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
+    height: 100%;
+    background-color: $hawkesBlue;
+    border-radius: 14rem 0 0 14rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-    z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
+      border-top-left-radius: 12.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
+      border-top-left-radius: 10.75rem;
     }
     @include tiny {
-      border-bottom-left-radius: 5rem;
+      border-radius: 5rem 0 0 5rem;
     }
-  }
-}
-
-::v-deep .heading {
-  @include tiny {
-    @include fontSize_ExtraLarge;
-  }
-}
-::v-deep .subheading {
-  @include tiny {
-    @include fontSize_Medium;
   }
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-blog-background-layers {
+::v-deep #page-singular-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
@@ -302,7 +208,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #featured-post {
+::v-deep #post-heading {
   padding: 0;
   margin-bottom: 10rem;
   .heading {
@@ -356,16 +262,81 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #zero-filter-bar {
-  background-color: $denim;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0 .5rem $azureRadiance;
-  .input {
-    color: $white;
-    background-color: $denim;
+::v-deep #post-body {
+  h1,
+  h2 {
+    @include fontSize_ExtraLarge;
+    @include fontWeight_Medium;
+    @include leading_Regular;
+  }
+  p {
+    @include fontSize_Large;
+    @include fontWeight_Regular;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+  }
+  a {
+    @include fontSize_Large;
+    @include fontWeight_SemiBold;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+    color: $denim;
+  }
+  li {
+    @include fontSize_Large;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+    list-style-type: circle;
+    &:before {
+      color: $kleinBlue;
+    }
+  }
+  img {
     border-radius: 0.5rem;
-    outline: none;
-    border: none;
+    box-shadow: 0 0 0 .5rem $jordyBlue;
+  }
+  blockquote {
+    p {
+      @include fontSize_ExtraLarge;
+      @include fontWeight_Medium;
+      @include leading_Small;
+      letter-spacing: $letterSpacing_Large;
+    }
+  }
+  table {
+    border-radius: 2px;
+    th,
+    tr {
+      @include fontSize_Regular;
+      @include fontWeight_Regular;
+      @include leading_Regular;
+      letter-spacing: $letterSpacing_Large;
+    }
+    th {
+      @include fontSize_Medium;
+      @include fontWeight_Medium;
+      background: $polar;
+      text-align: left;
+    }
+    th,
+    td {
+      padding: 0.5rem 1rem;
+    }
+    tr:nth-child(even) {
+      background: $polar;
+    }
+    tr:nth-child(odd) {
+      background: $hawkesBlue;
+    }
+  }
+  pre {
+    border-radius: 0.5rem;
+    background-color: $blackPearl;
+    box-shadow: 0 0 0 .5rem $jordyBlue;
+  }
+  code {
+    font-family: 'Suisse Intl Mono';
+    color: #9AB6CE;
   }
 }
 
