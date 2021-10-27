@@ -48,6 +48,14 @@
                     <div class="accordion-content-wrapper">
                       <div v-html="link.description"></div>
                       <ul v-if="Array.isArray(link.links)">
+                        <li>
+                          <Button
+                            :button="convertMainLinkToSublink(link)"
+                            class="nav-link first-level"
+                            @buttonClicked="toggleMobileNav">
+                            {{ link.text }}
+                          </Button>
+                        </li>
                         <li
                           v-for="sublink in link.links"
                           :key="`${link.text}-${sublink.text}`">
@@ -170,6 +178,14 @@ export default {
   methods: {
     toggleMobileNav () {
       this.mobilePanelOpen = !this.mobilePanelOpen
+    },
+    convertMainLinkToSublink (link) {
+      return {
+        type: 'X',
+        action: 'nuxt-link',
+        url: link.url,
+        text: link.text
+      }
     }
   }
 }
@@ -286,9 +302,11 @@ export default {
       padding: 0;
       &:hover {
         .nav-link.first-level {
-          opacity: 0.75;
+          opacity: 0.5;
           &:hover {
             opacity: 1;
+            transform: scale(1.05);
+            // transition: 250ms ease-in-out;
           }
         }
       }
