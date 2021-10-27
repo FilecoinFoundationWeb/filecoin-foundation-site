@@ -31,42 +31,47 @@
 
               <nav
                 v-if="mobile"
-                class="mobile-panel">
-                <Zero_Core__Accordion
-                  v-slot="{ active }">
-                  <Zero_Core__Accordion_Section
-                    v-for="(link, index) in links"
-                    :key="index"
-                    :active="active"
-                    :selected="true"
-                    class="nav-accordion-item">
-                    <Zero_Core__Accordion_Header>
-                      <div
-                        class="mobile-nav-heading"
-                        v-html="link.description">
-                      </div>
-                    </Zero_Core__Accordion_Header>
-                    <Zero_Core__Accordion_Content>
-                      <div class="accordion-content-wrapper">
-                        <div v-html="link.description"></div>
-                        <ul v-if="Array.isArray(link.links)">
-                          <li
-                            v-for="sublink in link.links"
-                            :key="`${link.text}-${sublink.text}`">
+                v-slot="{ active }">
+                <Zero_Core__Accordion_Section
+                  v-for="(link, index) in links"
+                  :key="index"
+                  :active="active"
+                  :selected="true"
+                  class="nav-accordion-item">
+                  <Zero_Core__Accordion_Header>
+                    <div
+                      class="mobile-nav-heading"
+                      v-html="link.description">
+                    </div>
+                  </Zero_Core__Accordion_Header>
+                  <Zero_Core__Accordion_Content>
+                    <div class="accordion-content-wrapper">
+                      <div v-html="link.description"></div>
+                      <ul v-if="Array.isArray(link.links)">
+                        <li>
+                          <Button
+                            :button="convertMainLinkToSublink(link)"
+                            class="nav-link first-level"
+                            @buttonClicked="toggleMobileNav">
+                            {{ link.text }}
+                          </Button>
+                        </li>
+                        <li
+                          v-for="sublink in link.links"
+                          :key="`${link.text}-${sublink.text}`">
 
-                            <Button
-                              :button="sublink"
-                              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-                              {{ sublink.text }}
-                            </Button>
+                          <Button
+                            :button="sublink"
+                            :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                            {{ sublink.text }}
+                          </Button>
 
-                          </li>
-                        </ul>
-                      </div>
-                    </Zero_Core__Accordion_Content>
-                  </Zero_Core__Accordion_Section>
-                </Zero_Core__Accordion>
-              </nav>
+                        </li>
+                      </ul>
+                    </div>
+                  </Zero_Core__Accordion_Content>
+                </Zero_Core__Accordion_Section>
+              </Zero_Core__Accordion>
             </template>
 
             <template #action>
@@ -169,6 +174,14 @@ export default {
   methods: {
     toggleMobileNav () {
       this.mobilePanelOpen = !this.mobilePanelOpen
+    },
+    convertMainLinkToSublink (link) {
+      return {
+        type: 'X',
+        action: 'nuxt-link',
+        url: link.url,
+        text: link.text
+      }
     }
   }
 }
@@ -291,9 +304,11 @@ export default {
       padding: 0;
       &:hover {
         .nav-link.first-level {
-          opacity: 0.75;
+          opacity: 0.5;
           &:hover {
             opacity: 1;
+            transform: scale(1.05);
+            // transition: 250ms ease-in-out;
           }
         }
       }
