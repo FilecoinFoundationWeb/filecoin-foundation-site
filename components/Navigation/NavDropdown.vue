@@ -319,10 +319,6 @@ li {
     display: block;
     position: relative;
     z-index: 10;
-    transition: 250ms ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
   .title {
     @include fontWeight_Medium;

@@ -287,6 +287,20 @@ export default {
     .extras {
       min-width: 15rem;
     }
+    .title,
+    .text {
+      transition: 250ms ease-in-out;
+    }
+    .title {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .text {
+      &:hover {
+        transform: scale(1.025);
+      }
+    }
     .text {
       @include fontSize_Small;
     }
