@@ -48,10 +48,10 @@
         "right": {
           "type": "image_block",
           "cols": {
-            "num": "col-4_sm-8_mi-9",
-            "push_left": "off-3"
+            "num": "col-2_sm-3_mi-5",
+            "push_left": "off-3_sm-4_mi-3"
           },
-          "src": "/images/page-index/foundation-circle-logo.svg",
+          "src": "/images/page-index/foundation-logo-circle.svg",
           "customizations": [
             {
               "name": "BackgroundLayers",
@@ -290,7 +290,7 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/get-involved"
+              "url": "/get-involved/#section-1"
             }
           ]
         },

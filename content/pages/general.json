@@ -236,7 +236,7 @@
         {
           "type": "F",
           "action": "nuxt-link",
-          "url": "/policy",
+          "url": "/policy/#site-navigation",
           "text": "Data & Privacy Policy"
         },
         {
