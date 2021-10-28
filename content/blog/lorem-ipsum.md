@@ -4,6 +4,7 @@ title: Lorem Ipsum
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 author: Filecoin Foundation
 image: '/images/events/orbit-event-banner-2021.png'
+recommendedPosts: ['lorem-ipsum', 'welcome-to-the-forest', 'storage-provider-bounty-board']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.   

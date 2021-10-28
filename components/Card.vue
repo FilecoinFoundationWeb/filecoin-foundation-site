@@ -15,7 +15,7 @@
     <nuxt-link
       v-if="img && imgType === 'nuxt_link'"
       :to="cta.url"
-      class="link">
+      class="image-link">
       <img :src="img" :class="['image', `size-${imgSize}`]" />
     </nuxt-link>
 
@@ -41,12 +41,17 @@
           {{ label }}
         </div>
 
-        <div v-if="title" class="title">
+        <template v-if="type === 'E'">
+          <div class="title" v-html="shortenString(title, 50)"></div>
+          <div class="description" v-html="shortenString(description, 50)"></div>
+        </template>
+
+        <div v-if="title && type !== 'E'" class="title">
           {{ title }}
         </div>
 
         <div
-          v-if="description && type !== 'D' && type !== 'C'"
+          v-if="description && type !== 'D' && type !== 'C' && type !== 'E'"
           class="description"
           v-html="description">
         </div>
@@ -157,6 +162,14 @@ export default {
       } else {
         return `${start.format('MMMM D YYYY')}`
       }
+    },
+    shortenString (string, n) {
+      const chars = string.split('')
+      if (chars.length > n) {
+        const shortened = chars.slice(0, n)
+        return `${shortened.join('')}...`
+      }
+      return chars.join('')
     }
   }
 }
@@ -396,42 +409,37 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   height: 27rem;
-  margin: 0 0.5rem 3rem 0.5rem !important;
-  width: 30%;
+  margin: 0 1rem 3rem 0 !important;
+  width: calc(33% - 1rem);
   padding: 0.75rem;
   color: $blackPearl;
   background-color: $white;
-  // &:not(.with-image) {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   .content {
-  //     height: auto;
-  //   }
-  // }
+  @include small {
+    width: calc(50% - 1rem);
+  }
+  @include mini {
+    width: calc(100% - 1rem);
+  }
+  .image-link {
+    height: 47%;
+  }
   .image {
     @include borderRadius_Large;
     display: block;
-    height: 12.875rem;
-    margin-bottom: 0;
+    // height: 100%;
+    margin-bottom: auto;
     // @include mini {
     //   margin-bottom: 2rem;
     // }
   }
   .content {
     display: block;
-    // flex-direction: column;
-    // justify-content: flex-end;
-    // height: calc(100% - 16.25rem - 4rem);
     padding: 0.625rem;
     padding-top: 1.25rem;
     // @include mini {
     //   height: calc(100% - 16.25rem - 2rem);
     // }
   }
-  // .panel-left {
-  //   margin-top: 1.25rem;
-  // }
   .panel-right {
     display: none;
   }
@@ -447,12 +455,7 @@ export default {
     @include fontWeight_Bold;
     @include fontSize_ExtraExtraLarge;
     display: block;
-    // margin-bottom: 2.875rem;
     height: 12.875rem;
-    // margin: auto;
-    // padding: 3.5rem;
-    // margin-bottom: 1.5rem;
-    // line-height: 1;
   }
   .title {
     @include fontSize_Regular;

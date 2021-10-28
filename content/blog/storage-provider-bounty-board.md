@@ -5,15 +5,15 @@ title: Introducing the Storage Provider Bounty Board
 description: The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
 author: Filecoin Foundation
 image: '/images/blog/blog-hero-image.png'
+recommendedPosts: ['lorem-ipsum', 'welcome-to-the-forest', 'storage-provider-bounty-board']
 ---
 
 # The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
 
 The goal of the Storage Provider Bounty Board is to:
 
-Improve Filecoin’s ecosystem and community support by working with community members and contributors.
-
-Motivate more contributors to participate in the Filecoin project and to solve open issues by rewarding ongoing & existing contributors that add significant value to Filecoin.
+* Improve Filecoin’s ecosystem and community support by working with community members and contributors.
+* Motivate more contributors to participate in the Filecoin project and to solve open issues by rewarding ongoing & existing contributors that add significant value to Filecoin.
 
 Visit the Storage Provider Bounty Board panel on the Filecoin Project Github, under the community repositories, to check bounty progress and find open issues.
 
@@ -36,7 +36,16 @@ Bounties can be small or large, technical or nontechnical. Regardless of who you
 
 ## Awarding System
 
-Bounties are awarded for closing and/or fixing an issue. Bounties range from $50 to $5,000 (or equivalent FIL). Awards are determined based on the urgency and complexity of the task at hand. Rewards are determined by the Filecoin Foundation and the Storage Provider Working Group. Additional details can be found here.
+Bounties are awarded for closing and/or fixing an issue. Bounties range from $50 to $5,000 (or equivalent FIL). Awards are determined based on the urgency and complexity of the task at hand. Rewards are determined by the Filecoin Foundation and the Storage Provider Working Group. Additional details can be found <a href="/blog">here</a>.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+  - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  - Duis aute irure dolor in reprehenderit
+
+- Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- Excepteur sint occaecat cupidatat non proident
+
 
 ## How to submit an open issue
 

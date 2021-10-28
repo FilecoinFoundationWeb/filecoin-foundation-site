@@ -12,7 +12,7 @@
       </PageSection>
 
       <div class="grid">
-        <div class="col-6" data-push-left="off-2">
+        <div class="col-8_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
           <Zero_Core__FilterBar
             id="zero-filter-bar"
             :filter-value="filterValue">
@@ -127,7 +127,8 @@ export default {
             type: 'text_block',
             layout: 'large',
             cols: {
-              num: 'col-5'
+              num: 'col-5_md-9_mi-10',
+              push_left: 'off-0_md-2_ti-1'
             },
             heading: featured.title,
             subheading: featured.description,
@@ -146,8 +147,8 @@ export default {
             type: 'image_block',
             src: featured.image,
             cols: {
-              num: 'col-7',
-              push_left: 'off-0'
+              num: 'col-7_md-9_mi-10',
+              push_left: 'off-0_md-2_mi-1'
             }
           }
         }
@@ -161,9 +162,11 @@ export default {
         left: {
           type: 'paginated_cards',
           cols: {
-            num: 'col-12'
+            num: 'col-12_md-11_sm-10_mi-9_ti-10',
+            push_left: 'off-0_md-1_sm-2_ti-1'
           },
-          cards: this.posts
+          cards: this.posts,
+          displayControls: true
         }
       }
       return [section]
@@ -206,76 +209,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #featured-section {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 7rem;
   @include mini {
     padding-top: 5rem;
-  }
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: $backgroundLayers__Left__Desktop;
-  //   width: calc(100% + 3.5rem);
-  //   height: 100%;
-  //   background-color: $hawkesBlue;
-  //   border-radius: 14rem 0 0 14rem;
-  //   filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-  //   z-index: -1;
-  //   @include medium {
-  //     left: $backgroundLayers__Left__Medium;
-  //     border-top-left-radius: 12.75rem;
-  //   }
-  //   @include mini {
-  //     left: $backgroundLayers__Left__Mini;
-  //     border-top-left-radius: 10.75rem;
-  //   }
-  //   @include tiny {
-  //     border-radius: 5rem 0 0 5rem;
-  //   }
-  // }
-}
-
-#section-2 {
-  padding-top: 1rem;
-  @include small {
-    padding-bottom: 0;
-  }
-}
-
-#section-3 {
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0.5rem;
-    left: $backgroundLayers__Left__Desktop;
-    width: calc(100% + 3.5rem);
-    height: calc(100% + 4rem);
-    background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
-    filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-    z-index: -1;
-    @include medium {
-      left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
-    }
-    @include mini {
-      left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-bottom-left-radius: 5rem;
-    }
-  }
-}
-
-::v-deep .heading {
-  @include tiny {
-    @include fontSize_ExtraLarge;
-  }
-}
-::v-deep .subheading {
-  @include tiny {
-    @include fontSize_Medium;
   }
 }
 
@@ -304,7 +240,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #featured-post {
   padding: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 5.5rem;
   .heading {
     @include fontSize_ExtraExtraLarge;
     @include fontWeight_Bold;
@@ -316,18 +252,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include leading_MediumLarge;
     letter-spacing: $letterSpacing_Large;
   }
-  // @include small {
-  //   margin-bottom: 5rem;
-  // }
-  // @include mini {
-  //   margin-bottom: 0;
-  // }
-  // @include tiny {
-  //   .heading {
-  //     @include fontSize_ExtraExtraLarge;
-  //   }
-  // }
   .column-content {
+    &.left {
+      @include medium {
+        margin-bottom: 3rem;
+      }
+    }
     &.right {
       width: 48vw;
       height: 100%;
@@ -357,16 +287,35 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #zero-filter-bar {
+  margin-left: 0.5rem;
+  width: calc(100% - 2rem);
+  height: 2.5rem;
   background-color: $denim;
   border-radius: 0.5rem;
   box-shadow: 0 0 0 .5rem $azureRadiance;
+  .icon-container {
+    margin: 0 0.5rem;
+  }
   .input {
+    font-size: 14px;
+    @include fontWeight_Medium;
+    letter-spacing: $letterSpacing_Large;
     color: $white;
     background-color: $denim;
     border-radius: 0.5rem;
     outline: none;
     border: none;
+    &::placeholder {
+      font-size: 14px;
+      color: $azureRadiance;
+      @include fontWeight_Medium;
+      letter-spacing: $letterSpacing_Large;
+    }
   }
+}
+
+::v-deep #blogposts-list {
+  padding-top: 1.75rem;
 }
 
 </style>

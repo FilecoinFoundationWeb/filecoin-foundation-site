@@ -3,7 +3,7 @@
 
     <Zero_Pagination__Paginate
       v-slot="{ paginated }"
-      :display="display"
+      :display="3"
       :collection="cards"
       class="card-list">
       <Card
@@ -12,11 +12,27 @@
         :card="card" />
     </Zero_Pagination__Paginate>
 
-    <div>
-      <Zero_Pagination__Controls>
+    <div
+      v-if="controls"
+      class="pagination-control-wrapper">
+      <Zero_Pagination__Controls
+        class="zero-pagination-controls">
+        <template #first-page>
+          First
+        </template>
+        <template #prev-page>
+          Back
+        </template>
+        <template #next-page>
+          Next
+        </template>
+        <template #last-page>
+          Last
+        </template>
       </Zero_Pagination__Controls>
-      <Zero_Pagination__ResultsPerPageSelector>
-      </Zero_Pagination__ResultsPerPageSelector>
+      <!-- <Zero_Pagination__ResultsPerPageSelector
+        class="zero-results-per-page">
+      </Zero_Pagination__ResultsPerPageSelector> -->
     </div>
 
   </div>
@@ -52,6 +68,9 @@ export default {
     },
     display () {
       return this.routeQuery.results
+    },
+    controls () {
+      return this.block.displayControls
     }
   }
 }
@@ -76,6 +95,39 @@ export default {
     margin-right: 3rem;
     @include mini {
       margin-right: 0;
+    }
+  }
+}
+
+.pagination-control-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.125rem;
+}
+
+::v-deep .zero-pagination-controls {
+  .page-button {
+    opacity: 1.0;
+    padding: 0.5rem 1.25rem;
+    &.current {
+      color: $white;
+      background-color: $denim;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0 .5rem $azureRadiance;
+    }
+    &:not(.current) {
+      color: $kleinBlue;
+    }
+  }
+  .breaker {
+    color: $kleinBlue;
+  }
+  .control-button {
+    color: $kleinBlue;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1.0;
     }
   }
 }

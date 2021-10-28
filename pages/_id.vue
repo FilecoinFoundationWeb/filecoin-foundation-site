@@ -14,12 +14,36 @@
       <section id="post-body-section">
         <section id="post-body" class="content-section">
           <div class="grid">
+
             <div class="col-10" data-push-left="off-1">
               <nuxt-content :document="postBody" />
             </div>
+
+            <div class="col-10" data-push-left="off-1">
+              <div id="bottom-controls">
+                <div class="share-socials">
+                  Share to:
+                </div>
+                <div class="controls-wrapper">
+                  <nuxt-link to="/blog" class="button">
+                    Back
+                  </nuxt-link>
+                  <nuxt-link to="/blog" class="button">
+                    Next article
+                  </nuxt-link>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </section>
+
+      <PageSection
+        v-if="recommendations"
+        id="blogposts-section"
+        :section="recommendations">
+      </PageSection>
 
       <BackgroundLayers
         id="page-singular-background-layers"
@@ -54,7 +78,30 @@ export default {
 
   async asyncData ({ $content, app, store, route, error }) {
     try {
+      const recommendedPosts = []
       const markdown = await $content(`blog/${route.params.id}`).fetch()
+      if (Array.isArray(markdown.recommendedPosts)) {
+        const posts = await $content('blog').without(['body']).fetch()
+        posts.forEach((post) => {
+          if (markdown.recommendedPosts.includes(post.slug)) {
+            recommendedPosts.push({
+              type: 'E',
+              img: post.image,
+              img_type: 'nuxt_link',
+              title: post.title,
+              description: post.description,
+              date: post.date || post.createdAt,
+              cta: {
+                type: 'H',
+                action: 'nuxt-link',
+                text: 'Read more',
+                url: `/${post.slug}`
+              }
+            })
+          }
+        })
+        markdown.recommendedPosts = recommendedPosts
+      }
       return { markdown }
     } catch (e) {
       return error('This project does not exist')
@@ -113,6 +160,23 @@ export default {
     },
     postBody () {
       return this.markdown
+    },
+    recommendations () {
+      if (Array.isArray(this.markdown.recommendedPosts)) {
+        const section = {
+          id: 'blogposts-list',
+          left: {
+            type: 'paginated_cards',
+            cols: {
+              num: 'col-12'
+            },
+            cards: this.markdown.recommendedPosts,
+            displayControls: false
+          }
+        }
+        return [section]
+      }
+      return false
     }
   }
 }
@@ -152,7 +216,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #post-heading-section {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 5rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
@@ -170,6 +234,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     height: 100%;
     background-color: $hawkesBlue;
     border-radius: 14rem 0 0 14rem;
+    z-index: -1;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     @include medium {
       left: $backgroundLayers__Left__Medium;
@@ -192,7 +257,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   left: $backgroundLayers__Left__Desktop;
   width: 100%;
   height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
-  z-index: -1;
+  z-index: -10;
   @include medium {
     left: $backgroundLayers__Left__Medium;
   }
@@ -210,7 +275,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #post-heading {
   padding: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 3.5rem;
   .heading {
     @include fontSize_ExtraExtraLarge;
     @include fontWeight_Bold;
@@ -269,7 +334,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include fontWeight_Medium;
     @include leading_Regular;
   }
+  h1 {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
   p {
+    margin-bottom: 1.5rem;
     @include fontSize_Large;
     @include fontWeight_Regular;
     @include leading_Regular;
@@ -282,20 +354,42 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     letter-spacing: $letterSpacing_Large;
     color: $denim;
   }
+  // p > a {
+  //   &:before {
+  //     content: attr(href);
+  //   }
+  //   &:after {
+  //     content:
+  //   }
+  // }
+  ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.125rem;
+  }
   li {
+    margin-bottom: 1.5rem;
+    padding-left: 0.875rem;
     @include fontSize_Large;
     @include leading_Regular;
     letter-spacing: $letterSpacing_Large;
     list-style-type: circle;
-    &:before {
+    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3306' data-name='Group 3306' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%230520a3'/%3e%3c/g%3e%3c/svg%3e");
+    &::marker {
       color: $kleinBlue;
+      left: 0;
     }
   }
+  ul li ul li {
+    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3307' data-name='Group 3307' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%23d8ebfb'/%3e%3c/g%3e%3c/svg%3e ");
+  }
   img {
+    margin: 3rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 0 .5rem $jordyBlue;
   }
   blockquote {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     p {
       @include fontSize_ExtraLarge;
       @include fontWeight_Medium;
@@ -304,6 +398,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     }
   }
   table {
+    margin: 3rem 0;
     border-radius: 2px;
     th,
     tr {
@@ -330,6 +425,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     }
   }
   pre {
+    margin: 3rem 0;
     border-radius: 0.5rem;
     background-color: $blackPearl;
     box-shadow: 0 0 0 .5rem $jordyBlue;
@@ -338,6 +434,28 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     font-family: 'Suisse Intl Mono';
     color: #9AB6CE;
   }
+}
+
+#bottom-controls {
+  .share-socials {
+    font-size: 14px;
+    @include fontWeight_SemiBold;
+    color: $kleinBlue;
+  }
+  .controls-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .button {
+    font-size: 14px;
+    text-align: center;
+    color: $kleinBlue;
+  }
+}
+
+::v-deep #blogposts-list {
+  padding-bottom: 3rem;
 }
 
 </style>
