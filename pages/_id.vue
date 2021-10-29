@@ -15,20 +15,26 @@
         <section id="post-body" class="content-section">
           <div class="grid">
 
-            <div class="col-10" data-push-left="off-1">
+            <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
               <nuxt-content :document="postBody" />
             </div>
 
-            <div class="col-10" data-push-left="off-1">
+            <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
               <div id="bottom-controls">
                 <div class="share-socials">
                   Share to:
                 </div>
                 <div class="controls-wrapper">
-                  <nuxt-link to="/blog" class="button">
+                  <nuxt-link
+                    v-if="previousPost"
+                    :to="previousPost"
+                    class="button">
                     Back
                   </nuxt-link>
-                  <nuxt-link to="/blog" class="button">
+                  <nuxt-link
+                    v-if="nextPost"
+                    :to="nextPost"
+                    class="button">
                     Next article
                   </nuxt-link>
                 </div>
@@ -58,7 +64,6 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
-// import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
 
@@ -78,30 +83,9 @@ export default {
 
   async asyncData ({ $content, app, store, route, error }) {
     try {
-      const recommendedPosts = []
       const markdown = await $content(`blog/${route.params.id}`).fetch()
-      if (Array.isArray(markdown.recommendedPosts)) {
-        const posts = await $content('blog').without(['body']).fetch()
-        posts.forEach((post) => {
-          if (markdown.recommendedPosts.includes(post.slug)) {
-            recommendedPosts.push({
-              type: 'E',
-              img: post.image,
-              img_type: 'nuxt_link',
-              title: post.title,
-              description: post.description,
-              date: post.date || post.createdAt,
-              cta: {
-                type: 'H',
-                action: 'nuxt-link',
-                text: 'Read more',
-                url: `/${post.slug}`
-              }
-            })
-          }
-        })
-        markdown.recommendedPosts = recommendedPosts
-      }
+      const posts = await $content('blog').without(['body']).fetch()
+      markdown.allPosts = posts.sort((a, b) => a.updatedAt.localeCompare(b.updatedAt))
       return { markdown }
     } catch (e) {
       return error('This project does not exist')
@@ -131,6 +115,9 @@ export default {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
+    allPosts () {
+      return this.markdown.allPosts
+    },
     postHeading () {
       const section = {
         id: 'post-heading',
@@ -139,7 +126,8 @@ export default {
           type: 'text_block',
           layout: 'large',
           cols: {
-            num: 'col-5'
+            num: 'col-5_md-9_mi-10',
+            push_left: 'off-0_md-2_ti-1'
           },
           heading: this.markdown.title,
           subheading: this.markdown.description,
@@ -151,8 +139,8 @@ export default {
           type: 'image_block',
           src: this.markdown.image,
           cols: {
-            num: 'col-7',
-            push_left: 'off-0'
+            num: 'col-7_md-9_mi-10',
+            push_left: 'off-0_md-2_mi-1'
           }
         }
       }
@@ -161,22 +149,59 @@ export default {
     postBody () {
       return this.markdown
     },
-    recommendations () {
-      if (Array.isArray(this.markdown.recommendedPosts)) {
-        const section = {
-          id: 'blogposts-list',
-          left: {
-            type: 'paginated_cards',
-            cols: {
-              num: 'col-12'
-            },
-            cards: this.markdown.recommendedPosts,
-            displayControls: false
-          }
+    previousPost () {
+      for (let i = 1; i < this.allPosts.length; i++) {
+        if (this.allPosts[i].updatedAt === this.markdown.updatedAt) {
+          return `/${this.allPosts[i - 1].slug}`
         }
-        return [section]
       }
       return false
+    },
+    nextPost () {
+      for (let i = 0; i < (this.allPosts.length - 1); i++) {
+        if (this.allPosts[i].updatedAt === this.markdown.updatedAt) {
+          return `/${this.allPosts[i + 1].slug}`
+        }
+      }
+      return false
+    },
+    recommendations () {
+      const recommendedPosts = []
+      if (Array.isArray(this.markdown.recommendedPosts)) {
+        this.allPosts.forEach((post) => {
+          if (this.markdown.recommendedPosts.includes(post.slug)) {
+            recommendedPosts.push({
+              type: 'E',
+              img: post.image,
+              img_type: 'nuxt_link',
+              title: post.title,
+              description: post.description,
+              date: post.date || post.createdAt,
+              cta: {
+                type: 'H',
+                action: 'nuxt-link',
+                text: 'Read more',
+                url: `/${post.slug}`
+              }
+            })
+          }
+        })
+      }
+
+      const section = {
+        id: 'blogposts-list',
+        left: {
+          type: 'paginated_cards',
+          cols: {
+            num: 'col-12_md-11_sm-10_mi-9_ti-10',
+            push_left: 'off-0_md-1_sm-2_ti-1'
+          },
+          cards: recommendedPosts,
+          displayControls: false
+        }
+      }
+
+      return [section]
     }
   }
 }
@@ -240,6 +265,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       left: $backgroundLayers__Left__Medium;
       border-top-left-radius: 12.75rem;
     }
+    @include small {
+      border-top-left-radius: 8rem;
+      border-bottom-left-radius: 8rem;
+    }
     @include mini {
       left: $backgroundLayers__Left__Mini;
       border-top-left-radius: 10.75rem;
@@ -287,18 +316,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include leading_MediumLarge;
     letter-spacing: $letterSpacing_Large;
   }
-  // @include small {
-  //   margin-bottom: 5rem;
-  // }
-  // @include mini {
-  //   margin-bottom: 0;
-  // }
-  // @include tiny {
-  //   .heading {
-  //     @include fontSize_ExtraExtraLarge;
-  //   }
-  // }
   .column-content {
+    &.left {
+      margin-bottom: 3rem;
+    }
     &.right {
       width: 48vw;
       height: 100%;
@@ -386,6 +407,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     margin: 3rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 0 0 .5rem $jordyBlue;
+    width: 100%;
   }
   blockquote {
     margin-top: 3rem;
