@@ -15,7 +15,8 @@
         <div class="col-8_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
           <Zero_Core__FilterBar
             id="zero-filter-bar"
-            :filter-value="filterValue">
+            :filter-value="filterValue"
+            action="store">
             <template #icon>
               <img src="~assets/svgs/searchicon.svg" />
             </template>

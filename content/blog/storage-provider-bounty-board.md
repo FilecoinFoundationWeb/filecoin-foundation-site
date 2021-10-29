@@ -4,8 +4,8 @@ date: Oct 19 2021
 title: Introducing the Storage Provider Bounty Board
 description: The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
 author: Filecoin Foundation
-image: '/images/blog/blog-hero-image.png'
-recommendedPosts: ['lorem-ipsum', 'welcome-to-the-forest', 'storage-provider-bounty-board']
+image: '/images/blog/storage-provider-bounty-board.png'
+recommendedPosts: ['lorem-ipsum-1', 'welcome-to-the-forest', 'storage-provider-bounty-board']
 ---
 
 # The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
@@ -17,7 +17,7 @@ The goal of the Storage Provider Bounty Board is to:
 
 Visit the Storage Provider Bounty Board panel on the Filecoin Project Github, under the community repositories, to check bounty progress and find open issues.
 
-![Test Banner](/images/blog/test-banner.png)
+![Test Banner](/images/blog/storage-provider-bounty-board.png)
 
 ## What is the Storage Provider Bounty system?
 
@@ -67,6 +67,6 @@ Open issues can be proposed by anyone in the Filecoin community. The Filecoin Fo
 
 ## Reward Distribution
 
-In order to distribute rewards after closing the issue, contributors must submit a Bounty Claim which will notify the Filecoin Foundation team regarding their work and payment details.
+In order to distribute rewards after closing the issue, contributors must submit a <a>Bounty Claim</a> which will notify the Filecoin Foundation team regarding their work and payment details.
 
-What are you waiting for? Get started with Storage Provider Bounty Board today, and join the community in the #web3-storage channel in Filecoin Slack.
+What are you waiting for? Get started with <a>Storage Provider Bounty Board</a> today, and join the community in the #web3-storage channel in <a>Filecoin Slack</a>.

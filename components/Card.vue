@@ -422,23 +422,23 @@ export default {
   }
   .image-link {
     height: 47%;
+    @include borderRadius_Large;
+    overflow: hidden;
   }
   .image {
+    position: relative;
     @include borderRadius_Large;
     display: block;
-    // height: 100%;
     margin-bottom: auto;
-    // @include mini {
-    //   margin-bottom: 2rem;
-    // }
+    width: unset;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .content {
     display: block;
     padding: 0.625rem;
     padding-top: 1.25rem;
-    // @include mini {
-    //   height: calc(100% - 16.25rem - 2rem);
-    // }
   }
   .panel-right {
     display: none;

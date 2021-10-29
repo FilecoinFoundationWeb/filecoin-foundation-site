@@ -22,7 +22,10 @@
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
               <div id="bottom-controls">
                 <div class="share-socials">
-                  Share to:
+                  <div class="share-to">
+                    Share to:
+                  </div>
+                  <SocialIcons />
                 </div>
                 <div class="controls-wrapper">
                   <nuxt-link
@@ -70,6 +73,7 @@ import BlogPageData from '@/content/pages/blog.json'
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
+import SocialIcons from '@/components/SocialIcons'
 
 // ====================================================================== Export
 export default {
@@ -78,7 +82,8 @@ export default {
   components: {
     Modal,
     PageSection,
-    BackgroundLayers
+    BackgroundLayers,
+    SocialIcons
   },
 
   async asyncData ({ $content, app, store, route, error }) {
@@ -458,11 +463,27 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
+::v-deep .social-icons {
+  path,
+  ellipse {
+    fill: $kleinBlue;
+  }
+}
+
 #bottom-controls {
   .share-socials {
-    font-size: 14px;
-    @include fontWeight_SemiBold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.625rem;
     color: $kleinBlue;
+    .share-to {
+      font-size: 14px;
+      @include fontWeight_SemiBold;
+      @include leading_ExtraExtraLarge;
+      margin-right: 1rem;
+    }
   }
   .controls-wrapper {
     display: flex;

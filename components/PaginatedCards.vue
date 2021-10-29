@@ -3,14 +3,22 @@
 
     <Zero_Pagination__Paginate
       v-slot="{ paginated }"
-      :display="3"
-      :collection="cards"
+      :display="display"
+      :collection="searchResults"
       class="card-list">
       <Card
         v-for="(card, index) in paginated"
         :key="index"
         :card="card" />
     </Zero_Pagination__Paginate>
+
+    <div
+      v-if="(searchResults.length === 0)"
+      class="no-results">
+      <div class="prompt">
+        No results found that match the search query.
+      </div>
+    </div>
 
     <div
       v-if="controls"
@@ -61,7 +69,8 @@ export default {
 
   computed: {
     ...mapGetters({
-      routeQuery: 'filters/routeQuery'
+      routeQuery: 'filters/routeQuery',
+      filterValue: 'core/filterValue'
     }),
     cards () {
       return this.block.cards
@@ -71,7 +80,23 @@ export default {
     },
     controls () {
       return this.block.displayControls
+    },
+    searchQuery () {
+      return this.filterValue
+    },
+    searchResults () {
+      const query = this.searchQuery.toLowerCase()
+      return this.cards.filter((post) => {
+        const matched = post.title.toLowerCase().includes(query)
+        // const matched = post.title.toLowerCase().includes(query) || post.description.join('').toLowerCase().includes(query)
+        if (!matched) { return false }
+        return post
+      })
     }
+  },
+
+  mounted () {
+    console.log(this.cards)
   }
 }
 </script>
@@ -96,6 +121,21 @@ export default {
     @include mini {
       margin-right: 0;
     }
+  }
+}
+
+.no-results {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .prompt {
+    padding: 1rem 2rem;
+    margin: 3rem 0;
+    color: $white;
+    @include fontWeight_Medium;
+    background-color: $denim;
+    border-radius: 1rem;
   }
 }
 
