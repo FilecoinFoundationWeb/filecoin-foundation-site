@@ -93,10 +93,6 @@ export default {
         return post
       })
     }
-  },
-
-  mounted () {
-    console.log(this.cards)
   }
 }
 </script>

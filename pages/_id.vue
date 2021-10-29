@@ -109,6 +109,7 @@ export default {
 
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
+    await store.dispatch('global/getBaseData', 'settings')
     await store.dispatch('global/getBaseData', { key: 'blog', data: BlogPageData })
   },
 
