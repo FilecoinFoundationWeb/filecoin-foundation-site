@@ -81,7 +81,10 @@ export default {
       toaster: {
         display: 10,
         timeout: 5000
-      }
+      },
+      redirects: [
+        { from: '/filplus', to: '/governance/#panel-3-title' }
+      ]
     },
     filters: {
       include: false
