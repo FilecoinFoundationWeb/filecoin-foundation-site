@@ -71,7 +71,9 @@ export default {
     // Doc: https://github.com/nuxt-community/style-resources-module/
     '@nuxtjs/style-resources',
     // https://github.com/agency-undone/au-nuxt-module-zero
-    'au-nuxt-module-zero'
+    'au-nuxt-module-zero',
+    // https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
@@ -84,7 +86,7 @@ export default {
       }
     },
     filters: {
-      include: false
+      include: true
     },
     pagination: {
       include: true
