@@ -295,7 +295,6 @@
             {
               "type": "A",
               "action": "nuxt-link",
-              "target": "_blank",
               "url": "/events",
               "img": "/icons/calendar.png",
               "img_size": "regular",
