@@ -294,6 +294,9 @@
           "cards": [
             {
               "type": "A",
+              "action": "nuxt-link",
+              "target": "_blank",
+              "url": "/events",
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Attend an event",
@@ -301,6 +304,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//www.meetup.com/Filecoin-San-Francisco",
               "img": "/icons/multi-person.png",
               "img_size": "regular",
               "title": "Join a meetup group",
@@ -308,6 +314,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute",
               "img": "/icons/speech-bubble.png",
               "img_size": "regular",
               "title": "Contribute to the Filecoin project",
@@ -315,6 +324,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//filecoin.io/slack",
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
@@ -322,6 +334,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//docs.filecoin.io/build",
               "img": "/icons/tool.png",
               "img_size": "regular",
               "title": "Become a storage provider or builder",
@@ -329,6 +344,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//proto.school",
               "img": "/icons/magnifying-glass.png",
               "img_size": "regular",
               "title": "Learn more on ProtoSchool",
