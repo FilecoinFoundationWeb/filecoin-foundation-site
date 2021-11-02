@@ -70,12 +70,24 @@
       {
         "id": "gallery-1-cards",
         "left": {
-          "type": "image_block",
-          "src": "/icons/hands-opening.png",
+          "type": "text_block",
           "cols": {
             "num": "col-3_mi-6",
             "push_left": "off-2_mi-3"
-          }
+          },
+          "customizations": [
+            {
+              "name": "FloatingMenu",
+              "props": {
+                "id": "floating-hands",
+                "cutoff": "more-info",
+                "block": {
+                  "type": "image_block",
+                  "src": "/icons/hands-opening.png"
+                }
+              }
+            }
+          ]
         },
         "right": {
           "type": "slider_block",
@@ -107,7 +119,7 @@
             },
             {
               "type": "A",
-              "description": "<span class='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us</a> or see our <a href='https://github.com/filecoin-project/devgrants' target='_blank' class='lighter'>Github repo</a> for a more in-depth introduction to the grants program.</span>"
+              "description": "<span id='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us</a> or see our <a href='https://github.com/filecoin-project/devgrants' target='_blank' class='lighter'>Github repo</a> for a more in-depth introduction to the grants program.</span>"
             }
           ]
         }

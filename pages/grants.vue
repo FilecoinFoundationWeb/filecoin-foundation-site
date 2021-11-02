@@ -234,9 +234,6 @@ export default {
       @include mini {
         margin-bottom: 2rem;
       }
-      .more-info {
-        @include fontSize_Large;
-      }
     }
   }
   a {
@@ -246,6 +243,10 @@ export default {
       color: $jordyBlue;
     }
   }
+}
+
+::v-deep #more-info {
+  @include fontSize_Large;
 }
 
 ::v-deep #banner-1 {
