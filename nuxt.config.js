@@ -70,8 +70,10 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/style-resources-module/
     '@nuxtjs/style-resources',
-    // https://github.com/agency-undone/au-nuxt-module-zero
-    'au-nuxt-module-zero'
+    // Doc: https://github.com/agency-undone/au-nuxt-module-zero
+    'au-nuxt-module-zero',
+    // Dox: https://sitemap.nuxtjs.org/
+    '@nuxtjs/sitemap'
   ],
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
@@ -99,6 +101,11 @@ export default {
   // //////////////////////////////////////////////////////////// [Module] Axios
   // -------------------------------------- See https://axios.nuxtjs.org/options
   axios: {},
+  // ///////////////////////////////////////////////////////////// [Module] Zero
+  // ------------------------------------------- Dox: https://sitemap.nuxtjs.org
+  sitemap: {
+    hostname: 'https://fil.org'
+  },
   // /////////////////////////////////// Plugins to load before mounting the App
   // ---------------------------------------------------------------------------
   plugins: [
