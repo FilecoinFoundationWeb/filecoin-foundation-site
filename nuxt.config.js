@@ -15,8 +15,7 @@ export default {
       siteUrl: 'https://fil.org'
     },
     redirects: [
-      { from: '/filplus', to: '/governance/#panel-3-title' },
-      { from: '/asd', to: '/governance' }
+      { from: '/filplus', to: '/governance/#panel-3-title' }
     ]
   },
   // --------------------------------------------------------- [Runtime] Private
