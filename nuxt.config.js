@@ -104,7 +104,10 @@ export default {
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ------------------------------------------- Dox: https://sitemap.nuxtjs.org
   sitemap: {
-    hostname: 'https://fil.org'
+    hostname: 'https://fil.org',
+    exclude: [
+      '/filplus'
+    ]
   },
   // /////////////////////////////////// Plugins to load before mounting the App
   // ---------------------------------------------------------------------------
