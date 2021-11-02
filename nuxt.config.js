@@ -13,7 +13,10 @@ export default {
     seo: {
       siteName: 'Filecoin Foundation',
       siteUrl: 'https://fil.org'
-    }
+    },
+    redirects: [
+      { from: '/filplus', to: '/governance/#panel-3-title' }
+    ]
   },
   // --------------------------------------------------------- [Runtime] Private
   privateRuntimeConfig: {},
@@ -81,10 +84,7 @@ export default {
       toaster: {
         display: 10,
         timeout: 5000
-      },
-      redirects: [
-        { from: '/filplus', to: '/governance/#panel-3-title' }
-      ]
+      }
     },
     filters: {
       include: false
