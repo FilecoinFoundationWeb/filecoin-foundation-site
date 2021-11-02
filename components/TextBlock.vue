@@ -13,6 +13,10 @@
         class="label-textual" />
     </div>
 
+    <div v-if="date" class="date">
+      {{ date }}
+    </div>
+
     <component
       :is="headingLevel"
       v-if="heading"
@@ -78,6 +82,13 @@ export default {
       const label = this.block.label
       if (typeof label === 'object') { label.theme = this.buttonTheme }
       return label
+    },
+    date () {
+      if (this.block.date) {
+        const date = this.$moment.utc(new Date(this.block.date))
+        return `${date.format('MMMM D YYYY')}`
+      }
+      return false
     },
     heading () {
       return this.block.heading

@@ -57,6 +57,7 @@ export default {
       (E) → Load more
       (F) → Footer
       (G) → Events & Hackathons navigation
+      (H) → Blog post card
       (X) → No styling + slot
     */
     button: {
@@ -370,7 +371,7 @@ $layerOffset: 0.25rem;
   }
 }
 
-// -------------------------------------------------------------------- [Type] E
+// -------------------------------------------------------------------- [Type] G
 .type__G {
   @include fontSize_ExtraExtraLarge;
   @include fontWeight_Medium;
@@ -416,4 +417,12 @@ $layerOffset: 0.25rem;
     }
   }
 }
+
+// -------------------------------------------------------------------- [Type] H
+.type__H {
+  @include fontSize_Small;
+  @include fontWeight_SemiBold;
+  color: $kleinBlue;
+}
+
 </style>
