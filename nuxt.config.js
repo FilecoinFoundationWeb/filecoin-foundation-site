@@ -79,13 +79,13 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/style-resources-module/
+    // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // Doc: https://github.com/agency-undone/au-nuxt-module-zero
     'au-nuxt-module-zero',
-    // Dox: https://sitemap.nuxtjs.org/
+    // Doc: https://sitemap.nuxtjs.org
     '@nuxtjs/sitemap',
-    // https://content.nuxtjs.org/
+    // Doc: https://content.nuxtjs.org
     '@nuxt/content'
   ],
   // ///////////////////////////////////////////////////////////// [Module] Zero
@@ -117,10 +117,7 @@ export default {
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ------------------------------------------- Dox: https://sitemap.nuxtjs.org
   sitemap: {
-    hostname: 'https://fil.org',
-    exclude: [
-      '/filplus'
-    ]
+    hostname: 'https://fil.org'
   },
   // /////////////////////////////////// Plugins to load before mounting the App
   // ---------------------------------------------------------------------------
