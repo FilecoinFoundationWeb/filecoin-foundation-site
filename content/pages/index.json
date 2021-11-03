@@ -148,6 +148,9 @@
           "cards": [
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//docs.filecoin.io",
               "img": "/icons/outline-file.png",
               "img_size": "mini",
               "title": "Filecoin's Documentation",
@@ -155,6 +158,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//github.com/filecoin-project",
               "img": "/icons/outline-github.png",
               "img_size": "mini",
               "title": "Filecoin GitHub",
@@ -162,6 +168,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//liftoff.filecoin.io",
               "img": "/icons/outline-calendar.png",
               "img_size": "mini",
               "title": "Filecoin 2020 Mainnet Ignition & Liftoff",
@@ -169,6 +178,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//status.filecoin.io",
               "img": "/icons/outline-filecoin-blue-logo.png",
               "img_size": "mini",
               "title": "Filecoin Network Status",
@@ -176,6 +188,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//orbit.filecoin.io",
               "img": "/icons/outline-multi-circle.png",
               "img_size": "mini",
               "title": "Filecoin 2021 Orbit",
@@ -183,6 +198,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//github.com/filecoin-project/community/discussions",
               "img": "/icons/outline-speech-bubble.png",
               "img_size": "mini",
               "title": "Filecoin Forums",
@@ -190,6 +208,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//research.filecoin.io",
               "img": "/icons/outline-beaker.png",
               "img_size": "mini",
               "title": "Filecoin Research",
@@ -197,6 +218,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//filecoin.io/2020-engineering-filecoins-economy-en.pdf",
               "img": "/icons/outline-moneybag.png",
               "img_size": "mini",
               "title": "Cryptoeconomics Overview",
@@ -204,6 +228,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//proto.school",
               "img": "/icons/outline-graduation-cap.png",
               "img_size": "mini",
               "title": "Filecoin Tutorials (ProtoSchool)",
@@ -211,6 +238,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//filecoinfoundation.medium.com",
               "img": "/icons/outline-pencil.png",
               "img_size": "mini",
               "title": "Filecoin Blog",
@@ -303,6 +333,8 @@
           "cards": [
             {
               "type": "A",
+              "action": "nuxt-link",
+              "url": "/events",
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Attend an event",
@@ -310,6 +342,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//www.meetup.com/Filecoin-San-Francisco",
               "img": "/icons/multi-person.png",
               "img_size": "regular",
               "title": "Join a meetup group",
@@ -317,6 +352,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute",
               "img": "/icons/speech-bubble.png",
               "img_size": "regular",
               "title": "Contribute to the Filecoin project",
@@ -324,6 +362,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//filecoin.io/slack",
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
@@ -331,6 +372,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//docs.filecoin.io/build",
               "img": "/icons/tool.png",
               "img_size": "regular",
               "title": "Become a storage provider or builder",
@@ -338,6 +382,9 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//proto.school",
               "img": "/icons/magnifying-glass.png",
               "img_size": "regular",
               "title": "Learn more on ProtoSchool",

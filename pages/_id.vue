@@ -375,20 +375,38 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     letter-spacing: $letterSpacing_Large;
   }
   a {
+    position: relative;
     @include fontSize_Large;
     @include fontWeight_SemiBold;
     @include leading_Regular;
     letter-spacing: $letterSpacing_Large;
     color: $denim;
   }
-  // p > a {
-  //   &:before {
-  //     content: attr(href);
-  //   }
-  //   &:after {
-  //     content:
-  //   }
-  // }
+  p > a {
+    &:before {
+      content: attr(href);
+      position: absolute;
+      top: -1.75rem;
+      left: calc(100% - 1.25rem);
+      background-color: $white;
+      @include fontSize_Small;
+      border-radius: $borderRadius_Medium;
+      @include leading_ExtraLarge;
+      padding: 0 0.5rem;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
+      opacity: 0;
+      transition: 200ms ease;
+    }
+    &:after {
+      content: url('~/assets/svgs/toolTipIcon.svg');
+      margin-left: 0.375rem;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
   ul {
     margin-bottom: 1.5rem;
     padding-left: 1.125rem;

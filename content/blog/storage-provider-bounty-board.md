@@ -15,7 +15,7 @@ The goal of the Storage Provider Bounty Board is to:
 * Improve Filecoin’s ecosystem and community support by working with community members and contributors.
 * Motivate more contributors to participate in the Filecoin project and to solve open issues by rewarding ongoing & existing contributors that add significant value to Filecoin.
 
-Visit the Storage Provider Bounty Board panel on the Filecoin Project Github, under the community repositories, to check bounty progress and find open issues.
+Visit the [Storage Provider Bounty Board](https://fil.org/) panel on the Filecoin Project Github, under the community repositories, to check bounty progress and find open issues.
 
 ![Test Banner](/images/blog/storage-provider-bounty-board.png)
 
@@ -36,7 +36,7 @@ Bounties can be small or large, technical or nontechnical. Regardless of who you
 
 ## Awarding System
 
-Bounties are awarded for closing and/or fixing an issue. Bounties range from $50 to $5,000 (or equivalent FIL). Awards are determined based on the urgency and complexity of the task at hand. Rewards are determined by the Filecoin Foundation and the Storage Provider Working Group. Additional details can be found <a href="/blog">here</a>.
+Bounties are awarded for closing and/or fixing an issue. Bounties range from $50 to $5,000 (or equivalent FIL). Awards are determined based on the urgency and complexity of the task at hand. Rewards are determined by the Filecoin Foundation and the Storage Provider Working Group. Additional details can be found [here](https://fil.org/).
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 - sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -67,6 +67,6 @@ Open issues can be proposed by anyone in the Filecoin community. The Filecoin Fo
 
 ## Reward Distribution
 
-In order to distribute rewards after closing the issue, contributors must submit a <a>Bounty Claim</a> which will notify the Filecoin Foundation team regarding their work and payment details.
+In order to distribute rewards after closing the issue, contributors must submit a [Bounty Claim](https://fil.org/) which will notify the Filecoin Foundation team regarding their work and payment details.
 
-What are you waiting for? Get started with <a>Storage Provider Bounty Board</a> today, and join the community in the #web3-storage channel in <a>Filecoin Slack</a>.
+What are you waiting for? Get started with [Storage Provider Bounty Board](https://fil.org/) today, and join the community in the #web3-storage channel in [Filecoin Slack](https://fil.org/).
