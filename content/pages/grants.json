@@ -70,7 +70,7 @@
       {
         "id": "gallery-1-cards",
         "left": {
-          "type": "text_block",
+          "type": "image_block",
           "cols": {
             "num": "col-4_mi-8",
             "push_left": "off-2_mi-2"
