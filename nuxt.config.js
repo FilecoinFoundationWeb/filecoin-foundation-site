@@ -13,7 +13,18 @@ export default {
     seo: {
       siteName: 'Filecoin Foundation',
       siteUrl: 'https://fil.org'
-    }
+    },
+    redirects: [
+      { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      { from: '/board', to: '/about/#panel_1' },
+      { from: '/careers', to: '/get-involved/#careers_intro' },
+      { from: '/community', to: '/about/#dive_deeper_intro' },
+      { from: '/contact', to: '/about/#site-footer' },
+      { from: '/filplus', to: '/governance/#panel-3-title' },
+      { from: '/fips', to: '/governance/#panel-1-title' },
+      { from: '/philosophy', to: '/about/#intro_1' },
+      { from: '/team', to: '/about/#panel_1' }
+    ]
   },
   // --------------------------------------------------------- [Runtime] Private
   privateRuntimeConfig: {},
@@ -73,7 +84,9 @@ export default {
     // Doc: https://github.com/agency-undone/au-nuxt-module-zero
     'au-nuxt-module-zero',
     // Dox: https://sitemap.nuxtjs.org/
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    // https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
@@ -86,7 +99,7 @@ export default {
       }
     },
     filters: {
-      include: false
+      include: true
     },
     pagination: {
       include: true

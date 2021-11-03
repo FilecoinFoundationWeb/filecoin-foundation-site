@@ -1,0 +1,12 @@
+{
+  "seo": {
+    "title": "Ecosystem - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Ecosystem - Filecoin Foundation",
+    "url": "https://fil.org/ecosystem",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
