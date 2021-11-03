@@ -111,13 +111,8 @@ export default {
       return arr
     },
     featuredPost () {
-      let featured
-      for (let i = 0; i < this.markdownFiles.length; i++) {
-        if (this.markdownFiles[i].featured) {
-          featured = this.markdownFiles[i]
-          break
-        }
-      }
+      const featured = this.markdownFiles.find(file => file.hasOwnProperty('featured') && file.featured)
+
       if (featured) {
         const section = {
           id: 'featured-post',
@@ -286,24 +281,27 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #zero-filter-bar {
+  position: relative;
   margin-left: 0.5rem;
   width: calc(100% - 2rem);
   height: 2.5rem;
-  background-color: $denim;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0 .5rem $azureRadiance;
+  @include blogPageOutline;
   .icon-container {
     margin: 0 0.5rem;
+    height: 100%;
+    z-index: 10;
   }
   .input {
+    position: relative;
+    left: -1px;
     font-size: 14px;
     @include fontWeight_Medium;
     letter-spacing: $letterSpacing_Large;
     color: $white;
-    background-color: $denim;
-    border-radius: 0.5rem;
+    background-color: transparent;
     outline: none;
     border: none;
+    z-index: 10;
     &::placeholder {
       font-size: 14px;
       color: $azureRadiance;
