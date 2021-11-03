@@ -485,6 +485,12 @@ export default {
     display: block;
     padding: 0.625rem;
     padding-top: 1.25rem;
+    flex-grow: 1;
+  }
+  .panel-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .panel-right {
     display: none;
@@ -521,7 +527,7 @@ export default {
     letter-spacing: $letterSpacing_Large;
   }
   .cta {
-    margin-top: 0.5rem;
+    margin-top: auto;
   }
 }
 

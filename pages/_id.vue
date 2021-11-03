@@ -20,26 +20,42 @@
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
               <div id="bottom-controls">
+
+                <div
+                  v-if="postTags"
+                  class="tags-container">
+                  <div
+                    v-for="tag in postTags"
+                    class="tag">
+                    {{ tag }}
+                  </div>
+                </div>
+
                 <div class="share-socials">
                   <div class="share-to">
                     Share to:
                   </div>
                   <SocialIcons :force-list="shareSocials" />
                 </div>
+
                 <div class="controls-wrapper">
+
                   <nuxt-link
                     v-if="previousPost"
                     :to="previousPost"
                     class="button">
                     Back
                   </nuxt-link>
+
                   <nuxt-link
                     v-if="nextPost"
                     :to="nextPost"
                     class="button">
                     Next article
                   </nuxt-link>
+
                 </div>
+
               </div>
             </div>
 
@@ -171,6 +187,12 @@ export default {
     },
     postBody () {
       return this.markdown
+    },
+    postTags () {
+      if (Array.isArray(this.markdown.tags)) {
+        return this.markdown.tags
+      }
+      return false
     },
     previousPost () {
       for (let i = 1; i < this.allPosts.length; i++) {
@@ -452,8 +474,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   blockquote {
     margin-top: 3rem;
+    margin-left: 2rem;
     margin-bottom: 3rem;
     p {
+      border-left: 3px solid $polar;
+      padding-left: 2rem;
       @include fontSize_ExtraLarge;
       @include fontWeight_Medium;
       @include leading_Small;
@@ -487,15 +512,34 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       background: $hawkesBlue;
     }
   }
+  .nuxt-content-highlight {
+    position: relative;
+    @include blogPageOutline;
+    &:before {
+      background-color: $jordyBlue;
+      z-index: -1;
+    }
+    &:after {
+      content: unset;
+    }
+  }
   pre {
+    padding: 1.5rem;
     margin: 3rem 0;
     border-radius: 0.5rem;
     background-color: $blackPearl;
-    box-shadow: 0 0 0 .5rem $jordyBlue;
   }
   code {
     font-family: 'Suisse Intl Mono';
     color: #9AB6CE;
+  }
+  hr {
+    border-top: 3px solid $polar;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -507,6 +551,25 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #bottom-controls {
+  .tags-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 3.125rem;
+    .tag {
+      padding: 0.625rem 1.25rem;
+      margin-right: 0.625rem;
+      font-size: 14px;
+      @include fontWeight_Medium;
+      letter-spacing: $letterSpacing_Large;
+      @include leading_Small;
+      border-radius: 1.5rem;
+      color: $polar;
+      background-color: $denim;
+      cursor: pointer;
+    }
+  }
   .share-socials {
     display: flex;
     flex-direction: row;
