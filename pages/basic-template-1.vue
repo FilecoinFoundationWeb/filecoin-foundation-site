@@ -168,7 +168,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #basic-hero {
+::v-deep #basic_hero {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {
