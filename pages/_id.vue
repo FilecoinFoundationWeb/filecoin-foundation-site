@@ -25,9 +25,10 @@
                   v-if="postTags"
                   class="tags-container">
                   <div
-                    v-for="tag in postTags"
+                    v-for="item in postTags"
+                    :key="item"
                     class="tag">
-                    {{ tag }}
+                    {{ item }}
                   </div>
                 </div>
 
