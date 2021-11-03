@@ -2,8 +2,9 @@
   <Zero_Core__FloatingWrapper
     :id="id"
     v-slot="scope"
-    :thresholdoffset="threshold"
-    :cutoffid="cutoff">
+    :thresholdoffset="offsettop"
+    :cutoffid="cutoff"
+    :bottomoffset="offsetbottom">
 
     <template v-if="entries.length">
       <div
@@ -25,9 +26,11 @@
       </div>
     </template>
 
-    <template v-if="block.type === 'image_block'">
-      <img :src="block.src" class="image" />
-    </template>
+    <div
+      v-if="content"
+      class="custom-content"
+      v-html="content">
+    </div>
 
   </Zero_Core__FloatingWrapper>
 </template>
@@ -43,24 +46,29 @@ export default {
       required: false,
       default: 'floating-menu'
     },
-    cutoff: {
-      type: String,
-      required: true
-    },
-    threshold: {
+    offsettop: {
       type: Number,
       required: false,
       default: 120
+    },
+    offsetbottom: {
+      type: Number,
+      required: false,
+      default: 120
+    },
+    cutoff: {
+      type: String,
+      required: true
     },
     entries: {
       type: Array,
       required: false,
       default: () => []
     },
-    block: {
-      type: Object,
+    content: {
+      type: String,
       required: false,
-      default: () => {}
+      default: ''
     }
   }
 }
@@ -68,8 +76,21 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
+.custom-content {
+  width: 100%;
+}
+
 .image {
   display: block;
   width: 100%;
 }
+
+.anchor-container,
+.floating-content,
+.image {
+  @include mini {
+    z-index: -1;
+  }
+}
+
 </style>

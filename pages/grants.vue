@@ -200,13 +200,14 @@ export default {
   @include mini {
     padding: 3rem 0 0 0;
   }
-  .column-content {
+  .column-content,
+  .blocks {
     &.left {
+      width: 100%;
       .image {
-        transform: scale(1.4) translateY(25%);
-        @include small {
-          transform: scale(1.3) translateY(0);
-          margin-bottom: 6rem;
+        width: 100%;
+        @include mini {
+          opacity: 0.5;
         }
       }
     }

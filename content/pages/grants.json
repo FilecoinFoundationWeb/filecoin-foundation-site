@@ -72,8 +72,8 @@
         "left": {
           "type": "text_block",
           "cols": {
-            "num": "col-3_mi-6",
-            "push_left": "off-2_mi-3"
+            "num": "col-4_mi-8",
+            "push_left": "off-2_mi-2"
           },
           "customizations": [
             {
@@ -81,10 +81,9 @@
               "props": {
                 "id": "floating-hands",
                 "cutoff": "more-info",
-                "block": {
-                  "type": "image_block",
-                  "src": "/icons/hands-opening.png"
-                }
+                "offsettop": 200,
+                "offsetbottom": 100,
+                "content": "<img src='/icons/hands-opening.png' class='image'/>"
               }
             }
           ]
@@ -93,7 +92,7 @@
           "type": "slider_block",
           "cols": {
             "num": "col-4_mi-10",
-            "push_left": "off-3_sm-2_mi-1"
+            "push_left": "off-2_sm-2_mi-1"
           },
           "cards": [
             {
