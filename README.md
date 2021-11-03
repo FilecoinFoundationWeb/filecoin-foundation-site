@@ -135,3 +135,37 @@ Below is a list of icon values that can be passed into any `icon` property in th
 
 - `play`
 - `info`
+
+**FloatingMenu**
+
+Below is a list of icon values that can be passed into any `icon` property in the component objects:
+
+```js
+props: {
+  id: String, // id of the component instance (optional)
+  cutoff: String, // id of an element on the page which when reached will cancel the floating effect (required)
+  offsettop: Number, // how far the threshold to enable floating is placed in advance of the viewport top (in pixels) (optional)
+  offsetbottom: Number, // how far the threshold to disable floating is placed in advance of the viewport bottom (in pixels) (optional)
+  content: String, // inline html to be injected as floating content (optional)
+  entries: [ // an array of objects with menu items. The following is an example of the format:
+    {
+      "heading": "Heading 1",
+      "id": "heading-1-id",
+      "items": [ // an array of subheadings
+        {
+          "text": "Subheading 1",
+          "id": "subheading-1-id"
+        },
+        {
+          "text": "Subheading 2",
+          "id": "subheading-2-id"
+        },
+        {
+          "text": "Subheading 3",
+          "id": "subheading-3-id"
+        }
+      ]
+    }
+  ]
+}
+```
