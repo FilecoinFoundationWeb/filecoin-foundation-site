@@ -12,7 +12,7 @@
   "page_content": [
     [
       {
-        "id": "basic-hero",
+        "id": "basic_hero",
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -60,6 +60,7 @@
       },
       {
         "id": "cta_banner_1",
+        "grid": ["middle"],
         "left": {
           "type": "image_block",
           "src": "/icons/upstairs.png",
@@ -90,7 +91,7 @@
         }
       },
       {
-        "id": "basic-content-1",
+        "id": "basic_content_1",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -103,7 +104,7 @@
         }
       },
       {
-        "id": "basic-content-2",
+        "id": "basic_content_2",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -116,7 +117,7 @@
         }
       },
       {
-        "id": "basic-content-3",
+        "id": "basic_content_3",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -130,6 +131,7 @@
       },
       {
         "id": "panels_1",
+        "grid": ["middle"],
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -243,7 +245,7 @@
     ],
     [
       {
-        "id": "events-hackathons",
+        "id": "events_hackathons",
         "type": "custom",
         "heading": "Events & Hackathons",
         "cta": {

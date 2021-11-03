@@ -12,7 +12,7 @@
   "page_content": [
     [
       {
-        "id": "basic-hero",
+        "id": "basic_hero",
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -37,7 +37,7 @@
     ],
     [
       {
-        "id": "basic-content-1",
+        "id": "basic_content_1",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -51,7 +51,7 @@
         }
       },
       {
-        "id": "banner-image",
+        "id": "banner_image",
         "left": {
           "type": "image_block",
           "src": "/images/basic-1/basic-1-example-image.png",
@@ -62,7 +62,7 @@
         }
       },
       {
-        "id": "basic-content-2",
+        "id": "basic_content_2",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -97,7 +97,7 @@
         }
       },
       {
-        "id": "basic-content-3",
+        "id": "basic_content_3",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -110,7 +110,7 @@
         }
       },
       {
-        "id": "basic-content-4",
+        "id": "basic_content_4",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -123,7 +123,7 @@
         }
       },
       {
-        "id": "basic-content-5",
+        "id": "basic_content_5",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -138,7 +138,7 @@
     ],
     [
       {
-        "id": "events-hackathons",
+        "id": "events_hackathons",
         "type": "custom",
         "component": "EventsHackathons",
         "props": {

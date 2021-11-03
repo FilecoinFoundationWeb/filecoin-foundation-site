@@ -26,7 +26,7 @@
 import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
-import BasicPageTwoData from '@/content/pages/basic_two.json'
+import BasicPageTwoData from '@/content/pages/basic-template-2.json'
 import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
 import Modal from '@/components/Modal'
@@ -208,7 +208,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #basic-hero {
+::v-deep #basic_hero {
   padding: 0;
   margin-bottom: 7rem;
   @include small {
@@ -297,9 +297,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #cta_banner_1,
 ::v-deep #panels_1,
-::v-deep #basic-content-1,
-::v-deep #basic-content-2,
-::v-deep #basic-content-3 {
+::v-deep #basic_content_1,
+::v-deep #basic_content_2,
+::v-deep #basic_content_3 {
   h1,
   h2 {
     @include fontSize_ExtraLarge;
@@ -412,17 +412,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #basic-content-1 {
+::v-deep #basic_content_1 {
   padding: 0;
   margin-bottom: 2rem;
 }
 
-::v-deep #basic-content-2 {
+::v-deep #basic_content_2 {
   padding: 0;
   margin-bottom: 2rem;
 }
 
-::v-deep #basic-content-3 {
+::v-deep #basic_content_3 {
   padding-top: 0;
   padding-bottom: 4rem;
 }

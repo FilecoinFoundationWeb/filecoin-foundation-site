@@ -26,7 +26,7 @@
 import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
-import BasicPageOneData from '@/content/pages/basic_one.json'
+import BasicPageOneData from '@/content/pages/basic-template-1.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -214,12 +214,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #basic-content-1,
-::v-deep #banner-image,
-::v-deep #basic-content-2,
-::v-deep #basic-content-3,
-::v-deep #basic-content-4,
-::v-deep #basic-content-5 {
+::v-deep #basic_content_1,
+::v-deep #banner_image,
+::v-deep #basic_content_2,
+::v-deep #basic_content_3,
+::v-deep #basic_content_4,
+::v-deep #basic_content_5 {
   h1,
   h2 {
     @include fontSize_ExtraLarge;
@@ -233,10 +233,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     margin-bottom: 1.25rem;
   }
   p {
-    margin-bottom: 1.5rem;
     @include fontSize_Large;
     @include fontWeight_Regular;
     @include leading_Regular;
+    margin-bottom: 1.5rem;
     letter-spacing: $letterSpacing_Large;
   }
   a {
@@ -264,7 +264,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     }
   }
   ul li ul li {
-    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3307' data-name='Group 3307' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%23d8ebfb'/%3e%3c/g%3e%3c/svg%3e ");
+    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3307' data-name='Group 3307' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%23d8ebfb'/%3e%3c/g%3e%3c/svg%3e");
   }
   img {
     border-radius: 0.5rem;
@@ -320,17 +320,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #basic-content-1 {
+::v-deep #basic_content_1 {
   padding-top: 7rem;
   padding-bottom: 3rem;
 }
 
-::v-deep #banner-image {
+::v-deep #banner_image {
   padding: 0;
   margin-bottom: 5rem;
 }
 
-::v-deep #basic-content-2 {
+::v-deep #basic_content_2 {
   padding: 0;
   margin-bottom: 3.75rem;
 }
@@ -340,17 +340,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   margin-bottom: 3.25rem;
 }
 
-::v-deep #basic-content-3 {
+::v-deep #basic_content_3 {
   padding: 0;
   margin-bottom: 2rem;
 }
 
-::v-deep #basic-content-4 {
+::v-deep #basic_content_4 {
   padding: 0;
   margin-bottom: 2rem;
 }
 
-::v-deep #basic-content-5 {
+::v-deep #basic_content_5 {
   padding-top: 0;
   padding-bottom: 9rem;
 }
