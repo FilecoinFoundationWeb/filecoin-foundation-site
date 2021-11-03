@@ -8,8 +8,7 @@
       <PageSection
         v-if="postHeading"
         id="post-heading-section"
-        :section="postHeading">
-      </PageSection>
+        :section="postHeading" />
 
       <section id="post-body-section">
         <section id="post-body" class="content-section">
@@ -51,8 +50,7 @@
       <PageSection
         v-if="recommendations"
         id="blogposts-section"
-        :section="recommendations">
-      </PageSection>
+        :section="recommendations" />
 
       <BackgroundLayers
         id="page-singular-background-layers"

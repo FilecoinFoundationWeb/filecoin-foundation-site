@@ -8,8 +8,7 @@
       <PageSection
         v-if="featuredPost"
         id="featured-section"
-        :section="featuredPost">
-      </PageSection>
+        :section="featuredPost" />
 
       <div class="grid">
         <div class="col-8_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
@@ -27,8 +26,7 @@
       <PageSection
         v-if="blogPosts"
         id="blogposts-section"
-        :section="blogPosts">
-      </PageSection>
+        :section="blogPosts" />
 
       <BackgroundLayers
         id="page-blog-background-layers"

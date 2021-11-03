@@ -15,7 +15,7 @@ export default {
       siteUrl: 'https://fil.org'
     },
     redirects: [
-      { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      // { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
       { from: '/board', to: '/about/#panel_1' },
       { from: '/careers', to: '/get-involved/#careers_intro' },
       { from: '/community', to: '/about/#dive_deeper_intro' },
