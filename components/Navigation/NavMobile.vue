@@ -70,12 +70,14 @@ export default {
   position: fixed;
   // padding: 3rem 5rem 3rem 5rem;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
+  max-height: calc(100vh + 1rem);
   top: 0;
   left: 0;
   // left: 100vw;
-  transform: translateY(-100vh);
+  transform: translateY(-100%);
   // background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: scroll;
   transition: 250ms ease-in;
   z-index: 100;
 
@@ -83,7 +85,7 @@ export default {
   // padding: $navigationHeight 3rem 3rem 3rem;
   // padding-top: $navigationHeight !important;
   top: -1rem;
-  height: calc(100% + 1rem);
+  // height: calc(100% + 1rem);
   // --------
 
   &.nav-panel-open {

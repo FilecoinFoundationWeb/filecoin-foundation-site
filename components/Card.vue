@@ -1,5 +1,11 @@
 <template>
-  <div :class="['card', `type__${type}`, { 'with-image': img }]" :data-id="dataIdAttribute">
+  <component
+    :is="tag"
+    :to="tag === 'nuxt-link' ? url : undefined"
+    :href="tag === 'a' ? url : undefined"
+    :target="target"
+    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }]"
+    :data-id="dataIdAttribute">
 
     <div
       v-if="img && imgType === 'background_image'"
@@ -8,9 +14,16 @@
     </div>
 
     <img
-      v-if="img && imgType !== 'background_image'"
+      v-if="img && imgType !== 'background_image' && imgType !== 'nuxt_link'"
       :src="img"
       :class="['image', `size-${imgSize}`]" />
+
+    <nuxt-link
+      v-if="img && imgType === 'nuxt_link'"
+      :to="cta.url"
+      class="image-link">
+      <img :src="img" :class="['image', `size-${imgSize}`]" />
+    </nuxt-link>
 
     <div
       v-if="date && !img"
@@ -34,12 +47,17 @@
           {{ label }}
         </div>
 
-        <div v-if="title" class="title">
+        <template v-if="type === 'E'">
+          <div class="title" v-html="shortenString(title, 50)"></div>
+          <div class="description" v-html="shortenString(description, 50)"></div>
+        </template>
+
+        <div v-if="title && type !== 'E'" class="title">
           {{ title }}
         </div>
 
         <div
-          v-if="description && type !== 'D' && type !== 'C'"
+          v-if="description && type !== 'D' && type !== 'C' && type !== 'E'"
           class="description"
           v-html="description">
         </div>
@@ -52,7 +70,7 @@
       </div>
 
       <div
-        v-if="description && type !== 'B' && type !== 'A'"
+        v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
         class="panel-right">
         <div
           class="description"
@@ -62,7 +80,7 @@
 
     </div>
 
-  </div>
+  </component>
 </template>
 
 <script>
@@ -92,6 +110,25 @@ export default {
   computed: {
     type () {
       return this.card.type
+    },
+    action () {
+      return this.card.action || 'div'
+    },
+    tag () {
+      const action = this.action
+      let tag
+      switch (action) {
+        case 'a' : tag = 'a'; break
+        case 'nuxt-link' : tag = 'nuxt-link'; break
+        default : tag = 'div'; break
+      }
+      return tag
+    },
+    target () {
+      return this.card.target
+    },
+    url () {
+      return this.card.url
     },
     img () {
       return this.card.img
@@ -145,9 +182,19 @@ export default {
         } else { // different years
           return `${pastTag}${start.format('MMM D YYYY')} - ${end.format('MMM D YYYY')}`
         }
-      } else { // single date, no range
+      } else if (this.type !== 'E') { // single date, no range
         return `${pastTag}${start.format('MMMM D YYYY')}`
+      } else {
+        return `${start.format('MMMM D YYYY')}`
       }
+    },
+    shortenString (string, n) {
+      const chars = string.split('')
+      if (chars.length > n) {
+        const shortened = chars.slice(0, n)
+        return `${shortened.join('')}...`
+      }
+      return chars.join('')
     }
   }
 }
@@ -179,6 +226,27 @@ export default {
 // ////////////////////////////////////////////////////////////////// Variations
 // -------------------------------------------------------------------- [Type] A
 .card.type__A {
+  &.is-link {
+    position: relative;
+    &:hover {
+      &:before {
+        transition: 250ms ease-in;
+        opacity: 1;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1.5rem;
+      left: -1.5rem;
+      width: calc(100% + 3rem);
+      height: calc(100% + 3rem);
+      border: 6px solid $azureRadiance;
+      border-radius: 1.5rem;
+      opacity: 0;
+      transition: 250ms ease-out;
+    }
+  }
   .title {
     @include fontWeight_Medium;
     @include leading_Regular;
@@ -379,4 +447,82 @@ export default {
     margin-top: 0.5rem;
   }
 }
+
+// -------------------------------------------------------------------- [Type] E
+.card.type__E {
+  @include borderRadius_Large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 27rem;
+  margin: 0 1rem 3rem 0 !important;
+  width: calc(33% - 1rem);
+  padding: 0.75rem;
+  color: $blackPearl;
+  background-color: $white;
+  @include small {
+    width: calc(50% - 1rem);
+  }
+  @include mini {
+    width: calc(100% - 1rem);
+  }
+  .image-link {
+    height: 47%;
+    @include borderRadius_Large;
+    overflow: hidden;
+  }
+  .image {
+    position: relative;
+    @include borderRadius_Large;
+    display: block;
+    margin-bottom: auto;
+    width: unset;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content {
+    display: block;
+    padding: 0.625rem;
+    padding-top: 1.25rem;
+  }
+  .panel-right {
+    display: none;
+  }
+  .date,
+  .label {
+    @include fontSize_Small;
+    @include fontWeight_Regular;
+    letter-spacing: $letterSpacing_Large;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .date-large {
+    @include fontWeight_Bold;
+    @include fontSize_ExtraExtraLarge;
+    display: block;
+    height: 12.875rem;
+  }
+  .title {
+    @include fontSize_Regular;
+    @include fontWeight_SemiBold;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+    color: $kleinBlue;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .description {
+    @include fontSize_Small;
+    @include fontWeight_Regular;
+    @include leading_Medium;
+    letter-spacing: $letterSpacing_Large;
+  }
+  .cta {
+    margin-top: 0.5rem;
+  }
+}
+
 </style>

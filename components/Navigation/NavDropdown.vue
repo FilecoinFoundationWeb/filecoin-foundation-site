@@ -27,11 +27,12 @@
 
       <div class="nav-dropdown-panel-left">
 
-        <div
+        <nuxt-link
           v-if="link.description"
+          :to="link.url"
           class="extras"
           v-html="link.description">
-        </div>
+        </nuxt-link>
 
         <ul v-if="Array.isArray(link.links)">
           <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
@@ -315,6 +316,7 @@ li {
   flex-direction: row;
   top: 3.5rem;
   .extras {
+    display: block;
     position: relative;
     z-index: 10;
   }
