@@ -24,7 +24,7 @@
                   <div class="share-to">
                     Share to:
                   </div>
-                  <SocialIcons />
+                  <SocialIcons :force-list="shareSocials" />
                 </div>
                 <div class="controls-wrapper">
                   <nuxt-link
@@ -65,6 +65,7 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
+import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
 
@@ -119,6 +120,16 @@ export default {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
+    shareSocials () {
+      const socials = CloneDeep(this.siteContent.blog.social)
+      socials.forEach((item) => {
+        if (item.hasOwnProperty('url')) {
+          const url = `${this.siteContent.general.og.url + this.$route.path}`
+          item.url = item.url.replace(/slug/i, url)
+        }
+      })
+      return socials
+    },
     allPosts () {
       return this.markdown.allPosts
     },
@@ -137,7 +148,15 @@ export default {
           subheading: this.markdown.description,
           label: this.markdown.featured ? 'Featured Blog' : '',
           date: this.markdown.date || this.markdown.createdAt,
-          description: this.markdown.author
+          ctas: [
+            {
+              type: 'H',
+              action: 'nuxt-link',
+              text: this.markdown.author,
+              icon: 'play',
+              url: `/${this.markdown.slug}`
+            }
+          ]
         },
         right: {
           type: 'image_block',
