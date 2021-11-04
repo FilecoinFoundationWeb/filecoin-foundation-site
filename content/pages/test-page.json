@@ -1,40 +1,33 @@
 {
   "page_content": [
     {
-      "template": "sub-section",
-      "left": [
+      "template": "section",
+      "sub_sections": [
         {
-          "template": "text-block",
-          "type": "text_block",
-          "heading": "hi lets see if this works",
-          "subheading": "here's a test",
-          "description": "and another one",
-          "label": "hi",
-          "cols": {
-            "num": "col-4",
-            "push_left": "off-1"
-          },
-          "layout": ""
+          "template": "sub-section",
+          "id": "test-section",
+          "left": [
+            {
+              "template": "text-block",
+              "type": "text_block",
+              "layout": "large",
+              "cols": {
+                "num": "col-4",
+                "push_left": "off-1"
+              },
+              "heading": "test heading",
+              "subheading": "test subheading",
+              "description": "test description",
+              "label": "test label"
+            }
+          ],
+          "grid": [
+
+          ],
+          "right": [
+
+          ]
         }
-      ],
-      "right": [
-        {
-          "template": "text-block",
-          "type": "text_block",
-          "layout": "",
-          "cols": {
-            "num": "",
-            "push_left": ""
-          },
-          "heading": "",
-          "subheading": "",
-          "description": "",
-          "label": ""
-        }
-      ],
-      "id": "test-section",
-      "grid": [
-        "middle"
       ]
     }
   ]
