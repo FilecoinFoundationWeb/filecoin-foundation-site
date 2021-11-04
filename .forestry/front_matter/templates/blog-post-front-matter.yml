@@ -2,25 +2,27 @@
 label: Blog Post Front Matter
 hide_body: false
 fields:
-- type: boolean
-  name: featured
-  label: Featured
-- type: text
-  name: date
-  label: Date
 - type: text
   name: title
   label: Title
-- type: textarea
-  name: description
-  label: Description
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 - type: text
   name: author
   label: Author
-- type: file
-  name: image
-  description: Post header image.
-  label: Post Header Image
+- type: textarea
+  name: description
+  label: Description
+- type: boolean
+  name: featured
+  label: Featured
 - type: list
   name: recommendedPosts
   label: Recommended Posts
@@ -29,3 +31,8 @@ fields:
   type: tag_list
   default: []
   label: Tags
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Post Header Image
