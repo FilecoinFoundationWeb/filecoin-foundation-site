@@ -15,7 +15,7 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
