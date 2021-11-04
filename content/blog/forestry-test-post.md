@@ -10,9 +10,9 @@ featured: false
 recommendedPosts:
 - forestry-test-post
 - lorem-ipsum-1
-image: "/static/test-image.png"
+image: "/images/test-image.png"
 
 ---
-![](/static/images/events/hyperledger-global-forum.jpg)
-
 **This is a test post to see if Forestry is generating blog content correctly on the Filecoin Foundation site.**
+
+![](/images/events/hyperledger-global-forum.jpg)
