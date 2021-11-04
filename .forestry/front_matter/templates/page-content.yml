@@ -5,7 +5,8 @@ fields:
 - name: page_content
   type: blocks
   label: Page Content
-  template_types: []
+  template_types:
+  - sub-section
   config:
     min: 
     max: 
