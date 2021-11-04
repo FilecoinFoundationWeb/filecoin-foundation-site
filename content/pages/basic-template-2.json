@@ -61,6 +61,7 @@
       {
         "id": "cta_banner_1",
         "grid": ["middle"],
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "image_block",
           "src": "/icons/upstairs.png",
@@ -92,6 +93,7 @@
       },
       {
         "id": "basic_content_1",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -105,6 +107,7 @@
       },
       {
         "id": "basic_content_2",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -118,6 +121,7 @@
       },
       {
         "id": "basic_content_3",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -132,6 +136,7 @@
       {
         "id": "panels_1",
         "grid": ["middle"],
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "medium",

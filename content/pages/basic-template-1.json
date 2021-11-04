@@ -38,6 +38,7 @@
     [
       {
         "id": "basic_content_1",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -52,6 +53,7 @@
       },
       {
         "id": "banner_image",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "image_block",
           "src": "/images/basic-1/basic-1-example-image.png",
@@ -63,6 +65,7 @@
       },
       {
         "id": "basic_content_2",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -98,6 +101,7 @@
       },
       {
         "id": "basic_content_3",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -111,6 +115,7 @@
       },
       {
         "id": "basic_content_4",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -124,6 +129,7 @@
       },
       {
         "id": "basic_content_5",
+        "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
           "layout": "large",
