@@ -1,4 +1,30 @@
 ---
 label: Sub Section
 hide_body: true
-fields: []
+fields:
+- name: id
+  type: text
+  config:
+    required: false
+  label: Element ID
+- name: grid
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Grid Classes
+- name: left
+  type: blocks
+  label: Left Block
+  template_types: []
+  config:
+    min: 
+    max: 
+- name: right
+  type: blocks
+  label: Right Block
+  template_types: []
+  config:
+    min: 
+    max: 
