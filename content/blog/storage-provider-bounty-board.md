@@ -11,7 +11,9 @@ recommendedPosts:
 - lorem-ipsum-1
 - welcome-to-the-forest
 - storage-provider-bounty-board
-
+tags:
+- tag 1
+- tag 2
 ---
 # The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
 
