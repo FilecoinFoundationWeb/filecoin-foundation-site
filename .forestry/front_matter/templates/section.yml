@@ -5,7 +5,8 @@ fields:
 - name: sub_sections
   type: blocks
   label: Sub sections
-  template_types: []
+  template_types:
+  - sub-section
   config:
     min: 
     max: 
