@@ -13,3 +13,6 @@ recommendedPosts:
 image: "/static/test-image.png"
 
 ---
+![](/static/images/events/hyperledger-global-forum.jpg)
+
+**This is a test post to see if Forestry is generating blog content correctly on the Filecoin Foundation site.**
