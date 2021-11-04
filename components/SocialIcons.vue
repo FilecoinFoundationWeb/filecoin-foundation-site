@@ -43,12 +43,20 @@ export default {
     Button
   },
 
+  props: {
+    forceList: {
+      type: Array,
+      required: false,
+      default: () => []
+    }
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
     icons () {
-      return this.siteContent.general.social
+      return this.forceList.length ? this.forceList : this.siteContent.general.social
     }
   }
 }

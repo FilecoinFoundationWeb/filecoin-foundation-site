@@ -1,5 +1,3 @@
-/* eslint require-await: "off" */
-
 export default {
   // //////////////////////////////////////////// Static Site Generation Options
   // ---------------------------------------------------------------------------
@@ -13,7 +11,18 @@ export default {
     seo: {
       siteName: 'Filecoin Foundation',
       siteUrl: 'https://fil.org'
-    }
+    },
+    redirects: [
+      // { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      { from: '/board', to: '/about/#panel_1' },
+      { from: '/careers', to: '/get-involved/#careers_intro' },
+      { from: '/community', to: '/about/#dive_deeper_intro' },
+      { from: '/contact', to: '/about/#site-footer' },
+      { from: '/filplus', to: '/governance/#panel-3-title' },
+      { from: '/fips', to: '/governance/#panel-1-title' },
+      { from: '/philosophy', to: '/about/#intro_1' },
+      { from: '/team', to: '/about/#panel_1' }
+    ]
   },
   // --------------------------------------------------------- [Runtime] Private
   privateRuntimeConfig: {},
@@ -75,6 +84,15 @@ export default {
     // https://content.nuxtjs.org/
     '@nuxt/content'
   ],
+  // ///////////////////////////////////////////////////// [Module] Nuxt-content
+  // ---------------------------------------------------------------------------
+  content: {
+    markdown: {
+      prism: {
+        theme: false
+      }
+    }
+  },
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
   zero: {

@@ -42,6 +42,8 @@ Bounties can be small or large, technical or nontechnical. Regardless of who you
 | Velit esse dolore | Sunt in culpa qui officia deserunt | Sunt in culpa qui officia deserunt |
 | Velit esse dolore | Sunt in culpa qui officia deserunt | Sunt in culpa qui officia deserunt |
 
+***
+
 ## Awarding System
 
 Bounties are awarded for closing and/or fixing an issue. Bounties range from $50 to $5,000 (or equivalent FIL). Awards are determined based on the urgency and complexity of the task at hand. Rewards are determined by the Filecoin Foundation and the Storage Provider Working Group. Additional details can be found [here](https://fil.org/).
@@ -57,17 +59,19 @@ Bounties are awarded for closing and/or fixing an issue. Bounties range from $50
 
 Open issues can be proposed by anyone in the Filecoin community. The Filecoin Foundation provides templates to help address your issue to make sure you describe them clearly and as detail as possible. Issues can be proposed here.
 
-    <ul v-if=“Array.isArray(link.links)”>
-      <li v-for=“sublink in link.links” :key=“`${link.text}-${sublink.text}`”>
-        <div class=“first-level-wrapper”>
-    
-          <component
-            :is=“sublink.hasOwnProperty(‘url’) ? ‘nuxt-link’ : ‘div’”
-            :to=“sublink.disabled ? ‘’ : sublink.url”
-            :disabled=“sublink.disabled”
-            :class=“[‘nav-link’, ‘first-level’, { ‘has-second-level’: sublink.hasOwnProperty
-            (‘links’) }]”>
-            {{ sublink.text }}
+```
+1   <ul v-if=“Array.isArray(link.links)”>
+2     <li v-for=“sublink in link.links” :key=“`${link.text}-${sublink.text}`”>
+3       <div class=“first-level-wrapper”>
+4   
+5         <component
+6           :is=“sublink.hasOwnProperty(‘url’) ? ‘nuxt-link’ : ‘div’”
+7           :to=“sublink.disabled ? ‘’ : sublink.url”
+8           :disabled=“sublink.disabled”
+9           :class=“[‘nav-link’, ‘first-level’, { ‘has-second-level’: sublink.hasOwnProperty
+10            (‘links’) }]”>
+11            {{ sublink.text }}
+```
 
 ## Reward Distribution
 
@@ -75,6 +79,6 @@ In order to distribute rewards after closing the issue, contributors must submit
 
 What are you waiting for? Get started with [Storage Provider Bounty Board](https://fil.org/) today, and join the community in the #web3-storage channel in [Filecoin Slack](https://fil.org/).
 
-## Forestry test header 
+## Forestry test header
 
 Lorem Ipsum lorem ipsum

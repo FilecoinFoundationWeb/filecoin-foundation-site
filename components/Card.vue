@@ -1,5 +1,11 @@
 <template>
-  <div :class="['card', `type__${type}`, { 'with-image': img }]" :data-id="dataIdAttribute">
+  <component
+    :is="tag"
+    :to="tag === 'nuxt-link' ? url : undefined"
+    :href="tag === 'a' ? url : undefined"
+    :target="target"
+    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }]"
+    :data-id="dataIdAttribute">
 
     <div
       v-if="img && imgType === 'background_image'"
@@ -74,7 +80,7 @@
 
     </div>
 
-  </div>
+  </component>
 </template>
 
 <script>
@@ -104,6 +110,25 @@ export default {
   computed: {
     type () {
       return this.card.type
+    },
+    action () {
+      return this.card.action || 'div'
+    },
+    tag () {
+      const action = this.action
+      let tag
+      switch (action) {
+        case 'a' : tag = 'a'; break
+        case 'nuxt-link' : tag = 'nuxt-link'; break
+        default : tag = 'div'; break
+      }
+      return tag
+    },
+    target () {
+      return this.card.target
+    },
+    url () {
+      return this.card.url
     },
     img () {
       return this.card.img
@@ -201,6 +226,27 @@ export default {
 // ////////////////////////////////////////////////////////////////// Variations
 // -------------------------------------------------------------------- [Type] A
 .card.type__A {
+  &.is-link {
+    position: relative;
+    &:hover {
+      &:before {
+        transition: 250ms ease-in;
+        opacity: 1;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1.5rem;
+      left: -1.5rem;
+      width: calc(100% + 3rem);
+      height: calc(100% + 3rem);
+      border: 6px solid $azureRadiance;
+      border-radius: 1.5rem;
+      opacity: 0;
+      transition: 250ms ease-out;
+    }
+  }
   .title {
     @include fontWeight_Medium;
     @include leading_Regular;
@@ -439,6 +485,12 @@ export default {
     display: block;
     padding: 0.625rem;
     padding-top: 1.25rem;
+    flex-grow: 1;
+  }
+  .panel-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .panel-right {
     display: none;
@@ -475,7 +527,7 @@ export default {
     letter-spacing: $letterSpacing_Large;
   }
   .cta {
-    margin-top: 0.5rem;
+    margin-top: auto;
   }
 }
 
