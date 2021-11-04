@@ -4,22 +4,28 @@ hide_body: false
 fields:
 - type: boolean
   name: featured
-  label: featured
+  label: Featured
 - type: text
   name: date
-  label: date
+  label: Date
 - type: text
   name: title
-  label: title
+  label: Title
 - type: textarea
   name: description
-  label: description
+  label: Description
 - type: text
   name: author
-  label: author
+  label: Author
 - type: file
   name: image
-  label: image
+  description: Post header image.
+  label: Post Header Image
 - type: list
   name: recommendedPosts
-  label: recommendedPosts
+  label: Recommended Posts
+  description: Slugs of other blog posts related to the current post.
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
