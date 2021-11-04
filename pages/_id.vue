@@ -552,49 +552,59 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #bottom-controls {
-  .tags-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 3.125rem;
-    .tag {
-      padding: 0.625rem 1.25rem;
-      margin-right: 0.625rem;
-      font-size: 14px;
-      @include fontWeight_Medium;
-      letter-spacing: $letterSpacing_Large;
-      @include leading_Small;
-      border-radius: 1.5rem;
-      color: $polar;
-      background-color: $denim;
-      cursor: pointer;
-    }
-  }
-  .share-socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 2.625rem;
-    color: $kleinBlue;
-    .share-to {
-      font-size: 14px;
-      @include fontWeight_SemiBold;
-      @include leading_ExtraExtraLarge;
-      margin-right: 1rem;
-    }
-  }
-  .controls-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .button {
     font-size: 14px;
     text-align: center;
     color: $kleinBlue;
   }
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 3.125rem;
+}
+
+.tag {
+  @include fontWeight_Medium;
+  @include leading_Small;
+  padding: 0.625rem 1.25rem;
+  margin-right: 0.625rem;
+  font-size: 14px;
+  letter-spacing: $letterSpacing_Large;
+  border-radius: 1.5rem;
+  color: $polar;
+  background-color: $denim;
+  cursor: pointer;
+  transition: 250ms ease-out;
+  &:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
+  }
+}
+
+.share-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.625rem;
+  color: $kleinBlue;
+}
+
+.share-to {
+  @include fontWeight_SemiBold;
+  @include leading_ExtraExtraLarge;
+  margin-right: 1rem;
+  font-size: 14px;
+}
+
+.controls-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 ::v-deep #blogposts-list {
