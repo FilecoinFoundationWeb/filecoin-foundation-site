@@ -1,0 +1,25 @@
+---
+label: Blog Post Front Matter
+hide_body: false
+fields:
+- type: boolean
+  name: featured
+  label: featured
+- type: text
+  name: date
+  label: date
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: author
+  label: author
+- type: file
+  name: image
+  label: image
+- type: list
+  name: recommendedPosts
+  label: recommendedPosts
