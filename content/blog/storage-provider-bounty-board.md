@@ -6,7 +6,7 @@ description: The Filecoin Foundation has launched Storage Provider Bounty Board,
 author: Filecoin Foundation
 image: '/images/blog/storage-provider-bounty-board.png'
 recommendedPosts: ['lorem-ipsum-1', 'welcome-to-the-forest', 'storage-provider-bounty-board']
-tags: ['lorem-ipsum-tag','lorem-ipsum-tag', 'Another-lorem-ipsum-tag']
+tags: ['Lorem Ipsum Tag','Lorem Ipsum Tag', 'Another Lorem Ipsum Tag']
 ---
 
 # The Filecoin Foundation has launched Storage Provider Bounty Board, an open tool for coordinating work priorities and tapping the collective knowledge of the Filecoin ecosystem in crowdsourcing solutions for the storage provider community.
