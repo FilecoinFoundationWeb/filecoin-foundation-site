@@ -6,7 +6,7 @@ fields:
   type: blocks
   label: Page Content
   template_types:
-  - sub-section
+  - section
   config:
     min: 
     max: 
