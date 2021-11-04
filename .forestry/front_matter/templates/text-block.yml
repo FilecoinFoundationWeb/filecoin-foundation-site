@@ -1,4 +1,51 @@
 ---
 label: Text Block
 hide_body: false
-fields: []
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: type
+  default: text_block
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+- name: cols
+  type: field_group
+  config: {}
+  fields:
+  - name: num
+    type: text
+    config:
+      required: false
+    label: Number
+  - name: push_left
+    type: text
+    config:
+      required: false
+    label: Push Left
+  label: Columns
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: subheading
+  type: text
+  config:
+    required: false
+  label: Subheading
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
