@@ -12,6 +12,9 @@
 </template>
 
 <script>
+// ===================================================================== Imports
+import Throttle from 'lodash/throttle'
+
 // =================================================================== Functions
 const setBackgroundLayerWidth = (instance) => {
   let reset = true
@@ -101,7 +104,7 @@ export default {
   mounted () {
     setBackgroundLayerWidth(this)
     this.resize = () => { setBackgroundLayerWidth(this) }
-    window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', Throttle(this.resize, 50))
   },
 
   beforeDestroy () {

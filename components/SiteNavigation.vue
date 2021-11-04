@@ -96,6 +96,7 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
+import Throttle from 'lodash/throttle'
 
 import NavMobile from '@/components/Navigation/NavMobile'
 import NavDesktop from '@/components/Navigation/NavDesktop'
@@ -163,7 +164,7 @@ export default {
   mounted () {
     setNavigationType(this)
     this.resize = () => { setNavigationType(this) }
-    window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', Throttle(this.resize, 10))
   },
 
   beforeDestroy () {
