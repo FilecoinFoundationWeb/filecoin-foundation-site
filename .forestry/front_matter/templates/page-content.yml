@@ -10,3 +10,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/pages/test-page.json
