@@ -32,6 +32,12 @@ fields:
 - name: right
   type: field_group
   config: {}
+  fields:
+  - name: type
+    type: include
+    config: {}
+    template: text-block
+    label: Type
   label: Right Block
 - name: left_block
   type: include
