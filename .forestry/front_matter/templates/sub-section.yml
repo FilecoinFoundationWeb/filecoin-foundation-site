@@ -15,18 +15,26 @@ fields:
     max: 
   label: Grid Classes
 - name: left
-  type: blocks
+  type: field_group
+  config: {}
+  fields:
+  - name: block
+    type: field_group
+    config: {}
+    fields:
+    - name: type
+      type: include
+      config: {}
+      template: text-block
+      label: Type
+    label: Block
   label: Left Block
-  template_types:
-  - text-block
-  config:
-    min: 
-    max: 
 - name: right
-  type: blocks
+  type: field_group
+  config: {}
   label: Right Block
-  template_types:
-  - text-block
-  config:
-    min: 
-    max: 
+- name: left_block
+  type: include
+  config: {}
+  template: text-block
+  label: Left Block
