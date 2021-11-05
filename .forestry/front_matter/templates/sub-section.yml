@@ -37,4 +37,4 @@ fields:
   type: include
   config: {}
   template: text-block
-  label: Left Block
+  label: Left Block test
