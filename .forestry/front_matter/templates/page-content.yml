@@ -11,4 +11,5 @@ fields:
     min: 
     max: 
 pages:
+- content/pages/test-page-2.json
 - content/pages/test-page.json
