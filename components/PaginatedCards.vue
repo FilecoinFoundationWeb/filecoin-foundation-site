@@ -149,8 +149,6 @@ export default {
     padding: 0.5rem 1.25rem;
     &.current {
       color: $white;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 0 .5rem $azureRadiance;
       @include blogPageOutline;
       &:before,
       &:after {

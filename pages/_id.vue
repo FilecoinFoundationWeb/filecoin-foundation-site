@@ -237,13 +237,16 @@ export default {
       const section = {
         id: 'blogposts-list',
         left: {
-          type: 'paginated_cards',
+          type: 'card_list_block',
           cols: {
             num: 'col-12_md-11_sm-10_mi-9_ti-10',
             push_left: 'off-0_md-1_sm-2_ti-1'
           },
-          cards: recommendedPosts,
-          displayControls: false
+          display: {
+            initial: 3,
+            next: 3
+          },
+          cards: recommendedPosts
         }
       }
 
@@ -609,6 +612,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #blogposts-list {
   padding-bottom: 3rem;
+  .card {
+    &.type__E {
+      width: unset;
+      margin: unset !important;
+    }
+  }
 }
 
 </style>
