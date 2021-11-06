@@ -58,6 +58,7 @@ fields:
         config:
           required: false
         label: Section ID
+        hidden: false
       - name: grid
         type: list
         config:
@@ -76,6 +77,66 @@ fields:
       max: 
       labelField: 
     label: Section 1
+  - name: section_2
+    type: field_group_list
+    fields:
+    - name: sub_section
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: Section ID
+      - name: grid
+        type: list
+        config:
+          use_select: false
+          min: 
+          max: 
+        label: Grid Classes
+      - name: classNames
+        type: text
+        config:
+          required: false
+        label: Class Names
+      label: Sub Section
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Section 2
+  - name: section_3
+    type: field_group_list
+    fields:
+    - name: sub_section
+      type: field_group
+      config: {}
+      fields:
+      - name: section_id
+        type: text
+        config:
+          required: false
+        label: Section ID
+      - name: grid
+        type: list
+        config:
+          use_select: false
+          min: 
+          max: 
+        label: Grid Classes
+      - name: classNames
+        type: text
+        config:
+          required: false
+        label: Class Names
+      label: Sub Section
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Section 3
   label: Page Content
 pages:
 - content/pages/basic-template-1-forestry.json
