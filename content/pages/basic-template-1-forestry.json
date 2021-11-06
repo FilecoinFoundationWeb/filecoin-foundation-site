@@ -44,7 +44,30 @@
               }
             }
           ]
-        }
+        },
+        "id": "section_id_test",
+        "grid": [
+          "middle"
+        ],
+        "classNames": "test",
+        "left": [
+          {
+            "template": "text-block",
+            "type": "text_block",
+            "layout": "large",
+            "cols": {
+              "num": "col-4",
+              "push_left": "off-1"
+            },
+            "heading": "",
+            "subheading": "",
+            "description": "",
+            "label": ""
+          }
+        ],
+        "right": [
+
+        ]
       }
     ],
     "section_2": [
