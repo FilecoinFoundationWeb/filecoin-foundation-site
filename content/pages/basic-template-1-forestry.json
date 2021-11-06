@@ -35,9 +35,22 @@
   ],
   "blocks": [
     {
+      "template": "text-block",
+      "type": "text_block",
+      "layout": "test",
+      "cols": {
+        "num": "test",
+        "push_left": "test"
+      },
+      "heading": "test",
+      "subheading": "test",
+      "description": "test",
+      "label": "test"
+    },
+    {
       "template": "image-block",
       "type": "image_block",
-      "src": ""
+      "src": "/images/test-image.png"
     }
   ],
   "layout": "",
