@@ -227,7 +227,19 @@
       }
     ],
     "section_3": [
+      {
+        "id": "events_hackathons",
+        "grid": [
 
+        ],
+        "classNames": "",
+        "left": [
+
+        ],
+        "right": [
+
+        ]
+      }
     ]
   }
 }
