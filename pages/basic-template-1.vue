@@ -6,9 +6,9 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
@@ -107,14 +107,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-1 {
+#section_1 {
   padding-top: 5rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
 }
 
-#section-2 {
+#section_2 {
   position: relative;
   &:before {
     content: '';
