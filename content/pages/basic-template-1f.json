@@ -91,6 +91,31 @@
         "right": [
 
         ]
+      },
+      {
+        "id": "basic_content_2",
+        "classNames": "basic-template-block-format",
+        "left": [
+          {
+            "template": "text-block",
+            "type": "text_block",
+            "layout": "large",
+            "cols": {
+              "push_left": "off-1_md-2_ti-1",
+              "num": "col-10_ti-11"
+            },
+            "heading": "Sed ut perspiciatis",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.",
+            "subheading": "",
+            "label": ""
+          }
+        ],
+        "grid": [
+
+        ],
+        "right": [
+
+        ]
       }
     ],
     "section_3": [
