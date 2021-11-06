@@ -42,121 +42,20 @@ fields:
       maxSize: 64
     label: Image
   label: Open Graph
-- name: text_field
-  type: text
-  config:
-    required: false
-  label: Text Field
-- name: text_area
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Text Area
-- name: number_field
-  type: number
-  label: Number Field
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-- name: toggle
-  type: boolean
-  label: Toggle
-- name: select_field
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - option 1
-    - option 2
-    - option 3
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Select Field
-- name: date_field
-  type: datetime
-  label: Date Field
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
-- name: color_picker
-  type: color
-  label: Color Picker
-  config:
-    required: false
-    color_format: Hex
-- name: tags
-  type: tag_list
-  default: []
-  label: Tags
-- name: sortable_list
-  type: list
-  config:
-    use_select: true
-    min: 
-    max: 
-    source:
-      type: simple
-    options:
-    - option 1
-    - option 2
-  label: Sortable List
-- name: image_uploader
-  type: file
-  config:
-    maxSize: 64
-  label: Image Uploader
-- name: field_group
-  type: field_group
-  config: {}
-  fields:
-  - name: field_1
-    type: text
-    config:
-      required: false
-    label: field 1
-  label: Field Group
-- name: repeatable_field_group
+- name: page_content
   type: field_group_list
   fields:
-  - name: field_1
-    type: text
+  - name: section_1
+    type: blocks
+    label: Section 1
+    template_types: []
     config:
-      required: false
-    label: field 1
+      min: 
+      max: 
   config:
     min: 
     max: 
     labelField: 
-  label: Repeatable Field Group
-- name: blocks
-  type: blocks
-  label: Blocks
-  template_types:
-  - image-block
-  - video-block
-  - text-block
-  config:
-    min: 
-    max: 
-- name: include_template
-  type: include
-  config: {}
-  template: text-block
-  label: Include Template
+  label: Page Content
 pages:
 - content/pages/example-fields.json
