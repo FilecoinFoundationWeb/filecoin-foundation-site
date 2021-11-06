@@ -14,3 +14,18 @@ fields:
   config:
     maxSize: 64
   label: Image
+- name: cols
+  type: field_group
+  config: {}
+  fields:
+  - name: num
+    type: text
+    config:
+      required: false
+    label: Number
+  - name: push_left
+    type: text
+    config:
+      required: false
+    label: Push Left
+  label: Columns
