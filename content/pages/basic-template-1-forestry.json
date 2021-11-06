@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "og": {
+    "site_name": "",
+    "url": "",
+    "type": "",
+    "image": ""
+  },
+  "page_content": {
+    "section_1": [
+      {
+        "sub_section": {
+          "id": "basic_hero",
+          "classNames": "hero_styling",
+          "grid": [
+            "middle"
+          ]
+        }
+      }
+    ],
+    "section_2": [
+      {
+        "sub_section": {
+          "id": "basic_content_1",
+          "grid": [
+            "middle"
+          ],
+          "classNames": "basic-template-block-format"
+        }
+      },
+      {
+        "sub_section": {
+          "id": "banner_image",
+          "classNames": "basic-template-block-format",
+          "grid": [
+            "middle"
+          ]
+        }
+      },
+      {
+        "sub_section": {
+          "id": "basic_content_2",
+          "grid": [
+            "middle"
+          ],
+          "classNames": "basic-template-block-format"
+        }
+      }
+    ],
+    "section_3": [
+      {
+        "sub_section": {
+          "section_id": "events_hackathons",
+          "grid": [
+
+          ],
+          "classNames": ""
+        }
+      }
+    ]
+  }
+}
