@@ -30,9 +30,13 @@ fields:
     label: Push Left
   label: Columns
 - name: heading
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: false
+    schema:
+      format: markdown
   label: Heading
 - name: subheading
   type: textarea
