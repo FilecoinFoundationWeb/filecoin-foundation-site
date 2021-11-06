@@ -35,14 +35,22 @@ fields:
     required: false
   label: Heading
 - name: subheading
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: false
+    schema:
+      format: markdown
   label: Subheading
 - name: description
-  type: text
+  type: textarea
+  default: ''
   config:
     required: false
+    wysiwyg: false
+    schema:
+      format: markdown
   label: Description
 - name: label
   type: text
