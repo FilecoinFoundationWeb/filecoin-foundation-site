@@ -49,16 +49,28 @@ fields:
   - name: section_1
     type: field_group_list
     fields:
-    - name: sub_section_1
-      type: include
+    - name: basic_hero
+      type: field_group
       config: {}
-      template: sub-section
-      label: Sub Section 1
-    - name: sub_section_2
-      type: include
-      config: {}
-      template: sub-section
-      label: Sub Section 2
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: Section ID
+      - name: grid
+        type: list
+        config:
+          use_select: false
+          min: 
+          max: 
+        label: Grid Classes
+      - name: classNames
+        type: text
+        config:
+          required: false
+        label: Class Names
+      label: Basic Hero
     config:
       min: 
       max: 
