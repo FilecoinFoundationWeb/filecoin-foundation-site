@@ -6,7 +6,7 @@ fields:
   type: text
   config:
     required: false
-  label: Element ID
+  label: Section ID
 - name: grid
   type: list
   config:
@@ -14,33 +14,28 @@ fields:
     min: 
     max: 
   label: Grid Classes
+- name: classNames
+  type: text
+  config:
+    required: false
+  label: Class Names
 - name: left
-  type: field_group
-  config: {}
-  fields:
-  - name: block
-    type: field_group
-    config: {}
-    fields:
-    - name: type
-      type: include
-      config: {}
-      template: text-block
-      label: Type
-    label: Block
+  type: blocks
   label: Left Block
+  template_types:
+  - text-block
+  - image-block
+  - video-block
+  config:
+    min: 
+    max: 1
 - name: right
-  type: field_group
-  config: {}
-  fields:
-  - name: type
-    type: include
-    config: {}
-    template: text-block
-    label: Type
+  type: blocks
   label: Right Block
-- name: left_block
-  type: include
-  config: {}
-  template: text-block
-  label: Left Block test
+  template_types:
+  - text-block
+  - image-block
+  - video-block
+  config:
+    min: 
+    max: 1
