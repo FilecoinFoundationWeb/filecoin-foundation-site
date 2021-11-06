@@ -78,4 +78,5 @@ fields:
     label: Section 1
   label: Page Content
 pages:
+- content/pages/basic-template-1-forestry.json
 - content/pages/example-fields.json
