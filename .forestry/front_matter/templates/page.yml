@@ -1,4 +1,158 @@
 ---
 label: Page
 hide_body: true
-fields: []
+fields:
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+  label: SEO
+- name: og
+  type: field_group
+  config: {}
+  fields:
+  - name: site_name
+    type: text
+    config:
+      required: false
+    label: Site Name
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: type
+    type: text
+    config:
+      required: false
+    label: Type
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Open Graph
+- name: text_field
+  type: text
+  config:
+    required: false
+  label: Text Field
+- name: text_area
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Text Area
+- name: number_field
+  type: number
+  label: Number Field
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: toggle
+  type: boolean
+  label: Toggle
+- name: select_field
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - option 1
+    - option 2
+    - option 3
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Select Field
+- name: date_field
+  type: datetime
+  label: Date Field
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: color_picker
+  type: color
+  label: Color Picker
+  config:
+    required: false
+    color_format: Hex
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: sortable_list
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: simple
+    options:
+    - option 1
+    - option 2
+  label: Sortable List
+- name: image_uploader
+  type: file
+  config:
+    maxSize: 64
+  label: Image Uploader
+- name: field_group
+  type: field_group
+  config: {}
+  fields:
+  - name: field_1
+    type: text
+    config:
+      required: false
+    label: field 1
+  label: Field Group
+- name: repeatable_field_group
+  type: field_group_list
+  fields:
+  - name: field_1
+    type: text
+    config:
+      required: false
+    label: field 1
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Repeatable Field Group
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - image-block
+  config:
+    min: 
+    max: 
+- name: include_template
+  type: include
+  config: {}
+  template: text-block
+  label: Include Template
