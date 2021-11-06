@@ -149,6 +149,31 @@
 
         ],
         "classNames": ""
+      },
+      {
+        "id": "basic_content_3",
+        "classNames": "basic-template-block-format",
+        "left": [
+          {
+            "template": "text-block",
+            "type": "text_block",
+            "layout": "large",
+            "cols": {
+              "num": "col-10_ti-11",
+              "push_left": "off-1_md-2_ti-1"
+            },
+            "heading": "Architecto beatae vitae dicta sunt explicabo",
+            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "subheading": "",
+            "label": ""
+          }
+        ],
+        "grid": [
+
+        ],
+        "right": [
+
+        ]
       }
     ],
     "section_3": [
