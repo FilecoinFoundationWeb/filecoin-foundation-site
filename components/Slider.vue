@@ -7,7 +7,9 @@
 </template>
 
 <script>
-// =================================================================== Functions
+// ===================================================================== Imports
+import Throttle from 'lodash/throttle'
+
 // ====================================================================== Export
 export default {
   name: 'Slider',
@@ -59,7 +61,7 @@ export default {
   mounted () {
     setTimeout(() => { this.slideDimensions() }, 200)
     this.resize = () => { this.slideDimensions() }
-    window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', Throttle(this.resize, 10))
   },
 
   beforeDestroy () {

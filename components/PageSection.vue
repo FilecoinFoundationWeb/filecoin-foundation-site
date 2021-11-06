@@ -7,7 +7,7 @@
       :key="blockIndex"
       class="content-section">
 
-      <div v-if="block.type !== 'custom'" :class="getGridClasses(block.grid)">
+      <div v-if="block.type !== 'custom'" :class="[getGridClasses(block.grid), block.classNames]">
         <template
           v-for="(column, columnIndex) in columns">
           <div
