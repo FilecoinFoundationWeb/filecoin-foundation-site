@@ -148,6 +148,8 @@ fields:
   label: Blocks
   template_types:
   - image-block
+  - video-block
+  - text-block
   config:
     min: 
     max: 
