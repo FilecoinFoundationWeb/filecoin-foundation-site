@@ -92,6 +92,11 @@ fields:
           min: 
           max: 1
       label: Sub Section
+    - name: sub_section_test
+      type: include
+      config: {}
+      template: sub-section
+      label: Sub Section test
     config:
       min: 
       max: 
