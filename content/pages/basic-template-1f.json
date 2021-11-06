@@ -70,6 +70,27 @@
         "right": [
 
         ]
+      },
+      {
+        "id": "banner_image",
+        "classNames": "basic-template-block-format",
+        "left": [
+          {
+            "template": "image-block",
+            "type": "image_block",
+            "cols": {
+              "num": "col-10_ti-11",
+              "push_left": "off-1_md-2_ti-1"
+            },
+            "src": "/images/basic-1/basic-1-example-image.png"
+          }
+        ],
+        "grid": [
+
+        ],
+        "right": [
+
+        ]
       }
     ],
     "section_3": [
