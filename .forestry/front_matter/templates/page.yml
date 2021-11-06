@@ -49,7 +49,7 @@ fields:
   - name: section_1
     type: field_group_list
     fields:
-    - name: basic_hero
+    - name: sub_section
       type: field_group
       config: {}
       fields:
@@ -70,7 +70,7 @@ fields:
         config:
           required: false
         label: Class Names
-      label: Basic Hero
+      label: Sub Section
     config:
       min: 
       max: 
