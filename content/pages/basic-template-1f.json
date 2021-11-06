@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Basic Page - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Basic Page - Filecoin Foundation",
+    "url": "https://fil.org/",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  },
+  "page_content": {
+    "section_1": [
+      {
+        "id": "basic_hero",
+        "grid": [
+          "middle"
+        ],
+        "left": [
+          {
+            "template": "text-block",
+            "type": "text_block",
+            "layout": "large",
+            "cols": {
+              "num": "col-5_md-9_mi-10",
+              "push_left": "off-0_md-2_ti-1"
+            },
+            "heading": "Lorem Ipsum",
+            "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+            "label": "Lorem ipsum dolor",
+            "description": ""
+          }
+        ],
+        "right": [
+          {
+            "template": "image-block",
+            "type": "image_block",
+            "src": "/images/basic-1/basic-1-hero-image.png",
+            "cols": {
+              "num": "col-7_md-9_mi-10",
+              "push_left": "off-0_md-2_mi-1"
+            }
+          }
+        ],
+        "classNames": ""
+      }
+    ],
+    "section_2": [
+
+    ],
+    "section_3": [
+
+    ]
+  }
+}
