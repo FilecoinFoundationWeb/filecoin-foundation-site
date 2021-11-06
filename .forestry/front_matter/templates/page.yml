@@ -50,53 +50,10 @@ fields:
     type: field_group_list
     fields:
     - name: sub_section
-      type: field_group
-      config: {}
-      fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: Section ID
-        hidden: false
-      - name: grid
-        type: list
-        config:
-          use_select: false
-          min: 
-          max: 
-        label: Grid Classes
-      - name: classNames
-        type: text
-        config:
-          required: false
-        label: Class Names
-      - name: left
-        type: blocks
-        label: Left Block
-        template_types:
-        - video-block
-        - image-block
-        - text-block
-        config:
-          min: 
-          max: 1
-      - name: right
-        type: blocks
-        label: Right Block
-        template_types:
-        - video-block
-        - image-block
-        - text-block
-        config:
-          min: 
-          max: 1
-      label: Sub Section
-    - name: sub_section_test
       type: include
       config: {}
       template: sub-section
-      label: Sub Section test
+      label: Sub Section
     config:
       min: 
       max: 
