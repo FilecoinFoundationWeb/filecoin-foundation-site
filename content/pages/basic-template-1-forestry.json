@@ -45,11 +45,11 @@
             }
           ]
         },
-        "id": "section_id_test",
+        "id": "basic_hero",
         "grid": [
           "middle"
         ],
-        "classNames": "test",
+        "classNames": "",
         "left": [
           {
             "template": "text-block",
@@ -66,7 +66,15 @@
           }
         ],
         "right": [
-
+          {
+            "template": "image-block",
+            "type": "image_block",
+            "src": "/images/page-index/grants-hands-multistroke.svg",
+            "cols": {
+              "num": "col-4",
+              "push_left": "off-1"
+            }
+          }
         ]
       }
     ],
