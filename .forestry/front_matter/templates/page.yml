@@ -80,7 +80,7 @@ fields:
         - text-block
         config:
           min: 
-          max: 
+          max: 1
       - name: right
         type: blocks
         label: Right Block
@@ -90,7 +90,7 @@ fields:
         - text-block
         config:
           min: 
-          max: 
+          max: 1
       label: Sub Section
     config:
       min: 
