@@ -156,3 +156,5 @@ fields:
   config: {}
   template: text-block
   label: Include Template
+pages:
+- content/pages/basic-template-1-forestry.json
