@@ -63,26 +63,9 @@ fields:
     type: field_group_list
     fields:
     - name: sub_section
-      type: field_group
+      type: include
       config: {}
-      fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: Section ID
-      - name: grid
-        type: list
-        config:
-          use_select: false
-          min: 
-          max: 
-        label: Grid Classes
-      - name: classNames
-        type: text
-        config:
-          required: false
-        label: Class Names
+      template: sub-section
       label: Sub Section
     config:
       min: 
@@ -93,26 +76,9 @@ fields:
     type: field_group_list
     fields:
     - name: sub_section
-      type: field_group
+      type: include
       config: {}
-      fields:
-      - name: section_id
-        type: text
-        config:
-          required: false
-        label: Section ID
-      - name: grid
-        type: list
-        config:
-          use_select: false
-          min: 
-          max: 
-        label: Grid Classes
-      - name: classNames
-        type: text
-        config:
-          required: false
-        label: Class Names
+      template: sub-section
       label: Sub Section
     config:
       min: 
