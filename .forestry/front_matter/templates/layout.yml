@@ -1,4 +1,19 @@
 ---
 label: Layout
 hide_body: true
-fields: []
+fields:
+- name: layout
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - compact
+    - medium
+    - large
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
