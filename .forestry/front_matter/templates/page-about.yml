@@ -620,6 +620,10 @@ fields:
           hidden: true
         label: Left Block
       label: Panel 1
+    - name: panel_1_cards
+      type: field_group
+      config: {}
+      label: Panel 1 Cards
     label: Section 1
   label: Page Content
 pages:
