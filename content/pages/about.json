@@ -157,8 +157,8 @@
       "panel_1_cards": {
         "left": {
           "cols": {
-            "num": "",
-            "push_left": ""
+            "num": "col-10_sm-8_ti-11",
+            "push_left": "off-1_sm-2_ti-1"
           },
           "type": "slider_block",
           "cards": [
