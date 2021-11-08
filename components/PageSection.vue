@@ -45,8 +45,8 @@
       </div>
 
       <component
-        v-if="block.custom.length > 0"
         :is="block.custom.component"
+        v-if="block.custom.length > 0"
         v-bind="block.custom.props" />
 
     </section>
