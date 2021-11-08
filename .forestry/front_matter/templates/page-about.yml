@@ -4,7 +4,6 @@ hide_body: true
 fields:
 - type: field_group
   name: seo
-  label: seo
   fields:
   - type: text
     name: title
@@ -12,13 +11,14 @@ fields:
   - type: textarea
     name: description
     label: description
+  label: SEO
 - type: field_group
   name: og
-  label: og
+  label: Open Graph
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: site name
   - type: text
     name: url
     label: url
@@ -28,6 +28,52 @@ fields:
   - type: file
     name: image
     label: image
-- type: list
-  name: page_content
-  label: page_content
+- name: page_content
+  type: field_group
+  config: {}
+  fields:
+  - name: section_1
+    type: field_group
+    config: {}
+    fields:
+    - name: hero
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: hero
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
+        - name: layout
+          type: select
+          default: []
+          config:
+            required: false
+            options:
+            - compact
+            - medium
+            - large
+            source:
+              type: simple
+              section: 
+              file: 
+              path: 
+          label: Layout
+        label: Left Block
+      label: Hero Header
+    label: Section 1
+  label: Page Content
