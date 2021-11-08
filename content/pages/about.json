@@ -189,7 +189,83 @@
                 "icon": "",
                 "text": "",
                 "url": ""
-              }
+              },
+              "description": "General Counsel, Protocol Labs (Board Chair)"
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Marcia Hofmann",
+              "description": "Electronic Privacy Attorney",
+              "img": "/images/about/marcia-hofmann@2x.png",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "description": "Executive Director, Hyperledger",
+              "title": "Brian Behlendorf",
+              "type": "B",
+              "img": "/images/about/brian-behlendorf@2x.png",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Nicole Wong",
+              "description": "Former Deputy U.S. Chief Technology Officer",
+              "img": "/images/about/nicole-wong@2x.png",
+              "date": "",
+              "img_type": ""
             }
           ]
         },
