@@ -7,10 +7,10 @@ fields:
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
   - type: textarea
     name: description
-    label: description
+    label: Description
   label: SEO
 - type: field_group
   name: og
@@ -18,16 +18,16 @@ fields:
   fields:
   - type: text
     name: site_name
-    label: site name
+    label: Site Name
   - type: text
     name: url
-    label: url
+    label: URL
   - type: text
     name: type
-    label: type
+    label: Type
   - type: file
     name: image
-    label: image
+    label: Image
 - name: page_content
   type: field_group
   config: {}
@@ -119,6 +119,32 @@ fields:
       - name: right
         type: field_group
         config: {}
+        fields:
+        - name: video_block
+          type: include
+          config: {}
+          template: video-block
+          label: Video Block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: num
+            default: col-5_sm-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          label: cols
+          hidden: true
         label: Right Block
       label: Hero Header
     label: Section 1
