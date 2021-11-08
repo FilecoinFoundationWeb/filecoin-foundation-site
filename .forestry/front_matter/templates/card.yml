@@ -18,7 +18,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Type
+  label: Card Type
 - name: date
   type: datetime
   label: Date
