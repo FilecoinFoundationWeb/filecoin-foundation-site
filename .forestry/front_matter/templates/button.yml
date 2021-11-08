@@ -1,4 +1,78 @@
 ---
 label: Button
 hide_body: true
-fields: []
+fields:
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
+- name: theme
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - light
+    - dark
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Theme
+- name: action
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - link
+    - nuxt-link
+    - button
+    - video
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Action
+- name: icon
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - play
+    - info
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Icon
+- name: text
+  type: text
+  config:
+    required: false
+  label: Text
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
