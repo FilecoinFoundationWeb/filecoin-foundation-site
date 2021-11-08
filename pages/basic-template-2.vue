@@ -112,7 +112,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-1 {
+#section_1 {
   padding-top: 7rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
@@ -142,14 +142,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-2 {
+#section_2 {
   padding-top: 1rem;
   @include small {
     padding-bottom: 0;
   }
 }
 
-#section-3 {
+#section_3 {
   &:before {
     content: '';
     position: absolute;

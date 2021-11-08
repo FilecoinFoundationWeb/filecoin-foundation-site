@@ -30,13 +30,13 @@
                 </div>
 
                 <!-- ======================================== Customizations -->
-                <template v-if="object.customizations">
+                <!-- <template v-if="object.customizations">
                   <component
                     :is="component.name"
                     v-for="(component, componentIndex) in object.customizations"
                     :key="componentIndex"
                     v-bind="component.props" />
-                </template>
+                </template> -->
 
               </div>
             </div>
@@ -133,6 +133,7 @@ export default {
         case 'slider_block' : name = 'SliderBlock'; break
         case 'paginated_cards' : name = 'PaginatedCards'; break
         case 'card_list_block' : name = 'CardListBlock'; break
+        case 'custom' : name = block.component; break
       }
       return name
     }
