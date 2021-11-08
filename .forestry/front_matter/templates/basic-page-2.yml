@@ -34,7 +34,7 @@ fields:
   fields:
   - type: field_group_list
     name: section_1
-    label: section_1
+    label: Section 1
     fields:
     - type: text
       name: id
@@ -54,13 +54,10 @@ fields:
       label: Left Block
       fields:
       - type: text
-        name: template
-        label: template
-        hidden: true
-      - type: text
         name: type
         label: type
         hidden: true
+        default: text_block
       - type: field_group
         name: cols
         label: cols
@@ -120,17 +117,13 @@ fields:
         max: 1
     - type: field_group_list
       name: right
-      label: right
+      label: Right Block
       fields:
-      - type: text
-        name: template
-        label: template
       - type: text
         name: type
         label: type
-      - type: file
-        name: src
-        label: src
+        hidden: true
+        default: image_block
       - type: field_group
         name: cols
         label: cols
@@ -138,41 +131,51 @@ fields:
         - type: text
           name: num
           label: num
+          hidden: true
+          default: col-7_md-9_mi-10
         - type: text
           name: push_left
           label: push_left
+          hidden: true
+          default: off-0_md-2_mi-1
+        hidden: true
+      - type: file
+        name: src
+        label: Image
       config:
         min: 1
         max: 1
-    - type: list
-      name: custom
-      label: custom
     config:
       min: 1
       max: 1
   - type: field_group_list
     name: section_2
-    label: section_2
+    label: Section 2
     fields:
     - type: text
       name: id
       label: id
+      hidden: true
+      default: basic_content_1
     - type: text
       name: classNames
       label: classNames
+      hidden: true
+      default: basic-template-block-format
+    - name: grid
+      type: include
+      config: {}
+      template: grid-classes
+      label: Grid Classes
     - type: field_group_list
       name: left
-      label: left
+      label: Left Block
       fields:
-      - type: text
-        name: template
-        label: template
       - type: text
         name: type
         label: type
-      - type: text
-        name: layout
-        label: layout
+        hidden: true
+        default: text_block
       - type: field_group
         name: cols
         label: cols
@@ -180,30 +183,52 @@ fields:
         - type: text
           name: num
           label: num
+          hidden: true
+          default: col-10_ti-11
         - type: text
           name: push_left
           label: push_left
-      - type: textarea
-        name: heading
-        label: heading
-      - type: text
-        name: subheading
-        label: subheading
-      - type: textarea
-        name: description
-        label: description
+          default: off-1_md-2_ti-1
+          hidden: true
+        hidden: true
+      - name: layout
+        type: select
+        default: []
+        config:
+          required: false
+          options:
+          - compact
+          - medium
+          - large
+          source:
+            type: simple
+            section: 
+            file: 
+            path: 
+        label: Layout
       - type: text
         name: label
-        label: label
-    - type: list
-      name: grid
-      label: grid
-    - type: list
-      name: right
-      label: right
-    - type: list
-      name: custom
-      label: custom
+        label: Label
+      - type: textarea
+        name: heading
+        label: Heading
+      - name: subheading
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+        label: Subheading
+      - type: textarea
+        name: description
+        label: Description
+      config:
+        min: 1
+        max: 1
+    config:
+      labelField: ''
   - type: field_group_list
     name: section_3
     label: section_3
