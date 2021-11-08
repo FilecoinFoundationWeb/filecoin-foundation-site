@@ -21,7 +21,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Type
+  label: CTA Type
 - name: theme
   type: select
   default: []
@@ -35,7 +35,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Theme
+  label: CTA Theme
 - name: action
   type: select
   default: []
@@ -51,7 +51,7 @@ fields:
       section: 
       file: 
       path: 
-  label: Action
+  label: CTA Action
 - name: icon
   type: select
   default: []
@@ -65,14 +65,14 @@ fields:
       section: 
       file: 
       path: 
-  label: Icon
+  label: CTA Icon
 - name: text
   type: text
   config:
     required: false
-  label: Text
+  label: CTA Text
 - name: url
   type: text
   config:
     required: false
-  label: URL
+  label: CTA URL
