@@ -6,9 +6,9 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
@@ -69,10 +69,10 @@ export default {
     }),
     sections () {
       const content = CloneDeep(this.siteContent.about.page_content)
-      const len = content.length
-      const last = content[len - 1]
-      const replace = this.siteContent['section-dive-deeper'].concat(last)
-      content.splice(len - 1, 1, replace)
+      // const len = content.length
+      // const last = content[len - 1]
+      // const replace = this.siteContent['section-dive-deeper'].concat(last)
+      // content.splice(len - 1, 1, replace)
       return content
     }
   }

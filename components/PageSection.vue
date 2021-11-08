@@ -2,58 +2,47 @@
   <section class="page-section">
 
     <section
-      v-for="(block, blockIndex) in section"
-      :id="block.id"
-      :key="blockIndex"
+      v-for="(block, key) in section"
+      :id="key"
+      :key="key"
       class="content-section">
 
-      <div
-        v-if="block.left.length > 0 || block.right.length > 0"
-        :class="[getGridClasses(block.grid), block.classNames]">
+      <div v-if="block.type !== 'custom'" :class="[getGridClasses(block.grid), block.classNames]">
         <template
           v-for="(column, columnIndex) in columns">
-          <template
-            v-if="columnExists(block[column])">
-            <div
-              v-for="(object, index) in block[column]"
-              :key="`${columnIndex}-${object.template}-${index}`"
-              :class="getColumnCount(object)"
-              :data-push-left="getColumnPushCount(object, 'left')"
-              :data-push-right="getColumnPushCount(object, 'right')">
-              <div :class="['column-content', column]">
+          <div
+            v-if="columnExists(block, column)"
+            :key="columnIndex"
+            :class="getColumnCount(block[column])"
+            :data-push-left="getColumnPushCount(block[column], 'left')"
+            :data-push-right="getColumnPushCount(block[column], 'right')">
+            <div :class="['column-content', column]">
 
-                <!-- ================================================ Blocks -->
-                <div :class="['blocks', column]">
-                  <component
-                    :is="getComponentName(object)"
-                    v-bind="{ block: object }" />
-                </div>
-
-                <!-- ======================================== Customizations -->
-                <!-- <template v-if="object.customizations">
-                  <component
-                    :is="component.name"
-                    v-for="(component, componentIndex) in object.customizations"
-                    :key="componentIndex"
-                    v-bind="component.props" />
-                </template> -->
-
+              <!-- ================================================== Blocks -->
+              <div :class="['blocks', column]">
+                <component
+                  :is="getComponentName(block[column])"
+                  v-bind="{ block: block[column] }" />
               </div>
+
+              <!-- ========================================== Customizations -->
+              <template v-if="block[column].customizations">
+                <component
+                  :is="component.name"
+                  v-for="(component, componentIndex) in block[column].customizations"
+                  :key="componentIndex"
+                  v-bind="component.props" />
+              </template>
+
             </div>
-          </template>
+          </div>
         </template>
       </div>
 
-      <!-- =============================================== Custom Components -->
-
-      <template v-if="block.custom.length > 0">
-        <template v-for="(object, index) in block.custom">
-          <component
-            :is="object.component"
-            :key="`${object.template}-${index}`"
-            v-bind="object.props" />
-        </template>
-      </template>
+      <component
+        :is="block.component"
+        v-else
+        v-bind="block.props" />
 
     </section>
 
@@ -94,7 +83,7 @@ export default {
 
   props: {
     section: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -105,6 +94,10 @@ export default {
     }
   },
 
+  mounted () {
+    console.log(this.section)
+  },
+
   methods: {
     getGridClasses (blockGrid) {
       const classList = ['grid']
@@ -113,9 +106,8 @@ export default {
       }
       return classList.join('')
     },
-    columnExists (blockColumn) {
-      if (Array.isArray(blockColumn)) { return (blockColumn.length > 0) }
-      return false
+    columnExists (block, column) {
+      return block.hasOwnProperty(column)
     },
     getColumnCount (blockColumn) {
       return blockColumn.cols.num
