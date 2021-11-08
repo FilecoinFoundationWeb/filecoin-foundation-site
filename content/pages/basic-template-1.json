@@ -280,10 +280,22 @@
                 }
               },
               "events": {
-                "num": "",
-                "push_left": "",
+                "num": "col-8_sm-10_ti-10",
+                "push_left": "off-4_sm-2_mi-2_ti-1",
                 "cards": [
-
+                  {
+                    "template": "card",
+                    "type": "B",
+                    "date": "2021-10-20T04:00:00Z",
+                    "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                    "img": "/images/events/2021-filecoin-orbit-lounge-event.png",
+                    "img_type": "background_image",
+                    "theme": "",
+                    "action": "link",
+                    "icon": "info",
+                    "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
+                    "text": "More info"
+                  }
                 ]
               }
             }
