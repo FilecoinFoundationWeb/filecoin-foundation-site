@@ -1,0 +1,33 @@
+---
+label: "[Page] About"
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site_name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: list
+  name: page_content
+  label: page_content
