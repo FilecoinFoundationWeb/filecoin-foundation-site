@@ -620,3 +620,5 @@ fields:
       label: Panel 1
     label: Section 1
   label: Page Content
+pages:
+- content/pages/about.json
