@@ -1,0 +1,50 @@
+{
+  "page_content": {
+    "section_1": {
+      "hero": {
+        "id": "hero",
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-4_sm-9_mi-10",
+            "push_left": "off-2_mi-1"
+          },
+          "layout": [
+
+          ],
+          "label": "",
+          "heading": "",
+          "subheading": "",
+          "description": ""
+        },
+        "right": {
+          "type": "video_block",
+          "button": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "",
+            "url": ""
+          },
+          "cols": {
+            "num": "col-5_sm-9_mi-10",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "preview_image": "",
+          "url": "",
+          "tint": false
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "og": {
+    "site_name": "",
+    "url": "",
+    "type": "",
+    "image": ""
+  }
+}

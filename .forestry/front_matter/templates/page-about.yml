@@ -149,3 +149,5 @@ fields:
       label: Hero Header
     label: Section 1
   label: Page Content
+pages:
+- content/pages/about-1.json
