@@ -1,4 +1,77 @@
 ---
 label: Events & Hackathons
 hide_body: true
-fields: []
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  label: Type
+  hidden: true
+  default: custom
+- name: component
+  type: text
+  config:
+    required: false
+  label: Component
+  hidden: true
+  default: EventsHackathons
+- name: props
+  type: field_group
+  config: {}
+  fields:
+  - name: intro
+    type: field_group
+    config: {}
+    fields:
+    - name: cols
+      type: field_group
+      config: {}
+      fields:
+      - name: num
+        type: text
+        config:
+          required: false
+        label: Number
+      - name: push_left
+        type: text
+        config:
+          required: false
+        label: Push Left
+      label: Columns
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: cta
+      type: field_group
+      config: {}
+      fields:
+      - name: type
+        type: select
+        default: []
+        config:
+          required: false
+          options:
+          - A
+          - B
+          - C
+          - D
+          - E
+          - F
+          - G
+          - H
+          source:
+            type: simple
+            section: 
+            file: 
+            path: 
+        label: Type
+      label: CTA
+    label: Intro
+  - name: events
+    type: field_group
+    config: {}
+    label: Events
+  label: Properties
