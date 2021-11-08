@@ -116,17 +116,15 @@
       "cta_2": {
         "left": {
           "type": "text_block",
-          "layout": [
-
-          ],
+          "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
             "push_left": "off-2_mi-1"
           },
-          "label": "",
-          "heading": "",
+          "label": "Collective Action",
+          "heading": "The Foundation helps the Filecoin community solve problems and facilitates collective action.",
           "subheading": "",
-          "description": ""
+          "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem."
         },
         "right": {
           "type": "image_block",
@@ -134,22 +132,20 @@
             "num": "col-5_sm-7_mi-8",
             "push_left": "off-1_sm-2_mi-1"
           },
-          "src": ""
+          "src": "/images/square-connection.png"
         }
       },
       "panel_1": {
         "left": {
           "type": "text_block",
-          "layout": [
-
-          ],
+          "layout": "large",
           "cols": {
             "num": "col-9_mi-10",
             "push_left": "off-2_mi-1"
           },
           "label": "",
-          "heading": "",
-          "subheading": "",
+          "heading": "Board of<br />Directors",
+          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
           "description": ""
         }
       }
