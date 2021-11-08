@@ -151,6 +151,13 @@ fields:
       type: field_group
       config: {}
       fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: intro_1
       - name: left
         type: field_group
         config: {}
@@ -242,32 +249,361 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: image_block
-        type: include
-        config: {}
-        template: image-block
-        label: Image_block
-      - name: cols
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: cta_1
+      - name: left
         type: field_group
         config: {}
         fields:
-        - name: num
-          type: text
-          config:
-            required: false
-          label: num
+        - name: image_block
+          type: include
+          config: {}
+          template: image-block
+          label: Image_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-5_sm-7_mi-10
+          - name: off-2_mi-1
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
           hidden: true
-          default: col-5_sm-7_mi-10
-        - name: push_left
-          type: text
-          config:
-            required: false
-          label: push_left
+        label: Left Block
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: num
+            default: col-4_sm-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          label: cols
           hidden: true
-          default: off-2_mi-1
-        label: cols
-        hidden: true
+        - name: cta
+          type: field_group
+          config: {}
+          fields:
+          - name: type
+            type: select
+            default: A
+            config:
+              required: false
+              options:
+              - A
+              - B
+              - C
+              - D
+              - E
+              - F
+              - G
+              - H
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: type
+            hidden: true
+          - name: theme
+            type: select
+            default: light
+            config:
+              required: false
+              options:
+              - light
+              - dark
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            hidden: true
+            label: theme
+          - name: action
+            type: select
+            default: nuxt-link
+            config:
+              required: false
+              options:
+              - link
+              - nuxt-link
+              - button
+              - video
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: action
+            hidden: true
+          - name: icon
+            type: select
+            default: []
+            config:
+              required: false
+              options:
+              - play
+              - info
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: Icon
+            hidden: true
+          - name: text
+            type: text
+            config:
+              required: false
+            label: Text
+          - name: url
+            type: text
+            config:
+              required: false
+            label: URL
+          label: cta
+        label: Right Block
       label: CTA 1
+    - name: banner_1
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: banner_1
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: num
+            default: col-7_mi-8
+          - name: push_left
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: push_left
+            default: off-4_mi-4
+          label: cols
+          hidden: true
+        - name: customizations
+          type: field_group
+          config: {}
+          fields:
+          - name: name
+            type: text
+            config:
+              required: false
+            label: name
+            hidden: true
+            default: BackgroundLayers
+          - name: props
+            type: field_group
+            config: {}
+            fields:
+            - name: layers-array
+              type: text
+              config:
+                required: false
+              label: layers-array
+              hidden: true
+              default: '8_6'
+            - name: offset
+              type: field_group
+              config: {}
+              fields:
+              - name: mini
+                type: number
+                label: mini
+                description: ''
+                default: 0.25
+                required: true
+                config:
+                  min: 
+                  max: 
+                  step: 
+                hidden: true
+              label: offset
+              hidden: true
+            - name: reverse
+              type: boolean
+              label: reverse
+              hidden: true
+              default: true
+            hidden: true
+            label: props
+          label: customizations
+          hidden: true
+        label: Left Block
+      label: Banner 1
+    - name: cta_2
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        hidden: true
+        label: id
+        default: cta_2
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-4_sm-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
+          hidden: true
+        label: Left Block
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: image-block
+          label: Image_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-5_sm-7_mi-8
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          label: cols
+          hidden: true
+        label: Right Block
+      label: CTA 2
+    - name: panel_1
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: panel_1
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
+          hidden: true
+        label: Left Block
+      label: Panel 1
     label: Section 1
   label: Page Content
 pages:
