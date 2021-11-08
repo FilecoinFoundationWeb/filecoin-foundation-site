@@ -22,14 +22,14 @@
               :data-push-right="getColumnPushCount(object, 'right')">
               <div :class="['column-content', column]">
 
-                <!-- ================================================== Blocks -->
+                <!-- ================================================ Blocks -->
                 <div :class="['blocks', column]">
                   <component
                     :is="getComponentName(object)"
                     v-bind="{ block: object }" />
                 </div>
 
-                <!-- ========================================== Customizations -->
+                <!-- ======================================== Customizations -->
                 <template v-if="object.customizations">
                   <component
                     :is="component.name"
@@ -44,10 +44,16 @@
         </template>
       </div>
 
-      <component
-        :is="block.custom.component"
-        v-if="block.custom.length > 0"
-        v-bind="block.custom.props" />
+      <!-- =============================================== Custom Components -->
+
+      <template v-if="block.custom.length > 0">
+        <template v-for="(object, index) in block.custom">
+          <component
+            :is="object.component"
+            :key="`${object.template}-${index}`"
+            v-bind="object.props" />
+        </template>
+      </template>
 
     </section>
 
