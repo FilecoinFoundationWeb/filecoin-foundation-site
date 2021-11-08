@@ -28,15 +28,60 @@ fields:
       max: 
     label: Layers Array
   - name: offset
-    type: number
-    label: Layer offset
-    description: ''
-    default: 0
-    required: true
-    config:
-      min: 
-      max: 
-      step: 
+    type: field_group
+    config: {}
+    fields:
+    - name: large
+      type: number
+      label: Large
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: medium
+      type: number
+      label: Medium
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: small
+      type: number
+      label: Small
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: mini
+      type: number
+      label: Mini
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: tiny
+      type: number
+      label: Tiny
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    label: Layer Offsets
   - name: reverse
     type: boolean
     label: Reverse
