@@ -49,6 +49,17 @@
                 "mini": 0.25
               },
               "reverse": true
+            },
+            "background_layers": {
+              "name": "",
+              "props": {
+                "layers-array": "",
+                "offset": {
+                  "medium": null,
+                  "mini": null
+                },
+                "reverse": false
+              }
             }
           },
           "label": "Our Mission",
@@ -105,6 +116,16 @@
                 "mini": 0.25
               },
               "reverse": true
+            },
+            "background_layers": {
+              "name": "",
+              "props": {
+                "layers-array": "",
+                "offset": {
+                  "mini": null
+                },
+                "reverse": false
+              }
             }
           },
           "label": "",
@@ -146,7 +167,7 @@
           "label": "",
           "heading": "Board of<br />Directors",
           "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
-          "description": ""
+          "description": "hihi another test"
         }
       }
     }
