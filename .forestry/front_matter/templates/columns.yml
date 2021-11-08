@@ -1,4 +1,14 @@
 ---
 label: Columns
 hide_body: true
-fields: []
+fields:
+- name: num
+  type: text
+  config:
+    required: false
+  label: Number
+- name: push_left
+  type: text
+  config:
+    required: false
+  label: Push Left
