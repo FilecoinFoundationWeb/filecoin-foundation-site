@@ -304,6 +304,85 @@ fields:
         - name: cta
           type: field_group
           config: {}
+          fields:
+          - name: type
+            type: select
+            default: A
+            config:
+              required: false
+              options:
+              - A
+              - B
+              - C
+              - D
+              - E
+              - F
+              - G
+              - H
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: type
+            hidden: true
+          - name: theme
+            type: select
+            default: light
+            config:
+              required: false
+              options:
+              - light
+              - dark
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            hidden: true
+            label: theme
+          - name: action
+            type: select
+            default: nuxt-link
+            config:
+              required: false
+              options:
+              - link
+              - nuxt-link
+              - button
+              - video
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: action
+            hidden: true
+          - name: icon
+            type: select
+            default: []
+            config:
+              required: false
+              options:
+              - play
+              - info
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: Icon
+            hidden: true
+          - name: text
+            type: text
+            config:
+              required: false
+            label: Text
+          - name: url
+            type: text
+            config:
+              required: false
+            label: URL
           label: cta
         label: Right Block
       label: CTA 1
