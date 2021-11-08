@@ -40,13 +40,6 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: id
-        hidden: true
-        default: hero
       - name: left
         type: field_group
         config: {}
@@ -120,6 +113,13 @@ fields:
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          hidden: true
+          label: type
+          default: video_block
         - name: video_block
           type: include
           config: {}
@@ -151,17 +151,17 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: id
-        hidden: true
-        default: intro_1
       - name: left
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
         - name: text_block
           type: include
           config: {}
@@ -249,17 +249,17 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: id
-        hidden: true
-        default: cta_1
       - name: left
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: image_block
         - name: image_block
           type: include
           config: {}
@@ -290,6 +290,13 @@ fields:
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
         - name: text_block
           type: include
           config: {}
@@ -404,17 +411,17 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: id
-        hidden: true
-        default: banner_1
       - name: left
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
         - name: text_block
           type: include
           config: {}
@@ -494,17 +501,17 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        hidden: true
-        label: id
-        default: cta_2
       - name: left
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
         - name: text_block
           type: include
           config: {}
@@ -535,6 +542,13 @@ fields:
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: image_block
         - name: image_block
           type: include
           config: {}
@@ -566,17 +580,17 @@ fields:
       type: field_group
       config: {}
       fields:
-      - name: id
-        type: text
-        config:
-          required: false
-        label: id
-        hidden: true
-        default: panel_1
       - name: left
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: text_block
         - name: text_block
           type: include
           config: {}
