@@ -42,7 +42,10 @@
             }
           }
         ],
-        "classNames": ""
+        "classNames": "",
+        "custom": [
+
+        ]
       }
     ],
     "section_2": [
@@ -69,6 +72,9 @@
         ],
         "right": [
 
+        ],
+        "custom": [
+
         ]
       },
       {
@@ -89,6 +95,9 @@
 
         ],
         "right": [
+
+        ],
+        "custom": [
 
         ]
       },
@@ -114,6 +123,9 @@
 
         ],
         "right": [
+
+        ],
+        "custom": [
 
         ]
       },
@@ -148,7 +160,10 @@
         "grid": [
 
         ],
-        "classNames": ""
+        "classNames": "",
+        "custom": [
+
+        ]
       },
       {
         "id": "basic_content_3",
@@ -172,6 +187,9 @@
 
         ],
         "right": [
+
+        ],
+        "custom": [
 
         ]
       },
@@ -198,6 +216,9 @@
         ],
         "right": [
 
+        ],
+        "custom": [
+
         ]
       },
       {
@@ -223,6 +244,9 @@
         ],
         "right": [
 
+        ],
+        "custom": [
+
         ]
       }
     ],
@@ -238,6 +262,32 @@
         ],
         "right": [
 
+        ],
+        "custom": [
+          {
+            "template": "events-hackathons",
+            "type": "custom",
+            "component": "EventsHackathons",
+            "props": {
+              "intro": {
+                "cols": {
+                  "num": "col-4_sm-8_ti-10",
+                  "push_left": "off-0_md-1_sm-2_mi-2_mi-1"
+                },
+                "heading": "Events & Hackathons",
+                "cta": {
+                  "type": "A"
+                }
+              },
+              "events": {
+                "num": "",
+                "push_left": "",
+                "cards": [
+
+                ]
+              }
+            }
+          }
         ]
       }
     ]
