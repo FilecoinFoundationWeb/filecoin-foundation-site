@@ -156,116 +156,11 @@
       },
       "panel_1_cards": {
         "left": {
-          "slider_block": {
-            "type": "",
-            "cards": [
-              {
-                "template": "card",
-                "cta": {
-                  "type": [
-
-                  ],
-                  "theme": [
-
-                  ],
-                  "action": [
-
-                  ],
-                  "icon": [
-
-                  ],
-                  "text": "",
-                  "url": ""
-                },
-                "type": "B",
-                "title": "Marta Belcher",
-                "img": "/images/about/marta-belcher@2x.png",
-                "description": "General Counsel, Protocol Labs (Board Chair)",
-                "date": "",
-                "img_type": ""
-              },
-              {
-                "template": "card",
-                "cta": {
-                  "type": [
-
-                  ],
-                  "theme": [
-
-                  ],
-                  "action": [
-
-                  ],
-                  "icon": [
-
-                  ],
-                  "text": "",
-                  "url": ""
-                },
-                "type": "B",
-                "title": "Marcia Hofmann",
-                "img": "/images/about/marcia-hofmann@2x.png",
-                "description": "Electronic Privacy Attorney",
-                "date": "",
-                "img_type": ""
-              },
-              {
-                "template": "card",
-                "cta": {
-                  "type": [
-
-                  ],
-                  "theme": [
-
-                  ],
-                  "action": [
-
-                  ],
-                  "icon": [
-
-                  ],
-                  "text": "",
-                  "url": ""
-                },
-                "type": "B",
-                "title": "Brian Behlendorf",
-                "img": "/images/about/brian-behlendorf@2x.png",
-                "description": "Executive Director, Hyperledger",
-                "date": "",
-                "img_type": ""
-              },
-              {
-                "template": "card",
-                "cta": {
-                  "type": [
-
-                  ],
-                  "theme": [
-
-                  ],
-                  "action": [
-
-                  ],
-                  "icon": [
-
-                  ],
-                  "text": "",
-                  "url": ""
-                },
-                "type": "B",
-                "description": "Former Deputy U.S. Chief Technology Officer",
-                "title": "Nicole Wong",
-                "img": "/images/about/nicole-wong@2x.png",
-                "date": "",
-                "img_type": ""
-              }
-            ]
-          },
           "cols": {
             "num": "",
             "push_left": ""
           },
-          "type": "",
+          "type": "slider_block",
           "cards": [
             {
               "template": "card",
