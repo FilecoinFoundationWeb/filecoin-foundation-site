@@ -490,6 +490,120 @@ fields:
           hidden: true
         label: Left Block
       label: Banner 1
+    - name: cta_2
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        hidden: true
+        label: id
+        default: cta_2
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-4_sm-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
+          hidden: true
+        label: Left Block
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: image-block
+          label: Image_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-5_sm-7_mi-8
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          label: cols
+          hidden: true
+        label: Right Block
+      label: CTA 2
+    - name: panel_1
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: panel_1
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
+          hidden: true
+        label: Left Block
+      label: Panel 1
     label: Section 1
   label: Page Content
 pages:
