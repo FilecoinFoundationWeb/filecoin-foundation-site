@@ -41,19 +41,26 @@ fields:
       label: id
       default: basic_hero
       hidden: true
+    - name: grid
+      type: include
+      config: {}
+      template: grid-classes
+      label: Grid Classes
+    - type: text
+      name: classNames
+      label: Class Names
     - type: field_group_list
       name: left
-      label: left
+      label: Left Block
       fields:
       - type: text
         name: template
         label: template
+        hidden: true
       - type: text
         name: type
         label: type
-      - type: text
-        name: layout
-        label: layout
+        hidden: true
       - type: field_group
         name: cols
         label: cols
@@ -61,21 +68,56 @@ fields:
         - type: text
           name: num
           label: num
+          default: col-5_md-9_mi-10
+          hidden: true
         - type: text
           name: push_left
           label: push_left
-      - type: text
-        name: heading
-        label: heading
-      - type: textarea
-        name: subheading
-        label: subheading
+          default: off-0_md-2_ti-1
+          hidden: true
+        hidden: true
+      - name: layout
+        type: select
+        default: []
+        config:
+          required: false
+          options:
+          - compact
+          - medium
+          - large
+          source:
+            type: simple
+            section: 
+            file: 
+            path: 
+        label: Layout
       - type: text
         name: label
-        label: label
-      - type: text
-        name: description
-        label: description
+        label: Label
+      - name: heading
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+        label: Heading
+      - type: textarea
+        name: subheading
+        label: Subheading
+      - name: description
+        type: textarea
+        default: ''
+        config:
+          required: false
+          wysiwyg: false
+          schema:
+            format: markdown
+        label: Description
+      config:
+        min: 1
+        max: 1
     - type: field_group_list
       name: right
       label: right
@@ -99,9 +141,9 @@ fields:
         - type: text
           name: push_left
           label: push_left
-    - type: text
-      name: classNames
-      label: classNames
+      config:
+        min: 1
+        max: 1
     - type: list
       name: custom
       label: custom
