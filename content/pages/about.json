@@ -151,7 +151,7 @@
           "label": "",
           "heading": "Board of<br />Directors",
           "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
-          "description": "hihi another test"
+          "description": ""
         }
       },
       "panel_1_cards": {
@@ -258,12 +258,14 @@
                 "date": "",
                 "img_type": ""
               }
-            ]
+            ],
+            "type": ""
           },
           "cols": {
             "num": "",
             "push_left": ""
-          }
+          },
+          "type": ""
         }
       }
     }
