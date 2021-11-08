@@ -57,3 +57,12 @@ fields:
   config: {}
   template: button
   label: CTA
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description

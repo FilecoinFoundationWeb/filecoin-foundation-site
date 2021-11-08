@@ -64,7 +64,8 @@
           "type": "image_block",
           "cols": {
             "num": "col-5_sm-7_mi-10",
-            "off-2_mi-1": "off-2_mi-1"
+            "off-2_mi-1": "off-2_mi-1",
+            "push_left": ""
           },
           "src": "/images/about/computer@2x.png"
         },
@@ -151,6 +152,109 @@
           "heading": "Board of<br />Directors",
           "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
           "description": "hihi another test"
+        }
+      },
+      "panel_1_cards": {
+        "slider_block": {
+          "type": "",
+          "cards": [
+            {
+              "template": "card",
+              "type": "B",
+              "title": "Marta Belcher",
+              "img": "/images/about/marta-belcher@2x.png",
+              "date": "",
+              "img_type": "",
+              "cta": {
+                "type": "",
+                "theme": "",
+                "action": "",
+                "icon": "",
+                "text": "",
+                "url": ""
+              },
+              "description": "General Counsel, Protocol Labs (Board Chair)"
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Marcia Hofmann",
+              "description": "Electronic Privacy Attorney",
+              "img": "/images/about/marcia-hofmann@2x.png",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "description": "Executive Director, Hyperledger",
+              "title": "Brian Behlendorf",
+              "type": "B",
+              "img": "/images/about/brian-behlendorf@2x.png",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Nicole Wong",
+              "description": "Former Deputy U.S. Chief Technology Officer",
+              "img": "/images/about/nicole-wong@2x.png",
+              "date": "",
+              "img_type": ""
+            }
+          ]
+        },
+        "cols": {
+          "num": "",
+          "push_left": ""
         }
       }
     }

@@ -1,0 +1,24 @@
+---
+label: "[Comp] Slider Block"
+hide_body: true
+fields:
+- name: slider_block
+  type: field_group
+  config: {}
+  fields:
+  - name: type
+    type: text
+    config:
+      required: false
+    label: type
+    hidden: true
+    default: slider_block
+  - name: cards
+    type: blocks
+    label: Cards
+    template_types:
+    - card
+    config:
+      min: 
+      max: 
+  label: Slider Block
