@@ -58,22 +58,68 @@ fields:
           label: type
           hidden: true
           default: text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            label: num
+            hidden: true
+            default: col-4_sm-9_mi-10
+          - name: push_left
+            type: text
+            config:
+              required: false
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          label: cols
+          hidden: true
         - name: layout
-          type: select
-          default: []
+          type: include
+          config: {}
+          template: layout
+          label: Layout
+        - name: label
+          type: text
           config:
             required: false
-            options:
-            - compact
-            - medium
-            - large
-            source:
-              type: simple
-              section: 
-              file: 
-              path: 
-          label: Layout
+          label: Label
+        - name: heading
+          type: textarea
+          default: ''
+          config:
+            required: false
+            wysiwyg: false
+            schema:
+              format: markdown
+          label: Heading
+        - name: subheading
+          type: textarea
+          default: ''
+          config:
+            required: false
+            wysiwyg: false
+            schema:
+              format: markdown
+          label: Subheading
+        - name: description
+          type: textarea
+          default: ''
+          config:
+            required: false
+            wysiwyg: false
+            schema:
+              format: markdown
+          label: Description
         label: Left Block
+      - name: right
+        type: field_group
+        config: {}
+        label: Right Block
       label: Hero Header
     label: Section 1
   label: Page Content
