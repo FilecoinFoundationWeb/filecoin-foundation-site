@@ -22,3 +22,39 @@ fields:
 - name: tint
   type: boolean
   label: Tint
+- name: button
+  type: field_group
+  config: {}
+  fields:
+  - name: type
+    type: text
+    config:
+      required: false
+    hidden: true
+    label: Type
+    default: D
+  - name: action
+    type: text
+    config:
+      required: false
+    label: Action
+    hidden: true
+    default: video
+  - name: icon
+    type: text
+    config:
+      required: false
+    label: Icon
+    hidden: true
+    default: play
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Text
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  label: Button
