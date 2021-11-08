@@ -276,7 +276,12 @@
                 },
                 "heading": "Events & Hackathons",
                 "cta": {
-                  "type": "A"
+                  "type": "A",
+                  "theme": "",
+                  "action": "nuxt-link",
+                  "icon": "",
+                  "text": "Browse all Events",
+                  "url": "/events"
                 }
               },
               "events": {
