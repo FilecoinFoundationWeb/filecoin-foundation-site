@@ -15,8 +15,7 @@
         "id": "basic_hero",
         "grid": [
           "middle",
-          "bottom",
-          "middle"
+          "bottom"
         ],
         "classNames": "",
         "left": [
