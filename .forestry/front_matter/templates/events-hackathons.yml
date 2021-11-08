@@ -45,29 +45,9 @@ fields:
         required: false
       label: Heading
     - name: cta
-      type: field_group
+      type: include
       config: {}
-      fields:
-      - name: type
-        type: select
-        default: []
-        config:
-          required: false
-          options:
-          - A
-          - B
-          - C
-          - D
-          - E
-          - F
-          - G
-          - H
-          source:
-            type: simple
-            section: 
-            file: 
-            path: 
-        label: Type
+      template: button
       label: CTA
     label: Intro
   - name: events
