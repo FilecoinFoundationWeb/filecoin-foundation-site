@@ -285,7 +285,7 @@
                 "cards": [
                   {
                     "template": "card",
-                    "type": "B",
+                    "type": "D",
                     "date": "2021-10-20T04:00:00Z",
                     "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
                     "img": "/images/events/2021-filecoin-orbit-lounge-event.png",
@@ -294,7 +294,31 @@
                     "action": "link",
                     "icon": "info",
                     "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
-                    "text": "More info"
+                    "text": "More info",
+                    "cta": {
+                      "type": "B",
+                      "theme": "",
+                      "action": "link",
+                      "icon": "info",
+                      "text": "More info",
+                      "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                    }
+                  },
+                  {
+                    "template": "card",
+                    "type": "D",
+                    "date": "2021-10-26T15:20:08Z",
+                    "title": "Filecoin Plus Community Governance Call",
+                    "cta": {
+                      "type": "B",
+                      "action": "link",
+                      "icon": "info",
+                      "text": "More info",
+                      "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+                      "theme": ""
+                    },
+                    "img": "",
+                    "img_type": ""
                   }
                 ],
                 "columns": {
