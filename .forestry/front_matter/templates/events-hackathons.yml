@@ -73,5 +73,19 @@ fields:
   - name: events
     type: field_group
     config: {}
+    fields:
+    - name: columns
+      type: include
+      config: {}
+      template: columns
+      label: Columns
+    - name: cards
+      type: blocks
+      label: Cards
+      template_types:
+      - card
+      config:
+        min: 
+        max: 
     label: Events
   label: Properties
