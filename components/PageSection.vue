@@ -7,11 +7,13 @@
       :key="blockIndex"
       class="content-section">
 
-      <div v-if="block.type !== 'custom'" :class="[getGridClasses(block.grid), block.classNames]">
+      <div
+        v-if="block.left.length > 0 || block.right.length > 0"
+        :class="[getGridClasses(block.grid), block.classNames]">
         <template
           v-for="(column, columnIndex) in columns">
           <template
-            v-if="(block[column].length > 0)">
+            v-if="columnExists(block[column])">
             <div
               v-for="(object, index) in block[column]"
               :key="`${columnIndex}-${object.template}-${index}`"
@@ -43,9 +45,9 @@
       </div>
 
       <component
-        :is="block.component"
-        v-else
-        v-bind="block.props" />
+        v-if="block.custom.length > 0"
+        :is="block.custom.component"
+        v-bind="block.custom.props" />
 
     </section>
 
@@ -104,6 +106,10 @@ export default {
         blockGrid.forEach(className => classList.push(`-${className}`))
       }
       return classList.join('')
+    },
+    columnExists (blockColumn) {
+      if (Array.isArray(blockColumn)) { return (blockColumn.length > 0) }
+      return false
     },
     getColumnCount (blockColumn) {
       return blockColumn.cols.num
