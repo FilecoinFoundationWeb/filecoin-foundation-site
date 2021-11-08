@@ -157,7 +157,7 @@
       "panel_1_cards": {
         "left": {
           "slider_block": {
-            "type": "slider_block",
+            "type": "",
             "cards": [
               {
                 "template": "card",
@@ -259,14 +259,40 @@
                 "date": "",
                 "img_type": ""
               }
-            ],
-            "type": ""
+            ]
           },
           "cols": {
             "num": "",
             "push_left": ""
           },
-          "type": ""
+          "type": "",
+          "cards": [
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Marta Belcher",
+              "img": "/images/about/marta-belcher@2x.png",
+              "description": "General Counsel, Protocol Labs (Board Chair)",
+              "date": "",
+              "img_type": ""
+            }
+          ]
         }
       }
     }
