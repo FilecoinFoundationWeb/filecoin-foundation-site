@@ -10,25 +10,25 @@ fields:
   label: type
   default: text_block
 - name: layout
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - compact
+    - medium
+    - large
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+- name: label
   type: text
   config:
     required: false
-  label: Layout
-- name: cols
-  type: field_group
-  config: {}
-  fields:
-  - name: num
-    type: text
-    config:
-      required: false
-    label: Number
-  - name: push_left
-    type: text
-    config:
-      required: false
-    label: Push Left
-  label: Columns
+  label: Label
 - name: heading
   type: textarea
   default: ''
@@ -56,8 +56,3 @@ fields:
     schema:
       format: markdown
   label: Description
-- name: label
-  type: text
-  config:
-    required: false
-  label: Label
