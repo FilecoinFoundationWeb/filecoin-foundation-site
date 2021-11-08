@@ -1,0 +1,295 @@
+---
+label: Basic Page 2
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site_name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group
+  name: page_content
+  label: page_content
+  fields:
+  - type: field_group_list
+    name: section_1
+    label: section_1
+    fields:
+    - type: text
+      name: id
+      label: id
+    - type: list
+      name: grid
+      label: grid
+    - type: field_group_list
+      name: left
+      label: left
+      fields:
+      - type: text
+        name: template
+        label: template
+      - type: text
+        name: type
+        label: type
+      - type: text
+        name: layout
+        label: layout
+      - type: field_group
+        name: cols
+        label: cols
+        fields:
+        - type: text
+          name: num
+          label: num
+        - type: text
+          name: push_left
+          label: push_left
+      - type: text
+        name: heading
+        label: heading
+      - type: textarea
+        name: subheading
+        label: subheading
+      - type: text
+        name: label
+        label: label
+      - type: text
+        name: description
+        label: description
+    - type: field_group_list
+      name: right
+      label: right
+      fields:
+      - type: text
+        name: template
+        label: template
+      - type: text
+        name: type
+        label: type
+      - type: file
+        name: src
+        label: src
+      - type: field_group
+        name: cols
+        label: cols
+        fields:
+        - type: text
+          name: num
+          label: num
+        - type: text
+          name: push_left
+          label: push_left
+    - type: text
+      name: classNames
+      label: classNames
+    - type: list
+      name: custom
+      label: custom
+  - type: field_group_list
+    name: section_2
+    label: section_2
+    fields:
+    - type: text
+      name: id
+      label: id
+    - type: text
+      name: classNames
+      label: classNames
+    - type: field_group_list
+      name: left
+      label: left
+      fields:
+      - type: text
+        name: template
+        label: template
+      - type: text
+        name: type
+        label: type
+      - type: text
+        name: layout
+        label: layout
+      - type: field_group
+        name: cols
+        label: cols
+        fields:
+        - type: text
+          name: num
+          label: num
+        - type: text
+          name: push_left
+          label: push_left
+      - type: textarea
+        name: heading
+        label: heading
+      - type: text
+        name: subheading
+        label: subheading
+      - type: textarea
+        name: description
+        label: description
+      - type: text
+        name: label
+        label: label
+    - type: list
+      name: grid
+      label: grid
+    - type: list
+      name: right
+      label: right
+    - type: list
+      name: custom
+      label: custom
+  - type: field_group_list
+    name: section_3
+    label: section_3
+    fields:
+    - type: text
+      name: id
+      label: id
+    - type: list
+      name: grid
+      label: grid
+    - type: text
+      name: classNames
+      label: classNames
+    - type: list
+      name: left
+      label: left
+    - type: list
+      name: right
+      label: right
+    - type: field_group_list
+      name: custom
+      label: custom
+      fields:
+      - type: text
+        name: template
+        label: template
+      - type: text
+        name: type
+        label: type
+      - type: text
+        name: component
+        label: component
+      - type: field_group
+        name: props
+        label: props
+        fields:
+        - type: field_group
+          name: intro
+          label: intro
+          fields:
+          - type: field_group
+            name: cols
+            label: cols
+            fields:
+            - type: text
+              name: num
+              label: num
+            - type: text
+              name: push_left
+              label: push_left
+          - type: text
+            name: heading
+            label: heading
+          - type: field_group
+            name: cta
+            label: cta
+            fields:
+            - type: text
+              name: type
+              label: type
+            - type: text
+              name: theme
+              label: theme
+            - type: text
+              name: action
+              label: action
+            - type: text
+              name: icon
+              label: icon
+            - type: text
+              name: text
+              label: text
+            - type: text
+              name: url
+              label: url
+        - type: field_group
+          name: events
+          label: events
+          fields:
+          - type: field_group_list
+            name: cards
+            label: cards
+            fields:
+            - type: text
+              name: template
+              label: template
+            - type: text
+              name: type
+              label: type
+            - type: datetime
+              name: date
+              label: date
+            - type: text
+              name: title
+              label: title
+            - type: file
+              name: img
+              label: img
+            - type: text
+              name: img_type
+              label: img_type
+            - type: field_group
+              name: cta
+              label: cta
+              fields:
+              - type: text
+                name: type
+                label: type
+              - type: text
+                name: theme
+                label: theme
+              - type: text
+                name: action
+                label: action
+              - type: text
+                name: icon
+                label: icon
+              - type: text
+                name: text
+                label: text
+              - type: text
+                name: url
+                label: url
+          - type: field_group
+            name: cols
+            label: cols
+            fields:
+            - type: text
+              name: num
+              label: num
+            - type: text
+              name: push_left
+              label: push_left
