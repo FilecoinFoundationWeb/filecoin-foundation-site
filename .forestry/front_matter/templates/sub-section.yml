@@ -39,3 +39,11 @@ fields:
   config:
     min: 
     max: 1
+- name: custom
+  type: blocks
+  label: Custom
+  template_types:
+  - events-hackathons
+  config:
+    min: 
+    max: 
