@@ -314,10 +314,6 @@
                     "img_type": ""
                   }
                 ],
-                "columns": {
-                  "num": "col-8_sm-10_ti-10",
-                  "push_left": "off-4_sm-2_mi-2_ti-1"
-                },
                 "cols": {
                   "num": "col-8_sm-10_ti-10",
                   "push_left": "off-4_sm-2_mi-2_ti-1"
