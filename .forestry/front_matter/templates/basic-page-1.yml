@@ -87,6 +87,5 @@ fields:
     label: Section 3
   label: Page Content
 pages:
-- content/pages/about-1.json
 - content/pages/basic-template-1.json
 - content/pages/basic-template-2.json
