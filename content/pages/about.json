@@ -36,7 +36,6 @@
       "intro_1": {
         "id": "",
         "left": {
-          "type": "",
           "layout": "compact",
           "label": "Our Mission",
           "heading": "",
@@ -62,7 +61,6 @@
       "cta_1": {
         "id": "",
         "left": {
-          "type": "",
           "src": "/images/about/computer@2x.png",
           "cols": {
             "num": "",
@@ -70,7 +68,6 @@
           }
         },
         "right": {
-          "type": "",
           "layout": "medium",
           "label": "Internet of Everyone",
           "heading": "The Filecoin Foundation does not own Filecoin, operate it, or manage it.",
@@ -81,7 +78,6 @@
             "push_left": ""
           },
           "cta": {
-            "type": "",
             "theme": "",
             "action": "",
             "icon": "",
@@ -93,7 +89,6 @@
       "banner_1": {
         "id": "",
         "left": {
-          "type": "",
           "layout": "compact",
           "label": "",
           "heading": "",
@@ -118,7 +113,6 @@
       "cta_2": {
         "id": "",
         "left": {
-          "type": "",
           "layout": "medium",
           "label": "Collective Action",
           "heading": "The Foundation helps the Filecoin community solve problems and facilitates collective action.",
@@ -130,7 +124,6 @@
           }
         },
         "right": {
-          "type": "",
           "src": "/images/square-connection.png",
           "cols": {
             "num": "",
@@ -141,7 +134,6 @@
       "panel_1": {
         "id": "",
         "left": {
-          "type": "",
           "layout": "large",
           "label": "",
           "heading": "Board of<br />Directors",
