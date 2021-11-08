@@ -628,6 +628,13 @@ fields:
         type: field_group
         config: {}
         fields:
+        - name: type
+          type: text
+          config:
+            required: false
+          label: type
+          hidden: true
+          default: slider_block
         - name: slider_block
           type: include
           config: {}
