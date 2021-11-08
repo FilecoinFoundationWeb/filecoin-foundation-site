@@ -620,34 +620,6 @@ fields:
           hidden: true
         label: Left Block
       label: Panel 1
-    - name: panel_1_cards
-      type: field_group
-      config: {}
-      fields:
-      - name: slider_block
-        type: include
-        config: {}
-        template: comp-slider-block
-        label: Slider Block
-      - name: cols
-        type: field_group
-        config: {}
-        fields:
-        - name: num
-          type: text
-          config:
-            required: false
-          label: num
-          default: col-10_sm-8_ti-11
-        - name: push_left
-          type: text
-          config:
-            required: false
-          label: push_left
-          default: off-1_sm-2_ti-1
-        label: cols
-        hidden: true
-      label: Panel 1 Cards
     label: Section 1
   label: Page Content
 pages:
