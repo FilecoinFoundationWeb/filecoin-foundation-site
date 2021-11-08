@@ -2,7 +2,7 @@
 label: Columns
 hide_body: true
 fields:
-- name: columns
+- name: cols
   type: field_group
   config: {}
   fields:
