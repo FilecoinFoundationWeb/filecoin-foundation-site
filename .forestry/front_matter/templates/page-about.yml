@@ -607,4 +607,4 @@ fields:
     label: Section 1
   label: Page Content
 pages:
-- content/pages/about-1.json
+- content/pages/about.json
