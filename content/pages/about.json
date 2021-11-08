@@ -41,24 +41,15 @@
             "push_left": "off-5_mi-4"
           },
           "customizations": {
-            "name": "BackgroundLayers",
-            "props": {
-              "layers-array": "8_6_5_4_3",
-              "offset": {
-                "medium": 0.75,
-                "mini": 0.25
-              },
-              "reverse": true
-            },
             "background_layers": {
-              "name": "",
+              "name": "BackgroundLayers",
               "props": {
-                "layers-array": "",
+                "layers-array": "8_6_5_4_3",
                 "offset": {
-                  "medium": null,
-                  "mini": null
+                  "medium": 0.75,
+                  "mini": 0.25
                 },
-                "reverse": false
+                "reverse": true
               }
             }
           },
@@ -109,22 +100,14 @@
             "push_left": "off-4_mi-4"
           },
           "customizations": {
-            "name": "BackgroundLayers",
-            "props": {
-              "layers-array": "8_6",
-              "offset": {
-                "mini": 0.25
-              },
-              "reverse": true
-            },
             "background_layers": {
-              "name": "",
+              "name": "BackgroundLayers",
               "props": {
-                "layers-array": "",
+                "layers-array": "8_6",
                 "offset": {
-                  "mini": null
+                  "mini": 0.25
                 },
-                "reverse": false
+                "reverse": true
               }
             }
           },

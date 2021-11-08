@@ -13,7 +13,7 @@
 
       <BackgroundLayers
         id="page-about-background-layers"
-        :layers-array="[3, 4, 5, 6]"
+        layers-array="3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -112,7 +112,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-1 {
+#section_1 {
   padding-top: 7rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
@@ -142,7 +142,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-2 {
+#section_2 {
   padding-top: 3.5rem;
   padding-bottom: 3rem;
   @include small {
@@ -150,7 +150,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-3 {
+#section_3 {
   &:before {
     content: '';
     position: absolute;

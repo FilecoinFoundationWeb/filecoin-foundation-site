@@ -29,8 +29,8 @@
               <template v-if="block[column].customizations">
                 <component
                   :is="component.name"
-                  v-for="(component, componentIndex) in block[column].customizations"
-                  :key="componentIndex"
+                  v-for="(component, componentKey) in block[column].customizations"
+                  :key="componentKey"
                   v-bind="component.props" />
               </template>
 
