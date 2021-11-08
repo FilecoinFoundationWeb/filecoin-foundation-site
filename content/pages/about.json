@@ -157,7 +157,7 @@
       "panel_1_cards": {
         "left": {
           "slider_block": {
-            "type": "slider_block"
+            "type": "slider_block",
             "cards": [
               {
                 "template": "card",
