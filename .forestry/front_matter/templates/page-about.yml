@@ -191,56 +191,58 @@ fields:
           type: field_group
           config: {}
           fields:
-          - name: name
-            type: text
-            config:
-              required: false
-            label: name
-            default: BackgroundLayers
-          - name: props
+          - name: background_layers
             type: field_group
             config: {}
             fields:
-            - name: layers-array
+            - name: name
               type: text
               config:
                 required: false
-              label: layers-array
-              hidden: true
-              default: '8_6_5_4_3'
-            - name: offset
+              label: name
+              hidden: false
+              default: BackgroundLayers
+            - name: props
               type: field_group
               config: {}
               fields:
-              - name: medium
-                type: number
-                label: medium
-                description: ''
-                default: 0.75
-                required: true
+              - name: layers-array
+                type: text
                 config:
-                  min: 
-                  max: 
-                  step: 
-                hidden: true
-              - name: mini
-                type: number
-                label: mini
-                description: ''
-                default: 0.25
-                required: true
-                config:
-                  min: 
-                  max: 
-                  step: 
-                hidden: true
-              label: offset
-            - name: reverse
-              type: boolean
-              label: reverse
-              hidden: true
-              default: true
-            label: props
+                  required: false
+                label: layers-array
+                default: '8_6_5_4_3'
+              - name: offset
+                type: field_group
+                config: {}
+                fields:
+                - name: medium
+                  type: number
+                  label: medium
+                  description: ''
+                  default: 0.75
+                  required: true
+                  config:
+                    min: 
+                    max: 
+                    step: 
+                - name: mini
+                  type: number
+                  label: mini
+                  description: ''
+                  default: 0.25
+                  required: true
+                  config:
+                    min: 
+                    max: 
+                    step: 
+                label: offset
+              - name: reverse
+                type: boolean
+                label: reverse
+                default: true
+              label: props
+            label: Background Layers
           label: customizations
           hidden: true
         label: Left Block
@@ -451,48 +453,48 @@ fields:
           type: field_group
           config: {}
           fields:
-          - name: name
-            type: text
-            config:
-              required: false
-            label: name
-            hidden: true
-            default: BackgroundLayers
-          - name: props
+          - name: background_layers
             type: field_group
             config: {}
             fields:
-            - name: layers-array
+            - name: name
               type: text
               config:
                 required: false
-              label: layers-array
-              hidden: true
-              default: '8_6'
-            - name: offset
+              label: name
+              default: BackgroundLayers
+            - name: props
               type: field_group
               config: {}
               fields:
-              - name: mini
-                type: number
-                label: mini
-                description: ''
-                default: 0.25
-                required: true
+              - name: layers-array
+                type: text
                 config:
-                  min: 
-                  max: 
-                  step: 
-                hidden: true
-              label: offset
-              hidden: true
-            - name: reverse
-              type: boolean
-              label: reverse
-              hidden: true
-              default: true
+                  required: false
+                label: layers-array
+                default: '8_6'
+              - name: offset
+                type: field_group
+                config: {}
+                fields:
+                - name: mini
+                  type: number
+                  label: mini
+                  description: ''
+                  default: 0.25
+                  required: true
+                  config:
+                    min: 
+                    max: 
+                    step: 
+                label: offset
+              - name: reverse
+                type: boolean
+                label: reverse
+                default: true
+              label: props
+            label: Background Layers
             hidden: true
-            label: props
           label: customizations
           hidden: true
         label: Left Block
