@@ -151,6 +151,13 @@ fields:
       type: field_group
       config: {}
       fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: intro_1
       - name: left
         type: field_group
         config: {}
@@ -242,6 +249,13 @@ fields:
       type: field_group
       config: {}
       fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: cta_1
       - name: left
         type: field_group
         config: {}
@@ -386,6 +400,96 @@ fields:
           label: cta
         label: Right Block
       label: CTA 1
+    - name: banner_1
+      type: field_group
+      config: {}
+      fields:
+      - name: id
+        type: text
+        config:
+          required: false
+        label: id
+        hidden: true
+        default: banner_1
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: text-block
+          label: Text_block
+        - name: cols
+          type: field_group
+          config: {}
+          fields:
+          - name: num
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: num
+            default: col-7_mi-8
+          - name: push_left
+            type: text
+            config:
+              required: false
+            hidden: true
+            label: push_left
+            default: off-4_mi-4
+          label: cols
+          hidden: true
+        - name: customizations
+          type: field_group
+          config: {}
+          fields:
+          - name: name
+            type: text
+            config:
+              required: false
+            label: name
+            hidden: true
+            default: BackgroundLayers
+          - name: props
+            type: field_group
+            config: {}
+            fields:
+            - name: layers-array
+              type: text
+              config:
+                required: false
+              label: layers-array
+              hidden: true
+              default: '8_6'
+            - name: offset
+              type: field_group
+              config: {}
+              fields:
+              - name: mini
+                type: number
+                label: mini
+                description: ''
+                default: 0.25
+                required: true
+                config:
+                  min: 
+                  max: 
+                  step: 
+                hidden: true
+              label: offset
+              hidden: true
+            - name: reverse
+              type: boolean
+              label: reverse
+              hidden: true
+              default: true
+            hidden: true
+            label: props
+          label: customizations
+          hidden: true
+        label: Left Block
+      label: Banner 1
     label: Section 1
   label: Page Content
 pages:
