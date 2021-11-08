@@ -147,6 +147,15 @@ fields:
           hidden: true
         label: Right Block
       label: Hero Header
+    - name: intro_1
+      type: field_group
+      config: {}
+      fields:
+      - name: left
+        type: field_group
+        config: {}
+        label: Left Block
+      label: Intro 1
     label: Section 1
   label: Page Content
 pages:
