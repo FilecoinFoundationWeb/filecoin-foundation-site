@@ -281,3 +281,5 @@ fields:
             - type: text
               name: push_left
               label: push_left
+pages:
+- content/pages/basic-template-2.json
