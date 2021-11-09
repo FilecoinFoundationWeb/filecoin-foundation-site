@@ -10,15 +10,15 @@
     "image": "/images/open-graph.png"
   },
   "page_content": {
-    "navigation": [
-      {
+    "navigation": {
+      "events": {
         "type": "G",
         "theme": "light",
         "action": "button",
         "text": "Events & Talks",
         "slug": "event"
       },
-      {
+      "hackathons": {
         "type": "G",
         "theme": "light",
         "action": "button",
@@ -26,13 +26,13 @@
         "text": "Hackathons",
         "slug": "hackathon"
       },
-      {
+      "all": {
         "type": "G",
         "theme": "light",
         "action": "button",
         "text": "All",
         "slug": "all"
       }
-    ]
+    }
   }
 }
