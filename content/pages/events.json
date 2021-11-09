@@ -1,0 +1,38 @@
+{
+  "page_content": {
+    "navigation": {
+      "events": {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "slug": "event",
+        "text": "Events & Talks"
+      },
+      "hackathons": {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "icon": "code",
+        "slug": "hackathon",
+        "text": "Hackathons"
+      },
+      "all": {
+        "type": "G",
+        "theme": "light",
+        "action": "button",
+        "slug": "all",
+        "text": "All"
+      }
+    }
+  },
+  "seo": {
+    "title": "Events - Filecoin Foundation",
+    "description": "Browse official events, talks and hackathons from the Filecoin Foundation."
+  },
+  "og": {
+    "site_name": "Events - Filecoin Foundation",
+    "url": "https://fil.org/events",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
