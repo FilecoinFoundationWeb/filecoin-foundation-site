@@ -18,7 +18,7 @@ fields:
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: site name
   - type: text
     name: url
     label: url
@@ -30,7 +30,7 @@ fields:
     label: image
 - type: field_group
   name: page_content
-  label: page_content
+  label: page content
   fields:
   - type: field_group
     name: navigation
@@ -43,18 +43,26 @@ fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: G
       - type: text
         name: theme
         label: theme
+        hidden: true
+        default: light
       - type: text
         name: action
         label: action
+        hidden: true
+        default: button
       - type: text
         name: text
         label: text
       - type: text
         name: slug
         label: slug
+        hidden: true
+        default: event
     - type: field_group
       name: hackathons
       label: hackathons
@@ -62,21 +70,31 @@ fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: G
       - type: text
         name: theme
         label: theme
+        hidden: true
+        default: light
       - type: text
         name: action
         label: action
+        hidden: true
+        default: button
       - type: text
         name: icon
         label: icon
+        hidden: true
+        default: code
       - type: text
         name: text
         label: text
       - type: text
         name: slug
         label: slug
+        hidden: true
+        default: hackathon
     - type: field_group
       name: all
       label: all
@@ -84,15 +102,23 @@ fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: G
       - type: text
         name: theme
         label: theme
+        hidden: true
+        default: light
       - type: text
         name: action
         label: action
+        hidden: true
+        default: button
       - type: text
         name: text
         label: text
       - type: text
         name: slug
         label: slug
+        hidden: true
+        default: all
