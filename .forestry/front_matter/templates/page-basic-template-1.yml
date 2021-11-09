@@ -587,3 +587,5 @@ fields:
                 label: url
             config:
               max: 2
+pages:
+- content/pages/basic-template-1.json
