@@ -1,0 +1,280 @@
+{
+  "page_content": {
+    "section_1": {
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-4_sm-9_mi-10",
+            "push_left": "off-2_mi-1"
+          },
+          "layout": "large",
+          "label": "",
+          "heading": "About Us",
+          "subheading": "The Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+          "description": ""
+        },
+        "right": {
+          "type": "video_block",
+          "button": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "Watch: Meet the Filecoin Foundation",
+            "url": "https://youtu.be/6OY4xAs3Grg"
+          },
+          "cols": {
+            "num": "col-5_sm-9_mi-10",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "preview_image": "/images/about/preview-about@2x.png",
+          "url": "https://youtu.be/6OY4xAs3Grg",
+          "tint": true
+        }
+      },
+      "intro_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "compact",
+          "cols": {
+            "num": "col-7_mi-8",
+            "push_left": "off-5_mi-4"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4_3",
+                "offset": {
+                  "medium": 0.75,
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "label": "Our Mission",
+          "heading": "",
+          "subheading": "",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action."
+        }
+      },
+      "cta_1": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-5_sm-7_mi-10",
+            "off-2_mi-1": "off-2_mi-1",
+            "push_left": ""
+          },
+          "src": "/images/about/computer@2x.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4_sm-9_mi-10",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "cta": {
+            "type": "A",
+            "theme": "light",
+            "action": "nuxt-link",
+            "icon": [
+
+            ],
+            "text": "Join the Community",
+            "url": "/get-involved"
+          },
+          "label": "Internet of Everyone",
+          "heading": "The Filecoin Foundation does not own Filecoin, operate it, or manage it",
+          "subheading": "It is one of many organizations that cares deeply about Filecoin — its potential, and the values it represents.",
+          "description": "However, the foundation has a unique position within that ecosystem to help cultivate research, development, and community engagement."
+        }
+      },
+      "banner_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "compact",
+          "cols": {
+            "num": "col-7_mi-8",
+            "push_left": "off-4_mi-4"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6",
+                "offset": {
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "label": "",
+          "heading": "",
+          "subheading": "",
+          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success."
+        }
+      },
+      "cta_2": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4_sm-9_mi-10",
+            "push_left": "off-2_mi-1"
+          },
+          "label": "Collective Action",
+          "heading": "The Foundation helps the Filecoin community solve problems and facilitates collective action.",
+          "subheading": "",
+          "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem."
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-5_sm-7_mi-8",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "src": "/images/square-connection.png"
+        }
+      },
+      "panel_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-9_mi-10",
+            "push_left": "off-2_mi-1"
+          },
+          "label": "",
+          "heading": "Board of<br />Directors",
+          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
+          "description": ""
+        }
+      },
+      "panel_1_cards": {
+        "left": {
+          "cols": {
+            "num": "col-10_sm-8_ti-11",
+            "push_left": "off-1_sm-2_ti-1"
+          },
+          "type": "slider_block",
+          "cards": [
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Marta Belcher",
+              "img": "/images/about/marta-belcher@2x.png",
+              "description": "General Counsel, Protocol Labs (Board Chair)",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Marcia Hofmann",
+              "img": "/images/about/marcia-hofmann@2x.png",
+              "description": "Electronic Privacy Attorney",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "description": "Executive Director, Hyperledger",
+              "title": "Brian Behlendorf",
+              "img": "/images/about/brian-behlendorf@2x.png",
+              "date": "",
+              "img_type": ""
+            },
+            {
+              "template": "card",
+              "cta": {
+                "type": [
+
+                ],
+                "theme": [
+
+                ],
+                "action": [
+
+                ],
+                "icon": [
+
+                ],
+                "text": "",
+                "url": ""
+              },
+              "type": "B",
+              "title": "Nicole Wong",
+              "img": "/images/about/nicole-wong@2x.png",
+              "date": "",
+              "img_type": "",
+              "description": "Former Deputy U.S. Chief Technology Officer"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "",
+    "description": ""
+  },
+  "og": {
+    "site_name": "",
+    "url": "",
+    "type": "",
+    "image": ""
+  }
+}

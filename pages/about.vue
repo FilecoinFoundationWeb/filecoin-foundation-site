@@ -396,9 +396,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper_intro,
-::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
-  padding-bottom: 0;
+::v-deep #dive_deeper {
+  padding-bottom: 10rem;
 }
 </style>
