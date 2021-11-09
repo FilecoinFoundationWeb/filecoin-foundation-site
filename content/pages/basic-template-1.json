@@ -67,7 +67,6 @@
       },
       "panels_1": {
         "left": {
-          "type": "text",
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
