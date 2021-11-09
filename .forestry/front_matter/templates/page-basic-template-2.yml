@@ -657,3 +657,5 @@ fields:
       config: {}
       template: comp-divedeeper
       label: Dive Deeper
+pages:
+- content/pages/basic-template-2.json
