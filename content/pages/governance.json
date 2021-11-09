@@ -1,0 +1,457 @@
+{
+  "page_content": {
+    "section_1": {
+      "out-of-page": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-3"
+          },
+          "description": "."
+        }
+      }
+    },
+    "section_2": {
+      "mobile_image_banner": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_mi-11",
+            "push_left": "off-3_mi-1"
+          },
+          "src": "/images/governance/hero-image@2x.png"
+        }
+      },
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-3_md-2_sm-1_mi-1"
+          },
+          "heading": "Community Driven Governance"
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_md-5 mi-hidden",
+            "push_left": "off-1_sm-1"
+          },
+          "src": "/images/governance/hero-image@2x.png"
+        }
+      },
+      "hero_text": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-6_sm-7_mi-11",
+            "push_left": "off-6_sm-4_mi-1"
+          },
+          "subheading": "As an open-source project, the <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
+        }
+      }
+    },
+    "section_3": {
+      "panel-1-title": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3 mi-hidden",
+            "push_left": "off-1"
+          },
+          "customizations": {
+            "floating_menu": {
+              "name": "FloatingMenu",
+              "props": {
+                "id": "governance-floating-menu",
+                "cutoff": "section_6",
+                "offsetbottom": 0,
+                "entries": [
+                  {
+                    "heading": "Improving Filecoin",
+                    "id": "section_3",
+                    "items": [
+                      {
+                        "text": "What exactly is an FIP?",
+                        "id": "section_3-a"
+                      },
+                      {
+                        "text": "How are FIP’s prioritized?",
+                        "id": "section_3-b"
+                      },
+                      {
+                        "text": "Can I submit an FIP?",
+                        "id": "section_3-c"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Security",
+                    "id": "section_4",
+                    "items": [
+                      {
+                        "text": "Filecoin Bounty Program",
+                        "id": "section_4-a"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Filecoin Plus",
+                    "id": "section_5",
+                    "items": [
+                      {
+                        "text": "How does it work?",
+                        "id": "section_5-a"
+                      },
+                      {
+                        "text": "Apply for a DataCap",
+                        "id": "section_5-b"
+                      },
+                      {
+                        "text": "Filecoin Plus Notary",
+                        "id": "section_5-c"
+                      }
+                    ]
+                  },
+                  {
+                    "heading": "Get Involved",
+                    "id": "section_6",
+                    "items": [
+                      {
+                        "text": "Weekly Governance Calls",
+                        "id": "section_6"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-2_mi-3"
+          },
+          "heading": "Improving Filecoin"
+        }
+      },
+      "panel-1-info-top": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-12",
+            "push_left": "off-4_mi-0"
+          },
+          "src": "/images/pencil.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "data_id": "section_3-a",
+          "subheading": "What exactly is a FIP?",
+          "description": "FIPs are standards specifying potential new features or processes for Filecoin.<br><br>FIPs play a central role in how changes happen and are documented on Filecoin. FIPs allow the community to propose, debate, and adopt changes.<br><br>Along with providing a technical specification for changes, FIPs are the unit around which governance happens in Filecoin."
+        }
+      },
+      "panel-1-info-middle": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-6_mi-1"
+          },
+          "data_id": "section_3-b",
+          "subheading": "How are FIP’s prioritized?",
+          "description": "There are different types of FIPs, such as core FIPs for low-level protocol changes that affect consensus and require a network upgrade.<br><br>Every network upgrade consists of a set of FIPs that need to be implemented by each Filecoin client on the network. This implies that to stay in consensus with other clients on the Filecoin mainnet, client developers need to make sure they have all implemented the required FIPs.<br><br>Non-core FIPs don’t have to be adopted by all applications, but core FIPs must be widely adopted (because all nodes must upgrade to stay part of the same network) — therefore core FIPs require broader consensus within the community than non-core FIPs."
+        }
+      },
+      "panel-1-info-bottom": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-8_mi-3"
+          },
+          "data_id": "section_3-c",
+          "subheading": "Can I submit an FIP?",
+          "description": "Yes, anyone is free to propose one, and then various stakeholders in the community will discuss to determine whether it should be adopted as a standard or included in a network upgrade.<br><br>To participate, head over to the FIPs section of the Filecoin Project repo or connect with the community on Slack."
+        }
+      },
+      "panel-1-banner-image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-8_mi-11",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/governance/group@2x.png"
+        }
+      }
+    },
+    "section_4": {
+      "panel-2-title": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-6_mi-1"
+          },
+          "heading": "Security"
+        }
+      },
+      "panel-2-info-top": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-5",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/shield.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-1"
+          },
+          "subheading": "Filecoin is a decentralized storage network for humanity’s most important information, so ensuring the network is secure and trustable is paramount to its success."
+        }
+      },
+      "panel-2-main": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-6_mi-9",
+            "push_left": "off-6_mi-3"
+          },
+          "data_id": "section_4-a",
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "4_5_6",
+                "offset": {
+                  "mini": 0.25
+                },
+                "border-radius": 6.375
+              }
+            }
+          },
+          "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='/icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more."
+        }
+      }
+    },
+    "section_5": {
+      "panel-3-title": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-8",
+            "push_left": "off-6_mi-1"
+          },
+          "heading": "Filecoin Plus"
+        }
+      },
+      "panel-3-info-top": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-7",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/cross.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-1"
+          },
+          "subheading": "Filecoin Plus is a pragmatic solution to the technically challenging problem of verifying that a particular set of data is useful in a permissionless, incentive-compatible, pseudonymous network, and presents a path for incentivizing using the network in productive ways."
+        }
+      },
+      "panel-3-info-middle": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-6_mi-3"
+          },
+          "data_id": "section_5-a",
+          "subheading": "How does it work?",
+          "description": "Filecoin Plus maximizes the amount of useful storage on Filecoin by adding a layer of social trust to the network and introducing a novel resource called DataCap.<br><br>Clients looking to onboard storage onto the network apply to community-selected Notaries to receive DataCap, which can be used to incentivize storage providers to take storage deals. You can learn more in the Filecoin Plus GitHub repo."
+        }
+      },
+      "panel-3-info-bottom": {
+        "left": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-6_mi-2"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img": "/images/filecoin-layered.png",
+              "img_size": "mini",
+              "title": "Apply for DataCap",
+              "description": "If you are looking to apply for DataCap as a client, head over to the <a href='http://plus.fil.org/'>Filecoin Plus app portal.</a>",
+              "data_id": "section_5-b"
+            },
+            {
+              "type": "A",
+              "img": "/images/cross.png",
+              "img_size": "mini",
+              "title": "Filecoin Plus Notary",
+              "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/'>notary governance repository.</a>",
+              "data_id": "section_5-c"
+            }
+          ]
+        }
+      }
+    },
+    "section_6": {
+      "panel-4-title": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-8",
+            "push_left": "off-6_mi-1"
+          },
+          "customizations": {
+            "social_icons": {
+              "name": "SocialIcons"
+            }
+          },
+          "heading": "Get Involved"
+        }
+      },
+      "panel-4-info": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-7",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/hands-raised.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "subheading": "Community governance calls happen every other Tuesday.",
+          "description": "Visit the <a href='https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Filecoin community calendar</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "theme": "dark",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
+          ]
+        }
+      },
+      "panel-4-banner-image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-8_mi-11",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/governance/panel-4-banner.png"
+        }
+      }
+    },
+    "section_7": {
+      "events-hackathons": {
+        "type": "custom",
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4_mi-6",
+              "push_left": "off-6_mi-1"
+            },
+            "heading": "Events & Hackathons"
+          },
+          "events": {
+            "cols": {
+              "num": "col-8_mi-12",
+              "push_left": "off-4_mi-0"
+            },
+            "cards": [
+              {
+                "type": "D",
+                "date": "2021-10-20T21:30:24Z",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "img_type": "background_image",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                }
+              },
+              {
+                "type": "D",
+                "date": "2021-10-26T21:31:34Z",
+                "title": "Filecoin Plus Community Governance Call",
+                "img": "",
+                "img_type": "background_image",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+                  "text": "More info"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Governance - Filecoin Foundation",
+    "description": "As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
+  },
+  "og": {
+    "site_name": "Governance - Filecoin Foundation",
+    "url": "https://fil.org/governance",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
