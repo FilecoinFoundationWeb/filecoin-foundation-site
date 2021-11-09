@@ -1,5 +1,5 @@
 ---
-label: Blog Post Front Matter
+label: "[Blog] Post"
 hide_body: false
 fields:
 - type: text
