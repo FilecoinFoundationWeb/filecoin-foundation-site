@@ -9,8 +9,8 @@
             "num": "col-5_md-9_mi-10",
             "push_left": "off-2_mi-1"
           },
-          "heading": "",
-          "subheading": ""
+          "heading": "Lorem Ipsum",
+          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         "right": {
           "type": "image_block",
@@ -18,10 +18,10 @@
             "num": "col-5_md-9_mi-10",
             "push_left": "off-0_md-2_mi-1"
           },
-          "src": ""
+          "src": "/images/ecosystem/hero-image@2x.png"
         },
         "grid": [
-
+          "middle"
         ]
       },
       "intro_1": {
@@ -45,7 +45,7 @@
               }
             }
           },
-          "description": ""
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
         }
       },
       "cta_banner_1": {
@@ -56,7 +56,7 @@
             "num": "col-5_sm-4_mi-6",
             "push_left": "off-2_mi-1"
           },
-          "src": ""
+          "src": "/images/upstairs.png"
         },
         "right": {
           "type": "text_block",
@@ -65,15 +65,21 @@
             "num": "col-4_sm-9_mi-10",
             "push_left": "off-1_sm-2_mi-1"
           },
-          "label": "",
-          "heading": "",
-          "description": "",
+          "label": "Nemo enim ipsam",
+          "heading": "Veritatis et Quasi",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "ctas": [
-
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
           ]
         },
         "grid": [
-
+          "middle"
         ]
       },
       "basic_content_1": {
@@ -85,8 +91,8 @@
             "num": "col-10_ti-11",
             "push_left": "off-2_md-2_mi-1_ti-1"
           },
-          "heading": "",
-          "description": ""
+          "heading": "Veritatis et Quasi",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       },
       "basic_content_2": {
@@ -98,8 +104,8 @@
             "num": "col-10_ti-11",
             "push_left": "off-2_md-2_mi-1_ti-1"
           },
-          "heading": "",
-          "description": ""
+          "heading": "Architecto beatae vitae dicta sunt explicabo",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         }
       },
       "basic_content_3": {
@@ -111,8 +117,8 @@
             "num": "col-10_ti-11",
             "push_left": "off-2_md-2_mi-1_ti-1"
           },
-          "heading": "",
-          "description": ""
+          "heading": "Nemo enim ipsam voluptatem",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       },
       "panels_1": {
@@ -124,9 +130,9 @@
             "num": "col-4_sm-9_mi-10",
             "push_left": "off-2_md-2_mi-1_ti-1"
           },
-          "label": "",
-          "heading": "",
-          "description": ""
+          "label": "Sed ut perspiciatis",
+          "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         "right": {
           "type": "image_block",
@@ -137,7 +143,7 @@
           "src": ""
         },
         "grid": [
-
+          "middle"
         ]
       }
     },
@@ -150,11 +156,18 @@
             "num": "col-3_sm-10_mi-9",
             "push_left": "off-1_sm-2"
           },
-          "label": "",
-          "heading": "",
-          "description": "",
+          "label": "Resources",
+          "heading": "How to get involved and key links",
+          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
           "ctas": [
-
+            {
+              "type": "A",
+              "action": "a",
+              "theme": "light",
+              "target": "_blank",
+              "text": "Join the Community",
+              "url": "//filecoin.io/slack"
+            }
           ]
         },
         "right": {
@@ -176,7 +189,48 @@
             }
           },
           "cards": [
-
+            {
+              "type": "A",
+              "img": "/images/pencil.png",
+              "img_size": "regular",
+              "title": "Filecoin Notary Portal",
+              "description": "The official client and notary portal, hosted by the Filecoin website"
+            },
+            {
+              "type": "A",
+              "img": "/images/plus.png",
+              "img_size": "regular",
+              "title": "Filecoin Plus GitHub",
+              "description": "The hub for client applications for DataCap at a large scale"
+            },
+            {
+              "type": "A",
+              "img": "/images/upstairs.png",
+              "img_size": "regular",
+              "title": "Client Onboarding Repo",
+              "description": "Putting the power in the hands of clients and incentivizing storage providers"
+            },
+            {
+              "type": "A",
+              "img": "/images/stamp.png",
+              "img_size": "regular",
+              "title": "Notary Governance Repo",
+              "description": "Join the Filecoin notary conversation on GitHub"
+            },
+            {
+              "type": "A",
+              "img": "/images/key.png",
+              "img_size": "regular",
+              "title": "Root Key Holder Governance",
+              "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions"
+            },
+            {
+              "type": "A",
+              "img": "/images/calendar.png",
+              "img_size": "regular",
+              "title": "Community Calendar",
+              "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
+            }
           ]
         }
       }
@@ -191,11 +245,80 @@
               "num": "col-7_sm-8_mi-9_ti-10",
               "push_left": "off-1_sm-2_mi-1"
             },
-            "heading": "",
-            "subheading": ""
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
           },
           "videos": [
-
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "icon",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ",
+                      "text": "Watch Video"
+                    }
+                  ],
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "icon",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "heading": "Welcome to Filecoin Plus Day",
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network."
+                }
+              }
+            }
           ]
         }
       }
