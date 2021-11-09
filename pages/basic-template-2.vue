@@ -6,14 +6,14 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
         id="page-basic-2-background-layers"
-        :layers-array="[3, 4, 5, 6]"
+        layers-array="3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -27,7 +27,6 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import BasicPageTwoData from '@/content/pages/basic-template-2.json'
-import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -56,7 +55,6 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'basic_two', data: BasicPageTwoData })
-    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
   head () {
@@ -69,10 +67,6 @@ export default {
     }),
     sections () {
       const content = CloneDeep(this.siteContent.basic_two.page_content)
-      const len = content.length
-      const last = content[len - 1]
-      const replace = this.siteContent['section-dive-deeper'].concat(last)
-      content.splice(len - 1, 1, replace)
       return content
     }
   }
@@ -375,9 +369,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper_intro,
-::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
-  padding-bottom: 0;
+::v-deep #dive_deeper {
+  padding-bottom: 10rem;
 }
 </style>
