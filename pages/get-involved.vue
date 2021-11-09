@@ -6,14 +6,14 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
         id="page-get-involved-background-layers"
-        :layers-array="[5, 6]"
+        layers-array="5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -27,7 +27,6 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import GetInvolvedPageData from '@/content/pages/get-involved.json'
-import SectionDiveDeeperData from '@/content/sections/dive-deeper.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -56,7 +55,6 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'get_involved', data: GetInvolvedPageData })
-    await store.dispatch('global/getBaseData', { key: 'section-dive-deeper', data: SectionDiveDeeperData })
   },
 
   head () {
@@ -69,18 +67,7 @@ export default {
     }),
     sections () {
       const content = CloneDeep(this.siteContent.get_involved.page_content)
-      const diveDeeperContent = CloneDeep(this.siteContent['section-dive-deeper'])
-      diveDeeperContent.forEach((section) => {
-        if (section.left && section.left.type === 'text_block') {
-          section.left.theme = 'light'
-          section.left.button_theme = 'light'
-        }
-        if (section.right && section.right.type === 'text_block') {
-          section.right.theme = 'light'
-          section.right.button_theme = 'light'
-        }
-      })
-      return [content[0].concat(diveDeeperContent)]
+      return content
     }
   }
 }
@@ -225,21 +212,13 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper_intro,
-::v-deep #dive_deeper_video_1 {
-  padding-bottom: 0;
-}
-
-::v-deep #dive_deeper_intro {
-  @include tiny {
-    padding-top: 3rem;
+::v-deep #dive_deeper {
+  padding-bottom: 10rem;
+  a {
+    @include fontWeight_SemiBold;
+    @include leading_Regular;
+    color: $white;
   }
 }
 
-::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
-  @include small {
-    padding-top: 2rem;
-  }
-}
 </style>
