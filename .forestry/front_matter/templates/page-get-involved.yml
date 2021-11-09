@@ -250,6 +250,8 @@ fields:
             - type: text
               name: url
               label: url
+          config:
+            labelField: label
     - type: field_group
       name: get_involved
       label: get_involved
@@ -327,6 +329,7 @@ fields:
             label: url
           config:
             max: 1
+            labelField: text
       - type: field_group
         name: right
         label: Right Block
@@ -391,6 +394,7 @@ fields:
             label: description
           config:
             max: 6
+            labelField: title
         - type: field_group
           name: customizations
           label: customizations
@@ -568,6 +572,7 @@ fields:
                   label: url
                 config:
                   max: 1
+                  labelField: text
               - type: text
                 name: heading
                 label: heading
