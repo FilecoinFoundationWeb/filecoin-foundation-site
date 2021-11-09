@@ -778,3 +778,5 @@ fields:
             min: 1
             max: 2
         hidden: false
+pages:
+- content/pages/ecosystem.json
