@@ -232,7 +232,10 @@
               "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
             }
           ]
-        }
+        },
+        "grid": [
+          "middle"
+        ]
       }
     },
     "section_3": {
