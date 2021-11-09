@@ -854,3 +854,5 @@ fields:
                   max: 1
           config:
             max: 2
+pages:
+- content/pages/about.json
