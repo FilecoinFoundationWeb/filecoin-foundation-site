@@ -39,10 +39,11 @@
         </template>
       </div>
 
-      <component
-        :is="block.component"
-        v-else
-        v-bind="block.props" />
+      <template v-if="block.type === 'custom'">
+        <component
+          :is="block.component"
+          v-bind="block.props" />
+      </template>
 
     </section>
 
@@ -59,6 +60,7 @@ import PaginatedCards from '@/components/PaginatedCards'
 import CardListBlock from '@/components/CardListBlock'
 import FloatingMenu from '@/components/FloatingMenu'
 import SocialIcons from '@/components/SocialIcons'
+import DiveDeeper from '@/components/DiveDeeper'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -76,6 +78,7 @@ export default {
     CardListBlock,
     FloatingMenu,
     SocialIcons,
+    DiveDeeper,
     EventsHackathons,
     TabbedSlider,
     BackgroundLayers
@@ -92,10 +95,6 @@ export default {
     return {
       columns: ['left', 'right']
     }
-  },
-
-  mounted () {
-    console.log(this.section)
   },
 
   methods: {
