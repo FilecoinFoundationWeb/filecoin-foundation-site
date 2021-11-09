@@ -18,7 +18,7 @@ fields:
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: site name
   - type: text
     name: url
     label: url
