@@ -10,12 +10,22 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: md
+  templates:
+  - blog-post-front-matter
 - type: directory
   path: content/pages
   label: Pages
   create: documents
   match: "**/*"
   new_doc_ext: json
+  templates:
+  - page-about
+  - page-ecosystem
+  - page-blog
+  - page-events
+  - page-basic-template-1
+  - page-basic-template-2
+  - page-get-involved
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
