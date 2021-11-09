@@ -254,7 +254,7 @@ fields:
           name: type
           label: type
           hidden: true
-          default: text
+          default: text_block
         - type: text
           name: layout
           label: layout
