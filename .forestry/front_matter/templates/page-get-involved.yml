@@ -576,3 +576,5 @@ fields:
                 label: description
           config:
             max: 2
+pages:
+- content/pages/get-involved.json

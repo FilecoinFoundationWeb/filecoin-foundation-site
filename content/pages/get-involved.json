@@ -1,0 +1,184 @@
+{
+  "page_content": {
+    "section_1": {
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-5_sm-8_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "Get <br /> Involved",
+          "subheading": "The <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_mi-5_ti-7",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "src": "/images/page-get-involved/raised-hands-large.png"
+        }
+      },
+      "careers_intro": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-7_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "Careers",
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
+        }
+      },
+      "careers_list": {
+        "left": {
+          "type": "card_list_block",
+          "cols": {
+            "num": "col-12_md-11",
+            "push_left": "off-1"
+          },
+          "load_more_button": {
+            "type": "E",
+            "action": "load",
+            "theme": "dark",
+            "text": "See more"
+          },
+          "display": {
+            "initial": 6,
+            "next": 6
+          },
+          "cards": [
+            {
+              "type": "D",
+              "date": "2021-09-04T18:39:26Z",
+              "label": "San Francisco, Remote",
+              "title": "Communications Associate",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
+              }
+            },
+            {
+              "type": "D",
+              "date": "2021-09-20T18:39:59Z",
+              "label": "San Francisco, Remote",
+              "title": "Developer Grants Coordinator",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/d7fa677a-5d92-4043-929c-56d6cb7bc73b"
+              }
+            },
+            {
+              "type": "D",
+              "date": "2021-10-08T18:40:51Z",
+              "label": "San Francisco, Remote",
+              "title": "Program Manager, Filecoin Developer Grants",
+              "cta": {
+                "type": "B",
+                "action": "a",
+                "icon": "plus",
+                "text": "Apply Now",
+                "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
+              }
+            }
+          ]
+        },
+        "grid": [
+          "noGutter"
+        ]
+      },
+      "get_involved": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_md-4_mi-10",
+            "push_left": "off-1"
+          },
+          "label": "Get Involved",
+          "heading": "How to get involved and key links",
+          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "a",
+              "theme": "dark",
+              "target": "_blank",
+              "text": "Join the Community",
+              "url": "//filecoin.io/slack"
+            }
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6",
+            "push_left": "off-2_md-1_mi-3"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6",
+                "offset": {
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "/events",
+              "img": "/images/calendar.png",
+              "title": "Attend an event",
+              "description": "Join or watch a Filecoin ecosystem event",
+              "action": "nuxt-link"
+            }
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "",
+            "subheading": ""
+          },
+          "videos": [
+
+          ]
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Get Involved - Filecoin Foundation",
+    "description": "Learn how you can get involved with the Filecoin Foundation, from attending an event to becoming part of the ecosystem."
+  },
+  "og": {
+    "site_name": "Get Involved - Filecoin Foundation",
+    "url": "https://fil.org/get-involved",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
