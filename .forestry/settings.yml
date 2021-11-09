@@ -19,6 +19,7 @@ sections:
   match: "**/*"
   new_doc_ext: json
   templates:
+  - page-policy
   - page-governance
   - page-about
   - page-ecosystem
