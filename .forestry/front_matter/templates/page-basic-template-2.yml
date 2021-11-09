@@ -496,6 +496,11 @@ fields:
       name: resources
       label: resources
       fields:
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
       - type: field_group
         name: left
         label: Left Block
