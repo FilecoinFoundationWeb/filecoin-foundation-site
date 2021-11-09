@@ -23,7 +23,8 @@
     </div>
 
     <div
-      v-for="video in videos"
+      v-for="(video, index) in videos"
+      :key="`video-${index}`"
       class="video-container">
       <div class="grid-middle">
         <div
@@ -32,7 +33,7 @@
           :data-push-right="video.left.cols.push_right">
           <div class="column-content left">
             <div class="blocks left">
-              <VideoBlock v-bind="{ block: video.left.props }"/>
+              <VideoBlock v-bind="{ block: video.left.props }" />
             </div>
           </div>
         </div>
@@ -43,7 +44,7 @@
           :data-push-right="video.right.cols.push_right">
           <div class="column-content right">
             <div class="blocks right">
-              <TextBlock v-bind="{ block: video.right.props }"/>
+              <TextBlock v-bind="{ block: video.right.props }" />
             </div>
           </div>
         </div>
@@ -55,11 +56,7 @@
 
 <script>
 // ====================================================================== Import
-import Button from '@/components/Button'
-import Card from '@/components/Card'
-
 import TextBlock from '@/components/TextBlock'
-import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 
 // ====================================================================== Export
@@ -67,10 +64,7 @@ export default {
   name: 'DiveDeeper',
 
   components: {
-    Button,
-    Card,
     TextBlock,
-    ImageBlock,
     VideoBlock
   },
 
