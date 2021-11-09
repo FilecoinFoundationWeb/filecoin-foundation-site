@@ -1,0 +1,121 @@
+---
+label: "[Comp] DiveDeeper"
+hide_body: true
+fields:
+- type: field_group
+  name: dive_deeper
+  label: dive_deeper
+  fields:
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: component
+    label: component
+  - type: field_group
+    name: props
+    label: props
+    fields:
+    - type: field_group
+      name: intro
+      label: intro
+      fields:
+      - type: field_group
+        name: cols
+        label: cols
+        fields:
+        - type: text
+          name: num
+          label: num
+        - type: text
+          name: push_left
+          label: push_left
+      - type: text
+        name: heading
+        label: heading
+      - type: textarea
+        name: subheading
+        label: subheading
+    - type: field_group_list
+      name: videos
+      label: videos
+      fields:
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: field_group
+          name: props
+          label: props
+          fields:
+          - type: file
+            name: preview_image
+            label: preview_image
+          - type: text
+            name: url
+            label: url
+      - type: field_group
+        name: right
+        label: right
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: field_group
+          name: props
+          label: props
+          fields:
+          - type: text
+            name: layout
+            label: layout
+          - type: field_group_list
+            name: ctas
+            label: ctas
+            fields:
+            - type: text
+              name: type
+              label: type
+            - type: text
+              name: theme
+              label: theme
+            - type: text
+              name: action
+              label: action
+            - type: text
+              name: icon
+              label: icon
+            - type: text
+              name: text
+              label: text
+            - type: text
+              name: url
+              label: url
+          - type: text
+            name: heading
+            label: heading
+          - type: textarea
+            name: description
+            label: description
