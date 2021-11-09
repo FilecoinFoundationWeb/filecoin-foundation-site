@@ -1,0 +1,52 @@
+---
+label: "[Page] Blog"
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site_name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group_list
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: action
+    label: action
+  - type: text
+    name: target
+    label: target
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: component
+    label: component
+  - type: text
+    name: label
+    label: label
