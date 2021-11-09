@@ -18,7 +18,7 @@ fields:
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: site name
   - type: text
     name: url
     label: url
@@ -40,19 +40,20 @@ fields:
       name: basic_hero
       label: basic_hero
       fields:
-      - type: list
-        name: grid
-        label: grid
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -60,9 +61,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-5_md-9_mi-10
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-0_md-2_ti-1
+          hidden: true
         - type: text
           name: heading
           label: heading
@@ -74,14 +80,16 @@ fields:
           label: label
       - type: field_group
         name: right
-        label: right
+        label: Right Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: file
           name: src
-          label: src
+          label: Image
         - type: field_group
           name: cols
           label: cols
@@ -89,9 +97,19 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-7_md-9_mi-10
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-0_md-2_mi-1
+          hidden: true
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
   - type: field_group
     name: section_2
     label: section_2
@@ -103,16 +121,22 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -120,9 +144,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: label
           label: label
@@ -139,16 +168,21 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: file
           name: src
-          label: src
+          label: Image
+          hidden: false
         - type: field_group
           name: cols
           label: cols
@@ -156,9 +190,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
     - type: field_group
       name: basic_content_2
       label: basic_content_2
@@ -166,16 +205,22 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -183,9 +228,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: heading
           label: heading
@@ -198,14 +248,18 @@ fields:
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: medium
         - type: field_group
           name: cols
           label: cols
@@ -213,9 +267,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_sm-9_mi-10
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: label
           label: label
@@ -227,14 +286,16 @@ fields:
           label: description
       - type: field_group
         name: right
-        label: right
+        label: Right Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: file
           name: src
-          label: src
+          label: Image
         - type: field_group
           name: cols
           label: cols
@@ -242,9 +303,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-6_md-5_sm-7_mi-8
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_mi-2_sm-2_mi-1
+          hidden: true
     - type: field_group
       name: basic_content_3
       label: basic_content_3
@@ -252,16 +318,22 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -269,9 +341,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: heading
           label: heading
@@ -285,16 +362,22 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -302,9 +385,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: heading
           label: heading
@@ -318,16 +406,22 @@ fields:
       - type: text
         name: classNames
         label: classNames
+        hidden: true
+        default: basic-template-block-format
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -335,9 +429,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-10_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_md-2_ti-1
+          hidden: true
         - type: text
           name: heading
           label: heading
@@ -355,9 +454,13 @@ fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: custom
       - type: text
         name: component
         label: component
+        hidden: true
+        default: EventsHackathons
       - type: field_group
         name: props
         label: props
@@ -373,22 +476,31 @@ fields:
             - type: text
               name: num
               label: num
+              hidden: true
+              default: col-4_sm-8_ti-10
             - type: text
               name: push_left
               label: push_left
+              hidden: true
+              default: off-0_md-1_sm-2_mi-2_mi-1
+            hidden: true
           - type: text
             name: heading
             label: heading
           - type: field_group
             name: cta
-            label: cta
+            label: CTA
             fields:
             - type: text
               name: type
               label: type
+              hidden: true
+              default: A
             - type: text
               name: action
               label: action
+              hidden: true
+              default: nuxt-link
             - type: text
               name: text
               label: text
@@ -406,9 +518,14 @@ fields:
             - type: text
               name: num
               label: num
+              hidden: true
+              default: col-8_sm-10_ti-10
             - type: text
               name: push_left
               label: push_left
+              hidden: true
+              default: off-4_sm-2_mi-2_ti-1
+            hidden: true
           - type: field_group_list
             name: cards
             label: cards
@@ -416,18 +533,28 @@ fields:
             - type: text
               name: type
               label: type
-            - type: text
-              name: date
-              label: date
+              hidden: true
+              default: D
+            - name: date
+              type: datetime
+              label: Date
+              description: ''
+              config:
+                required: false
+                date_format: 
+                time_format: 
+                display_utc: false
             - type: text
               name: title
-              label: title
+              label: Title
             - type: file
               name: img
-              label: img
+              label: Image
             - type: text
               name: img_type
               label: img_type
+              hidden: true
+              default: background_image
             - type: field_group
               name: cta
               label: cta
@@ -435,18 +562,28 @@ fields:
               - type: text
                 name: type
                 label: type
+                hidden: true
+                default: B
               - type: text
                 name: action
                 label: action
+                hidden: true
+                default: a
               - type: text
                 name: target
                 label: target
+                hidden: true
+                default: _blank
               - type: text
                 name: icon
                 label: icon
+                hidden: true
+                default: info
               - type: text
                 name: text
                 label: text
               - type: text
                 name: url
                 label: url
+            config:
+              max: 2
