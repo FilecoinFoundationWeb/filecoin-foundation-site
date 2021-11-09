@@ -9,9 +9,13 @@ fields:
   - type: text
     name: type
     label: type
+    hidden: true
+    default: custom
   - type: text
     name: component
     label: component
+    hidden: true
+    default: DiveDeeper
   - type: field_group
     name: props
     label: props
@@ -27,9 +31,14 @@ fields:
         - type: text
           name: num
           label: num
+          hidden: true
+          default: col-7_sm-8_mi-9_ti-10
         - type: text
           name: push_left
           label: push_left
+          hidden: true
+          default: off-1_sm-2_mi-1
+        hidden: true
       - type: text
         name: heading
         label: heading
@@ -42,11 +51,13 @@ fields:
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: video_block
         - type: field_group
           name: cols
           label: cols
@@ -54,26 +65,33 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_sm-8_mi-9_ti-11
+            hidden: true
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          hidden: true
         - type: field_group
           name: props
           label: props
           fields:
           - type: file
             name: preview_image
-            label: preview_image
+            label: preview image
           - type: text
             name: url
             label: url
       - type: field_group
         name: right
-        label: right
+        label: Right Block
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: field_group
           name: cols
           label: cols
@@ -81,9 +99,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_sm-8_mi-9_ti-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+          hidden: true
         - type: field_group
           name: props
           label: props
@@ -91,28 +114,40 @@ fields:
           - type: text
             name: layout
             label: layout
+            hidden: true
+            default: medium
           - type: field_group_list
             name: ctas
-            label: ctas
+            label: CTA
             fields:
             - type: text
               name: type
               label: type
+              hidden: true
+              default: B
             - type: text
               name: theme
               label: theme
+              hidden: true
+              default: dark
             - type: text
               name: action
               label: action
+              hidden: true
+              default: video
             - type: text
               name: icon
               label: icon
+              hidden: true
+              default: icon
             - type: text
               name: text
               label: text
             - type: text
               name: url
               label: url
+            config:
+              max: 1
           - type: text
             name: heading
             label: heading
