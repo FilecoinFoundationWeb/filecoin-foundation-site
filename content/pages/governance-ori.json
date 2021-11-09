@@ -9,9 +9,10 @@
     "type": "website",
     "image": "/images/open-graph.png"
   },
-  "page_content": {
-    "section_1": {
-      "out-of-page": {
+  "page_content": [
+    [
+      {
+        "id": "out-of-page",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -22,9 +23,10 @@
           "description": "."
         }
       }
-    },
-    "section_2": {
-      "mobile_image_banner": {
+    ],
+    [
+      {
+        "id": "mobile_image_banner",
         "left": {
           "type": "image_block",
           "src": "/images/governance/hero-image@2x.png",
@@ -34,7 +36,8 @@
           }
         }
       },
-      "hero": {
+      {
+        "id": "hero",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -53,7 +56,8 @@
           }
         }
       },
-      "hero_text": {
+      {
+        "id": "hero_text",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -64,9 +68,10 @@
           "subheading": "As an open-source project, the <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
         }
       }
-    },
-    "section_3": {
-      "panel-1-title": {
+    ],
+    [
+      {
+        "id": "panel-1-title",
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -74,12 +79,12 @@
             "num": "col-3 mi-hidden",
             "push_left": "off-1"
           },
-          "customizations": {
-            "floating_menu": {
+          "customizations": [
+            {
               "name": "FloatingMenu",
               "props": {
                 "id": "governance-floating-menu",
-                "cutoff": "section_6",
+                "cutoff": "section-6",
                 "offsetbottom": 0,
                 "entries": [
                   {
@@ -141,7 +146,7 @@
                 ]
               }
             }
-          }
+          ]
         },
         "right": {
           "type": "text_block",
@@ -153,7 +158,8 @@
           "heading": "Improving Filecoin"
         }
       },
-      "panel-1-info-top": {
+      {
+        "id": "panel-1-info-top",
         "left": {
           "type": "image_block",
           "src": "/icons/pencil.png",
@@ -175,7 +181,8 @@
           "data_id": "section-3-a"
         }
       },
-      "panel-1-info-middle": {
+      {
+        "id": "panel-1-info-middle",
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -188,7 +195,8 @@
           "data_id": "section-3-b"
         }
       },
-      "panel-1-info-bottom": {
+      {
+        "id": "panel-1-info-bottom",
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -201,7 +209,8 @@
           "data_id": "section-3-c"
         }
       },
-      "panel-1-banner-image": {
+      {
+        "id": "panel-1-banner-image",
         "left": {
           "type": "image_block",
           "src": "/images/governance/group@2x.png",
@@ -211,9 +220,10 @@
           }
         }
       }
-    },
-    "section_4": {
-      "panel-2-title": {
+    ],
+    [
+      {
+        "id": "panel-2-title",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -224,7 +234,8 @@
           "heading": "Security"
         }
       },
-      "panel-2-info-top": {
+      {
+        "id": "panel-2-info-top",
         "left": {
           "type": "image_block",
           "src": "/icons/shield.png",
@@ -244,7 +255,8 @@
           "subheading": "Filecoin is a decentralized storage network for humanity’s most important information, so ensuring the network is secure and trustable is paramount to its success."
         }
       },
-      "panel-2-main": {
+      {
+        "id": "panel-2-main",
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -254,23 +266,24 @@
           },
           "subheading": "Building a strong security culture in the Filecoin project has been one of our core goals from the beginning of the project— creating cutting edge, well-researched, and carefully evaluated mathematical proofs has set the foundation for the critical operations executed in the Filecoin Protocol.<br><br>Building a culture of strong security habits, secure code development and testing, through working with multiple external security specialists, auditors, and researchers to audit our code and practices.<div class='image-wrapper'><img src='/icons/coins.png' class='image'></img><div class='label'>Filecoin Bounty Program</div></div>Building a secure network goes beyond rigorous testing and auditing. Working together with the security community creates a more secure and stable future for the Filecoin network.<br><br>The Filecoin Bug Bounty Program rewards individuals who find and report vulnerabilities in the Filecoin network. Anyone can participate. Learn more.",
           "data_id": "section-4-a",
-          "customizations": {
-            "background_layers": {
+          "customizations": [
+            {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "4_5_6",
+                "layers-array": [4, 5, 6],
                 "offset": {
                   "mini": 0.25
                 },
                 "border-radius": 6.375
               }
             }
-          }
+          ]
         }
       }
-    },
-    "section_5": {
-      "panel-3-title": {
+    ],
+    [
+      {
+        "id": "panel-3-title",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -281,7 +294,8 @@
           "heading": "Filecoin Plus"
         }
       },
-      "panel-3-info-top": {
+      {
+        "id": "panel-3-info-top",
         "left": {
           "type": "image_block",
           "src": "/icons/cross.png",
@@ -301,7 +315,8 @@
           "subheading": "Filecoin Plus is a pragmatic solution to the technically challenging problem of verifying that a particular set of data is useful in a permissionless, incentive-compatible, pseudonymous network, and presents a path for incentivizing using the network in productive ways."
         }
       },
-      "panel-3-info-middle": {
+      {
+        "id": "panel-3-info-middle",
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -314,7 +329,8 @@
           "data_id": "section-5-a"
         }
       },
-      "panel-3-info-bottom": {
+      {
+        "id": "panel-3-info-bottom",
         "left": {
           "type": "slider_block",
           "cols": {
@@ -341,9 +357,10 @@
           ]
         }
       }
-    },
-    "section_6": {
-      "panel-4-title": {
+    ],
+    [
+      {
+        "id": "panel-4-title",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -352,14 +369,15 @@
             "push_left": "off-6_mi-1"
           },
           "heading": "Get Involved",
-          "customizations": {
-            "social_icons": {
+          "customizations": [
+            {
               "name": "SocialIcons"
             }
-          }
+          ]
         }
       },
-      "panel-4-info": {
+      {
+        "id": "panel-4-info",
         "left": {
           "type": "image_block",
           "src": "/icons/hands-raised.png",
@@ -389,7 +407,8 @@
           ]
         }
       },
-      "panel-4-banner-image": {
+      {
+        "id": "panel-4-banner-image",
         "left": {
           "type": "image_block",
           "src": "/images/governance/panel-4-banner.png",
@@ -399,9 +418,10 @@
           }
         }
       }
-    },
-    "section_7": {
-      "events-hackathons": {
+    ],
+    [
+      {
+        "id": "events-hackathons",
         "type": "custom",
         "component": "EventsHackathons",
         "props": {
@@ -450,6 +470,6 @@
           }
         }
       }
-    }
-  }
+    ]
+  ]
 }

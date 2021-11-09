@@ -9,9 +9,10 @@
     "type": "website",
     "image": "/images/open-graph.png"
   },
-  "page_content": {
-    "section_1": {
-      "hero": {
+  "page_content": [
+    [
+      {
+        "id": "hero",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -38,22 +39,23 @@
             "num": "col-6_sm-12",
             "push_left": "off-2_sm-1"
           },
-          "customizations": {
-            "background_layers": {
+          "customizations": [
+            {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "5_6",
+                "layers-array": [5, 6],
                 "offset": {
                   "mini": 0.75
                 }
               }
             }
-          }
+          ]
         }
       }
-    },
-    "section_2": {
-      "gallery-1-header": {
+    ],
+    [
+      {
+        "id": "gallery-1-header",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -65,15 +67,16 @@
           "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web."
         }
       },
-      "gallery-1-cards": {
+      {
+        "id": "gallery-1-cards",
         "left": {
           "type": "image_block",
           "cols": {
             "num": "col-4_mi-8",
             "push_left": "off-2_mi-2"
           },
-          "customizations": {
-            "floating_menu": {
+          "customizations": [
+            {
               "name": "FloatingMenu",
               "props": {
                 "id": "floating-hands",
@@ -83,7 +86,7 @@
                 "content": "<img src='/icons/hands-opening.png' class='image'/>"
               }
             }
-          }
+          ]
         },
         "right": {
           "type": "slider_block",
@@ -120,9 +123,10 @@
           ]
         }
       }
-    },
-    "section_3": {
-      "banner-1": {
+    ],
+    [
+      {
+        "id": "banner-1",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -132,23 +136,24 @@
           },
           "label": "Our Mission",
           "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
-          "customizations": {
-            "background_layers": {
+          "customizations": [
+            {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "8_6",
+                "layers-array": [8, 6],
                 "offset": {
                   "mini": 1.375
                 },
                 "reverse": true
               }
             }
-          }
+          ]
         }
       }
-    },
-    "section_4": {
-      "gallery-2": {
+    ],
+    [
+      {
+        "id": "gallery-2",
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -194,9 +199,10 @@
           ]
         }
       }
-    },
-    "section_5": {
-      "tabbed-slider": {
+    ],
+    [
+      {
+        "id": "tabbed-slider",
         "type": "custom",
         "component": "TabbedSlider",
         "props": {
@@ -231,9 +237,10 @@
           ]
         }
       }
-    },
-    "section_6": {
-      "info-1": {
+    ],
+    [
+      {
+        "id": "info-1",
         "left": {
           "type": "video_block",
           "cols": {
@@ -265,9 +272,10 @@
           ]
         }
       }
-    },
-    "section_7": {
-      "explore-panel": {
+    ],
+    [
+      {
+        "id": "explore-panel",
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -355,11 +363,11 @@
               "description": "Understand how it all works with interactive tutorials from ProtoSchool"
             }
           ],
-          "customizations": {
-            "background_layers": {
+          "customizations": [
+            {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "8_6",
+                "layers-array": [8, 6],
                 "offset": {
                   "mini": 1.375
                 },
@@ -367,12 +375,13 @@
                 "border-radius": 5
               }
             }
-          }
+          ]
         }
       }
-    },
-    "section_8": {
-      "events-hackathons": {
+    ],
+    [
+      {
+        "id": "events-hackathons",
         "type": "custom",
         "component": "EventsHackathons",
         "props": {
@@ -420,6 +429,6 @@
           }
         }
       }
-    }
-  }
+    ]
+  ]
 }

@@ -6,9 +6,9 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <div class="stripes">
@@ -82,7 +82,7 @@ export default {
   position: relative;
 }
 
-#section-1 {
+#section_1 {
   padding-top: 9rem + $navigationHeight;
   @include small {
     padding-top: 3rem + $navigationHeight;
@@ -92,7 +92,7 @@ export default {
   }
 }
 
-#section-2 {
+#section_2 {
   padding-top: 15rem;
   margin-bottom: 1.5rem;
   @include small {
@@ -100,14 +100,14 @@ export default {
   }
 }
 
-#section-3 {
+#section_3 {
   margin-bottom: 7.625rem;
   @include mini {
     margin-bottom: 4.75rem;
   }
 }
 
-#section-6 {
+#section_6 {
   padding-top: 6rem;
 }
 
