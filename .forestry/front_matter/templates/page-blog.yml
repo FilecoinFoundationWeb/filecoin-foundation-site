@@ -1,0 +1,89 @@
+---
+label: "[Page] Blog"
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: SEO
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: Open Graph
+  fields:
+  - type: text
+    name: site_name
+    label: site name
+  - type: text
+    name: url
+    label: URL
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group_list
+  name: social
+  label: Socials
+  fields:
+  - type: text
+    name: type
+    label: type
+    hidden: true
+    default: X
+  - type: text
+    name: action
+    label: action
+    hidden: true
+    default: a
+  - type: text
+    name: target
+    label: target
+    hidden: true
+    default: _blank
+  - type: text
+    name: url
+    label: URL
+  - name: component
+    type: select
+    default: ''
+    config:
+      required: false
+      options:
+      - GithubIcon
+      - RedditIcon
+      - TwitterIcon
+      - LinkedInIcon
+      - YoutubeIcon
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Component
+  - name: label
+    type: select
+    default: ''
+    config:
+      required: false
+      options:
+      - Github
+      - Reddit
+      - Twitter
+      - LinkedIn
+      - Youtube
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Label
+  config:
+    labelField: label
+    max: 5
