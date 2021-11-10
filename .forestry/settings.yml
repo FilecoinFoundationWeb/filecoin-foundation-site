@@ -5,9 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: content/pages
+  path: content/pages/general.json
   label: General
-  match: "**/*"
 - type: heading
   label: Site Data
 - type: heading
