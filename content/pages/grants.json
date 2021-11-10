@@ -1,0 +1,342 @@
+{
+  "page_content": {
+    "section_1": {
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_sm-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Grants",
+          "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.",
+          "ctas": [
+            {
+              "type": "B",
+              "action": "nuxt-link",
+              "icon": "info",
+              "text": "Request Info",
+              "url": "/get-involved"
+            }
+          ]
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-6_sm-12",
+            "push_left": "off-2_sm-1"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "5_6",
+                "offset": {
+                  "mini": 0.75
+                }
+              }
+            }
+          },
+          "src": "/images/page-grants/hero-image@2x.png"
+        }
+      }
+    },
+    "section_2": {
+      "gallery-1-header": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_sm-6_mi-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Developer Grants",
+          "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web."
+        }
+      },
+      "gallery-1-cards": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_mi-8",
+            "push_left": "off-2_mi-2"
+          },
+          "customizations": {
+            "floating_menu": {
+              "name": "FloatingMenu",
+              "props": {
+                "id": "floating-hands",
+                "cutoff": "more-info",
+                "offsettop": 200,
+                "offsetbottom": 100,
+                "content": "<img src='/icons/hands-opening.png' class='image'/>"
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-2_sm-2_mi-1"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/money-bag.png",
+              "title": "Open Grants",
+              "description": "Have an idea for pushing the Filecoin ecosystem forward? Grants are available to support projects that advance the Filecoin ecosystem, scale users, or directly advance Filecoin’s mission to preserve humanity’s most important information."
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pencil.png",
+              "title": "Requests for Proposal",
+              "description": "These grants generally have clearly scoped deliverables, milestones, and funding limits. While there is some flexibility in RFP deliverables, we expect teams will deliver what is in scope in the RFP."
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/money-sign.png",
+              "title": "Microgrants",
+              "description": "The Filecoin Foundation awards grants to early-stage projects that have developed initial protocols using Filecoin."
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "",
+              "title": "",
+              "description": "<span id='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us</a> or see our <a href='https://github.com/filecoin-project/devgrants' target='_blank' class='lighter'>Github repo</a> for a more in-depth introduction to the grants program.</span>"
+            }
+          ]
+        }
+      }
+    },
+    "section_3": {
+      "banner-1": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-10_mi-10",
+            "push_left": "off-2_mi-2"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6",
+                "offset": {
+                  "mini": 1.375
+                },
+                "reverse": true
+              }
+            }
+          },
+          "label": "Our Mission",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action."
+        }
+      }
+    },
+    "section_4": {
+      "gallery-2": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "Community Grants",
+          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open-source communities.<br><br>Our initiatives seek to:"
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-4_sm-2_mi-1"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/arrow-up.png",
+              "title": "Accelerate the adoption of open, decentralized technologies",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/multi-circle.png",
+              "title": "Build communities that are mutually supportive and self-sustaining",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/speech-bubble.png",
+              "title": "Communicate the benefits of decentralization and open sourcing to wider audiences",
+              "description": ""
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "",
+              "title": "",
+              "description": "For more information on grants, <a href='mailto:devgrants@fil.org'>email us.</a>"
+            }
+          ]
+        }
+      }
+    },
+    "section_5": {
+      "tabbed-slider": {
+        "type": "custom",
+        "component": "TabbedSlider",
+        "props": {
+          "tabs": {
+            "cols": {
+              "num": "col-3_sm-10_ti-12",
+              "push_left": "off-0_sm-1_ti-0"
+            }
+          },
+          "card": {
+            "cols": {
+              "num": "col-7_md-6_sm-10_mi-10",
+              "push_left": "off-1_md-2_sm-1_mi-2"
+            }
+          },
+          "slides": [
+            {
+              "label": "Support",
+              "icon": "/images/crest.png",
+              "description": "There are stakeholders in the Filecoin ecosystem: Storage Providers, Developers, Researchers, Token Holders, Clients, Users. We want to support them all."
+            },
+            {
+              "label": "Growth",
+              "icon": "/images/hands-raised.png",
+              "description": "We accelerate the growth of the Filecoin ecosystem through partnerships and collaborations."
+            },
+            {
+              "label": "Governance",
+              "icon": "/images/multi-person.png",
+              "description": "As an open-source project, it is vital that Filecoin has transparent, community-driven governance. The Foundation facilitates the governance process, including the Filecoin Improvement Proposals process."
+            }
+          ]
+        }
+      }
+    },
+    "section_6": {
+      "info-1": {
+        "left": {
+          "type": "video_block",
+          "cols": {
+            "num": "col-6_sm-10",
+            "push_left": "off-1"
+          },
+          "preview_image": "/images/page-grants/grants-video-preview.png",
+          "url": "https://www.youtube.com/watch?v=-kxNpRiEd_c"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_sm-10",
+            "push_left": "off-1"
+          },
+          "label": "What We Do",
+          "subheading": "Filecoin Plus: Incentivize Useful Storage on Filecoin",
+          "description": "A brief overview of the motivation, principles, and mechanisms of Filecoin Plus, and how it incentivizes useful storage on the network.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "dark",
+              "action": "a",
+              "target": "_blank",
+              "text": "Learn More",
+              "url": "//docs.filecoin.io/store/filecoin-plus"
+            }
+          ]
+        }
+      }
+    },
+    "section_7": {
+      "explore-panel": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-10",
+            "push_left": "off-0_sm-1"
+          },
+          "heading": "",
+          "description": "",
+          "ctas": [
+
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6_sm-10_mi-8_ti-10",
+            "push_left": "off-2_mi-3_ti-2"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6",
+                "offset": {
+                  "mini": 1.375
+                },
+                "reverse": true,
+                "border-radius": 5
+              }
+            }
+          },
+          "cards": [
+
+          ]
+        },
+        "grid": [
+
+        ]
+      }
+    },
+    "section_8": {
+      "events-hackathons": {
+        "type": "custom",
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4_mi-10"
+            },
+            "heading": ""
+          },
+          "events": {
+            "cols": {
+              "num": "col-8_sm-10_ti-11",
+              "push_left": "off-3_sm-2_mi-1"
+            },
+            "cards": [
+
+            ]
+          }
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Grants - Filecoin Foundation",
+    "description": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem."
+  },
+  "og": {
+    "site_name": "Grants - Filecoin Foundation",
+    "url": "https://fil.org/grants",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
