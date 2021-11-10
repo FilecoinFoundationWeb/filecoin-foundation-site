@@ -9,10 +9,9 @@
     "type": "website",
     "image": "/images/open-graph.png"
   },
-  "page_content": [
-    [
-      {
-        "id": "hero",
+  "page_content": {
+    "section_1": {
+      "hero": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -32,8 +31,7 @@
           ]
         }
       },
-      {
-        "id": "intro_1",
+      "intro_1": {
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -52,11 +50,11 @@
             "push_left": "off-3_sm-4_mi-3"
           },
           "src": "/images/page-index/foundation-logo-circle.svg",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 3, 2],
+                "layers-array": "8_6_5_4_3_2",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -64,11 +62,10 @@
                 "reverse": true
               }
             }
-          ]
+          }
         }
       },
-      {
-        "id": "intro_2",
+      "intro_2": {
         "left": {
           "type": "video_block",
           "cols": {
@@ -100,8 +97,7 @@
           ]
         }
       },
-      {
-        "id": "banner_1",
+      "banner_1": {
         "left": {
           "type": "text_block",
           "layout": "compact",
@@ -110,11 +106,11 @@
             "push_left": "off-4_mi-3"
           },
           "description": "The Foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive.",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 3, 2],
+                "layers-array": "8_6_5_4_3_2",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -122,11 +118,10 @@
                 "reverse": true
               }
             }
-          ]
+          }
         }
       },
-      {
-        "id": "explore_1",
+      "explore_1": {
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -249,8 +244,7 @@
           ]
         }
       },
-      {
-        "id": "team_video",
+      "team_video": {
         "left": {
           "type": "video_block",
           "cols": {
@@ -269,8 +263,7 @@
           }
         }
       },
-      {
-        "id": "grants",
+      "grants": {
         "grid": ["middle", "center"],
         "left": {
           "type": "image_block",
@@ -300,10 +293,9 @@
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "get_involved",
+    },
+    "section_2": {
+      "get_involved": {
         "grid": ["middle"],
         "left": {
           "type": "text_block",
@@ -368,7 +360,7 @@
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel"
             },
             {
               "type": "A",
@@ -391,11 +383,11 @@
               "description": "Understand how it all works with interactive tutorials from ProtoSchool"
             }
           ],
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4],
+                "layers-array": "8_6_5_4",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -403,67 +395,97 @@
                 "reverse": true
               }
             }
-          ]
-        }
-      }
-    ],
-    [
-      {
-        "id": "events-hackathons",
-        "type": "custom",
-        "component": "EventsHackathons",
-        "props": {
-          "intro": {
-            "cols": {
-              "num": "col-4_sm-8_ti-10",
-              "push_left": "off-1_sm-2_mi-1"
-            },
-            "heading": "Events & Hackathons",
-            "cta": {
-              "type": "A",
-              "action": "nuxt-link",
-              "text": "Browse all Events",
-              "url": "/events"
-            }
-          },
-          "events": {
-            "cols": {
-              "num": "col-8_sm-10_ti-11",
-              "push_left": "off-4_sm-2_mi-1"
-            },
-            "cards": [
-              {
-                "type": "D",
-                "date": "October 20, 2021",
-                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
-                "img": "/images/events/orbit-event-banner-2021.png",
-                "img_type": "background_image",
-                "cta": {
-                  "type": "B",
-                  "action": "a",
-                  "target": "_blank",
-                  "icon": "info",
-                  "text": "More info",
-                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
-                }
-              },
-              {
-                "type": "D",
-                "date": "October 26, 2021",
-                "title": "Filecoin Plus Community Governance Call",
-                "cta": {
-                  "type": "B",
-                  "action": "a",
-                  "target": "_blank",
-                  "icon": "info",
-                  "text": "More info",
-                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-                }
-              }
-            ]
           }
         }
       }
-    ]
-  ]
+    },
+    "section_3": {
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+          },
+          "videos": [
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                    }
+                  ],
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
+                  "heading": "Welcome to Filecoin Plus Day"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
 }

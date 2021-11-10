@@ -6,9 +6,9 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
@@ -69,10 +69,10 @@ export default {
     }),
     sections () {
       const content = CloneDeep(this.siteContent.index.page_content)
-      const len = content.length
-      const last = content[len - 1]
-      const replace = this.siteContent['section-dive-deeper'].concat(last)
-      content.splice(len - 1, 1, replace)
+      // const len = content.length
+      // const last = content[len - 1]
+      // const replace = this.siteContent['section-dive-deeper'].concat(last)
+      // content.splice(len - 1, 1, replace)
       return content
     }
   }
@@ -112,7 +112,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-1 {
+#section_1 {
   padding-top: 7rem;
   @include mini {
     padding-top: 5rem;
@@ -142,7 +142,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-2 {
+#section_2 {
   padding-top: 3.5rem;
   padding-bottom: 3rem;
   @include small {
@@ -150,7 +150,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-#section-3 {
+#section_3 {
   &:before {
     content: '';
     position: absolute;
@@ -415,17 +415,8 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper_intro,
-::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2,
-::v-deep #events-hackathons {
-  padding-bottom: 0;
+::v-deep #dive_deeper {
+  padding-bottom: 10rem;
 }
 
-::v-deep #dive_deeper_video_1,
-::v-deep #dive_deeper_video_2 {
-  @include small {
-    padding-top: 2rem;
-  }
-}
 </style>
