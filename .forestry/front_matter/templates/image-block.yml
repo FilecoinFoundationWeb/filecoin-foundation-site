@@ -1,5 +1,5 @@
 ---
-label: Image Block
+label: "[Comp] Image Block"
 hide_body: true
 fields:
 - name: type
