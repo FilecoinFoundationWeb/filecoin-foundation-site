@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/pages
+  label: General
+  match: "**/*"
 - type: heading
   label: Site Data
 - type: heading
