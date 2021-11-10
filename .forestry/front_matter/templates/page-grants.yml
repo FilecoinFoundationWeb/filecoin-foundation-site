@@ -766,15 +766,24 @@ fields:
             hidden: true
             default: A
           - type: text
-            name: action
-            label: action
-            hidden: true
-            default: nuxt-link
-          - type: text
             name: img_size
             label: img_size
             hidden: true
             default: regular
+          - name: action
+            type: select
+            default: a
+            config:
+              required: false
+              options:
+              - a
+              - nuxt-link
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: Action
           - type: file
             name: img
             label: Image
