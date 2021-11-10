@@ -1,5 +1,5 @@
 ---
-label: Card
+label: "[Comp] Card"
 hide_body: true
 fields:
 - name: type
