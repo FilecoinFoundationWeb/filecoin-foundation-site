@@ -13,7 +13,7 @@
 
       <BackgroundLayers
         id="page-index-background-layers"
-        :layers-array="[2, 3, 4, 5, 6]"
+        layers-array="2_3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
