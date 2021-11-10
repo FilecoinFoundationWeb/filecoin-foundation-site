@@ -436,6 +436,7 @@ fields:
           name: type
           label: type
           default: slider_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
