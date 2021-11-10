@@ -4,11 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Site Data
 - type: document
   path: content/pages/general.json
   label: General
-- type: heading
-  label: Site Data
 - type: heading
   label: Content
 - type: directory
