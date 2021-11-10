@@ -8,8 +8,8 @@
           <div class="footer-content left">
 
             <div
-              v-for="(item, index) in text"
-              :key="index"
+              v-for="(item, key) in text"
+              :key="key"
               class="text-item"
               v-html="item">
             </div>

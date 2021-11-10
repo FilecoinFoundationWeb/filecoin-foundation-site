@@ -208,11 +208,11 @@
     }
   ],
   "footer": {
-    "text": [
-      "Contact Us",
-      "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
-      "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
-    ],
+    "text": {
+      "item_1": "Contact Us",
+      "item_2": "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
+      "item_3": "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
+    },
     "links": [
       {
         "type": "F",
