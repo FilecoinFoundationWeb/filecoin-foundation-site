@@ -4,7 +4,7 @@ hide_body: true
 fields:
 - type: field_group
   name: seo
-  label: seo
+  label: SEO
   fields:
   - type: text
     name: title
@@ -14,11 +14,11 @@ fields:
     label: description
 - type: field_group
   name: og
-  label: og
+  label: Open Graph
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: site name
   - type: text
     name: url
     label: url
@@ -30,113 +30,176 @@ fields:
     label: image
 - type: field_group_list
   name: social
-  label: social
+  label: Socials
   fields:
   - type: text
     name: type
     label: type
+    hidden: true
+    default: X
   - type: text
     name: action
     label: action
+    hidden: true
+    default: a
   - type: text
     name: target
     label: target
+    hidden: true
+    default: _blank
   - type: text
     name: url
-    label: url
+    label: URL
   - type: text
     name: component
-    label: component
+    label: Component
   - type: text
     name: label
-    label: label
+    label: Label
+  config:
+    labelField: label
 - type: field_group_list
   name: navigation
-  label: navigation
+  label: Navigation
   fields:
   - type: text
     name: type
     label: type
+    hidden: true
+    default: C
   - type: text
     name: theme
     label: theme
+    hidden: true
+    default: light
   - type: text
     name: action
     label: action
+    hidden: true
+    default: nuxt-link
   - type: text
     name: url
-    label: url
+    label: URL
   - type: text
     name: text
-    label: text
+    label: Text
   - type: textarea
     name: description
-    label: description
+    label: Description
   - type: field_group_list
     name: links
-    label: links
+    label: Links
     fields:
     - type: text
       name: type
       label: type
+      hidden: true
+      default: X
     - type: text
       name: action
       label: action
+      hidden: true
+      default: nuxt-link
     - type: text
       name: url
-      label: url
+      label: URL
     - type: text
       name: text
-      label: text
+      label: Text
+    config:
+      labelField: text
+  config:
+    labelField: text
 - type: field_group
   name: footer
-  label: footer
+  label: Footer
   fields:
-  - type: list
-    name: text
-    label: text
+  - name: text
+    type: field_group
+    config: {}
+    fields:
+    - name: item_1
+      type: text
+      config:
+        required: false
+      label: Item 1
+    - name: item_2
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Item 2
+    - name: item_3
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Item 3
+    label: Text
   - type: field_group_list
     name: links
-    label: links
+    label: Links
     fields:
     - type: text
       name: type
       label: type
+      hidden: true
+      default: F
     - type: text
       name: theme
       label: theme
+      hidden: true
+      default: dark
     - type: text
       name: action
       label: action
-    - type: text
-      name: url
-      label: url
+      hidden: true
+      default: a
     - type: text
       name: target
       label: target
+      hidden: true
+      default: _blank
+    - type: text
+      name: url
+      label: URL
     - type: text
       name: text
-      label: text
+      label: Text
+    config:
+      labelField: text
   - type: field_group
     name: panel_bottom
-    label: panel_bottom
+    label: Panel Bottom
     fields:
     - type: field_group_list
       name: links
-      label: links
+      label: Links
       fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: F
       - type: text
         name: action
         label: action
+        hidden: true
+        default: nuxt-link
       - type: text
         name: url
-        label: url
+        label: URL
       - type: text
         name: text
-        label: text
+        label: Text
+      config:
+        labelField: text
     - type: textarea
       name: copyright_text
-      label: copyright_text
+      label: Copyright Text
