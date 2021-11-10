@@ -315,6 +315,7 @@ fields:
             label: description
           config:
             max: 4
+            labelField: title
   - type: field_group
     name: section_3
     label: section_3
@@ -481,6 +482,7 @@ fields:
             label: description
           config:
             max: 4
+            labelField: title
   - type: field_group
     name: section_5
     label: section_5
@@ -787,6 +789,7 @@ fields:
             label: url
           config:
             max: 6
+            labelField: title
         - type: field_group
           name: customizations
           label: customizations
