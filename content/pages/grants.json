@@ -314,48 +314,48 @@
             },
             {
               "type": "A",
-              "action": "nuxt-link",
+              "action": "a",
               "img_size": "regular",
-              "img": "",
-              "title": "",
-              "description": "",
-              "url": ""
+              "img": "/images/multi-person.png",
+              "title": "Join a meetup group",
+              "description": "Find a group of people in your area who connect regularly",
+              "url": "//www.meetup.com/Filecoin-San-Francisco"
+            },
+            {
+              "type": "A",
+              "action": "a",
+              "img_size": "regular",
+              "img": "/images/speech-bubble.png",
+              "title": "Contribute to the Filecoin project",
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
+              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute"
+            },
+            {
+              "type": "A",
+              "action": "a",
+              "img_size": "regular",
+              "img": "/images/hands-raised.png",
+              "title": "Participate online",
+              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>",
+              "url": "//filecoin.io/slack"
             },
             {
               "type": "A",
               "action": "nuxt-link",
               "img_size": "regular",
-              "img": "",
-              "title": "",
-              "description": "",
-              "url": ""
+              "img": "/images/tool.png",
+              "title": "Become a storage provider or builder",
+              "description": "Dive right in and become an essential part of the ecosystem",
+              "url": "//docs.filecoin.io/build"
             },
             {
               "type": "A",
-              "action": "nuxt-link",
+              "action": "a",
               "img_size": "regular",
-              "img": "",
-              "title": "",
-              "description": "",
-              "url": ""
-            },
-            {
-              "type": "A",
-              "action": "nuxt-link",
-              "img_size": "regular",
-              "img": "",
-              "title": "",
-              "description": "",
-              "url": ""
-            },
-            {
-              "type": "A",
-              "action": "nuxt-link",
-              "img_size": "regular",
-              "img": "",
-              "title": "",
-              "description": "",
-              "url": ""
+              "img": "/images/magnifying-glass.png",
+              "title": "Learn more on ProtoSchool",
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool",
+              "url": "//proto.school"
             }
           ]
         },
@@ -373,7 +373,7 @@
             "cols": {
               "num": "col-4_mi-10"
             },
-            "heading": ""
+            "heading": "Events & Hackathons"
           },
           "events": {
             "cols": {
@@ -381,7 +381,36 @@
               "push_left": "off-3_sm-2_mi-1"
             },
             "cards": [
-
+              {
+                "type": "D",
+                "img_type": "background_image",
+                "date": "2021-10-20T13:28:27Z",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                }
+              },
+              {
+                "type": "D",
+                "img_type": "background_image",
+                "date": "2021-10-26T13:29:06Z",
+                "title": "Filecoin Plus Community Governance Call",
+                "img": "",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+                }
+              }
             ]
           }
         }
