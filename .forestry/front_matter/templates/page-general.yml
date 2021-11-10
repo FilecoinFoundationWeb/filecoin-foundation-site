@@ -50,8 +50,22 @@ fields:
   - type: text
     name: url
     label: URL
-  - type: text
-    name: component
+  - name: component
+    type: select
+    default: ''
+    config:
+      required: true
+      options:
+      - GithubIcon
+      - RedditIcon
+      - TwitterIcon
+      - LinkedInIcon
+      - YoutubeIcon
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
     label: Component
   - type: text
     name: label
