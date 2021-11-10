@@ -1,0 +1,263 @@
+{
+  "page_content": {
+    "section_1": {
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-7_sm-9_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "Let’s build the internet of everyone",
+          "subheading": "The Filecoin Foundation is the steward of the Filecoin community. We aspire to put the power of humanity’s most important information back into the hands of everyone.",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
+          ]
+        }
+      },
+      "intro_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-6_mi-8",
+            "push_left": "off-2_mi-1"
+          },
+          "heading": "What we do",
+          "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web."
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-2_sm-3_mi-5",
+            "push_left": "off-3_sm-4_mi-3"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4_3_2",
+                "offset": {
+                  "medium": 0.75,
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "src": "/images/page-index/foundation-logo-circle.svg"
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "intro_2": {
+        "left": {
+          "type": "video_block",
+          "tint": true,
+          "cols": {
+            "num": "col-6_sm-10_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "preview_image": "/images/page-index/intro-2-video-preview.png",
+          "url": "https://youtu.be/Sakannch1Dw"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-10_mi-9",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "heading": "Learn more about the Foundation, including its history, its mandate, and its mission.",
+          "description": "",
+          "ctas": [
+            {
+              "type": "B",
+              "theme": "dark",
+              "action": "video",
+              "icon": "play",
+              "text": "Watch video",
+              "url": "https://youtu.be/Sakannch1Dw"
+            }
+          ]
+        }
+      },
+      "banner_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "compact",
+          "cols": {
+            "num": "col-7_mi-9",
+            "push_left": "off-4_mi-3"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4_3_2",
+                "offset": {
+                  "medium": 0.75,
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "description": "The Foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive."
+        }
+      },
+      "explore_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-10_mi-9",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "label": "Resources",
+          "heading": "Explore the Filecoin Project Ecosystem and Tooling",
+          "description": "Decentralized networks aren’t bound by geography. The brightest minds around the world are working together to advance the next generation of the internet."
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6_sm-8_ti-9",
+            "push_left": "off-2_sm-4_mi-2_ti-2"
+          },
+          "cards": [
+
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "team_video": {
+        "left": {
+          "type": "video_block",
+          "tint": true,
+          "cols": {
+            "num": "col-10_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "subtext": {
+            "type": "D",
+            "action": "video",
+            "icon": "play",
+            "text": "",
+            "url": ""
+          },
+          "preview_image": "",
+          "url": ""
+        }
+      },
+      "grants": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_sm-6_mi-7_ti-10",
+            "push_left": "off-2_sm-1"
+          },
+          "src": ""
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-5_sm-10_ti-11",
+            "push_left": "off-1"
+          },
+          "label": "",
+          "heading": "",
+          "description": "",
+          "ctas": [
+
+          ]
+        },
+        "grid": [
+
+        ]
+      }
+    },
+    "section_2": {
+      "get_involved": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-3_sm-10",
+            "push_left": "off-1_sm-2_mi-1"
+          },
+          "label": "",
+          "heading": "",
+          "description": "",
+          "ctas": [
+
+          ]
+        },
+        "right": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-6_sm-10",
+            "push_left": "off-2"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4",
+                "offset": {
+                  "medium": 0.75,
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
+          "cards": [
+
+          ]
+        },
+        "grid": [
+
+        ]
+      }
+    },
+    "section_3": {
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "",
+            "subheading": ""
+          },
+          "videos": [
+
+          ]
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Home - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone."
+  },
+  "og": {
+    "site_name": "Home - Filecoin Foundation",
+    "url": "https://fil.org",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}
