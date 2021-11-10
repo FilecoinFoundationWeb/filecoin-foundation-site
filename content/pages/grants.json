@@ -271,10 +271,16 @@
             "num": "col-3_sm-10",
             "push_left": "off-0_sm-1"
           },
-          "heading": "",
-          "description": "",
+          "heading": "Learn how to get involved in the Filecoin community",
+          "description": "The Filecoin community includes thousands of developers, technologists, users, and enthusiasts all over the world.",
           "ctas": [
-
+            {
+              "type": "A",
+              "theme": "dark",
+              "action": "nuxt-link",
+              "text": "Learn More",
+              "url": "/get-involved"
+            }
           ]
         },
         "right": {
@@ -297,11 +303,64 @@
             }
           },
           "cards": [
-
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "/images/calendar.png",
+              "title": "Attend an event",
+              "description": "Check out past and upcoming events",
+              "url": "/events"
+            },
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "",
+              "title": "",
+              "description": "",
+              "url": ""
+            },
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "",
+              "title": "",
+              "description": "",
+              "url": ""
+            },
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "",
+              "title": "",
+              "description": "",
+              "url": ""
+            },
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "",
+              "title": "",
+              "description": "",
+              "url": ""
+            },
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "img_size": "regular",
+              "img": "",
+              "title": "",
+              "description": "",
+              "url": ""
+            }
           ]
         },
         "grid": [
-
+          "middle"
         ]
       }
     },
