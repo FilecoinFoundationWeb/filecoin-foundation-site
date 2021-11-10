@@ -75,7 +75,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/about/#dive_deeper_intro",
+          "url": "/about/#dive_deeper",
           "text": "Community"
         },
         {
@@ -154,7 +154,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/grants/#section-2",
+          "url": "/grants/#section_2",
           "text": "Developer Grants"
         },
         {
@@ -166,7 +166,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/grants/#section-4",
+          "url": "/grants/#section_4",
           "text": "Community Grants"
         }
       ]

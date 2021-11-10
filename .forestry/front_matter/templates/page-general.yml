@@ -217,3 +217,5 @@ fields:
     - type: textarea
       name: copyright_text
       label: Copyright Text
+pages:
+- content/pages/general.json
