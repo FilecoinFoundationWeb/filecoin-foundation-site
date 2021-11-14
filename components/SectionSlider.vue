@@ -2,7 +2,9 @@
   <div class="block slider-block">
 
     <Zero_Core__Slider
-      :collection="cards">
+      :collection="cards"
+      :rows="3"
+      :display-options="columnDisplayNumber">
 
       <Card
         v-for="(card, index) in cards"
@@ -14,9 +16,14 @@
         slot="icon-previous"
         class="chevron" />
 
-      <Zero_Core__Icon_NextArrow
+      <div
         slot="icon-next"
-        class="chevron" />
+        class="selector-next">
+
+        MORE
+
+        <Zero_Core__Icon_NextArrow class="chevron" />
+      </div>
 
     </Zero_Core__Slider>
 
@@ -45,11 +52,12 @@ export default {
   computed: {
     cards () {
       return this.block.cards
+    },
+    columnDisplayNumber () {
+      return {
+        default: 2
+      }
     }
-  },
-
-  mounted () {
-    console.log(this.cards)
   }
 }
 </script>
@@ -58,12 +66,21 @@ export default {
 // ////////////////////////////////////////////////////////////////////// Slider
 ::v-deep .chevron {
   stroke: #73B4ED;
+  cursor: pointer;
+}
+
+::v-deep .selector-next {
+  cursor: pointer;
 }
 
 // /////////////////////////////////////////////////////////////////////// Cards
-.card {
-  width: calc(50% - 1.5rem);
+::v-deep .card {
   margin-bottom: 3rem;
+  &.is-link {
+    &:before {
+      content: unset !important;
+    }
+  }
   @include mini {
     width: 100%;
     margin-bottom: 2rem;
@@ -75,4 +92,46 @@ export default {
     }
   }
 }
+
+::v-deep .click-wrapper {
+  padding: 1rem 1.5rem;
+  position: relative;
+  &:hover {
+    &:before {
+      transition: 250ms ease-in;
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 6px solid $azureRadiance;
+    border-radius: 1.5rem;
+    opacity: 0;
+    transition: 250ms ease-out;
+  }
+}
+
+::v-deep .slide-selector {
+  justify-content: space-between;
+  svg {
+    transform: scale(2);
+  }
+}
+
+::v-deep .selector-next {
+  color: $jordyBlue;
+  font-size: 12px;
+  letter-spacing: $letterSpacing_Large;
+  line-height: 2.5;
+  @include fontWeight_Bold;
+  svg {
+    margin-left: 1rem;
+  }
+}
+
 </style>
