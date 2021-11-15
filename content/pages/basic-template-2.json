@@ -186,8 +186,13 @@
         "right": {
           "type": "section_slider_block",
           "cols": {
-            "num": "col-6_sm-7_ti-9",
+            "num": "col-6_sm-7_mi-10_ti-9",
             "push_left": "off-2_sm-3_mi-2"
+          },
+          "rows": 3,
+          "display": {
+            "mini": 1,
+            "default": 2
           },
           "cards": [
             {

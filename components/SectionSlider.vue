@@ -3,8 +3,9 @@
 
     <Zero_Core__Slider
       :collection="cards"
-      :rows="3"
-      :display-options="columnDisplayNumber">
+      :rows="rowDisplayNumber"
+      :display-options="columnDisplayNumber"
+      :range-input="true">
 
       <Card
         v-for="(card, index) in cards"
@@ -14,7 +15,7 @@
 
       <Zero_Core__Icon_PrevArrow
         slot="icon-previous"
-        class="chevron" />
+        class="chevron left" />
 
       <div
         slot="icon-next"
@@ -22,7 +23,7 @@
 
         MORE
 
-        <Zero_Core__Icon_NextArrow class="chevron" />
+        <Zero_Core__Icon_NextArrow class="chevron right" />
       </div>
 
     </Zero_Core__Slider>
@@ -53,10 +54,11 @@ export default {
     cards () {
       return this.block.cards
     },
+    rowDisplayNumber () {
+      return this.block.rows
+    },
     columnDisplayNumber () {
-      return {
-        default: 2
-      }
+      return this.block.display
     }
   }
 }
@@ -66,11 +68,16 @@ export default {
 // ////////////////////////////////////////////////////////////////////// Slider
 ::v-deep .chevron {
   stroke: #73B4ED;
-  cursor: pointer;
 }
 
-::v-deep .selector-next {
+::v-deep .selector-next,
+::v-deep .chevron.left {
   cursor: pointer;
+  opacity: 0.8;
+  transition: 200ms ease;
+  &:hover {
+    opacity: 1.0;
+  }
 }
 
 // /////////////////////////////////////////////////////////////////////// Cards
