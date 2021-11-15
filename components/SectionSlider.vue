@@ -4,8 +4,7 @@
     <Zero_Core__Slider
       :collection="cards"
       :rows="rowDisplayNumber"
-      :display-options="columnDisplayNumber"
-      :range-input="true">
+      :display-options="columnDisplayNumber">
 
       <Card
         v-for="(card, index) in cards"
