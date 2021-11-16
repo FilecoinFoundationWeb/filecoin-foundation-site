@@ -16,7 +16,7 @@
           <div class="grid">
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
-              <nuxt-content :document="postBody" />
+              <nuxt-content :document="postBody" class="basic-template-block-format"/>
             </div>
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
@@ -355,32 +355,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #post-body {
-  h1,
-  h2 {
-    @include fontSize_ExtraLarge;
-    @include fontWeight_Medium;
-    @include leading_Regular;
-  }
   h1 {
     margin-bottom: 3rem;
   }
   h2 {
     margin-bottom: 1.5rem;
   }
-  p {
-    margin-bottom: 1.5rem;
-    @include fontSize_Large;
-    @include fontWeight_Regular;
-    @include leading_Regular;
-    letter-spacing: $letterSpacing_Large;
-  }
   a {
     position: relative;
-    @include fontSize_Large;
-    @include fontWeight_SemiBold;
-    @include leading_Regular;
-    letter-spacing: $letterSpacing_Large;
-    color: $denim;
   }
   p > a {
     &:before {
@@ -407,78 +389,8 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       }
     }
   }
-  ul {
-    margin-bottom: 1.5rem;
-    padding-left: 1.125rem;
-  }
-  li {
-    margin-bottom: 1.5rem;
-    padding-left: 0.875rem;
-    @include fontSize_Large;
-    @include leading_Regular;
-    letter-spacing: $letterSpacing_Large;
-    list-style-type: circle;
-    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3306' data-name='Group 3306' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%230520a3'/%3e%3c/g%3e%3c/svg%3e");
-    &::marker {
-      color: $kleinBlue;
-      left: 0;
-    }
-  }
-  ul li ul li {
-    list-style-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11'%3e%3cg id='Group_3307' data-name='Group 3307' transform='translate(-289 -1136)'%3e%3ccircle id='Ellipse_63' data-name='Ellipse 63' cx='5.5' cy='5.5' r='5.5' transform='translate(289 1136)' fill='%23144dd8'/%3e%3ccircle id='Ellipse_60' data-name='Ellipse 60' cx='3.5' cy='3.5' r='3.5' transform='translate(291 1138)' fill='%23d8ebfb'/%3e%3c/g%3e%3c/svg%3e ");
-  }
   img {
     margin: 3rem 0;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0 .5rem $jordyBlue;
-    width: 100%;
-  }
-  blockquote {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    p {
-      @include fontSize_ExtraLarge;
-      @include fontWeight_Medium;
-      @include leading_Small;
-      letter-spacing: $letterSpacing_Large;
-    }
-  }
-  table {
-    margin: 3rem 0;
-    border-radius: 2px;
-    th,
-    tr {
-      @include fontSize_Regular;
-      @include fontWeight_Regular;
-      @include leading_Regular;
-      letter-spacing: $letterSpacing_Large;
-    }
-    th {
-      @include fontSize_Medium;
-      @include fontWeight_Medium;
-      background: $polar;
-      text-align: left;
-    }
-    th,
-    td {
-      padding: 0.5rem 1rem;
-    }
-    tr:nth-child(even) {
-      background: $polar;
-    }
-    tr:nth-child(odd) {
-      background: $hawkesBlue;
-    }
-  }
-  pre {
-    margin: 3rem 0;
-    border-radius: 0.5rem;
-    background-color: $blackPearl;
-    box-shadow: 0 0 0 .5rem $jordyBlue;
-  }
-  code {
-    font-family: 'Suisse Intl Mono';
-    color: #9AB6CE;
   }
 }
 

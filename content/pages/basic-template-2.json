@@ -192,6 +192,8 @@
           "cards": [
             {
               "type": "A",
+              "action": "a",
+              "url": "",
               "img": "/icons/pencil.png",
               "img_size": "regular",
               "title": "Filecoin Notary Portal",
@@ -199,6 +201,8 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "url": "https://github.com/filecoin-project",
               "img": "/icons/plus.png",
               "img_size": "regular",
               "title": "Filecoin Plus GitHub",
@@ -206,6 +210,8 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "url": "",
               "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
@@ -213,6 +219,8 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "url": "https://github.com/filecoin-project/notary-governance/",
               "img": "/icons/stamp.png",
               "img_size": "regular",
               "title": "Notary Governance Repo",
@@ -220,6 +228,8 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "url": "",
               "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
@@ -227,6 +237,8 @@
             },
             {
               "type": "A",
+              "action": "a",
+              "url": "https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Community Calendar",

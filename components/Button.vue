@@ -158,10 +158,19 @@ $layerOffset: 0.25rem;
       transition: 250ms ease-in;
     }
     &:before {
-      background-color: $kleinBlue;
+      background-color: $denim;
+      box-shadow: unset;
+      box-shadow: 0 0 6px rgba(0, 144, 255) inset;
     }
     &:after {
-      box-shadow: 0 0 6px rgba(214, 234, 251, 1) inset, 0 0 6px rgba(14, 29, 126, 1);
+      background-color: $azureRadiance;
+      box-shadow: 0 0 6px rgba(115, 180, 237, 0.75) inset, 0 0 6px rgba(6, 33, 164, 0.5);
+    }
+    .text {
+      color: $white;
+      background-color: $jordyBlue;
+      transition: 250ms ease-in;
+      box-shadow: 0 0 6px rgba(21, 78, 217);
     }
   }
   &:before,
@@ -189,6 +198,15 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(214, 234, 251, 1) inset, 0 0 6px rgba(178, 215, 248, 1);
     z-index: 10;
   }
+  .text {
+    padding: 10px 1.25rem 9px;
+    color: $kleinBlue;
+    box-shadow: 0 0 6px rgba(178, 215, 248, 1);
+    border-radius: inherit;
+    background-color: $white;
+    transition: 250ms ease-out;
+  }
+
   &.theme__dark {
     &:hover {
       &:before {
@@ -196,6 +214,9 @@ $layerOffset: 0.25rem;
       }
       &:after {
         background-color: $denim;
+      }
+      .text {
+        background-color: $azureRadiance;
       }
     }
     &:before {
@@ -214,13 +235,6 @@ $layerOffset: 0.25rem;
   }
   .icon {
     display: none;
-  }
-  .text {
-    padding: 10px 1.25rem 9px;
-    background-color: white;
-    color: $kleinBlue;
-    box-shadow: 0 0 6px rgba(178, 215, 248, 1);
-    border-radius: inherit;
   }
 }
 
