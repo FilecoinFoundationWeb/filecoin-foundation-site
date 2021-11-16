@@ -292,8 +292,6 @@ li {
   }
 }
 
-
-
 ::v-deep .nav-dropdown {
   display: flex;
   flex-direction: row;

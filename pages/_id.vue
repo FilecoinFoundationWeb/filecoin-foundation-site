@@ -16,7 +16,7 @@
           <div class="grid">
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
-              <nuxt-content :document="postBody" class="basic-template-block-format"/>
+              <nuxt-content :document="postBody" class="basic-template-block-format" />
             </div>
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
