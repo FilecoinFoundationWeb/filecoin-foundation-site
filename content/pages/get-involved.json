@@ -73,6 +73,7 @@
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
@@ -86,6 +87,7 @@
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/d7fa677a-5d92-4043-929c-56d6cb7bc73b"
@@ -99,6 +101,7 @@
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
