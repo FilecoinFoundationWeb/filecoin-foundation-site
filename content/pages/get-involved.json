@@ -42,7 +42,15 @@
             "push_left": "off-2_mi-1"
           },
           "heading": "Careers",
-          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. <a href='https://jobs.lever.co/filecoin' target='_blank'>Check out our open roles</a>.",
+          "ctas": [{
+            "type": "B",
+            "action": "a",
+            "target": "_blank",
+            "icon": "plus",
+            "text": "View All",
+            "url": "https://jobs.lever.co/filecoin"
+          }]
         }
       },
       {
