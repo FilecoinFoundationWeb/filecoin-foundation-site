@@ -24,6 +24,7 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
+  exclude: general.json
   new_doc_ext: json
   templates:
   - page-index
