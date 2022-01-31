@@ -67,7 +67,7 @@
           "cards": [
             {
               "type": "D",
-              "date": "September 4, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Communications Associate",
               "cta": {
@@ -80,7 +80,7 @@
             },
             {
               "type": "D",
-              "date": "September 20, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Developer Grants Coordinator",
               "cta": {
@@ -93,7 +93,7 @@
             },
             {
               "type": "D",
-              "date": "October 8, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Program Manager, Filecoin Developer Grants",
               "cta": {
