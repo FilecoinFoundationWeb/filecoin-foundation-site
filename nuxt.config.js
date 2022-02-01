@@ -82,7 +82,7 @@ export default {
     // Doc: https://github.com/nuxt-community/style-resources-module/
     '@nuxtjs/style-resources',
     // https://github.com/agency-undone/au-nuxt-module-zero
-    'au-nuxt-module-zero'
+    '@agency-undone/au-nuxt-module-zero'
   ],
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
