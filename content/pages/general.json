@@ -49,6 +49,14 @@
       "url": "https://www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA",
       "component": "YoutubeIcon",
       "label": "YouTube"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://filecoin.io/slack",
+      "component": "SlackIcon",
+      "label": "Slack"
     }
   ],
   "navigation": [
