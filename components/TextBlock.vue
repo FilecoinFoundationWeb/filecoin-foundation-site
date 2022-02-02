@@ -125,11 +125,6 @@ export default {
 .text-block {
   &.theme__light {
     color: white;
-    ::v-deep .subheading {
-      a {
-        color: white;
-      }
-    }
   }
 }
 
@@ -163,8 +158,11 @@ export default {
   @include subheading;
   margin-bottom: 1rem;
   a {
-    @include fontWeight_SemiBold;
-    color: $azureRadiance;
+    @include fontWeight_Bold;
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 </style>
