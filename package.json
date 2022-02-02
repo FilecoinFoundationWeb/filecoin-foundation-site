@@ -23,7 +23,7 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/style-resources": "^1.2.1",
-    "au-nuxt-module-zero": "^1.0.12",
+    "@agency-undone/au-nuxt-module-zero": "^1.0.17",
     "babel-eslint": "^10.0.1",
     "easing-utils": "0.0.7",
     "eslint": "^7.32.0",
