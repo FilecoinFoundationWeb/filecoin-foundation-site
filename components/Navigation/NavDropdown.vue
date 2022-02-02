@@ -87,6 +87,8 @@
 
 <script>
 // ===================================================================== Imports
+import Throttle from 'lodash/throttle'
+
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
 
@@ -196,13 +198,13 @@ export default {
         if (this.$refs.firstPane) {
           detectPanelOutsideViewport(this)
           this.resize = () => { detectPanelOutsideViewport(this) }
-          window.addEventListener('resize', this.resize)
+          window.addEventListener('resize', Throttle(this.resize, 10))
         }
       } else {
         if (this.$refs.secondPane) {
           detectPopoutOutsideViewport(this)
           this.resize = () => { detectPopoutOutsideViewport(this) }
-          window.addEventListener('resize', this.resize)
+          window.addEventListener('resize', Throttle(this.resize, 10))
         }
       }
     })
