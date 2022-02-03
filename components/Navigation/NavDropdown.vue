@@ -235,8 +235,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-hover-wrapper,
-.nav-active-wrapper {
+.nav-hover-wrapper {
   position: relative;
   padding: 1rem 0;
   @include small {
@@ -246,42 +245,33 @@ export default {
 
 .nav-hover-wrapper {
   &:hover {
-    .nav-dropdown,
     .nav-link.top-level .arrow {
       visibility: visible;
       opacity: 1;
-      transition: transform 250ms ease-in, opacity 250ms ease-out;
-    }
-    .nav-dropdown {
-      transform: translate(-50%, 0rem);
-      z-index: 5;
-    }
-    .nav-link.top-level .arrow {
+      transition: opacity 100ms ease-in;
       transform: translate(-50%, 0rem) rotate(45deg);
       z-index: 10;
+    }
+    .nav-dropdown {
+      visibility: visible;
+      opacity: 1;
+      transition: transform 250ms ease-out, opacity 250ms ease-out;
+      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+      z-index: 5;
     }
   }
 }
 
-.nav-active-wrapper {
-  &.open .nav-dropdown {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0rem);
-    z-index: 0;
-    transition: transform 250ms ease-in, opacity 250ms ease-out;
-  }
-  .click-toggle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .chevron {
-    margin-left: 0.75rem;
-    border-color: white;
-    opacity: 0.8;
-  }
+.nav-dropdown,
+.nav-popout {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transform: translate(-50%, 0rem) perspective(200px) rotateX(-10deg);
+  z-index: -1;
+  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
 }
 
 .first-level-wrapper {
@@ -311,17 +301,6 @@ li {
   &:last-child {
     padding-bottom: 0.5rem;
   }
-}
-
-.nav-dropdown,
-.nav-popout {
-  position: absolute;
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, 1rem);
-  z-index: -1;
-  transition: transform 250ms ease-out, opacity 250ms ease-out;
 }
 
 ::v-deep .nav-dropdown {
@@ -438,8 +417,9 @@ li {
       pointer-events: none;
       opacity: 0;
       z-index: 2;
-      transform: translate(-50%, 1rem) rotate(45deg);
-      transition: 250ms ease-out;
+      transform: translate(-50%, 0rem) rotate(45deg);
+      transition: opacity 250ms ease-in, visibility 0ms linear 250ms;
+      // transition: 100ms ease-in;
       @include small {
         display: none;
       }

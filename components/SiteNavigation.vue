@@ -269,8 +269,8 @@ export default {
       position: absolute;
       top: 5px;
       left: 5px;
-      width: calc(100% - 20px);
-      height: calc(100% - 20px);
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
       background-color: $blackPearl;
       border: 5px solid $kleinBlue;
       border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
