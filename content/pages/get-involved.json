@@ -33,6 +33,34 @@
         }
       },
       {
+        "id": "get-involved_email-form",
+        "left": {
+          "type": "custom",
+          "cols": {
+            "num": "col-7_mi-11",
+            "push_left": "off-2_mi-1"
+          },
+          "customizations": [
+            {
+              "name": "FieldForm",
+              "props": {
+                "fields": [
+                  {
+                    "name": "email",
+                    "type": "email",
+                    "label": "test@example.com",
+                    "validation": "*Must be a valid email"
+                  }
+                ],
+                "action": "https://fieldgoal.io/f/zYpMgQ",
+                "submit": "Submit",
+                "message": "Email submitted"
+              }
+            }
+          ]
+        }
+      },
+      {
         "id": "careers_intro",
         "left": {
           "type": "text_block",

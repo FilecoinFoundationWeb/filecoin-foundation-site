@@ -62,6 +62,7 @@ import SocialIcons from '@/components/SocialIcons'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
+import FieldForm from '@/components/FieldForm'
 
 // ====================================================================== Export
 export default {
@@ -78,7 +79,8 @@ export default {
     SocialIcons,
     EventsHackathons,
     TabbedSlider,
-    BackgroundLayers
+    BackgroundLayers,
+    FieldForm
   },
 
   props: {
