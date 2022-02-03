@@ -1,11 +1,5 @@
 <template>
-
-  <div
-    v-if="link.hasOwnProperty('links')"
-    ref="firstPane"
-    :class="firstLevelClassList"
-    :style="`left: ${panelLeft};`">
-
+  <div>
     <div class="nav-dropdown-panel-left">
 
       <nuxt-link
@@ -41,9 +35,7 @@
         <SocialIcons />
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -52,26 +44,6 @@ import Throttle from 'lodash/throttle'
 
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
-
-// =================================================================== Functions
-const detectPanelOutsideViewport = (instance) => {
-  const rect = instance.$refs.firstPane.getBoundingClientRect()
-  if (rect.left + rect.width > window.innerWidth) {
-    instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
-  }
-}
-
-const detectPopoutOutsideViewport = (instance) => {
-  if (instance.$refs.secondPane.length) {
-    const rect = instance.$refs.secondPane[0].getBoundingClientRect()
-    if (rect.left + rect.width > window.innerWidth) {
-      const x = instance.scroll ? '-1rem' : '0rem' // this will account for the width of the scroll bar
-      instance.popoutLeft = 'calc(' + x + ' - 100%)'
-    } else if (instance.popoutLeft !== '100%') {
-      instance.popoutLeft = '100%'
-    }
-  }
-}
 
 // ===================================================================== Exports
 export default {
@@ -87,11 +59,6 @@ export default {
       type: Object,
       required: false,
       default: () => {}
-    },
-    active: {
-      type: Boolean,
-      required: false,
-      default: false
     },
     scroll: {
       type: Boolean,
@@ -137,8 +104,7 @@ export default {
       return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
     },
     firstLevelClassList () {
-      const menuType = this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
-      return `${menuType} ${this.active ? 'active' : ''}`
+      return this.nestedDisplay ? 'nav-dropdown dropdown-background' : 'nav-panel'
     },
     toggleFirstOnHover () {
       if (this.link.hasOwnProperty('links')) {
@@ -148,49 +114,102 @@ export default {
     }
   },
 
-  mounted () {
-    this.$nextTick(() => {
-      if (this.$refs.popouts) {
-        if (this.panel) {
-          const widths = []
-          this.$refs.popouts.forEach((item) => {
-            widths.push(item.firstChild.getBoundingClientRect().width)
-          })
-          this.minWidth = 3 * Math.max(...widths) + 'px'
-        } else if (this.scroll) {
-          this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
-        }
-      }
-      if (this.panel) {
-        if (this.$refs.firstPane) {
-          detectPanelOutsideViewport(this)
-          this.resize = () => { detectPanelOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      } else {
-        if (this.$refs.secondPane) {
-          detectPopoutOutsideViewport(this)
-          this.resize = () => { detectPopoutOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      }
-    })
-  },
-
-  beforeDestroy () {
-    if (this.resize) { window.removeEventListener('resize', this.resize) }
-  },
-
-  methods: {
-    toggleDropDown (val) {
-      if (val) { this.dropdownOpen = !this.dropdownOpen }
-    }
-  }
+  // mounted () {
+  //   this.$nextTick(() => {
+  //     if (this.$refs.popouts) {
+  //       if (this.panel) {
+  //         const widths = []
+  //         this.$refs.popouts.forEach((item) => {
+  //           widths.push(item.firstChild.getBoundingClientRect().width)
+  //         })
+  //         this.minWidth = 3 * Math.max(...widths) + 'px'
+  //       } else if (this.scroll) {
+  //         this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
+  //       }
+  //     }
+  //     if (this.panel) {
+  //       if (this.$refs.firstPane) {
+  //         detectPanelOutsideViewport(this)
+  //         this.resize = () => { detectPanelOutsideViewport(this) }
+  //         window.addEventListener('resize', Throttle(this.resize, 10))
+  //       }
+  //     } else {
+  //       if (this.$refs.secondPane) {
+  //         detectPopoutOutsideViewport(this)
+  //         this.resize = () => { detectPopoutOutsideViewport(this) }
+  //         window.addEventListener('resize', Throttle(this.resize, 10))
+  //       }
+  //     }
+  //   })
+  // },
+  //
+  // beforeDestroy () {
+  //   if (this.resize) { window.removeEventListener('resize', this.resize) }
+  // },
+  //
+  // methods: {
+  //   toggleDropDown (val) {
+  //     if (val) { this.dropdownOpen = !this.dropdownOpen }
+  //   }
+  // }
 }
 
 </script>
 
 <style lang="scss" scoped>
+.nav-hover-wrapper {
+  position: relative;
+  padding: 1rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+}
+
+.nav-hover-wrapper {
+  &:hover {
+    .nav-link.top-level .arrow {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 100ms ease-in;
+      transform: translate(-50%, 0rem) rotate(45deg);
+      z-index: 10;
+    }
+    .nav-dropdown {
+      visibility: visible;
+      opacity: 1;
+      transition: transform 250ms ease-out, opacity 250ms ease-out;
+      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+      z-index: 5;
+    }
+  }
+}
+
+.nav-dropdown,
+.nav-popout {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transform: translate(-50%, 0rem) perspective(200px) rotateX(-10deg);
+  z-index: -1;
+  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
+}
+
+.first-level-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+  &:hover .nav-popout {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+    z-index: 0;
+    transition: transform 350ms ease-in-out, opacity 250ms ease-out;
+  }
+}
 
 ul {
   padding: 1rem;
@@ -206,7 +225,7 @@ li {
   }
 }
 
-::v-deep .nav-dropdown-inner {
+::v-deep .nav-dropdown {
   display: flex;
   flex-direction: row;
   top: 3.5rem;

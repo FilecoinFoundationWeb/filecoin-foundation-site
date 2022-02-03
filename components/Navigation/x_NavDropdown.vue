@@ -1,49 +1,88 @@
 <template>
+  <div :class="rootLinkClassList">
 
-  <div
-    v-if="link.hasOwnProperty('links')"
-    ref="firstPane"
-    :class="firstLevelClassList"
-    :style="`left: ${panelLeft};`">
-
-    <div class="nav-dropdown-panel-left">
-
-      <nuxt-link
-        v-if="link.description"
-        :to="link.url"
-        class="extras"
-        v-html="link.description">
-      </nuxt-link>
-
-      <ul v-if="Array.isArray(link.links)">
-        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-          <div class="first-level-wrapper">
-
-            <Button
-              :button="sublink"
-              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-              {{ sublink.text }}
-            </Button>
-
-          </div>
-        </li>
-      </ul>
-
-    </div>
+    <component
+      :is="toggleFirstOnHover ? 'nuxt-link' : 'div'"
+      :to="link.disabled ? '' : link.url"
+      :disabled="link.disabled"
+      :class="['nav-link', (toggleFirstOnHover ? 'top-level' : 'click-toggle')]"
+      @click="toggleDropDown(!toggleFirstOnHover)">
+      <div class="arrow">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+      </div>
+      <span class="text">{{ link.text }}</span>
+      <div
+        v-if="!toggleFirstOnHover"
+        :class="['chevron', dropdownOpen ? 'up' : 'down']"></div>
+    </component>
 
     <div
-      v-if="link.hasOwnProperty('sidebar') && link.sidebar"
-      class="nav-dropdown-panel-right">
-      <div class="nav-dropdown-panel-right-wrapper">
-        <div class="panel-right-title">
-          Community Links
-        </div>
-        <SocialIcons />
+      v-if="link.hasOwnProperty('links')"
+      ref="firstPane"
+      :class="firstLevelClassList"
+      :style="`left: ${panelLeft};`">
+
+      <div class="nav-dropdown-panel-left">
+
+        <nuxt-link
+          v-if="link.description"
+          :to="link.url"
+          class="extras"
+          v-html="link.description">
+        </nuxt-link>
+
+        <ul v-if="Array.isArray(link.links)">
+          <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
+            <div class="first-level-wrapper">
+
+              <Button
+                :button="sublink"
+                :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                {{ sublink.text }}
+              </Button>
+
+              <div
+                v-if="sublink.hasOwnProperty('links') && nestedDisplay"
+                ref="secondPane"
+                :class="[listDisplayType, { 'scroll': scroll }]"
+                :style="`max-height: ${maxHeight}; left: ${popoutLeft};`">
+                <ul v-if="Array.isArray(sublink.links)" :style="`min-width: ${minWidth};`">
+                  <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
+
+                    <component
+                      :is="poplink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
+                      :disabled="poplink.disabled"
+                      class="nav-link second-level">
+                      {{ poplink.label }}
+                    </component>
+
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+
       </div>
+
+      <div
+        v-if="link.hasOwnProperty('sidebar') && link.sidebar"
+        class="nav-dropdown-panel-right">
+        <div class="nav-dropdown-panel-right-wrapper">
+          <div class="panel-right-title">
+            Community Links
+          </div>
+          <SocialIcons />
+        </div>
+      </div>
+
     </div>
 
   </div>
-
 </template>
 
 <script>
@@ -87,11 +126,6 @@ export default {
       type: Object,
       required: false,
       default: () => {}
-    },
-    active: {
-      type: Boolean,
-      required: false,
-      default: false
     },
     scroll: {
       type: Boolean,
@@ -137,8 +171,7 @@ export default {
       return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
     },
     firstLevelClassList () {
-      const menuType = this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
-      return `${menuType} ${this.active ? 'active' : ''}`
+      return this.nestedDisplay ? 'nav-dropdown dropdown-background' : 'nav-panel'
     },
     toggleFirstOnHover () {
       if (this.link.hasOwnProperty('links')) {
@@ -191,6 +224,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.nav-hover-wrapper {
+  position: relative;
+  padding: 1rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+}
+
+.nav-hover-wrapper {
+  &:hover {
+    .nav-link.top-level .arrow {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 100ms ease-in;
+      transform: translate(-50%, 0rem) rotate(45deg);
+      z-index: 10;
+    }
+    .nav-dropdown {
+      visibility: visible;
+      opacity: 1;
+      transition: transform 250ms ease-out, opacity 250ms ease-out;
+      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+      z-index: 5;
+    }
+  }
+}
+
+.nav-dropdown,
+.nav-popout {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transform: translate(-50%, 0rem) perspective(200px) rotateX(-10deg);
+  z-index: -1;
+  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
+}
+
+.first-level-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+  &:hover .nav-popout {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+    z-index: 0;
+    transition: transform 350ms ease-in-out, opacity 250ms ease-out;
+  }
+}
 
 ul {
   padding: 1rem;
@@ -206,7 +292,7 @@ li {
   }
 }
 
-::v-deep .nav-dropdown-inner {
+::v-deep .nav-dropdown {
   display: flex;
   flex-direction: row;
   top: 3.5rem;

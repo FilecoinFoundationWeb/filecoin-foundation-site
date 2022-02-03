@@ -15,18 +15,38 @@
 
             <template #navitems>
               <nav
-                v-if="!mobile"
+                v-if="!mobile && activeItems.length"
                 class="navigation">
-                <NavDropdown
+
+                <div
                   v-for="(link, index) in links"
                   :key="index"
-                  :link="link"
+                  :class="['nav-hover-wrapper', 'dropdown-background', 'nav-item-wrapper']"
+                  @mouseover="setActiveItem(index, true)"
+                  @mouseleave="setActiveItem(index, false)">
+                  <div
+                    class="nav-link top-level">
+                    <span class="text">{{ link.text }}</span>
+                  </div>
+                </div>
+
+                <NavMegaMenu
                   :panel="true"
-                  :scroll="false"
-                  :nested-display="!mobile"
-                  behavior="hover"
-                  class="nav-item-wrapper">
-                </NavDropdown>
+                  :active="activeItems.some(el => el)"
+                  :key="`$dropdown-container-${componentKey}`"
+                  :nested-display="!mobile">
+                    <NavDropdown
+                    v-for="(link, index) in links"
+                    :key="`$dropdown-${index}-${componentKey}`"
+                    :link="link"
+                    :active="activeItems[index]"
+                    :panel="true"
+                    :scroll="false"
+                    :nested-display="!mobile"
+                    behavior="hover">
+                  </NavDropdown>
+                </NavMegaMenu>
+
               </nav>
 
               <Zero_Core__Accordion
@@ -101,6 +121,7 @@ import Throttle from 'lodash/throttle'
 import NavMobile from '@/components/Navigation/NavMobile'
 import NavDesktop from '@/components/Navigation/NavDesktop'
 import NavDropdown from '@/components/Navigation/NavDropdown'
+import NavMegaMenu from '@/components/Navigation/NavMegaMenu'
 
 import Button from '@/components/Button'
 import LogoHorizontal from '@/components/LogoHorizontal'
@@ -127,6 +148,7 @@ export default {
     NavMobile,
     NavDesktop,
     NavDropdown,
+    NavMegaMenu,
     Button
   },
 
@@ -135,7 +157,9 @@ export default {
       mini: false,
       mobile: false,
       mobilePanelOpen: false,
-      resize: false
+      activeItems: [],
+      resize: false,
+      componentKey: 0
     }
   },
 
@@ -145,6 +169,9 @@ export default {
     }),
     links () {
       return this.siteContent.general.navigation
+    },
+    navDropdownActive () {
+      return this.activeItems.some(el => el)
     },
     navigationComponentType () {
       return this.mobile ? 'NavMobile' : 'NavDesktop'
@@ -162,6 +189,9 @@ export default {
   },
 
   mounted () {
+    for (let i = 0; i < this.links.length; i++) {
+      this.activeItems.push(false)
+    }
     setNavigationType(this)
     this.resize = () => { setNavigationType(this) }
     window.addEventListener('resize', Throttle(this.resize, 10))
@@ -174,6 +204,10 @@ export default {
   methods: {
     toggleMobileNav () {
       this.mobilePanelOpen = !this.mobilePanelOpen
+    },
+    setActiveItem (i, state) {
+      this.activeItems[i] = state
+      this.componentKey++
     },
     convertMainLinkToSublink (link) {
       return {
@@ -229,6 +263,26 @@ export default {
   justify-content: space-around;
   align-items: center;
   z-index: 10;
+}
+
+.nav-hover-wrapper {
+  position: relative;
+  padding: 1rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+}
+
+.nav-hover-wrapper {
+  &:hover {
+    .nav-link.top-level .arrow {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 100ms ease-in;
+      transform: translate(-50%, 0rem) rotate(45deg);
+      z-index: 10;
+    }
+  }
 }
 
 ::v-deep .nav-item-wrapper {

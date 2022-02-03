@@ -1,57 +1,24 @@
 <template>
-
   <div
-    v-if="link.hasOwnProperty('links')"
     ref="firstPane"
-    :class="firstLevelClassList"
+    :class="['nav-dropdown-container', { active: active }]"
     :style="`left: ${panelLeft};`">
 
-    <div class="nav-dropdown-panel-left">
-
-      <nuxt-link
-        v-if="link.description"
-        :to="link.url"
-        class="extras"
-        v-html="link.description">
-      </nuxt-link>
-
-      <ul v-if="Array.isArray(link.links)">
-        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-          <div class="first-level-wrapper">
-
-            <Button
-              :button="sublink"
-              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-              {{ sublink.text }}
-            </Button>
-
-          </div>
-        </li>
-      </ul>
-
+    <div class="arrow">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="layer"></div>
     </div>
 
-    <div
-      v-if="link.hasOwnProperty('sidebar') && link.sidebar"
-      class="nav-dropdown-panel-right">
-      <div class="nav-dropdown-panel-right-wrapper">
-        <div class="panel-right-title">
-          Community Links
-        </div>
-        <SocialIcons />
-      </div>
-    </div>
+    <slot></slot>
 
   </div>
-
 </template>
 
 <script>
 // ===================================================================== Imports
 import Throttle from 'lodash/throttle'
-
-import SocialIcons from '@/components/SocialIcons'
-import Button from '@/components/Button'
 
 // =================================================================== Functions
 const detectPanelOutsideViewport = (instance) => {
@@ -61,52 +28,20 @@ const detectPanelOutsideViewport = (instance) => {
   }
 }
 
-const detectPopoutOutsideViewport = (instance) => {
-  if (instance.$refs.secondPane.length) {
-    const rect = instance.$refs.secondPane[0].getBoundingClientRect()
-    if (rect.left + rect.width > window.innerWidth) {
-      const x = instance.scroll ? '-1rem' : '0rem' // this will account for the width of the scroll bar
-      instance.popoutLeft = 'calc(' + x + ' - 100%)'
-    } else if (instance.popoutLeft !== '100%') {
-      instance.popoutLeft = '100%'
-    }
-  }
-}
-
 // ===================================================================== Exports
 export default {
-  name: 'NavDropdown',
-
-  components: {
-    SocialIcons,
-    Button
-  },
+  name: 'NavMegaMenu',
 
   props: {
-    link: {
-      type: Object,
-      required: false,
-      default: () => {}
-    },
     active: {
       type: Boolean,
       required: false,
       default: false
     },
-    scroll: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
     panel: {
       type: Boolean,
       required: false,
       default: false
-    },
-    behavior: {
-      type: String,
-      required: false,
-      default: 'hover'
     },
     nestedDisplay: {
       type: Boolean,
@@ -126,71 +61,70 @@ export default {
     }
   },
 
-  computed: {
-    listDisplayType () {
-      return this.panel ? 'nav-panel' : 'nav-popout'
-    },
-    rootLinkClassList () {
-      const mouseBehavior = this.toggleFirstOnHover ? 'hover' : 'active'
-      const hasSubLinks = this.link.hasOwnProperty('links') ? 'has-nested-links' : ''
-      const dropdownState = this.dropdownOpen ? 'open' : ''
-      return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
-    },
-    firstLevelClassList () {
-      const menuType = this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
-      return `${menuType} ${this.active ? 'active' : ''}`
-    },
-    toggleFirstOnHover () {
-      if (this.link.hasOwnProperty('links')) {
-        return this.behavior !== 'active'
-      }
-      return true
-    }
-  },
-
   mounted () {
     this.$nextTick(() => {
-      if (this.$refs.popouts) {
-        if (this.panel) {
-          const widths = []
-          this.$refs.popouts.forEach((item) => {
-            widths.push(item.firstChild.getBoundingClientRect().width)
-          })
-          this.minWidth = 3 * Math.max(...widths) + 'px'
-        } else if (this.scroll) {
-          this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
-        }
-      }
-      if (this.panel) {
-        if (this.$refs.firstPane) {
-          detectPanelOutsideViewport(this)
-          this.resize = () => { detectPanelOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      } else {
-        if (this.$refs.secondPane) {
-          detectPopoutOutsideViewport(this)
-          this.resize = () => { detectPopoutOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
+      if (this.$refs.firstPane) {
+        detectPanelOutsideViewport(this)
+        this.resize = () => { detectPanelOutsideViewport(this) }
+        window.addEventListener('resize', Throttle(this.resize, 10))
       }
     })
   },
 
   beforeDestroy () {
     if (this.resize) { window.removeEventListener('resize', this.resize) }
-  },
-
-  methods: {
-    toggleDropDown (val) {
-      if (val) { this.dropdownOpen = !this.dropdownOpen }
-    }
   }
 }
 
 </script>
 
 <style lang="scss" scoped>
+
+.nav-dropdown-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 3.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transform: translate(-50%, 0rem) perspective(200px) rotateX(-10deg);
+  // z-index: -1;
+  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
+  background-color: $denim;
+  border: 5px solid $azureRadiance;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: $blackPearl;
+    border: 5px solid $kleinBlue;
+    border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
+  }
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transition: transform 250ms ease-out, opacity 250ms ease-out;
+    transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+    z-index: 5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 ul {
   padding: 1rem;
@@ -206,7 +140,7 @@ li {
   }
 }
 
-::v-deep .nav-dropdown-inner {
+::v-deep .nav-dropdown {
   display: flex;
   flex-direction: row;
   top: 3.5rem;
