@@ -104,26 +104,79 @@ export default {
 
 <style lang="scss" scoped>
 
-@keyframes slidein {
+@keyframes leftin {
   from {
-    transform: translateX(5rem);
+    transform: translateX(100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightin {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftout {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes rightout {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 
 .nav-dropdown-inner {
   position: absolute;
-  transform: translateX(-5rem);
+  transform: translateX(2000px);
   transition: 250ms ease;
   &.active {
-    animation-name: slidein;
     animation-duration: 250ms;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform: translateX(0rem);
+    // transform: translateX(0rem);
+    &.left {
+      animation-name: rightin;
+    }
+    &.right {
+      animation-name: leftin;
+    }
+  }
+
+  &.last {
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &.left {
+      animation-name: rightout;
+    }
+    &.right {
+      animation-name: leftout;
+    }
   }
 
   display: flex;
@@ -218,7 +271,7 @@ export default {
   }
 }
 
-.nav-dropdown-panel-right {
+::v-deep .nav-dropdown-panel-right {
   position: relative;
   padding: 2rem 3rem 2rem 2rem;
   &:before {
@@ -227,10 +280,9 @@ export default {
     top: 10px;
     left: 0;
     width: calc(100% - 10px);
-    height: calc(100% - 20px);
+    height: calc(100% - 10px);
     background: $deepCove;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 71px;
+    border-radius: 0 5px 71px 0 !important;
     z-index: 1;
   }
   .nav-dropdown-panel-right-wrapper {

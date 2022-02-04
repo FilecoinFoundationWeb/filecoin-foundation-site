@@ -11,10 +11,12 @@
       <div class="layer"></div>
     </div>
 
-    <div
-      ref="viewbox"
-      class="dropdown-viewbox">
-      <slot></slot>
+    <div class="relative-wrapper">
+      <div
+        ref="viewbox"
+        class="dropdown-viewbox">
+        <slot></slot>
+      </div>
     </div>
 
   </div>
@@ -118,7 +120,6 @@ export default {
   methods: {
     setCurrentDimensions (index) {
       const dimensions = this.childrenDimensions[index]
-      console.log(dimensions)
       this.currentWidth = dimensions.width + 'px'
       this.currentHeight = dimensions.height + 'px'
     }
@@ -174,9 +175,20 @@ export default {
   // }
 }
 
+.relative-wrapper {
+  position: relative;
+  padding: 0 0.625rem;
+}
+
 .dropdown-viewbox {
   position: relative;
-  // overflow: hidden;
+  overflow: hidden;
+}
+
+.relative-wrapper,
+.dropdown-viewbox {
+  width: 100%;
+  height: 100%;
 }
 
 .arrow {

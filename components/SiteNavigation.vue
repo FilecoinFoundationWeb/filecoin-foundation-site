@@ -15,15 +15,15 @@
 
             <template #navitems>
               <nav
-                v-if="!mobile && activeItems.length"
-                class="navigation">
+                v-if="!mobile"
+                class="navigation"
+                @mouseleave="setActiveItem(-1)">
 
                 <div
                   v-for="(link, index) in links"
                   :key="index"
                   :class="['nav-hover-wrapper', 'dropdown-background', 'nav-item-wrapper']"
-                  @mouseover="setActiveItem(index, true)"
-                  @mouseleave="setActiveItem(index, false)">
+                  @mouseover="setActiveItem(index)">
                   <div
                     class="nav-link top-level">
                     <span class="text">{{ link.text }}</span>
@@ -32,7 +32,7 @@
 
                 <NavMegaMenu
                   :panel="true"
-                  :activeIndex="activeItems.findIndex(el => el)"
+                  :activeIndex="activeItem"
                   :nested-display="!mobile">
                     <NavDropdown
                       v-for="(link, index) in links"
@@ -40,7 +40,7 @@
                       :link="link"
                       :scroll="false"
                       :nested-display="!mobile"
-                      :class="{ active: activeItems[index] }"
+                      :class="[{ active: index === activeItem }, { last: index === lastItem }, index === lastItem || index === activeItem ? direction : '']"
                       behavior="hover">
                     </NavDropdown>
                 </NavMegaMenu>
@@ -155,7 +155,8 @@ export default {
       mini: false,
       mobile: false,
       mobilePanelOpen: false,
-      activeItems: [],
+      activeItem: 0,
+      lastItem: 0,
       resize: false,
       componentKey: 0
     }
@@ -173,6 +174,12 @@ export default {
     },
     navigationComponentType () {
       return this.mobile ? 'NavMobile' : 'NavDesktop'
+    },
+    direction () {
+      if (this.activeItem === this.lastItem) {
+        return ''
+      }
+      return this.activeItem < this.lastItem ? 'left' : 'right'
     }
   },
 
@@ -187,9 +194,6 @@ export default {
   },
 
   mounted () {
-    for (let i = 0; i < this.links.length; i++) {
-      this.activeItems.push(false)
-    }
     setNavigationType(this)
     this.resize = () => { setNavigationType(this) }
     window.addEventListener('resize', Throttle(this.resize, 10))
@@ -203,10 +207,16 @@ export default {
     toggleMobileNav () {
       this.mobilePanelOpen = !this.mobilePanelOpen
     },
-    setActiveItem (i, state) {
-      this.activeItems[i] = state
-      this.componentKey++
-      console.log('hit')
+    setActiveItem (newIndex) {
+      if (newIndex >= 0) {
+        if (this.activeItem !== newIndex) {
+          this.lastItem = this.activeItem
+          this.activeItem = newIndex
+          this.componentKey++
+        }
+      } else {
+        this.activeItem = -1
+      }
     },
     convertMainLinkToSublink (link) {
       return {
