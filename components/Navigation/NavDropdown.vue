@@ -2,9 +2,8 @@
 
   <div
     v-if="link.hasOwnProperty('links')"
-    ref="firstPane"
-    :class="firstLevelClassList"
-    :style="`left: ${panelLeft};`">
+    ref="innerPane"
+    :class="firstLevelClassList">
 
     <div class="nav-dropdown-panel-left">
 
@@ -55,21 +54,9 @@ import Button from '@/components/Button'
 
 // =================================================================== Functions
 const detectPanelOutsideViewport = (instance) => {
-  const rect = instance.$refs.firstPane.getBoundingClientRect()
+  const rect = instance.$refs.innerPane.getBoundingClientRect()
   if (rect.left + rect.width > window.innerWidth) {
     instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
-  }
-}
-
-const detectPopoutOutsideViewport = (instance) => {
-  if (instance.$refs.secondPane.length) {
-    const rect = instance.$refs.secondPane[0].getBoundingClientRect()
-    if (rect.left + rect.width > window.innerWidth) {
-      const x = instance.scroll ? '-1rem' : '0rem' // this will account for the width of the scroll bar
-      instance.popoutLeft = 'calc(' + x + ' - 100%)'
-    } else if (instance.popoutLeft !== '100%') {
-      instance.popoutLeft = '100%'
-    }
   }
 }
 
@@ -88,20 +75,10 @@ export default {
       required: false,
       default: () => {}
     },
-    active: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
     scroll: {
       type: Boolean,
       required: false,
       default: true
-    },
-    panel: {
-      type: Boolean,
-      required: false,
-      default: false
     },
     behavior: {
       type: String,
@@ -127,64 +104,23 @@ export default {
   },
 
   computed: {
-    listDisplayType () {
-      return this.panel ? 'nav-panel' : 'nav-popout'
-    },
-    rootLinkClassList () {
-      const mouseBehavior = this.toggleFirstOnHover ? 'hover' : 'active'
-      const hasSubLinks = this.link.hasOwnProperty('links') ? 'has-nested-links' : ''
-      const dropdownState = this.dropdownOpen ? 'open' : ''
-      return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
-    },
     firstLevelClassList () {
-      const menuType = this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
-      return `${menuType} ${this.active ? 'active' : ''}`
-    },
-    toggleFirstOnHover () {
-      if (this.link.hasOwnProperty('links')) {
-        return this.behavior !== 'active'
-      }
-      return true
+      return this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
     }
   },
 
   mounted () {
-    this.$nextTick(() => {
-      if (this.$refs.popouts) {
-        if (this.panel) {
-          const widths = []
-          this.$refs.popouts.forEach((item) => {
-            widths.push(item.firstChild.getBoundingClientRect().width)
-          })
-          this.minWidth = 3 * Math.max(...widths) + 'px'
-        } else if (this.scroll) {
-          this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
-        }
-      }
-      if (this.panel) {
-        if (this.$refs.firstPane) {
-          detectPanelOutsideViewport(this)
-          this.resize = () => { detectPanelOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      } else {
-        if (this.$refs.secondPane) {
-          detectPopoutOutsideViewport(this)
-          this.resize = () => { detectPopoutOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      }
-    })
+    // this.$nextTick(() => {
+    //   if (this.$refs.innerPane) {
+    //     detectPanelOutsideViewport(this)
+    //     this.resize = () => { detectPanelOutsideViewport(this) }
+    //     window.addEventListener('resize', Throttle(this.resize, 10))
+    //   }
+    // })
   },
 
   beforeDestroy () {
     if (this.resize) { window.removeEventListener('resize', this.resize) }
-  },
-
-  methods: {
-    toggleDropDown (val) {
-      if (val) { this.dropdownOpen = !this.dropdownOpen }
-    }
   }
 }
 
@@ -192,33 +128,51 @@ export default {
 
 <style lang="scss" scoped>
 
-ul {
-  padding: 1rem;
-  margin-top: 1rem;
-}
-.ul-second {
-  padding: 0 1rem;
-}
-li {
-  list-style-type: none;
-  &:last-child {
-    padding-bottom: 0.5rem;
+.nav-dropdown-inner {
+  position: absolute;
+  // visibility: hidden;
+  z-index: -1;
+  &.active {
+    position: relative;
+    // visibility: visible;
+    z-index: 10;
   }
-}
 
-::v-deep .nav-dropdown-inner {
   display: flex;
   flex-direction: row;
-  top: 3.5rem;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
   .extras {
+    min-width: 15rem;
     display: block;
     position: relative;
     z-index: 10;
+    ::v-deep img {
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 2rem;
+    }
+  }
+  .title,
+  .text {
+    transition: 250ms ease-in-out;
   }
   .title {
     @include fontWeight_Medium;
     display: inline-block;
     margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .text {
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+  .text {
+    @include fontSize_Small;
   }
   .social-icons {
     flex-direction: column;
@@ -239,6 +193,32 @@ li {
       @include fontSize_Small;
       @include fontWeight_SemiBold;
       display: block;
+    }
+  }
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-top: 1rem;
+    &:hover {
+      .nav-link.first-level {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+          // transition: 250ms ease-in-out;
+        }
+      }
+    }
+  }
+  .ul-second {
+    padding: 0 1rem;
+  }
+  li {
+    list-style-type: none;
+    &:last-child {
+      padding-bottom: 0.5rem;
     }
   }
 }
@@ -276,155 +256,9 @@ li {
   }
 }
 
-.nav-popout {
-  top: -1rem;
-  & li {
-    padding: 0.5rem 0;
-    &:last-child {
-      padding-bottom: 1rem;
-    }
-  }
-  &.scroll {
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  .inner-wrap {
-    margin: 1.0rem 1.0rem 1.0rem 0;
-  }
-}
-
-.scroll {
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-.nav-item-wrapper {
-  @include small {
-    display: block;
-    &.has-nested-links {
-      display: flex;
-      flex-direction: column;
-      padding-top: 0.75rem;
-      .top-level {
-        width: fit-content;
-      }
-    }
-  }
-  .nav-link.top-level {
-    position: relative;
-    .arrow {
-      position: absolute;
-      top: 29px;
-      left: 50%;
-      visibility: hidden;
-      pointer-events: none;
-      opacity: 0;
-      z-index: 2;
-      transform: translate(-50%, 0rem) rotate(45deg);
-      transition: opacity 250ms ease-in, visibility 0ms linear 250ms;
-      // transition: 100ms ease-in;
-      @include small {
-        display: none;
-      }
-      .layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 21px;
-        padding-bottom: 21px;
-        overflow: hidden;
-        transform-origin: 100% 0;
-        border-top-left-radius: 1px;
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 8px;
-          width: 100%;
-          height: 141%;
-          transform-origin: inherit;
-          transform: rotate(45deg);
-        }
-        &:first-child {
-          transform: translate(-2px, -2px);
-          z-index: 0;
-          &:after {
-            background-color: $azureRadiance;
-          }
-        }
-        &:nth-child(2) {
-          transform: translate(2px, 2px);
-          z-index: 1;
-          &:after {
-            background-color: $denim;
-          }
-        }
-        &:nth-child(3) {
-          transform: translate(6px, 6px);
-          z-index: 2;
-          &:after {
-            background-color: $kleinBlue;
-          }
-        }
-        &:last-child {
-          transform: translate(9px, 9px);
-          z-index: 3;
-          &:after {
-            background-color: $blackPearl;
-          }
-        }
-      }
-    }
-  }
-  .nav-panel {
-    display: inline-block;
-    ul {
-      display: flex;
-      margin-top: 1.5rem;
-      margin-left: 1rem;
-      flex-direction: row;
-      flex-wrap: wrap;
-      @include mini {
-        margin: 0;
-      }
-    }
-    li {
-      display: inline-block;
-      margin: 0.25rem 0;
-      width: 50%;
-      @include small {
-        margin: 0;
-        width: 33%;
-      }
-      @include mini {
-        margin: 0;
-        width: 50%;
-      }
-    }
-  }
-}
-
 .nav-link {
   white-space: nowrap;
   cursor: pointer;
-}
-
-$scrollbarBG: transparent;
-$thumbBG: rgba(255, 255, 255, 0.4);
-div::-webkit-scrollbar {
-  width: 8px;
-}
-div {
-  scrollbar-width: thin;
-  scrollbar-color: $thumbBG $scrollbarBG;
-}
-div::-webkit-scrollbar-track {
-  background: $scrollbarBG;
-}
-div::-webkit-scrollbar-thumb {
-  background-color: $thumbBG;
-  border-radius: 6px;
-  border: 3px solid $scrollbarBG;
 }
 
 </style>

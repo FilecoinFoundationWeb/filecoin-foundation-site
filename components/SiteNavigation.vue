@@ -32,17 +32,14 @@
 
                 <NavMegaMenu
                   :panel="true"
-                  :active="activeItems.some(el => el)"
-                  :key="`$dropdown-container-${componentKey}`"
                   :nested-display="!mobile">
                     <NavDropdown
                     v-for="(link, index) in links"
                     :key="`$dropdown-${index}-${componentKey}`"
                     :link="link"
-                    :active="activeItems[index]"
-                    :panel="true"
                     :scroll="false"
                     :nested-display="!mobile"
+                    :class="{ active: activeItems[index] }"
                     behavior="hover">
                   </NavDropdown>
                 </NavMegaMenu>
@@ -257,31 +254,41 @@ export default {
 
 // ////////////////////////////////////////////////////////////////// Navigation
 .navigation {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   z-index: 10;
+
 }
+
+::v-deep .navigation {
+  &:hover {
+    .nav-dropdown-container {
+      // visibility: visible;
+      opacity: 1;
+      transition: transform 250ms ease-out, opacity 250ms ease-out;
+      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+      z-index: 5;
+      .arrow {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 100ms ease-in;
+        transform: translate(-50%, 0rem) rotate(45deg);
+        z-index: 10;
+      }
+    }
+  }
+}
+
 
 .nav-hover-wrapper {
   position: relative;
   padding: 1rem 0;
   @include small {
     padding: 0.375rem 0;
-  }
-}
-
-.nav-hover-wrapper {
-  &:hover {
-    .nav-link.top-level .arrow {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 100ms ease-in;
-      transform: translate(-50%, 0rem) rotate(45deg);
-      z-index: 10;
-    }
   }
 }
 
@@ -315,77 +322,6 @@ export default {
   }
 }
 
-::v-deep {
-  .nav-dropdown {
-    &:before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
-      background-color: $blackPearl;
-      border: 5px solid $kleinBlue;
-      border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
-    }
-  }
-}
-
-::v-deep {
-  .nav-dropdown,
-  .mega-menu {
-    // padding: 2rem 3.375rem 2rem 5.375rem;
-    background-color: $denim;
-    border: 5px solid $azureRadiance;
-    border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
-    color: $white;
-    .extras {
-      min-width: 15rem;
-    }
-    .title,
-    .text {
-      transition: 250ms ease-in-out;
-    }
-    .title {
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-    .text {
-      &:hover {
-        transform: scale(1.025);
-      }
-    }
-    .text {
-      @include fontSize_Small;
-    }
-    .image {
-      position: absolute;
-      left: -3rem;
-      top: 0;
-      width: 2rem;
-    }
-    ul {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0;
-      &:hover {
-        .nav-link.first-level {
-          opacity: 0.5;
-          &:hover {
-            opacity: 1;
-            transform: scale(1.05);
-            // transition: 250ms ease-in-out;
-          }
-        }
-      }
-    }
-    .first-level-wrapper {
-      padding: 0.25rem 0;
-    }
-  }
-}
 
 // /////////////////////////////////////////////////////////// mobile nav toggle
 .hamburger-icon {
