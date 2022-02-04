@@ -273,18 +273,9 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 // ----------------------------------------------------------------- [Section] 3
 
-::v-deep #sticky-info {
-  position: relative;
-  z-index: 10000;
-  .sticky-content {
-    position: absolute;
-    top: 0;
+::v-deep #governance-floating-menu {
+  .floating-content {
     left: -4rem;
-    z-index: 10000;
-    &.info-fixed {
-      position: fixed;
-      top: 120px;
-    }
     .heading {
       @include fontSize_ExtraLarge;
       @include fontWeight_Medium;

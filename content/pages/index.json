@@ -257,7 +257,7 @@
             "num": "col-10_mi-11",
             "push_left": "off-2_mi-1"
           },
-          "preview_image": "/images/page-index/filecoin-banner.svg",
+          "preview_image": "/images/page-index/meet-the-filecoin-foundation-preview.png",
           "url": "https://youtu.be/6OY4xAs3Grg",
           "tint": true,
           "subtext": {
@@ -368,7 +368,7 @@
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel"
             },
             {
               "type": "A",

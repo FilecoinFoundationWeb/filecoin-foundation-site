@@ -71,17 +71,28 @@
         "id": "gallery-1-cards",
         "left": {
           "type": "image_block",
-          "src": "/icons/hands-opening.png",
           "cols": {
-            "num": "col-3_mi-6",
-            "push_left": "off-2_mi-3"
-          }
+            "num": "col-4_mi-8",
+            "push_left": "off-2_mi-2"
+          },
+          "customizations": [
+            {
+              "name": "FloatingMenu",
+              "props": {
+                "id": "floating-hands",
+                "cutoff": "more-info",
+                "offsettop": 200,
+                "offsetbottom": 100,
+                "content": "<img src='/icons/hands-opening.png' class='image'/>"
+              }
+            }
+          ]
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-4_mi-10",
-            "push_left": "off-3_sm-2_mi-1"
+            "push_left": "off-2_sm-2_mi-1"
           },
           "cards": [
             {
@@ -107,7 +118,7 @@
             },
             {
               "type": "A",
-              "description": "<span class='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us</a> or see our <a href='https://github.com/filecoin-project/devgrants' target='_blank' class='lighter'>Github repo</a> for a more in-depth introduction to the grants program.</span>"
+              "description": "<span id='more-info'>For more information on grants, <a href='mailto:devgrants@fil.org'>email us</a> or see our <a href='https://github.com/filecoin-project/devgrants' target='_blank' class='lighter'>Github repo</a> for a more in-depth introduction to the grants program.</span>"
             }
           ]
         }
@@ -329,7 +340,7 @@
               "img": "/icons/hands-raised.png",
               "img_size": "regular",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel"
             },
             {
               "type": "A",

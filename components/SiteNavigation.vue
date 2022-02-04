@@ -96,6 +96,7 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
+import Throttle from 'lodash/throttle'
 
 import NavMobile from '@/components/Navigation/NavMobile'
 import NavDesktop from '@/components/Navigation/NavDesktop'
@@ -163,7 +164,7 @@ export default {
   mounted () {
     setNavigationType(this)
     this.resize = () => { setNavigationType(this) }
-    window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', Throttle(this.resize, 10))
   },
 
   beforeDestroy () {
@@ -267,8 +268,8 @@ export default {
       position: absolute;
       top: 5px;
       left: 5px;
-      width: calc(100% - 20px);
-      height: calc(100% - 20px);
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
       background-color: $blackPearl;
       border: 5px solid $kleinBlue;
       border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;

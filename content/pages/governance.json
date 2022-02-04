@@ -83,6 +83,9 @@
             {
               "name": "FloatingMenu",
               "props": {
+                "id": "governance-floating-menu",
+                "cutoff": "section-6",
+                "offsetbottom": 0,
                 "entries": [
                   {
                     "heading": "Improving Filecoin",
