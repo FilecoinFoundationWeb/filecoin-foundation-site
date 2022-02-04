@@ -32,16 +32,17 @@
 
                 <NavMegaMenu
                   :panel="true"
+                  :activeIndex="activeItems.findIndex(el => el)"
                   :nested-display="!mobile">
                     <NavDropdown
-                    v-for="(link, index) in links"
-                    :key="`$dropdown-${index}-${componentKey}`"
-                    :link="link"
-                    :scroll="false"
-                    :nested-display="!mobile"
-                    :class="{ active: activeItems[index] }"
-                    behavior="hover">
-                  </NavDropdown>
+                      v-for="(link, index) in links"
+                      :key="`$dropdown-${index}-${componentKey}`"
+                      :link="link"
+                      :scroll="false"
+                      :nested-display="!mobile"
+                      :class="{ active: activeItems[index] }"
+                      behavior="hover">
+                    </NavDropdown>
                 </NavMegaMenu>
 
               </nav>
@@ -205,6 +206,7 @@ export default {
     setActiveItem (i, state) {
       this.activeItems[i] = state
       this.componentKey++
+      console.log('hit')
     },
     convertMainLinkToSublink (link) {
       return {
@@ -267,18 +269,10 @@ export default {
 ::v-deep .navigation {
   &:hover {
     .nav-dropdown-container {
-      // visibility: visible;
       opacity: 1;
       transition: transform 250ms ease-out, opacity 250ms ease-out;
       transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
       z-index: 5;
-      .arrow {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 100ms ease-in;
-        transform: translate(-50%, 0rem) rotate(45deg);
-        z-index: 10;
-      }
     }
   }
 }
@@ -287,6 +281,7 @@ export default {
 .nav-hover-wrapper {
   position: relative;
   padding: 1rem 0;
+  // height: calc(100% + 2rem);
   @include small {
     padding: 0.375rem 0;
   }

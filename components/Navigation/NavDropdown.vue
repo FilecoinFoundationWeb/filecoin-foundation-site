@@ -47,18 +47,8 @@
 
 <script>
 // ===================================================================== Imports
-import Throttle from 'lodash/throttle'
-
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
-
-// =================================================================== Functions
-const detectPanelOutsideViewport = (instance) => {
-  const rect = instance.$refs.innerPane.getBoundingClientRect()
-  if (rect.left + rect.width > window.innerWidth) {
-    instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
-  }
-}
 
 // ===================================================================== Exports
 export default {
@@ -107,20 +97,6 @@ export default {
     firstLevelClassList () {
       return this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
     }
-  },
-
-  mounted () {
-    // this.$nextTick(() => {
-    //   if (this.$refs.innerPane) {
-    //     detectPanelOutsideViewport(this)
-    //     this.resize = () => { detectPanelOutsideViewport(this) }
-    //     window.addEventListener('resize', Throttle(this.resize, 10))
-    //   }
-    // })
-  },
-
-  beforeDestroy () {
-    if (this.resize) { window.removeEventListener('resize', this.resize) }
   }
 }
 
@@ -128,14 +104,26 @@ export default {
 
 <style lang="scss" scoped>
 
+@keyframes slidein {
+  from {
+    transform: translateX(5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .nav-dropdown-inner {
   position: absolute;
-  // visibility: hidden;
-  z-index: -1;
+  transform: translateX(-5rem);
+  transition: 250ms ease;
   &.active {
-    position: relative;
-    // visibility: visible;
-    z-index: 10;
+    animation-name: slidein;
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform: translateX(0rem);
   }
 
   display: flex;

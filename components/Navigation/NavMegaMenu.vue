@@ -2,7 +2,7 @@
   <div
     ref="container"
     :class="['nav-dropdown-container']"
-    :style="`left: ${panelLeft};`">
+    :style="containerStyles">
 
     <div class="arrow">
       <div class="layer"></div>
@@ -35,9 +35,15 @@ const detectPanelOutsideViewport = (instance) => {
 }
 
 const getChildrenDimensions = (instance) => {
+  instance.currentWidth = 'unset'
+  instance.currentHeight = 'unset'
+
   if (instance.$refs.viewbox) {
     const panels = instance.$refs.viewbox.children
-    console.log(panels)
+    for (let i = 0; i < panels.length; i++) {
+      const { width, height } = panels[i].getBoundingClientRect()
+      instance.childrenDimensions.push({ width, height })
+    }
   }
 }
 
@@ -51,6 +57,11 @@ export default {
       required: false,
       default: false
     },
+    activeIndex: {
+      type: Number,
+      required: true,
+      default: 0
+    },
     nestedDisplay: {
       type: Boolean,
       required: false,
@@ -60,12 +71,30 @@ export default {
 
   data () {
     return {
-      maxHeight: 'unset',
-      minWidth: 'unset',
+      currentHeight: 'unset',
+      currentWidth: 'unset',
       panelLeft: '50%',
-      popoutLeft: '100%',
       dropdownOpen: false,
-      resize: false
+      resize: false,
+      childrenDimensions: []
+    }
+  },
+
+  computed: {
+    containerStyles () {
+      return {
+        left: this.panelLeft,
+        width: this.currentWidth,
+        height: this.currentHeight
+      }
+    }
+  },
+
+  watch: {
+    activeIndex (newIndex) {
+      if (newIndex >= 0) {
+        this.setCurrentDimensions(newIndex)
+      }
     }
   },
 
@@ -73,13 +102,26 @@ export default {
     this.$nextTick(() => {
       getChildrenDimensions(this)
       detectPanelOutsideViewport(this)
-      this.resize = () => { detectPanelOutsideViewport(this) }
+
+      this.resize = () => {
+        detectPanelOutsideViewport(this)
+        getChildrenDimensions(this)
+      }
       window.addEventListener('resize', Throttle(this.resize, 10))
     })
   },
 
   beforeDestroy () {
     if (this.resize) { window.removeEventListener('resize', this.resize) }
+  },
+
+  methods: {
+    setCurrentDimensions (index) {
+      const dimensions = this.childrenDimensions[index]
+      console.log(dimensions)
+      this.currentWidth = dimensions.width + 'px'
+      this.currentHeight = dimensions.height + 'px'
+    }
   }
 }
 
@@ -95,9 +137,12 @@ export default {
   // visibility: hidden;
   opacity: 0;
   transform-origin: top;
-  transform: translate(-50%, 1rem) perspective(200px) rotateX(-10deg);
+  // transform: translate(-50%, 1rem) perspective(200px) rotateX(-10deg); *** can't have this for dimension calculations!!!
+  transform: translate(-50%, 1rem);
+
   // z-index: -1;
-  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
+  // transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
+  transition: 250ms ease;
   background-color: $denim;
   border: 5px solid $azureRadiance;
   border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
@@ -131,18 +176,21 @@ export default {
 
 .dropdown-viewbox {
   position: relative;
+  // overflow: hidden;
 }
 
 .arrow {
   position: absolute;
-  top: 29px;
+  // top: 29px;
+  top: -0.5rem;
   left: 50%;
-  visibility: hidden;
+  visibility: visible;
   pointer-events: none;
-  opacity: 0;
+  opacity: 1;
   z-index: 2;
   transform: translate(-50%, 0rem) rotate(45deg);
   transition: opacity 250ms ease-in, visibility 0ms linear 250ms;
+
   // transition: 100ms ease-in;
   @include small {
     display: none;
