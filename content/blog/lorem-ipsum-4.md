@@ -5,6 +5,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 author: Filecoin Foundation
 image: '/images/blog/filecoin-improvement-proposal.png'
 recommendedPosts: ['lorem-ipsum-1', 'lorem-ipsum-2', 'lorem-ipsum-3']
+tags: ['Lorem Ipsum Tag','Lorem Ipsum Tag', 'Another Lorem Ipsum Tag']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.   
