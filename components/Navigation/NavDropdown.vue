@@ -150,14 +150,14 @@ export default {
 
 .nav-dropdown-inner {
   position: absolute;
-  transform: translateX(2000px);
-  transition: 250ms ease;
+  &:not(.center) {
+    transform: translateX(2000px);
+  }
   &.active {
     animation-duration: 250ms;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    // transform: translateX(0rem);
     &.left {
       animation-name: rightin;
     }

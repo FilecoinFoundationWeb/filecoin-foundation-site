@@ -4,106 +4,7 @@
       <div class="col">
         <div class="content">
           <component
-            :is="navigationComponentType"
-            :mobile-panel-opened="mobilePanelOpen">
-
-            <template #sitelogo>
-              <nuxt-link to="/">
-                <LogoHorizontal id="logo-horizontal" />
-              </nuxt-link>
-            </template>
-
-            <template #navitems>
-              <nav
-                v-if="!mobile"
-                class="navigation"
-                @mouseleave="setActiveItem(-1)">
-
-                <div
-                  v-for="(link, index) in links"
-                  :key="index"
-                  :class="['nav-hover-wrapper', 'dropdown-background', 'nav-item-wrapper']"
-                  @mouseover="setActiveItem(index)">
-                  <div
-                    class="nav-link top-level">
-                    <span class="text">{{ link.text }}</span>
-                  </div>
-                </div>
-
-                <NavMegaMenu
-                  :panel="true"
-                  :activeIndex="activeItem"
-                  :nested-display="!mobile">
-                    <NavDropdown
-                      v-for="(link, index) in links"
-                      :key="`$dropdown-${index}-${componentKey}`"
-                      :link="link"
-                      :scroll="false"
-                      :nested-display="!mobile"
-                      :class="[{ active: index === activeItem }, { last: index === lastItem }, index === lastItem || index === activeItem ? direction : '']"
-                      behavior="hover">
-                    </NavDropdown>
-                </NavMegaMenu>
-
-              </nav>
-
-              <Zero_Core__Accordion
-                v-if="mobile"
-                v-slot="{ active }">
-                <Zero_Core__Accordion_Section
-                  v-for="(link, index) in links"
-                  :key="index"
-                  :active="active"
-                  :selected="true"
-                  class="nav-accordion-item">
-                  <Zero_Core__Accordion_Header>
-                    <div
-                      class="mobile-nav-heading"
-                      v-html="link.description">
-                    </div>
-                  </Zero_Core__Accordion_Header>
-                  <Zero_Core__Accordion_Content>
-                    <div class="accordion-content-wrapper">
-                      <div v-html="link.description"></div>
-                      <ul v-if="Array.isArray(link.links)">
-                        <li @click="toggleMobileNav">
-                          <Button
-                            :button="convertMainLinkToSublink(link)"
-                            class="nav-link first-level">
-                            {{ link.text }}
-                          </Button>
-                        </li>
-                        <li
-                          v-for="sublink in link.links"
-                          :key="`${link.text}-${sublink.text}`">
-
-                          <Button
-                            :button="sublink"
-                            :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-                            {{ sublink.text }}
-                          </Button>
-
-                        </li>
-                      </ul>
-                    </div>
-                  </Zero_Core__Accordion_Content>
-                </Zero_Core__Accordion_Section>
-              </Zero_Core__Accordion>
-            </template>
-
-            <template #action>
-              <div
-                v-if="mobile"
-                :class="['hamburger-icon', {'close-icon' : mobilePanelOpen}]"
-                tabindex="0"
-                @click="toggleMobileNav"
-                @keyup.enter="toggleMobileNav">
-                <div class="top"></div>
-                <div class="middle"></div>
-              </div>
-            </template>
-
-          </component>
+            :is="navigationComponentType" />
 
         </div>
       </div>
@@ -155,10 +56,11 @@ export default {
       mini: false,
       mobile: false,
       mobilePanelOpen: false,
-      activeItem: 0,
-      lastItem: 0,
+      activeItem: -1,
+      lastItem: -1,
       resize: false,
-      componentKey: 0
+      componentKey: 0,
+      entryAnimation: true
     }
   },
 
@@ -169,17 +71,8 @@ export default {
     links () {
       return this.siteContent.general.navigation
     },
-    navDropdownActive () {
-      return this.activeItems.some(el => el)
-    },
     navigationComponentType () {
       return this.mobile ? 'NavMobile' : 'NavDesktop'
-    },
-    direction () {
-      if (this.activeItem === this.lastItem) {
-        return ''
-      }
-      return this.activeItem < this.lastItem ? 'left' : 'right'
     }
   },
 
@@ -206,17 +99,6 @@ export default {
   methods: {
     toggleMobileNav () {
       this.mobilePanelOpen = !this.mobilePanelOpen
-    },
-    setActiveItem (newIndex) {
-      if (newIndex >= 0) {
-        if (this.activeItem !== newIndex) {
-          this.lastItem = this.activeItem
-          this.activeItem = newIndex
-          this.componentKey++
-        }
-      } else {
-        this.activeItem = -1
-      }
     },
     convertMainLinkToSublink (link) {
       return {
@@ -258,6 +140,19 @@ export default {
   }
 }
 
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include medium {
+    justify-content: space-between;
+  }
+}
+
 // //////////////////////////////////////////////////////////////////////// Logo
 #logo-horizontal {
   height: 2.5rem;
@@ -265,6 +160,7 @@ export default {
 }
 
 // ////////////////////////////////////////////////////////////////// Navigation
+
 .navigation {
   position: relative;
   flex-grow: 1;
@@ -273,15 +169,14 @@ export default {
   justify-content: space-around;
   align-items: center;
   z-index: 10;
-
 }
 
 ::v-deep .navigation {
   &:hover {
     .nav-dropdown-container {
       opacity: 1;
-      transition: transform 250ms ease-out, opacity 250ms ease-out;
-      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
+      transition: 250ms ease;
+      visibility: visible;
       z-index: 5;
     }
   }
@@ -291,6 +186,7 @@ export default {
 .nav-hover-wrapper {
   position: relative;
   padding: 1rem 0;
+  flex-grow: 1;
   // height: calc(100% + 2rem);
   @include small {
     padding: 0.375rem 0;
@@ -298,35 +194,47 @@ export default {
 }
 
 ::v-deep .nav-item-wrapper {
-  &:before {
-    content: '';
-    position: absolute;
-    opacity: 0;
-    top: -0.125rem;
-    left: 0;
-    width: 100%;
-    height: 14px;
-    transition: 200ms ease;
-    border-radius: 3px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='47.5' height='15' viewBox='0 0 47.5 15'%3e%3cline id='Line_81' data-name='Line 81' x2='47.5' transform='translate(47.5 7.5) rotate(180)' fill='none' stroke='%231890fd' stroke-width='3'/%3e%3cline id='Line_84' data-name='Line 84' x2='47.5' transform='translate(47.5 4.5) rotate(180)' fill='none' stroke='%23154ed9' stroke-width='3'/%3e%3cline id='Line_85' data-name='Line 85' x2='47.5' transform='translate(47.5 1.5) rotate(180)' fill='none' stroke='%230520a2' stroke-width='3'/%3e%3cline id='Line_82' data-name='Line 82' x2='47.5' transform='translate(47.5 10.5) rotate(180)' fill='none' stroke='%2373b4ed' stroke-width='3'/%3e%3cline id='Line_83' data-name='Line 83' x2='47.5' transform='translate(47.5 13.5) rotate(180)' fill='none' stroke='%23eff6fc' stroke-width='3'/%3e%3c/svg%3e ");
-    transform: translateY(-1rem);
+  .top-level {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      top: calc(-14px - 0.375rem);
+      left: 0;
+      width: 100%;
+      height: 14px;
+      transition: 200ms ease;
+      border-radius: 3px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='47.5' height='15' viewBox='0 0 47.5 15'%3e%3cline id='Line_81' data-name='Line 81' x2='47.5' transform='translate(47.5 7.5) rotate(180)' fill='none' stroke='%231890fd' stroke-width='3'/%3e%3cline id='Line_84' data-name='Line 84' x2='47.5' transform='translate(47.5 4.5) rotate(180)' fill='none' stroke='%23154ed9' stroke-width='3'/%3e%3cline id='Line_85' data-name='Line 85' x2='47.5' transform='translate(47.5 1.5) rotate(180)' fill='none' stroke='%230520a2' stroke-width='3'/%3e%3cline id='Line_82' data-name='Line 82' x2='47.5' transform='translate(47.5 10.5) rotate(180)' fill='none' stroke='%2373b4ed' stroke-width='3'/%3e%3cline id='Line_83' data-name='Line 83' x2='47.5' transform='translate(47.5 13.5) rotate(180)' fill='none' stroke='%23eff6fc' stroke-width='3'/%3e%3c/svg%3e ");
+      transform: translateY(-1rem);
+    }
   }
   &:hover {
-    &:before {
-      transform: translateY(0);
-      opacity: 1;
+    .top-level {
+      &:before {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 }
 
 ::v-deep .nav-link {
   color: $white;
+  text-align: center;
+
+  &.top-level {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.first-level {
     @include fontWeight_Medium;
     transition: 250ms ease-in-out;
   }
 }
-
 
 // /////////////////////////////////////////////////////////// mobile nav toggle
 .hamburger-icon {
