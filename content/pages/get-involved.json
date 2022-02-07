@@ -30,7 +30,15 @@
             "push_left": "off-2_mi-1"
           },
           "heading": "Careers",
-          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. <a href='https://jobs.lever.co/filecoin' target='_blank'>Check out our open roles</a>.",
+          "ctas": [{
+            "type": "B",
+            "action": "a",
+            "target": "_blank",
+            "icon": "plus",
+            "text": "View All",
+            "url": "https://jobs.lever.co/filecoin"
+          }]
         }
       },
       "careers_list": {
@@ -53,12 +61,13 @@
           "cards": [
             {
               "type": "D",
-              "date": "2021-09-04T18:39:26Z",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Communications Associate",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
@@ -66,25 +75,27 @@
             },
             {
               "type": "D",
-              "date": "2021-09-20T18:39:59Z",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Developer Grants Coordinator",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/d7fa677a-5d92-4043-929c-56d6cb7bc73b"
+                "url": "https://jobs.lever.co/filecoin/97883211-62bb-4ccd-8d3c-c7f13a3ab1f1"
               }
             },
             {
               "type": "D",
-              "date": "2021-10-08T18:40:51Z",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Program Manager, Filecoin Developer Grants",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
@@ -170,7 +181,7 @@
               "url": "//filecoin.io/slack",
               "img": "/images/hands-raised.png",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>",
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel",
               "action": "a"
             },
             {

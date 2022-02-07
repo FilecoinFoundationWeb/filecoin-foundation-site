@@ -191,42 +191,54 @@
           "cards": [
             {
               "type": "A",
-              "img": "/images/pencil.png",
+              "action": "a",
+              "url": "",
+              "img": "/icons/pencil.png",
               "img_size": "regular",
               "title": "Filecoin Notary Portal",
               "description": "The official client and notary portal, hosted by the Filecoin website"
             },
             {
               "type": "A",
-              "img": "/images/plus.png",
+              "action": "a",
+              "url": "https://github.com/filecoin-project",
+              "img": "/icons/plus.png",
               "img_size": "regular",
               "title": "Filecoin Plus GitHub",
               "description": "The hub for client applications for DataCap at a large scale"
             },
             {
               "type": "A",
-              "img": "/images/upstairs.png",
+              "action": "a",
+              "url": "",
+              "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
               "description": "Putting the power in the hands of clients and incentivizing storage providers"
             },
             {
               "type": "A",
-              "img": "/images/stamp.png",
+              "action": "a",
+              "url": "https://github.com/filecoin-project/notary-governance/",
+              "img": "/icons/stamp.png",
               "img_size": "regular",
               "title": "Notary Governance Repo",
               "description": "Join the Filecoin notary conversation on GitHub"
             },
             {
               "type": "A",
-              "img": "/images/key.png",
+              "action": "a",
+              "url": "",
+              "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
               "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions"
             },
             {
               "type": "A",
-              "img": "/images/calendar.png",
+              "action": "a",
+              "url": "https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+              "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Community Calendar",
               "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"

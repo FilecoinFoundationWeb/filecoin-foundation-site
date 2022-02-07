@@ -246,6 +246,9 @@
             "num": "col-10_mi-11",
             "push_left": "off-2_mi-1"
           },
+          "preview_image": "/images/page-index/meet-the-filecoin-foundation-preview.png",
+          "url": "https://youtu.be/6OY4xAs3Grg",
+          "tint": true,
           "subtext": {
             "type": "D",
             "action": "video",

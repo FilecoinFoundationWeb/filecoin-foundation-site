@@ -387,6 +387,13 @@ export default {
   padding: 0.25rem;
   color: white;
   background-color: $azureRadiance;
+  transform: scale(1);
+  transition: 300ms ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.0);
+  &:hover {
+    transform: scale(1.03125);
+    box-shadow: 3px 7px 10px rgba(10, 30, 82, 0.25);
+  }
   &:not(.with-image) {
     display: flex;
     flex-direction: column;
@@ -407,6 +414,7 @@ export default {
     }
   }
   .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
