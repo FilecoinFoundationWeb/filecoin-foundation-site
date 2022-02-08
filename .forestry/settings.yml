@@ -4,13 +4,43 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Site Data
+- type: document
+  path: content/pages/general.json
+  label: General
+- type: heading
+  label: Content
 - type: directory
-  path: content
-  label: Site Content
+  path: content/blog
+  label: Blog
   create: all
   match: "**/*"
-upload_dir: uploads
-public_path: "/uploads"
+  new_doc_ext: md
+  templates:
+  - blog-post-front-matter
+- type: directory
+  path: content/pages
+  label: Pages
+  create: documents
+  match: "**/*"
+  exclude: general.json
+  new_doc_ext: json
+  templates:
+  - page-index
+  - page-grants
+  - page-terms
+  - page-policy
+  - page-governance
+  - page-about
+  - page-ecosystem
+  - page-blog
+  - page-events
+  - page-basic-template-1
+  - page-basic-template-2
+  - page-get-involved
+upload_dir: static/images
+public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"

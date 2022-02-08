@@ -1,0 +1,666 @@
+---
+label: "[Page] Basic Template 2"
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group
+  name: page_content
+  label: page_content
+  fields:
+  - type: field_group
+    name: section_1
+    label: section_1
+    fields:
+    - type: field_group
+      name: basic_hero
+      label: basic_hero
+      fields:
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: large
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-5_md-9_mi-10
+          - type: text
+            name: push_left
+            label: push_left
+            hidden: false
+            default: off-2_mi-1
+          hidden: true
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: subheading
+          label: subheading
+      - type: field_group
+        name: right
+        label: Right Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: image_block
+        - type: file
+          name: src
+          label: Image
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-5_md-9_mi-10
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-0_md-2_mi-1
+          hidden: true
+    - type: field_group
+      name: intro_1
+      label: intro_1
+      fields:
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: small
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            hidden: false
+            default: col-7_mi-8
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-5_mi-4
+          hidden: true
+        - type: textarea
+          name: description
+          label: description
+        - type: field_group
+          name: customizations
+          label: customizations
+          fields:
+          - type: field_group
+            name: background_layers
+            label: background_layers
+            fields:
+            - type: text
+              name: name
+              label: name
+              hidden: true
+              default: BackgroundLayers
+            - type: field_group
+              name: props
+              label: props
+              fields:
+              - type: text
+                name: layers-array
+                label: layers-array
+                hidden: true
+                default: '8_6_5_4_3'
+              - type: field_group
+                name: offset
+                label: offset
+                fields:
+                - type: number
+                  name: medium
+                  label: medium
+                  hidden: true
+                  default: 0.75
+                - type: number
+                  name: mini
+                  label: mini
+                  hidden: true
+                  default: 0.25
+              - type: boolean
+                name: reverse
+                label: reverse
+                hidden: true
+                default: true
+          hidden: true
+    - type: field_group
+      name: cta_banner_1
+      label: cta_banner_1
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+        hidden: true
+        default: basic-template-block-format
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: image_block
+        - type: file
+          name: src
+          label: Image
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            hidden: true
+            default: col-5_sm-4_mi-6
+          - type: text
+            name: push_left
+            label: push_left
+            hidden: true
+            default: off-2_mi-1
+          hidden: true
+      - type: field_group
+        name: right
+        label: Right Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: medium
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            hidden: true
+            default: col-4_sm-9_mi-10
+          - type: text
+            name: push_left
+            label: push_left
+            hidden: true
+            default: off-1_sm-2_mi-1
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: field_group_list
+          name: ctas
+          label: CTA
+          fields:
+          - type: text
+            name: type
+            label: type
+            default: A
+            hidden: true
+          - type: text
+            name: theme
+            label: theme
+            hidden: true
+            default: light
+          - type: text
+            name: action
+            label: action
+            hidden: true
+            default: nuxt-link
+          - type: text
+            name: text
+            label: text
+          - type: text
+            name: url
+            label: url
+          config:
+            max: 1
+    - type: field_group
+      name: basic_content_1
+      label: basic_content_1
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+        hidden: true
+        default: basic-template-block-format
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: large
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-10_ti-11
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-2_md-2_mi-1_ti-1
+          hidden: true
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+    - type: field_group
+      name: basic_content_2
+      label: basic_content_2
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+        hidden: true
+        default: basic-template-block-format
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: large
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-10_ti-11
+          - type: text
+            name: push_left
+            label: push_left
+            hidden: false
+            default: off-2_md-2_mi-1_ti-1
+          hidden: true
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+    - type: field_group
+      name: basic_content_3
+      label: basic_content_3
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+        hidden: true
+        default: basic-template-block-format
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: large
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-10_ti-11
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-2_md-2_mi-1_ti-1
+          hidden: true
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+    - type: field_group
+      name: panels_1
+      label: panels_1
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+        hidden: true
+        default: basic-template-block-format
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: medium
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-4_sm-9_mi-10
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-2_md-2_mi-1_ti-1
+          hidden: true
+        - type: text
+          name: label
+          label: label
+        - type: textarea
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+      - type: field_group
+        name: right
+        label: Right Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: image_block
+        - type: file
+          name: src
+          label: Image
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-5_md-5_sm-7_mi-8
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-1_mi-2_sm-2_mi-1
+          hidden: true
+  - type: field_group
+    name: section_2
+    label: section_2
+    fields:
+    - type: field_group
+      name: resources
+      label: resources
+      fields:
+      - name: grid
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid Classes
+      - type: field_group
+        name: left
+        label: Left Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: medium
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-3_sm-10_mi-9
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-1_sm-2
+          hidden: true
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: field_group_list
+          name: ctas
+          label: CTA
+          fields:
+          - type: text
+            name: type
+            label: type
+            hidden: true
+            default: A
+          - type: text
+            name: action
+            label: action
+            hidden: true
+            default: a
+          - type: text
+            name: theme
+            label: theme
+            hidden: true
+            default: light
+          - type: text
+            name: target
+            label: target
+            hidden: true
+            default: _blank
+          - type: text
+            name: text
+            label: text
+          - type: text
+            name: url
+            label: url
+          config:
+            max: 1
+      - type: field_group
+        name: right
+        label: Right Block
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: slider_block
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+            default: col-6_sm-7_ti-9
+          - type: text
+            name: push_left
+            label: push_left
+            default: off-2_sm-3_mi-2
+          hidden: true
+        - type: field_group_list
+          name: cards
+          label: cards
+          fields:
+          - type: text
+            name: type
+            label: type
+            hidden: true
+            default: A
+          - type: file
+            name: img
+            label: Image
+          - type: text
+            name: img_size
+            label: img_size
+            hidden: true
+            default: regular
+          - type: text
+            name: title
+            label: title
+          - type: text
+            name: description
+            label: description
+          config:
+            max: 6
+        - type: field_group
+          name: customizations
+          label: customizations
+          fields:
+          - type: field_group
+            name: background_layers
+            label: background_layers
+            fields:
+            - type: text
+              name: name
+              label: name
+              hidden: true
+              default: BackgroundLayers
+            - type: field_group
+              name: props
+              label: props
+              fields:
+              - type: text
+                name: layers-array
+                label: layers-array
+                hidden: true
+                default: '8_6'
+              - type: field_group
+                name: offset
+                label: offset
+                fields:
+                - type: number
+                  name: mini
+                  label: mini
+                  hidden: true
+                  default: 0.25
+              - type: boolean
+                name: reverse
+                label: reverse
+                hidden: true
+                default: true
+          hidden: true
+  - type: field_group
+    name: section_3
+    label: section_3
+    fields:
+    - name: dive_deeper
+      type: include
+      config: {}
+      template: comp-divedeeper
+      label: Dive Deeper
+pages:
+- content/pages/basic-template-2.json

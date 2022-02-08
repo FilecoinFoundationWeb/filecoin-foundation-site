@@ -8,8 +8,7 @@
       <PageSection
         v-if="featuredPost"
         id="featured-section"
-        :section="featuredPost">
-      </PageSection>
+        :section="featuredPost" />
 
       <div class="grid">
         <div class="col-8_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
@@ -27,12 +26,11 @@
       <PageSection
         v-if="blogPosts"
         id="blogposts-section"
-        :section="blogPosts">
-      </PageSection>
+        :section="blogPosts" />
 
       <BackgroundLayers
         id="page-blog-background-layers"
-        :layers-array="[3, 4, 5, 6]"
+        layers-array="3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -113,13 +111,8 @@ export default {
       return arr
     },
     featuredPost () {
-      let featured
-      for (let i = 0; i < this.markdownFiles.length; i++) {
-        if (this.markdownFiles[i].featured) {
-          featured = this.markdownFiles[i]
-          break
-        }
-      }
+      const featured = this.markdownFiles.find(file => file.hasOwnProperty('featured') && file.featured)
+
       if (featured) {
         const section = {
           id: 'featured-post',
@@ -288,24 +281,27 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #zero-filter-bar {
+  position: relative;
   margin-left: 0.5rem;
   width: calc(100% - 2rem);
   height: 2.5rem;
-  background-color: $denim;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0 .5rem $azureRadiance;
+  @include blogPageOutline;
   .icon-container {
     margin: 0 0.5rem;
+    height: 100%;
+    z-index: 10;
   }
   .input {
+    position: relative;
+    left: -1px;
     font-size: 14px;
     @include fontWeight_Medium;
     letter-spacing: $letterSpacing_Large;
     color: $white;
-    background-color: $denim;
-    border-radius: 0.5rem;
+    background-color: transparent;
     outline: none;
     border: none;
+    z-index: 10;
     &::placeholder {
       font-size: 14px;
       color: $azureRadiance;

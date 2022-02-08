@@ -8,8 +8,8 @@
           <div class="footer-content left">
 
             <div
-              v-for="(item, index) in text"
-              :key="index"
+              v-for="(item, key) in text"
+              :key="key"
               class="text-item"
               v-html="item">
             </div>
@@ -36,7 +36,7 @@
       </div>
 
       <BackgroundLayers
-        :layers-array="[1, 2, 3, 4, 5, 6]"
+        layers-array="1_2_3_4_5_6"
         :offset="{ mini: 0.25 }"
         shadow-strength="small"
         border-radius-direction="reverse" />
