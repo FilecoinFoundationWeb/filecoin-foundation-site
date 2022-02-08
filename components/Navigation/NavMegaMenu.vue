@@ -157,8 +157,10 @@ export default {
       const dimensions = this.childrenDimensions[index]
       this.currentWidth = dimensions.width + 20 + 'px'
       this.currentHeight = dimensions.height + 20 + 'px'
+
       const threshold = this.navWidth - (dimensions.width / 2) + 30
       this.panelLeft = Math.max(0, Math.min(dimensions.left, threshold)) + 'px'
+
       const arrow = dimensions.left - threshold > 0 ? dimensions.left - threshold + (dimensions.width / 2) : (dimensions.width / 2)
       this.arrowLeft = arrow + 'px'
     }
@@ -168,7 +170,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+// ////////////////////////////////////////////////////////// Dropdown Container
 .nav-dropdown-container {
   position: absolute;
   display: flex;
@@ -224,6 +226,7 @@ export default {
   height: 100%;
 }
 
+// ///////////////////////////////////////////////////////////// Indicator arrow
 .arrow {
   position: absolute;
   top: -0.5rem;
@@ -287,6 +290,7 @@ export default {
   }
 }
 
+// ////////////////////////////////////////////////////////////////// Animations
 @keyframes swingdown {
   from {
     transform: translate(-50%, 1rem) perspective(200px) rotateX(-10deg);

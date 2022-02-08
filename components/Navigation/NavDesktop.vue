@@ -14,7 +14,7 @@
         v-for="(link, index) in links"
         :key="index"
         ref="navItems"
-        :class="['nav-hover-wrapper', 'dropdown-background', 'nav-item-wrapper']"
+        class="nav-item-wrapper"
         @mouseover="setActiveItem(index)">
         <div
           class="nav-link top-level">
@@ -148,7 +148,7 @@ export default {
   }
 }
 
-.nav-hover-wrapper {
+.nav-item-wrapper {
   position: relative;
   padding: 1rem 0;
   flex-grow: 1;
@@ -156,9 +156,7 @@ export default {
   @include small {
     padding: 0.375rem 0;
   }
-}
 
-::v-deep .nav-item-wrapper {
   .top-level {
     position: relative;
     &:before {
@@ -185,7 +183,7 @@ export default {
   }
 }
 
-::v-deep .nav-link {
+.nav-link {
   color: $white;
   text-align: center;
 
@@ -193,11 +191,6 @@ export default {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  &.first-level {
-    @include fontWeight_Medium;
-    transition: 250ms ease-in-out;
   }
 }
 

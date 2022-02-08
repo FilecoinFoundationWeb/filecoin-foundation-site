@@ -1,7 +1,7 @@
 <template>
   <nav class="site-nav" role="navigation">
 
-    <div :class="['top-panel', { 'top-open': mobilePanelOpened }]">
+    <div :class="['top-panel', { 'top-open': mobilePanelOpen }]">
       <nuxt-link to="/">
         <LogoHorizontal id="logo-horizontal" />
       </nuxt-link>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div :class="[ 'mega-menu', { 'nav-panel-open': mobilePanelOpened } ]">
+    <div :class="[ 'mega-menu', { 'nav-panel-open': mobilePanelOpen } ]">
       <div class="mobile-panel-wrapper">
         <Zero_Core__Accordion
           v-slot="{ active }">
@@ -49,7 +49,7 @@
 
                     <Button
                       :button="sublink"
-                      :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+                      class="nav-link first-level">
                       {{ sublink.text }}
                     </Button>
 
@@ -80,14 +80,6 @@ export default {
     Button
   },
 
-  props: {
-    mobilePanelOpened: {
-      type: Boolean,
-      required: false,
-      default: false
-    }
-  },
-
   data () {
     return {
       mobilePanelOpen: false
@@ -110,6 +102,9 @@ export default {
       if (newHash !== oldHash) {
         this.toggleMobileNav()
       }
+    },
+    mobilePanelOpen (val) {
+      this.$emit('panel-open', val)
     }
   },
 
@@ -131,6 +126,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// ////////////////////////////////////////////////////////////////// Containers
 .site-nav {
   display: flex;
   flex-direction: row;
@@ -139,6 +135,9 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  @include small {
+    background-color: $blackPearl;
+  }
   @include mini {
     flex-direction: column;
   }
@@ -154,6 +153,14 @@ export default {
   height: 100%;
   min-width: 85%;
   z-index: 1000;
+  transition: 200ms ease;
+  transition-delay: 200ms;
+  background-color: transparent;
+  &.top-open {
+    @include small {
+      background-color: $blackPearl;
+    }
+  }
   @include small {
     padding: 0 1rem;
     margin-bottom: 0;
@@ -170,11 +177,9 @@ export default {
   width: 100vw;
   // height: 100vh;
   max-height: calc(100vh + 1rem);
-  top: 0;
+  top: -1rem;
   left: 0;
-  // left: 100vw;
   transform: translateY(-100%);
-  // background-color: rgba(0, 0, 0, 0.9);
   overflow-y: scroll;
   transition: 250ms ease-in;
   z-index: 100;
@@ -182,92 +187,167 @@ export default {
   // --------
   // padding: $navigationHeight 3rem 3rem 3rem;
   // padding-top: $navigationHeight !important;
-  top: -1rem;
   // height: calc(100% + 1rem);
   // --------
+
+  background-color: $denim;
+  border: 5px solid $azureRadiance;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
 
   &.nav-panel-open {
     // left: calc(-0.041665 * 100vw - 2rem);
     transform: translateY(0);
   }
+}
 
-  .accordion-section {
-    &.open {
-      margin-bottom: 1rem;
-      .accordion-header {
-        &:after {
-          transition: 250ms ease-in;
-          transform: rotate(0deg);
-        }
-      }
-    }
+// //////////////////////////////////////////////////////////////////////// Logo
+#logo-horizontal {
+  height: 2.5rem;
+  margin-right: 4rem;
+}
+
+// ////////////////////////////////////////////////////////////////// Navigation
+.mobile-panel-wrapper {
+  display: block;
+  overflow: auto;
+  position: relative;
+  width: calc(100% - 10px);
+  min-height: calc(100% + 5px);
+  left: 5px;
+  top: -5px;
+  padding: $navigationHeight 2.5rem 2.5rem 2.5rem;
+  background-color: $blackPearl;
+  border: 5px solid $kleinBlue;
+  border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: $blackPearl;
+    z-index: 100;
   }
+}
+
+.nav-link {
+  color: $white;
+  text-align: center;
+
+  &.first-level {
+    @include fontWeight_Medium;
+    transition: 250ms ease-in-out;
+  }
+}
+
+// /////////////////////////////////////////////////////////////////// Accordion
+::v-deep .accordion {
+  position: relative;
+  z-index: 100;
+  .accordion-section,
   .accordion-header {
-    padding: 1rem 0;
     position: relative;
-    cursor: pointer;
-    &:after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 0.3125rem;
-      width: 1.125rem;
-      height: 100%;
-      background: url('~assets/svgs/chevrondown.svg') no-repeat right center;
-      transform: rotate(-180deg);
-      transition: 250ms ease-out;
-    }
-    .image {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 2rem;
-    }
-    .title {
-      @include fontWeight_Medium;
-      padding-left: 3.25rem;
-    }
-    .text {
-      display: none;
-    }
+    z-index: 100;
   }
-  .accordion-content {
-    .image {
-      display: none;
-    }
-    .title {
-      display: none;
-    }
-    .text {
-      @include leading_Large;
-      padding-left: 4.5rem;
-      padding-right: 1rem;
-      margin-bottom: 1rem;
-      letter-spacing: $letterSpacing_Large;
-    }
-    ul {
-      padding-left: 4.5rem;
-      list-style: none;
-    }
-    li {
-      @include fontWeight_Medium;
-      font-size: 0.875rem;
-      letter-spacing: $letterSpacing_Large;
-      &:not(:last-child) {
-        margin-bottom: 0.5rem;
+}
+
+::v-deep .accordion-section {
+  &.open {
+    margin-bottom: 1rem;
+    .accordion-header {
+      &:after {
+        transition: 250ms ease-in;
+        transform: rotate(0deg);
       }
     }
   }
 }
+::v-deep .accordion-header {
+  padding: 1rem 0;
+  position: relative;
+  cursor: pointer;
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0.3125rem;
+    width: 1.125rem;
+    height: 100%;
+    background: url('~assets/svgs/chevrondown.svg') no-repeat right center;
+    transform: rotate(-180deg);
+    transition: 250ms ease-out;
+  }
+  .image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+  }
+  .extras {
+    min-width: 15rem;
+  }
+  .title{
+    transition: 250ms ease-in-out;
+    @include fontWeight_Medium;
+    padding-left: 3.25rem;
+  }
+  .text {
+    display: none;
+  }
+}
 
-// .mobile-panel {
-//   display: none;
-//   &.open {
-//     display: block;
-//   }
-// }
+::v-deep .accordion-content {
+  .image {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  .text {
+    @include leading_Large;
+    @include fontSize_Small;
+    padding-left: 4.5rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: $letterSpacing_Large;
+    transition: 250ms ease-in-out;
+    transform: scale(1);
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+  ul {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 4.5rem;
+    &:hover {
+      .nav-link.first-level {
+        opacity: 0.5;
+        transform: scale(1);
+        transition: 250ms ease-in-out;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  li {
+    @include fontWeight_Medium;
+    font-size: 0.875rem;
+    list-style-type: none;
+    letter-spacing: $letterSpacing_Large;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
 
 // /////////////////////////////////////////////////////////// mobile nav toggle
 .hamburger-icon {
@@ -307,195 +387,4 @@ export default {
   }
 }
 
-::v-deep .accordion {
-  position: relative;
-  z-index: 100;
-  .accordion-section,
-  .accordion-header {
-    position: relative;
-    z-index: 100;
-  }
-}
-
-// ///////////////////////////////////////////////////////////////////// General
-#site-navigation {
-  position: relative;
-  z-index: 1000;
-  @include small {
-  }
-  &.noscroll {
-    @include small {
-      position: fixed;
-      z-index: 10000;
-      top: 0;
-      width: 100%;
-    }
-  }
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: $navigationHeight;
-  .nuxt-link-active {
-    z-index: 10;
-  }
-}
-
-.site-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  @include medium {
-    justify-content: space-between;
-  }
-}
-
-// //////////////////////////////////////////////////////////////////////// Logo
-#logo-horizontal {
-  height: 2.5rem;
-  margin-right: 4rem;
-}
-
-// ////////////////////////////////////////////////////////////////// Navigation
-
-.navigation {
-  position: relative;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 10;
-}
-
-::v-deep .navigation {
-  &:hover {
-    .nav-dropdown-container {
-      opacity: 1;
-      transition: 250ms ease;
-      visibility: visible;
-      z-index: 5;
-    }
-  }
-}
-
-
-.nav-hover-wrapper {
-  position: relative;
-  padding: 1rem 0;
-  flex-grow: 1;
-  // height: calc(100% + 2rem);
-  @include small {
-    padding: 0.375rem 0;
-  }
-}
-
-::v-deep .nav-item-wrapper {
-  .top-level {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      opacity: 0;
-      top: calc(-14px - 0.375rem);
-      left: 0;
-      width: 100%;
-      height: 14px;
-      transition: 200ms ease;
-      border-radius: 3px;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='47.5' height='15' viewBox='0 0 47.5 15'%3e%3cline id='Line_81' data-name='Line 81' x2='47.5' transform='translate(47.5 7.5) rotate(180)' fill='none' stroke='%231890fd' stroke-width='3'/%3e%3cline id='Line_84' data-name='Line 84' x2='47.5' transform='translate(47.5 4.5) rotate(180)' fill='none' stroke='%23154ed9' stroke-width='3'/%3e%3cline id='Line_85' data-name='Line 85' x2='47.5' transform='translate(47.5 1.5) rotate(180)' fill='none' stroke='%230520a2' stroke-width='3'/%3e%3cline id='Line_82' data-name='Line 82' x2='47.5' transform='translate(47.5 10.5) rotate(180)' fill='none' stroke='%2373b4ed' stroke-width='3'/%3e%3cline id='Line_83' data-name='Line 83' x2='47.5' transform='translate(47.5 13.5) rotate(180)' fill='none' stroke='%23eff6fc' stroke-width='3'/%3e%3c/svg%3e ");
-      transform: translateY(-1rem);
-    }
-  }
-  &:hover {
-    .top-level {
-      &:before {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  }
-}
-
-::v-deep .nav-link {
-  color: $white;
-  text-align: center;
-
-  &.top-level {
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &.first-level {
-    @include fontWeight_Medium;
-    transition: 250ms ease-in-out;
-  }
-}
-
-
-// ////////////////////////////////////////////////////// mobile navigation menu
-::v-deep .site-nav {
-  @include small {
-    background-color: $blackPearl;
-  }
-}
-
-::v-deep .top-panel {
-  transition: 200ms ease;
-  transition-delay: 200ms;
-  background-color: transparent;
-  &.top-open {
-    @include small {
-      background-color: $blackPearl;
-    }
-  }
-}
-
-.mega-menu {
-  left: 0;
-  background-color: $denim;
-  border: 5px solid $azureRadiance;
-  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
-  color: $white;
-}
-
-::v-deep .mobile-panel-wrapper {
-  display: block;
-  overflow: auto;
-  position: relative;
-  width: calc(100% - 10px);
-  min-height: calc(100% + 5px);
-  left: 5px;
-  top: -5px;
-  padding: $navigationHeight 2.5rem 2.5rem 2.5rem;
-  background-color: $blackPearl;
-  border: 5px solid $kleinBlue;
-  border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3rem;
-    background-color: $blackPearl;
-    z-index: 100;
-  }
-}
-
-::v-deep .mobile-panel {
-  display: block;
-  overflow-y: scroll;
-  height: 100vh;
-  padding: 3rem 2rem 2rem 3rem;
-  padding-top: calc(6.25rem + 15px);
-}
 </style>

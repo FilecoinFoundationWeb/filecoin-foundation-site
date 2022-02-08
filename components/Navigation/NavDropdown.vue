@@ -3,7 +3,7 @@
   <div
     v-if="link.hasOwnProperty('links')"
     ref="innerPane"
-    :class="firstLevelClassList">
+    class="nav-dropdown-inner">
 
     <div class="nav-dropdown-panel-left">
 
@@ -20,7 +20,7 @@
 
             <Button
               :button="sublink"
-              :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
+              class="nav-link first-level">
               {{ sublink.text }}
             </Button>
 
@@ -64,38 +64,6 @@ export default {
       type: Object,
       required: false,
       default: () => {}
-    },
-    scroll: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
-    behavior: {
-      type: String,
-      required: false,
-      default: 'hover'
-    },
-    nestedDisplay: {
-      type: Boolean,
-      required: false,
-      default: true
-    }
-  },
-
-  data () {
-    return {
-      maxHeight: 'unset',
-      minWidth: 'unset',
-      panelLeft: '50%',
-      popoutLeft: '100%',
-      dropdownOpen: false,
-      resize: false
-    }
-  },
-
-  computed: {
-    firstLevelClassList () {
-      return this.nestedDisplay ? 'nav-dropdown-inner dropdown-background' : 'nav-panel'
     }
   }
 }
@@ -103,7 +71,174 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// //////////////////////////////////////////////////////////// Dropdown Content
+.nav-dropdown-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
 
+  &:not(.center) {
+    transform: translateX(2000px);
+  }
+
+  &.active {
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &.left {
+      animation-name: rightin;
+    }
+    &.right {
+      animation-name: leftin;
+    }
+  }
+
+  &.last {
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &.left {
+      animation-name: rightout;
+    }
+    &.right {
+      animation-name: leftout;
+    }
+  }
+
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    &:hover {
+      .nav-link.first-level {
+        opacity: 0.5;
+        transform: scale(1);
+        transition: 250ms ease-in-out;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .ul-second {
+    padding: 0 1rem;
+  }
+  li {
+    list-style-type: none;
+    &:last-child {
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+::v-deep .extras {
+  min-width: 15rem;
+  display: block;
+  position: relative;
+  z-index: 10;
+  img {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 2rem;
+  }
+  .title,
+  .text {
+    transition: 250ms ease-in-out;
+  }
+  .title {
+    @include fontWeight_Medium;
+    display: inline-block;
+    margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .text {
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+  .text {
+    @include fontSize_Small;
+  }
+}
+
+
+.nav-dropdown-panel-left {
+  padding: 2rem 3rem 2rem 5rem;
+  + .nav-dropdown-panel-right {
+    margin-left: -2rem;
+  }
+}
+
+::v-deep .nav-dropdown-panel-right {
+  position: relative;
+  padding: 2rem 3rem 2rem 2rem;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background: $deepCove;
+    border-radius: 0 5px 71px 0 !important;
+    z-index: 1;
+  }
+  .nav-dropdown-panel-right-wrapper {
+    position: relative;
+    z-index: 2;
+    .panel-right-title {
+      @include fontWeight_Medium;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
+    .social-icons {
+      flex-direction: column;
+      align-items: flex-start;
+      .social-icon {
+        align-items: center;
+        width: auto;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        svg {
+          width: 1.5rem;
+          margin-right: 1rem;
+        }
+      }
+      .label {
+        @include fontSize_Small;
+        @include fontWeight_SemiBold;
+        display: block;
+      }
+    }
+  }
+}
+
+.first-level-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
+  }
+}
+
+.nav-link {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+// ////////////////////////////////////////////////////////////////// Animations
 @keyframes leftin {
   from {
     transform: translateX(100%);
@@ -146,159 +281,6 @@ export default {
     transform: translateX(100%);
     opacity: 0;
   }
-}
-
-.nav-dropdown-inner {
-  position: absolute;
-  &:not(.center) {
-    transform: translateX(2000px);
-  }
-  &.active {
-    animation-duration: 250ms;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    &.left {
-      animation-name: rightin;
-    }
-    &.right {
-      animation-name: leftin;
-    }
-  }
-
-  &.last {
-    animation-duration: 250ms;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    &.left {
-      animation-name: rightout;
-    }
-    &.right {
-      animation-name: leftout;
-    }
-  }
-
-  display: flex;
-  flex-direction: row;
-  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
-  color: $white;
-  .extras {
-    min-width: 15rem;
-    display: block;
-    position: relative;
-    z-index: 10;
-    ::v-deep img {
-      position: absolute;
-      left: -3rem;
-      top: 0;
-      width: 2rem;
-    }
-  }
-  .title,
-  .text {
-    transition: 250ms ease-in-out;
-  }
-  .title {
-    @include fontWeight_Medium;
-    display: inline-block;
-    margin-bottom: 1rem;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  .text {
-    &:hover {
-      transform: scale(1.025);
-    }
-  }
-  .text {
-    @include fontSize_Small;
-  }
-  .social-icons {
-    flex-direction: column;
-    align-items: flex-start;
-    .social-icon {
-      align-items: center;
-      width: auto;
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      svg {
-        width: 1.5rem;
-        margin-right: 1rem;
-      }
-    }
-    .label {
-      @include fontSize_Small;
-      @include fontWeight_SemiBold;
-      display: block;
-    }
-  }
-  ul {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    margin-top: 1rem;
-    &:hover {
-      .nav-link.first-level {
-        opacity: 0.5;
-        &:hover {
-          opacity: 1;
-          transform: scale(1.05);
-          // transition: 250ms ease-in-out;
-        }
-      }
-    }
-  }
-  .ul-second {
-    padding: 0 1rem;
-  }
-  li {
-    list-style-type: none;
-    &:last-child {
-      padding-bottom: 0.5rem;
-    }
-  }
-}
-
-.nav-dropdown-panel-left {
-  padding: 2rem 3rem 2rem 5rem;
-  + .nav-dropdown-panel-right {
-    margin-left: -2rem;
-  }
-}
-
-::v-deep .nav-dropdown-panel-right {
-  position: relative;
-  padding: 2rem 3rem 2rem 2rem;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    background: $deepCove;
-    border-radius: 0 5px 71px 0 !important;
-    z-index: 1;
-  }
-  .nav-dropdown-panel-right-wrapper {
-    position: relative;
-    z-index: 2;
-    .panel-right-title {
-      @include fontWeight_Medium;
-      margin-bottom: 1rem;
-      white-space: nowrap;
-    }
-  }
-}
-
-.nav-link {
-  white-space: nowrap;
-  cursor: pointer;
 }
 
 </style>
