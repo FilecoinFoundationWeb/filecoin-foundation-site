@@ -1,0 +1,126 @@
+---
+label: "[Comp] Background Layers"
+hide_body: true
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  label: Type
+  hidden: true
+  default: custom
+- name: component
+  type: text
+  config:
+    required: false
+  label: Component
+  hidden: true
+  default: BackgroundLayers
+- name: props
+  type: field_group
+  config: {}
+  fields:
+  - name: layers-array
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Layers Array
+  - name: offset
+    type: field_group
+    config: {}
+    fields:
+    - name: large
+      type: number
+      label: Large
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: medium
+      type: number
+      label: Medium
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: small
+      type: number
+      label: Small
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: mini
+      type: number
+      label: Mini
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    - name: tiny
+      type: number
+      label: Tiny
+      description: ''
+      default: 0
+      required: true
+      config:
+        min: 
+        max: 
+        step: 
+    label: Layer Offsets
+  - name: reverse
+    type: boolean
+    label: Reverse
+  - name: borderRadius
+    type: number
+    label: Border Radius
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  - name: borderRadiusDirection
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - forward
+      - reverse
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Border Radius Direction
+  - name: shadowStrength
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - small
+      - large
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Shadow Strength
+  label: Properties

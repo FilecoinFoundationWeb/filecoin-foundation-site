@@ -1,0 +1,71 @@
+---
+label: "[Comp] Events & Hackathons"
+hide_body: true
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  label: Type
+  hidden: true
+  default: custom
+- name: component
+  type: text
+  config:
+    required: false
+  label: Component
+  hidden: true
+  default: EventsHackathons
+- name: props
+  type: field_group
+  config: {}
+  fields:
+  - name: intro
+    type: field_group
+    config: {}
+    fields:
+    - name: cols
+      type: field_group
+      config: {}
+      fields:
+      - name: num
+        type: text
+        config:
+          required: false
+        label: Number
+      - name: push_left
+        type: text
+        config:
+          required: false
+        label: Push Left
+      label: Columns
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: cta
+      type: include
+      config: {}
+      template: button
+      label: CTA
+    label: Intro
+  - name: events
+    type: field_group
+    config: {}
+    fields:
+    - name: cols
+      type: include
+      config: {}
+      template: columns
+      label: Columns
+    - name: cards
+      type: blocks
+      label: Cards
+      template_types:
+      - card
+      config:
+        min: 
+        max: 
+    label: Events
+  label: Properties

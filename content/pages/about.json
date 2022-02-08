@@ -1,18 +1,7 @@
 {
-  "seo": {
-    "title": "About - Filecoin Foundation",
-    "description": "The Filecoin Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
-  },
-  "og": {
-    "site_name": "About - Filecoin Foundation",
-    "url": "https://fil.org/about",
-    "type": "website",
-    "image": "/images/open-graph.png"
-  },
-  "page_content": [
-    [
-      {
-        "id": "hero",
+  "page_content": {
+    "section_1": {
+      "hero": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -29,8 +18,6 @@
             "num": "col-5_sm-9_mi-10",
             "push_left": "off-1_sm-2_mi-1"
           },
-          "preview_image": "/images/about/preview-about@2x.png",
-          "url": "https://youtu.be/6OY4xAs3Grg",
           "tint": true,
           "subtext": {
             "type": "D",
@@ -38,11 +25,12 @@
             "icon": "play",
             "text": "Watch: Meet the Filecoin Foundation",
             "url": "https://youtu.be/6OY4xAs3Grg"
-          }
+          },
+          "preview_image": "/images/about/preview-about@2x.png",
+          "url": "https://youtu.be/6OY4xAs3Grg"
         }
       },
-      {
-        "id": "intro_1",
+      "intro_1": {
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -50,13 +38,11 @@
             "num": "col-7_mi-8",
             "push_left": "off-5_mi-4"
           },
-          "label": "Our Mission",
-          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 3],
+                "layers-array": "8_6_5_4_3",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -64,18 +50,19 @@
                 "reverse": true
               }
             }
-          ]
+          },
+          "label": "Our Mission",
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action."
         }
       },
-      {
-        "id": "cta_1",
+      "cta_1": {
         "left": {
           "type": "image_block",
-          "src": "/images/about/computer@2x.png",
           "cols": {
             "num": "col-5_sm-7_mi-10",
             "push_left": "off-2_mi-1"
-          }
+          },
+          "src": "/images/about/computer@2x.png"
         },
         "right": {
           "type": "text_block",
@@ -99,8 +86,7 @@
           ]
         }
       },
-      {
-        "id": "banner_1",
+      "banner_1": {
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -108,23 +94,22 @@
             "num": "col-7_mi-8",
             "push_left": "off-4_mi-4"
           },
-          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6],
+                "layers-array": "8_6",
                 "offset": {
                   "mini": 0.25
                 },
                 "reverse": true
               }
             }
-          ]
+          },
+          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success."
         }
       },
-      {
-        "id": "cta_2",
+      "cta_2": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -138,15 +123,14 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/icons/square-connection.png",
           "cols": {
             "num": "col-5_sm-7_mi-8",
             "push_left": "off-1_sm-2_mi-1"
-          }
+          },
+          "src": "/images/square-connection.png"
         }
       },
-      {
-        "id": "panel_1",
+      "panel_1": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -158,8 +142,7 @@
           "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web."
         }
       },
-      {
-        "id": "panel_1_cards",
+      "panel_1_cards": {
         "left": {
           "type": "slider_block",
           "cols": {
@@ -194,11 +177,9 @@
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "explore_1",
-        "grid": ["middle"],
+    },
+    "section_2": {
+      "explore_1": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -215,6 +196,20 @@
           "cols": {
             "num": "col-6_md-5_sm-9_mi-11_ti-10",
             "push_left": "off-2_sm-3_mi-1_ti-2"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4",
+                "border-radius": 5,
+                "offset": {
+                  "small": 1,
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
           },
           "cards": [
             {
@@ -259,46 +254,110 @@
               "img_size": "full",
               "description": "<b>Sandra Ro</b>CEO, Global Blockchain Business Council"
             }
-          ],
-          "customizations": [
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      }
+    },
+    "section_3": {
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+          },
+          "videos": [
             {
-              "name": "BackgroundLayers",
-              "props": {
-                "layers-array": [8, 6, 5, 4],
-                "border-radius": 5,
-                "offset": {
-                  "small": 1,
-                  "mini": 0.25
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
                 },
-                "reverse": true
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                    }
+                  ],
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
+                  "heading": "Welcome to Filecoin Plus Day"
+                }
               }
             }
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "events-hackathons",
-        "type": "custom",
-        "heading": "Events & Hackathons",
-        "cta": {
-          "type": "A",
-          "action": "nuxt-link",
-          "text": "Browse all Events",
-          "url": "/events"
-        },
-        "events": [
-          {
-            "date": "October 20, 2021",
-            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
-          },
-          {
-            "date": "October 26, 2021",
-            "title": "Filecoin Plus Community Governance Call"
-          }
-        ]
-      }
-    ]
-  ]
+    }
+  },
+  "seo": {
+    "title": "About - Filecoin Foundation",
+    "description": "The Filecoin Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+  },
+  "og": {
+    "site_name": "About - Filecoin Foundation",
+    "url": "https://fil.org/about",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
 }
