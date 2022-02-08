@@ -14,6 +14,7 @@
       <BackgroundLayers
         id="page-about-background-layers"
         :layers-array="[3, 4, 5, 6]"
+        :borderRadius="13"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -47,6 +48,7 @@ export default {
     return {
       tag: 'about',
       pageBackgroundLayersOffset: {
+        ultralarge: 1.75,
         medium: 1,
         mini: 0.25
       }
@@ -113,7 +115,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #section-1 {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 8rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
@@ -125,16 +127,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: 100%;
     background-color: $hawkesBlue;
-    border-radius: 12.75rem 0 0 12.75rem;
+    border-radius: 16.5rem 0 0 16.5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 12.75rem;
+      border-top-left-radius: 15.5rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 10.75rem;
+      border-top-left-radius: 13.5rem;
     }
     @include tiny {
       border-top-left-radius: 5rem;
@@ -159,17 +161,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: calc(100% + 4rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
+    border-radius: 5rem 0 0 16.5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
+      border-bottom-left-radius: 15.5rem;
       height: calc(100% + 3.5rem);
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
+      border-bottom-left-radius: 13.5rem;
     }
     @include tiny {
       border-bottom-left-radius: 5rem;
@@ -201,6 +203,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #hero {
   padding: 0;
+  padding-bottom: 2rem;
   margin-bottom: 9.875rem;
   @include small {
     margin-bottom: 3rem;
@@ -212,8 +215,19 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   @include tiny {
     margin-top: 0;
   }
+  .text-block {
+    transform: translateX(-2vw);
+    @include small {
+      transform: translateX(0);
+    }
+  }
   .video-block {
     height: 100%;
+    // padding: 0 0.25rem;
+    transform: translate(5vw, 1rem);
+    @include small {
+      transform: translate(0, 0);
+    }
     .preview-container {
       background-color: $jordyBlue;
     }
