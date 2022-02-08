@@ -59,7 +59,7 @@
 
       <BackgroundLayers
         id="page-terms-background-layers"
-        :layers-array="[3, 4, 5, 6]"
+        layers-array="3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>

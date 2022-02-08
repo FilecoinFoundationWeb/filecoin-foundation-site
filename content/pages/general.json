@@ -83,7 +83,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/about/#dive_deeper_intro",
+          "url": "/about/#dive_deeper",
           "text": "Community"
         },
         {
@@ -162,7 +162,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/grants/#section-2",
+          "url": "/grants/#section_2",
           "text": "Developer Grants"
         },
         {
@@ -174,7 +174,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/grants/#section-4",
+          "url": "/grants/#section_4",
           "text": "Community Grants"
         }
       ]
@@ -216,11 +216,11 @@
     }
   ],
   "footer": {
-    "text": [
-      "Contact Us",
-      "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
-      "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
-    ],
+    "text": {
+      "item_1": "Contact Us",
+      "item_2": "For media and collaboration inquiries, <a href='mailto:hello@fil.org'>drop us a line</a>.",
+      "item_3": "For more information on our ecosystem grants, <a href='mailto:devgrants@fil.org'>email us</a>."
+    },
     "links": [
       {
         "type": "F",

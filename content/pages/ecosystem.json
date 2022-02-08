@@ -1,53 +1,43 @@
 {
-  "seo": {
-    "title": "Ecosystem - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
-  },
-  "og": {
-    "site_name": "Ecosystem - Filecoin Foundation",
-    "url": "https://fil.org/ecosystem",
-    "type": "website",
-    "image": "/images/open-graph.png"
-  },
-  "page_content": [
-    [
-      {
-        "id": "hero",
-        "grid": ["middle"],
+  "page_content": {
+    "section_1": {
+      "hero": {
         "left": {
           "type": "text_block",
-          "layout": "large",
           "cols": {
             "num": "col-4_md-9_mi-10",
             "push_left": "off-2_mi-1"
           },
+          "layout": "large",
           "heading": "Ecosystem",
-          "subheading": "We support a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success."
+          "subheading": "We support a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
+          "description": ""
         },
         "right": {
           "type": "image_block",
-          "src": "/images/ecosystem/hero-image@2x.png",
           "cols": {
             "num": "col-5_md-9_mi-10",
             "push_left": "off-1_md-2_mi-1"
-          }
-        }
+          },
+          "src": "/images/ecosystem/hero-image@2x.png"
+        },
+        "grid": [
+          "middle"
+        ]
       },
-      {
-        "id": "intro_1",
+      "intro_1": {
         "left": {
           "type": "text_block",
-          "layout": "small",
+          "layout": "compact",
           "cols": {
             "num": "col-7_mi-8",
             "push_left": "off-5_mi-4"
           },
-          "description": "More than 230 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6, 5, 4, 3],
+                "layers-array": "8_6_5_4_3",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -55,18 +45,18 @@
                 "reverse": true
               }
             }
-          ]
+          },
+          "description": "More than 230 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more."
         }
       },
-      {
-        "id": "cta_banner_1",
+      "cta_banner_1": {
         "left": {
           "type": "image_block",
-          "src": "/icons/upstairs.png",
           "cols": {
             "num": "col-5_sm-4_mi-6",
             "push_left": "off-2_mi-1"
-          }
+          },
+          "src": "/images/upstairs.png"
         },
         "right": {
           "type": "text_block",
@@ -90,8 +80,7 @@
           ]
         }
       },
-      {
-        "id": "panel_1",
+      "panel_1": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -103,8 +92,7 @@
           "subheading": "The Filecoin Foundation Ecosystem Advisors are committed to providing resources, community support, and guidance to groups building on Web3."
         }
       },
-      {
-        "id": "panel_1_cards",
+      "panel_1_cards": {
         "left": {
           "type": "slider_block",
           "cols": {
@@ -139,11 +127,9 @@
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "resources",
-        "grid": ["middle"],
+    },
+    "section_2": {
+      "resources": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -171,6 +157,18 @@
             "num": "col-6_sm-7_ti-9",
             "push_left": "off-2_sm-3_mi-2"
           },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6",
+                "offset": {
+                  "mini": 0.25
+                },
+                "reverse": true
+              }
+            }
+          },
           "cards": [
             {
               "type": "A",
@@ -178,7 +176,7 @@
               "url": "",
               "img": "/icons/pencil.png",
               "img_size": "regular",
-              "title": "Filecoin Notary Portal",
+              "title": "FIlecoin Notary Portal",
               "description": "The official client and notary portal, hosted by the Filecoin website"
             },
             {
@@ -226,44 +224,110 @@
               "title": "Community Calendar",
               "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
             }
-          ],
-          "customizations": [
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      }
+    },
+    "section_3": {
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+          },
+          "videos": [
             {
-              "name": "BackgroundLayers",
-              "props": {
-                "layers-array": [8, 6],
-                "offset": {
-                  "mini": 0.25
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
                 },
-                "reverse": true
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
+                  "heading": "Welcome to Filecoin Plus Day",
+                  "layout": "medium"
+                }
               }
             }
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "events-hackathons",
-        "type": "custom",
-        "heading": "Events & Hackathons",
-        "cta": {
-          "type": "A",
-          "action": "nuxt-link",
-          "text": "Browse all Events",
-          "url": "/events"
-        },
-        "events": [
-          {
-            "date": "October 20, 2021",
-            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
-          },
-          {
-            "date": "October 26, 2021",
-            "title": "Filecoin Plus Community Governance Call"
-          }
-        ]
-      }
-    ]
-  ]
+    }
+  },
+  "seo": {
+    "title": "Ecosystem - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Ecosystem - Filecoin Foundation",
+    "url": "https://fil.org/ecosystem",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
 }

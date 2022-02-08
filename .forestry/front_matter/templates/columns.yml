@@ -1,0 +1,19 @@
+---
+label: "[Comp] Columns"
+hide_body: true
+fields:
+- name: cols
+  type: field_group
+  config: {}
+  fields:
+  - name: num
+    type: text
+    config:
+      required: false
+    label: Number
+  - name: push_left
+    type: text
+    config:
+      required: false
+    label: Push Left
+  label: Columns

@@ -5,6 +5,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 author: Filecoin Foundation
 image: '/images/blog/filecoin-launchpad.png'
 recommendedPosts: ['welcome-to-the-forest', 'lorem-ipsum-3', 'filecoin-mainnnets-one-year-milestone']
+tags: ['Lorem Ipsum Tag','Lorem Ipsum Tag', 'Another Lorem Ipsum Tag']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.   

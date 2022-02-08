@@ -1,19 +1,7 @@
 {
-  "seo": {
-    "title": "Ecosystem - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
-  },
-  "og": {
-    "site_name": "Ecosystem - Filecoin Foundation",
-    "url": "https://fil.org/ecosystem",
-    "type": "website",
-    "image": "/images/open-graph.png"
-  },
-  "page_content": [
-    [
-      {
-        "id": "basic_hero",
-        "grid": ["middle"],
+  "page_content": {
+    "section_1": {
+      "basic_hero": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -27,17 +15,19 @@
         },
         "right": {
           "type": "image_block",
-          "src": "images/basic-1/basic-1-hero-image.png",
           "cols": {
             "num": "col-7_md-9_mi-10",
             "push_left": "off-0_md-2_mi-1"
-          }
-        }
+          },
+          "src": "/images/basic-1/basic-1-hero-image.png"
+        },
+        "grid": [
+          "middle"
+        ]
       }
-    ],
-    [
-      {
-        "id": "basic_content_1",
+    },
+    "section_2": {
+      "basic_content_1": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -51,20 +41,18 @@
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
       },
-      {
-        "id": "banner_image",
+      "banner_image": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "image_block",
-          "src": "/images/basic-1/basic-1-example-image.png",
           "cols": {
             "num": "col-10_ti-11",
             "push_left": "off-1_md-2_ti-1"
-          }
+          },
+          "src": "/images/basic-1/basic-1-example-image.png"
         }
       },
-      {
-        "id": "basic_content_2",
+      "basic_content_2": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -77,30 +65,28 @@
           "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione."
         }
       },
-      {
-        "id": "panels_1",
+      "panels_1": {
         "left": {
-          "type": "text_block",
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
             "push_left": "off-1_md-2_ti-1"
           },
           "label": "Sed ut perspiciatis",
-          "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "type": "text_block"
         },
         "right": {
           "type": "image_block",
-          "src": "/icons/square-connection.png",
           "cols": {
             "num": "col-6_md-5_sm-7_mi-8",
             "push_left": "off-1_mi-2_sm-2_mi-1"
-          }
+          },
+          "src": "/images/square-connection.png"
         }
       },
-      {
-        "id": "basic_content_3",
+      "basic_content_3": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -113,8 +99,7 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       },
-      {
-        "id": "basic_content_4",
+      "basic_content_4": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -127,8 +112,7 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         }
       },
-      {
-        "id": "basic_content_5",
+      "basic_content_5": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -141,10 +125,9 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       }
-    ],
-    [
-      {
-        "id": "events_hackathons",
+    },
+    "section_3": {
+      "events_hackathons": {
         "type": "custom",
         "component": "EventsHackathons",
         "props": {
@@ -153,13 +136,13 @@
               "num": "col-4_sm-8_ti-10",
               "push_left": "off-0_md-1_sm-2_mi-2_mi-1"
             },
-            "heading": "Events & Hackathons",
             "cta": {
               "type": "A",
               "action": "nuxt-link",
               "text": "Browse all Events",
               "url": "/events"
-            }
+            },
+            "heading": "Events & Hackathons"
           },
           "events": {
             "cols": {
@@ -169,7 +152,7 @@
             "cards": [
               {
                 "type": "D",
-                "date": "October 20, 2021",
+                "date": "2021-10-20T13:52:02Z",
                 "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
                 "img": "/images/events/orbit-event-banner-2021.png",
                 "img_type": "background_image",
@@ -184,21 +167,33 @@
               },
               {
                 "type": "D",
-                "date": "October 26, 2021",
+                "date": "2021-10-26T13:52:49Z",
                 "title": "Filecoin Plus Community Governance Call",
+                "img": "",
+                "img_type": "background_image",
                 "cta": {
                   "type": "B",
                   "action": "a",
                   "target": "_blank",
                   "icon": "info",
-                  "text": "More info",
-                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+                  "text": "More info"
                 }
               }
             ]
           }
         }
       }
-    ]
-  ]
+    }
+  },
+  "seo": {
+    "title": "Basic Page - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Basic Page - Filecoin Foundation",
+    "url": "https://fil.org/basic-template-1",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
 }

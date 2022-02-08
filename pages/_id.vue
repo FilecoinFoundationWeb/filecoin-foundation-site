@@ -8,8 +8,7 @@
       <PageSection
         v-if="postHeading"
         id="post-heading-section"
-        :section="postHeading">
-      </PageSection>
+        :section="postHeading" />
 
       <section id="post-body-section">
         <section id="post-body" class="content-section">
@@ -21,26 +20,43 @@
 
             <div class="col-10_ti-11" data-push-left="off-1_md-2_ti-1">
               <div id="bottom-controls">
+
+                <div
+                  v-if="postTags"
+                  class="tags-container">
+                  <div
+                    v-for="(item, index) in postTags"
+                    :key="`${item}-${index}`"
+                    class="tag">
+                    {{ item }}
+                  </div>
+                </div>
+
                 <div class="share-socials">
                   <div class="share-to">
                     Share to:
                   </div>
-                  <SocialIcons />
+                  <SocialIcons :force-list="shareSocials" />
                 </div>
+
                 <div class="controls-wrapper">
+
                   <nuxt-link
                     v-if="previousPost"
                     :to="previousPost"
                     class="button">
                     Back
                   </nuxt-link>
+
                   <nuxt-link
                     v-if="nextPost"
                     :to="nextPost"
                     class="button">
                     Next article
                   </nuxt-link>
+
                 </div>
+
               </div>
             </div>
 
@@ -51,12 +67,11 @@
       <PageSection
         v-if="recommendations"
         id="blogposts-section"
-        :section="recommendations">
-      </PageSection>
+        :section="recommendations" />
 
       <BackgroundLayers
         id="page-singular-background-layers"
-        :layers-array="[3, 4, 5, 6]"
+        layers-array="3_4_5_6"
         :offset="pageBackgroundLayersOffset" />
 
     </div>
@@ -67,6 +82,7 @@
 <script>
 // ====================================================================== Import
 import { mapGetters } from 'vuex'
+import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
 
@@ -121,6 +137,16 @@ export default {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
+    shareSocials () {
+      const socials = CloneDeep(this.siteContent.blog.social)
+      socials.forEach((item) => {
+        if (item.hasOwnProperty('url')) {
+          const url = `${this.siteContent.general.og.url + this.$route.path}`
+          item.url = item.url.replace(/slug/i, url)
+        }
+      })
+      return socials
+    },
     allPosts () {
       return this.markdown.allPosts
     },
@@ -139,7 +165,15 @@ export default {
           subheading: this.markdown.description,
           label: this.markdown.featured ? 'Featured Blog' : '',
           date: this.markdown.date || this.markdown.createdAt,
-          description: this.markdown.author
+          ctas: [
+            {
+              type: 'H',
+              action: 'nuxt-link',
+              text: this.markdown.author,
+              icon: 'play',
+              url: `/${this.markdown.slug}`
+            }
+          ]
         },
         right: {
           type: 'image_block',
@@ -154,6 +188,12 @@ export default {
     },
     postBody () {
       return this.markdown
+    },
+    postTags () {
+      if (Array.isArray(this.markdown.tags)) {
+        return this.markdown.tags
+      }
+      return false
     },
     previousPost () {
       for (let i = 1; i < this.allPosts.length; i++) {
@@ -197,13 +237,16 @@ export default {
       const section = {
         id: 'blogposts-list',
         left: {
-          type: 'paginated_cards',
+          type: 'card_list_block',
           cols: {
             num: 'col-12_md-11_sm-10_mi-9_ti-10',
             push_left: 'off-0_md-1_sm-2_ti-1'
           },
-          cards: recommendedPosts,
-          displayControls: false
+          display: {
+            initial: 3,
+            next: 3
+          },
+          cards: recommendedPosts
         }
       }
 
@@ -391,6 +434,79 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   img {
     margin: 3rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 .5rem $jordyBlue;
+    width: 100%;
+  }
+  blockquote {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    p {
+      border-left: 3px solid $polar;
+      padding-left: 2rem;
+      @include fontSize_ExtraLarge;
+      @include fontWeight_Medium;
+      @include leading_Small;
+      letter-spacing: $letterSpacing_Large;
+    }
+  }
+  table {
+    margin: 3rem 0;
+    border-radius: 2px;
+    th,
+    tr {
+      @include fontSize_Regular;
+      @include fontWeight_Regular;
+      @include leading_Regular;
+      letter-spacing: $letterSpacing_Large;
+    }
+    th {
+      @include fontSize_Medium;
+      @include fontWeight_Medium;
+      background: $polar;
+      text-align: left;
+    }
+    th,
+    td {
+      padding: 0.5rem 1rem;
+    }
+    tr:nth-child(even) {
+      background: $polar;
+    }
+    tr:nth-child(odd) {
+      background: $hawkesBlue;
+    }
+  }
+  .nuxt-content-highlight {
+    position: relative;
+    @include blogPageOutline;
+    &:before {
+      background-color: $jordyBlue;
+      z-index: -1;
+    }
+    &:after {
+      content: unset;
+    }
+  }
+  pre {
+    padding: 1.5rem;
+    margin: 3rem 0;
+    border-radius: 0.5rem;
+    background-color: $blackPearl;
+  }
+  code {
+    font-family: 'Suisse Intl Mono';
+    color: #9AB6CE;
+
+  }
+  hr {
+    border-top: 3px solid $polar;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -402,25 +518,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #bottom-controls {
-  .share-socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 2.625rem;
-    color: $kleinBlue;
-    .share-to {
-      font-size: 14px;
-      @include fontWeight_SemiBold;
-      @include leading_ExtraExtraLarge;
-      margin-right: 1rem;
-    }
-  }
-  .controls-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .button {
     font-size: 14px;
     text-align: center;
@@ -428,8 +525,62 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 3.125rem;
+}
+
+.tag {
+  @include fontWeight_Medium;
+  @include leading_Small;
+  padding: 0.625rem 1.25rem;
+  margin-right: 0.625rem;
+  font-size: 14px;
+  letter-spacing: $letterSpacing_Large;
+  border-radius: 1.5rem;
+  color: $polar;
+  background-color: $denim;
+  cursor: pointer;
+  transition: 250ms ease-out;
+  &:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.05);
+  }
+}
+
+.share-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.625rem;
+  color: $kleinBlue;
+}
+
+.share-to {
+  @include fontWeight_SemiBold;
+  @include leading_ExtraExtraLarge;
+  margin-right: 1rem;
+  font-size: 14px;
+}
+
+.controls-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 ::v-deep #blogposts-list {
   padding-bottom: 3rem;
+  .card {
+    &.type__E {
+      width: unset;
+      margin: unset !important;
+    }
+  }
 }
 
 </style>

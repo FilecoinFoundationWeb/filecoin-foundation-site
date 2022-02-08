@@ -2,9 +2,9 @@
   <section class="page-section">
 
     <section
-      v-for="(block, blockIndex) in section"
-      :id="block.id"
-      :key="blockIndex"
+      v-for="(block, key) in section"
+      :id="key"
+      :key="key"
       class="content-section">
 
       <div v-if="block.type !== 'custom'" :class="[getGridClasses(block.grid), block.classNames]">
@@ -29,8 +29,8 @@
               <template v-if="block[column].customizations">
                 <component
                   :is="component.name"
-                  v-for="(component, componentIndex) in block[column].customizations"
-                  :key="componentIndex"
+                  v-for="(component, componentKey) in block[column].customizations"
+                  :key="componentKey"
                   v-bind="component.props" />
               </template>
 
@@ -39,10 +39,11 @@
         </template>
       </div>
 
-      <component
-        :is="block.component"
-        v-else
-        v-bind="block.props" />
+      <template v-if="block.type === 'custom'">
+        <component
+          :is="block.component"
+          v-bind="block.props" />
+      </template>
 
     </section>
 
@@ -59,6 +60,7 @@ import PaginatedCards from '@/components/PaginatedCards'
 import CardListBlock from '@/components/CardListBlock'
 import FloatingMenu from '@/components/FloatingMenu'
 import SocialIcons from '@/components/SocialIcons'
+import DiveDeeper from '@/components/DiveDeeper'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -76,6 +78,7 @@ export default {
     CardListBlock,
     FloatingMenu,
     SocialIcons,
+    DiveDeeper,
     EventsHackathons,
     TabbedSlider,
     BackgroundLayers
@@ -83,7 +86,7 @@ export default {
 
   props: {
     section: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -121,6 +124,7 @@ export default {
         case 'slider_block' : name = 'SliderBlock'; break
         case 'paginated_cards' : name = 'PaginatedCards'; break
         case 'card_list_block' : name = 'CardListBlock'; break
+        case 'custom' : name = block.component; break
       }
       return name
     }

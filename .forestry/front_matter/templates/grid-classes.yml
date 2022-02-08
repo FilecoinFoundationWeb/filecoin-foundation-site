@@ -1,0 +1,28 @@
+---
+label: "[Comp] Grid Classes"
+hide_body: true
+fields:
+- name: grid
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: simple
+    options:
+    - noGutter
+    - noWrap
+    - center
+    - right
+    - top
+    - middle
+    - bottom
+    - reverse
+    - column
+    - column-reverse
+    - spaceBetween
+    - spaceAround
+    - equalHeight
+    - noBottom
+  label: Grid Classes

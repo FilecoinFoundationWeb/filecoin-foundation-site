@@ -3,7 +3,7 @@
 
     <Zero_Pagination__Paginate
       v-slot="{ paginated }"
-      :display="display"
+      :display="3"
       :collection="searchResults"
       class="card-list">
       <Card
@@ -144,13 +144,16 @@ export default {
 
 ::v-deep .zero-pagination-controls {
   .page-button {
+    position: relative;
     opacity: 1.0;
     padding: 0.5rem 1.25rem;
     &.current {
       color: $white;
-      background-color: $denim;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 0 .5rem $azureRadiance;
+      @include blogPageOutline;
+      &:before,
+      &:after {
+        z-index: -1;
+      }
     }
     &:not(.current) {
       color: $kleinBlue;
