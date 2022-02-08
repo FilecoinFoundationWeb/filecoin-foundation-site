@@ -125,7 +125,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: 100%;
     background-color: $polar;
-    border-radius: 14rem 0 0 5rem;
+    border-radius: 13rem 0 0 5rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
