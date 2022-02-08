@@ -16,7 +16,7 @@
 
       <ul v-if="Array.isArray(link.links)">
         <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-          <div class="first-level-wrapper">
+          <div class="first-level-wrapper" @click="sublinkClicked(sublink)">
 
             <Button
               :button="sublink"
@@ -64,6 +64,19 @@ export default {
       type: Object,
       required: false,
       default: () => {}
+    }
+  },
+
+  methods: {
+    sublinkClicked (sublink) {
+      const currentPath = this.$route.fullPath
+      const hash = this.$route.hash.replace('#', '')
+      if (!sublink.hasOwnProperty('links') && sublink.url === currentPath) {
+        const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
+        if (element) {
+          this.$scrollToElement(element, 0, -50)
+        }
+      }
     }
   }
 }
