@@ -21,7 +21,7 @@
           },
           "label": "Save the date",
           "heading": "FIL Austin",
-          "description": "Join us in Austin for the Filecoin inaugural in-person summit.",
+          "description": "Join us in Austin for an in-person summit for the Filecoin community.",
           "ctas": [
             {
               "type": "B",
@@ -125,7 +125,7 @@
           },
           "data_id": "section_3-a",
           "subheading": "What is FIL Austin?",
-          "description": "Filecoin Foundation’s inaugural in-person summit. This one day, two track event will convene IRL builders, developers and partners from across the ecosystem for workshops, panels and tutorials devoted to building and expanding <a href='https://filecoin.io/' target='_blank'>the Filecoin network</a>."
+          "description": "Filecoin Foundation’s inaugural in-person summit to bring together the Filecoin community. This one day, two track event will convene IRL builders, developers and partners from across the ecosystem for workshops, panels and tutorials devoted to building and expanding <a href='https://filecoin.io/' target='_blank'>the Filecoin network</a>."
         }
       },
       "section_2-banner-image": {
@@ -150,7 +150,7 @@
           },
           "data_id": "section_5-a",
           "subheading": "Where is FIL Austin taking place?",
-          "description": "<a href='https://www.google.com/maps/place/Coppertank+Events+Center/@30.2663959,-97.7399122,15z/data=!4m2!3m1!1s0x0:0x8820128136714392?sa=X&ved=2ahUKEwjU57PmjvH1AhUgkokEHTBUCjoQ_BJ6BAg7EAU' target='_blank'>504 Trinity St, Austin, TX 78701, United States</a><br /><br />FIL Austin will be hosted in the heart of the city the day before CoinDesk’s Consensus - the crypto industry’s “big tent” event that previously served as the centerpiece of New York Blockchain Week and before relocating to Austin this year."
+          "description": "<a href='https://www.google.com/maps/place/Coppertank+Events+Center/@30.2663959,-97.7399122,15z/data=!4m2!3m1!1s0x0:0x8820128136714392?sa=X&ved=2ahUKEwjU57PmjvH1AhUgkokEHTBUCjoQ_BJ6BAg7EAU' target='_blank'>504 Trinity St, Austin, TX 78701, United States</a><br /><br />FIL Austin will be hosted in the heart of the city the day before CoinDesk’s Consensus – the crypto industry’s annual “big tent” event."
         }
       },
       "section_3-panel-2": {
