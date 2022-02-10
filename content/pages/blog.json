@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "Blog - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Blog - Filecoin Foundation",
+    "url": "https://fil.org/blog",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  },
+  "social": [
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.reddit.com/submit?url=slug",
+      "component": "RedditIcon",
+      "label": "Reddit"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.twitter.com/share?url=slug",
+      "component": "TwitterIcon",
+      "label": "Twitter"
+    },
+    {
+      "type": "X",
+      "action": "a",
+      "target": "_blank",
+      "url": "https://www.linkedin.com/sharing/share-offsite/?url={slug}",
+      "component": "LinkedInIcon",
+      "label": "LinkedIn"
+    }
+  ]
+}

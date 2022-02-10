@@ -1,0 +1,58 @@
+---
+label: "[Comp] Text Block"
+hide_body: false
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: type
+  default: text_block
+- name: layout
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - compact
+    - medium
+    - large
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
+- name: heading
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Heading
+- name: subheading
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Subheading
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description

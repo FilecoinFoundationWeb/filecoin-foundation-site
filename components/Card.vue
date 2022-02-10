@@ -14,9 +14,16 @@
     </div>
 
     <img
-      v-if="img && imgType !== 'background_image'"
+      v-if="img && imgType !== 'background_image' && imgType !== 'nuxt_link'"
       :src="img"
       :class="['image', `size-${imgSize}`]" />
+
+    <nuxt-link
+      v-if="img && imgType === 'nuxt_link'"
+      :to="cta.url"
+      class="image-link">
+      <img :src="img" :class="['image', `size-${imgSize}`]" />
+    </nuxt-link>
 
     <div
       v-if="date && !img"
@@ -40,12 +47,17 @@
           {{ label }}
         </div>
 
-        <div v-if="title" class="title">
+        <template v-if="type === 'E'">
+          <div class="title" v-html="shortenString(title, 50)"></div>
+          <div class="description" v-html="shortenString(description, 50)"></div>
+        </template>
+
+        <div v-if="title && type !== 'E'" class="title">
           {{ title }}
         </div>
 
         <div
-          v-if="description && type !== 'D' && type !== 'C'"
+          v-if="description && type !== 'D' && type !== 'C' && type !== 'E'"
           class="description"
           v-html="description">
         </div>
@@ -58,7 +70,7 @@
       </div>
 
       <div
-        v-if="description && type !== 'B' && type !== 'A'"
+        v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
         class="panel-right">
         <div
           class="description"
@@ -170,9 +182,19 @@ export default {
         } else { // different years
           return `${pastTag}${start.format('MMM D YYYY')} - ${end.format('MMM D YYYY')}`
         }
-      } else { // single date, no range
+      } else if (this.type !== 'E') { // single date, no range
         return `${pastTag}${start.format('MMMM D YYYY')}`
+      } else {
+        return `${start.format('MMMM D YYYY')}`
       }
+    },
+    shortenString (string, n) {
+      const chars = string.split('')
+      if (chars.length > n) {
+        const shortened = chars.slice(0, n)
+        return `${shortened.join('')}...`
+      }
+      return chars.join('')
     }
   }
 }
@@ -365,6 +387,13 @@ export default {
   padding: 0.25rem;
   color: white;
   background-color: $azureRadiance;
+  transform: scale(1);
+  transition: 300ms ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.0);
+  &:hover {
+    transform: scale(1.03125);
+    box-shadow: 3px 7px 10px rgba(10, 30, 82, 0.25);
+  }
   &:not(.with-image) {
     display: flex;
     flex-direction: column;
@@ -426,4 +455,88 @@ export default {
     margin-top: 0.5rem;
   }
 }
+
+// -------------------------------------------------------------------- [Type] E
+.card.type__E {
+  @include borderRadius_Large;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 27rem;
+  margin: 0 1rem 3rem 0 !important;
+  width: calc(33% - 1rem);
+  padding: 0.75rem;
+  color: $blackPearl;
+  background-color: $white;
+  @include small {
+    width: calc(50% - 1rem);
+  }
+  @include mini {
+    width: calc(100% - 1rem);
+  }
+  .image-link {
+    height: 47%;
+    @include borderRadius_Large;
+    overflow: hidden;
+  }
+  .image {
+    position: relative;
+    @include borderRadius_Large;
+    display: block;
+    margin-bottom: auto;
+    width: unset;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content {
+    display: block;
+    padding: 0.625rem;
+    padding-top: 1.25rem;
+    flex-grow: 1;
+  }
+  .panel-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel-right {
+    display: none;
+  }
+  .date,
+  .label {
+    @include fontSize_Small;
+    @include fontWeight_Regular;
+    letter-spacing: $letterSpacing_Large;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .date-large {
+    @include fontWeight_Bold;
+    @include fontSize_ExtraExtraLarge;
+    display: block;
+    height: 12.875rem;
+  }
+  .title {
+    @include fontSize_Regular;
+    @include fontWeight_SemiBold;
+    @include leading_Regular;
+    letter-spacing: $letterSpacing_Large;
+    color: $kleinBlue;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .description {
+    @include fontSize_Small;
+    @include fontWeight_Regular;
+    @include leading_Medium;
+    letter-spacing: $letterSpacing_Large;
+  }
+  .cta {
+    margin-top: auto;
+  }
+}
+
 </style>

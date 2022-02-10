@@ -91,7 +91,11 @@ export default {
       return this.siteContent.events.page_content
     },
     navigation () {
-      const navigation = CloneDeep(this.pageContent.navigation)
+      const navigation = []
+      const cloned = CloneDeep(this.pageContent.navigation)
+      for (const key in cloned) {
+        navigation.push(cloned[key])
+      }
       navigation[0].selected = true
       return navigation
     },

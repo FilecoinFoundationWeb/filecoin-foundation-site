@@ -12,6 +12,9 @@
 </template>
 
 <script>
+// ===================================================================== Imports
+import Throttle from 'lodash/throttle'
+
 // =================================================================== Functions
 const setBackgroundLayerWidth = (instance) => {
   let reset = true
@@ -40,9 +43,9 @@ export default {
       default: 10
     },
     layersArray: {
-      type: Array,
+      type: String,
       required: false,
-      default: () => [1, 2, 3, 4, 5, 6]
+      default: '1_2_3_4_5_6'
     },
     reverse: {
       type: Boolean,
@@ -79,8 +82,9 @@ export default {
   computed: {
     layers () {
       const arr = []
-      for (let i = 0; i < this.layersArray.length; i++) {
-        const ind = Math.max(Math.min(this.layersArray[i], 8), 1)
+      const layersArray = this.layersArray.split('_').map((x) => { return parseInt(x) })
+      for (let i = 0; i < layersArray.length; i++) {
+        const ind = Math.max(Math.min(layersArray[i], 8), 1)
         arr.push({ index: ind, color: this.colors[ind - 1] })
       }
       return arr
@@ -101,7 +105,7 @@ export default {
   mounted () {
     setBackgroundLayerWidth(this)
     this.resize = () => { setBackgroundLayerWidth(this) }
-    window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', Throttle(this.resize, 50))
   },
 
   beforeDestroy () {

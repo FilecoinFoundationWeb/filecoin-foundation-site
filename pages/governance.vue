@@ -4,19 +4,19 @@
     <div class="main-content">
 
       <PageSection
-        v-for="(section, index) in sections"
-        :id="`section-${index + 1}`"
-        :key="index"
+        v-for="(section, key) in sections"
+        :id="key"
+        :key="key"
         :section="section" />
 
       <BackgroundLayers
         id="page-governance-body-layer"
-        :layers-array="[2]"
+        layers-array="2"
         :offset="{ mini: 0.25 }" />
 
       <BackgroundLayers
         id="page-governance-background-layers"
-        :layers-array="[6, 5, 4, 3]"
+        layers-array="6_5_4_3"
         :reverse="true"
         :offset="pageBackgroundLayersOffset" />
 
@@ -100,11 +100,11 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   top: -2.5 * $backgroundLayers__Offset;
 }
 
-#section-1 {
+#section_1 {
   margin-bottom: $backgroundLayers__Offset - $navigationHeight;
 }
 
-#section-2 {
+#section_2 {
   padding-top: 7rem; // 1.75rem * 4
   &:before {
     content: '';
@@ -130,15 +130,15 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-#section-3 {
+#section_3 {
   padding-top: 4.125rem;
 }
 
-#section-3,
-#section-4,
-#section-5,
-#section-6,
-#section-7 {
+#section_3,
+#section_4,
+#section_5,
+#section_6,
+#section_7 {
   &:before {
     content: '';
     position: absolute;
@@ -156,13 +156,13 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     }
   }
 }
-#section-4,
-#section-5,
-#section-6 {
+#section_4,
+#section_5,
+#section_6 {
   z-index: 1;
 }
 
-#section-7 {
+#section_7 {
   &:before {
     border-radius: 0 0 0 8.5rem;
     @include mini {
@@ -273,18 +273,9 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 // ----------------------------------------------------------------- [Section] 3
 
-::v-deep #sticky-info {
-  position: relative;
-  z-index: 10000;
-  .sticky-content {
-    position: absolute;
-    top: 0;
+::v-deep #governance-floating-menu {
+  .floating-content {
     left: -4rem;
-    z-index: 10000;
-    &.info-fixed {
-      position: fixed;
-      top: 120px;
-    }
     .heading {
       @include fontSize_ExtraLarge;
       @include fontWeight_Medium;

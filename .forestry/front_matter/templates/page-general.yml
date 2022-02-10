@@ -1,0 +1,221 @@
+---
+label: "[Page] General"
+hide_body: true
+fields:
+- type: field_group
+  name: seo
+  label: SEO
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: Open Graph
+  fields:
+  - type: text
+    name: site_name
+    label: site name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group_list
+  name: social
+  label: Socials
+  fields:
+  - type: text
+    name: type
+    label: type
+    hidden: true
+    default: X
+  - type: text
+    name: action
+    label: action
+    hidden: true
+    default: a
+  - type: text
+    name: target
+    label: target
+    hidden: true
+    default: _blank
+  - type: text
+    name: url
+    label: URL
+  - name: component
+    type: select
+    default: ''
+    config:
+      required: true
+      options:
+      - GithubIcon
+      - RedditIcon
+      - TwitterIcon
+      - LinkedInIcon
+      - YoutubeIcon
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Component
+  - type: text
+    name: label
+    label: Label
+  config:
+    labelField: label
+- type: field_group_list
+  name: navigation
+  label: Navigation
+  fields:
+  - type: text
+    name: type
+    label: type
+    hidden: true
+    default: C
+  - type: text
+    name: theme
+    label: theme
+    hidden: true
+    default: light
+  - type: text
+    name: action
+    label: action
+    hidden: true
+    default: nuxt-link
+  - type: text
+    name: url
+    label: URL
+  - type: text
+    name: text
+    label: Text
+  - type: textarea
+    name: description
+    label: Description
+  - type: field_group_list
+    name: links
+    label: Links
+    fields:
+    - type: text
+      name: type
+      label: type
+      hidden: true
+      default: X
+    - type: text
+      name: action
+      label: action
+      hidden: true
+      default: nuxt-link
+    - type: text
+      name: url
+      label: URL
+    - type: text
+      name: text
+      label: Text
+    config:
+      labelField: text
+  config:
+    labelField: text
+- type: field_group
+  name: footer
+  label: Footer
+  fields:
+  - name: text
+    type: field_group
+    config: {}
+    fields:
+    - name: item_1
+      type: text
+      config:
+        required: false
+      label: Item 1
+    - name: item_2
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Item 2
+    - name: item_3
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Item 3
+    label: Text
+  - type: field_group_list
+    name: links
+    label: Links
+    fields:
+    - type: text
+      name: type
+      label: type
+      hidden: true
+      default: F
+    - type: text
+      name: theme
+      label: theme
+      hidden: true
+      default: dark
+    - type: text
+      name: action
+      label: action
+      hidden: true
+      default: a
+    - type: text
+      name: target
+      label: target
+      hidden: true
+      default: _blank
+    - type: text
+      name: url
+      label: URL
+    - type: text
+      name: text
+      label: Text
+    config:
+      labelField: text
+  - type: field_group
+    name: panel_bottom
+    label: Panel Bottom
+    fields:
+    - type: field_group_list
+      name: links
+      label: Links
+      fields:
+      - type: text
+        name: type
+        label: type
+        hidden: true
+        default: F
+      - type: text
+        name: action
+        label: action
+        hidden: true
+        default: nuxt-link
+      - type: text
+        name: url
+        label: URL
+      - type: text
+        name: text
+        label: Text
+      config:
+        labelField: text
+    - type: textarea
+      name: copyright_text
+      label: Copyright Text
+pages:
+- content/pages/general.json

@@ -14,10 +14,6 @@ localhost_fullchain.pem
 server.key
 server.crt
 
-# Files
-static/content
-static/embeddable-view.js
-
 # Runtime data
 pids
 *.pid

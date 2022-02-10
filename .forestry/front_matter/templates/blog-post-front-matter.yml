@@ -1,0 +1,40 @@
+---
+label: "[Blog] Post"
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- type: text
+  name: author
+  label: Author
+- type: textarea
+  name: description
+  label: Description
+- type: boolean
+  name: featured
+  label: Featured
+- type: list
+  name: recommendedPosts
+  label: Recommended Posts
+  description: Slugs of other blog posts related to the current post.
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Post Header Image
+pages:
+- content/blog/forestry-test-post.md

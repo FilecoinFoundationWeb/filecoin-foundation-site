@@ -1,5 +1,3 @@
-/* eslint require-await: "off" */
-
 export default {
   // //////////////////////////////////////////// Static Site Generation Options
   // ---------------------------------------------------------------------------
@@ -15,7 +13,7 @@ export default {
       siteUrl: 'https://fil.org'
     },
     redirects: [
-      { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      // { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
       { from: '/board', to: '/about/#panel_1' },
       { from: '/careers', to: '/get-involved/#careers_intro' },
       { from: '/community', to: '/about/#dive_deeper_intro' },
@@ -79,11 +77,24 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/style-resources-module/
+    // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/agency-undone/au-nuxt-module-zero
-    '@agency-undone/au-nuxt-module-zero'
+    '@agency-undone/au-nuxt-module-zero',
+    // Doc: https://sitemap.nuxtjs.org
+    '@nuxtjs/sitemap',
+    // Doc: https://content.nuxtjs.org
+    '@nuxt/content'
   ],
+  // ///////////////////////////////////////////////////// [Module] Nuxt-content
+  // ---------------------------------------------------------------------------
+  content: {
+    markdown: {
+      prism: {
+        theme: false
+      }
+    }
+  },
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
   zero: {
@@ -95,7 +106,7 @@ export default {
       }
     },
     filters: {
-      include: false
+      include: true
     },
     pagination: {
       include: true
@@ -110,11 +121,14 @@ export default {
   // //////////////////////////////////////////////////////////// [Module] Axios
   // -------------------------------------- See https://axios.nuxtjs.org/options
   axios: {},
+  // ///////////////////////////////////////////////////////////// [Module] Zero
+  // ------------------------------------------- Dox: https://sitemap.nuxtjs.org
+  sitemap: {
+    hostname: 'https://fil.org'
+  },
   // /////////////////////////////////// Plugins to load before mounting the App
   // ---------------------------------------------------------------------------
-  plugins: [
-    '~/plugins/seo'
-  ],
+  plugins: [],
   // /////////////////////////////////////////////////////// Router + Middleware
   // ---------------------------------------------------------------------------
   router: {},
