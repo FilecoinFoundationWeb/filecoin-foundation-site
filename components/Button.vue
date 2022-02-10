@@ -100,6 +100,9 @@ export default {
     url () {
       return this.button.url
     },
+    id () {
+      return this.button.id
+    },
     theme () {
       return this.button.theme || 'light'
     }
@@ -116,6 +119,12 @@ export default {
           action: 'video',
           url: this.url
         })
+      } else if (this.action === 'scroll-to') {
+        const id = this.id
+        const element = document.getElementById(id) || document.querySelector(`[data-id='${id}']`)
+        if (element) {
+          this.$scrollToElement(element, 0, -50)
+        }
       }
     }
   }

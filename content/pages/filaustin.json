@@ -25,11 +25,10 @@
           "ctas": [
             {
               "type": "B",
-              "action": "a",
+              "action": "scroll-to",
               "icon": "ticket",
               "text": "Sign up for updates",
-              "target": "_blank",
-              "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+              "id": "subscribe_form"
             }
           ]
         },
@@ -214,7 +213,7 @@
           "theme": "light",
           "cols": {
             "num": "col-8_mi-11_ti-9",
-            "push_left": "off-3_mi-1_ti-3"
+            "push_left": "off-4_mi-1_ti-3"
           },
           "customizations": {
             "background_layers": {

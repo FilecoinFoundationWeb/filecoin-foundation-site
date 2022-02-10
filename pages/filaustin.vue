@@ -159,7 +159,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 #section_4 {
   padding: 10rem 0;
-  z-index: 5;
+  z-index: 1;
   @include small {
     padding: 7.5rem 0;
   }
@@ -168,12 +168,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-#section_5 {
-  z-index: 6;
-}
-
 #section_6 {
-  z-index: 7;
   &:before {
     height: calc(100% + 5.25rem + 2px);
   }
@@ -186,6 +181,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 ::v-deep .subheading {
+  @include fontSize_ExtraLarge;
   @include fontWeight_Medium;
   @include tiny {
     @include fontSize_Medium;
