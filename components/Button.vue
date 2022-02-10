@@ -229,6 +229,7 @@ $layerOffset: 0.25rem;
 .type__D {
   @include fontWeight_Medium;
   color: white;
+  align-items: center;
   &:hover {
     ::v-deep .icon {
       svg {

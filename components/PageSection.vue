@@ -64,6 +64,7 @@ import DiveDeeper from '@/components/DiveDeeper'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
+import FilAustinForm from '@/components/FilAustinForm'
 
 // ====================================================================== Export
 export default {
@@ -81,7 +82,8 @@ export default {
     DiveDeeper,
     EventsHackathons,
     TabbedSlider,
-    BackgroundLayers
+    BackgroundLayers,
+    FilAustinForm
   },
 
   props: {
