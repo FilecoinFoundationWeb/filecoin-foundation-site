@@ -159,7 +159,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 #section_4 {
   padding: 10rem 0;
-  z-index: 1;
+  z-index: 5;
   @include small {
     padding: 7.5rem 0;
   }
@@ -169,15 +169,13 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 #section_5 {
-  z-index: 1;
+  z-index: 6;
 }
 
-#section_7 {
+#section_6 {
+  z-index: 7;
   &:before {
-    border-radius: 0 0 0 8.5rem;
-    @include mini {
-      border-radius: 0 0 0 10rem;
-    }
+    height: calc(100% + 5.25rem + 2px);
   }
 }
 
@@ -196,7 +194,8 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 ::v-deep .description {
   a {
-    color: $denim;
+    @include fontWeight_Medium;
+    color: $azureRadiance;
     &:hover {
       text-decoration: underline;
     }
@@ -399,9 +398,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     }
   }
   .image {
-    transform: scale(1.3);
     @include mini {
-      transform: scale(1);
       margin: 0 0 1rem 0;
     }
   }
@@ -520,7 +517,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 ::v-deep #section_5-banner-image {
   @include mini {
-    padding: 4rem 0 0 0;
+    display: none;
   }
   .image {
     width: 62vw;

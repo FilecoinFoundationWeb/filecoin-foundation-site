@@ -202,7 +202,7 @@
             "push_left": "off-1_mi-3"
           },
           "subheading": "Save the Date",
-          "description": "Add FIL Austin to your calendar and don’t miss out on updates as we share more details about this event. Sign up for email updates to stay informed and <a href='/'>add Wednesday, June 8, 2022 to your calendar</a>"
+          "description": "Add FIL Austin to your calendar and don’t miss out on updates as we share more details about this event."
         }
       }
     },
@@ -290,7 +290,7 @@
           "type": "image_block",
           "cols": {
             "num": "col-8_mi-11",
-            "push_left": "off-4_mi-1"
+            "push_left": "off-4_md-2_mi-1"
           },
           "src": "/images/page-filaustin/person-standing-in-front-of-shipping-container-2.jpg"
         }
