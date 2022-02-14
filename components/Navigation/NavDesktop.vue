@@ -141,7 +141,8 @@ export default {
   &:hover {
     .nav-dropdown-container {
       opacity: 1;
-      transition: 250ms ease;
+      transition: opacity 250ms cubic-bezier(.33, 0, .66, .33),
+        visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
       visibility: visible;
       z-index: 5;
     }

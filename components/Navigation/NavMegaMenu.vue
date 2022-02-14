@@ -180,7 +180,8 @@ export default {
   opacity: 0;
   transform-origin: top;
   transform: translate(-50%, 0rem);
-  transition: 250ms ease;
+  transition: opacity 250ms cubic-bezier(.33, .66, .66, 1),
+    visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
   background-color: $denim;
   border: 5px solid $azureRadiance;
   border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
@@ -199,13 +200,14 @@ export default {
   }
 
   animation-duration: 250ms;
-  animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   &.enter {
+    animation-timing-function: ease-out;
     animation-name: swingdown;
   }
   &.exit {
+    animation-timing-function: ease-in;
     animation-name: swingup;
   }
 }
@@ -236,7 +238,7 @@ export default {
   opacity: 1;
   z-index: 2;
   transform: translate(-50%, 0rem) rotate(45deg);
-  transition: 250ms ease;
+  transition: 250ms ease-out;
   @include small {
     display: none;
   }
