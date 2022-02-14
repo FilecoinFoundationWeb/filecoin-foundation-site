@@ -180,7 +180,6 @@ export default {
   }
 }
 
-
 .nav-dropdown-panel-left {
   padding: 2rem 3rem 2rem 5rem;
   + .nav-dropdown-panel-right {
