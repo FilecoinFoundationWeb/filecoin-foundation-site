@@ -20,12 +20,12 @@ sections:
   templates:
   - blog-post-front-matter
 - type: directory
-  path: content/pages
+  path: content/pagesa
   label: Pages
   create: documents
   match: "**/*"
   exclude: general.json
-  new_doc_ext: json
+  new_doc_ext: ".json"
   templates:
   - page-index
   - page-grants
