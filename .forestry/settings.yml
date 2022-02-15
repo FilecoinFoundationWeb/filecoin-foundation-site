@@ -16,7 +16,7 @@ sections:
   label: Blog
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - blog-post-front-matter
 - type: directory
@@ -25,7 +25,7 @@ sections:
   create: documents
   match: "**/*"
   exclude: general.json
-  new_doc_ext: ".json"
+  new_doc_ext: json
   templates:
   - page-index
   - page-grants
@@ -45,8 +45,12 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  install_dependencies_command: npm install
+  preview_env:
+  - NODE_ENV=production
+  - SERVER_ENV=production
+  preview_output_directory: dist
+  install_dependencies_command: npm ci
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run generate
