@@ -832,5 +832,3 @@ fields:
       config: {}
       template: comp-divedeeper
       label: Diver Deeper
-pages:
-- content/pages/index.json

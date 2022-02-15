@@ -957,5 +957,3 @@ fields:
                 label: url
             config:
               max: 2
-pages:
-- content/pages/grants.json

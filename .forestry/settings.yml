@@ -16,16 +16,16 @@ sections:
   label: Blog
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
   templates:
   - blog-post-front-matter
 - type: directory
-  path: content/pagesa
+  path: content/pages
   label: Pages
   create: documents
   match: "**/*"
   exclude: general.json
-  new_doc_ext: ".json"
+  new_doc_ext: json
   templates:
   - page-index
   - page-grants
