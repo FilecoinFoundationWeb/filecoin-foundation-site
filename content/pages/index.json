@@ -246,18 +246,15 @@
             "num": "col-10_mi-11",
             "push_left": "off-2_mi-1"
           },
-          "preview_image": "/images/page-index/meet-the-filecoin-foundation-preview.png",
+          "preview_image": "/images/filecoin-banner.svg",
           "url": "https://youtu.be/6OY4xAs3Grg",
-          "tint": true,
           "subtext": {
             "type": "D",
             "action": "video",
             "icon": "play",
             "text": "Watch: Meet the Filecoin Foundation",
             "url": "https://youtu.be/6OY4xAs3Grg"
-          },
-          "preview_image": "/images/filecoin-banner.svg",
-          "url": "https://youtu.be/6OY4xAs3Grg"
+          }
         }
       },
       "grants": {
@@ -487,7 +484,8 @@
   },
   "seo": {
     "title": "Home - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone."
+    "description": "Filecoin Foundation - Let's build the internet of everyone.",
+    "test": "hello!"
   },
   "og": {
     "site_name": "Home - Filecoin Foundation",
