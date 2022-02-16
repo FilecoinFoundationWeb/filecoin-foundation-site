@@ -12,11 +12,6 @@ fields:
   - type: text
     name: description
     label: description
-  - name: test
-    type: text
-    config:
-      required: false
-    label: Test
 - type: field_group
   name: og
   label: og
