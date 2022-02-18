@@ -565,7 +565,7 @@ fields:
           hidden: true
         - type: file
           name: src
-          label: src
+          label: Image
     - type: field_group
       name: section_3-panel-3
       label: Section 3 Panel 3
