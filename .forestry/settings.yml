@@ -27,6 +27,7 @@ sections:
   exclude: general.json
   new_doc_ext: json
   templates:
+  - page-fil-austin
   - page-index
   - page-grants
   - page-terms
