@@ -4,23 +4,25 @@ hide_body: true
 fields:
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_1
-    label: section_1
+    label: Section 1
     fields:
     - type: field_group
       name: mobile_hero_image
-      label: mobile_hero_image
+      label: Mobile Hero Image
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -28,26 +30,36 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-3_mi-1
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image
+      description: Hero image that appears on small screens only (mobile devices)
     - type: field_group
       name: hero
-      label: hero
+      label: Hero
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -55,9 +67,14 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-10
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-3_md-2_sm-1_mi-1
+          hidden: true
         - type: text
           name: label
           label: label
@@ -69,30 +86,60 @@ fields:
           label: description
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
             label: type
-          - type: text
-            name: action
-            label: action
+            hidden: true
+            default: B
           - type: text
             name: icon
             label: icon
+            default: ticket
+            hidden: true
           - type: text
             name: text
-            label: text
+            label: Text
           - type: text
             name: id
-            label: id
+            label: Section ID
+            description: The DOM element id of the section to scroll to (only needed
+              if the action is "scroll-to")
+          - name: action
+            type: select
+            default: ''
+            config:
+              required: false
+              options:
+              - nuxt-link
+              - " a"
+              - scroll-to
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: Action
+            description: 'nuxt-link: navigation to a page within the site,<br>a: link
+              to an external site,<br>scroll-to: scroll to a section on this page'
+          - name: url
+            type: text
+            config:
+              required: false
+            label: URL
+            description: Leave blank if action is "scroll-to"
+          config:
+            labelField: text
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -100,26 +147,34 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_md-5 mi-hidden
           - type: text
             name: push_left
             label: push_left
+            default: off-1_sm-1
+            hidden: true
         - type: file
           name: src
-          label: src
+          label: Image
     - type: field_group
       name: hero_text
-      label: hero_text
+      label: Hero Text
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -127,30 +182,39 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-6_sm-7_mi-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-6_sm-4_mi-1
         - type: text
           name: description
           label: description
+      description: Text that appears below hero image.
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
     fields:
     - type: field_group
       name: section_2-heading
-      label: section_2-heading
+      label: Section 2 Heading
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -158,53 +222,72 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-3 mi-hidden
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1
         - type: field_group
           name: customizations
           label: customizations
           fields:
           - type: field_group
             name: floating_menu
-            label: floating_menu
+            label: Floating Menu
             fields:
             - type: text
               name: name
               label: name
+              hidden: true
+              default: FloatingMenu
             - type: field_group
               name: props
-              label: props
+              label: Properties
               fields:
               - type: text
                 name: id
                 label: id
+                hidden: true
+                default: filaustin-floating-menu
               - type: text
                 name: cutoff
                 label: cutoff
+                hidden: true
+                default: section_6
               - type: number
                 name: offsetbottom
                 label: offsetbottom
+                hidden: true
+                default: 0
               - type: field_group_list
                 name: entries
                 label: entries
                 fields:
                 - type: text
                   name: heading
-                  label: heading
+                  label: Heading
+                  description: Menu item
                 - type: text
                   name: id
-                  label: id
+                  label: ID
+                  description: The <strong><em>exact</em></strong> id of the DOM element
+                    of the section to scroll to
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -212,26 +295,34 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-6_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-2_mi-3
         - type: text
           name: heading
-          label: heading
+          label: Heading
     - type: field_group
       name: section_2-info
-      label: section_2-info
+      label: Section 2 Info
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -239,22 +330,30 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-3_mi-12
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-0
         - type: file
           name: src
-          label: src
+          label: Image
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -262,12 +361,18 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_mi-3
         - type: text
           name: data_id
           label: data_id
+          hidden: true
+          default: section_3-a
         - type: text
           name: subheading
           label: subheading
@@ -276,15 +381,17 @@ fields:
           label: description
     - type: field_group
       name: section_2-banner-image
-      label: section_2-banner-image
+      label: Section 2 Banner Image
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -292,30 +399,38 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-8_mi-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1
         - type: file
           name: src
-          label: src
+          label: Image
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
     fields:
     - type: field_group
       name: section_3-panel-1
-      label: section_3-panel-1
+      label: Section 3 Panel 1
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -323,12 +438,18 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-6_mi-3
         - type: text
           name: data_id
           label: data_id
+          hidden: true
+          default: section_5-a
         - type: text
           name: subheading
           label: subheading
@@ -337,18 +458,22 @@ fields:
           label: description
     - type: field_group
       name: section_3-panel-2
-      label: section_3-panel-2
+      label: Section 3 Panel 2
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -356,22 +481,30 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-3_mi-7
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1
         - type: file
           name: src
-          label: src
+          label: Image
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -379,9 +512,13 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_mi-3
         - type: text
           name: subheading
           label: subheading
@@ -390,15 +527,17 @@ fields:
           label: description
     - type: field_group
       name: section_3-banner-image
-      label: section_3-banner-image
+      label: Section 3 Banner Image
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -406,26 +545,34 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-8_mi-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1
         - type: file
           name: src
           label: src
     - type: field_group
       name: section_3-panel-3
-      label: section_3-panel-3
+      label: Section 3 Panel 3
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -433,22 +580,30 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-3_mi-7
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1
         - type: file
           name: src
-          label: src
+          label: Image
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -456,9 +611,13 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_mi-3
         - type: text
           name: subheading
           label: subheading
@@ -467,25 +626,31 @@ fields:
           label: description
   - type: field_group
     name: section_4
-    label: section_4
+    label: Section 4
     fields:
     - type: field_group
       name: subscribe_form
-      label: subscribe_form
+      label: Subscribe Form
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: text
           name: theme
           label: theme
+          hidden: true
+          default: light
         - type: field_group
           name: cols
           label: cols
@@ -493,9 +658,13 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-8_mi-11_ti-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1_ti-3
         - type: field_group
           name: customizations
           label: customizations
@@ -507,6 +676,8 @@ fields:
             - type: text
               name: name
               label: name
+              hidden: true
+              default: BackgroundLayers
             - type: field_group
               name: props
               label: props
@@ -514,6 +685,8 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                hidden: true
+                default: '1_2_3_4_5_6'
               - type: field_group
                 name: offset
                 label: offset
@@ -521,22 +694,36 @@ fields:
                 - type: number
                   name: medium
                   label: medium
+                  hidden: true
+                  default: 0.75
                 - type: number
                   name: mini
                   label: mini
+                  hidden: true
+                  default: 0.25
               - type: text
                 name: shadow-strength
                 label: shadow-strength
+                hidden: true
+                default: small
               - type: text
                 name: border-radius-direction
                 label: border-radius-direction
+                hidden: true
+                default: reverse
+              hidden: true
+            hidden: true
           - type: field_group
             name: form
-            label: form
+            label: Form
             fields:
             - type: text
               name: name
-              label: name
+              label: Name
+              hidden: true
+              default: FilAustinForm
+            hidden: true
+          hidden: true
         - type: text
           name: subheading
           label: subheading
@@ -545,22 +732,26 @@ fields:
           label: description
   - type: field_group
     name: section_5
-    label: section_5
+    label: Section 5
     fields:
     - type: field_group
       name: section_5-title-social
-      label: section_5-title-social
+      label: Section 5 Title Social
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -568,9 +759,13 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-8
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-6_mi-1
         - type: field_group
           name: customizations
           label: customizations
@@ -582,23 +777,29 @@ fields:
             - type: text
               name: name
               label: name
+              hidden: true
+              default: SocialIcons
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading
     - type: field_group
       name: section_5-info
-      label: section_5-info
+      label: Section 5 Info
       fields:
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -606,22 +807,31 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-3_mi-7
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_mi-1
         - type: file
           name: src
-          label: src
+          label: Image
+        label: Left
       - type: field_group
         name: right
-        label: right
+        label: Right
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: text_block
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: small
         - type: field_group
           name: cols
           label: cols
@@ -629,9 +839,13 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-4_mi-9
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-1_mi-3
         - type: text
           name: subheading
           label: subheading
@@ -640,34 +854,63 @@ fields:
           label: description
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
             label: type
-          - type: text
-            name: action
-            label: action
+            hidden: true
+            default: A
           - type: text
             name: theme
             label: theme
+            hidden: true
+            default: dark
           - type: text
             name: text
-            label: text
+            label: Text
           - type: text
             name: url
-            label: url
+            label: URL
+          - name: action
+            type: select
+            default: []
+            config:
+              required: false
+              options:
+              - nuxt-link
+              - a
+              - scroll-to
+              source:
+                type: simple
+                section: 
+                file: 
+                path: 
+            label: Action
+            description: 'nuxt-link: navigation to a page within the site,<br>a: link
+              to an external site,<br>scroll-to: scroll to a section on this page'
+          - name: id
+            type: text
+            config:
+              required: false
+            description: The DOM element id of the section to scroll to (leave blank
+              unless the action is "scroll-to")
+            label: Section ID
+          config:
+            labelField: text
     - type: field_group
       name: section_5-banner-image
-      label: section_5-banner-image
+      label: Section 5 Banner Image
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left
         fields:
         - type: text
           name: type
           label: type
+          hidden: true
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -675,33 +918,41 @@ fields:
           - type: text
             name: num
             label: num
+            hidden: true
+            default: col-8_mi-11
           - type: text
             name: push_left
             label: push_left
+            hidden: true
+            default: off-4_md-2_mi-1
         - type: file
           name: src
-          label: src
+          label: Image
   - type: field_group
     name: section_6
-    label: section_6
+    label: Section 6
     fields:
     - type: field_group
       name: events-hackathons
-      label: events-hackathons
+      label: Events & Hackathons
       fields:
       - type: text
         name: type
         label: type
+        hidden: true
+        default: custom
       - type: text
         name: component
         label: component
+        hidden: true
+        default: EventsHackathons
       - type: field_group
         name: props
-        label: props
+        label: Properties
         fields:
         - type: field_group
           name: intro
-          label: intro
+          label: Intro
           fields:
           - type: field_group
             name: cols
@@ -710,15 +961,19 @@ fields:
             - type: text
               name: num
               label: num
+              hidden: true
+              default: col-4_mi-6
             - type: text
               name: push_left
               label: push_left
+              hidden: true
+              default: off-6_mi-1
           - type: text
             name: heading
             label: heading
         - type: field_group
           name: events
-          label: events
+          label: Events
           fields:
           - type: field_group
             name: cols
@@ -727,53 +982,82 @@ fields:
             - type: text
               name: num
               label: num
+              hidden: true
+              default: col-8_mi-12
             - type: text
               name: push_left
               label: push_left
+              hidden: true
+              default: off-4_mi-0
           - type: field_group_list
             name: cards
-            label: cards
+            label: Cards
             fields:
             - type: text
               name: type
               label: type
+              hidden: true
+              default: D
             - type: datetime
               name: date
-              label: date
+              label: Date
             - type: text
               name: title
-              label: title
+              label: Title
             - type: file
               name: img
-              label: img
+              label: Image
             - type: text
               name: img_type
               label: img_type
+              hidden: true
+              default: background_image
             - type: field_group
               name: cta
-              label: cta
+              label: CTA
               fields:
               - type: text
                 name: type
                 label: type
-              - type: text
-                name: action
-                label: action
+                hidden: true
+                default: B
               - type: text
                 name: target
                 label: target
+                hidden: true
+                default: _blank
               - type: text
                 name: icon
                 label: icon
+                hidden: true
+                default: info
               - type: text
                 name: text
-                label: text
+                label: Text
+                hidden: false
               - type: text
                 name: url
-                label: url
+                label: URL
+              - name: action
+                type: select
+                default: []
+                config:
+                  required: false
+                  options:
+                  - nuxt-link
+                  - a
+                  source:
+                    type: simple
+                    section: 
+                    file: 
+                    path: 
+                label: Action
+            config:
+              labelField: title
+        hidden: false
 - type: field_group
   name: seo
-  label: seo
+  label: SEO
   fields:
   - type: text
     name: title
@@ -783,11 +1067,11 @@ fields:
     label: description
 - type: field_group
   name: og
-  label: og
+  label: Open Graph
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: Site name
   - type: text
     name: url
     label: url
