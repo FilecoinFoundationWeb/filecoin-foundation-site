@@ -1,4 +1,29 @@
 ---
 label: "[Data] Open Graph & Social"
 hide_body: false
-fields: []
+fields:
+- name: og
+  type: field_group
+  config: {}
+  fields:
+  - name: site_name
+    type: text
+    config:
+      required: false
+    label: Site Name
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+  - name: type
+    type: text
+    config:
+      required: false
+    label: Type
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Open Graph & Social
