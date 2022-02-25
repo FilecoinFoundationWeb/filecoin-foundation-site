@@ -55,30 +55,14 @@ fields:
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-2_sm-3_mi-5
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-3_sm-4_mi-3
-          hidden: true
-        - type: file
-          name: src
-          label: Image
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
         - type: field_group
           name: customizations
-          label: customizations
+          label: Customizations
           fields:
           - type: field_group
             name: background_layers
@@ -120,7 +104,7 @@ fields:
           hidden: true
     - type: field_group
       name: intro_2
-      label: intro_2
+      label: Intro 2
       fields:
       - type: field_group
         name: left
