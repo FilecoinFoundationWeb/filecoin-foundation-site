@@ -201,103 +201,27 @@ fields:
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          default: slider_block
-          hidden: true
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-6_sm-8_ti-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_sm-4_mi-2_ti-2
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: a
-          - type: text
-            name: target
-            label: target
-            hidden: true
-            default: _blank
-          - type: text
-            name: img_size
-            label: img_size
-            default: mini
-            hidden: true
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: title
-            label: title
-          - type: text
-            name: description
-            label: description
-          - type: text
-            name: url
-            label: url
-          config:
-            max: 10
-            labelField: title
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
     - type: field_group
       name: team_video
-      label: team_video
+      label: Team Video
       fields:
       - type: field_group
         name: left
         label: Left Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: video_block
-        - type: boolean
-          name: tint
-          label: tint
-          hidden: true
-          default: true
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-10_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_mi-1
-          hidden: true
-        - type: file
-          name: preview_image
-          label: preview image
-        - type: text
-          name: url
-          label: url
+        - name: video_block
+          type: include
+          config: {}
+          template: block-video
+          label: Template → [Block] Video
         - type: field_group
           name: subtext
-          label: subtext
+          label: Subtext
           fields:
           - type: text
             name: type
@@ -316,243 +240,71 @@ fields:
             default: play
           - type: text
             name: text
-            label: text
+            label: Text
           - type: text
             name: url
-            label: url
+            label: URL
     - type: field_group
       name: grants
-      label: grants
+      label: Grants
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
-        label: Grid Classes
+        label: Template → [Layout] Grid Alignment
       - type: field_group
         name: left
         label: Left Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_sm-6_mi-7_ti-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_sm-1
-          hidden: true
-        - type: file
-          name: src
-          label: Image
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
       - type: field_group
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-5_sm-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: textarea
-          name: heading
-          label: heading
-        - type: text
-          name: description
-          label: description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: nuxt-link
-          - type: text
-            name: text
-            label: text
-          - type: text
-            name: url
-            label: url
-          config:
-            max: 1
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
     fields:
     - type: field_group
       name: get_involved
-      label: get_involved
+      label: Get Involved
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
-        label: Grid Classes
+        label: Template → [Layout] Grid Alignment
       - type: field_group
         name: left
         label: Left Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_sm-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_sm-2_mi-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: nuxt-link
-          - type: text
-            name: text
-            label: text
-          - type: text
-            name: url
-            label: url
-          config:
-            max: 1
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
       - type: field_group
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: slider_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-6_sm-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2
-            hidden: true
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: img_size
-            label: img_size
-            hidden: true
-            default: regular
-          - name: action
-            type: select
-            default: a
-            config:
-              required: false
-              options:
-              - nuxt-link
-              - a
-              source:
-                type: simple
-                section: 
-                file: 
-                path: 
-            label: Action
-          - type: text
-            name: url
-            label: url
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: title
-            label: title
-          - type: text
-            name: description
-            label: description
-          config:
-            labelField: title
-            max: 6
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
         - type: field_group
           name: customizations
-          label: customizations
+          label: Customizations
           fields:
           - type: field_group
             name: background_layers
@@ -594,7 +346,7 @@ fields:
           hidden: true
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
     fields:
     - name: diver_deeper
       type: include
