@@ -1,0 +1,21 @@
+---
+label: "[Data] SEO"
+hide_body: true
+fields:
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+      max: 100
+    label: Title
+  - name: description
+    type: text
+    config:
+      required: true
+      max: 200
+    label: Description
+  label: SEO
