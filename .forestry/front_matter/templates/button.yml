@@ -2,82 +2,81 @@
 label: "[Comp] Button"
 hide_body: true
 fields:
-- name: cta
-  type: field_group
-  config: {}
-  fields:
-  - name: type
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - A
-      - B
-      - C
-      - D
-      - E
-      - F
-      - H
-      - G
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Type
-  - name: theme
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - light
-      - dark
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Theme
-  - name: action
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - link
-      - button
-      - video
-      - nuxt-link
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Action
-  - name: icon
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - play
-      - info
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Icon
-  - name: text
-    type: text
-    config:
-      required: false
-    label: Text
-  - name: url
-    type: text
-    config:
-      required: false
-    label: URL
-  label: CTA
+- name: text
+  type: text
+  config:
+    required: false
+  label: Text
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Type
+- name: action
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - link
+    - button
+    - video
+    - nuxt-link
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Action
+- name: theme
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - light
+    - dark
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Theme
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+- name: icon
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - play
+    - info
+    - icon
+    - code
+    - ticket
+    - plus
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Icon
