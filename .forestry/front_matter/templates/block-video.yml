@@ -1,4 +1,30 @@
 ---
 label: "[Block] Video"
 hide_body: true
-fields: []
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  label: Type
+  hidden: true
+  default: video_block
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+- name: preview_image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: tint
+  type: boolean
+  label: Tint
+  default: true
