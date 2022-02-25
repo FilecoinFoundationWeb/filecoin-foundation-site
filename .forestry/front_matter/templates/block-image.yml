@@ -1,4 +1,26 @@
 ---
 label: "[Block] Image"
 hide_body: true
-fields: []
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Type
+  default: image_block
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
+- name: src
+  type: file
+  config:
+    maxSize: 64
+  label: Image
