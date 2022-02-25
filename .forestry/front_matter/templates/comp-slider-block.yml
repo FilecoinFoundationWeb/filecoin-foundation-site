@@ -1,5 +1,5 @@
 ---
-label: "[Comp] Slider Block"
+label: "[Block] Slider"
 hide_body: true
 fields:
 - name: type
