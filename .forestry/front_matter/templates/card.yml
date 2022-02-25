@@ -33,6 +33,15 @@ fields:
   config:
     required: false
   label: Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
 - name: img
   type: file
   config:
@@ -46,23 +55,61 @@ fields:
     options:
     - img
     - background_image
+    - nuxt-link
     source:
       type: simple
       section: 
       file: 
       path: 
   label: Image Type
-- name: cta
-  type: include
-  config: {}
-  template: button
-  label: CTA
-- name: description
-  type: textarea
-  default: ''
+- name: img_size
+  type: select
+  default: []
   config:
     required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Description
+    options:
+    - full
+    - regular
+    - mini
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Image Size
+- name: action
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - a
+    - " nuxt-link"
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Action
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+- name: target
+  type: text
+  config:
+    required: false
+  label: Target
+  hidden: true
+  default: _blank
+- name: cta
+  type: field_group
+  config: {}
+  fields:
+  - name: cta
+    type: include
+    config: {}
+    template: button
+    label: CTA
+  label: CTA
