@@ -1,4 +1,24 @@
 ---
 label: "[Layout] Columns"
 hide_body: false
-fields: []
+fields:
+- name: cols
+  type: field_group
+  config: {}
+  fields:
+  - name: num
+    type: text
+    config:
+      required: false
+    label: Number
+  - name: push_left
+    type: text
+    config:
+      required: false
+    label: Push Left
+  - name: push_right
+    type: text
+    config:
+      required: false
+    label: Push Right
+  label: Columns
