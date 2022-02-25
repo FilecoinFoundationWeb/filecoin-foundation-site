@@ -184,7 +184,7 @@ export default {
     visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
   background-color: $denim;
   border: 5px solid $azureRadiance;
-  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  border-radius: 1.0625rem 1.0625rem 5.25rem 5.25rem;
   color: $white;
 
   &:before {
@@ -196,7 +196,7 @@ export default {
     height: calc(100% - 10px);
     background-color: $blackPearl;
     border: 5px solid $kleinBlue;
-    border-radius: 0.625rem 0.625rem 4.75rem 4.75rem;
+    border-radius: 0.4375rem 0.4375rem 4.75rem 4.75rem;
   }
 
   animation-duration: 250ms;
