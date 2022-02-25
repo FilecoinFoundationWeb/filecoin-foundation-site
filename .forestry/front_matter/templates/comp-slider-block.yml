@@ -6,9 +6,14 @@ fields:
   type: text
   config:
     required: false
-  label: type
+  label: Type
   hidden: true
   default: slider_block
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
 - name: cards
   type: blocks
   label: Cards
