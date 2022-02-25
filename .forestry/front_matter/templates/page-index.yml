@@ -110,135 +110,33 @@ fields:
         name: left
         label: Left Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: video_block
-        - type: boolean
-          name: tint
-          label: tint
-          hidden: true
-          default: true
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-6_sm-10_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_mi-1
-          hidden: true
-        - type: file
-          name: preview_image
-          label: preview image
-        - type: text
-          name: url
-          label: url
+        - name: video_block
+          type: include
+          config: {}
+          template: block-video
+          label: Template → [Block] Video
       - type: field_group
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_sm-10_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_sm-2_mi-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: text
-          name: description
-          label: description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: B
-          - type: text
-            name: theme
-            label: theme
-            hidden: true
-            default: dark
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: video
-          - type: text
-            name: icon
-            label: icon
-            hidden: true
-            default: play
-          - type: text
-            name: text
-            label: text
-          - type: text
-            name: url
-            label: url
-          hidden: false
-          config:
-            max: 1
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: banner_1
-      label: banner_1
+      label: Banner 1
       fields:
       - type: field_group
         name: left
         label: Left Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: compact
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-7_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-3
-          hidden: true
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
         - type: field_group
           name: customizations
           label: customizations
