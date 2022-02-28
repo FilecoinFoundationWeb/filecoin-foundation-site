@@ -25,19 +25,9 @@ fields:
     config: {}
     fields:
     - name: cols
-      type: field_group
+      type: include
       config: {}
-      fields:
-      - name: num
-        type: text
-        config:
-          required: false
-        label: Number
-      - name: push_left
-        type: text
-        config:
-          required: false
-        label: Push Left
+      template: layout-columns
       label: Columns
     - name: heading
       type: text
@@ -57,7 +47,7 @@ fields:
     - name: cols
       type: include
       config: {}
-      template: columns
+      template: layout-columns
       label: Columns
     - name: cards
       type: blocks
