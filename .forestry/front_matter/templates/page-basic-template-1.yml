@@ -2,588 +2,201 @@
 label: "[Page] Basic Template 1"
 hide_body: true
 fields:
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: description
-    label: description
-- type: field_group
-  name: og
-  label: og
-  fields:
-  - type: text
-    name: site_name
-    label: site name
-  - type: text
-    name: url
-    label: url
-  - type: text
-    name: type
-    label: type
-  - type: file
-    name: image
-    label: image
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_1
-    label: section_1
+    label: Section 1
     fields:
     - type: field_group
       name: basic_hero
-      label: basic_hero
       fields:
-      - type: field_group
-        name: left
-        label: Left Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-5_md-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-0_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: subheading
-          label: subheading
-        - type: text
-          name: label
-          label: label
-      - type: field_group
-        name: right
-        label: Right Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-7_md-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-0_md-2_mi-1
-          hidden: true
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Right Block
+      label: Basic Hero
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
     fields:
     - type: field_group
       name: basic_content_1
-      label: basic_content_1
+      label: Basic Content 1
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: textarea
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
     - type: field_group
       name: banner_image
-      label: banner_image
+      label: Banner Image
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-          hidden: false
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Left Block
     - type: field_group
       name: basic_content_2
-      label: basic_content_2
+      label: Basic Content 2
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
     - type: field_group
       name: panels_1
-      label: panels_1
+      label: Panels 1
       fields:
-      - type: field_group
-        name: left
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
         label: Left Block
+      - name: right
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-4_sm-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: textarea
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
-      - type: field_group
-        name: right
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
         label: Right Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-6_md-5_sm-7_mi-8
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_mi-2_sm-2_mi-1
-          hidden: true
     - type: field_group
       name: basic_content_3
-      label: basic_content_3
+      label: Basic Content 3
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
     - type: field_group
       name: basic_content_4
-      label: basic_content_4
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
+      label: Basic Content 4
     - type: field_group
       name: basic_content_5
-      label: basic_content_5
+      label: Basic Content 5
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
     fields:
-    - type: field_group
-      name: events_hackathons
-      label: events_hackathons
-      fields:
-      - type: text
-        name: type
-        label: type
-        hidden: true
-        default: custom
-      - type: text
-        name: component
-        label: component
-        hidden: true
-        default: EventsHackathons
-      - type: field_group
-        name: props
-        label: props
-        fields:
-        - type: field_group
-          name: intro
-          label: intro
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              hidden: true
-              default: col-4_sm-8_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              hidden: true
-              default: off-0_md-1_sm-2_mi-2_mi-1
-            hidden: true
-          - type: text
-            name: heading
-            label: heading
-          - type: field_group
-            name: cta
-            label: CTA
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: A
-            - type: text
-              name: action
-              label: action
-              hidden: true
-              default: nuxt-link
-            - type: text
-              name: text
-              label: text
-            - type: text
-              name: url
-              label: url
-        - type: field_group
-          name: events
-          label: events
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              hidden: true
-              default: col-8_sm-10_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              hidden: true
-              default: off-4_sm-2_mi-2_ti-1
-            hidden: true
-          - type: field_group_list
-            name: cards
-            label: cards
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: D
-            - name: date
-              type: datetime
-              label: Date
-              description: ''
-              config:
-                required: false
-                date_format: 
-                time_format: 
-                display_utc: false
-            - type: text
-              name: title
-              label: Title
-            - type: file
-              name: img
-              label: Image
-            - type: text
-              name: img_type
-              label: img_type
-              hidden: true
-              default: background_image
-            - type: field_group
-              name: cta
-              label: cta
-              fields:
-              - type: text
-                name: type
-                label: type
-                hidden: true
-                default: B
-              - type: text
-                name: action
-                label: action
-                hidden: true
-                default: a
-              - type: text
-                name: target
-                label: target
-                hidden: true
-                default: _blank
-              - type: text
-                name: icon
-                label: icon
-                hidden: true
-                default: info
-              - type: text
-                name: text
-                label: text
-              - type: text
-                name: url
-                label: url
-            config:
-              max: 2
+    - name: events_hackathons
+      type: include
+      config: {}
+      template: events-hackathons
+      label: Template → [Comp] Events & Hackathons
