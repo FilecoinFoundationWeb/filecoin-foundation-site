@@ -5,7 +5,7 @@
         <div class="content">
           <component
             :is="navigationComponentType"
-            @panel-open="toggleScrollClass"/>
+            @panel-open="toggleScrollClass" />
         </div>
       </div>
     </div>

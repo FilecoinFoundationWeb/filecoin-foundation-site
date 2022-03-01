@@ -179,7 +179,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     height: calc(100% + 4rem);
     border-bottom-left-radius: 11.375rem;
     @include mini {
-      border-bottom-left-radius: 4.75rem; 
+      border-bottom-left-radius: 4.75rem;
     }
   }
 }
