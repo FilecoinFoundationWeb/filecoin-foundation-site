@@ -14,7 +14,7 @@ fields:
   label: Template → [Data] Open Graph & Social
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_1
@@ -115,203 +115,50 @@ fields:
             label: Next
             default: 6
           hidden: true
-        - type: field_group_list
-          name: cards
-          label: Cards
+        - name: cards
+          type: field_group_list
           fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: D
-          - name: date
-            type: datetime
-            label: Date
-            description: ''
-            config:
-              required: false
-              date_format: 
-              time_format: 
-              display_utc: false
-          - type: text
-            name: label
-            label: Label
-          - type: text
-            name: title
-            label: Title
-          - type: field_group
-            name: cta
-            label: cta
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: B
-            - type: text
-              name: action
-              label: action
-              hidden: true
-              default: a
-            - type: text
-              name: icon
-              label: icon
-              hidden: true
-              default: plus
-            - type: text
-              name: text
-              label: text
-            - type: text
-              name: url
-              label: url
+          - name: cards
+            type: include
+            config: {}
+            template: card
+            label: Template → [Comp] Card
           config:
-            labelField: label
+            min: 
+            max: 
+            labelField: 
+          label: Cards
     - type: field_group
       name: get_involved
-      label: get_involved
+      label: Get Involved
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_md-4_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            default: a
-            hidden: true
-          - type: text
-            name: theme
-            label: theme
-            hidden: true
-            default: dark
-          - type: text
-            name: target
-            label: target
-            hidden: true
-            default: _blank
-          - type: text
-            name: text
-            label: text
-          - type: text
-            name: url
-            label: url
-          config:
-            max: 1
-            labelField: text
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Block
       - type: field_group
         name: right
         label: Right Block
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: slider_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-6
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_md-1_mi-3
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: Cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: img_size
-            label: img_size
-            hidden: true
-            default: regular
-          - name: action
-            type: select
-            default: []
-            config:
-              required: false
-              options:
-              - a
-              - nuxt-link
-              source:
-                type: simple
-                section: 
-                file: 
-                path: 
-            label: Action
-          - type: text
-            name: url
-            label: url
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: title
-            label: title
-          - type: text
-            name: description
-            label: description
-          config:
-            max: 6
-            labelField: title
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
         - type: field_group
           name: customizations
-          label: customizations
+          label: Customizations
           fields:
           - type: field_group
             name: background_layers
@@ -346,152 +193,8 @@ fields:
                 hidden: true
                 default: true
           hidden: true
-    - type: field_group
-      name: dive_deeper
-      label: dive_deeper
-      fields:
-      - type: text
-        name: type
-        label: type
-        hidden: true
-        default: custom
-      - type: text
-        name: component
-        label: component
-        hidden: true
-        default: DiveDeeper
-      - type: field_group
-        name: props
-        label: props
-        fields:
-        - type: field_group
-          name: intro
-          label: intro
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              default: col-7_sm-8_mi-9_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              default: off-1_sm-2_mi-1
-            hidden: true
-          - type: text
-            name: heading
-            label: heading
-          - type: textarea
-            name: subheading
-            label: subheading
-        - type: field_group_list
-          name: videos
-          label: videos
-          fields:
-          - type: field_group
-            name: left
-            label: Left Block
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: video_block
-            - type: field_group
-              name: cols
-              label: cols
-              fields:
-              - type: text
-                name: num
-                label: num
-                default: col-6_sm-8_mi-9_ti-11
-              - type: text
-                name: push_left
-                label: push_left
-                default: off-1_sm-2_mi-1
-              hidden: true
-            - type: field_group
-              name: props
-              label: props
-              fields:
-              - type: file
-                name: preview_image
-                label: preview_image
-              - type: text
-                name: url
-                label: url
-          - type: field_group
-            name: right
-            label: Right Block
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: text_block
-            - type: field_group
-              name: cols
-              label: cols
-              fields:
-              - type: text
-                name: num
-                label: num
-                default: col-4_sm-8_mi-9_ti-11
-              - type: text
-                name: push_left
-                label: push_left
-                default: off-1_sm-2_mi-1
-              hidden: true
-            - type: field_group
-              name: props
-              label: props
-              fields:
-              - type: text
-                name: layout
-                label: layout
-                hidden: true
-                default: medium
-              - type: field_group_list
-                name: ctas
-                label: ctas
-                fields:
-                - type: text
-                  name: type
-                  label: type
-                  default: B
-                  hidden: true
-                - type: text
-                  name: theme
-                  label: theme
-                  hidden: true
-                  default: light
-                - type: text
-                  name: action
-                  label: action
-                  hidden: true
-                  default: video
-                - type: text
-                  name: icon
-                  label: icon
-                  hidden: true
-                  default: play
-                - type: text
-                  name: text
-                  label: text
-                - type: text
-                  name: url
-                  label: url
-                config:
-                  max: 1
-                  labelField: text
-              - type: text
-                name: heading
-                label: heading
-              - type: textarea
-                name: description
-                label: description
-          config:
-            max: 2
+    - name: diver_deeper
+      type: include
+      config: {}
+      template: comp-divedeeper
+      label: Template → [Comp] DiveDeeper
