@@ -51,6 +51,10 @@ export default {
           stroke: 1.375,
           radius: 12.75
         },
+        ultralarge: {
+          stroke: 1.75,
+          radius: 12.75
+        },
         medium: {
           stroke: 1,
           radius: 12.75
@@ -119,7 +123,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #section_1 {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 8rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
@@ -195,6 +199,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #hero {
   padding: 0;
+  padding-bottom: 2rem;
   margin-bottom: 9.875rem;
   @include small {
     margin-bottom: 3rem;
@@ -206,8 +211,19 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   @include tiny {
     margin-top: 0;
   }
+  .text-block {
+    transform: translateX(-2vw);
+    @include small {
+      transform: translateX(0);
+    }
+  }
   .video-block {
     height: 100%;
+    // padding: 0 0.25rem;
+    transform: translate(5vw, 1rem);
+    @include small {
+      transform: translate(0, 0);
+    }
     .preview-container {
       background-color: $jordyBlue;
     }
