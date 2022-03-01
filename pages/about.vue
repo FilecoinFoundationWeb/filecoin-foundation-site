@@ -14,7 +14,6 @@
       <BackgroundLayers
         id="page-about-background-layers"
         layers-array="3_4_5_6"
-        :print="true"
         :breakpoints="pageLayersBreakpointData" />
 
     </div>

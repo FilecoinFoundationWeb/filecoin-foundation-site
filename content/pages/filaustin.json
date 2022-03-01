@@ -220,9 +220,15 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "1_2_3_4_5_6",
-                "offset": {
-                  "medium": 0.75,
-                  "mini": 0.25
+                "breakpoints": {
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 5
+                  }
                 },
                 "shadow-strength": "small",
                 "border-radius-direction": "reverse"

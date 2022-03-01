@@ -37,9 +37,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6_5_4_3",
-                "offset": {
-                  "medium": 0.75,
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
                 },
                 "reverse": true
               }
@@ -181,8 +191,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6",
-                "offset": {
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 12.75
+                  }
                 },
                 "reverse": true
               }
