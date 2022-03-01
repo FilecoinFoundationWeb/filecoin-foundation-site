@@ -187,7 +187,11 @@ h2, .h2 {
     @include fontWeight_SemiBold;
     @include leading_Regular;
     letter-spacing: $letterSpacing_Large;
-    color: $denim;
+    color: $kleinBlue;
+    // transition: 200ms ease;
+    // &:hover {
+    //   @include fontWeight_Bold;
+    // }
   }
   ul {
     margin-bottom: 1.5rem;

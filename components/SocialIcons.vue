@@ -29,6 +29,7 @@ import RedditIcon from '@/components/icons/Reddit'
 import TwitterIcon from '@/components/icons/Twitter'
 import LinkedInIcon from '@/components/icons/LinkedIn'
 import YoutubeIcon from '@/components/icons/Youtube'
+import SlackIcon from '@/components/icons/Slack'
 
 // ====================================================================== Export
 export default {
@@ -40,7 +41,16 @@ export default {
     TwitterIcon,
     LinkedInIcon,
     YoutubeIcon,
+    SlackIcon,
     Button
+  },
+
+  props: {
+    forceList: {
+      type: Array,
+      required: false,
+      default: () => []
+    }
   },
 
   computed: {
@@ -48,7 +58,7 @@ export default {
       siteContent: 'global/siteContent'
     }),
     icons () {
-      return this.siteContent.general.social
+      return this.forceList.length ? this.forceList : this.siteContent.general.social
     }
   }
 }

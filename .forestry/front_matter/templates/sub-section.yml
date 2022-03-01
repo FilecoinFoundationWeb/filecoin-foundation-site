@@ -1,0 +1,49 @@
+---
+label: "[Comp] Sub Section"
+hide_body: true
+fields:
+- name: id
+  type: text
+  config:
+    required: false
+  label: Section ID
+- name: grid
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Grid Classes
+- name: classNames
+  type: text
+  config:
+    required: false
+  label: Class Names
+- name: left
+  type: blocks
+  label: Left Block
+  template_types:
+  - text-block
+  - image-block
+  - video-block
+  config:
+    min: 
+    max: 1
+- name: right
+  type: blocks
+  label: Right Block
+  template_types:
+  - text-block
+  - image-block
+  - video-block
+  config:
+    min: 
+    max: 1
+- name: custom
+  type: blocks
+  label: Custom
+  template_types:
+  - events-hackathons
+  config:
+    min: 
+    max: 

@@ -53,7 +53,7 @@
 
             <BackgroundLayers
               v-if="backgroundlayers"
-              :layers-array="[8, 6]"
+              layers-array="8_6"
               :border-radius="5" />
 
           </div>

@@ -1,5 +1,3 @@
-/* eslint require-await: "off" */
-
 export default {
   // //////////////////////////////////////////// Static Site Generation Options
   // ---------------------------------------------------------------------------
@@ -15,7 +13,7 @@ export default {
       siteUrl: 'https://fil.org'
     },
     redirects: [
-      { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      // { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
       { from: '/board', to: '/about/#panel_1' },
       { from: '/careers', to: '/get-involved/#careers_intro' },
       { from: '/community', to: '/about/#dive_deeper_intro' },
@@ -81,13 +79,22 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    // Doc: https://github.com/agency-undone/au-nuxt-module-zero
+    // https://github.com/agency-undone/au-nuxt-module-zero
     '@agency-undone/au-nuxt-module-zero',
     // Doc: https://sitemap.nuxtjs.org
     '@nuxtjs/sitemap',
     // Doc: https://content.nuxtjs.org
     '@nuxt/content'
   ],
+  // ///////////////////////////////////////////////////// [Module] Nuxt-content
+  // ---------------------------------------------------------------------------
+  content: {
+    markdown: {
+      prism: {
+        theme: false
+      }
+    }
+  },
   // ///////////////////////////////////////////////////////////// [Module] Zero
   // ---------------------------------------------------------------------------
   zero: {

@@ -97,20 +97,22 @@ export default {
   @include tiny {
     width: 100%;
   }
-  &:first-child {
-    margin-top: 2rem;
-    margin-right: 1rem;
-    @include small {
-      margin-right: 0;
+  &.type__D {
+    &:first-child {
+      margin-top: 2rem;
+      margin-right: 1rem;
+      @include small {
+        margin-right: 0;
+      }
     }
-  }
-  &:last-child {
-    position: relative;
-    top: -8rem;
-    background-color: $denim;
-    @include small {
-      top: 0;
-      margin-top: 1rem;
+    &:last-child {
+      position: relative;
+      top: -8rem;
+      background-color: $denim;
+      @include small {
+        top: 0;
+        margin-top: 1rem;
+      }
     }
   }
 }

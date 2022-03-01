@@ -387,6 +387,13 @@ export default {
   padding: 0.25rem;
   color: white;
   background-color: $azureRadiance;
+  transform: scale(1);
+  transition: 300ms ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.0);
+  &:hover {
+    transform: scale(1.03125);
+    box-shadow: 3px 7px 10px rgba(10, 30, 82, 0.25);
+  }
   &:not(.with-image) {
     display: flex;
     flex-direction: column;
@@ -407,6 +414,7 @@ export default {
     }
   }
   .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -485,6 +493,12 @@ export default {
     display: block;
     padding: 0.625rem;
     padding-top: 1.25rem;
+    flex-grow: 1;
+  }
+  .panel-left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .panel-right {
     display: none;
@@ -521,7 +535,7 @@ export default {
     letter-spacing: $letterSpacing_Large;
   }
   .cta {
-    margin-top: 0.5rem;
+    margin-top: auto;
   }
 }
 

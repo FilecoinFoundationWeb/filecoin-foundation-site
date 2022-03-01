@@ -5,6 +5,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 author: Filecoin Foundation
 image: '/images/blog/dev-grant-update.png'
 recommendedPosts: ['lorem-ipsum-1', 'welcome-to-the-forest', 'storage-provider-bounty-board']
+tags: ['Lorem Ipsum Tag','Lorem Ipsum Tag', 'Another Lorem Ipsum Tag']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.   

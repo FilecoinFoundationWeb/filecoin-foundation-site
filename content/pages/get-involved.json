@@ -1,18 +1,7 @@
 {
-  "seo": {
-    "title": "Get Involved - Filecoin Foundation",
-    "description": "Learn how you can get involved with the Filecoin Foundation, from attending an event to becoming part of the ecosystem."
-  },
-  "og": {
-    "site_name": "Get Involved - Filecoin Foundation",
-    "url": "https://fil.org/get-involved",
-    "type": "website",
-    "image": "/images/open-graph.png"
-  },
-  "page_content": [
-    [
-      {
-        "id": "hero",
+  "page_content": {
+    "section_1": {
+      "hero": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -32,8 +21,7 @@
           "src": "/images/page-get-involved/raised-hands-large.png"
         }
       },
-      {
-        "id": "careers_intro",
+      "careers_intro": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -42,12 +30,18 @@
             "push_left": "off-2_mi-1"
           },
           "heading": "Careers",
-          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. Check out our open roles."
+          "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. <a href='https://jobs.lever.co/filecoin' target='_blank'>Check out our open roles</a>.",
+          "ctas": [{
+            "type": "B",
+            "action": "a",
+            "target": "_blank",
+            "icon": "plus",
+            "text": "View All",
+            "url": "https://jobs.lever.co/filecoin"
+          }]
         }
       },
-      {
-        "id": "careers_list",
-        "grid": ["noGutter"],
+      "careers_list": {
         "left": {
           "type": "card_list_block",
           "cols": {
@@ -67,12 +61,13 @@
           "cards": [
             {
               "type": "D",
-              "date": "September 4, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Communications Associate",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
@@ -80,36 +75,39 @@
             },
             {
               "type": "D",
-              "date": "September 20, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Developer Grants Coordinator",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/d7fa677a-5d92-4043-929c-56d6cb7bc73b"
+                "url": "https://jobs.lever.co/filecoin/97883211-62bb-4ccd-8d3c-c7f13a3ab1f1"
               }
             },
             {
               "type": "D",
-              "date": "October 8, 2021",
+              "date": "",
               "label": "San Francisco, Remote",
               "title": "Program Manager, Filecoin Developer Grants",
               "cta": {
                 "type": "B",
                 "action": "a",
+                "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
               }
             }
           ]
-        }
+        },
+        "grid": [
+          "noGutter"
+        ]
       },
-      {
-        "id": "get_involved",
-        "grid": ["middle"],
+      "get_involved": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -137,81 +135,175 @@
             "num": "col-6",
             "push_left": "off-2_md-1_mi-3"
           },
-          "cards": [
-            {
-              "type": "A",
-              "action": "nuxt-link",
-              "url": "/events",
-              "img": "/icons/calendar.png",
-              "img_size": "regular",
-              "title": "Attend an event",
-              "description": "Join or watch a Filecoin ecosystem event"
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//www.meetup.com/Filecoin-San-Francisco",
-              "img": "/icons/multi-person.png",
-              "img_size": "regular",
-              "title": "Join a meetup group",
-              "description": "Find a group of people in your area who connect regularly"
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute",
-              "img": "/icons/speech-bubble.png",
-              "img_size": "regular",
-              "title": "Contribute to the Filecoin project",
-              "description": "Shape the future by contributing to Filecoin’s code, research, or docs"
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//filecoin.io/slack",
-              "img": "/icons/hands-raised.png",
-              "img_size": "regular",
-              "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the <a href='//filecoin.io/slack' target='_blank' alt='Filecoin commmunity Slack'>Filecoin Slack channel</a>"
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//docs.filecoin.io/build",
-              "img": "/icons/tool.png",
-              "img_size": "regular",
-              "title": "Become a storage provider or builder",
-              "description": "Dive right in and become an essential part of the ecosystem"
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//proto.school",
-              "img": "/icons/magnifying-glass.png",
-              "img_size": "regular",
-              "title": "Learn more on ProtoSchool",
-              "description": "Understand how it all works with interactive tutorials from ProtoSchool"
-            }
-          ],
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": [8, 6],
+                "layers-array": "8_6",
                 "offset": {
                   "mini": 0.25
                 },
                 "reverse": true
               }
             }
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "/events",
+              "img": "/images/calendar.png",
+              "title": "Attend an event",
+              "description": "Join or watch a Filecoin ecosystem event",
+              "action": "nuxt-link"
+            },
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "//www.meetup.com/Filecoin-San-Francisco",
+              "img": "/images/multi-person.png",
+              "title": "Join a meetup group",
+              "description": "Find a group of people in your area who connect regularly",
+              "action": "a"
+            },
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute\"",
+              "img": "/images/speech-bubble.png",
+              "title": "Contribute to the Filecoin project",
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
+              "action": "a"
+            },
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "//filecoin.io/slack",
+              "img": "/images/hands-raised.png",
+              "title": "Participate online",
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel",
+              "action": "a"
+            },
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "//docs.filecoin.io/build",
+              "img": "/images/tool.png",
+              "title": "Become a storage provider or builder",
+              "description": "Dive right in and become an essential part of the ecosystem",
+              "action": "a"
+            },
+            {
+              "type": "A",
+              "img_size": "regular",
+              "url": "//proto.school",
+              "img": "/images/magnifying-glass.png",
+              "title": "Learn more on ProtoSchool",
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool",
+              "action": "a"
+            }
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+          },
+          "videos": [
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "light",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                    }
+                  ],
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "light",
+                      "action": "video",
+                      "icon": "play",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "heading": "Welcome to Filecoin Plus Day",
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network."
+                }
+              }
+            }
           ]
         }
       }
-    ]
-  ]
+    }
+  },
+  "seo": {
+    "title": "Get Involved - Filecoin Foundation",
+    "description": "Learn how you can get involved with the Filecoin Foundation, from attending an event to becoming part of the ecosystem."
+  },
+  "og": {
+    "site_name": "Get Involved - Filecoin Foundation",
+    "url": "https://fil.org/get-involved",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
 }

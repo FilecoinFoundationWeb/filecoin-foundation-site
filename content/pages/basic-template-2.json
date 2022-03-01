@@ -1,19 +1,7 @@
 {
-  "seo": {
-    "title": "Ecosystem - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
-  },
-  "og": {
-    "site_name": "Ecosystem - Filecoin Foundation",
-    "url": "https://fil.org/ecosystem",
-    "type": "website",
-    "image": "/images/open-graph.png"
-  },
-  "page_content": [
-    [
-      {
-        "id": "basic_hero",
-        "grid": ["middle"],
+  "page_content": {
+    "section_1": {
+      "basic_hero": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -26,15 +14,17 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/images/ecosystem/hero-image@2x.png",
           "cols": {
             "num": "col-5_md-9_mi-10",
             "push_left": "off-0_md-2_mi-1"
-          }
-        }
+          },
+          "src": "/images/ecosystem/hero-image@2x.png"
+        },
+        "grid": [
+          "middle"
+        ]
       },
-      {
-        "id": "intro_1",
+      "intro_1": {
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -42,12 +32,11 @@
             "num": "col-7_mi-8",
             "push_left": "off-5_mi-4"
           },
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
-          "customizations": [
-            {
+          "customizations": {
+            "background_layers": {
               "name": "BackgroundLayers",
-              "props": {
-                "layers-array": [8, 6, 5, 4, 3],
+              "props": {s
+                "layers-array": "8_6_5_4_3",
                 "offset": {
                   "medium": 0.75,
                   "mini": 0.25
@@ -55,20 +44,19 @@
                 "reverse": true
               }
             }
-          ]
+          },
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
         }
       },
-      {
-        "id": "cta_banner_1",
-        "grid": ["middle"],
+      "cta_banner_1": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "image_block",
-          "src": "/icons/upstairs.png",
           "cols": {
             "num": "col-5_sm-4_mi-6",
             "push_left": "off-2_mi-1"
-          }
+          },
+          "src": "/images/upstairs.png"
         },
         "right": {
           "type": "text_block",
@@ -89,10 +77,12 @@
               "url": "/get-involved"
             }
           ]
-        }
+        },
+        "grid": [
+          "middle"
+        ]
       },
-      {
-        "id": "basic_content_1",
+      "basic_content_1": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -105,8 +95,7 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       },
-      {
-        "id": "basic_content_2",
+      "basic_content_2": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -119,8 +108,7 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         }
       },
-      {
-        "id": "basic_content_3",
+      "basic_content_3": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -133,9 +121,7 @@
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       },
-      {
-        "id": "panels_1",
-        "grid": ["middle"],
+      "panels_1": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -150,18 +136,19 @@
         },
         "right": {
           "type": "image_block",
-          "src": "/icons/square-connection.png",
           "cols": {
             "num": "col-5_md-5_sm-7_mi-8",
             "push_left": "off-1_mi-2_sm-2_mi-1"
-          }
-        }
+          },
+          "src": "/images/square-connection.png"
+        },
+        "grid": [
+          "middle"
+        ]
       }
-    ],
-    [
-      {
-        "id": "resources",
-        "grid": ["middle"],
+    },
+    "section_2": {
+      "resources": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -285,44 +272,110 @@
               "title": "Filecoin Tutorials (ProtoSchool)",
               "description": "This is a self-guided interactive Filecoin tutorial designed to introduce decentralized web concepts, protocols, and tools."
             }
-          ],
-          "customizations": [
+          ]
+        },
+        "grid": [
+          "middle"
+        ]
+      }
+    },
+    "section_3": {
+      "dive_deeper": {
+        "type": "custom",
+        "component": "DiveDeeper",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-7_sm-8_mi-9_ti-10",
+              "push_left": "off-1_sm-2_mi-1"
+            },
+            "heading": "Dive deeper",
+            "subheading": "Join our talks, community meetings, and other events. To explore them, <a href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' target='_blank'>visit our Youtube channel</a>."
+          },
+          "videos": [
             {
-              "name": "BackgroundLayers",
-              "props": {
-                "layers-array": [8],
-                "offset": {
-                  "mini": 0.25
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
                 },
-                "reverse": true
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
+                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "icon",
+                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ",
+                      "text": "Watch Video"
+                    }
+                  ],
+                  "heading": "Accelerating the Filecoin Ecosystem",
+                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                }
+              }
+            },
+            {
+              "left": {
+                "type": "video_block",
+                "cols": {
+                  "num": "col-6_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
+                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                }
+              },
+              "right": {
+                "type": "text_block",
+                "cols": {
+                  "num": "col-4_sm-8_mi-9_ti-11",
+                  "push_left": "off-1_sm-2_mi-1"
+                },
+                "props": {
+                  "layout": "medium",
+                  "ctas": [
+                    {
+                      "type": "B",
+                      "theme": "dark",
+                      "action": "video",
+                      "icon": "icon",
+                      "text": "Watch Video",
+                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                    }
+                  ],
+                  "heading": "Welcome to Filecoin Plus Day",
+                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network."
+                }
               }
             }
           ]
         }
       }
-    ],
-    [
-      {
-        "id": "events_hackathons",
-        "type": "custom",
-        "heading": "Events & Hackathons",
-        "cta": {
-          "type": "A",
-          "action": "nuxt-link",
-          "text": "Browse all Events",
-          "url": "/events"
-        },
-        "events": [
-          {
-            "date": "October 20, 2021",
-            "title": "Filecoin Orbit Lounge at D.C. Fintech Week"
-          },
-          {
-            "date": "October 26, 2021",
-            "title": "Filecoin Plus Community Governance Call"
-          }
-        ]
-      }
-    ]
-  ]
+    }
+  },
+  "seo": {
+    "title": "Basic Page - Filecoin Foundation",
+    "description": "Filecoin Foundation - Let's build the internet of everyone"
+  },
+  "og": {
+    "site_name": "Basic Page - Filecoin Foundation",
+    "url": "https://fil.org/basic-template-2",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
 }
