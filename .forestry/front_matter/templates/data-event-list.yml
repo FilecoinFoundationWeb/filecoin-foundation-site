@@ -26,11 +26,17 @@ fields:
         path: 
     label: Event Type
   - type: text
-    name: date
-    label: Date
-  - type: text
     name: title
     label: Title
+  - name: date
+    type: datetime
+    label: Date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
   - type: file
     name: img
     label: Image
