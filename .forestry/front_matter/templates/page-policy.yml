@@ -12,3 +12,5 @@ fields:
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
+pages:
+- content/pages/policy.json
