@@ -15,8 +15,8 @@
         "right": {
           "type": "video_block",
           "cols": {
-            "num": "col-5_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1"
+            "num": "col-6_sm-9_mi-10",
+            "push_left": "off-0_sm-2_mi-1"
           },
           "tint": true,
           "subtext": {
