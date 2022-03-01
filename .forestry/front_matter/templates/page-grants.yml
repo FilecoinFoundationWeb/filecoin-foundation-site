@@ -449,3 +449,5 @@ fields:
       config: {}
       template: events-hackathons
       label: Template → [Comp] Events & Hackathons
+pages:
+- content/pages/grants.json
