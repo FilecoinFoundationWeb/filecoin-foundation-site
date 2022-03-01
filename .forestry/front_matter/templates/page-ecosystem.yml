@@ -273,3 +273,5 @@ fields:
       config: {}
       template: comp-divedeeper
       label: Template → [Comp] DiveDeeper
+pages:
+- content/pages/ecosystem.json
