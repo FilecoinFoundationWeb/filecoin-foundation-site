@@ -1,0 +1,48 @@
+---
+label: "[Data] Event List"
+hide_body: true
+fields:
+- type: field_group_list
+  name: Event list
+  label: Event list
+  fields:
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: event_type
+    label: event_type
+  - type: text
+    name: date
+    label: date
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: img
+    label: img
+  - type: textarea
+    name: description
+    label: description
+  - type: field_group
+    name: cta
+    label: cta
+    fields:
+    - type: text
+      name: type
+      label: type
+    - type: text
+      name: action
+      label: action
+    - type: text
+      name: icon
+      label: icon
+    - type: text
+      name: text
+      label: text
+    - type: text
+      name: target
+      label: target
+    - type: text
+      name: url
+      label: url
