@@ -106,3 +106,5 @@ fields:
         label: slug
         hidden: true
         default: all
+pages:
+- content/pages/events.json
