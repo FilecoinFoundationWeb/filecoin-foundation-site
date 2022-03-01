@@ -57,3 +57,5 @@ fields:
       label: target
       hidden: true
       default: _blank
+  config:
+    labelField: title
