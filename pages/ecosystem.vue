@@ -330,17 +330,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .card-list {
     position: relative;
     flex-wrap: unset;
-    @include tiny {
+    @include small {
       flex-wrap: wrap;
     }
   }
   .card {
     @include small {
-      width: unset !important;
+      width: 40% !important;
+      margin-bottom: 5rem !important;
     }
     @include tiny {
-      width: calc(50% - 3rem) !important;
-      margin-bottom: 7rem !important;
+      width: 100% !important;
     }
   }
 }
