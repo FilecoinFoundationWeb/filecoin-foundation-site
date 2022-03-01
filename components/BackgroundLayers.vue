@@ -5,7 +5,7 @@
       v-for="(layer, i) in layers"
       :key="layer.color"
       :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength} border-radius-direction-${borderRadiusDirection}`, { reverse }]"
-      :style="layerStyle(i + 1, i, layer.color)">
+      :style="layerStyle(i + 1, layer.color)">
     </div>
 
   </div>
@@ -17,16 +17,33 @@ import Throttle from 'lodash/throttle'
 
 // =================================================================== Functions
 const setBackgroundLayerWidth = (instance) => {
+  const map = new Map([
+    ['ultralarge', '140.625rem'],
+    ['xlarge', '90rem'],
+    ['large', '75rem'],
+    ['medium', '64rem'],
+    ['small', '53.125rem'],
+    ['mini', '40rem'],
+    ['tiny', '25.9375rem']
+  ])
+
   let reset = true
   for (const breakpoint in instance.breakpoints) {
-    if (window.matchMedia(`(max-width: ${breakpoint})`).matches) {
+    if (window.matchMedia(`(max-width: ${map.get(breakpoint)})`).matches) {
       if (reset) { reset = false }
-      if (instance.layerWidth !== instance.breakpoints[breakpoint]) {
-        instance.layerWidth = instance.breakpoints[breakpoint]
+      if (instance.layerWidth !== instance.breakpoints[breakpoint].stroke) {
+        instance.layerWidth = instance.breakpoints[breakpoint].stroke
+      }
+      if (instance.borderRadius !== instance.breakpoints[breakpoint].radius) {
+        instance.borderRadius = instance.breakpoints[breakpoint].radius
       }
     } else if (reset) {
-      if (instance.layerWidth !== 1.375) {
+      if (instance.breakpoints.default) {
+        instance.layerWidth = instance.breakpoints.default.stroke || 1.375
+        instance.borderRadius = instance.breakpoints.default.radius || 12.75
+      } else {
         instance.layerWidth = 1.375
+        instance.borderRadius = 12.75
       }
     }
   }
@@ -37,11 +54,6 @@ export default {
   name: 'BackgroundLayers',
 
   props: {
-    borderRadius: {
-      type: Number,
-      required: false,
-      default: 10
-    },
     layersArray: {
       type: String,
       required: false,
@@ -52,7 +64,12 @@ export default {
       required: false,
       default: false
     },
-    offset: {
+    print: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    breakpoints: {
       type: Object,
       required: false,
       default: () => {
@@ -75,6 +92,7 @@ export default {
     return {
       colors: ['#EFF6FC', '#D8EBFB', '#73B4ED', '#0090FF', '#154ED9', '#0621A4', '#06094E', '#08072E'],
       layerWidth: 1.375,
+      borderRadius: 12.75,
       resize: false
     }
   },
@@ -88,17 +106,6 @@ export default {
         arr.push({ index: ind, color: this.colors[ind - 1] })
       }
       return arr
-    },
-    breakpoints () {
-      const data = {}
-      if (this.offset.hasOwnProperty('ultralarge')) { data['140.625rem'] = this.offset.ultralarge }
-      if (this.offset.hasOwnProperty('xlarge')) { data['90rem'] = this.offset.xlarge }
-      if (this.offset.hasOwnProperty('large')) { data['75rem'] = this.offset.large }
-      if (this.offset.hasOwnProperty('medium')) { data['64rem'] = this.offset.medium }
-      if (this.offset.hasOwnProperty('small')) { data['53.125rem'] = this.offset.small }
-      if (this.offset.hasOwnProperty('mini')) { data['40rem'] = this.offset.mini }
-      if (this.offset.hasOwnProperty('tiny')) { data['25.9375rem'] = this.offset.tiny }
-      return data
     }
   },
 
@@ -113,14 +120,14 @@ export default {
   },
 
   methods: {
-    layerStyle (index, order, color) {
+    layerStyle (index, color) {
       const w = `width: calc(100% + ${2 * index * this.layerWidth}rem);`
       const h = `height: calc(100% + ${2 * index * this.layerWidth}rem);`
       const t = `top: ${-1 * index * this.layerWidth}rem;`
       const l = `left: ${-1 * index * this.layerWidth}rem;`
-      const z = `z-index: ${-1 * (order + 1)};`
+      const z = `z-index: ${-1 * index};`
       const c = `background-color: ${color};`
-      const b = `border-radius: ${this.borderRadius + (2 * this.layerWidth) + (1 * this.layerWidth * index)}rem;`
+      const b = `border-radius: ${this.borderRadius + (this.layerWidth * (index - 1))}rem;`
       return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
     }
   }
