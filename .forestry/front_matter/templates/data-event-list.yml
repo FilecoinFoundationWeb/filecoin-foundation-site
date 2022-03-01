@@ -59,3 +59,5 @@ fields:
       default: _blank
   config:
     labelField: title
+pages:
+- content/data/event-list.json
