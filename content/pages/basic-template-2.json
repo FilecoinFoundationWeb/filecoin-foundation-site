@@ -7,18 +7,26 @@
           "layout": "large",
           "cols": {
             "num": "col-5_md-9_mi-10",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "Lorem Ipsum",
-          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-5_md-9_mi-10",
-            "push_left": "off-0_md-2_mi-1"
+            "push_left": "off-0_md-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/ecosystem/hero-image@2x.png"
+          "src": "/images/ecosystem/hero-image@2x.png",
+          "label": ""
         },
         "grid": [
           "middle"
@@ -30,7 +38,8 @@
           "layout": "small",
           "cols": {
             "num": "col-7_mi-8",
-            "push_left": "off-5_mi-4"
+            "push_left": "off-5_mi-4",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -45,7 +54,13 @@
               }
             }
           },
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+          "label": "",
+          "heading": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "cta_banner_1": {
@@ -54,16 +69,19 @@
           "type": "image_block",
           "cols": {
             "num": "col-5_sm-4_mi-6",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/upstairs.png"
+          "src": "/images/upstairs.png",
+          "label": ""
         },
         "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "label": "Nemo enim ipsam",
           "heading": "Veritatis et Quasi",
@@ -74,9 +92,11 @@
               "theme": "light",
               "action": "nuxt-link",
               "text": "Get Involved",
-              "url": "/get-involved"
+              "url": "/get-involved",
+              "icon": ""
             }
-          ]
+          ],
+          "subheading": ""
         },
         "grid": [
           "middle"
@@ -89,10 +109,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1"
+            "push_left": "off-2_md-2_mi-1_ti-1",
+            "push_right": ""
           },
           "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "basic_content_2": {
@@ -102,10 +128,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1"
+            "push_left": "off-2_md-2_mi-1_ti-1",
+            "push_right": ""
           },
           "heading": "Architecto beatae vitae dicta sunt explicabo",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "basic_content_3": {
@@ -115,10 +147,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1"
+            "push_left": "off-2_md-2_mi-1_ti-1",
+            "push_right": ""
           },
           "heading": "Nemo enim ipsam voluptatem",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "panels_1": {
@@ -128,19 +166,26 @@
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-2_md-2_mi-1_ti-1"
+            "push_left": "off-2_md-2_mi-1_ti-1",
+            "push_right": ""
           },
           "label": "Sed ut perspiciatis",
           "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-5_md-5_sm-7_mi-8",
-            "push_left": "off-1_mi-2_sm-2_mi-1"
+            "push_left": "off-1_mi-2_sm-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/square-connection.png"
+          "src": "/images/square-connection.png",
+          "label": ""
         },
         "grid": [
           "middle"
@@ -154,7 +199,8 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10_mi-9",
-            "push_left": "off-1_sm-2"
+            "push_left": "off-1_sm-2",
+            "push_right": ""
           },
           "label": "Resources",
           "heading": "How to get involved and key links",
@@ -166,15 +212,18 @@
               "theme": "light",
               "target": "_blank",
               "text": "Join the Community",
-              "url": "//filecoin.io/slack"
+              "url": "//filecoin.io/slack",
+              "icon": ""
             }
-          ]
+          ],
+          "subheading": ""
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6_sm-7_ti-9",
-            "push_left": "off-2_sm-3_mi-2"
+            "push_left": "off-2_sm-3_mi-2",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
