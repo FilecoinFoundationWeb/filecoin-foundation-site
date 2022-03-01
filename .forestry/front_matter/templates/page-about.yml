@@ -274,3 +274,5 @@ fields:
       template: comp-divedeeper
       label: Template → [Comp] DiveDeeper
     label: Section 3
+pages:
+- content/pages/about.json

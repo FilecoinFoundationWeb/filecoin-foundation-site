@@ -7,16 +7,23 @@
           "layout": "large",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "About us",
-          "subheading": "The Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+          "subheading": "The Foundation coordinates and supports the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "video_block",
           "cols": {
             "num": "col-5_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "tint": true,
           "subtext": {
@@ -36,7 +43,8 @@
           "layout": "small",
           "cols": {
             "num": "col-7_mi-8",
-            "push_left": "off-5_mi-4"
+            "push_left": "off-5_mi-4",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -52,7 +60,12 @@
             }
           },
           "label": "Our Mission",
-          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action."
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "heading": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "cta_1": {
@@ -60,16 +73,19 @@
           "type": "image_block",
           "cols": {
             "num": "col-5_sm-7_mi-10",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/about/computer@2x.png"
+          "src": "/images/about/computer@2x.png",
+          "label": ""
         },
         "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "label": "Internet of Everyone",
           "heading": "The Filecoin Foundation does not own Filecoin, operate it, or manage it.",
@@ -81,7 +97,8 @@
               "theme": "light",
               "action": "nuxt-link",
               "text": "Join the Community",
-              "url": "/get-involved"
+              "url": "/get-involved",
+              "icon": ""
             }
           ]
         }
@@ -92,7 +109,8 @@
           "layout": "small",
           "cols": {
             "num": "col-7_mi-8",
-            "push_left": "off-4_mi-4"
+            "push_left": "off-4_mi-4",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -106,7 +124,13 @@
               }
             }
           },
-          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success."
+          "description": "In addition to providing funding, The Filecoin Foundation supports a vibrant, decentralized ecosystem with many independent organizations that provide funding, coordination, and leadership to support Filecoin’s long-term success.",
+          "label": "",
+          "heading": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "cta_2": {
@@ -115,19 +139,26 @@
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "label": "Collective Action",
           "heading": "The Foundation helps the Filecoin community solve problems and facilitates collective action.",
-          "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem."
+          "description": "This means resisting the natural tendency of organizations to grow and accumulate value within themselves, and instead cultivating value creation outside the Foundation in the broader Filecoin ecosystem.",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-5_sm-7_mi-8",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/square-connection.png"
+          "src": "/images/square-connection.png",
+          "label": ""
         }
       },
       "panel_1": {
@@ -136,10 +167,16 @@
           "layout": "large",
           "cols": {
             "num": "col-9_mi-10",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "Board of<br />Directors",
-          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web."
+          "subheading": "The Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web.",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         }
       },
       "panel_1_cards": {
@@ -147,7 +184,8 @@
           "type": "slider_block",
           "cols": {
             "num": "col-10_sm-8_ti-11",
-            "push_left": "off-1_sm-2_ti-1"
+            "push_left": "off-1_sm-2_ti-1",
+            "push_right": ""
           },
           "cards": [
             {
@@ -185,17 +223,23 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_md-4_sm-9",
-            "push_left": "off-1_sm-2"
+            "push_left": "off-1_sm-2",
+            "push_right": ""
           },
           "label": "Advisors",
           "heading": "The Filecoin Foundation is guided by an extraordinary and accomplished group of advisors",
-          "description": "Leaders from across web3 and the open-source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a target='_blank' href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' style='color: white;'>our talks</a> featuring contributions from our advisory panel and be part of the conversation on <a href='https://filecoinproject.slack.com/messages/CEHHJNJS3/' style='color: white;' target='_blank'>Filecoin's Slack.</a>"
+          "description": "Leaders from across web3 and the open-source technology communities have come together to foster the Filecoin ecosystem.<br><br> Watch <a target='_blank' href='//www.youtube.com/channel/UCeM5ezNgFM1Sle_gIz-KMMA' style='color: white;'>our talks</a> featuring contributions from our advisory panel and be part of the conversation on <a href='https://filecoinproject.slack.com/messages/CEHHJNJS3/' style='color: white;' target='_blank'>Filecoin's Slack.</a>",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6_md-5_sm-9_mi-11_ti-10",
-            "push_left": "off-2_sm-3_mi-1_ti-2"
+            "push_left": "off-2_sm-3_mi-1_ti-2",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
