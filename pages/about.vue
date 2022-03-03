@@ -378,6 +378,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       width: 40% !important;
       margin-bottom: 5rem !important;
     }
+    @include tiny {
+      width: 100% !important;
+    }
   }
 }
 
