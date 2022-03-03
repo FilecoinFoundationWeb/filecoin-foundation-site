@@ -140,8 +140,11 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6",
-                "offset": {
-                  "mini": 0.25
+                "breakpoints": {
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 5
+                  }
                 },
                 "reverse": true
               }

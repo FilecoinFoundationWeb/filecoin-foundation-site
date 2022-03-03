@@ -31,7 +31,7 @@
       <BackgroundLayers
         id="page-blog-background-layers"
         layers-array="3_4_5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -66,9 +66,19 @@ export default {
   data () {
     return {
       tag: 'blog',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        default: {
+          stroke: 1.375,
+          radius: 12.75
+        },
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -222,12 +232,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     left: $backgroundLayers__Left__Mini;
-  }
-  @include tiny {
-    .layer {
-      border-top-left-radius: 5rem !important;
-      border-bottom-left-radius: 5rem !important;
-    }
   }
 }
 
