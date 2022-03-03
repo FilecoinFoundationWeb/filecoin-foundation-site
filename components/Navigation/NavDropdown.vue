@@ -1,116 +1,54 @@
 <template>
-  <div :class="rootLinkClassList">
 
-    <component
-      :is="toggleFirstOnHover ? 'nuxt-link' : 'div'"
-      :to="link.disabled ? '' : link.url"
-      :disabled="link.disabled"
-      :class="['nav-link', (toggleFirstOnHover ? 'top-level' : 'click-toggle')]"
-      @click="toggleDropDown(!toggleFirstOnHover)">
-      <div class="arrow">
-        <div class="layer"></div>
-        <div class="layer"></div>
-        <div class="layer"></div>
-        <div class="layer"></div>
-      </div>
-      <span class="text">{{ link.text }}</span>
-      <div
-        v-if="!toggleFirstOnHover"
-        :class="['chevron', dropdownOpen ? 'up' : 'down']"></div>
-    </component>
+  <div
+    v-if="link.hasOwnProperty('links')"
+    ref="innerPane"
+    class="nav-dropdown-inner">
 
-    <div
-      v-if="link.hasOwnProperty('links')"
-      ref="firstPane"
-      :class="firstLevelClassList"
-      :style="`left: ${panelLeft};`">
+    <div class="nav-dropdown-panel-left">
 
-      <div class="nav-dropdown-panel-left">
+      <nuxt-link
+        v-if="link.description"
+        :to="link.url"
+        class="extras"
+        v-html="link.description">
+      </nuxt-link>
 
-        <nuxt-link
-          v-if="link.description"
-          :to="link.url"
-          class="extras"
-          v-html="link.description">
-        </nuxt-link>
+      <ul v-if="Array.isArray(link.links)">
+        <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
+          <div class="first-level-wrapper" @click="sublinkClicked(sublink)">
 
-        <ul v-if="Array.isArray(link.links)">
-          <li v-for="sublink in link.links" :key="`${link.text}-${sublink.text}`">
-            <div class="first-level-wrapper" @click="sublinkClicked(sublink)">
+            <Button
+              :button="sublink"
+              class="nav-link first-level">
+              {{ sublink.text }}
+            </Button>
 
-              <Button
-                :button="sublink"
-                :class="['nav-link', 'first-level', { 'has-second-level': sublink.hasOwnProperty('links') }]">
-                {{ sublink.text }}
-              </Button>
-
-              <div
-                v-if="sublink.hasOwnProperty('links') && nestedDisplay"
-                ref="secondPane"
-                :class="[listDisplayType, { 'scroll': scroll }]"
-                :style="`max-height: ${maxHeight}; left: ${popoutLeft};`">
-                <ul v-if="Array.isArray(sublink.links)" :style="`min-width: ${minWidth};`">
-                  <li v-for="poplink in sublink.links" :key="`${sublink.label}-${poplink.label}`" ref="popouts">
-
-                    <component
-                      :is="poplink.hasOwnProperty('url') ? 'nuxt-link' : 'div'"
-                      :disabled="poplink.disabled"
-                      class="nav-link second-level">
-                      {{ poplink.label }}
-                    </component>
-
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </li>
-        </ul>
-
-      </div>
-
-      <div
-        v-if="link.hasOwnProperty('sidebar') && link.sidebar"
-        class="nav-dropdown-panel-right">
-        <div class="nav-dropdown-panel-right-wrapper">
-          <div class="panel-right-title">
-            Community Links
           </div>
-          <SocialIcons />
-        </div>
-      </div>
+        </li>
+      </ul>
 
     </div>
 
+    <div
+      v-if="link.hasOwnProperty('sidebar') && link.sidebar"
+      class="nav-dropdown-panel-right">
+      <div class="nav-dropdown-panel-right-wrapper">
+        <div class="panel-right-title">
+          Community Links
+        </div>
+        <SocialIcons />
+      </div>
+    </div>
+
   </div>
+
 </template>
 
 <script>
 // ===================================================================== Imports
-import Throttle from 'lodash/throttle'
-
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
-
-// =================================================================== Functions
-const detectPanelOutsideViewport = (instance) => {
-  const rect = instance.$refs.firstPane.getBoundingClientRect()
-  if (rect.left + rect.width > window.innerWidth) {
-    instance.panelLeft = -1 * ((rect.left + rect.width) - window.innerWidth) + 'px'
-  }
-}
-
-const detectPopoutOutsideViewport = (instance) => {
-  if (instance.$refs.secondPane.length) {
-    const rect = instance.$refs.secondPane[0].getBoundingClientRect()
-    if (rect.left + rect.width > window.innerWidth) {
-      const x = instance.scroll ? '-1rem' : '0rem' // this will account for the width of the scroll bar
-      instance.popoutLeft = 'calc(' + x + ' - 100%)'
-    } else if (instance.popoutLeft !== '100%') {
-      instance.popoutLeft = '100%'
-    }
-  }
-}
 
 // ===================================================================== Exports
 export default {
@@ -126,102 +64,13 @@ export default {
       type: Object,
       required: false,
       default: () => {}
-    },
-    scroll: {
-      type: Boolean,
-      required: false,
-      default: true
-    },
-    panel: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    behavior: {
-      type: String,
-      required: false,
-      default: 'hover'
-    },
-    nestedDisplay: {
-      type: Boolean,
-      required: false,
-      default: true
     }
-  },
-
-  data () {
-    return {
-      maxHeight: 'unset',
-      minWidth: 'unset',
-      panelLeft: '50%',
-      popoutLeft: '100%',
-      dropdownOpen: false,
-      resize: false
-    }
-  },
-
-  computed: {
-    listDisplayType () {
-      return this.panel ? 'nav-panel' : 'nav-popout'
-    },
-    rootLinkClassList () {
-      const mouseBehavior = this.toggleFirstOnHover ? 'hover' : 'active'
-      const hasSubLinks = this.link.hasOwnProperty('links') ? 'has-nested-links' : ''
-      const dropdownState = this.dropdownOpen ? 'open' : ''
-      return `nav-${mouseBehavior}-wrapper dropdown-background ${hasSubLinks + ' ' + dropdownState}`
-    },
-    firstLevelClassList () {
-      return this.nestedDisplay ? 'nav-dropdown dropdown-background' : 'nav-panel'
-    },
-    toggleFirstOnHover () {
-      if (this.link.hasOwnProperty('links')) {
-        return this.behavior !== 'active'
-      }
-      return true
-    }
-  },
-
-  mounted () {
-    this.$nextTick(() => {
-      if (this.$refs.popouts) {
-        if (this.panel) {
-          const widths = []
-          this.$refs.popouts.forEach((item) => {
-            widths.push(item.firstChild.getBoundingClientRect().width)
-          })
-          this.minWidth = 3 * Math.max(...widths) + 'px'
-        } else if (this.scroll) {
-          this.maxHeight = 5.5 * this.$refs.popouts[0].clientHeight + 'px'
-        }
-      }
-      if (this.panel) {
-        if (this.$refs.firstPane) {
-          detectPanelOutsideViewport(this)
-          this.resize = () => { detectPanelOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      } else {
-        if (this.$refs.secondPane) {
-          detectPopoutOutsideViewport(this)
-          this.resize = () => { detectPopoutOutsideViewport(this) }
-          window.addEventListener('resize', Throttle(this.resize, 10))
-        }
-      }
-    })
-  },
-
-  beforeDestroy () {
-    if (this.resize) { window.removeEventListener('resize', this.resize) }
   },
 
   methods: {
-    toggleDropDown (val) {
-      if (val) { this.dropdownOpen = !this.dropdownOpen }
-    },
     sublinkClicked (sublink) {
       const currentPath = this.$route.fullPath
       const hash = this.$route.hash.replace('#', '')
-
       if (!sublink.hasOwnProperty('links') && sublink.url === currentPath) {
         const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
         if (element) {
@@ -235,108 +84,99 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-hover-wrapper {
-  position: relative;
-  padding: 1rem 0;
-  @include small {
-    padding: 0.375rem 0;
-  }
-}
-
-.nav-hover-wrapper {
-  &:hover {
-    .nav-link.top-level .arrow {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 100ms ease-in;
-      transform: translate(-50%, 0rem) rotate(45deg);
-      z-index: 10;
-    }
-    .nav-dropdown {
-      visibility: visible;
-      opacity: 1;
-      transition: transform 250ms ease-out, opacity 250ms ease-out;
-      transform: translate(-50%, 0rem) perspective(200px) rotateX(0deg);
-      z-index: 5;
-    }
-  }
-}
-
-.nav-dropdown,
-.nav-popout {
+// //////////////////////////////////////////////////////////// Dropdown Content
+.nav-dropdown-inner {
   position: absolute;
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  transform-origin: top;
-  transform: translate(-50%, 0rem) perspective(200px) rotateX(-10deg);
-  z-index: -1;
-  transition: transform 250ms ease-in, opacity 250ms ease-in, visibility 0ms linear 250ms;
-}
-
-.first-level-wrapper {
-  position: relative;
-  padding: 0.5rem 0;
-  @include small {
-    padding: 0.375rem 0;
-  }
-  &:hover .nav-popout {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0rem);
-    z-index: 0;
-    transition: transform 350ms ease-in-out, opacity 250ms ease-out;
-  }
-}
-
-ul {
-  padding: 1rem;
-  margin-top: 1rem;
-}
-.ul-second {
-  padding: 0 1rem;
-}
-li {
-  list-style-type: none;
-  &:last-child {
-    padding-bottom: 0.5rem;
-  }
-}
-
-::v-deep .nav-dropdown {
   display: flex;
   flex-direction: row;
-  top: 3.5rem;
-  .extras {
-    display: block;
-    position: relative;
-    z-index: 10;
+  border-radius: 0.875rem 0.875rem 5.25rem 5.25rem;
+  color: $white;
+
+  &:not(.center) {
+    transform: translateX(2000px);
+  }
+
+  &.active {
+    &.left {
+      animation: 250ms ease-out 0s 1 normal forwards running rightin,
+        250ms cubic-bezier(.33,0,.66,.33) 0s 1 normal forwards running fadein;
+    }
+    &.right {
+      animation: 250ms ease-out 0s 1 normal forwards running leftin,
+        250ms cubic-bezier(.33,0,.66,.33) 0s 1 normal forwards running fadein;
+    }
+  }
+
+  &.last {
+    &.left {
+      animation: 250ms ease-in 0s 1 normal forwards running rightout,
+        250ms cubic-bezier(.33,.66,.66,1) 0s 1 normal forwards running fadeout;
+    }
+    &.right {
+      animation: 250ms ease-in 0s 1 normal forwards running leftout,
+        250ms cubic-bezier(.33,.66,.66,1) 0s 1 normal forwards running fadeout;
+    }
+  }
+
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    &:hover {
+      .nav-link.first-level {
+        opacity: 0.5;
+        transform: scale(1);
+        transition: 250ms ease-in-out;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .ul-second {
+    padding: 0 1rem;
+  }
+  li {
+    list-style-type: none;
+    &:last-child {
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+::v-deep .extras {
+  min-width: 15rem;
+  display: block;
+  position: relative;
+  z-index: 10;
+  img {
+    position: absolute;
+    left: -3rem;
+    top: 0;
+    width: 2rem;
+  }
+  .title,
+  .text {
+    transition: 250ms ease-in-out;
   }
   .title {
     @include fontWeight_Medium;
     display: inline-block;
     margin-bottom: 1rem;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
-  .social-icons {
-    flex-direction: column;
-    align-items: flex-start;
-    .social-icon {
-      align-items: center;
-      width: auto;
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      svg {
-        width: 1.5rem;
-        margin-right: 1rem;
-      }
+  .text {
+    &:hover {
+      transform: scale(1.025);
     }
-    .label {
-      @include fontSize_Small;
-      @include fontWeight_SemiBold;
-      display: block;
-    }
+  }
+  .text {
+    @include fontSize_Small;
   }
 }
 
@@ -347,7 +187,7 @@ li {
   }
 }
 
-.nav-dropdown-panel-right {
+::v-deep .nav-dropdown-panel-right {
   position: relative;
   padding: 2rem 3rem 2rem 2rem;
   &:before {
@@ -356,10 +196,9 @@ li {
     top: 10px;
     left: 0;
     width: calc(100% - 10px);
-    height: calc(100% - 20px);
+    height: calc(100% - 10px);
     background: $deepCove;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 71px;
+    border-radius: 0 5px 71px 0 !important;
     z-index: 1;
   }
   .nav-dropdown-panel-right-wrapper {
@@ -370,134 +209,35 @@ li {
       margin-bottom: 1rem;
       white-space: nowrap;
     }
-  }
-}
-
-.nav-popout {
-  top: -1rem;
-  & li {
-    padding: 0.5rem 0;
-    &:last-child {
-      padding-bottom: 1rem;
-    }
-  }
-  &.scroll {
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  .inner-wrap {
-    margin: 1.0rem 1.0rem 1.0rem 0;
-  }
-}
-
-.scroll {
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-.nav-item-wrapper {
-  @include small {
-    display: block;
-    &.has-nested-links {
-      display: flex;
+    .social-icons {
       flex-direction: column;
-      padding-top: 0.75rem;
-      .top-level {
-        width: fit-content;
+      align-items: flex-start;
+      .social-icon {
+        align-items: center;
+        width: auto;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        svg {
+          width: 1.5rem;
+          margin-right: 1rem;
+        }
+      }
+      .label {
+        @include fontSize_Small;
+        @include fontWeight_SemiBold;
+        display: block;
       }
     }
   }
-  .nav-link.top-level {
-    position: relative;
-    .arrow {
-      position: absolute;
-      top: 29px;
-      left: 50%;
-      visibility: hidden;
-      pointer-events: none;
-      opacity: 0;
-      z-index: 2;
-      transform: translate(-50%, 0rem) rotate(45deg);
-      transition: opacity 250ms ease-in, visibility 0ms linear 250ms;
-      // transition: 100ms ease-in;
-      @include small {
-        display: none;
-      }
-      .layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 21px;
-        padding-bottom: 21px;
-        overflow: hidden;
-        transform-origin: 100% 0;
-        border-top-left-radius: 1px;
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 8px;
-          width: 100%;
-          height: 141%;
-          transform-origin: inherit;
-          transform: rotate(45deg);
-        }
-        &:first-child {
-          transform: translate(-2px, -2px);
-          z-index: 0;
-          &:after {
-            background-color: $azureRadiance;
-          }
-        }
-        &:nth-child(2) {
-          transform: translate(2px, 2px);
-          z-index: 1;
-          &:after {
-            background-color: $denim;
-          }
-        }
-        &:nth-child(3) {
-          transform: translate(6px, 6px);
-          z-index: 2;
-          &:after {
-            background-color: $kleinBlue;
-          }
-        }
-        &:last-child {
-          transform: translate(9px, 9px);
-          z-index: 3;
-          &:after {
-            background-color: $blackPearl;
-          }
-        }
-      }
-    }
-  }
-  .nav-panel {
-    display: inline-block;
-    ul {
-      display: flex;
-      margin-top: 1.5rem;
-      margin-left: 1rem;
-      flex-direction: row;
-      flex-wrap: wrap;
-      @include mini {
-        margin: 0;
-      }
-    }
-    li {
-      display: inline-block;
-      margin: 0.25rem 0;
-      width: 50%;
-      @include small {
-        margin: 0;
-        width: 33%;
-      }
-      @include mini {
-        margin: 0;
-        width: 50%;
-      }
-    }
+}
+
+.first-level-wrapper {
+  position: relative;
+  padding: 0.5rem 0;
+  @include small {
+    padding: 0.375rem 0;
   }
 }
 
@@ -506,22 +246,59 @@ li {
   cursor: pointer;
 }
 
-$scrollbarBG: transparent;
-$thumbBG: rgba(255, 255, 255, 0.4);
-div::-webkit-scrollbar {
-  width: 8px;
+// ////////////////////////////////////////////////////////////////// Animations
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-div {
-  scrollbar-width: thin;
-  scrollbar-color: $thumbBG $scrollbarBG;
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-div::-webkit-scrollbar-track {
-  background: $scrollbarBG;
+
+@keyframes leftin {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-div::-webkit-scrollbar-thumb {
-  background-color: $thumbBG;
-  border-radius: 6px;
-  border: 3px solid $scrollbarBG;
+
+@keyframes rightin {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes leftout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightout {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 </style>

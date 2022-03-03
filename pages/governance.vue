@@ -12,13 +12,13 @@
       <BackgroundLayers
         id="page-governance-body-layer"
         layers-array="2"
-        :offset="{ mini: 0.25 }" />
+        :breakpoints="{ mini: { stroke: 0.25, radius: 5 } }" />
 
       <BackgroundLayers
         id="page-governance-background-layers"
         layers-array="6_5_4_3"
         :reverse="true"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -49,9 +49,15 @@ export default {
       tag: 'governance',
       scroll: false,
       resize: false,
-      pageBackgroundLayersOffset: {
-        medium: 0.5,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        medium: {
+          stroke: 0.5,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -165,8 +171,9 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 #section_7 {
   &:before {
     border-radius: 0 0 0 8.5rem;
+    height: calc(100% + 4rem);
     @include mini {
-      border-radius: 0 0 0 10rem;
+      border-radius: 0 0 0 4.75rem;
     }
   }
 }

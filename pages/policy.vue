@@ -90,7 +90,7 @@
       <BackgroundLayers
         id="page-policy-background-layers"
         layers-array="3_4_5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -114,9 +114,15 @@ export default {
   data () {
     return {
       tag: 'policy',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -208,20 +214,16 @@ ul {
     width: calc(100% + 3.5rem);
     height: calc(100% + 5.5rem);
     background-color: $hawkesBlue;
-    border-radius: 12.75rem 0 0 12.75rem;
+    border-radius: 11.375rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: 0;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 12.75rem;
+      border-top-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 10.75rem;
-      border-bottom-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-top-left-radius: 5rem;
+      border-top-left-radius: 4.75rem;
       border-bottom-left-radius: 4.75rem;
     }
   }
@@ -239,12 +241,6 @@ ul {
   }
   @include mini {
     left: $backgroundLayers__Left__Mini;
-  }
-  @include tiny {
-    .layer {
-      border-top-left-radius: 5rem !important;
-      border-bottom-left-radius: 5rem !important;
-    }
   }
 }
 </style>
