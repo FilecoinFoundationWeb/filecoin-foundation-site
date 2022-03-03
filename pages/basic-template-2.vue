@@ -357,7 +357,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .background-layers {
     position: absolute;
     top: 0;
-    left: -2rem;
+    left: -3.375rem;
     width: 100vw;
     height: 100%;
     z-index: 5;
