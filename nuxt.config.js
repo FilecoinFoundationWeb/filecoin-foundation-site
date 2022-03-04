@@ -85,7 +85,7 @@ export default {
     '@nuxtjs/sitemap',
     // Doc: https://content.nuxtjs.org
     '@nuxt/content',
-    // local file
+    // https://github.com/agency-undone/nuxt-module-matomo
     '@agency-undone/nuxt-module-matomo'
   ],
   // ///////////////////////////////////////////////////// [Module] Nuxt-content
