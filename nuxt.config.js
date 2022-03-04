@@ -84,7 +84,9 @@ export default {
     // Doc: https://sitemap.nuxtjs.org
     '@nuxtjs/sitemap',
     // Doc: https://content.nuxtjs.org
-    '@nuxt/content'
+    '@nuxt/content',
+    // local file
+    '@agency-undone/nuxt-module-matomo'
   ],
   // ///////////////////////////////////////////////////// [Module] Nuxt-content
   // ---------------------------------------------------------------------------
@@ -111,6 +113,14 @@ export default {
     pagination: {
       include: true
     }
+  },
+  // /////////////////////////////////////////////////////////// [Module] Matomo
+  // ---------------------------------------------------------------------------
+  matomo: {
+    include: true,
+    src: 'https://cdn.matomo.cloud/fil.matomo.cloud/container_b87GLHh8.js',
+    routing: true,
+    target: 'tag-manager'
   },
   // ///////////////////////////////////////////////////////// [Module] MomentJS
   // ---------------------- Doc: https://github.com/nuxt-community/moment-module
