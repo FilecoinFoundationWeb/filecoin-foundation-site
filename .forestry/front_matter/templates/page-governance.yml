@@ -4,37 +4,50 @@ hide_body: true
 fields:
 - type: field_group
   name: seo
-  label: seo
+  label: SEO and metadata
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
+    description: The title for this web page
   - type: textarea
     name: description
-    label: description
+    label: Description
+    description: The meta description for this page, which will appear in search engine
+      results and social media previews. Each page can have a unique meta description.
+      One to three short sentences are recommended.
+  description: Populate the metadata associated with this content, like the page title
+    and description.
 - type: field_group
   name: og
-  label: og
+  label: Open Graph Metadata
   fields:
   - type: text
     name: site_name
-    label: site name
+    label: Site Name
+    description: Name of the site
   - type: text
     name: url
-    label: url
+    label: URL
+    description: The page's URL/path
   - type: text
     name: type
-    label: type
+    label: Open Graph Type
+    description: The social metadata page or content type. In most cases this will
+      be website or article. See open graph types, for everything available in the
+      spec.
   - type: file
     name: image
-    label: image
+    label: Open Graph Image
+    description: Upload an image to appear in social previews for this page.
+  description: Open Graph Metadata, which appears in social media previews
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_1
-    label: section_1
+    label: Section 1 - Hero Area
     fields:
     - type: field_group
       name: out-of-page
@@ -1181,3 +1194,4 @@ fields:
                 label: url
             config:
               max: 2
+  description: The visible content on the page is editable within this section.
