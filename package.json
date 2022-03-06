@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@agency-undone/au-nuxt-module-zero": "^1.0.18",
+    "@agency-undone/nuxt-module-matomo": "^1.0.0",
     "@nuxt/content": "^1.15.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/eslint-config": "^6.0.1",
