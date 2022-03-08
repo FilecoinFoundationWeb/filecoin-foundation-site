@@ -11,9 +11,12 @@ fields:
     config:
       required: false
     label: Title
+    description: Test 1
   - name: description
     type: text
     config:
       required: false
     label: Description
+    description: Test 2
   label: SEO
+  description: Here it goes
