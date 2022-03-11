@@ -58,7 +58,7 @@ fields:
     - name: cards
       type: blocks
       label: Cards
-      description: 'Add acard'
+      description: 'Add a card'
       template_types:
       - card
       config:

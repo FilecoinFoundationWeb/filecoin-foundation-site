@@ -15,12 +15,13 @@ fields:
   label: Template → [Data] Open Graph & Social
 - type: field_group
   name: page_content
-  label: Page Content
+  label:  Events Page Navigation 
   description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: navigation
-    label: Navigation
+    label: Events Navigation
+    description: 'Text of events navigation is editable here.'
     fields:
     - type: field_group
       name: events

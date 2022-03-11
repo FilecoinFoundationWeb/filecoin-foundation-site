@@ -1,10 +1,11 @@
 ---
 label: "[Comp] DiveDeeper"
+description: 'Video testimonials and accompanying text'
 hide_body: true
 fields:
 - type: field_group
   name: dive_deeper
-  label: dive_deeper
+  label: Dive Deeper
   fields:
   - type: text
     name: type
@@ -20,8 +21,8 @@ fields:
     default: DiveDeeper
   - type: field_group
     name: props
-    label: props
-    description: 'Page Content'
+    label: Content
+    description: 'Dive Deeper content is editable within this section.'
     fields:
     - type: field_group
       name: intro

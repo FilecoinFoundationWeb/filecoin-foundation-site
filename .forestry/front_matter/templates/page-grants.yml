@@ -13,6 +13,7 @@ fields:
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
+  description: 'Open Graph Metadata'
 - type: field_group
   name: page_content
   label: Page Content
@@ -21,15 +22,17 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
+    description: 'This is the first section on page, with text block on left and image within blue gradient on right.'
     fields:
     - type: field_group
       name: hero
-      label: Hero
-      description: 'First section on page'
+      label: Content
+      description: 'Text block and image are editable within this section'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -38,7 +41,8 @@ fields:
           label: Template → [Block] Text
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'The image is editable within this section'
         fields:
         - name: image_block
           type: include
@@ -83,14 +87,17 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
+    description: 'This begins at the point where textblock titled Developer Grants is positioned to the left of five thick vertical blue lines and cards with image and text appear to the right of five thick vertical blue lines and ends at a centered textblock with dark blue background.'
     fields:
     - type: field_group
       name: gallery-1-header
       label: Gallery 1 Header
+      description: 'Textblock and cards. Textblock is position to the left of five thick vertical blue lines and cards with image and text are to the right of five thick vertical blue lines.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Textblock is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -100,10 +107,12 @@ fields:
     - type: field_group
       name: gallery-1-cards
       label: Gallery 1 Cards
+      description: 'Cards with image and text are editable within this section.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'NEEDS TO BE EDITED ONCE VISIBLE ON FORESTRY'
         fields:
         - type: text
           name: type
@@ -178,7 +187,8 @@ fields:
         hidden: true
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'NEEDS TO BE EDITED ONCE VISIBLE ON FORESTRY'
         fields:
         - name: slider_block
           type: include
@@ -188,14 +198,16 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
+    description: 'This section is the textblock that is centered within royal blue border on dark blue background.'
     fields:
     - type: field_group
       name: banner-1
       label: Banner 1
+      description: 'Textblock is editable within this section'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
         fields:
         - type: field_group
           name: customizations
@@ -245,14 +257,17 @@ fields:
   - type: field_group
     name: section_4
     label: Section 4
+    description: 'This begins at the point where textblock titled Community Grants is positioned to the left of five thick vertical blue lines and cards with image and text appear to the right of five thick vertical blue lines and ends at a centered textblock wiith tabs and dark blue background.'
     fields:
     - type: field_group
       name: gallery-2
       label: Gallery 2
+      description: 'Textblock and cards. Textblock is position to the left of five thick vertical blue lines and cards with image and text are to the right of five thick vertical blue lines.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Textblock is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -261,7 +276,8 @@ fields:
           label: Template → [Block] Text
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Cards with image and text are editable within this section.'
         fields:
         - name: slider_block
           type: include
@@ -271,10 +287,12 @@ fields:
   - type: field_group
     name: section_5
     label: Section 5
+    description: 'This section contains an interactive slider with multiple clickable options on the left side of a centerd textblock.'
     fields:
     - type: field_group
       name: tabbed-slider
       label: Tabbed Slider
+      description: 'Slider is editable within this section.'
       fields:
       - type: text
         name: type
@@ -288,8 +306,8 @@ fields:
         default: TabbedSlider
       - type: field_group
         name: props
-        label: Props
-        description: 'Content on slides'
+        label: Content
+        description: 'Click 'Add Slide' to add another clickable option to slider.'
         fields:
         - type: field_group
           name: tabs
@@ -346,14 +364,16 @@ fields:
   - type: field_group
     name: section_6
     label: Section 6
+    description: 'This section contains a centered video and textblock with the video on the left and a textblock on the right.'
     fields:
     - type: field_group
       name: info-1
-      label: Info 1
+      label: Content
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Video block is editable within this section.'
         fields:
         - name: video_block
           type: include
@@ -369,14 +389,17 @@ fields:
           config: {}
           template: block-text
           label: Template → [Block] Text
-        label: Right Block
+        label: Right Column
+        description: 'Text block is editable within this section.'
   - type: field_group
     name: section_7
     label: Section 7
+    description: 'This section contains the 'Participation' section with clickable square cards on the right side.'
     fields:
     - type: field_group
       name: explore-panel
       label: Explore Panel
+      description: 'Text block on left and clickable cards on right.'
       fields:
       - name: grid
         type: include
@@ -386,7 +409,8 @@ fields:
         description: 'CSS Grid Classes. DO NOT EDIT'
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -395,7 +419,8 @@ fields:
           label: Template → [Block] Text
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Clickable cards are editable within this section.'
         fields:
         - name: slider_block
           type: include
@@ -448,11 +473,13 @@ fields:
   - type: field_group
     name: section_8
     label: Section 8
+    description: 'This section contains the Events and Hackathons section and ends at the footer.'
     fields:
     - name: events-hackathons
       type: include
       config: {}
       template: events-hackathons
       label: Template → [Comp] Events & Hackathons
+      description: ''
 pages:
 - content/pages/grants.json
