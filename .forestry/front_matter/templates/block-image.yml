@@ -14,13 +14,16 @@ fields:
   config: {}
   template: layout-columns
   label: Columns
+  description: 'DO NOT EDIT'
 - name: label
   type: text
   config:
     required: false
   label: Label
+  description: 'DO NOT EDIT'
 - name: src
   type: file
   config:
     maxSize: 64
   label: Image
+  description: 'Add an image that will appear in this section'

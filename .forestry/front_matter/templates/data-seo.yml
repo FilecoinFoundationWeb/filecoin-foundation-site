@@ -11,7 +11,7 @@ fields:
     config:
       required: false
     label: Title
-    description: Test 123
+    description: The title for this web page
   - name: description
     type: text
     config:
@@ -19,4 +19,4 @@ fields:
     label: Description
     description: Test 234
   label: SEO
-  description: Let's do SEO!
+  description: The meta description for this page, which will appear in search engine results and social media previews. Each page can have a unique meta description. One to three sentences are recommended.

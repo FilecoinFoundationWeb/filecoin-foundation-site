@@ -7,6 +7,7 @@ fields:
   config:
     required: false
   label: Text
+  description: 'The button's text
 - name: type
   type: select
   default: []
@@ -27,6 +28,7 @@ fields:
       file: 
       path: 
   label: Type
+  description: 'Select the buttons style type from the dropdown menu. (A) → traditional button with blue gradient edges, choose light in theme to get white button with blue gradient border (ex. "Learn More" button on Home page) or dark in theme to get dark blue button with dark blue gradient border (ex. "Learn More" button on Grants page") |  (B) → transparent button with white border and white text (ex. "Watch Video" button on Home page)  |(D) → No button styling, only blue text (ex. "Watch: Meet the Filecoin Foundation" on About page )  |(F) → No button styling, only text in either light-themed or dark-themed - light is white (ex. "Terms of Use" and "Data and Privacy" in footer) and dark (ex. "Future Rules Podcast" in footer) is blue  |(G) →  Reserved for "Events and Hackathons" navigation'
 - name: action
   type: select
   default: []
@@ -43,6 +45,7 @@ fields:
       file: 
       path: 
   label: Action
+  description: 'Select "Link" to link to a page outside of the site and "Nuxt-link" to link to an internal page. "Button" is reserved for advanced functionality. "Video" will open a video modal and play video'
 - name: theme
   type: select
   default: []
@@ -57,11 +60,13 @@ fields:
       file: 
       path: 
   label: Theme
+  description: 'Select color of button. Light theme shows a light blue border around button and white background (ex.  "Join the community" button found on About page) and dark theme shows dark blue border around button with blue background (ex. "Learn More" button found on Grants page)'
 - name: url
   type: text
   config:
     required: false
   label: URL
+  description: 'Enter the link that the user is taken to, when the button is clicked. If using "Link", URL should be external page URL, if using "Nuxt-link" use an internal path such as "/about"  or "/if user is directed to About page'
 - name: icon
   type: select
   default: []
@@ -80,3 +85,4 @@ fields:
       file: 
       path: 
   label: Icon
+  description: 'Select the icon that will appear to left of button text'

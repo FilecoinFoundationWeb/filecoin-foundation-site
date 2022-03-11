@@ -7,6 +7,7 @@ fields:
   config:
     required: false
   label: Type
+  description: 'Do not change. This field is only visible to Forestry admins.'
   hidden: true
   default: slider_block
 - name: cols
@@ -14,9 +15,11 @@ fields:
   config: {}
   template: layout-columns
   label: Columns
+  description: 'DO NOT CHANGE'
 - name: cards
   type: blocks
   label: Cards
+  description: 'Add a card here'
   template_types:
   - card
   config:

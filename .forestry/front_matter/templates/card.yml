@@ -19,10 +19,11 @@ fields:
       file: 
       path: 
   label: Card Type
+  decription: 'Select one type : (A) -> stacked vertically beginning with an image, a title and a descrption (ex. on Grants page, list of types of grants) |  (B) - > image with title below and on hover, image slides up to reveal description (ex. Board of Directors section on About page) |  (C) - >  card has image on left and description on right (ex. on About page , Advisors section)  |  ( D) - > stacked vertically beginning with image and date , title and a button (ex. Events and Hackathons section on Governance page) '
 - name: date
   type: datetime
   label: Date
-  description: ''
+  description: 'Select date. Date will display above title if included'
   config:
     required: false
     date_format: 
@@ -33,11 +34,13 @@ fields:
   config:
     required: false
   label: Label
+  description: 'DO NOT EDIT'
 - name: title
   type: text
   config:
     required: false
   label: Title
+  description: 'Title for card content'
 - name: description
   type: textarea
   default: ''
@@ -47,11 +50,13 @@ fields:
     schema:
       format: markdown
   label: Description
+  description: 'Main text content of card'
 - name: img
   type: file
   config:
     maxSize: 64
   label: Image
+  description: 'Choose the image displayed in the card'
 - name: img_type
   type: select
   default: []
@@ -67,6 +72,8 @@ fields:
       file: 
       path: 
   label: Image Type
+  description: 'Choose if image is a regular image, a larger background image (ex. images on cards on Events page), or if image will also be a link to other internal pages'
+  hidden: true
 - name: img_size
   type: select
   default: []
@@ -82,6 +89,8 @@ fields:
       file: 
       path: 
   label: Image Size
+  description: 'Choose is image will be Full (takes up 100% of space available) , Regular, or Mini (image will be small)'
+  hidden: true
 - name: action
   type: select
   default: []
@@ -96,16 +105,19 @@ fields:
       file: 
       path: 
   label: Action
+  description: 'Select "a" to link to a page outside of the site and "nuxt-link" to link to an internal page'
 - name: url
   type: text
   config:
     required: false
   label: URL
+  description: 'Enter the link that the user is taken to, when the button is clicked. If using "Link", URL should be external page URL, if using "Nuxt-link" use an internal path such as "/about"  or "/if user is directed to About page'
 - name: target
   type: text
   config:
     required: false
   label: Target
+  description: 'Do not change. This field is only visible to Forestry admins.'
   hidden: true
   default: _blank
 - name: cta
@@ -118,3 +130,4 @@ fields:
     template: button
     label: CTA
   label: CTA
+  description: 'Click "Add CTA" to add and populate a button in the card'

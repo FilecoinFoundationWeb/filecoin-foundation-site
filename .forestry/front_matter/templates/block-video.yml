@@ -7,6 +7,7 @@ fields:
   config:
     required: false
   label: Type
+  description: 'DO NOT EDIT'
   hidden: true
   default: video_block
 - name: cols
@@ -14,17 +15,21 @@ fields:
   config: {}
   template: layout-columns
   label: Columns
+  description: 'DO NOT EDIT'
 - name: url
   type: text
   config:
     required: false
   label: URL
+  description: 'Paste video URL here'
 - name: preview_image
   type: file
   config:
     maxSize: 64
   label: Image
+  description: 'Add a still image that will be a preview image for video '
 - name: tint
   type: boolean
   label: Tint
+  description: 'Click toggle on to put darker blue overlay over preview image - toggle is green when blue tint is present and grey when it is not'
   default: true

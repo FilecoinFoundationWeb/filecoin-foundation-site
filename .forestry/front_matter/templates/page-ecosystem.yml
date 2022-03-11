@@ -7,6 +7,7 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
+  description: 'SEO and metadata'
 - name: og
   type: include
   config: {}
@@ -15,6 +16,7 @@ fields:
 - type: field_group
   name: page_content
   label: Page Content
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: section_1
@@ -23,12 +25,14 @@ fields:
     - type: field_group
       name: hero
       label: Hero
+      description: 'First section on page'
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
+        description: 'Changes CSS Classes. DO NOT EDIT'
       - name: left
         type: field_group
         config: {}
@@ -168,6 +172,7 @@ fields:
     - type: field_group
       name: panel_1_cards
       label: Panel 1 Cards
+      description: 'Slider with Board of Advisors'
       fields:
       - type: field_group
         name: left
@@ -191,6 +196,7 @@ fields:
         config: {}
         template: grid-classes
         label: Grid Classes
+        description: 'CSS Grid Classes. DO NOT EDIT'
       - name: left
         type: field_group
         config: {}
@@ -210,6 +216,7 @@ fields:
           config: {}
           template: comp-slider-block
           label: Template → [Block] Slider
+          description: 'Slider with ways to get involved'
         - name: customizations
           type: field_group
           config: {}
