@@ -7,14 +7,17 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
+  description: 'SEO and metadata'
 - name: og
   type: include
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
+  description: 'Open Graph Metadata'
 - type: field_group
   name: page_content
   label: Page Content
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: section_1
@@ -62,6 +65,7 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
+    description: 'This section begins at the top of the page and ends after the block of paragraph text on dark blue background and right before the floating menu begins.'
     fields:
     - type: field_group
       name: mobile_image_banner
@@ -69,7 +73,8 @@ fields:
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: ''
         fields:
         - name: image_block
           type: include
@@ -79,10 +84,12 @@ fields:
     - type: field_group
       name: hero
       label: Hero
+      description: 'First content section on page with text block on the left and image block on the right.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -91,7 +98,8 @@ fields:
           label: Template → [Block] Text
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -101,10 +109,12 @@ fields:
     - type: field_group
       name: hero_text
       label: Hero Text
+      description: 'Text block on top dark blue background that is positioned underneath the Hero text and image blocks.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -114,14 +124,17 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
+    description: 'This section begins when floating menu appears on left, background color splits into royal blue on left and dark blue on right and stretches down to and including image that has rounded on its left side. Note that subheadings in textblocks in this section will become listed underneath headings on floating menu (ex. subheading 'What exactly is an FIP' will become a list item on floating menu.)'
     fields:
     - type: field_group
       name: panel-1-title
       label: Panel 1 Title
+      description: 'Floating menu is editable within this section.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Floating menu headings and panel 1 title heading are editable within this section.'
         fields:
         - type: text
           name: type
@@ -138,9 +151,11 @@ fields:
           config: {}
           template: layout-columns
           label: Columns
+          description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
         - type: field_group
           name: customizations
           label: Customizations
+          description: 'Floating menu headings are editable within this section.'
           fields:
           - type: field_group
             name: floating_menu
@@ -153,7 +168,7 @@ fields:
               default: FloatingMenu
             - type: field_group
               name: props
-              label: Props
+              label: Content
               fields:
               - type: text
                 name: id
@@ -173,6 +188,7 @@ fields:
               - type: field_group_list
                 name: entries
                 label: Entries
+                description: 'Click 'Add Entry' to add a new heading on floating menu'
                 fields:
                 - type: text
                   name: heading
@@ -198,7 +214,8 @@ fields:
                   max: 4
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Hero heading to the right of start of floating menu is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -208,10 +225,12 @@ fields:
     - type: field_group
       name: panel-1-info-top
       label: Panel 1 Info Top
+      description: 'Image block and text block. The image block is on the left and touches both the royal blue and dark blue background. The text block is on the right and has dark blue background. Reminder that the subheading established here will appear on floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'The image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -220,7 +239,8 @@ fields:
           label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'The text block is editable within this section. Reminder that the subheading established here will appear on floating menu.'
         fields:
         - type: text
           name: data_id
@@ -235,10 +255,12 @@ fields:
     - type: field_group
       name: panel-1-info-middle
       label: Panel 1 Info Middle
+      description: 'The second text block within this section. Reminder that the subheading established here will appear on floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'The textblock is editable within this section. Reminder that the subheading established here will appear on floating menu.'
         fields:
         - type: text
           name: data_id
@@ -253,10 +275,12 @@ fields:
     - type: field_group
       name: panel-1-info-bottom
       label: Panel 1 Info Bottom
+      description: 'The third text block within this section. Reminder that the subheading established here will appear on floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'The textblock is editable within this section. Reminder that the subheading established here will appear on floating menu.'
         fields:
         - type: text
           name: data_id
@@ -271,10 +295,12 @@ fields:
     - type: field_group
       name: panel-1-banner-image
       label: Panel 1 Banner Image
+      description: 'Image block at the bottom of section with left side of image rounded at corners.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'The image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -284,14 +310,17 @@ fields:
   - type: field_group
     name: section_4
     label: Section 4
+    description: 'This section begins right after (not including) the image with rounded corners its left side and stops after the final text block within the three blue gradient lines.'
     fields:
     - type: field_group
       name: panel-2-title
       label: Panel 2 Title
+      description: 'Text block to the right of floating nemu. This heading established here will appear as next heading in floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block with floating menu heading is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -301,10 +330,12 @@ fields:
     - type: field_group
       name: panel-2-info-top
       label: Panel 2 Info Top
+      description: 'Text block and image that appear underneath Panel 2 Title. Image block is on the right and text block is on the left.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -313,7 +344,8 @@ fields:
           label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -323,10 +355,12 @@ fields:
     - type: field_group
       name: panel-2-main
       label: Panel 2 Main
+      description: 'Text block wrapped inside 3 layer gradient on dark blue background.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block is editable within this section. Reminder that the subheading established here will appear on floating menu.'
         fields:
         - name: text_block
           type: include
@@ -378,14 +412,17 @@ fields:
   - type: field_group
     name: section_5
     label: Section 5
+    description: 'This section begins after the final text blocks that are wrapped in 3-colored blue gradient container and extends to the 'Participation' or 'Get Involved' section.'
     fields:
     - type: field_group
       name: panel-3-title
       label: Panel 3 Title
+      description: 'Heading of section. This heading established here will appear as next heading in floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block with floating menu heading is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -395,10 +432,12 @@ fields:
     - type: field_group
       name: panel-3-info-top
       label: Panel 3 Info Top
+      description: 'Text block and image that appear underneath Panel 3 Title. Image block is on the right and text block is on the left.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -407,7 +446,8 @@ fields:
           label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -417,10 +457,12 @@ fields:
     - type: field_group
       name: panel-3-info-middle
       label: Panel 3 Info Middle
+      description: 'Text block on dark blue background. Reminder that the subheading established here will appear on floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -435,10 +477,12 @@ fields:
     - type: field_group
       name: panel-3-info-bottom
       label: Panel 3 Info Bottom
+      description: 'Clickable cards to the right of the floating menu. Cards positioned on dark blue background and have an image, title and description stacked atop eachother.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Clickable cards are edited here. Note that the Title of each card will appear on the list of the floating menu.'
         fields:
         - name: slider_block
           type: include
@@ -448,14 +492,17 @@ fields:
   - type: field_group
     name: section_6
     label: Section 6
+    description: 'This section contains the 'Participation' or 'Get Involved' section.'
     fields:
     - type: field_group
       name: panel-4-title
       label: Panel 4 Title
+      description: 'Text block to the right of floating nemu. This heading established here will appear as next heading in floating menu.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Text block with floating menu heading is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -480,10 +527,12 @@ fields:
     - type: field_group
       name: panel-4-info
       label: Panel 4 Info
+      description: 'Image block and video block. The image block is on the left and touches both the royal blue and dark blue background. The text block is on the right and has dark blue background.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: 'Image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -492,7 +541,8 @@ fields:
           label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Text block is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -502,10 +552,12 @@ fields:
     - type: field_group
       name: panel-4-banner-image
       label: Panel 4 Banner Image
+      description: 'Image block at the bottom of section with left side of image rounded at corners.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Image block is editable within this section.'
         fields:
         - name: image_block
           type: include
@@ -515,6 +567,7 @@ fields:
   - type: field_group
     name: section_7
     label: Section 7
+    description: 'This section contains the Events and Hackathons section and ends at the footer.'
     fields:
     - name: events-hackathons
       type: include

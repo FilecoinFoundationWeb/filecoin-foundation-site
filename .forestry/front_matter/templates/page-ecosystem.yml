@@ -13,6 +13,7 @@ fields:
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
+  description: 'Open Graph Metadata'
 - type: field_group
   name: page_content
   label: Page Content
@@ -21,18 +22,19 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
+    description: 'This begins at the top of the page and ends before 'Participation' section ends (at the end of solid white background) '
     fields:
     - type: field_group
       name: hero
       label: Hero
-      description: 'First section on page'
+      description: 'First content section on page with a textblock on the left and an image block on the right.'
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
-        description: 'Changes CSS Classes. DO NOT EDIT'
+        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
       - name: left
         type: field_group
         config: {}
@@ -42,7 +44,8 @@ fields:
           config: {}
           template: block-text
           label: Template → [Block] Text
-        label: Left Block
+        label: Left Column
+        description: 'The textblock is editable within this section'
       - name: right
         type: field_group
         config: {}
@@ -52,14 +55,17 @@ fields:
           config: {}
           template: block-image
           label: Template → [Block] Image
-        label: Right Block
+        label: Right Column
+        description: 'The image block is editable within this section'
     - type: field_group
       name: intro_1
       label: Intro 1
+      description: 'Textblock within blue gradient and dark blue background'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Textblock is editable within this section.'
         fields:
         - name: text_block
           type: include
@@ -134,6 +140,7 @@ fields:
     - type: field_group
       name: cta_banner_1
       label: CTA Banner 1
+      description: 'Image block and textblock. The image block on the left and textblock is on the right.'
       fields:
       - name: left
         type: field_group
@@ -144,7 +151,8 @@ fields:
           config: {}
           template: block-image
           label: Template → [Block] Image
-        label: Left Block
+        label: Left Column
+        description: 'The immage is editable within this section.'
       - name: right
         type: field_group
         config: {}
@@ -154,10 +162,12 @@ fields:
           config: {}
           template: block-text
           label: Template → [Block] Text
-        label: Right Block
+        label: Right Column
+        description: 'The text block is editable within this section.'
     - type: field_group
       name: panel_1
       label: Panel 1
+      description: 'Text block that is above slider cards on light blue background.'
       fields:
       - name: left
         type: field_group
@@ -168,15 +178,17 @@ fields:
           config: {}
           template: block-text
           label: Template → [Block] Text
-        label: Left Block
+        label: Content
+        description: 'Text block is editable within this section.'
     - type: field_group
       name: panel_1_cards
       label: Panel 1 Cards
-      description: 'Slider with Board of Advisors'
+      description: 'Slider cards that are below text block.'
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: 'Slider cards are editable within this section.'
         fields:
         - name: slider_block
           type: include
@@ -186,6 +198,7 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
+    description: 'This section is the 'Participation' or 'Resources' section where there is a text block on the left on a sky blue background and clickable cards on the right with a dark blue background.'
     fields:
     - type: field_group
       name: resources
@@ -196,7 +209,7 @@ fields:
         config: {}
         template: grid-classes
         label: Grid Classes
-        description: 'CSS Grid Classes. DO NOT EDIT'
+        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
       - name: left
         type: field_group
         config: {}
@@ -206,17 +219,18 @@ fields:
           config: {}
           template: block-text
           label: Template → [Block] Text
-        label: Left Block
+        label: Left Column
+        description: 'The text block is editable within this section.'
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: 'Clickable cards are editable within this section.'
         fields:
         - name: slider_block
           type: include
           config: {}
           template: comp-slider-block
           label: Template → [Block] Slider
-          description: 'Slider with ways to get involved'
         - name: customizations
           type: field_group
           config: {}
@@ -274,11 +288,13 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
+    description: 'This section begins after 'Participation' section, ends at the footer, and has a solid white background.'
     fields:
     - name: diver_deeper
       type: include
       config: {}
       template: comp-divedeeper
       label: Template → [Comp] DiveDeeper
+      description: 'Video testimonials and accompanying text'
 pages:
 - content/pages/ecosystem.json

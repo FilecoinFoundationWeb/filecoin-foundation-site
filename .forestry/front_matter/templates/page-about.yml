@@ -187,6 +187,7 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
+        description: 'Text block is editable within this section.'
     - type: field_group
       name: panel_1_cards
       label: Panel 1 Cards
