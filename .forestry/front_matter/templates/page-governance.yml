@@ -295,7 +295,7 @@ fields:
     - type: field_group
       name: panel-1-banner-image
       label: Panel 1 Banner Image
-      description: 'Image block at the bottom of section with left side of image rounded at corners.'
+      description: 'Image block with left side of image rounded at corners.'
       fields:
       - type: field_group
         name: left
@@ -527,7 +527,7 @@ fields:
     - type: field_group
       name: panel-4-info
       label: Panel 4 Info
-      description: 'Image block and video block. The image block is on the left and touches both the royal blue and dark blue background. The text block is on the right and has dark blue background.'
+      description: 'Image block and text block. The image block is on the left and touches both the royal blue and dark blue background. The text block is on the right and has dark blue background.'
       fields:
       - type: field_group
         name: left
