@@ -5,6 +5,7 @@ fields:
 - type: field_group
   name: dive_deeper
   label: Dive Deeper
+  description: Video testimonials and accompanying text
   fields:
   - type: text
     name: type
@@ -185,4 +186,3 @@ fields:
             name: description
             label: description
             description: Add description text here
-  description: Video testimonials and accompanying text
