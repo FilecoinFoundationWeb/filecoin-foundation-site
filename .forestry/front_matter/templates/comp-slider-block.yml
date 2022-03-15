@@ -16,6 +16,7 @@ fields:
   label: Columns
 - name: cards
   type: field_group_list
+  description: A<br/>B<br /><br />C<br><br>D
   fields:
   - name: card_block
     type: include
@@ -23,7 +24,7 @@ fields:
     template: card
     label: Template → [Comp] Card
   config:
-    min: 
-    max: 
-    labelField: 
+    min:
+    max:
+    labelField:
   label: Cards
