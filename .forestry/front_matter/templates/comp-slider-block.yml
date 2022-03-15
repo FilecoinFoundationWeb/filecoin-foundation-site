@@ -15,10 +15,12 @@ fields:
   template: layout-columns
   label: Columns
 - name: cards
-  type: blocks
+  type: field_group
+  config: {}
+  fields:
+  - name: card
+    type: include
+    config: {}
+    template: card
+    label: Template → [Comp] Card
   label: Cards
-  template_types:
-  - card
-  config:
-    min: 
-    max: 
