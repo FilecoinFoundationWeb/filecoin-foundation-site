@@ -26,7 +26,7 @@ fields:
     - type: field_group
       name: hero
       label: Hero
-      description: 'First content section on page containing text block and image' 
+      description: 'First content section on page containing text block and image'
       fields:
       - type: field_group
         name: left
@@ -76,7 +76,7 @@ fields:
         description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
       - type: field_group
         name: left
-        label: Content 
+        label: Content
         fields:
         - type: text
           name: type
@@ -135,15 +135,17 @@ fields:
             template: card
             label: Template → [Comp] Card
           config:
-            min: 
-            max: 
-            labelField: 
+            min:
+            max:
+            labelField:
           label: Cards
-          description: 'Click 'Add Card to add a new card to the list.' 
+          description: >
+            Click 'Add Card to add a new card to the list.
     - type: field_group
       name: get_involved
       label: Get Involved
-      description: 'This is the 'Participation' section with clickable square cards on right side.'
+      description: >
+        This is the 'Participation' section with clickable square cards on right side.
       fields:
       - name: grid
         type: include

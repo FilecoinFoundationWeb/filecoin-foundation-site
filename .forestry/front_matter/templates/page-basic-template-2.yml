@@ -28,7 +28,6 @@ fields:
       name: basic_hero
       label: Basic Hero
       description: 'First content section on page with a textblock on the left and an image block on the right.'
-      description: ''
       fields:
       - name: grid
         type: include
@@ -257,7 +256,8 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
-    description: 'This section is the 'Participation' or 'Resources' section where there is a text block on the left on a sky blue background and clickable cards on the right with a dark blue background.'
+    description: >
+      This section is the 'Participation' or 'Resources' section where there is a text block on the left on a sky blue background and clickable cards on the right with a dark blue background.
     fields:
     - type: field_group
       name: resources
@@ -330,7 +330,8 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
-    description: 'This section begins after 'Participation' section, ends at the footer, and has a solid white background.'
+    description: >
+      This section begins after 'Participation' section, ends at the footer, and has a solid white background.
     fields:
     - name: dive_deeper
       type: include

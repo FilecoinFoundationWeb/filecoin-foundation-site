@@ -124,7 +124,8 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
-    description: 'This section begins when floating menu appears on left, background color splits into royal blue on left and dark blue on right and stretches down to and including image that has rounded on its left side. Note that subheadings in textblocks in this section will become listed underneath headings on floating menu (ex. subheading 'What exactly is an FIP' will become a list item on floating menu.)'
+    description: >
+      This section begins when floating menu appears on left, background color splits into royal blue on left and dark blue on right and stretches down to and including image that has rounded on its left side. Note that subheadings in textblocks in this section will become listed underneath headings on floating menu (ex. subheading 'What exactly is an FIP' will become a list item on floating menu.)
     fields:
     - type: field_group
       name: panel-1-title
@@ -188,7 +189,8 @@ fields:
               - type: field_group_list
                 name: entries
                 label: Entries
-                description: 'Click 'Add Entry' to add a new heading on floating menu'
+                description: >
+                  Click 'Add Entry' to add a new heading on floating menu
                 fields:
                 - type: text
                   name: heading
@@ -412,7 +414,8 @@ fields:
   - type: field_group
     name: section_5
     label: Section 5
-    description: 'This section begins after the final text blocks that are wrapped in 3-colored blue gradient container and extends to the 'Participation' or 'Get Involved' section.'
+    description: >
+      This section begins after the final text blocks that are wrapped in 3-colored blue gradient container and extends to the 'Participation' or 'Get Involved' section.
     fields:
     - type: field_group
       name: panel-3-title
@@ -492,7 +495,8 @@ fields:
   - type: field_group
     name: section_6
     label: Section 6
-    description: 'This section contains the 'Participation' or 'Get Involved' section.'
+    description: >
+      This section contains the 'Participation' or 'Get Involved' section.
     fields:
     - type: field_group
       name: panel-4-title

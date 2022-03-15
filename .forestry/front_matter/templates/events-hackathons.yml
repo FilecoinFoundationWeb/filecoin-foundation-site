@@ -43,7 +43,8 @@ fields:
       config: {}
       template: button
       label: CTA
-      description: 'Click 'Add a CTA' to add a button'
+      description: >
+        Click 'Add a CTA' to add a button
     label: Intro
   - name: events
     type: field_group
@@ -62,7 +63,7 @@ fields:
       template_types:
       - card
       config:
-        min: 
-        max: 
+        min:
+        max:
     label: Events
   label: Properties

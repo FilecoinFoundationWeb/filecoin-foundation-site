@@ -83,7 +83,8 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
-    description: 'This section begins when floating menu appears on left, background color splits into royal blue on left and dark blue on right and stretches down to and including image that has rounded on its left side. Note that subheadings in textblocks in this section will become listed underneath headings on floating menu (ex. subheading 'What ix Filaustin' will become a list item on floating menu.)'
+    description: >
+      This section begins when floating menu appears on left, background color splits into royal blue on left and dark blue on right and stretches down to and including image that has rounded on its left side. Note that subheadings in textblocks in this section will become listed underneath headings on floating menu (ex. subheading 'What ix Filaustin' will become a list item on floating menu.)
     fields:
     - type: field_group
       name: section_2-heading
@@ -147,7 +148,8 @@ fields:
               - type: field_group_list
                 name: entries
                 label: Entries
-                description: 'Click 'Add Entry' to add a new heading on floating menu'
+                description: >
+                  Click 'Add Entry' to add a new heading on floating menu
                 fields:
                 - type: text
                   name: heading
@@ -421,7 +423,8 @@ fields:
   - type: field_group
     name: section_5
     label: Section 5
-    description: 'This section contains the 'Get Invovled' section and ends at Events and Hackathons section.'
+    description: >
+      This section contains the 'Get Invovled' section and ends at Events and Hackathons section.
     fields:
     - type: field_group
       name: section_5-title-social

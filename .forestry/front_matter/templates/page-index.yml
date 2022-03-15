@@ -22,7 +22,8 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
-    description: 'This begins at the top of the page and ends before 'Participation' section ends (at the end of solid white background) '
+    description: >
+      This begins at the top of the page and ends before 'Participation' section ends (at the end of solid white background)
     fields:
     - type: field_group
       name: hero
@@ -299,7 +300,8 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
-    description: 'This is the 'Participation' section with clickable square cards on right side.'
+    description: >
+      This is the 'Participation' section with clickable square cards on right side.
     fields:
     - type: field_group
       name: get_involved
@@ -376,7 +378,8 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
-    description: 'This section begins after 'Participation' section, ends at the footer, and has a solid white background.'
+    description: >
+      This section begins after 'Participation' section, ends at the footer, and has a solid white background.
     fields:
     - name: diver_deeper
       type: include

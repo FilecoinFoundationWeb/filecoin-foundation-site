@@ -307,7 +307,8 @@ fields:
       - type: field_group
         name: props
         label: Content
-        description: 'Click 'Add Slide' to add another clickable option to slider.'
+        description: >
+          Click 'Add Slide' to add another clickable option to slider.
         fields:
         - type: field_group
           name: tabs
@@ -394,7 +395,8 @@ fields:
   - type: field_group
     name: section_7
     label: Section 7
-    description: 'This section contains the 'Participation' section with clickable square cards on the right side.'
+    description: >
+      This section contains the 'Participation' section with clickable square cards on the right side.
     fields:
     - type: field_group
       name: explore-panel
