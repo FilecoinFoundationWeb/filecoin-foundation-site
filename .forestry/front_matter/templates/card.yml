@@ -15,19 +15,19 @@ fields:
     - E
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Card Type
-  decription: 'Select one type:<br/> (A) Stacked vertically beginning with an image, a title and a descrption (eg. on Grants page, list of types of grants)<br/> (B) Image with title below and on hover, image slides up to reveal description (eg. Board of Directors section on About page)<br/> (C) Card has image on left and description on right (eg. on About page , Advisors section)<br/> (D) Stacked vertically beginning with image and date , title and a button (eg. Events and Hackathons section on Governance page) <br/> (E) No longer in use. '
+  description: 'Select one type:<br/> (A) Stacked vertically beginning with an image, a title and a descrption (eg. on Grants page, list of types of grants)<br/> (B) Image with title below and on hover, image slides up to reveal description (eg. Board of Directors section on About page)<br/> (C) Card has image on left and description on right (eg. on About page , Advisors section)<br/> (D) Stacked vertically beginning with image and date , title and a button (eg. Events and Hackathons section on Governance page) <br/> (E) No longer in use. '
 - name: date
   type: datetime
   label: Date
   description: 'Select date. Date will display above title if included'
   config:
     required: false
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
 - name: label
   type: text
@@ -68,9 +68,9 @@ fields:
     - nuxt-link
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Image Type
   description: 'Deprecated'
   hidden: true
@@ -85,9 +85,9 @@ fields:
     - mini
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Image Size
   description: 'Choose is image will be Full (takes up 100% of space available) , Regular, or Mini (image will be small)'
   hidden: true
@@ -101,9 +101,9 @@ fields:
     - " nuxt-link"
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Action
   description: 'Select "a" to link to a page outside of the site and "nuxt-link" to link to an internal page'
 - name: url

@@ -1,6 +1,5 @@
 ---
 label: "[Comp] DiveDeeper"
-description: 'Video testimonials and accompanying text'
 hide_body: true
 fields:
 - type: field_group
