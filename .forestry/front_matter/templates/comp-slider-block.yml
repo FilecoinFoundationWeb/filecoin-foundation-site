@@ -17,11 +17,16 @@ fields:
   label: Columns
   description: 'DO NOT CHANGE'
 - name: cards
-  type: blocks
-  label: Cards
+  type: field_group_list
   description: 'Add a card here'
-  template_types:
-  - card
+  fields:
+  - name: card_block
+    type: include
+    config: {}
+    template: card
+    label: Template → [Comp] Card
   config:
-    min: 
-    max: 
+    min:
+    max:
+    labelField:
+  label: Cards
