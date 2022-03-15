@@ -17,7 +17,8 @@ fields:
     config:
       required: false
     label: URL
-    description: 'The page's full URL/path.'
+    description: >
+      The page's full URL/path.
   - name: type
     type: text
     config:
