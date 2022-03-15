@@ -27,4 +27,4 @@ fields:
     max: 
     labelField: 
   label: Cards
-  description: This<br>is<br>text<br>with<br>some newlines<br>entered here<br>and<br>here
+  description: This<br>is<br>text<br>with<br><br>some newlines<br>entered here<br><br>and<br><br>here
