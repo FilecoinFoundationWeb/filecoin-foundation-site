@@ -26,4 +26,4 @@ fields:
     - equalHeight
     - noBottom
   label: Grid Classes
-  description: 'Changes CSS classes. DO NOT EDIT'
+  description: Changes CSS classes. DO NOT EDIT

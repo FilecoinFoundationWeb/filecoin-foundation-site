@@ -7,7 +7,7 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
-  description: 'SEO and metadata'
+  description: SEO and metadata
 - name: og
   type: include
   config: {}
@@ -15,13 +15,13 @@ fields:
   label: Template → [Data] Open Graph & Social
 - type: field_group
   name: page_content
-  label:  Events Page Navigation 
+  label: Events Page Navigation
   description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: navigation
     label: Events Navigation
-    description: 'Text of events navigation is editable here.'
+    description: Text of events navigation is editable here.
     fields:
     - type: field_group
       name: events

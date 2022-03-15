@@ -15,32 +15,38 @@ fields:
     - E
     source:
       type: simple
-      section:
-      file:
-      path:
+      section: 
+      file: 
+      path: 
   label: Card Type
-  description: 'Select one type:<br/> (A) Stacked vertically beginning with an image, a title and a descrption (eg. on Grants page, list of types of grants)<br/> (B) Image with title below and on hover, image slides up to reveal description (eg. Board of Directors section on About page)<br/> (C) Card has image on left and description on right (eg. on About page , Advisors section)<br/> (D) Stacked vertically beginning with image and date , title and a button (eg. Events and Hackathons section on Governance page) <br/> (E) No longer in use. '
+  description: 'Select one type:<br/> (A) Stacked vertically beginning with an image,
+    a title and a descrption (eg. on Grants page, list of types of grants)<br/> (B)
+    Image with title below and on hover, image slides up to reveal description (eg.
+    Board of Directors section on About page)<br/> (C) Card has image on left and
+    description on right (eg. on About page , Advisors section)<br/> (D) Stacked vertically
+    beginning with image and date , title and a button (eg. Events and Hackathons
+    section on Governance page) <br/> (E) No longer in use. '
 - name: date
   type: datetime
   label: Date
-  description: 'Select date. Date will display above title if included'
+  description: Select date. Date will display above title if included
   config:
     required: false
-    date_format:
-    time_format:
+    date_format: 
+    time_format: 
     display_utc: false
 - name: label
   type: text
   config:
     required: false
   label: Label
-  description: 'Deprecated'
+  description: Deprecated
 - name: title
   type: text
   config:
     required: false
   label: Title
-  description: 'Title for card content'
+  description: Title for card content
 - name: description
   type: textarea
   default: ''
@@ -50,13 +56,13 @@ fields:
     schema:
       format: markdown
   label: Description
-  description: 'Main text content of card'
+  description: Main text content of card
 - name: img
   type: file
   config:
     maxSize: 64
   label: Image
-  description: 'Choose the image displayed in the card'
+  description: Choose the image displayed in the card
 - name: img_type
   type: select
   default: []
@@ -68,11 +74,11 @@ fields:
     - nuxt-link
     source:
       type: simple
-      section:
-      file:
-      path:
+      section: 
+      file: 
+      path: 
   label: Image Type
-  description: 'Deprecated'
+  description: Deprecated
   hidden: true
 - name: img_size
   type: select
@@ -85,11 +91,12 @@ fields:
     - mini
     source:
       type: simple
-      section:
-      file:
-      path:
+      section: 
+      file: 
+      path: 
   label: Image Size
-  description: 'Choose is image will be Full (takes up 100% of space available) , Regular, or Mini (image will be small)'
+  description: Choose is image will be Full (takes up 100% of space available) , Regular,
+    or Mini (image will be small)
   hidden: true
 - name: action
   type: select
@@ -101,23 +108,26 @@ fields:
     - " nuxt-link"
     source:
       type: simple
-      section:
-      file:
-      path:
+      section: 
+      file: 
+      path: 
   label: Action
-  description: 'Select "a" to link to a page outside of the site and "nuxt-link" to link to an internal page'
+  description: Select "a" to link to a page outside of the site and "nuxt-link" to
+    link to an internal page
 - name: url
   type: text
   config:
     required: false
   label: URL
-  description: 'Enter the link that the user is taken to, when the button is clicked. If using "Link", URL should be external page URL, if using "Nuxt-link" use an internal path such as "/about"  or "/if user is directed to About page'
+  description: Enter the link that the user is taken to, when the button is clicked.
+    If using "Link", URL should be external page URL, if using "Nuxt-link" use an
+    internal path such as "/about"  or "/if user is directed to About page
 - name: target
   type: text
   config:
     required: false
   label: Target
-  description: 'Do not change. This field is only visible to Forestry admins.'
+  description: Do not change. This field is only visible to Forestry admins.
   hidden: true
   default: _blank
 - name: cta
@@ -130,4 +140,4 @@ fields:
     template: button
     label: CTA
   label: CTA
-  description: 'Click "Add CTA" to add and populate a button in the card'
+  description: Click "Add CTA" to add and populate a button in the card

@@ -9,19 +9,19 @@ fields:
   - type: text
     name: type
     label: type
-    description: 'Do not change. This field is only visible to Forestry admins.'
+    description: Do not change. This field is only visible to Forestry admins.
     hidden: true
     default: custom
   - type: text
     name: component
     label: component
-    description: 'Do not change. This field is only visible to Forestry admins.'
+    description: Do not change. This field is only visible to Forestry admins.
     hidden: true
     default: DiveDeeper
   - type: field_group
     name: props
     label: Content
-    description: 'Dive Deeper content is editable within this section.'
+    description: Dive Deeper content is editable within this section.
     fields:
     - type: field_group
       name: intro
@@ -30,60 +30,60 @@ fields:
       - type: field_group
         name: cols
         label: cols
-        description: 'DO NOT CHANGE'
+        description: DO NOT CHANGE
         fields:
         - type: text
           name: num
           label: num
-          description: 'Do not change. This field is only visible to Forestry admins.'
+          description: Do not change. This field is only visible to Forestry admins.
           hidden: true
           default: col-7_sm-8_mi-9_ti-10
         - type: text
           name: push_left
           label: push_left
-          description: 'Do not change. This field is only visible to Forestry admins.'
+          description: Do not change. This field is only visible to Forestry admins.
           hidden: true
           default: off-1_sm-2_mi-1
         hidden: true
       - type: text
         name: heading
         label: heading
-        description: 'Add heading text here'
+        description: Add heading text here
       - type: textarea
         name: subheading
         label: subheading
-        description: 'Add subheading text here'
+        description: Add subheading text here
     - type: field_group_list
       name: videos
       label: videos
-      description: 'Click Add Video to add a new video'
+      description: Click Add Video to add a new video
       fields:
       - type: field_group
         name: left
         label: Left Block
-        description: 'DO NOT CHANGE'
+        description: DO NOT CHANGE
         fields:
         - type: text
           name: type
           label: type
           hidden: true
-          description: 'Do not change. This field is only visible to Forestry admins.'
+          description: Do not change. This field is only visible to Forestry admins.
           default: video_block
         - type: field_group
           name: cols
           label: cols
-          description: 'DO NOT CHANGE'
+          description: DO NOT CHANGE
           fields:
           - type: text
             name: num
             label: num
-            description: 'Do not change. This field is only visible to Forestry admins.'
+            description: Do not change. This field is only visible to Forestry admins.
             default: col-6_sm-8_mi-9_ti-11
             hidden: true
           - type: text
             name: push_left
             label: push_left
-            description: 'Do not change. This field is only visible to Forestry admins.'
+            description: Do not change. This field is only visible to Forestry admins.
             hidden: true
             default: off-1_sm-2_mi-1
           hidden: true
@@ -98,45 +98,45 @@ fields:
           - type: text
             name: url
             label: url
-            description: 'input video URL'
+            description: input video URL
       - type: field_group
         name: right
         label: Right Block
-        description: 'DO NOT CHANGE'
+        description: DO NOT CHANGE
         fields:
         - type: text
           name: type
           label: type
-          description: 'Do not change. This field is only visible to Forestry admins.'
+          description: Do not change. This field is only visible to Forestry admins.
           hidden: true
           default: text_block
         - type: field_group
           name: cols
           label: cols
-          description: 'DO NOT CHANGE'
+          description: DO NOT CHANGE
           fields:
           - type: text
             name: num
             label: num
-            description: 'Do not change. This field is only visible to Forestry admins.'
+            description: Do not change. This field is only visible to Forestry admins.
             hidden: true
             default: col-4_sm-8_mi-9_ti-11
           - type: text
             name: push_left
             label: push_left
-            description: 'Do not change. This field is only visible to Forestry admins.'
+            description: Do not change. This field is only visible to Forestry admins.
             hidden: true
             default: off-1_sm-2_mi-1
           hidden: true
         - type: field_group
           name: props
           label: props
-          description: 'DO NOT CHANGE'
+          description: DO NOT CHANGE
           fields:
           - type: text
             name: layout
             label: layout
-            description: 'Do not change. This field is only visible to Forestry admins.'
+            description: Do not change. This field is only visible to Forestry admins.
             hidden: true
             default: medium
           - type: field_group_list
@@ -146,42 +146,43 @@ fields:
             - type: text
               name: type
               label: type
-              description: 'Do not change. This field is only visible to Forestry admins.'
+              description: Do not change. This field is only visible to Forestry admins.
               hidden: true
               default: B
             - type: text
               name: theme
               label: theme
-              description: 'Do not change. This field is only visible to Forestry admins.'
+              description: Do not change. This field is only visible to Forestry admins.
               hidden: true
               default: dark
             - type: text
               name: action
               label: action
-              description: 'Do not change. This field is only visible to Forestry admins.'
+              description: Do not change. This field is only visible to Forestry admins.
               hidden: true
               default: video
             - type: text
               name: icon
               label: icon
-              description: 'Do not change. This field is only visible to Forestry admins.'
+              description: Do not change. This field is only visible to Forestry admins.
               hidden: true
               default: icon
             - type: text
               name: text
               label: text
-              description: 'Add text here'
+              description: Add text here
             - type: text
               name: url
               label: url
-              description: 'Add URL here'
+              description: Add URL here
             config:
               max: 1
           - type: text
             name: heading
             label: heading
-            description: 'Add heading text here'
+            description: Add heading text here
           - type: textarea
             name: description
             label: description
-            description: 'Add description text here'
+            description: Add description text here
+  description: Video testimonials and accompanying text

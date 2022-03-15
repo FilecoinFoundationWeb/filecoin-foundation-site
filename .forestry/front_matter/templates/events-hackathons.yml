@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: Type
-  description: 'Do not change. This field is only visible to Forestry admins.'
+  description: Do not change. This field is only visible to Forestry admins.
   hidden: true
   default: custom
 - name: component
@@ -16,7 +16,7 @@ fields:
     required: false
   label: Component
   hidden: true
-  description: 'Do not change. This field is only visible to Forestry admins.'
+  description: Do not change. This field is only visible to Forestry admins.
   default: EventsHackathons
 - name: props
   type: field_group
@@ -31,20 +31,21 @@ fields:
       config: {}
       template: layout-columns
       label: Columns
-      description: 'DO NOT EDIT'
+      description: DO NOT EDIT
     - name: heading
       type: text
       config:
         required: false
       label: Heading
-      description: 'Add heading text here'
+      description: Add heading text here
     - name: cta
       type: include
       config: {}
       template: button
       label: CTA
-      description: >
-        Click 'Add a CTA' to add a button
+      description: 'Click ''Add a CTA'' to add a button
+
+        '
     label: Intro
   - name: events
     type: field_group
@@ -55,15 +56,15 @@ fields:
       config: {}
       template: layout-columns
       label: Columns
-      description: 'DO NOT EDIT'
+      description: DO NOT EDIT
     - name: cards
       type: blocks
       label: Cards
-      description: 'Add a card'
+      description: Add a card
       template_types:
       - card
       config:
-        min:
-        max:
+        min: 
+        max: 
     label: Events
   label: Properties

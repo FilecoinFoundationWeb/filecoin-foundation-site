@@ -7,13 +7,13 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
-  description: 'SEO and metadata'
+  description: SEO and metadata
 - name: og
   type: include
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
-  description: 'Open Graph Metadata'
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
   label: Page Content
@@ -22,13 +22,15 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
-    description: >
-      This begins at the top of the page and ends before 'Advisors' section (at the end of solid white background).
+    description: 'This begins at the top of the page and ends before ''Advisors''
+      section (at the end of solid white background).
+
+      '
     fields:
     - type: field_group
       name: hero
       label: Hero
-      description: 'First content section on page'
+      description: First content section on page
       fields:
       - name: left
         type: field_group
@@ -40,7 +42,7 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Left Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       - name: right
         type: field_group
         config: {}
@@ -51,7 +53,7 @@ fields:
           template: block-video
           label: Template → [Block] Video
         label: Right Column
-        description: 'Video block is editable within this section.'
+        description: Video block is editable within this section.
     - type: field_group
       name: intro_1
       fields:
@@ -65,12 +67,13 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       label: Intro 1
     - type: field_group
       name: cta_1
       label: CTA 1
-      description: 'Text block and image. The image is on the left side and the text block is on the right.'
+      description: Text block and image. The image is on the left side and the text
+        block is on the right.
       fields:
       - name: left
         type: field_group
@@ -82,7 +85,7 @@ fields:
           template: block-image
           label: Template → [Block] Image
         label: Left Column
-        description: 'The image block is editable within this section'
+        description: The image block is editable within this section
       - name: right
         type: field_group
         config: {}
@@ -93,16 +96,16 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Right Column
-        description: 'The text block is editable within this section.'
+        description: The text block is editable within this section.
     - type: field_group
       name: banner_1
       label: Banner 1
-      description: 'Text within gradient on dark blue background'
+      description: Text within gradient on dark blue background
       fields:
       - type: field_group
         name: left
         label: Content
-        description: 'The text block is editable within this section.'
+        description: The text block is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -150,7 +153,7 @@ fields:
     - type: field_group
       name: cta_2
       label: CTA 2
-      description: 'Textblock on left and image on right.'
+      description: Textblock on left and image on right.
       fields:
       - name: left
         type: field_group
@@ -162,11 +165,11 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Left Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       - type: field_group
         name: right
         label: Right Column
-        description: 'The image block is editable within this section.'
+        description: The image block is editable within this section.
         fields:
         - name: image_block
           type: include
@@ -176,7 +179,7 @@ fields:
     - type: field_group
       name: panel_1
       label: Panel 1
-      description: 'Text block that is above slider cards on light blue background.'
+      description: Text block that is above slider cards on light blue background.
       fields:
       - name: left
         type: field_group
@@ -188,16 +191,16 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
     - type: field_group
       name: panel_1_cards
       label: Panel 1 Cards
-      description: 'Slider cards that are below text block.'
+      description: Slider cards that are below text block.
       fields:
       - type: field_group
         name: left
         label: Content
-        description: 'Slider cards are editable within this section.'
+        description: Slider cards are editable within this section.
         fields:
         - name: slider_block
           type: include
@@ -207,8 +210,10 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
-    description: >
-      This is the 'Advisors' section with image cards on right side on dark blue background.
+    description: 'This is the ''Advisors'' section with image cards on right side
+      on dark blue background.
+
+      '
     fields:
     - type: field_group
       name: explore_1
@@ -220,7 +225,7 @@ fields:
         config: {}
         template: grid-classes
         label: Template → [Layout] Grid Alignment
-        description: 'CSS Grid Classes. DO NOT EDIT'
+        description: CSS Grid Classes. DO NOT EDIT
       - name: left
         type: field_group
         config: {}
@@ -231,11 +236,11 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Left Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       - type: field_group
         name: right
         label: Right Column
-        descriptiin: 'Image cards are editable within this section.'
+        descriptiin: Image cards are editable within this section.
         fields:
         - name: slider_block
           type: include
@@ -295,14 +300,16 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
-    description: >
-      This section begins after 'Advisors' section, ends at the footer, and has a solid white background.
+    description: 'This section begins after ''Advisors'' section, ends at the footer,
+      and has a solid white background.
+
+      '
     fields:
     - name: diver_deeper
       type: include
       config: {}
       template: comp-divedeeper
       label: Template → [Comp] DiveDeeper
-      description: 'Video testimonials and accompanying text'
+      description: Video testimonials and accompanying text
 pages:
 - content/pages/about.json

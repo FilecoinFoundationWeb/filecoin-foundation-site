@@ -7,7 +7,7 @@ fields:
   config:
     required: false
   label: Type
-  description: 'Do not change. This field is only visible to Forestry admins.'
+  description: Do not change. This field is only visible to Forestry admins.
   hidden: true
   default: slider_block
 - name: cols
@@ -15,10 +15,10 @@ fields:
   config: {}
   template: layout-columns
   label: Columns
-  description: 'DO NOT CHANGE'
+  description: DO NOT CHANGE
 - name: cards
   type: field_group_list
-  description: 'Add a card here'
+  description: Add a card here
   fields:
   - name: card_block
     type: include
@@ -26,7 +26,7 @@ fields:
     template: card
     label: Template → [Comp] Card
   config:
-    min:
-    max:
-    labelField:
+    min: 
+    max: 
+    labelField: 
   label: Cards

@@ -11,20 +11,23 @@ fields:
     config:
       required: false
     label: Site Name
-    description: 'Name of the site.'
+    description: Name of the site.
   - name: url
     type: text
     config:
       required: false
     label: URL
-    description: >
-      The page's full URL/path.
+    description: 'The page''s full URL/path.
+
+      '
   - name: type
     type: text
     config:
       required: false
     label: Type
-    description: The social metadata page or content type. In most cases this will be website or article. See open graph types, for everything available in the spec.
+    description: The social metadata page or content type. In most cases this will
+      be website or article. See open graph types, for everything available in the
+      spec.
   - name: image
     type: file
     config:

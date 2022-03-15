@@ -7,13 +7,13 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
-  description: 'SEO and metadata'
+  description: SEO and metadata
 - name: og
   type: include
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
-  description: 'Open Graph Metadata'
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
   label: Page Content
@@ -22,13 +22,15 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
-    description: >
-      This begins at the top of the page and ends before 'Participation' section ends (at the end of solid white background)
+    description: 'This begins at the top of the page and ends before ''Participation''
+      section ends (at the end of solid white background)
+
+      '
     fields:
     - type: field_group
       name: hero
       label: Hero
-      description: 'First content section on page'
+      description: First content section on page
       fields:
       - type: field_group
         name: left
@@ -42,18 +44,20 @@ fields:
     - type: field_group
       name: intro_1
       label: Intro 1
-      description: 'Text block and image. The image is on the right side and contained in blue the gradient.'
+      description: Text block and image. The image is on the right side and contained
+        in blue the gradient.
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Template → [Layout] Grid Alignment
-        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
       - type: field_group
         name: left
         label: Left Column
-        description: 'The text is editable within this section'
+        description: The text is editable within this section
         fields:
         - name: text_block
           type: include
@@ -63,7 +67,7 @@ fields:
       - type: field_group
         name: right
         label: Right Column
-        description: 'The image block is editable within this section'
+        description: The image block is editable within this section
         fields:
         - name: image_block
           type: include
@@ -115,12 +119,12 @@ fields:
     - type: field_group
       name: intro_2
       label: Intro 2
-      description: 'Video on left and text block on right.'
+      description: Video on left and text block on right.
       fields:
       - type: field_group
         name: left
         label: Left Column
-        description: 'Video block is editable within this section.'
+        description: Video block is editable within this section.
         fields:
         - name: video_block
           type: include
@@ -130,7 +134,7 @@ fields:
       - type: field_group
         name: right
         label: Right Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -140,12 +144,12 @@ fields:
     - type: field_group
       name: banner_1
       label: Banner
-      description: 'Text within large blue gradient'
+      description: Text within large blue gradient
       fields:
       - type: field_group
         name: left
         label: Content
-        description: 'Banner content is editable within this section.'
+        description: Banner content is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -197,18 +201,19 @@ fields:
     - type: field_group
       name: explore_1
       label: Explore
-      description: 'Text block on left and clickable cards on right.'
+      description: Text block on left and clickable cards on right.
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Template → [Layout] Grid Alignment
-        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
       - type: field_group
         name: left
         label: Left Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -218,7 +223,7 @@ fields:
       - type: field_group
         name: right
         label: Right Column
-        description: 'Clickable cards are editable within this section.'
+        description: Clickable cards are editable within this section.
         fields:
         - name: slider_block
           type: include
@@ -228,12 +233,12 @@ fields:
     - type: field_group
       name: team_video
       label: Team Video
-      description: 'Centered video block.'
+      description: Centered video block.
       fields:
       - type: field_group
         name: left
         label: Content
-        description: 'Video is editable within this section.'
+        description: Video is editable within this section.
         fields:
         - name: video_block
           type: include
@@ -243,7 +248,7 @@ fields:
         - type: field_group
           name: subtext
           label: Subtext
-          description: 'This text appears below video and can be linked to a URL.'
+          description: This text appears below video and can be linked to a URL.
           fields:
           - type: text
             name: type
@@ -269,18 +274,19 @@ fields:
     - type: field_group
       name: grants
       label: Grants
-      description: 'Text block and image. The image is on the left side.'
+      description: Text block and image. The image is on the left side.
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Template → [Layout] Grid Alignment
-        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
       - type: field_group
         name: left
         label: Left Column
-        description: 'The image is editable within this section.'
+        description: The image is editable within this section.
         fields:
         - name: image_block
           type: include
@@ -290,7 +296,7 @@ fields:
       - type: field_group
         name: right
         label: Right Column
-        description: 'The text is editable within this section.'
+        description: The text is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -300,8 +306,10 @@ fields:
   - type: field_group
     name: section_2
     label: Section 2
-    description: >
-      This is the 'Participation' section with clickable square cards on right side.
+    description: 'This is the ''Participation'' section with clickable square cards
+      on right side.
+
+      '
     fields:
     - type: field_group
       name: get_involved
@@ -312,11 +320,12 @@ fields:
         config: {}
         template: grid-classes
         label: Template → [Layout] Grid Alignment
-        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
       - type: field_group
         name: left
         label: Left Column
-        description: 'The text block is editable within this section.'
+        description: The text block is editable within this section.
         fields:
         - name: text_block
           type: include
@@ -326,7 +335,7 @@ fields:
       - type: field_group
         name: right
         label: Right Column
-        description: 'Clickable cards are editable within this section.'
+        description: Clickable cards are editable within this section.
         fields:
         - name: slider_block
           type: include
@@ -378,14 +387,16 @@ fields:
   - type: field_group
     name: section_3
     label: Section 3
-    description: >
-      This section begins after 'Participation' section, ends at the footer, and has a solid white background.
+    description: 'This section begins after ''Participation'' section, ends at the
+      footer, and has a solid white background.
+
+      '
     fields:
     - name: diver_deeper
       type: include
       config: {}
       template: comp-divedeeper
       label: Dive Deeper
-      description: 'Video testimonials and accompanying text'
+      description: Video testimonials and accompanying text
 pages:
 - content/pages/index.json

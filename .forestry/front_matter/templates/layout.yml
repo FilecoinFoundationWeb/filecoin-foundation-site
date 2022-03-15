@@ -18,4 +18,4 @@ fields:
       path: 
   label: "[Comp] Layout"
   hidden: true
-  description: 'Deprecated'
+  description: Deprecated

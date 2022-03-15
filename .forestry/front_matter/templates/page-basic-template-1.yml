@@ -7,13 +7,13 @@ fields:
   config: {}
   template: data-seo
   label: Template → [Data] SEO
-  description: 'SEO and metadata'
+  description: SEO and metadata
 - name: og
   type: include
   config: {}
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
-  description: 'Open Graph Metadata'
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
   label: Page Content
@@ -22,7 +22,9 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
-    description: 'The section begins at the top of the page and contains a textblock and image on a royal blue background. The text block is on the left and the image block is on the right.'
+    description: The section begins at the top of the page and contains a textblock
+      and image on a royal blue background. The text block is on the left and the
+      image block is on the right.
     fields:
     - type: field_group
       name: basic_hero
@@ -32,7 +34,8 @@ fields:
         config: {}
         template: grid-classes
         label: Grid Classes
-        description: 'Selections from this dropdown will affect the section layout. DO NOT EDIT.'
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
       - name: left
         type: field_group
         config: {}
@@ -43,7 +46,7 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Left Column
-        description: 'The text block is editable within this section'
+        description: The text block is editable within this section
       - name: right
         type: field_group
         config: {}
@@ -54,18 +57,17 @@ fields:
           template: block-image
           label: Template → [Block] Image
         label: Right Column
-        description: 'The image block is editable within this section'
+        description: The image block is editable within this section
       label: Basic Hero
-
   - type: field_group
     name: section_2
     label: Section 2
-    description: 'This section contains images and text on a light blue background.'
+    description: This section contains images and text on a light blue background.
     fields:
     - type: field_group
       name: basic_content_1
       label: Basic Content 1
-      description: 'Text block on light blue background.'
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
@@ -82,11 +84,11 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
     - type: field_group
       name: banner_image
       label: Banner Image
-      description: 'Image block that is positioned under text block.'
+      description: Image block that is positioned under text block.
       fields:
       - type: text
         name: classNames
@@ -103,11 +105,11 @@ fields:
           template: block-image
           label: Template → [Block] Image
         label: Content
-        description: 'Image block is editable within this section.'
+        description: Image block is editable within this section.
     - type: field_group
       name: basic_content_2
       label: Basic Content 2
-      description: 'Text block on light blue background.'
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
@@ -124,11 +126,11 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
     - type: field_group
       name: panels_1
       label: Panels 1
-      description: 'Text block on left and image on right on light blue background.'
+      description: Text block on left and image on right on light blue background.
       fields:
       - name: left
         type: field_group
@@ -140,7 +142,7 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Left Column
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       - name: right
         type: field_group
         config: {}
@@ -151,11 +153,11 @@ fields:
           template: block-image
           label: Template → [Block] Image
         label: Right Column
-        description: 'Image block is editable within this section.'
+        description: Image block is editable within this section.
     - type: field_group
       name: basic_content_3
       label: Basic Content 3
-      description: 'Text block on light blue background.'
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
@@ -172,7 +174,7 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
     - type: field_group
       name: basic_content_4
       fields:
@@ -191,13 +193,13 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
       label: Basic Content 4
-      description: 'Text block on light blue background.'
+      description: Text block on light blue background.
     - type: field_group
       name: basic_content_5
       label: Basic Content 5
-      description: 'Text block on light blue background.'
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
@@ -214,11 +216,12 @@ fields:
           template: block-text
           label: Template → [Block] Text
         label: Content
-        description: 'Text block is editable within this section.'
+        description: Text block is editable within this section.
   - type: field_group
     name: section_3
     label: Section 3
-    description: 'This section contains the Events and Hackathons section and ends at the footer.'
+    description: This section contains the Events and Hackathons section and ends
+      at the footer.
     fields:
     - name: events_hackathons
       type: include
