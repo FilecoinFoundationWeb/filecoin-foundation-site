@@ -17,7 +17,7 @@ fields:
 - name: cards
   type: field_group_list
   fields:
-  - name: block_card
+  - name: card_block
     type: include
     config: {}
     template: card
