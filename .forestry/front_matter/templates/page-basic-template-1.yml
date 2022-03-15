@@ -22,7 +22,7 @@ fields:
   - type: field_group
     name: section_1
     label: Section 1
-    description: 'The begins at the top of the page and contains a textblock and image on a royal blue background. The text block is on the left and the image block is on the right.'
+    description: 'The section begins at the top of the page and contains a textblock and image on a royal blue background. The text block is on the left and the image block is on the right.'
     fields:
     - type: field_group
       name: basic_hero
@@ -56,6 +56,7 @@ fields:
         label: Right Column
         description: 'The image block is editable within this section'
       label: Basic Hero
+
   - type: field_group
     name: section_2
     label: Section 2
@@ -127,7 +128,7 @@ fields:
     - type: field_group
       name: panels_1
       label: Panels 1
-      description: 'Text block on left and image on right.'
+      description: 'Text block on left and image on right on light blue background.'
       fields:
       - name: left
         type: field_group
