@@ -71,6 +71,12 @@
         {
           "type": "X",
           "action": "nuxt-link",
+          "url": "/about",
+          "text": "TEST"
+        },
+        {
+          "type": "X",
+          "action": "nuxt-link",
           "url": "/about/#panel_1",
           "text": "Board of Directors"
         },
