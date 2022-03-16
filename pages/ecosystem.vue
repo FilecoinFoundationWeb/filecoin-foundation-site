@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-ecosystem-background-layers"
         layers-array="3_4_5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -46,9 +46,19 @@ export default {
   data () {
     return {
       tag: 'ecosystem',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        default: {
+          stroke: 1.375,
+          radius: 12.75
+        },
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -121,19 +131,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: 100%;
     background-color: $hawkesBlue;
-    border-radius: 14rem 0 0 14rem;
+    border-radius: 11.375rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 12.75rem;
+      border-top-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-radius: 5rem 0 0 5rem;
+      border-top-left-radius: 4.75rem;
     }
   }
 }
@@ -152,21 +159,18 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     top: 0.5rem;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 4rem);
+    height: calc(100% + 3.5rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
+    border-radius: 5rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
+      border-bottom-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-bottom-left-radius: 5rem;
+      border-bottom-left-radius: 4.75rem;
     }
   }
 }
@@ -194,12 +198,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     left: $backgroundLayers__Left__Mini;
-  }
-  @include tiny {
-    .layer {
-      border-top-left-radius: 5rem !important;
-      border-bottom-left-radius: 5rem !important;
-    }
   }
 }
 
@@ -330,17 +328,17 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .card-list {
     position: relative;
     flex-wrap: unset;
-    @include tiny {
+    @include small {
       flex-wrap: wrap;
     }
   }
   .card {
     @include small {
-      width: unset !important;
+      width: 40% !important;
+      margin-bottom: 5rem !important;
     }
     @include tiny {
-      width: calc(50% - 3rem) !important;
-      margin-bottom: 7rem !important;
+      width: 100% !important;
     }
   }
 }

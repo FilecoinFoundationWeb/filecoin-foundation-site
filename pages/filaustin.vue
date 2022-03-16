@@ -12,13 +12,13 @@
       <BackgroundLayers
         id="page-filaustin-body-layer"
         layers-array="2"
-        :offset="{ mini: 0.25 }" />
+        :breakpoints="{ mini: { stroke: 0.25, radius: 12.75 } }" />
 
       <BackgroundLayers
         id="page-filaustin-background-layers"
         layers-array="6_5_4_3"
         :reverse="true"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -49,9 +49,15 @@ export default {
       tag: 'filaustin',
       scroll: false,
       resize: false,
-      pageBackgroundLayersOffset: {
-        medium: 0.5,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        medium: {
+          stroke: 0.5,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -109,7 +115,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     width: calc(100% + 3.5rem);
     height: calc(100% + 4.5rem + #{2.5 * $backgroundLayers__Offset});
     background-color: $blackPearl;
-    border-radius: 0 0 0 8.5rem;
+    border-radius: 0 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
   }
@@ -170,7 +176,11 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 #section_6 {
   &:before {
-    height: calc(100% + 5.25rem + 2px);
+    height: calc(100% + 4rem);
+    border-bottom-left-radius: 11.375rem;
+    @include mini {
+      border-bottom-left-radius: 4.75rem;
+    }
   }
 }
 

@@ -21,9 +21,8 @@
         "right": {
           "type": "video_block",
           "cols": {
-            "num": "col-5_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1",
-            "push_right": ""
+            "num": "col-6_sm-9_mi-10",
+            "push_left": "off-0_sm-2_mi-1"
           },
           "tint": true,
           "subtext": {
@@ -51,9 +50,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6_5_4_3",
-                "offset": {
-                  "medium": 0.75,
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
                 },
                 "reverse": true
               }
@@ -117,8 +126,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6",
-                "offset": {
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 12.75
+                  }
                 },
                 "reverse": true
               }
@@ -183,9 +203,14 @@
         "left": {
           "type": "slider_block",
           "cols": {
+<<<<<<< HEAD
             "num": "col-10_sm-8_ti-11",
             "push_left": "off-1_sm-2_ti-1",
             "push_right": ""
+=======
+            "num": "col-10_sm-8_mi-11_ti-8",
+            "push_left": "off-1_sm-2_mi-1_ti-2"
+>>>>>>> 7ad574c435b68550214f0959dd9e87eaeef0e764
           },
           "cards": [
             {
@@ -246,10 +271,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6_5_4",
-                "border-radius": 5,
-                "offset": {
-                  "small": 1,
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "small": {
+                    "stroke": 1,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 5
+                  }
                 },
                 "reverse": true
               }

@@ -264,11 +264,25 @@ export default {
 .card.type__B {
   position: relative;
   padding: 0 12px;
-  margin: 0 0.5rem !important;
-  width: 25% !important;
-  .image {
-    position: relative;
+  margin: 0 0.5rem;
+  overflow: visible;
+  margin-top: 10rem;
+  .content {
+    height: 100%;
     width: 100%;
+  }
+  .panel-left {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+  .image {
+    position: absolute;
+    width: calc(100% - 1rem);
+    left: 0.5rem;
+    bottom: 3rem;
     transform: translateY(0);
     border-radius: 11.375rem;
     transition: ease-in-out 350ms;
@@ -276,19 +290,14 @@ export default {
   }
   &:hover {
     .image {
-      transform: translateY(-100px);
-      @include tiny {
-        transform: translateY(-70px);
-      }
+      bottom: 100%;
     }
   }
   .title {
     position: absolute;
-    bottom: -3rem;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
-    margin-top: 1.875rem;
+    bottom: 0rem;
+    width: calc(100% - 1.5rem);
+    transform: translateY(calc(100% - 0.5rem));
     @include fontSize_Regular;
     @include fontWeight_SemiBold;
     color: $kleinBlue;
@@ -298,21 +307,20 @@ export default {
     }
   }
   .description {
-    position: absolute;
     text-align: center;
-    padding: 0 1rem;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1.25rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 4rem;
     color: white;
     z-index: -1;
     @include fontSize_Small;
     @include small {
       bottom: 2.25rem;
     }
-    @include tiny {
+    @include mini {
       @include fontSize_Mini;
+    }
+    @include tiny {
+      font-size: 10pt;
       bottom: 1.25rem;
     }
   }
@@ -320,12 +328,13 @@ export default {
     content: '';
     position: absolute;
     width: 100%;
-    height: 61%;
+    height: calc(100% - 2.5rem);
+    min-height: calc((11.375rem + 0.5rem) / 2);
     left: 0;
-    top: 39%;
+    bottom: 2.5rem;
     background-color: $kleinBlue;
     z-index: -1;
-    border-radius: 0 0 calc(11.375rem + 26px) calc(11.375rem + 26px);
+    border-radius: 0 0 calc(11.375rem + 0.5rem) calc(11.375rem + 0.5rem);
     filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
   }
 }

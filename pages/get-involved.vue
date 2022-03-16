@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-get-involved-background-layers"
         layers-array="5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -45,9 +45,19 @@ export default {
   data () {
     return {
       tag: 'get_involved',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        default: {
+          stroke: 1.375,
+          radius: 12.75
+        },
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },

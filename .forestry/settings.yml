@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: heading
@@ -56,7 +56,7 @@ build:
   - SERVER_ENV=production
   preview_output_directory: dist
   install_dependencies_command: npm ci
-  preview_docker_image: forestryio/node:12
+  preview_docker_image: forestryio/node:16
   mount_path: "/srv"
   working_dir: "/srv"
   instant_preview_command: npm run generate

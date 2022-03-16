@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-about-background-layers"
         layers-array="3_4_5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -46,9 +46,23 @@ export default {
   data () {
     return {
       tag: 'about',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        default: {
+          stroke: 1.375,
+          radius: 12.75
+        },
+        ultralarge: {
+          stroke: 1.75,
+          radius: 12.75
+        },
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -69,10 +83,6 @@ export default {
     }),
     sections () {
       const content = CloneDeep(this.siteContent.about.page_content)
-      // const len = content.length
-      // const last = content[len - 1]
-      // const replace = this.siteContent['section-dive-deeper'].concat(last)
-      // content.splice(len - 1, 1, replace)
       return content
     }
   }
@@ -113,7 +123,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 #section_1 {
-  padding-top: 7rem; // 1.75rem * 4
+  padding-top: 8rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
   }
@@ -125,19 +135,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: 100%;
     background-color: $hawkesBlue;
-    border-radius: 12.75rem 0 0 12.75rem;
+    border-radius: 11.375rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 12.75rem;
+      border-top-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-top-left-radius: 5rem;
+      border-top-left-radius: 4.75rem;
     }
   }
 }
@@ -157,22 +164,19 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     top: 0.5rem;
     left: $backgroundLayers__Left__Desktop;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 4rem);
+    height: calc(100% + 3.625rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
+    border-radius: 5rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
+      border-bottom-left-radius: 11.75rem;
       height: calc(100% + 3.5rem);
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-bottom-left-radius: 5rem;
+      border-bottom-left-radius: 4.75rem;
     }
   }
 }
@@ -190,17 +194,12 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   @include mini {
     left: $backgroundLayers__Left__Mini;
   }
-  @include tiny {
-    .layer {
-      border-top-left-radius: 5rem !important;
-      border-bottom-left-radius: 5rem !important;
-    }
-  }
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
 ::v-deep #hero {
   padding: 0;
+  padding-bottom: 2rem;
   margin-bottom: 9.875rem;
   @include small {
     margin-bottom: 3rem;
@@ -212,8 +211,19 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   @include tiny {
     margin-top: 0;
   }
+  .text-block {
+    transform: translateX(-2vw);
+    @include small {
+      transform: translateX(0);
+    }
+  }
   .video-block {
     height: 100%;
+    // padding: 0 0.25rem;
+    transform: translate(5vw, 1rem);
+    @include small {
+      transform: translate(0, 0);
+    }
     .preview-container {
       background-color: $jordyBlue;
     }
@@ -363,6 +373,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include small {
       width: 40% !important;
       margin-bottom: 5rem !important;
+    }
+    @include tiny {
+      width: 100% !important;
     }
   }
 }
