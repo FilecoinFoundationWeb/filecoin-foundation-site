@@ -17,9 +17,7 @@ fields:
     config:
       required: false
     label: URL
-    description: 'The page''s full URL/path.
-
-      '
+    description: 'The full URL/path of the page.'
   - name: type
     type: text
     config:
@@ -35,3 +33,4 @@ fields:
     label: Image
     description: Upload an image to appear in social previews for this page.
   label: Open Graph & Social
+  description: These details create a picture of your page for previews when shared online
