@@ -12,14 +12,6 @@ sections:
 - type: heading
   label: Content
 - type: directory
-  path: content/blog
-  label: Blog
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - blog-post-front-matter
-- type: directory
   path: content/pages
   label: Pages
   create: documents
