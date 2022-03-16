@@ -12,14 +12,6 @@ sections:
 - type: heading
   label: Content
 - type: directory
-  path: content/blog
-  label: Blog
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - blog-post-front-matter
-- type: directory
   path: content/pages
   label: Pages
   create: documents
@@ -30,7 +22,6 @@ sections:
   - page-fil-austin
   - page-index
   - page-grants
-  - page-terms
   - page-policy
   - page-governance
   - page-about
@@ -40,6 +31,12 @@ sections:
   - page-basic-template-1
   - page-basic-template-2
   - page-get-involved
+- type: directory
+  path: content/data
+  label: Data
+  create: all
+  match: "**/*"
+  new_doc_ext: json
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

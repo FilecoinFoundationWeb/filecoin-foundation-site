@@ -1,0 +1,63 @@
+---
+label: "[Data] Event List"
+hide_body: true
+fields:
+- type: field_group_list
+  name: Event list
+  label: Event list
+  fields:
+  - type: text
+    name: type
+    label: type
+    hidden: true
+    default: D
+  - name: event_type
+    type: select
+    default: event
+    config:
+      required: false
+      options:
+      - event
+      - hackathon
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Event Type
+  - type: text
+    name: title
+    label: Title
+  - name: date
+    type: datetime
+    label: Date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  - type: file
+    name: img
+    label: Image
+  - type: textarea
+    name: description
+    label: Description
+  - type: field_group
+    name: cta
+    label: CTA
+    fields:
+    - name: cta
+      type: include
+      config: {}
+      template: button
+      label: Template → [Comp] Button
+    - type: text
+      name: target
+      label: target
+      hidden: true
+      default: _blank
+  config:
+    labelField: title
+pages:
+- content/data/event-list.json

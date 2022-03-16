@@ -17,3 +17,5 @@ fields:
       file: 
       path: 
   label: "[Comp] Layout"
+  hidden: true
+  description: Deprecated

@@ -2,52 +2,26 @@
 label: "[Page] Governance"
 hide_body: true
 fields:
-- type: field_group
-  name: seo
-  label: SEO and metadata
-  fields:
-  - type: text
-    name: title
-    label: Title
-    description: The title for this web page
-  - type: textarea
-    name: description
-    label: Description
-    description: The meta description for this page, which will appear in search engine
-      results and social media previews. Each page can have a unique meta description.
-      One to three short sentences are recommended.
-  description: Populate the metadata associated with this content, like the page title
-    and description.
-- type: field_group
-  name: og
-  label: Open Graph Metadata
-  fields:
-  - type: text
-    name: site_name
-    label: Site Name
-    description: Name of the site
-  - type: text
-    name: url
-    label: URL
-    description: The page's URL/path
-  - type: text
-    name: type
-    label: Open Graph Type
-    description: The social metadata page or content type. In most cases this will
-      be website or article. See open graph types, for everything available in the
-      spec.
-  - type: file
-    name: image
-    label: Open Graph Image
-    description: Upload an image to appear in social previews for this page.
-  description: Open Graph Metadata, which appears in social media previews
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+  description: SEO and metadata
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
   label: Page Content
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: section_1
-    label: Section 1 - Hero Area
+    label: Section 1
     fields:
     - type: field_group
       name: out-of-page
@@ -85,144 +59,94 @@ fields:
           label: description
           hidden: true
           default: "."
+        hidden: true
       hidden: true
+    hidden: true
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
+    description: This section begins at the top of the page and ends after the block
+      of paragraph text on dark blue background and right before the floating menu
+      begins.
     fields:
     - type: field_group
       name: mobile_image_banner
-      label: mobile_image_banner
+      label: Mobile Banner Image
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: ''
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-3_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
     - type: field_group
       name: hero
-      label: hero
+      label: Hero
+      description: First content section on page with text block on the left and image
+        block on the right.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-3_md-2_sm-1_mi-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_md-5 mi-hidden
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_sm-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
     - type: field_group
       name: hero_text
-      label: hero_text
+      label: Hero Text
+      description: Text block on top dark blue background that is positioned underneath
+        the Hero text and image blocks.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-6_sm-7_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_sm-4_mi-1
-          hidden: true
-        - type: textarea
-          name: subheading
-          label: subheading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
+    description: 'This section begins when floating menu appears on left, background
+      color splits into royal blue on left and dark blue on right and stretches down
+      to and including image that has rounded on its left side. Note that subheadings
+      in textblocks in this section will become listed underneath headings on floating
+      menu (ex. subheading ''What exactly is an FIP'' will become a list item on floating
+      menu.)
+
+      '
     fields:
     - type: field_group
       name: panel-1-title
-      label: panel-1-title
+      label: Panel 1 Title
+      description: Floating menu is editable within this section.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: Floating menu headings and panel 1 title heading are editable
+          within this section.
         fields:
         - type: text
           name: type
@@ -234,26 +158,21 @@ fields:
           label: layout
           hidden: true
           default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3 mi-hidden
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1
-          hidden: true
+        - name: cols
+          type: include
+          config: {}
+          template: layout-columns
+          label: Columns
+          description: Selections from this dropdown will affect the section layout.
+            DO NOT EDIT.
         - type: field_group
           name: customizations
-          label: customizations
+          label: Customizations
+          description: Floating menu headings are editable within this section.
           fields:
           - type: field_group
             name: floating_menu
-            label: floating_menu
+            label: Floating Menu
             fields:
             - type: text
               name: name
@@ -262,7 +181,7 @@ fields:
               default: FloatingMenu
             - type: field_group
               name: props
-              label: props
+              label: Content
               fields:
               - type: text
                 name: id
@@ -281,24 +200,28 @@ fields:
                 default: 0
               - type: field_group_list
                 name: entries
-                label: entries
+                label: Entries
+                description: 'Click ''Add Entry'' to add a new heading on floating
+                  menu
+
+                  '
                 fields:
                 - type: text
                   name: heading
-                  label: heading
+                  label: Heading
                 - type: text
                   name: id
-                  label: id
+                  label: ID
                 - type: field_group_list
                   name: items
-                  label: items
+                  label: Items
                   fields:
                   - type: text
                     name: text
-                    label: text
+                    label: Text
                   - type: text
                     name: id
-                    label: id
+                    label: ID
                   config:
                     labelField: text
                     max: 3
@@ -307,356 +230,174 @@ fields:
                   max: 4
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Hero heading to the right of start of floating menu is editable
+          within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_mi-3
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-1-info-top
-      label: panel-1-info-top
+      label: Panel 1 Info Top
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background. Reminder that the subheading established
+        here will appear on floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: The image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_mi-12
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-0
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: The text block is editable within this section. Reminder that
+          the subheading established here will appear on floating menu.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_mi-3
-          hidden: true
-        - type: text
-          name: subheading
-          label: subheading
-        - type: textarea
-          name: description
-          label: description
         - type: text
           name: data_id
           label: data_id
           hidden: true
           default: section_3-a
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-1-info-middle
-      label: panel-1-info-middle
+      label: Panel 1 Info Middle
+      description: The second text block within this section. Reminder that the subheading
+        established here will appear on floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: The textblock is editable within this section. Reminder that
+          the subheading established here will appear on floating menu.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-1
-          hidden: true
-        - type: text
-          name: subheading
-          label: subheading
-        - type: textarea
-          name: description
-          label: description
         - type: text
           name: data_id
           label: data_id
           hidden: true
           default: section_3-b
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-1-info-bottom
-      label: panel-1-info-bottom
+      label: Panel 1 Info Bottom
+      description: The third text block within this section. Reminder that the subheading
+        established here will appear on floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: The textblock is editable within this section. Reminder that
+          the subheading established here will appear on floating menu.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-8_mi-3
-          hidden: true
-        - type: text
-          name: subheading
-          label: subheading
-        - type: textarea
-          name: description
-          label: description
         - type: text
           name: data_id
           label: data_id
           hidden: true
           default: section_3-c
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-1-banner-image
-      label: panel-1-banner-image
+      label: Panel 1 Banner Image
+      description: Image block with left side of image rounded at corners.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: The image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-8_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
   - type: field_group
     name: section_4
-    label: section_4
+    label: Section 4
+    description: This section begins right after (not including) the image with rounded
+      corners its left side and stops after the final text block within the three
+      blue gradient lines.
     fields:
     - type: field_group
       name: panel-2-title
-      label: panel-2-title
+      label: Panel 2 Title
+      description: Text block to the right of floating nemu. This heading established
+        here will appear as next heading in floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block with floating menu heading is editable within this
+          section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-2-info-top
-      label: panel-2-info-top
+      label: Panel 2 Info Top
+      description: Text block and image that appear underneath Panel 2 Title. Image
+        block is on the right and text block is on the left.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: Image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_mi-5
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: false
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_mi-1
-          hidden: true
-        - type: textarea
-          name: subheading
-          label: subheading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-2-main
-      label: panel-2-main
+      label: Panel 2 Main
+      description: Text block wrapped inside 3 layer gradient on dark blue background.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block is editable within this section. Reminder that the
+          subheading established here will appear on floating menu.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-6_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-3
-          hidden: true
-        - type: textarea
-          name: subheading
-          label: subheading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
         - type: text
           name: data_id
           label: data_id
@@ -701,143 +442,72 @@ fields:
           hidden: true
   - type: field_group
     name: section_5
-    label: section_5
+    label: Section 5
+    description: 'This section begins after the final text blocks that are wrapped
+      in 3-colored blue gradient container and extends to the ''Participation'' or
+      ''Get Involved'' section.
+
+      '
     fields:
     - type: field_group
       name: panel-3-title
-      label: panel-3-title
+      label: Panel 3 Title
+      description: Heading of section. This heading established here will appear as
+        next heading in floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block with floating menu heading is editable within this
+          section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-8
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-3-info-top
-      label: panel-3-info-top
+      label: Panel 3 Info Top
+      description: Text block and image that appear underneath Panel 3 Title. Image
+        block is on the right and text block is on the left.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: Image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_mi-7
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1
-          hidden: true
-        - type: textarea
-          name: subheading
-          label: subheading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-3-info-middle
-      label: panel-3-info-middle
+      label: Panel 3 Info Middle
+      description: Text block on dark blue background. Reminder that the subheading
+        established here will appear on floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-3
-          hidden: true
-        - type: text
-          name: subheading
-          label: subheading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
         - type: text
           name: data_id
           label: data_id
@@ -845,98 +515,47 @@ fields:
           default: section_5-a
     - type: field_group
       name: panel-3-info-bottom
-      label: panel-3-info-bottom
+      label: Panel 3 Info Bottom
+      description: Clickable cards to the right of the floating menu. Cards positioned
+        on dark blue background and have an image, title and description stacked atop
+        eachother.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Clickable cards are edited here. Note that the Title of each
+          card will appear on the list of the floating menu.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: slider_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-2
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: img_size
-            label: img_size
-            hidden: true
-            default: mini
-          - type: text
-            name: title
-            label: title
-            hidden: false
-          - type: textarea
-            name: description
-            label: description
-          - type: text
-            name: data_id
-            label: data_id
-          config:
-            max: 2
-            min: 2
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
   - type: field_group
     name: section_6
-    label: section_6
+    label: Section 6
+    description: 'This section contains the ''Participation'' or ''Get Involved''
+      section.
+
+      '
     fields:
     - type: field_group
       name: panel-4-title
-      label: panel-4-title
+      label: Panel 4 Title
+      description: Text block to the right of floating nemu. This heading established
+        here will appear as next heading in floating menu.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Text block with floating menu heading is editable within this
+          section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-8
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-6_mi-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
         - type: field_group
           name: customizations
           label: customizations
@@ -950,248 +569,61 @@ fields:
               label: name
               hidden: true
               default: SocialIcons
+            hidden: true
           hidden: true
     - type: field_group
       name: panel-4-info
-      label: panel-4-info
+      label: Panel 4 Info
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Left Column
+        description: Image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_mi-7
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Text block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: small
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_mi-9
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_mi-3
-          hidden: true
-        - type: text
-          name: subheading
-          label: subheading
-        - type: textarea
-          name: description
-          label: description
-        - type: field_group_list
-          name: ctas
-          label: ctas
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: nuxt-link
-          - type: text
-            name: theme
-            label: theme
-            hidden: true
-            default: dark
-          - type: text
-            name: text
-            label: text
-          - type: text
-            name: url
-            label: url
-          config:
-            max: 1
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
     - type: field_group
       name: panel-4-banner-image
-      label: panel-4-banner-image
+      label: Panel 4 Banner Image
+      description: Image block at the bottom of section with left side of image rounded
+        at corners.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Image block is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-8_mi-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-4_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
   - type: field_group
     name: section_7
-    label: section_7
+    label: Section 7
+    description: This section contains the Events and Hackathons section and ends
+      at the footer.
     fields:
-    - type: field_group
-      name: events-hackathons
-      label: events-hackathons
-      fields:
-      - type: text
-        name: type
-        label: type
-        hidden: true
-        default: custom
-      - type: text
-        name: component
-        label: component
-        hidden: true
-        default: EventsHackathons
-      - type: field_group
-        name: props
-        label: props
-        fields:
-        - type: field_group
-          name: intro
-          label: intro
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              default: col-4_mi-6
-            - type: text
-              name: push_left
-              label: push_left
-              default: off-6_mi-1
-            hidden: true
-          - type: text
-            name: heading
-            label: heading
-        - type: field_group
-          name: events
-          label: events
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              default: col-8_mi-12
-            - type: text
-              name: push_left
-              label: push_left
-              default: off-4_mi-0
-            hidden: true
-          - type: field_group_list
-            name: cards
-            label: cards
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: D
-            - name: date
-              type: datetime
-              label: Date
-              description: ''
-              config:
-                required: false
-                date_format: 
-                time_format: 
-                display_utc: false
-            - type: text
-              name: title
-              label: title
-            - type: file
-              name: img
-              label: Image
-            - type: text
-              name: img_type
-              label: img_type
-              hidden: true
-              default: background_image
-            - type: field_group
-              name: cta
-              label: cta
-              fields:
-              - type: text
-                name: type
-                label: type
-                hidden: true
-                default: B
-              - type: text
-                name: action
-                label: action
-                hidden: true
-                default: a
-              - type: text
-                name: target
-                label: target
-                hidden: true
-                default: _blank
-              - type: text
-                name: icon
-                label: icon
-                hidden: true
-                default: info
-              - type: text
-                name: text
-                label: text
-              - type: text
-                name: url
-                label: url
-            config:
-              max: 2
-  description: The visible content on the page is editable within this section.
+    - name: events-hackathons
+      type: include
+      config: {}
+      template: events-hackathons
+      label: Template → [Comp] Events & Hackathons
+pages:
+- content/pages/governance.json

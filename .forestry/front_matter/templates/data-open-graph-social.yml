@@ -1,0 +1,37 @@
+---
+label: "[Data] Open Graph & Social"
+hide_body: false
+fields:
+- name: og
+  type: field_group
+  config: {}
+  fields:
+  - name: site_name
+    type: text
+    config:
+      required: false
+    label: Site Name
+    description: Name of the site.
+  - name: url
+    type: text
+    config:
+      required: false
+    label: URL
+    description: 'The page''s full URL/path.
+
+      '
+  - name: type
+    type: text
+    config:
+      required: false
+    label: Type
+    description: The social metadata page or content type. In most cases this will
+      be website or article. See open graph types, for everything available in the
+      spec.
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    description: Upload an image to appear in social previews for this page.
+  label: Open Graph & Social

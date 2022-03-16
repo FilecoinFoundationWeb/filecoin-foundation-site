@@ -1,0 +1,24 @@
+---
+label: "[Data] SEO"
+hide_body: true
+fields:
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The title for this web page
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+    description: Test 234
+  label: SEO
+  description: The meta description for this page, which will appear in search engine
+    results and social media previews. Each page can have a unique meta description.
+    One to three sentences are recommended.

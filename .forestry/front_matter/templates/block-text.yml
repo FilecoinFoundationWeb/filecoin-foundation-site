@@ -1,38 +1,40 @@
 ---
-label: "[Comp] Text Block"
+label: "[Block] Text"
 hide_body: false
 fields:
 - name: type
   type: text
   config:
     required: false
-  hidden: true
-  label: type
-  description: Do not change. This field is only visible to Forestry admins.
+  label: Type
   default: text_block
+  hidden: true
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
 - name: layout
   type: select
   default: []
   config:
     required: false
     options:
-    - compact
+    - small
     - medium
     - large
+    - compact
     source:
       type: simple
       section: 
       file: 
       path: 
-  hidden: true
   label: Layout
-  description: Do not change. This field is only visible to Forestry admins.
 - name: label
   type: text
   config:
     required: false
   label: Label
-  description: Text that will appear above heading
 - name: heading
   type: textarea
   default: ''
@@ -42,7 +44,6 @@ fields:
     schema:
       format: markdown
   label: Heading
-  description: Text block heading
 - name: subheading
   type: textarea
   default: ''
@@ -52,7 +53,6 @@ fields:
     schema:
       format: markdown
   label: Subheading
-  description: Text block subheading
 - name: description
   type: textarea
   default: ''
@@ -62,4 +62,16 @@ fields:
     schema:
       format: markdown
   label: Description
-  description: Text block paragraph content
+- name: ctas
+  type: field_group_list
+  fields:
+  - name: cta
+    type: include
+    config: {}
+    template: button
+    label: Template → [Comp] Button
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: CTAs

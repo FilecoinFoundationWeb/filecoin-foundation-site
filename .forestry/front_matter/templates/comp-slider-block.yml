@@ -1,19 +1,32 @@
 ---
-label: "[Comp] Slider Block"
+label: "[Block] Slider"
 hide_body: true
 fields:
 - name: type
   type: text
   config:
     required: false
-  label: type
+  label: Type
+  description: Do not change. This field is only visible to Forestry admins.
   hidden: true
   default: slider_block
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
+  description: DO NOT CHANGE
 - name: cards
-  type: blocks
-  label: Cards
-  template_types:
-  - card
+  type: field_group_list
+  description: Add a card here
+  fields:
+  - name: card_block
+    type: include
+    config: {}
+    template: card
+    label: Template → [Comp] Card
   config:
     min: 
     max: 
+    labelField: 
+  label: Cards

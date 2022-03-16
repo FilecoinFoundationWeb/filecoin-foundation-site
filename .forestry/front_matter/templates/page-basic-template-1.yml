@@ -2,588 +2,231 @@
 label: "[Page] Basic Template 1"
 hide_body: true
 fields:
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: description
-    label: description
-- type: field_group
-  name: og
-  label: og
-  fields:
-  - type: text
-    name: site_name
-    label: site name
-  - type: text
-    name: url
-    label: url
-  - type: text
-    name: type
-    label: type
-  - type: file
-    name: image
-    label: image
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+  description: SEO and metadata
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: section_1
-    label: section_1
+    label: Section 1
+    description: The section begins at the top of the page and contains a textblock
+      and image on a royal blue background. The text block is on the left and the
+      image block is on the right.
     fields:
     - type: field_group
       name: basic_hero
-      label: basic_hero
       fields:
-      - type: field_group
-        name: left
-        label: Left Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-5_md-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-0_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: subheading
-          label: subheading
-        - type: text
-          name: label
-          label: label
-      - type: field_group
-        name: right
-        label: Right Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-7_md-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-0_md-2_mi-1
-          hidden: true
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Column
+        description: The text block is editable within this section
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Right Column
+        description: The image block is editable within this section
+      label: Basic Hero
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
+    description: This section contains images and text on a light blue background.
     fields:
     - type: field_group
       name: basic_content_1
-      label: basic_content_1
+      label: Basic Content 1
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: textarea
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
     - type: field_group
       name: banner_image
-      label: banner_image
+      label: Banner Image
+      description: Image block that is positioned under text block.
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-          hidden: false
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Content
+        description: Image block is editable within this section.
     - type: field_group
       name: basic_content_2
-      label: basic_content_2
+      label: Basic Content 2
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
     - type: field_group
       name: panels_1
-      label: panels_1
+      label: Panels 1
+      description: Text block on left and image on right on light blue background.
       fields:
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: medium
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-4_sm-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: label
-          label: label
-        - type: textarea
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
-      - type: field_group
-        name: right
-        label: Right Block
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Column
+        description: Text block is editable within this section.
+      - name: right
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-6_md-5_sm-7_mi-8
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_mi-2_sm-2_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Right Column
+        description: Image block is editable within this section.
     - type: field_group
       name: basic_content_3
-      label: basic_content_3
+      label: Basic Content 3
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
     - type: field_group
       name: basic_content_4
-      label: basic_content_4
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
+      label: Basic Content 4
+      description: Text block on light blue background.
     - type: field_group
       name: basic_content_5
-      label: basic_content_5
+      label: Basic Content 5
+      description: Text block on light blue background.
       fields:
       - type: text
         name: classNames
         label: classNames
         hidden: true
         default: basic-template-block-format
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - type: text
-          name: layout
-          label: layout
-          hidden: true
-          default: large
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_md-2_ti-1
-          hidden: true
-        - type: text
-          name: heading
-          label: heading
-        - type: textarea
-          name: description
-          label: description
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
+    description: This section contains the Events and Hackathons section and ends
+      at the footer.
     fields:
-    - type: field_group
-      name: events_hackathons
-      label: events_hackathons
-      fields:
-      - type: text
-        name: type
-        label: type
-        hidden: true
-        default: custom
-      - type: text
-        name: component
-        label: component
-        hidden: true
-        default: EventsHackathons
-      - type: field_group
-        name: props
-        label: props
-        fields:
-        - type: field_group
-          name: intro
-          label: intro
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              hidden: true
-              default: col-4_sm-8_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              hidden: true
-              default: off-0_md-1_sm-2_mi-2_mi-1
-            hidden: true
-          - type: text
-            name: heading
-            label: heading
-          - type: field_group
-            name: cta
-            label: CTA
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: A
-            - type: text
-              name: action
-              label: action
-              hidden: true
-              default: nuxt-link
-            - type: text
-              name: text
-              label: text
-            - type: text
-              name: url
-              label: url
-        - type: field_group
-          name: events
-          label: events
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              hidden: true
-              default: col-8_sm-10_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              hidden: true
-              default: off-4_sm-2_mi-2_ti-1
-            hidden: true
-          - type: field_group_list
-            name: cards
-            label: cards
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: D
-            - name: date
-              type: datetime
-              label: Date
-              description: ''
-              config:
-                required: false
-                date_format: 
-                time_format: 
-                display_utc: false
-            - type: text
-              name: title
-              label: Title
-            - type: file
-              name: img
-              label: Image
-            - type: text
-              name: img_type
-              label: img_type
-              hidden: true
-              default: background_image
-            - type: field_group
-              name: cta
-              label: cta
-              fields:
-              - type: text
-                name: type
-                label: type
-                hidden: true
-                default: B
-              - type: text
-                name: action
-                label: action
-                hidden: true
-                default: a
-              - type: text
-                name: target
-                label: target
-                hidden: true
-                default: _blank
-              - type: text
-                name: icon
-                label: icon
-                hidden: true
-                default: info
-              - type: text
-                name: text
-                label: text
-              - type: text
-                name: url
-                label: url
-            config:
-              max: 2
+    - name: events_hackathons
+      type: include
+      config: {}
+      template: events-hackathons
+      label: Template → [Comp] Events & Hackathons
+pages:
+- content/pages/basic-template-1.json

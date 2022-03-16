@@ -7,18 +7,26 @@
           "layout": "large",
           "cols": {
             "num": "col-5_sm-8_mi-11",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "Get <br /> Involved",
-          "subheading": "The <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos."
+          "subheading": "The <strong>Filecoin Foundation</strong> governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-4_mi-5_ti-7",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/page-get-involved/raised-hands-large.png"
+          "src": "/images/page-get-involved/raised-hands-large.png",
+          "label": ""
         }
       },
       "careers_intro": {
@@ -27,18 +35,24 @@
           "layout": "large",
           "cols": {
             "num": "col-7_mi-11",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "Careers",
           "subheading": "The Filecoin Foundation is growing and hitting new milestones. And as we build, we're hiring for roles to promote the Filecoin ecosystem and the broader web3 movement. <a href='https://jobs.lever.co/filecoin' target='_blank'>Check out our open roles</a>.",
-          "ctas": [{
-            "type": "B",
-            "action": "a",
-            "target": "_blank",
-            "icon": "plus",
-            "text": "View All",
-            "url": "https://jobs.lever.co/filecoin"
-          }]
+          "ctas": [
+            {
+              "type": "B",
+              "action": "a",
+              "target": "_blank",
+              "icon": "plus",
+              "text": "View All",
+              "url": "https://jobs.lever.co/filecoin",
+              "theme": ""
+            }
+          ],
+          "label": "",
+          "description": ""
         }
       },
       "careers_list": {
@@ -46,7 +60,8 @@
           "type": "card_list_block",
           "cols": {
             "num": "col-12_md-11",
-            "push_left": "off-1"
+            "push_left": "off-1",
+            "push_right": ""
           },
           "load_more_button": {
             "type": "E",
@@ -70,8 +85,16 @@
                 "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516"
-              }
+                "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516",
+                "theme": ""
+              },
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": ""
             },
             {
               "type": "D",
@@ -84,8 +107,16 @@
                 "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/97883211-62bb-4ccd-8d3c-c7f13a3ab1f1"
-              }
+                "url": "https://jobs.lever.co/filecoin/97883211-62bb-4ccd-8d3c-c7f13a3ab1f1",
+                "theme": ""
+              },
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": ""
             },
             {
               "type": "D",
@@ -98,8 +129,16 @@
                 "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594"
-              }
+                "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594",
+                "theme": ""
+              },
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": ""
             }
           ]
         },
@@ -113,7 +152,8 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_md-4_mi-10",
-            "push_left": "off-1"
+            "push_left": "off-1",
+            "push_right": ""
           },
           "label": "Get Involved",
           "heading": "How to get involved and key links",
@@ -125,15 +165,18 @@
               "theme": "dark",
               "target": "_blank",
               "text": "Join the Community",
-              "url": "//filecoin.io/slack"
+              "url": "//filecoin.io/slack",
+              "icon": ""
             }
-          ]
+          ],
+          "subheading": ""
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6",
-            "push_left": "off-2_md-1_mi-3"
+            "push_left": "off-2_md-1_mi-3",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
