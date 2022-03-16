@@ -19,6 +19,7 @@ fields:
     label: Description
     description: Description for this web page
   label: SEO
-  description: Populate these fields to create a preview that will be displayed when this page is shared on social media.
+  description: Populate the metadata associated with this content, like the page title and description.
+  
 
 

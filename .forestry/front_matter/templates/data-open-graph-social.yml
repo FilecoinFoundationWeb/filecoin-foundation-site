@@ -33,4 +33,5 @@ fields:
     label: Image
     description: Upload an image to appear in social previews for this page.
   label: Open Graph & Social
-  description: These details create a picture of your page for previews when shared online
+  description: Populate these fields to create a preview that will be displayed when this page is shared.
+  
