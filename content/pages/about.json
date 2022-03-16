@@ -203,14 +203,8 @@
         "left": {
           "type": "slider_block",
           "cols": {
-<<<<<<< HEAD
-            "num": "col-10_sm-8_ti-11",
-            "push_left": "off-1_sm-2_ti-1",
-            "push_right": ""
-=======
             "num": "col-10_sm-8_mi-11_ti-8",
             "push_left": "off-1_sm-2_mi-1_ti-2"
->>>>>>> 7ad574c435b68550214f0959dd9e87eaeef0e764
           },
           "cards": [
             {
