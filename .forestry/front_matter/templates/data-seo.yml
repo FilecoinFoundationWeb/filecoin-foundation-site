@@ -17,8 +17,9 @@ fields:
     config:
       required: false
     label: Description
-    description: Test 234
+    description: Description for this web page
   label: SEO
-  description: The meta description for this page, which will appear in search engine
-    results and social media previews. Each page can have a unique meta description.
-    One to three sentences are recommended.
+  description: Populate the metadata associated with this content, like the page title and description.
+  
+
+
