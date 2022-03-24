@@ -1,19 +1,70 @@
 [
   {
     "type": "D",
+    "event_type": "event",
+    "title": "NFT Gallery at Consensus 2022",
+    "date": "2022-06-08T16:00:10Z",
+    "img": "",
+    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "FIL Austin",
+    "date": "2022-06-07T16:00:00Z",
+    "img": "",
+    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://fil.org/filaustin",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
     "event_type": "hackathon",
     "title": "Metaverse Hackathon",
     "date": "2022-04-19T16:00:45Z",
     "img": "/images/image_ldbpld.png",
-    "description": "Join us for the Web3 Hacker House @ SXSW! Participate in mini hackathons, meet with developers, check out panels, live workshops and more. Detailed schedule, speakers and more information coming soon!",
+    "description": "An 8-week hackathon focused on Metaverse! Build projects on IPFS to answer challenges and compete for the $50k prize pool.",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "A",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://kencloud.com/hack.html",
       "icon": "ticket"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "Decentralized Web Gateway @ Davos",
+    "date": "2022-05-21T16:00:39Z",
+    "img": "",
+    "description": "Filecoin Foundation, in partnership with CNBC and CoinDesk, will host its Decentralized Web Gateway event at the World Economic Forum in Davos, Switzerland, May 22-26. The gathering will be held in the prominent FEG Davos venue, across the street from the WEF gates, and will feature three full days of programming, receptions, and A-List celebrity events.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
     }
   },
   {
