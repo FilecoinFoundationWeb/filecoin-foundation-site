@@ -8,11 +8,11 @@
     "description": "Join us for the Web3 Hacker House @ SXSW! Participate in mini hackathons, meet with developers, check out panels, live workshops and more. Detailed schedule, speakers and more information coming soon!",
     "cta": {
       "target": "_blank",
-      "text": "Register",
+      "text": "Learn More",
       "type": "A",
       "action": "link",
       "theme": "light",
-      "url": "https://www.eventbrite.com/e/web3-hacker-house-sxsw-day-1-tickets-276203972517?utm_campaign=post_publish&utm_medium=email&utm_source=eventbrite&utm_content=shortLinkNewEmail",
+      "url": "https://kencloud.com/hack.html",
       "icon": "ticket"
     }
   },
