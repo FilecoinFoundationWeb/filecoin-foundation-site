@@ -1,6 +1,23 @@
 [
   {
     "type": "D",
+    "event_type": "hackathon",
+    "title": "Metaverse Hackathon",
+    "date": "2022-04-19T16:00:45Z",
+    "img": "",
+    "description": "Join us for the Web3 Hacker House @ SXSW! Participate in mini hackathons, meet with developers, check out panels, live workshops and more. Detailed schedule, speakers and more information coming soon!",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "A",
+      "action": "link",
+      "theme": "light",
+      "url": "https://www.eventbrite.com/e/web3-hacker-house-sxsw-day-1-tickets-276203972517?utm_campaign=post_publish&utm_medium=email&utm_source=eventbrite&utm_content=shortLinkNewEmail",
+      "icon": "ticket"
+    }
+  },
+  {
+    "type": "D",
     "event_type": "event",
     "date": "October 20, 2021",
     "title": "Filecoin Orbit Lounge at DC Fintech Week",
