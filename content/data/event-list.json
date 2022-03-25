@@ -4,7 +4,7 @@
     "event_type": "event",
     "title": "Decentralized Web Gateway @ Davos",
     "date": "2022-05-21T16:00:39Z",
-    "img": "",
+    "img": "/images/dweb-gateway-davos.png",
     "description": "Filecoin Foundation, in partnership with CNBC and CoinDesk, will host its Decentralized Web Gateway event at the World Economic Forum in Davos, Switzerland, May 22-26. The gathering will be held in the prominent FEG Davos venue, across the street from the WEF gates, and will feature three full days of programming, receptions, and A-List celebrity events.",
     "cta": {
       "target": "_blank",
@@ -38,7 +38,7 @@
     "event_type": "event",
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
-    "img": "",
+    "img": "/images/fil-austin.png",
     "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
     "cta": {
       "target": "_blank",
@@ -55,7 +55,7 @@
     "event_type": "event",
     "title": "NFT Gallery at Consensus 2022",
     "date": "2022-06-08T16:00:10Z",
-    "img": "",
+    "img": "/images/nft-gallery-at-consensus.png",
     "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
     "cta": {
       "target": "_blank",
