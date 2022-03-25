@@ -2,18 +2,18 @@
   {
     "type": "D",
     "event_type": "event",
-    "title": "NFT Gallery at Consensus 2022",
-    "date": "2022-06-08T16:00:10Z",
-    "img": "/images/nft-gallery-at-consensus.png",
-    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "title": "EthDenver",
+    "date": "2022-02-11T06:57:49Z",
+    "img": "/images/gridfiti_blog_notioncovers_sizeguide.png",
+    "description": "",
     "cta": {
       "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://m.fil.org/filecoin-at-ethdenver",
+      "icon": "info"
     }
   },
   {
@@ -31,6 +31,23 @@
       "theme": "light",
       "url": "https://fil.org/filaustin",
       "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "NFT Gallery at Consensus 2022",
+    "date": "2022-06-08T16:00:10Z",
+    "img": "/images/nft-gallery-at-consensus.png",
+    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
     }
   },
   {
