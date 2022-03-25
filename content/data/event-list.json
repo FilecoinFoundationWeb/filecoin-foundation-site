@@ -2,6 +2,40 @@
   {
     "type": "D",
     "event_type": "event",
+    "title": "NFT Gallery at Consensus 2022",
+    "date": "2022-06-08T16:00:10Z",
+    "img": "/images/nft-gallery-at-consensus.png",
+    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "FIL Austin",
+    "date": "2022-06-07T16:00:00Z",
+    "img": "/images/fil-austin.png",
+    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://fil.org/filaustin",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "title": "Decentralized Web Gateway @ SXSW",
     "date": "2022-03-15T07:23:50Z",
     "img": "/images/dweb-gateway-sxsw.png",
@@ -65,40 +99,6 @@
       "theme": "light",
       "url": "https://m.fil.org/filecoin-at-ethdenver",
       "icon": "info"
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "title": "FIL Austin",
-    "date": "2022-06-07T16:00:00Z",
-    "img": "/images/fil-austin.png",
-    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
-    "cta": {
-      "target": "_blank",
-      "text": "Learn More",
-      "type": "B",
-      "action": "link",
-      "theme": "light",
-      "url": "https://fil.org/filaustin",
-      "icon": "info"
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "title": "NFT Gallery at Consensus 2022",
-    "date": "2022-06-08T16:00:10Z",
-    "img": "/images/nft-gallery-at-consensus.png",
-    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
-    "cta": {
-      "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
     }
   },
   {
