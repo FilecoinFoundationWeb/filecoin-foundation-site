@@ -1,6 +1,23 @@
 [
   {
     "type": "D",
+    "event_type": "hackathon",
+    "title": "Web3 Hacker House at SXSW",
+    "date": "",
+    "img": "/images/https___cdn-evbuc-com_images_239998219_264947572824_1_original.jpg",
+    "description": "Join us for the Web3 Hacker House @ SXSW! Participate in mini hackathons, meet with developers, check out panels, live workshops and more. Detailed schedule, speakers and more information coming soon!",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
     "event_type": "event",
     "title": "Ethereal 2022",
     "date": "2022-02-26T16:00:00Z",
