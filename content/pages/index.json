@@ -7,7 +7,8 @@
           "layout": "large",
           "cols": {
             "num": "col-7_sm-9_mi-11",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "Let’s build the internet of everyone",
           "subheading": "The Filecoin Foundation is the steward of the Filecoin community. We aspire to put the power of humanity’s most important information back into the hands of everyone.",
@@ -16,9 +17,13 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Get Involved",
-              "url": "/get-involved"
+              "url": "/get-involved",
+              "theme": "",
+              "icon": ""
             }
-          ]
+          ],
+          "label": "",
+          "description": ""
         }
       },
       "intro_1": {
@@ -27,16 +32,23 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-6_mi-8",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "heading": "What we do",
-          "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web."
+          "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-2_sm-3_mi-5",
-            "push_left": "off-3_sm-4_mi-3"
+            "push_left": "off-3_sm-4_mi-3",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -57,11 +69,16 @@
                     "radius": 10
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "medium": null,
+                  "mini": null
+                }
               }
             }
           },
-          "src": "/images/page-index/foundation-logo-circle.svg"
+          "src": "/images/page-index/foundation-logo-circle.svg",
+          "label": ""
         },
         "grid": [
           "middle"
@@ -73,7 +90,8 @@
           "tint": true,
           "cols": {
             "num": "col-6_sm-10_mi-11",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "preview_image": "/images/page-index/intro-2-video-preview.png",
           "url": "https://youtu.be/Sakannch1Dw"
@@ -83,7 +101,8 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10_mi-9",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "heading": "Learn more about the Foundation, including its history, its mandate, and its mission.",
           "description": "",
@@ -96,7 +115,9 @@
               "text": "Watch video",
               "url": "https://youtu.be/Sakannch1Dw"
             }
-          ]
+          ],
+          "label": "",
+          "subheading": ""
         }
       },
       "banner_1": {
@@ -105,7 +126,8 @@
           "layout": "compact",
           "cols": {
             "num": "col-7_mi-9",
-            "push_left": "off-4_mi-3"
+            "push_left": "off-4_mi-3",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -126,11 +148,21 @@
                     "radius": 10
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "medium": null,
+                  "mini": null
+                }
               }
             }
           },
-          "description": "The Foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive."
+          "description": "The Foundation provides resources, guidance, and fair, equitable principles to help the ecosystem flourish, and to open up the internet for a safer, stronger, and more reliable environment where everyone, not just a few giants, can thrive.",
+          "label": "",
+          "heading": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "explore_1": {
@@ -139,17 +171,23 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10_mi-9",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "label": "Resources",
           "heading": "Explore the Filecoin Project Ecosystem and Tooling",
-          "description": "Decentralized networks aren’t bound by geography. The brightest minds around the world are working together to advance the next generation of the internet."
+          "description": "Decentralized networks aren’t bound by geography. The brightest minds around the world are working together to advance the next generation of the internet.",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6_sm-8_ti-9",
-            "push_left": "off-2_sm-4_mi-2_ti-2"
+            "push_left": "off-2_sm-4_mi-2_ti-2",
+            "push_right": ""
           },
           "cards": [
             {
@@ -160,7 +198,18 @@
               "img": "/images/outline-file.png",
               "title": "Filecoin's Documentation",
               "description": "Filecoin project documentation homepage offers the tools to contribute to the network.",
-              "url": "//docs.filecoin.io"
+              "url": "//docs.filecoin.io",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -170,7 +219,18 @@
               "img": "/images/outline-github.png",
               "title": "Filecoin GitHub",
               "description": "Contribute to Filecoin and help improve it by engaging in the Filecoin GitHub repository.",
-              "url": "//github.com/filecoin-project"
+              "url": "//github.com/filecoin-project",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -180,7 +240,18 @@
               "img": "/images/outline-calendar.png",
               "title": "Filecoin 2020 Mainnet Ignition & Liftoff",
               "description": "This covers the timeline of the Filecoin Mainnet Ignition & Liftoff.",
-              "url": "//liftoff.filecoin.io"
+              "url": "//liftoff.filecoin.io",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -190,7 +261,18 @@
               "img": "/images/outline-filecoin-blue-logo.png",
               "title": "Filecoin Network Status",
               "description": "This dashboard provides the latest update of the Filecoin Network.",
-              "url": "//status.filecoin.io"
+              "url": "//status.filecoin.io",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -200,7 +282,18 @@
               "img": "/images/outline-multi-circle.png",
               "title": "Filecoin 2021 Orbit",
               "description": "Mark the one-year anniversary since Filecoin Mainnet launch with ecosystem events and celebrations around the world.",
-              "url": "//orbit.filecoin.io"
+              "url": "//orbit.filecoin.io",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -210,7 +303,18 @@
               "img": "/images/outline-speech-bubble.png",
               "title": "Filecoin Forums",
               "description": "A public forum for the Filecoin protocol, implementation, community, and more.",
-              "url": "//github.com/filecoin-project/community/discussions"
+              "url": "//github.com/filecoin-project/community/discussions",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -220,7 +324,18 @@
               "img": "/images/outline-beaker.png",
               "title": "Filecoin Research",
               "description": "Breakthroughs underpinning the Filecoin protocol, as well as future areas of exploration.",
-              "url": "//research.filecoin.io"
+              "url": "//research.filecoin.io",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -230,7 +345,18 @@
               "img": "/images/outline-moneybag.png",
               "title": "Cryptoeconomics Overview",
               "description": "This report describes the components of the Filecoin economy and how they interact.",
-              "url": "//filecoin.io/2020-engineering-filecoins-economy-en.pdf"
+              "url": "//filecoin.io/2020-engineering-filecoins-economy-en.pdf",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -240,7 +366,18 @@
               "img": "/images/outline-graduation-cap.png",
               "title": "Filecoin Tutorials (ProtoSchool)",
               "description": "This is a self-guided interactive Filecoin tutorial designed to introduce decentralized web concepts, protocols, and tools.",
-              "url": "//proto.school"
+              "url": "//proto.school",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -250,7 +387,18 @@
               "img": "/images/outline-pencil.png",
               "title": "Filecoin Blog",
               "description": "The latest news and updates from the Foundation and our ecosystem collaborators.",
-              "url": "//filecoinfoundation.medium.com"
+              "url": "//filecoinfoundation.medium.com",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         },
@@ -264,7 +412,8 @@
           "tint": true,
           "cols": {
             "num": "col-10_mi-11",
-            "push_left": "off-2_mi-1"
+            "push_left": "off-2_mi-1",
+            "push_right": ""
           },
           "preview_image": "/images/filecoin-banner.svg",
           "url": "https://youtu.be/6OY4xAs3Grg",
@@ -282,16 +431,19 @@
           "type": "image_block",
           "cols": {
             "num": "col-4_sm-6_mi-7_ti-10",
-            "push_left": "off-2_sm-1"
+            "push_left": "off-2_sm-1",
+            "push_right": ""
           },
-          "src": "/images/grants-hands-multistroke.svg"
+          "src": "/images/grants-hands-multistroke.svg",
+          "label": ""
         },
         "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
             "num": "col-5_sm-10_ti-11",
-            "push_left": "off-1"
+            "push_left": "off-1",
+            "push_right": ""
           },
           "label": "Dev Grants",
           "heading": "We fund talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web.",
@@ -301,9 +453,12 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/grants"
+              "url": "/grants",
+              "theme": "",
+              "icon": ""
             }
-          ]
+          ],
+          "subheading": ""
         },
         "grid": [
           "middle",
@@ -318,7 +473,8 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10",
-            "push_left": "off-1_sm-2_mi-1"
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
           },
           "label": "Get Involved",
           "heading": "Learn how to get involved in the Filecoin community",
@@ -328,15 +484,19 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/get-involved/#section-1"
+              "url": "/get-involved/#section-1",
+              "theme": "",
+              "icon": ""
             }
-          ]
+          ],
+          "subheading": ""
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6_sm-10",
-            "push_left": "off-2"
+            "push_left": "off-2",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -357,7 +517,11 @@
                     "radius": 10
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "medium": null,
+                  "mini": null
+                }
               }
             }
           },
@@ -369,7 +533,19 @@
               "url": "/events",
               "img": "/images/calendar.png",
               "title": "Attend an event",
-              "description": "Check out past and upcoming events"
+              "description": "Check out past and upcoming events",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -378,7 +554,19 @@
               "url": "//www.meetup.com/Filecoin-San-Francisco",
               "img": "/images/multi-person.png",
               "title": "Join a meetup group",
-              "description": "Find a group of people in your area who connect regularly"
+              "description": "Find a group of people in your area who connect regularly",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -387,7 +575,19 @@
               "url": "//docs.filecoin.io/community/contribute/ways-to-contribute",
               "img": "/images/speech-bubble.png",
               "title": "Contribute to the Filecoin project",
-              "description": "Shape the future by contributing to Filecoin’s code, research, or docs"
+              "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -396,7 +596,19 @@
               "url": "//filecoin.io/slack",
               "img": "/images/hands-raised.png",
               "title": "Participate online",
-              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel"
+              "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -405,7 +617,19 @@
               "url": "//docs.filecoin.io/build",
               "img": "/images/tool.png",
               "title": "Become a storage provider or builder",
-              "description": "Dive right in and become an essential part of the ecosystem"
+              "description": "Dive right in and become an essential part of the ecosystem",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -414,7 +638,19 @@
               "url": "//proto.school",
               "img": "/images/magnifying-glass.png",
               "title": "Learn more on ProtoSchool",
-              "description": "Understand how it all works with interactive tutorials from ProtoSchool"
+              "description": "Understand how it all works with interactive tutorials from ProtoSchool",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         },

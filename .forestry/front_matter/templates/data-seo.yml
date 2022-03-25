@@ -19,7 +19,5 @@ fields:
     label: Description
     description: Description for this web page
   label: SEO
-  description: Populate the metadata associated with this content, like the page title and description.
-  
-
-
+  description: Populate the metadata associated with this content, like the page title
+    and description.
