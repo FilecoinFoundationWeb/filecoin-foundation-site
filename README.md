@@ -40,7 +40,7 @@ Website for the Filecoin Foundation
       {
         "name": "BackgroundLayers",
         "props": {
-          "layers-array": [8, 6, 5, 4, 2, 1],
+          "layers-array": "8_6_5_4_2_1",
           "offset": 1.375,
           "reverse": true
         }
