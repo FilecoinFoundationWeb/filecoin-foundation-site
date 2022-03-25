@@ -1,6 +1,23 @@
 [
   {
     "type": "D",
+    "event_type": "event",
+    "title": "Decentralized Web Gateway @ SXSW",
+    "date": "2022-03-15T07:23:50Z",
+    "img": "/images/dweb-gateway-sxsw.png",
+    "description": "Join us at SXSW for the Decentralized Web Gateway, powered by Filecoin Foundation, to learn more about the benefits of decentralization and how these decentralized tools can protect civil liberties and preserve humanity’s most important information. ",
+    "cta": {
+      "target": "_blank",
+      "text": "Watch Recording",
+      "type": "B",
+      "action": "video",
+      "theme": "light",
+      "url": "https://www.youtube.com/watch?v=EHTFVtWDqJc&list=PLp3zrT1ewY0mvhUc7bvG2tsqHXYCukS9y",
+      "icon": "play"
+    }
+  },
+  {
+    "type": "D",
     "event_type": "hackathon",
     "title": "Web3 Hacker House at SXSW",
     "date": "",
