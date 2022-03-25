@@ -37,9 +37,19 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6_5_4_3",
-                "offset": {
-                  "medium": 0.75,
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
                 },
                 "reverse": true
               }
@@ -171,9 +181,9 @@
           ]
         },
         "right": {
-          "type": "slider_block",
+          "type": "section_slider_block",
           "cols": {
-            "num": "col-6_sm-7_ti-9",
+            "num": "col-6_sm-7_mi-10_ti-9",
             "push_left": "off-2_sm-3_mi-2"
           },
           "customizations": {
@@ -181,67 +191,119 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "8_6",
-                "offset": {
-                  "mini": 0.25
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 12.75
+                  }
                 },
                 "reverse": true
               }
             }
           },
+          "rows": 3,
+          "display": {
+            "mini": 1,
+            "default": 2
+          },
           "cards": [
             {
               "type": "A",
               "action": "a",
-              "url": "",
-              "img": "/icons/pencil.png",
-              "img_size": "regular",
-              "title": "Filecoin Notary Portal",
-              "description": "The official client and notary portal, hosted by the Filecoin website"
+              "target": "_blank",
+              "url": "//docs.filecoin.io",
+              "img": "/icons/outline-file.png",
+              "img_size": "mini",
+              "title": "Filecoin's Documentation",
+              "description": "Filecoin project documentation homepage offers the tools to contribute to the network."
             },
             {
               "type": "A",
               "action": "a",
-              "url": "https://github.com/filecoin-project",
-              "img": "/icons/plus.png",
-              "img_size": "regular",
-              "title": "Filecoin Plus GitHub",
-              "description": "The hub for client applications for DataCap at a large scale"
+              "target": "_blank",
+              "url": "//github.com/filecoin-project",
+              "img": "/icons/outline-github.png",
+              "img_size": "mini",
+              "title": "Filecoin GitHub",
+              "description": "Contribute to Filecoin and help improve it by engaging in the Filecoin GitHub repository."
             },
             {
               "type": "A",
               "action": "a",
-              "url": "",
-              "img": "/icons/upstairs.png",
-              "img_size": "regular",
-              "title": "Client Onboarding Repo",
-              "description": "Putting the power in the hands of clients and incentivizing storage providers"
+              "target": "_blank",
+              "url": "//liftoff.filecoin.io",
+              "img": "/icons/outline-calendar.png",
+              "img_size": "mini",
+              "title": "Filecoin 2020 Mainnet Ignition & Liftoff",
+              "description": "This covers the timeline of the Filecoin Mainnet Ignition & Liftoff."
             },
             {
               "type": "A",
               "action": "a",
-              "url": "https://github.com/filecoin-project/notary-governance/",
-              "img": "/icons/stamp.png",
-              "img_size": "regular",
-              "title": "Notary Governance Repo",
-              "description": "Join the Filecoin notary conversation on GitHub"
+              "target": "_blank",
+              "url": "//status.filecoin.io",
+              "img": "/icons/outline-filecoin-blue-logo.png",
+              "img_size": "mini",
+              "title": "Filecoin Network Status",
+              "description": "This dashboard provides the latest update of the Filecoin Network."
             },
             {
               "type": "A",
               "action": "a",
-              "url": "",
-              "img": "/icons/key.png",
-              "img_size": "regular",
-              "title": "Root Key Holder Governance",
-              "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions"
+              "target": "_blank",
+              "url": "//orbit.filecoin.io",
+              "img": "/icons/outline-multi-circle.png",
+              "img_size": "mini",
+              "title": "Filecoin 2021 Orbit",
+              "description": "Mark the one-year anniversary since Filecoin Mainnet launch with ecosystem events and celebrations around the world."
             },
             {
               "type": "A",
               "action": "a",
-              "url": "https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
-              "img": "/icons/calendar.png",
-              "img_size": "regular",
-              "title": "Community Calendar",
-              "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
+              "target": "_blank",
+              "url": "//github.com/filecoin-project/community/discussions",
+              "img": "/icons/outline-speech-bubble.png",
+              "img_size": "mini",
+              "title": "Filecoin Forums",
+              "description": "A public forum for the Filecoin protocol, implementation, community, and more."
+            },
+            {
+              "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//research.filecoin.io",
+              "img": "/icons/outline-beaker.png",
+              "img_size": "mini",
+              "title": "Filecoin Research",
+              "description": "Breakthroughs underpinning the Filecoin protocol, as well as future areas of exploration."
+            },
+            {
+              "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//filecoin.io/2020-engineering-filecoins-economy-en.pdf",
+              "img": "/icons/outline-moneybag.png",
+              "img_size": "mini",
+              "title": "Cryptoeconomics Overview",
+              "description": "This report describes the components of the Filecoin economy and how they interact."
+            },
+            {
+              "type": "A",
+              "action": "a",
+              "target": "_blank",
+              "url": "//proto.school",
+              "img": "/icons/outline-graduation-cap.png",
+              "img_size": "mini",
+              "title": "Filecoin Tutorials (ProtoSchool)",
+              "description": "This is a self-guided interactive Filecoin tutorial designed to introduce decentralized web concepts, protocols, and tools."
             }
           ]
         },

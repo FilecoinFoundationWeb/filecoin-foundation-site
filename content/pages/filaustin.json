@@ -1,0 +1,368 @@
+{
+  "page_content": {
+    "section_1": {
+      "mobile_hero_image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_mi-11",
+            "push_left": "off-3_mi-1"
+          },
+          "src": "/images/page-filaustin/person-standing-in-front-of-shipping-container-1.jpg"
+        }
+      },
+      "hero": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-10",
+            "push_left": "off-3_md-2_sm-1_mi-1"
+          },
+          "label": "Save the date",
+          "heading": "FIL Austin",
+          "description": "Join us in Austin for an in-person summit for the Filecoin community.",
+          "ctas": [
+            {
+              "type": "B",
+              "action": "scroll-to",
+              "icon": "ticket",
+              "text": "Sign up for updates",
+              "id": "subscribe_form"
+            }
+          ]
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_md-5 mi-hidden",
+            "push_left": "off-1_sm-1"
+          },
+          "src": "/images/page-filaustin/person-standing-in-front-of-shipping-container-1.jpg"
+        }
+      },
+      "hero_text": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-6_sm-7_mi-11",
+            "push_left": "off-6_sm-4_mi-1"
+          },
+          "description": "<strong>Wednesday, June 8, 2022</strong><br />Coppertank Events Center<br />Austin, TX"
+        }
+      }
+    },
+    "section_2": {
+      "section_2-heading": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3 mi-hidden",
+            "push_left": "off-1"
+          },
+          "customizations": {
+            "floating_menu": {
+              "name": "FloatingMenu",
+              "props": {
+                "id": "filaustin-floating-menu",
+                "cutoff": "section_6",
+                "offsetbottom": 0,
+                "entries": [
+                  {
+                    "heading": "What is FIL Austin?",
+                    "id": "section_2"
+                  },
+                  {
+                    "heading": "Where is the event?",
+                    "id": "section_3"
+                  },
+                  {
+                    "heading": "Save the Date",
+                    "id": "section_3-panel-3"
+                  },
+                  {
+                    "heading": "Tracks & Speakers",
+                    "id": "section_3-panel-2"
+                  },
+                  {
+                    "heading": "Sign Up for Updates",
+                    "id": "subscribe_form"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-6_mi-9",
+            "push_left": "off-2_mi-3"
+          },
+          "heading": "Join us in Austin"
+        }
+      },
+      "section_2-info": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-12",
+            "push_left": "off-4_mi-0"
+          },
+          "src": "/images/multi-person.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "data_id": "section_3-a",
+          "subheading": "What is FIL Austin?",
+          "description": "Filecoin Foundation’s inaugural in-person summit to bring together the Filecoin community. This one day, two track event will convene IRL builders, developers and partners from across the ecosystem for workshops, panels and tutorials devoted to building and expanding <a href='https://filecoin.io/' target='_blank'>the Filecoin network</a>."
+        }
+      },
+      "section_2-banner-image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-8_mi-11",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/page-filaustin/crowd-of-people-at-a-conference.jpg"
+        }
+      }
+    },
+    "section_3": {
+      "section_3-panel-1": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-6_mi-3"
+          },
+          "data_id": "section_5-a",
+          "subheading": "Where is FIL Austin taking place?",
+          "description": "<a href='https://www.google.com/maps/place/Coppertank+Events+Center/@30.2663959,-97.7399122,15z/data=!4m2!3m1!1s0x0:0x8820128136714392?sa=X&ved=2ahUKEwjU57PmjvH1AhUgkokEHTBUCjoQ_BJ6BAg7EAU' target='_blank'>504 Trinity St, Austin, TX 78701, United States</a><br /><br />FIL Austin will be hosted in the heart of the city the day before CoinDesk’s Consensus – the crypto industry’s annual “big tent” event."
+        }
+      },
+      "section_3-panel-2": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-7",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/icons/ticket-stub.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "subheading": "Tracks & Speakers",
+          "description": "Coming soon."
+        }
+      },
+      "section_3-banner-image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-8_mi-11",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/page-filaustin/person-speaking-into-microphone.jpg"
+        }
+      },
+      "section_3-panel-3": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-7",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/icons/calendar.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "subheading": "Save the Date",
+          "description": "Add FIL Austin to your calendar and don’t miss out on updates as we share more details about this event."
+        }
+      }
+    },
+    "section_4": {
+      "subscribe_form": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "theme": "light",
+          "cols": {
+            "num": "col-8_mi-11_ti-9",
+            "push_left": "off-4_mi-1_ti-3"
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "1_2_3_4_5_6",
+                "breakpoints": {
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 5
+                  }
+                },
+                "shadow-strength": "small",
+                "border-radius-direction": "reverse"
+              }
+            },
+            "form": {
+              "name": "FilAustinForm"
+            }
+          },
+          "subheading": "Enter your email for updates",
+          "description": "Subscribe to our email list or join the <a href='https://t.me/filaustin' target='_blank'>FIL Austin Telegram</a> group for updates. We hope you will join us!"
+        }
+      }
+    },
+    "section_5": {
+      "section_5-title-social": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-4_mi-8",
+            "push_left": "off-6_mi-1"
+          },
+          "customizations": {
+            "social_icons": {
+              "name": "SocialIcons"
+            }
+          },
+          "heading": "Get Involved"
+        }
+      },
+      "section_5-info": {
+        "left": {
+          "type": "image_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-3_mi-7",
+            "push_left": "off-4_mi-1"
+          },
+          "src": "/images/hands-raised.png"
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-4_mi-9",
+            "push_left": "off-1_mi-3"
+          },
+          "subheading": "Community governance calls happen every other Tuesday.",
+          "description": "Visit the <a href='https://calendar.google.com/calendar/u/1/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Filecoin community calendar</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>",
+          "ctas": [
+            {
+              "type": "A",
+              "action": "nuxt-link",
+              "theme": "dark",
+              "text": "Get Involved",
+              "url": "/get-involved"
+            }
+          ]
+        }
+      },
+      "section_5-banner-image": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-8_mi-11",
+            "push_left": "off-4_md-2_mi-1"
+          },
+          "src": "/images/page-filaustin/person-standing-in-front-of-shipping-container-2.jpg"
+        }
+      }
+    },
+    "section_6": {
+      "events-hackathons": {
+        "type": "custom",
+        "component": "EventsHackathons",
+        "props": {
+          "intro": {
+            "cols": {
+              "num": "col-4_mi-6",
+              "push_left": "off-6_mi-1"
+            },
+            "heading": "Events & Hackathons"
+          },
+          "events": {
+            "cols": {
+              "num": "col-8_mi-12",
+              "push_left": "off-4_mi-0"
+            },
+            "cards": [
+              {
+                "type": "D",
+                "date": "2021-10-20T21:30:24Z",
+                "title": "Filecoin Orbit Lounge at D.C. Fintech Week",
+                "img": "/images/events/orbit-event-banner-2021.png",
+                "img_type": "background_image",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "text": "More info",
+                  "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407"
+                }
+              },
+              {
+                "type": "D",
+                "date": "2021-10-26T21:31:34Z",
+                "title": "Filecoin Plus Community Governance Call",
+                "img": "",
+                "img_type": "background_image",
+                "cta": {
+                  "type": "B",
+                  "action": "a",
+                  "target": "_blank",
+                  "icon": "info",
+                  "url": "https://calendar.google.com/calendar/u/0/r?cid=Y19rMWdrZm9vbTE3ZzBqOGM2YmFtNnVmNDNqMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+                  "text": "More info"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "FIL Austin - Filecoin Foundation",
+    "description": "Join us in Austin for an in-person summit for the Filecoin community."
+  },
+  "og": {
+    "site_name": "FIL Austin - Filecoin Foundation",
+    "url": "https://fil.org/filaustin",
+    "type": "website",
+    "image": "/images/open-graph.png"
+  }
+}

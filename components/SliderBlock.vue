@@ -54,9 +54,11 @@ export default {
     margin-bottom: 2rem;
   }
   &:nth-child(odd) {
-    margin-right: 3rem;
-    @include mini {
-      margin-right: 0;
+    &:not(.type__B) {
+      margin-right: 3rem;
+      @include mini {
+        margin-right: 0;
+      }
     }
   }
 }

@@ -248,10 +248,16 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "4_5_6",
-                "offset": {
-                  "mini": 0.25
-                },
-                "border-radius": 6.375
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 10.375
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 7.25
+                  }
+                }
               }
             }
           },

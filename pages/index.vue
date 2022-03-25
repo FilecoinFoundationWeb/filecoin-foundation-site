@@ -14,7 +14,7 @@
       <BackgroundLayers
         id="page-index-background-layers"
         layers-array="2_3_4_5_6"
-        :offset="pageBackgroundLayersOffset" />
+        :breakpoints="pageLayersBreakpointData" />
 
     </div>
 
@@ -46,9 +46,19 @@ export default {
   data () {
     return {
       tag: 'index',
-      pageBackgroundLayersOffset: {
-        medium: 1,
-        mini: 0.25
+      pageLayersBreakpointData: {
+        default: {
+          stroke: 1.375,
+          radius: 12.75
+        },
+        medium: {
+          stroke: 1,
+          radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
       }
     }
   },
@@ -125,19 +135,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: 100%;
     background-color: $polar;
-    border-radius: 13rem 0 0 5rem;
+    border-radius: 11.375rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 12rem;
+      border-top-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-top-left-radius: 5rem;
+      border-top-left-radius: 4.75rem;
     }
   }
 }
@@ -159,19 +166,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     width: calc(100% + 3.5rem);
     height: calc(100% + 4rem);
     background-color: $polar;
-    border-radius: 5rem 0 0 13rem;
+    border-radius: 5rem 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
     @include medium {
       left: $backgroundLayers__Left__Medium;
-      border-bottom-left-radius: 12rem;
+      border-bottom-left-radius: 11.75rem;
     }
     @include mini {
       left: $backgroundLayers__Left__Mini;
-      border-bottom-left-radius: 10.75rem;
-    }
-    @include tiny {
-      border-bottom-left-radius: 5rem;
+      border-bottom-left-radius: 4.75rem;
     }
   }
 }
@@ -188,12 +192,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     left: $backgroundLayers__Left__Mini;
-  }
-  @include tiny {
-    .layer {
-      border-top-left-radius: 5rem !important;
-      border-bottom-left-radius: 5rem !important;
-    }
   }
 }
 
@@ -404,6 +402,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include small {
       top: -2rem;
       left: 0.5rem;
+      height: calc(100% + 4rem);
     }
     @include mini {
       left: -2rem;

@@ -161,14 +161,14 @@ export default {
   }
   .image {
     width: 50vw;
-    border-radius: 25vw 3rem 3rem 25vw;
+    max-width: 858px;
+    border-radius: 11.375rem 0rem 0rem 11.375rem;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
     @include small {
       width: 100vw;
-      border-radius: 40vw 3rem 3rem 40vw;
     }
     @include mini {
-      border-radius: 50vw 3rem 3rem 50vw;
+      border-radius: 4.25rem 0rem 0rem 4.25rem;
     }
   }
   [class~="grid"], [class*="grid-"], [class*="grid_"] {
@@ -342,6 +342,11 @@ export default {
   }
   @include mini {
     padding-top: 3rem;
+  }
+  .background-layers {
+    @include mini {
+      left: -3rem;
+    }
   }
 }
 

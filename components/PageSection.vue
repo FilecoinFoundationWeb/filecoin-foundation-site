@@ -56,6 +56,7 @@ import TextBlock from '@/components/TextBlock'
 import ImageBlock from '@/components/ImageBlock'
 import VideoBlock from '@/components/VideoBlock'
 import SliderBlock from '@/components/SliderBlock'
+import SectionSlider from '@/components/SectionSlider'
 import PaginatedCards from '@/components/PaginatedCards'
 import CardListBlock from '@/components/CardListBlock'
 import FloatingMenu from '@/components/FloatingMenu'
@@ -64,6 +65,7 @@ import DiveDeeper from '@/components/DiveDeeper'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
+import FilAustinForm from '@/components/FilAustinForm'
 
 // ====================================================================== Export
 export default {
@@ -74,6 +76,7 @@ export default {
     ImageBlock,
     VideoBlock,
     SliderBlock,
+    SectionSlider,
     PaginatedCards,
     CardListBlock,
     FloatingMenu,
@@ -81,7 +84,8 @@ export default {
     DiveDeeper,
     EventsHackathons,
     TabbedSlider,
-    BackgroundLayers
+    BackgroundLayers,
+    FilAustinForm
   },
 
   props: {
@@ -122,6 +126,7 @@ export default {
         case 'image_block' : name = 'ImageBlock'; break
         case 'video_block' : name = 'VideoBlock'; break
         case 'slider_block' : name = 'SliderBlock'; break
+        case 'section_slider_block' : name = 'SectionSlider'; break
         case 'paginated_cards' : name = 'PaginatedCards'; break
         case 'card_list_block' : name = 'CardListBlock'; break
         case 'custom' : name = block.component; break

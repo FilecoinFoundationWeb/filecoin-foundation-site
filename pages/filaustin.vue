@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-governance">
+  <div class="page page-filaustin">
 
     <div class="main-content">
 
@@ -10,12 +10,12 @@
         :section="section" />
 
       <BackgroundLayers
-        id="page-governance-body-layer"
+        id="page-filaustin-body-layer"
         layers-array="2"
-        :breakpoints="{ mini: { stroke: 0.25, radius: 5 } }" />
+        :breakpoints="{ mini: { stroke: 0.25, radius: 12.75 } }" />
 
       <BackgroundLayers
-        id="page-governance-background-layers"
+        id="page-filaustin-background-layers"
         layers-array="6_5_4_3"
         :reverse="true"
         :breakpoints="pageLayersBreakpointData" />
@@ -30,14 +30,14 @@
 import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
-import GovernancePageData from '@/content/pages/governance.json'
+import FilAustinPageData from '@/content/pages/filaustin.json'
 
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PageGovernance',
+  name: 'PageFilAuston',
 
   components: {
     PageSection,
@@ -46,7 +46,7 @@ export default {
 
   data () {
     return {
-      tag: 'governance',
+      tag: 'filaustin',
       scroll: false,
       resize: false,
       pageLayersBreakpointData: {
@@ -64,7 +64,7 @@ export default {
 
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
-    await store.dispatch('global/getBaseData', { key: 'governance', data: GovernancePageData })
+    await store.dispatch('global/getBaseData', { key: 'filaustin', data: FilAustinPageData })
   },
 
   head () {
@@ -76,7 +76,7 @@ export default {
       siteContent: 'global/siteContent'
     }),
     sections () {
-      const content = CloneDeep(this.siteContent.governance.page_content)
+      const content = CloneDeep(this.siteContent.filaustin.page_content)
       return content
     }
   }
@@ -95,36 +95,32 @@ $backgroundFill__Left: calc(50% - (#{$containerWidth} / 2) + (4 * 1.75rem));
 $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 
 // ///////////////////////////////////////////////////////////////////// General
-
-.page-governance {
-  // padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
+.page-filaustin {
   color: $white;
 }
 
 .main-content {
   position: relative;
   top: -2.5 * $backgroundLayers__Offset;
+  padding-top: 2.5 * $backgroundLayers__Offset;
 }
 
 #section_1 {
-  margin-bottom: $backgroundLayers__Offset - $navigationHeight;
-}
-
-#section_2 {
   padding-top: 7rem; // 1.75rem * 4
   &:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -2.5 * $backgroundLayers__Offset;
     left: $backgroundFill__Left;
     width: calc(100% + 3.5rem);
-    height: calc(100% + 4.5rem);
+    height: calc(100% + 4.5rem + #{2.5 * $backgroundLayers__Offset});
     background-color: $blackPearl;
-    border-radius: 0 0 0 8.5rem;
+    border-radius: 0 0 0 11.375rem;
     filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
     z-index: -1;
   }
   @include small {
+    padding-top: 0;
     &:before {
       left: 1.25rem;
     }
@@ -136,15 +132,15 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-#section_3 {
+#section_2 {
   padding-top: 4.125rem;
 }
 
+#section_2,
 #section_3,
 #section_4,
 #section_5,
-#section_6,
-#section_7 {
+#section_6 {
   &:before {
     content: '';
     position: absolute;
@@ -162,18 +158,28 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     }
   }
 }
-#section_4,
-#section_5,
-#section_6 {
-  z-index: 1;
+
+#section_3 {
+  z-index: 2;
 }
 
-#section_7 {
+#section_4 {
+  padding: 10rem 0;
+  z-index: 1;
+  @include small {
+    padding: 7.5rem 0;
+  }
+  @include mini {
+    padding: 3rem 0;
+  }
+}
+
+#section_6 {
   &:before {
-    border-radius: 0 0 0 8.5rem;
     height: calc(100% + 4rem);
+    border-bottom-left-radius: 11.375rem;
     @include mini {
-      border-radius: 0 0 0 4.75rem;
+      border-bottom-left-radius: 4.75rem;
     }
   }
 }
@@ -185,13 +191,25 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 ::v-deep .subheading {
+  @include fontSize_ExtraLarge;
+  @include fontWeight_Medium;
   @include tiny {
     @include fontSize_Medium;
   }
 }
 
+::v-deep .description {
+  a {
+    @include fontWeight_Medium;
+    color: $azureRadiance;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-governance-body-layer {
+::v-deep #page-filaustin-body-layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -209,7 +227,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-#page-governance-background-layers {
+#page-filaustin-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
@@ -224,8 +242,8 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-// ----------------------------------------------------------------- [Section] 2
-::v-deep #mobile_image_banner {
+// ----------------------------------------------------------------- [Section] 1
+::v-deep #mobile_hero_image {
   display: none;
   @include mini {
     display: block;
@@ -270,23 +288,27 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 ::v-deep #hero_text {
-  padding: 0;
+  padding-top: 2rem;
+  padding-bottom: 0;
   margin-bottom: 4.25rem;
   text-align: right;
   @include mini {
     text-align: left;
     margin-bottom: 0;
   }
+  .description {
+    font-size: 2.25rem;
+    line-height: 2.8125rem;
+  }
 }
-// ----------------------------------------------------------------- [Section] 3
-
-::v-deep #governance-floating-menu {
+// ----------------------------------------------------------------- [Section] 2
+::v-deep #filaustin-floating-menu {
   .floating-content {
     left: -4rem;
     .heading {
-      @include fontSize_ExtraLarge;
+      @include fontSize_Larger;
       @include fontWeight_Medium;
-      @include leading_Regular;
+      @include leading_ExtraExtraLarge;
     }
     ul {
       padding-left: 0.75rem;
@@ -306,23 +328,20 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-::v-deep #panel-1-title {
+::v-deep #section_2-heading {
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
   @include mini {
     margin-bottom: 0.5rem;
   }
 }
 
-::v-deep #panel-1-info-top {
+::v-deep #section_2-info {
   padding: 0;
-  margin-bottom: 3.25rem;
   .image {
-    transform: rotateZ(6deg) translate(2rem, 4.375rem) scale(1.2);
     @include mini {
       margin-bottom: 1rem;
       width: 37%;
-      transform: rotateZ(6deg) translate(2rem, 0rem) scale(1.2);
     }
   }
   .subheading {
@@ -332,31 +351,12 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-::v-deep #panel-1-info-middle {
-  padding: 0;
-  margin-bottom: 3.25rem;
-  .subheading {
-    @include mini {
-      @include fontSize_Large;
-    }
+::v-deep #section_2-banner-image {
+  padding-top: 7.5rem;
+  padding-bottom: 0;
+  @include tiny {
+    padding-top: 3rem;
   }
-}
-
-::v-deep #panel-1-info-bottom {
-  padding: 0;
-  margin-bottom: 3.25rem;
-  @include mini {
-    margin-bottom: 1.25rem;
-  }
-  .subheading {
-    @include mini {
-      @include fontSize_Large;
-    }
-  }
-}
-
-::v-deep #panel-1-banner-image {
-  padding: 0;
   .image {
     width: 64vw;
     border-radius: 22vw 3rem 3rem 22vw;
@@ -371,124 +371,28 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-// ----------------------------------------------------------------- [Section] 4
-::v-deep #panel-2-title {
-  padding: 5.5rem 0 0 0;
-  margin-bottom: 1rem;
-  @include mini {
-    padding-top: 1.5rem;
-    margin-bottom: 0;
-  }
-}
-
-::v-deep #panel-2-info-top {
+// ----------------------------------------------------------------- [Section] 3
+::v-deep #section_3-panel-1 {
   padding: 0;
+  padding-top: 7.5rem;
+  @include tiny {
+    padding-top: 3rem;
+  }
   .image {
-    transform: scale(0.85) translateX(2rem);
-    @include small {
-      transform: scale(1) translateX(2rem);
-    }
     @include mini {
-      transform: unset;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      width: 37%;
+    }
+  }
+  .subheading {
+    @include mini {
+      @include fontSize_Large;
     }
   }
 }
 
-::v-deep #panel-2-main {
-  @include mini {
-    padding: 1.5rem 0;
-  }
-  .column-content {
-    padding: 5.75rem 0;
-    @include mini {
-      padding: 4rem 0;
-    }
-    &.left {
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -9rem;
-        width: 100vw;
-        height: 100%;
-        background-color: $blackPearl;
-        border-radius: 9rem 0 0 9rem;
-        filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-        z-index: 10;
-      }
-      @include small {
-        &:before {
-          left: -6rem;
-        }
-      }
-      @include mini {
-        &:before {
-          left: -3.125rem;
-          border-radius: 7rem 0 0 7rem;
-        }
-      }
-    }
-    .image-wrapper {
-      display: flex;
-      flex-direction: row;
-      margin: 4.5rem 0 2rem 0;
-      @include mini {
-        flex-direction: column;
-        margin: 2rem 0 0.5rem 0;
-      }
-      .image {
-        padding-right: 2rem;
-        width: 70%;
-        transform: translateX(-2rem);
-      }
-      .label {
-        padding-right: 1rem;
-        width: 50%;
-        @include fontSize_ExtraLarge;
-        @include fontWeight_Medium;
-        letter-spacing: $letterSpacing_Regular;
-        @include leading_Regular;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @include mini {
-          margin-top: 1rem;
-          width: 100%;
-          @include fontSize_Large;
-        }
-      }
-    }
-  }
-  .background-layers {
-    position: absolute;
-    top: 0;
-    left: -9rem;
-    width: 100vw;
-    height: 100%;
-    z-index: 5;
-    .shadow__6 {
-      filter: unset;
-    }
-    @include small {
-      left: -6rem;
-    }
-    @include mini {
-      left: -3.125rem;
-      width: 140vw;
-    }
-  }
-}
-
-// ----------------------------------------------------------------- [Section] 5
-::v-deep #panel-3-title {
-  padding: 3.75rem 0 0 0;
-  @include mini {
-    padding: 1rem 0 0 0;
-  }
-}
-
-::v-deep #panel-3-info-top {
+::v-deep #section_3-panel-2,
+::v-deep #section_3-panel-3 {
   padding: 3.75rem 0 0 0;
   @include mini {
     padding: 0;
@@ -500,51 +404,86 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
     }
   }
   .image {
-    transform: scale(1.3);
     @include mini {
-      transform: scale(1);
       margin: 0 0 1rem 0;
     }
   }
 }
 
-::v-deep #panel-3-info-middle {
-  padding: 3.75rem 0 0 0;
-  @include mini {
-    padding: 2rem 0 0 0;
-  }
-  .subheading {
-    @include fontSize_ExtraLarge;
-    letter-spacing: $letterSpacing_Large;
+::v-deep #section_3-panel-2, {
+  @include tiny {
+    padding-top: 3rem;
   }
 }
 
-::v-deep #panel-3-info-bottom {
-  padding: 3.75rem 0 0 0;
-  .card-list {
-    flex-direction: column;
+::v-deep #section_3-banner-image {
+  padding: 10rem 0;
+  @include mini {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
   }
-  .card {
-    margin: 0 0 4.5rem 0;
-    width: 100%;
-    .image {
-      width: 3.375rem;
+  .image {
+    width: 62vw;
+    border-radius: 20vw 3rem 3rem 20vw;
+    @include medium {
+      width: 80vw;
+      border-radius: 40vw 0 0 40vw;
     }
-    .title {
-      @include fontSize_ExtraLarge;
-      color: $white;
+    @include mini {
+      width: 140vw;
+      border-radius: 70vw 0 0 70vw;
+    }
+  }
+}
+
+::v-deep #section_3-panel-3 {
+  padding: 0;
+}
+
+// ----------------------------------------------------------------- [Section] 4
+::v-deep #subscribe_form {
+  padding-top: 7rem;
+  .text-block {
+    margin-bottom: 1rem;
+    .subheading {
+      margin-bottom: 0.5rem;
+      color: $kleinBlue;
     }
     .description {
-      @include fontSize_Large;
+      color: $blackPearl;
     }
   }
-  a {
-    color: $denim;
+  .column-content {
+    padding: 1rem 4rem;
+    @include mini {
+      padding: 2rem 4rem;
+    }
+    @include tiny {
+      padding-right: 0;
+    }
+  }
+  .background-layers {
+    @include tiny {
+      position: absolute;
+      top: 0;
+      left: -3rem;
+      width: 150vw;
+      height: 100%;
+      z-index: 0;
+    }
+    .layer {
+      &:last-child {
+        filter: none;
+      }
+      &.border-radius-direction-reverse {
+        border-radius: 16rem !important;
+      }
+    }
   }
 }
 
-// ----------------------------------------------------------------- [Section] 6
-::v-deep #panel-4-title {
+// ----------------------------------------------------------------- [Section] 5
+::v-deep #section_5-title-social {
   padding: 0;
   .social-icons {
     width: 75%;
@@ -554,9 +493,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-::v-deep #panel-4-info {
-  padding: 1rem 0 0 0;
-  margin-bottom: 4rem;
+::v-deep #section_5-info {
   @include mini {
     margin-bottom: 0;
   }
@@ -584,9 +521,9 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-::v-deep #panel-4-banner-image {
+::v-deep #section_5-banner-image {
   @include mini {
-    padding: 4rem 0 0 0;
+    display: none;
   }
   .image {
     width: 62vw;
@@ -602,7 +539,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-// ----------------------------------------------------------------- [Section] 7
+// ----------------------------------------------------------------- [Section] 6
 ::v-deep #events-hackathons {
   padding-top: 0;
   @include small {
