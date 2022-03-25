@@ -2,6 +2,23 @@
   {
     "type": "D",
     "event_type": "event",
+    "title": "FIL Austin",
+    "date": "2022-06-07T16:00:00Z",
+    "img": "/images/fil-austin.png",
+    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://fil.org/filaustin",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "title": "NFT Gallery at Consensus 2022",
     "date": "2022-06-08T16:00:10Z",
     "img": "/images/nft-gallery-at-consensus.png",
@@ -19,17 +36,102 @@
   {
     "type": "D",
     "event_type": "event",
-    "title": "FIL Austin",
-    "date": "2022-06-07T16:00:00Z",
-    "img": "/images/fil-austin.png",
-    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "title": "Decentralized Web Gateway @ Davos",
+    "date": "2022-05-21T16:00:39Z",
+    "img": "/images/dweb-gateway-davos.png",
+    "description": "Filecoin Foundation, in partnership with CNBC and CoinDesk, will host its Decentralized Web Gateway event at the World Economic Forum in Davos, Switzerland, May 22-26. The gathering will be held in the prominent FEG Davos venue, across the street from the WEF gates, and will feature three full days of programming, receptions, and A-List celebrity events.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "Filecoin Plus Day",
+    "date": "2022-05-10T23:00:24Z",
+    "img": "/images/luma-_-fil-day.png",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "Decentralized Web Gateway @ SXSW",
+    "date": "2022-03-15T07:23:50Z",
+    "img": "/images/dweb-gateway-sxsw.png",
+    "description": "Join us at SXSW for the Decentralized Web Gateway, powered by Filecoin Foundation, to learn more about the benefits of decentralization and how these decentralized tools can protect civil liberties and preserve humanity’s most important information. ",
+    "cta": {
+      "target": "_blank",
+      "text": "Watch Recording",
+      "type": "B",
+      "action": "video",
+      "theme": "light",
+      "url": "https://www.youtube.com/watch?v=EHTFVtWDqJc&list=PLp3zrT1ewY0mvhUc7bvG2tsqHXYCukS9y",
+      "icon": "play"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "hackathon",
+    "title": "Web3 Hacker House at SXSW",
+    "date": "2022-03-13T16:00:00Z",
+    "img": "/images/https___cdn-evbuc-com_images_239998219_264947572824_1_original.jpg",
+    "description": "Join us for the Web3 Hacker House @ SXSW! Participate in mini hackathons, meet with developers, check out panels, live workshops and more. Detailed schedule, speakers and more information coming soon!",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "Ethereal 2022",
+    "date": "2022-02-26T16:00:00Z",
+    "img": "/images/marta-snowden.png",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "url": "https://decrypt.co/videos/interviews/BW49Ik6c/edward-snowden-talks-governments-and-crypto-cbdcs-and-ethereum-vs-bitcoin-at-camp-ethereal",
+      "theme": "light",
+      "action": "video",
+      "icon": "play",
+      "text": "Watch Recording",
+      "type": "B"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "EthDenver",
+    "date": "2022-02-11T06:57:49Z",
+    "img": "/images/ethdenver.png",
+    "description": "",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
       "type": "B",
       "action": "link",
       "theme": "light",
-      "url": "https://fil.org/filaustin",
+      "url": "https://m.fil.org/filecoin-at-ethdenver",
       "icon": "info"
     }
   },
@@ -48,23 +150,6 @@
       "theme": "light",
       "url": "https://kencloud.com/hack.html",
       "icon": "ticket"
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "title": "Decentralized Web Gateway @ Davos",
-    "date": "2022-05-21T16:00:39Z",
-    "img": "/images/dweb-gateway-davos.png",
-    "description": "Filecoin Foundation, in partnership with CNBC and CoinDesk, will host its Decentralized Web Gateway event at the World Economic Forum in Davos, Switzerland, May 22-26. The gathering will be held in the prominent FEG Davos venue, across the street from the WEF gates, and will feature three full days of programming, receptions, and A-List celebrity events.",
-    "cta": {
-      "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
     }
   },
   {
