@@ -2,23 +2,6 @@
   {
     "type": "D",
     "event_type": "event",
-    "title": "Filecoin Plus Day",
-    "date": "2022-05-10T23:00:24Z",
-    "img": "/images/luma-_-fil-day.png",
-    "description": "",
-    "cta": {
-      "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
     "img": "/images/fil-austin.png",
@@ -31,6 +14,23 @@
       "theme": "light",
       "url": "https://fil.org/filaustin",
       "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "title": "NFT Gallery at Consensus 2022",
+    "date": "2022-06-08T16:00:10Z",
+    "img": "/images/nft-gallery-at-consensus.png",
+    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
     }
   },
   {
@@ -53,10 +53,10 @@
   {
     "type": "D",
     "event_type": "event",
-    "title": "NFT Gallery at Consensus 2022",
-    "date": "2022-06-08T16:00:10Z",
-    "img": "/images/nft-gallery-at-consensus.png",
-    "description": "We're bringing the massively creative world of NFTs to life at Consensus 2022. The NFT Gallery will feature NFT-related content combined with a visual immersion into the future of art x commerce on the blockchain.",
+    "title": "Filecoin Plus Day",
+    "date": "2022-05-10T23:00:24Z",
+    "img": "/images/luma-_-fil-day.png",
+    "description": "",
     "cta": {
       "target": "_blank",
       "text": "",
