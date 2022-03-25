@@ -2,6 +2,23 @@
   {
     "type": "D",
     "event_type": "event",
+    "title": "Ethereal 2022",
+    "date": "",
+    "img": "",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "url": "https://decrypt.co/videos/interviews/BW49Ik6c/edward-snowden-talks-governments-and-crypto-cbdcs-and-ethereum-vs-bitcoin-at-camp-ethereal",
+      "theme": "light",
+      "action": "video",
+      "icon": "play",
+      "text": "Watch Recording",
+      "type": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "title": "EthDenver",
     "date": "2022-02-11T06:57:49Z",
     "img": "/images/gridfiti_blog_notioncovers_sizeguide.png",
