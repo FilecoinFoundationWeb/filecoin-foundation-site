@@ -258,7 +258,7 @@
               "action": "a",
               "target": "_blank",
               "img_size": "mini",
-              "img": "/images/outline-filecoin-blue-logo.png",
+              "img": "/images/outline-filecoin-blue-logo.svg",
               "title": "Filecoin Network Status",
               "description": "This dashboard provides the latest update of the Filecoin Network.",
               "url": "//status.filecoin.io",
