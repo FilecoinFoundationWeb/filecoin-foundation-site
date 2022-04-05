@@ -5,8 +5,9 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module'
+    parser: '@babel/eslint-parser',
+    sourceType: 'module',
+    requireConfigFile: false
   },
   extends: [
     '@nuxtjs',
@@ -32,6 +33,8 @@ module.exports = {
     'vue/no-v-html': 'off',
     'no-lonely-if': 'off',
     'no-new': 'off',
-    'no-prototype-builtins': 'off'
+    'no-prototype-builtins': 'off',
+    'multiline-ternary': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }
