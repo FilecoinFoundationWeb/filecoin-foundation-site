@@ -16,7 +16,7 @@
   "engines": {
     "node": ">=14.17.6"
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.17.3",
     "@babel/eslint-parser": "^7.17.0",
     "@nuxtjs/eslint-config": "^8.0.0",
@@ -25,9 +25,7 @@
     "raw-loader": "^4.0.2",
     "sass": "^1.43.5",
     "sass-loader": "^10.1.1",
-    "webpack": "^4.46.0"
-  },
-  "dependencies": {
+    "webpack": "^4.46.0",
     "@agency-undone/au-nuxt-module-zero": "^1.0.18",
     "@agency-undone/nuxt-module-ipfs": "^1.0.2-alpha.4",
     "@agency-undone/nuxt-module-matomo": "^1.0.0",
