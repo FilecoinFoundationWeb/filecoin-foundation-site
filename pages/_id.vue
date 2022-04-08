@@ -196,7 +196,6 @@ export default {
           }
         }
       }
-      return { section }
     },
     postBody () {
       return this.markdown
@@ -262,8 +261,6 @@ export default {
           }
         }
       }
-
-      return { section }
     }
   }
 }

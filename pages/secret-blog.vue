@@ -157,7 +157,6 @@ export default {
             }
           }
         }
-        return { section }
       }
       return false
     },
@@ -176,7 +175,6 @@ export default {
           }
         }
       }
-      return { section }
     }
   }
 }

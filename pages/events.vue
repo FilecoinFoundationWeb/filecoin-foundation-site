@@ -58,11 +58,11 @@ const sortEventsByDate = (events) => {
 }
 
 const positionFeaturedFirst = (events) => {
-  const index = events.findIndex(item => item.featured);
+  const index = events.findIndex(item => item.featured)
   if (index === 0 || index > 0) {
     const featured = events[index]
     events.splice(index, 1)
-    events.unshift(featured);
+    events.unshift(featured)
   }
   return events
 }
@@ -112,7 +112,7 @@ export default {
     events () {
       const events = CloneDeep(this.siteContent.event_list)
       const selected = this.selected
-      let sorted;
+      let sorted
       if (selected === 'all') {
         sorted = sortEventsByDate(events)
         return positionFeaturedFirst(sorted)
