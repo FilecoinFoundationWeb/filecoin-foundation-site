@@ -11,9 +11,11 @@ fields:
     config:
       required: false
     label: Number
+    description: Number of columns
   - name: push_left
     type: text
     config:
       required: false
     label: Push Left
+    description: Columns that will be pushed left
   label: Columns

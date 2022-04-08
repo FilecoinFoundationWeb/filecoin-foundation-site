@@ -1,5 +1,5 @@
 ---
-label: "[Page] General"
+label: "[Data] General"
 hide_body: true
 fields:
 - type: field_group
@@ -9,9 +9,11 @@ fields:
   - type: text
     name: title
     label: title
+    description: Title for this web page
   - type: text
     name: description
     label: description
+    description: Description for this web page
 - type: field_group
   name: og
   label: Open Graph
@@ -19,18 +21,22 @@ fields:
   - type: text
     name: site_name
     label: site name
+    description: Name of the site.
   - type: text
     name: url
     label: url
+    description: The full page URL/path of the page.
   - type: text
     name: type
     label: type
   - type: file
     name: image
     label: image
+    description: Upload an image to appear in social previews for this page.
 - type: field_group_list
   name: social
   label: Socials
+  description: Links to social media. Click Add Social to add a new social media link.
   fields:
   - type: text
     name: type
@@ -75,6 +81,9 @@ fields:
 - type: field_group_list
   name: navigation
   label: Navigation
+  description: This is the navigation that will appear at the top of every page and
+    will allow your user to navigate internally through the site. Click Add Navigation
+    to add a new link.
   fields:
   - type: text
     name: type
@@ -94,15 +103,21 @@ fields:
   - type: text
     name: url
     label: URL
+    description: Add URL here (eg /about will take your user to the About page)
   - type: text
     name: text
     label: Text
+    description: The title of the page that the user will be directed to after clicking
+      this link
   - type: textarea
     name: description
     label: Description
   - type: field_group_list
     name: links
     label: Links
+    description: These links will appear when user hovers over navigation to reveal
+      another level of links. This second level of links will take users to a specific
+      section based on the Heading of that section.
     fields:
     - type: text
       name: type
@@ -117,9 +132,14 @@ fields:
     - type: text
       name: url
       label: URL
+      description: Add URL here (eg if user clicks on Board of Directors after clicking
+        on About in navigation, the path for that section will be /about/#panel_1
+        specifying the component name that contains the section with Board of Directors)
     - type: text
       name: text
       label: Text
+      description: The title of the section that user will be directed to after clicking
+        this link
     config:
       labelField: text
   config:
@@ -127,6 +147,7 @@ fields:
 - type: field_group
   name: footer
   label: Footer
+  description: The footer is editable within this section
   fields:
   - name: text
     type: field_group
@@ -156,9 +177,13 @@ fields:
           format: markdown
       label: Item 3
     label: Text
+    description: The text to the right of the blue gradient design in the footer is
+      editable within this section
   - type: field_group_list
     name: links
     label: Links
+    description: Hyperlinks just above social media icons in the footer are editable
+      within this section. Click Add Link to add other hyperlinks
     fields:
     - type: text
       name: type
@@ -191,10 +216,14 @@ fields:
   - type: field_group
     name: panel_bottom
     label: Panel Bottom
+    description: The last part of the footer which contains Copyright text and links
+      to Terms and Privacy pages
     fields:
     - type: field_group_list
       name: links
       label: Links
+      description: Hyperlinks are editable within this section. Click Add Link to
+        add other hyperlinks
       fields:
       - type: text
         name: type
@@ -217,5 +246,6 @@ fields:
     - type: textarea
       name: copyright_text
       label: Copyright Text
+      description: Copyright text is editable within this section
 pages:
 - content/pages/general.json

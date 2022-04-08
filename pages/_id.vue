@@ -161,36 +161,38 @@ export default {
       return this.markdown.allPosts
     },
     postHeading () {
-      const section = {
-        id: 'post-heading',
-        grid: ['middle'],
-        left: {
-          type: 'text_block',
-          layout: 'large',
-          cols: {
-            num: 'col-5_md-9_mi-10',
-            push_left: 'off-0_md-2_ti-1'
+      return {
+        post_heading: {
+          id: 'post-heading',
+          grid: ['middle'],
+          left: {
+            type: 'text_block',
+            layout: 'large',
+            cols: {
+              num: 'col-5_md-9_mi-10',
+              push_left: 'off-0_md-2_ti-1'
+            },
+            heading: this.markdown.title,
+            subheading: this.markdown.description,
+            label: this.markdown.featured ? 'Featured Blog' : '',
+            date: this.markdown.date || this.markdown.createdAt,
+            ctas: [
+              {
+                type: 'H',
+                action: 'nuxt-link',
+                text: this.markdown.author,
+                icon: 'play',
+                url: `/${this.markdown.slug}`
+              }
+            ]
           },
-          heading: this.markdown.title,
-          subheading: this.markdown.description,
-          label: this.markdown.featured ? 'Featured Blog' : '',
-          date: this.markdown.date || this.markdown.createdAt,
-          ctas: [
-            {
-              type: 'H',
-              action: 'nuxt-link',
-              text: this.markdown.author,
-              icon: 'play',
-              url: `/${this.markdown.slug}`
+          right: {
+            type: 'image_block',
+            src: this.markdown.image,
+            cols: {
+              num: 'col-7_md-9_mi-10',
+              push_left: 'off-0_md-2_mi-1'
             }
-          ]
-        },
-        right: {
-          type: 'image_block',
-          src: this.markdown.image,
-          cols: {
-            num: 'col-7_md-9_mi-10',
-            push_left: 'off-0_md-2_mi-1'
           }
         }
       }
@@ -243,20 +245,21 @@ export default {
           }
         })
       }
-
-      const section = {
-        id: 'blogposts-list',
-        left: {
-          type: 'card_list_block',
-          cols: {
-            num: 'col-12_md-11_sm-10_mi-9_ti-10',
-            push_left: 'off-0_md-1_sm-2_ti-1'
-          },
-          display: {
-            initial: 3,
-            next: 3
-          },
-          cards: recommendedPosts
+      return {
+        recommended_posts: {
+          id: 'blogposts-list',
+          left: {
+            type: 'card_list_block',
+            cols: {
+              num: 'col-12_md-11_sm-10_mi-9_ti-10',
+              push_left: 'off-0_md-1_sm-2_ti-1'
+            },
+            display: {
+              initial: 3,
+              next: 3
+            },
+            cards: recommendedPosts
+          }
         }
       }
 
@@ -583,5 +586,4 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     }
   }
 }
-
 </style>

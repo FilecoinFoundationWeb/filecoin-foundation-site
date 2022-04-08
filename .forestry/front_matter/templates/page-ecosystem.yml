@@ -2,170 +2,81 @@
 label: "[Page] Ecosystem"
 hide_body: true
 fields:
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: description
-    label: description
-- type: field_group
-  name: og
-  label: og
-  fields:
-  - type: text
-    name: site_name
-    label: site_name
-  - type: text
-    name: url
-    label: url
-  - type: text
-    name: type
-    label: type
-  - type: file
-    name: image
-    label: image
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+  description: SEO and metadata
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
+  description: Open Graph Metadata
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: section_1
-    label: section_1
+    label: Section 1
+    description: 'This begins at the top of the page and ends before ''Participation''
+      section ends (at the end of solid white background)
+
+      '
     fields:
     - type: field_group
       name: hero
-      label: hero
+      label: Hero
+      description: First content section on page with a textblock on the left and
+        an image block on the right.
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
-      - type: field_group
-        name: left
-        label: Left Block
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          default: text_block
-          hidden: true
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-4_md-9_mi-10
-            hidden: true
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-2_mi-1
-            hidden: true
-          hidden: true
-        - name: layout
-          type: select
-          default: ''
-          config:
-            required: false
-            options:
-            - compact
-            - medium
-            - large
-            source:
-              type: simple
-              section: 
-              file: 
-              path: 
-          label: Layout
-        - name: heading
-          type: textarea
-          default: ''
-          config:
-            required: false
-            wysiwyg: false
-            schema:
-              format: markdown
-          label: Heading
-        - type: textarea
-          name: subheading
-          label: Subheading
-        - name: description
-          type: textarea
-          default: ''
-          config:
-            required: false
-            wysiwyg: false
-            schema:
-              format: markdown
-          label: Description
-      - type: field_group
-        name: right
-        label: Right Block
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Column
+        description: The textblock is editable within this section
+      - name: right
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: image_block
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-5_md-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-1_md-2_mi-1
-          hidden: true
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Right Column
+        description: The image block is editable within this section
     - type: field_group
       name: intro_1
-      label: intro_1
+      label: Intro 1
+      description: Textblock within blue gradient and dark blue background
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Textblock is editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - name: layout
+        - name: text_block
           type: include
           config: {}
-          template: layout
-          label: Layout
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-7_mi-8
-            hidden: true
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-5_mi-4
-          hidden: true
-        - type: textarea
-          name: description
-          label: Description
+          template: block-text
+          label: Template → [Block] Text
         - name: customizations
           type: field_group
           config: {}
@@ -233,336 +144,104 @@ fields:
           hidden: true
     - type: field_group
       name: cta_banner_1
-      label: cta_banner_1
+      label: CTA Banner 1
+      description: Image block and textblock. The image block on the left and textblock
+        is on the right.
       fields:
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          default: image_block
-          hidden: true
-        - type: file
-          name: src
-          label: Image
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-5_sm-4_mi-6
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-2_mi-1
-          hidden: true
-      - type: field_group
-        name: right
-        label: Right Block
-        fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - name: layout
+        - name: image_block
           type: include
           config: {}
-          template: layout
-          label: Layout
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-4_sm-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_sm-2_mi-1
-          hidden: true
-        - type: text
-          name: label
-          label: Label
-        - name: heading
-          type: textarea
-          default: ''
-          config:
-            required: false
-            wysiwyg: false
-            schema:
-              format: markdown
-          label: Heading
-        - type: textarea
-          name: subheading
-          label: Subheading
-        - type: textarea
-          name: description
-          label: Description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: theme
-            label: theme
-            hidden: true
-            default: light
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: nuxt-link
-          - type: text
-            name: text
-            label: Text
-          - type: text
-            name: url
-            label: URL
-          config:
-            min: 0
-            max: 1
+          template: block-image
+          label: Template → [Block] Image
+        label: Left Column
+        description: The immage is editable within this section.
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Right Column
+        description: The text block is editable within this section.
     - type: field_group
       name: panel_1
-      label: panel_1
+      label: Panel 1
+      description: Text block that is above slider cards on light blue background.
       fields:
-      - type: field_group
-        name: left
-        label: Left Block
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - name: layout
+        - name: text_block
           type: include
           config: {}
-          template: layout
-          label: Layout
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-7_sm-9_mi-10
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-2_mi-1
-          hidden: true
-        - name: heading
-          type: textarea
-          default: ''
-          config:
-            required: false
-            wysiwyg: false
-            schema:
-              format: markdown
-          label: Heading
-        - type: textarea
-          name: subheading
-          label: Subheading
+          template: block-text
+          label: Template → [Block] Text
+        label: Content
+        description: Text block is editable within this section.
     - type: field_group
       name: panel_1_cards
-      label: panel_1_cards
+      label: Panel 1 Cards
+      description: Slider cards that are below text block.
       fields:
       - type: field_group
         name: left
-        label: Left Block
+        label: Content
+        description: Slider cards are editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: slider_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-9_sm-8_mi-10_ti-11
-          - type: text
-            name: push_left
-            label: push_left
-            default: off-3_sm-2_mi-1_ti-1
-            hidden: true
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: Cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: B
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: title
-            label: Title
-          - type: text
-            name: description
-            label: Description
-          config:
-            max: 4
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
   - type: field_group
     name: section_2
-    label: section_2
+    label: Section 2
+    description: 'This section is the ''Participation'' or ''Resources'' section where
+      there is a text block on the left on a sky blue background and clickable cards
+      on the right with a dark blue background.
+
+      '
     fields:
     - type: field_group
       name: resources
-      label: resources
+      label: Resources
       fields:
       - name: grid
         type: include
         config: {}
         template: grid-classes
         label: Grid Classes
-      - type: field_group
-        name: left
-        label: Left Block
+        description: Selections from this dropdown will affect the section layout.
+          DO NOT EDIT.
+      - name: left
+        type: field_group
+        config: {}
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: text_block
-        - name: layout
+        - name: text_block
           type: include
           config: {}
-          template: layout
-          label: Layout
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            default: col-3_sm-10_mi-9
-            hidden: true
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-1_sm-2
-          hidden: true
-        - type: text
-          name: label
-          label: Label
-        - type: text
-          name: heading
-          label: Heading
-        - type: textarea
-          name: description
-          label: Description
-        - type: field_group_list
-          name: ctas
-          label: CTA
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: text
-            name: action
-            label: action
-            hidden: true
-            default: a
-          - type: text
-            name: theme
-            label: theme
-            hidden: true
-            default: light
-          - type: text
-            name: target
-            label: target
-            hidden: true
-            default: _blank
-          - type: text
-            name: text
-            label: Text
-          - type: text
-            name: url
-            label: URL
-          config:
-            max: 1
-            min: 0
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Column
+        description: The text block is editable within this section.
       - type: field_group
         name: right
-        label: Right Block
+        label: Right Column
+        description: Clickable cards are editable within this section.
         fields:
-        - type: text
-          name: type
-          label: type
-          hidden: true
-          default: slider_block
-        - type: field_group
-          name: cols
-          label: cols
-          fields:
-          - type: text
-            name: num
-            label: num
-            hidden: true
-            default: col-6_sm-7_ti-9
-          - type: text
-            name: push_left
-            label: push_left
-            hidden: true
-            default: off-2_sm-3_mi-2
-          hidden: true
-        - type: field_group_list
-          name: cards
-          label: Cards
-          fields:
-          - type: text
-            name: type
-            label: type
-            hidden: true
-            default: A
-          - type: file
-            name: img
-            label: Image
-          - type: text
-            name: img_size
-            label: img_size
-            hidden: true
-            default: regular
-          - type: text
-            name: title
-            label: Title
-          - type: text
-            name: description
-            label: Description
-          config:
-            max: 6
+        - name: slider_block
+          type: include
+          config: {}
+          template: comp-slider-block
+          label: Template → [Block] Slider
         - name: customizations
           type: field_group
           config: {}
@@ -616,167 +295,20 @@ fields:
             label: background_layers
             hidden: true
           hidden: true
-          label: customizations
+          label: Customizations
   - type: field_group
     name: section_3
-    label: section_3
+    label: Section 3
+    description: 'This section begins after ''Participation'' section, ends at the
+      footer, and has a solid white background.
+
+      '
     fields:
-    - type: field_group
-      name: dive_deeper
-      label: dive_deeper
-      fields:
-      - type: text
-        name: type
-        label: type
-        hidden: true
-        default: custom
-      - type: text
-        name: component
-        label: component
-        hidden: true
-        default: DiveDeeper
-      - type: field_group
-        name: props
-        label: props
-        fields:
-        - type: field_group
-          name: intro
-          label: Intro
-          fields:
-          - type: field_group
-            name: cols
-            label: cols
-            fields:
-            - type: text
-              name: num
-              label: num
-              hidden: true
-              default: col-7_sm-8_mi-9_ti-10
-            - type: text
-              name: push_left
-              label: push_left
-              hidden: true
-              default: off-1_sm-2_mi-1
-            hidden: true
-          - type: text
-            name: heading
-            label: Heading
-          - type: textarea
-            name: subheading
-            label: Subheading
-        - type: field_group_list
-          name: videos
-          label: Videos
-          fields:
-          - type: field_group
-            name: left
-            label: Left Block
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: video_block
-            - type: field_group
-              name: cols
-              label: cols
-              fields:
-              - type: text
-                name: num
-                label: num
-                hidden: true
-                default: col-6_sm-8_mi-9_ti-11
-              - type: text
-                name: push_left
-                label: push_left
-                hidden: true
-                default: off-1_sm-2_mi-1
-              hidden: true
-            - type: field_group
-              name: props
-              label: props
-              fields:
-              - type: file
-                name: preview_image
-                label: Preview Image
-              - type: text
-                name: url
-                label: URL
-          - type: field_group
-            name: right
-            label: Right Block
-            fields:
-            - type: text
-              name: type
-              label: type
-              hidden: true
-              default: text_block
-            - type: field_group
-              name: cols
-              label: cols
-              fields:
-              - type: text
-                name: num
-                label: num
-                hidden: true
-                default: col-4_sm-8_mi-9_ti-11
-              - type: text
-                name: push_left
-                label: push_left
-                hidden: true
-                default: off-1_sm-2_mi-1
-              hidden: true
-            - type: field_group
-              name: props
-              label: props
-              fields:
-              - name: layout
-                type: include
-                config: {}
-                template: layout
-                label: Layout
-              - type: text
-                name: heading
-                label: Heading
-              - type: textarea
-                name: description
-                label: Description
-              - type: field_group_list
-                name: ctas
-                label: CTA
-                fields:
-                - type: text
-                  name: type
-                  label: type
-                  hidden: true
-                  default: B
-                - type: text
-                  name: theme
-                  label: theme
-                  hidden: true
-                  default: dark
-                - type: text
-                  name: action
-                  label: action
-                  hidden: true
-                  default: video
-                - type: text
-                  name: icon
-                  label: icon
-                  hidden: true
-                  default: play
-                - type: text
-                  name: text
-                  label: Text
-                - type: text
-                  name: url
-                  label: URL
-                config:
-                  max: 1
-                  min: 0
-          config:
-            min: 1
-            max: 2
-        hidden: false
+    - name: diver_deeper
+      type: include
+      config: {}
+      template: comp-divedeeper
+      label: Template → [Comp] DiveDeeper
+      description: Video testimonials and accompanying text
 pages:
 - content/pages/ecosystem.json

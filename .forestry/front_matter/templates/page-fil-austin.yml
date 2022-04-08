@@ -1,0 +1,542 @@
+---
+label: "[Page] Fil Austin"
+hide_body: true
+fields:
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+  description: SEO and metadata
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
+  description: Open Graph Metadata
+- type: field_group
+  name: page_content
+  label: Page Content
+  description: The visible content on the page is editable within this section.
+  fields:
+  - type: field_group
+    name: section_1
+    label: Section 1
+    description: This section begins at the top of the page and ends after the block
+      of paragraph text on dark blue background and right before the floating menu
+      begins.
+    fields:
+    - type: field_group
+      name: mobile_hero_image
+      label: Mobile Hero Image
+      fields:
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Left Block
+      description: Hero image that appears on small screens only (mobile devices)
+    - type: field_group
+      name: hero
+      label: Hero
+      description: First content section on page with text block on the left and image
+        block on the right.
+      fields:
+      - name: left
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Left Column
+        description: Text block is editable within this section.
+      - type: field_group
+        name: right
+        label: Right Column
+        description: Image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+    - type: field_group
+      name: hero_text
+      label: Hero Text
+      description: Text block on top dark blue background that is positioned underneath
+        the Hero text and image blocks.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: Text block is editable within this section.
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+  - type: field_group
+    name: section_2
+    label: Section 2
+    description: 'This section begins when floating menu appears on left, background
+      color splits into royal blue on left and dark blue on right and stretches down
+      to and including image that has rounded on its left side. Note that subheadings
+      in textblocks in this section will become listed underneath headings on floating
+      menu (ex. subheading ''What ix Filaustin'' will become a list item on floating
+      menu.)
+
+      '
+    fields:
+    - type: field_group
+      name: section_2-heading
+      label: Section 2 Heading
+      description: Floating menu is editable within this section.
+      fields:
+      - type: field_group
+        name: left
+        label: Left Column
+        description: Floating menu headings and panel 1 title heading are editable
+          within this section.
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: small
+        - name: cols
+          type: include
+          config: {}
+          template: layout-columns
+          label: Columns
+          description: Selections from this dropdown will affect the section layout.
+            DO NOT EDIT.
+        - type: field_group
+          name: customizations
+          label: Customizations
+          description: Floating menu headings are editable within this section.
+          fields:
+          - type: field_group
+            name: floating_menu
+            label: Floating Menu
+            fields:
+            - type: text
+              name: name
+              label: name
+              hidden: true
+              default: FloatingMenu
+            - type: field_group
+              name: props
+              label: Properties
+              fields:
+              - type: text
+                name: id
+                label: id
+                hidden: true
+                default: filaustin-floating-menu
+              - type: text
+                name: cutoff
+                label: cutoff
+                hidden: true
+                default: section_6
+              - type: number
+                name: offsetbottom
+                label: offsetbottom
+                hidden: true
+                default: 0
+              - type: field_group_list
+                name: entries
+                label: Entries
+                description: 'Click ''Add Entry'' to add a new heading on floating
+                  menu
+
+                  '
+                fields:
+                - type: text
+                  name: heading
+                  label: Heading
+                  description: Menu item
+                - type: text
+                  name: id
+                  label: ID
+                  description: The <strong><em>exact</em></strong> id of the DOM element
+                    of the section to scroll to
+      - type: field_group
+        name: right
+        label: Right Column
+        description: Hero heading to the right of start of floating menu is editable
+          within this section.
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+    - type: field_group
+      name: section_2-info
+      label: Section 2 Info
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background. Reminder that the subheading established
+        here will appear on floating menu.
+      fields:
+      - type: field_group
+        name: left
+        label: Left Column
+        description: The image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+      - type: field_group
+        name: right
+        label: Right Column
+        description: The text block is editable within this section. Reminder that
+          the subheading established here will appear on floating menu.
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: small
+        - type: text
+          name: data_id
+          label: data_id
+          hidden: true
+          default: section_3-a
+        - name: cols
+          type: include
+          config: {}
+          template: layout-columns
+          label: Columns
+        - type: text
+          name: subheading
+          label: Subheading
+        - type: textarea
+          name: description
+          label: Description
+    - type: field_group
+      name: section_2-banner-image
+      label: Section 2 Banner Image
+      description: Image block at the bottom of section with left side of image rounded
+        at corners.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: The image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+  - type: field_group
+    name: section_3
+    label: Section 3
+    description: This section begins right after (not including) the image with rounded
+      corners its left side and ends at subscribe form.
+    fields:
+    - type: field_group
+      name: section_3-panel-1
+      label: Section 3 Panel 1
+      description: Text block to the right of floating nemu. This subheading established
+        here will appear as item in floating menu.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: Text block is editable within this section.
+        fields:
+        - type: text
+          name: type
+          label: type
+          hidden: true
+          default: text_block
+        - type: text
+          name: layout
+          label: layout
+          hidden: true
+          default: small
+        - type: text
+          name: data_id
+          label: data_id
+          hidden: true
+          default: section_5-a
+        - name: cols
+          type: include
+          config: {}
+          template: layout-columns
+          label: Columns
+        - type: text
+          name: subheading
+          label: Subheading
+        - type: textarea
+          name: description
+          label: Description
+    - type: field_group
+      name: section_3-panel-2
+      label: Section 3 Panel 2
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background.
+      fields:
+      - type: field_group
+        name: left
+        label: Left Column
+        description: Image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+      - type: field_group
+        name: right
+        label: Right Column
+        description: Text block is editable within this section. The subheading established
+          here will appear on floating menu.
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+    - type: field_group
+      name: section_3-banner-image
+      label: Section 3 Banner Image
+      description: Image block with left side of image rounded at corners.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: The image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+    - type: field_group
+      name: section_3-panel-3
+      label: Section 3 Panel 3
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background.
+      fields:
+      - type: field_group
+        name: left
+        label: Left Column
+        description: Image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+      - type: field_group
+        name: right
+        label: Right Column
+        description: Text block is editable within this section. The subheading established
+          here will appear on floating menu.
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+  - type: field_group
+    name: section_4
+    label: Section 4
+    description: This section contains the Subscribe form with blue gradient border
+    fields:
+    - type: field_group
+      name: subscribe_form
+      label: Subscribe Form
+      description: Subscribe form is editable within this section.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        - type: text
+          name: theme
+          label: theme
+          hidden: true
+          default: light
+        - type: field_group
+          name: customizations
+          label: Customizations
+          fields:
+          - type: field_group
+            name: background_layers
+            label: background_layers
+            fields:
+            - type: text
+              name: name
+              label: name
+              hidden: true
+              default: BackgroundLayers
+            - type: field_group
+              name: props
+              label: props
+              fields:
+              - type: text
+                name: layers-array
+                label: layers-array
+                hidden: true
+                default: '1_2_3_4_5_6'
+              - type: field_group
+                name: offset
+                label: offset
+                fields:
+                - type: number
+                  name: medium
+                  label: medium
+                  hidden: true
+                  default: 0.75
+                - type: number
+                  name: mini
+                  label: mini
+                  hidden: true
+                  default: 0.25
+              - type: text
+                name: shadow-strength
+                label: shadow-strength
+                hidden: true
+                default: small
+              - type: text
+                name: border-radius-direction
+                label: border-radius-direction
+                hidden: true
+                default: reverse
+              hidden: true
+            hidden: true
+          - type: field_group
+            name: form
+            label: Form
+            fields:
+            - type: text
+              name: name
+              label: Name
+              hidden: true
+              default: FilAustinForm
+            hidden: true
+          hidden: true
+  - type: field_group
+    name: section_5
+    label: Section 5
+    description: 'This section contains the ''Get Invovled'' section and ends at Events
+      and Hackathons section.
+
+      '
+    fields:
+    - type: field_group
+      name: section_5-title-social
+      label: Section 5 Title Social
+      description: Text block to the right of floating nemu.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: Text block is editable within this section.
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        - type: field_group
+          name: customizations
+          label: customizations
+          fields:
+          - type: field_group
+            name: social_icons
+            label: social_icons
+            fields:
+            - type: text
+              name: name
+              label: name
+              hidden: true
+              default: SocialIcons
+          hidden: true
+    - type: field_group
+      name: section_5-info
+      label: Section 5 Info
+      description: Image block and text block. The image block is on the left and
+        touches both the royal blue and dark blue background. The text block is on
+        the right and has dark blue background.
+      fields:
+      - type: field_group
+        name: left
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+        label: Left Column
+        description: Image block is editable within this section.
+      - name: right
+        type: field_group
+        config: {}
+        fields:
+        - name: text_block
+          type: include
+          config: {}
+          template: block-text
+          label: Template → [Block] Text
+        label: Right Column
+        description: Text block is editable within this section.
+    - type: field_group
+      name: section_5-banner-image
+      label: Section 5 Banner Image
+      description: Image block at the bottom of section with left side of image rounded
+        at corners.
+      fields:
+      - type: field_group
+        name: left
+        label: Content
+        description: Image block is editable within this section.
+        fields:
+        - name: image_block
+          type: include
+          config: {}
+          template: block-image
+          label: Template → [Block] Image
+  - type: field_group
+    name: section_6
+    label: Section 6
+    description: This section contains the Events and Hackathons section and ends
+      at the footer.
+    fields:
+    - name: events-hackathons
+      type: include
+      config: {}
+      template: events-hackathons
+      label: Template → [Comp] Events & Hackathons

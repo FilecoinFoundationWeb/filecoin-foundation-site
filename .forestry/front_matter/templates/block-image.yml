@@ -1,0 +1,30 @@
+---
+label: "[Block] Image"
+hide_body: true
+fields:
+- name: type
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: Type
+  default: image_block
+- name: cols
+  type: include
+  config: {}
+  template: layout-columns
+  label: Columns
+  description: Selections from this dropdown will affect the section layout. Do not
+    edit.
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
+  description: Do not change. This field is only visible to Forestry admins.
+- name: src
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+  description: Add an image that will appear in this section
