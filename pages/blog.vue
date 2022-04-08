@@ -40,7 +40,7 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 import BlogPageData from '@/content/pages/blog.json'
 
@@ -109,6 +109,7 @@ export default {
           title: post.title,
           description: post.description,
           date: post.date || post.createdAt,
+          tags: post.tags,
           cta: {
             type: 'H',
             action: 'nuxt-link',
@@ -156,7 +157,7 @@ export default {
             }
           }
         }
-        return [section]
+        return { section }
       }
       return false
     },
@@ -173,8 +174,31 @@ export default {
           displayControls: true
         }
       }
-      return [section]
+      return { section }
     }
+  },
+
+  watch: {
+    '$route' (route) {
+      if (route.query.hasOwnProperty('tags')) {
+        const value = this.$Unslugify(route.query.tags, 'capitalize-all')
+        this.setFilterValue(value)
+      }
+    }
+  },
+
+  mounted () {
+    if (this.$route.query.hasOwnProperty('tags')) {
+      const value = this.$Unslugify(this.$route.query.tags, 'capitalize-all')
+      this.setFilterValue(value)
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      setFilterValue: 'core/setFilterValue',
+      setRouteQuery: 'filters/setRouteQuery'
+    })
   }
 }
 </script>
@@ -236,7 +260,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #featured-post {
+::v-deep #featured-section {
   padding: 0;
   margin-bottom: 5.5rem;
   .heading {

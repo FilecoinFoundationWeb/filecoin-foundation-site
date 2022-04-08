@@ -27,7 +27,8 @@
                   <div
                     v-for="(item, index) in postTags"
                     :key="`${item}-${index}`"
-                    class="tag">
+                    class="tag"
+                    @click="setTagsQuery(item)">
                     {{ item }}
                   </div>
                 </div>
@@ -81,7 +82,7 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
@@ -194,7 +195,7 @@ export default {
           }
         }
       }
-      return [section]
+      return { section }
     },
     postBody () {
       return this.markdown
@@ -233,6 +234,7 @@ export default {
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
+              tags: post.tags,
               cta: {
                 type: 'H',
                 action: 'nuxt-link',
@@ -260,7 +262,20 @@ export default {
         }
       }
 
-      return [section]
+      return { section }
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      clearAllTags: 'filters/clearAllTags',
+      setRouteQuery: 'filters/setRouteQuery'
+    }),
+    setTagsQuery (val) {
+      const slug = this.$Slugify(val)
+      this.clearAllTags()
+      this.setRouteQuery({ key: 'tags', data: slug })
+      this.$router.push('/blog')
     }
   }
 }
@@ -352,7 +367,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading {
+::v-deep #post-heading-section {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {
@@ -574,7 +589,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   justify-content: space-between;
 }
 
-::v-deep #blogposts-list {
+::v-deep #blogposts-section {
   padding-bottom: 3rem;
   .card {
     &.type__E {
