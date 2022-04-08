@@ -194,7 +194,7 @@ export default {
           }
         }
       }
-      return [section]
+      return { section }
     },
     postBody () {
       return this.markdown
@@ -260,7 +260,7 @@ export default {
         }
       }
 
-      return [section]
+      return { section }
     }
   }
 }
@@ -352,7 +352,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading {
+::v-deep #post-heading-section {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {
@@ -574,7 +574,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   justify-content: space-between;
 }
 
-::v-deep #blogposts-list {
+::v-deep #blogposts-section {
   padding-bottom: 3rem;
   .card {
     &.type__E {
