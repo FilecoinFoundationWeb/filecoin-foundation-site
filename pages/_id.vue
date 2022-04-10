@@ -286,6 +286,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   @include mini {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
   }
+
+  ::v-deep .card {
+    transform: scale(1);
+    transition: transform 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .main-content {
