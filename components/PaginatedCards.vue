@@ -87,7 +87,8 @@ export default {
     searchResults () {
       const query = this.searchQuery.toLowerCase()
       return this.cards.filter((post) => {
-        const matched = post.title.toLowerCase().includes(query)
+        const postTags = Array.isArray(post.tags) ? post.tags.map(item => item.toLowerCase()) : []
+        const matched = post.title.toLowerCase().includes(query) || postTags.includes(query)
         // const matched = post.title.toLowerCase().includes(query) || post.description.join('').toLowerCase().includes(query)
         if (!matched) { return false }
         return post
