@@ -356,7 +356,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #blogposts-list {
+::v-deep #blogposts-section {
   padding-top: 1.75rem;
 }
 
