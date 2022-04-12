@@ -229,13 +229,14 @@ export default {
             recommendedPosts.push({
               type: 'E',
               img: post.image,
-              img_type: 'nuxt_link',
+              img_type: 'background_image',
+              action: 'nuxt-link',
+              url: `/${post.slug}`,
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
               cta: {
                 type: 'H',
-                action: 'nuxt-link',
                 text: 'Read more',
                 url: `/${post.slug}`
               }
@@ -588,6 +589,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     &.type__E {
       width: unset;
       margin: unset !important;
+      .image {
+        height: 47%;
+        @include borderRadius_Large;
+        overflow: hidden;
+      }
     }
   }
 }
