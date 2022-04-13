@@ -63,7 +63,7 @@
         </div>
 
         <Button
-          v-if="cta"
+          v-if="cta && (cta.text || cta.icon)"
           :button="cta"
           class="cta" />
 
