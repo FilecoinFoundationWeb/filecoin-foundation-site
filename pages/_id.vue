@@ -352,7 +352,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading {
+::v-deep #post-heading-section {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {

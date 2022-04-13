@@ -122,59 +122,58 @@ export default {
     },
     featuredPost () {
       const featured = this.markdownFiles.find(file => file.hasOwnProperty('featured') && file.featured)
+
       if (featured) {
-        return {
-          featured_section: {
-            id: 'featured-post',
-            grid: ['middle'],
-            left: {
-              type: 'text_block',
-              layout: 'large',
-              cols: {
-                num: 'col-5_md-9_mi-10',
-                push_left: 'off-0_md-2_ti-1'
-              },
-              heading: featured.title,
-              subheading: featured.description,
-              label: 'Featured Blog',
-              ctas: [
-                {
-                  type: 'B',
-                  action: 'nuxt-link',
-                  text: 'Read more',
-                  icon: 'play',
-                  url: `/${featured.slug}`
-                }
-              ]
+        const section = {
+          id: 'featured-post',
+          grid: ['middle'],
+          left: {
+            type: 'text_block',
+            layout: 'large',
+            cols: {
+              num: 'col-5_md-9_mi-10',
+              push_left: 'off-0_md-2_ti-1'
             },
-            right: {
-              type: 'image_block',
-              src: featured.image,
-              cols: {
-                num: 'col-7_md-9_mi-10',
-                push_left: 'off-0_md-2_mi-1'
+            heading: featured.title,
+            subheading: featured.description,
+            label: 'Featured Blog',
+            ctas: [
+              {
+                type: 'B',
+                action: 'nuxt-link',
+                text: 'Read more',
+                icon: 'play',
+                url: `/${featured.slug}`
               }
+            ]
+          },
+          right: {
+            type: 'image_block',
+            src: featured.image,
+            cols: {
+              num: 'col-7_md-9_mi-10',
+              push_left: 'off-0_md-2_mi-1'
             }
           }
         }
+        return { section }
       }
       return false
     },
     blogPosts () {
-      return {
-        blog_post_section: {
-          id: 'blogposts-list',
-          left: {
-            type: 'paginated_cards',
-            cols: {
-              num: 'col-12_md-11_sm-10_mi-9_ti-10',
-              push_left: 'off-0_md-1_sm-2_ti-1'
-            },
-            cards: this.posts,
-            displayControls: true
-          }
+      const section = {
+        id: 'blogposts-list',
+        left: {
+          type: 'paginated_cards',
+          cols: {
+            num: 'col-12_md-11_sm-10_mi-9_ti-10',
+            push_left: 'off-0_md-1_sm-2_ti-1'
+          },
+          cards: this.posts,
+          displayControls: true
         }
       }
+      return { section }
     }
   }
 }
@@ -286,11 +285,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #zero-filter-bar {
-  @include blogPageOutline;
   position: relative;
   margin-left: 0.5rem;
   width: calc(100% - 2rem);
   height: 2.5rem;
+  @include blogPageOutline;
   .icon-container {
     margin: 0 0.5rem;
     height: 100%;
@@ -319,4 +318,5 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 ::v-deep #blogposts-section {
   padding-top: 1.75rem;
 }
+
 </style>

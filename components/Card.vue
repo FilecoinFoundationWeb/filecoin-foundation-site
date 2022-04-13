@@ -73,6 +73,12 @@
         v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
         class="panel-right">
         <div
+          v-if="type === 'D'"
+          class="description"
+          v-html="shortenString(description, 175)">
+        </div>
+        <div
+          v-else
           class="description"
           v-html="description">
         </div>
@@ -459,6 +465,11 @@ export default {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .description {
+    @include mini {
+      @include fontSize_Small;
+    }
   }
   .cta {
     margin-top: 0.5rem;
