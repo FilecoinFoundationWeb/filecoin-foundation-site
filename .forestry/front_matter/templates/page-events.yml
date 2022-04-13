@@ -2,43 +2,30 @@
 label: "[Page] Events"
 hide_body: true
 fields:
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: text
-    name: description
-    label: description
-- type: field_group
-  name: og
-  label: og
-  fields:
-  - type: text
-    name: site_name
-    label: site name
-  - type: text
-    name: url
-    label: url
-  - type: text
-    name: type
-    label: type
-  - type: file
-    name: image
-    label: image
+- name: seo
+  type: include
+  config: {}
+  template: data-seo
+  label: Template → [Data] SEO
+  description: SEO and metadata
+- name: og
+  type: include
+  config: {}
+  template: data-open-graph-social
+  label: Template → [Data] Open Graph & Social
 - type: field_group
   name: page_content
-  label: page content
+  label: Events Page Navigation
+  description: The visible content on the page is editable within this section.
   fields:
   - type: field_group
     name: navigation
-    label: navigation
+    label: Events Navigation
+    description: Text of events navigation is editable here.
     fields:
     - type: field_group
       name: events
-      label: events
+      label: Events
       fields:
       - type: text
         name: type
@@ -57,7 +44,7 @@ fields:
         default: button
       - type: text
         name: text
-        label: text
+        label: Text
       - type: text
         name: slug
         label: slug
@@ -65,7 +52,7 @@ fields:
         default: event
     - type: field_group
       name: hackathons
-      label: hackathons
+      label: Hackathons
       fields:
       - type: text
         name: type
@@ -89,7 +76,7 @@ fields:
         default: code
       - type: text
         name: text
-        label: text
+        label: Text
       - type: text
         name: slug
         label: slug
@@ -97,7 +84,7 @@ fields:
         default: hackathon
     - type: field_group
       name: all
-      label: all
+      label: All
       fields:
       - type: text
         name: type
@@ -116,7 +103,7 @@ fields:
         default: button
       - type: text
         name: text
-        label: text
+        label: Text
       - type: text
         name: slug
         label: slug

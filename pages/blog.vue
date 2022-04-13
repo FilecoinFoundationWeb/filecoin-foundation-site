@@ -122,14 +122,15 @@ export default {
         const card = {
           type: 'E',
           img: post.image,
-          img_type: 'nuxt_link',
+          img_type: 'background_image',
+          action: 'nuxt-link',
+          url: `/${post.slug}`,
           title: post.title,
           description: post.description,
           date: post.date || post.createdAt,
           tags: post.tags,
           cta: {
             type: 'H',
-            action: 'nuxt-link',
             text: 'Read more',
             url: `/${post.slug}`
           }
@@ -239,6 +240,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
+  }
+
+  ::v-deep .card {
+    transform: scale(1);
+    transition: transform 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -358,6 +367,13 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #blogposts-section {
   padding-top: 1.75rem;
+  .card {
+    .image {
+      height: 47%;
+      @include borderRadius_Large;
+      overflow: hidden;
+    }
+  }
 }
 
 </style>

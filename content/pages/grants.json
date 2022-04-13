@@ -7,7 +7,8 @@
           "layout": "large",
           "cols": {
             "num": "col-4_sm-10",
-            "push_left": "off-0_sm-1"
+            "push_left": "off-0_sm-1",
+            "push_right": ""
           },
           "heading": "Grants",
           "subheading": "The Filecoin Foundation awards funding to critical development projects to foster a more robust and efficient decentralized web through the Filecoin ecosystem.",
@@ -17,15 +18,19 @@
               "action": "nuxt-link",
               "icon": "info",
               "text": "Request Info",
-              "url": "/get-involved"
+              "url": "/get-involved",
+              "theme": ""
             }
-          ]
+          ],
+          "label": "",
+          "description": ""
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-6_sm-12",
-            "push_left": "off-2_sm-1"
+            "push_left": "off-2_sm-1",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -45,7 +50,8 @@
               }
             }
           },
-          "src": "/images/page-grants/hero-image@2x.png"
+          "src": "/images/page-grants/hero-image@2x.png",
+          "label": ""
         }
       }
     },
@@ -56,10 +62,16 @@
           "layout": "large",
           "cols": {
             "num": "col-4_sm-6_mi-10",
-            "push_left": "off-0_sm-1"
+            "push_left": "off-0_sm-1",
+            "push_right": ""
           },
           "heading": "Developer Grants",
-          "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web."
+          "subheading": "The Foundation funds talented and eager teams that want to work with us to build a more robust, efficient, and decentralized web.",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         }
       },
       "gallery-1-cards": {
@@ -86,7 +98,8 @@
           "type": "slider_block",
           "cols": {
             "num": "col-4_mi-10",
-            "push_left": "off-2_sm-2_mi-1"
+            "push_left": "off-2_sm-2_mi-1",
+            "push_right": ""
           },
           "cards": [
             {
@@ -128,7 +141,8 @@
           "layout": "large",
           "cols": {
             "num": "col-10_mi-10",
-            "push_left": "off-2_mi-2"
+            "push_left": "off-2_mi-2",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -146,7 +160,12 @@
             }
           },
           "label": "Our Mission",
-          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action."
+          "description": "The Foundation's key role is to find ways for the Filecoin community to solve the problems we face as a community, and help facilitate collective action.",
+          "heading": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       }
     },
@@ -157,16 +176,23 @@
           "layout": "large",
           "cols": {
             "num": "col-4_mi-10",
-            "push_left": "off-0_sm-1"
+            "push_left": "off-0_sm-1",
+            "push_right": ""
           },
           "heading": "Community Grants",
-          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open-source communities.<br><br>Our initiatives seek to:"
+          "subheading": "The Filecoin Foundation and its sister organization the Filecoin Foundation for the Decentralized Web (FFDW) provide funding to build the greater decentralized web and open-source communities.<br><br>Our initiatives seek to:",
+          "label": "",
+          "description": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-4_mi-10",
-            "push_left": "off-4_sm-2_mi-1"
+            "push_left": "off-4_sm-2_mi-1",
+            "push_right": ""
           },
           "cards": [
             {
@@ -244,17 +270,20 @@
           "type": "video_block",
           "cols": {
             "num": "col-6_sm-10",
-            "push_left": "off-1"
+            "push_left": "off-1",
+            "push_right": ""
           },
           "preview_image": "/images/page-grants/grants-video-preview.png",
-          "url": "https://www.youtube.com/watch?v=-kxNpRiEd_c"
+          "url": "https://www.youtube.com/watch?v=-kxNpRiEd_c",
+          "tint": false
         },
         "right": {
           "type": "text_block",
           "layout": "small",
           "cols": {
             "num": "col-4_sm-10",
-            "push_left": "off-1"
+            "push_left": "off-1",
+            "push_right": ""
           },
           "label": "What We Do",
           "subheading": "Filecoin Plus: Incentivize Useful Storage on Filecoin",
@@ -266,9 +295,11 @@
               "action": "a",
               "target": "_blank",
               "text": "Learn More",
-              "url": "//docs.filecoin.io/store/filecoin-plus"
+              "url": "//docs.filecoin.io/store/filecoin-plus",
+              "icon": ""
             }
-          ]
+          ],
+          "heading": ""
         }
       }
     },
@@ -279,7 +310,8 @@
           "layout": "medium",
           "cols": {
             "num": "col-3_sm-10",
-            "push_left": "off-0_sm-1"
+            "push_left": "off-0_sm-1",
+            "push_right": ""
           },
           "heading": "Learn how to get involved in the Filecoin community",
           "description": "The Filecoin community includes thousands of developers, technologists, users, and enthusiasts all over the world.",
@@ -289,15 +321,19 @@
               "theme": "dark",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/get-involved"
+              "url": "/get-involved",
+              "icon": ""
             }
-          ]
+          ],
+          "label": "",
+          "subheading": ""
         },
         "right": {
           "type": "slider_block",
           "cols": {
             "num": "col-6_sm-10_mi-8_ti-10",
-            "push_left": "off-2_mi-3_ti-2"
+            "push_left": "off-2_mi-3_ti-2",
+            "push_right": ""
           },
           "customizations": {
             "background_layers": {
@@ -425,6 +461,34 @@
               }
             ]
           }
+        }
+      },
+      "type": "",
+      "component": "",
+      "props": {
+        "intro": {
+          "cols": {
+            "num": "",
+            "push_left": "",
+            "push_right": ""
+          },
+          "heading": "",
+          "text": "",
+          "type": "",
+          "action": "",
+          "theme": "",
+          "url": "",
+          "icon": ""
+        },
+        "events": {
+          "cols": {
+            "num": "",
+            "push_left": "",
+            "push_right": ""
+          },
+          "cards": [
+
+          ]
         }
       }
     }

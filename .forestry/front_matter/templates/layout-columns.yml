@@ -1,0 +1,28 @@
+---
+label: "[Layout] Columns"
+hide_body: false
+fields:
+- name: cols
+  type: field_group
+  config: {}
+  fields:
+  - name: num
+    type: text
+    config:
+      required: false
+    label: Number
+    description: Number of columns total. DO NOT EDIT.
+  - name: push_left
+    type: text
+    config:
+      required: false
+    label: Push Left
+    description: Columns that will be pushed to left. DO NOT EDIT.
+  - name: push_right
+    type: text
+    config:
+      required: false
+    label: Push Right
+    description: Columns that will be pushed to right. DO NOT EDIT.
+  label: Columns
+  description: Columns in layout. DO NOT EDIT
