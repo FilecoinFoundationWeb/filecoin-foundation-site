@@ -77,12 +77,6 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/filaustin",
-          "text": "Fil Austin"
-        },
-        {
-          "type": "X",
-          "action": "nuxt-link",
           "url": "/about/#explore_1",
           "text": "Advisors"
         },
