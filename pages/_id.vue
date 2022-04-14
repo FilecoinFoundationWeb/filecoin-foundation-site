@@ -135,7 +135,7 @@ export default {
 
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
-    // await store.dispatch('global/getBaseData', 'settings')
+    await store.dispatch('global/getBaseData', 'settings')
     await store.dispatch('global/getBaseData', { key: 'blog', data: BlogPageData })
   },
 
@@ -161,40 +161,41 @@ export default {
       return this.markdown.allPosts
     },
     postHeading () {
-      const section = {
-        id: 'post-heading',
-        grid: ['middle'],
-        left: {
-          type: 'text_block',
-          layout: 'large',
-          cols: {
-            num: 'col-5_md-9_mi-10',
-            push_left: 'off-0_md-2_ti-1'
+      return {
+        post_heading: {
+          id: 'post-heading',
+          grid: ['middle'],
+          left: {
+            type: 'text_block',
+            layout: 'large',
+            cols: {
+              num: 'col-5_md-9_mi-10',
+              push_left: 'off-0_md-2_ti-1'
+            },
+            heading: this.markdown.title,
+            subheading: this.markdown.description,
+            label: this.markdown.featured ? 'Featured Blog' : '',
+            date: this.markdown.date || this.markdown.createdAt,
+            ctas: [
+              {
+                type: 'H',
+                action: 'nuxt-link',
+                text: this.markdown.author,
+                icon: 'play',
+                url: `/${this.markdown.slug}`
+              }
+            ]
           },
-          heading: this.markdown.title,
-          subheading: this.markdown.description,
-          label: this.markdown.featured ? 'Featured Blog' : '',
-          date: this.markdown.date || this.markdown.createdAt,
-          ctas: [
-            {
-              type: 'H',
-              action: 'nuxt-link',
-              text: this.markdown.author,
-              icon: 'play',
-              url: `/${this.markdown.slug}`
+          right: {
+            type: 'image_block',
+            src: this.markdown.image,
+            cols: {
+              num: 'col-7_md-9_mi-10',
+              push_left: 'off-0_md-2_mi-1'
             }
-          ]
-        },
-        right: {
-          type: 'image_block',
-          src: this.markdown.image,
-          cols: {
-            num: 'col-7_md-9_mi-10',
-            push_left: 'off-0_md-2_mi-1'
           }
         }
       }
-      return [section]
     },
     postBody () {
       return this.markdown
@@ -229,13 +230,14 @@ export default {
             recommendedPosts.push({
               type: 'E',
               img: post.image,
-              img_type: 'nuxt_link',
+              img_type: 'background_image',
+              action: 'nuxt-link',
+              url: `/${post.slug}`,
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
               cta: {
                 type: 'H',
-                action: 'nuxt-link',
                 text: 'Read more',
                 url: `/${post.slug}`
               }
@@ -243,24 +245,23 @@ export default {
           }
         })
       }
-
-      const section = {
-        id: 'blogposts-list',
-        left: {
-          type: 'card_list_block',
-          cols: {
-            num: 'col-12_md-11_sm-10_mi-9_ti-10',
-            push_left: 'off-0_md-1_sm-2_ti-1'
-          },
-          display: {
-            initial: 3,
-            next: 3
-          },
-          cards: recommendedPosts
+      return {
+        recommended_posts: {
+          id: 'blogposts-list',
+          left: {
+            type: 'card_list_block',
+            cols: {
+              num: 'col-12_md-11_sm-10_mi-9_ti-10',
+              push_left: 'off-0_md-1_sm-2_ti-1'
+            },
+            display: {
+              initial: 3,
+              next: 3
+            },
+            cards: recommendedPosts
+          }
         }
       }
-
-      return [section]
     }
   }
 }
@@ -285,6 +286,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
+  }
+
+  ::v-deep .card {
+    transform: scale(1);
+    transition: transform 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -352,7 +361,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading {
+::v-deep #post-heading-section {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {
@@ -574,14 +583,18 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   justify-content: space-between;
 }
 
-::v-deep #blogposts-list {
+::v-deep #blogposts-section {
   padding-bottom: 3rem;
   .card {
     &.type__E {
       width: unset;
       margin: unset !important;
+      .image {
+        height: 47%;
+        @include borderRadius_Large;
+        overflow: hidden;
+      }
     }
   }
 }
-
 </style>

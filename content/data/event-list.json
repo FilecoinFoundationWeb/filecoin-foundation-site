@@ -5,16 +5,17 @@
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
     "img": "/images/fil-austin.png",
-    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "description": "FIL Austin is a one-day, two-track event that will bring together builders, developers, and contributors from across the Filecoin ecosystem!",
     "cta": {
       "target": "_blank",
-      "text": "Learn More",
+      "text": "Register",
       "type": "B",
       "action": "link",
       "theme": "light",
-      "url": "https://fil.org/filaustin",
-      "icon": "info"
-    }
+      "url": "https://events.bizzabo.com/filaustin",
+      "icon": "ticket"
+    },
+    "featured": true
   },
   {
     "type": "D",
@@ -31,7 +32,8 @@
       "theme": "",
       "url": "",
       "icon": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -48,13 +50,14 @@
       "theme": "",
       "url": "",
       "icon": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
     "event_type": "event",
     "title": "Filecoin Plus Day",
-    "date": "2022-05-10T23:00:24Z",
+    "date": "2022-05-11T06:00:24Z",
     "img": "/images/luma-_-fil-day.png",
     "description": "",
     "cta": {
@@ -65,7 +68,8 @@
       "theme": "",
       "url": "",
       "icon": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -82,7 +86,8 @@
       "theme": "light",
       "url": "https://www.youtube.com/watch?v=EHTFVtWDqJc&list=PLp3zrT1ewY0mvhUc7bvG2tsqHXYCukS9y",
       "icon": "play"
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -99,7 +104,8 @@
       "theme": "",
       "url": "",
       "icon": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -116,7 +122,8 @@
       "icon": "play",
       "text": "Watch Recording",
       "type": "B"
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -133,7 +140,8 @@
       "theme": "light",
       "url": "https://m.fil.org/filecoin-at-ethdenver",
       "icon": "info"
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -150,7 +158,8 @@
       "theme": "light",
       "url": "https://kencloud.com/hack.html",
       "icon": "ticket"
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -167,7 +176,8 @@
       "target": "_blank",
       "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
       "theme": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -187,7 +197,8 @@
       "url": "https://www.youtube.com/watch?v=B8lDaJcSiX0",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -204,7 +215,8 @@
       "url": "https://www.youtube.com/watch?v=JRsvz6pRtZE&t=454s",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -221,7 +233,8 @@
       "theme": ""
     },
     "img": "",
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -238,7 +251,8 @@
       "theme": ""
     },
     "img": "",
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -255,7 +269,8 @@
       "url": "https://www.youtube.com/watch?v=zGUIUVN75gA",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -272,7 +287,8 @@
       "url": "https://www.youtube.com/watch?v=LU_WjU0mUuM",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -289,7 +305,8 @@
       "theme": ""
     },
     "img": "",
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -310,7 +327,8 @@
       "target": "_blank",
       "url": "https://www.encode.club/filecoin-club",
       "theme": ""
-    }
+    },
+    "featured": false
   },
   {
     "type": "D",
@@ -330,7 +348,8 @@
       "theme": ""
     },
     "img": "",
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -350,7 +369,8 @@
       "theme": ""
     },
     "img": "",
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -370,7 +390,8 @@
       "url": "https://events.protocol.ai/2021/browsers3000/",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -390,7 +411,8 @@
       "url": "https://www.nftvisionhack.com/",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   },
   {
     "type": "D",
@@ -410,6 +432,7 @@
       "url": "https://www.eventbrite.com/e/share-115k-prizes-filecoin-grant-online-hackathon-may-1-july-18-registration-159309796891",
       "theme": ""
     },
-    "description": ""
+    "description": "",
+    "featured": false
   }
 ]

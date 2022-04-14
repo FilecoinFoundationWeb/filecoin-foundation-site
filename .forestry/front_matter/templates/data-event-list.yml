@@ -25,6 +25,13 @@ fields:
         file: 
         path: 
     label: Event Type
+  - name: featured
+    type: boolean
+    label: Featured
+    default: false
+    description: Set this event to be the featured event. If selected, you must manually
+      verify all other events are not set to 'featured', i.e. de-select 'featured'
+      on all other events - there can only be one featured event at a time!
   - type: text
     name: title
     label: Title

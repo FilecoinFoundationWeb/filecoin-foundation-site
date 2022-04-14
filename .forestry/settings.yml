@@ -37,6 +37,12 @@ sections:
   create: all
   match: "**/*"
   new_doc_ext: json
+- type: directory
+  path: content/blog
+  label: Blog Posts
+  create: all
+  match: "**/*"
+  new_doc_ext: json
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

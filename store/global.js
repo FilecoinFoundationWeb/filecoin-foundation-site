@@ -1,7 +1,7 @@
 // ///////////////////////////////////////////////////////////////////// Imports
 // -----------------------------------------------------------------------------
 import GeneralSiteData from '@/content/pages/general.json'
-// import Settings from '@/content/data/settings.json'
+import Settings from '@/content/data/settings.json'
 
 // /////////////////////////////////////////////////////////////////////// State
 // -----------------------------------------------------------------------------
@@ -30,7 +30,7 @@ const actions = {
     let data = false
     switch (key) {
       case 'general': data = GeneralSiteData; break
-      // case 'settings': data = Settings; break
+      case 'settings': data = Settings; break
       default : data = payload.data; break
     }
     if (data) {
