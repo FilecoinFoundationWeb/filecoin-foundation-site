@@ -32,6 +32,7 @@
     "focus-visible": "^5.2.0",
     "fs-extra": "^10.0.0",
     "imports-loader": "^3.0.0",
+    "klaw": "^4.0.1",
     "mobile-device-detect": "^0.4.3",
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.4",
