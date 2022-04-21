@@ -61,7 +61,7 @@ const setBackgroundLayerWidth = (instance) => {
 
 const viewportEntryCheck = (instance) => {
   if (instance.$refs.container && typeof window !== 'undefined' && typeof document !== 'undefined') {
-    const rect = instance.$refs.container.getBoundingClientRect();
+    const rect = instance.$refs.container.getBoundingClientRect()
     const elementIsInViewport = (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     if (!instance.startAnimation && elementIsInViewport) {
       instance.startAnimation = true
