@@ -73,7 +73,8 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true
               }
             }
           },
