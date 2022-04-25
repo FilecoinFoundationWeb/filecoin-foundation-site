@@ -5,15 +5,15 @@
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
     "img": "/images/fil-austin.png",
-    "description": "Filecoin Foundation’s inaugural in-person summit brings together the entire Filecoin community! This one-day, two-track event will convene IRL builders, developers, and partners from across the ecosystem for workshops, panels, and tutorials devoted to building and expanding the Filecoin network.",
+    "description": "FIL Austin is a one-day, two-track event that will bring together builders, developers, and contributors from across the Filecoin ecosystem!",
     "cta": {
       "target": "_blank",
-      "text": "Learn More",
+      "text": "Register",
       "type": "B",
       "action": "link",
       "theme": "light",
-      "url": "https://fil.org/filaustin",
-      "icon": "info"
+      "url": "https://events.bizzabo.com/filaustin",
+      "icon": "ticket"
     },
     "featured": true
   },
@@ -57,7 +57,7 @@
     "type": "D",
     "event_type": "event",
     "title": "Filecoin Plus Day",
-    "date": "2022-05-10T23:00:24Z",
+    "date": "2022-05-11T06:00:24Z",
     "img": "/images/luma-_-fil-day.png",
     "description": "",
     "cta": {
