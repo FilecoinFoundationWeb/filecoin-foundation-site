@@ -74,7 +74,8 @@
                   "medium": null,
                   "mini": null
                 },
-                "animate": true
+                "animate": true,
+                "resetElement": "section_2"
               }
             }
           },
@@ -153,7 +154,9 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true,
+                "resetElement": "section_2"
               }
             }
           },
@@ -522,7 +525,8 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true
               }
             }
           },

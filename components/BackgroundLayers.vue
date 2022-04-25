@@ -5,7 +5,7 @@
 
     <div
       v-for="(layer, i) in layers"
-      :key="layer.color"
+      :key="`layer-${i}_refresh-${key}`"
       :class="[
         'layer',
         `shadow__${layer.index}`,
@@ -13,6 +13,7 @@
         `border-radius-direction-${borderRadiusDirection}`,
         { reverse },
         { animate },
+        { 'top-layer': i === 0 },
         { 'is-in-viewport': startAnimation }
       ]"
       :style="layerStyle(i + 1, layer.color)">
@@ -62,9 +63,20 @@ const setBackgroundLayerWidth = (instance) => {
 const viewportEntryCheck = (instance) => {
   if (instance.$refs.container && typeof window !== 'undefined' && typeof document !== 'undefined') {
     const rect = instance.$refs.container.getBoundingClientRect()
-    const elementIsInViewport = (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    const elementIsInViewport = (rect.top + rect.height / 2 >= 150 && rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight) - 150)
+
+    const reset = document.getElementById(instance.resetElement)?.getBoundingClientRect()
+    const resetIsInViewport = reset ? reset.top >= 0 && reset.top <= (window.innerHeight || document.documentElement.clientHeight) : false
+
     if (!instance.startAnimation && elementIsInViewport) {
       instance.startAnimation = true
+      setTimeout(() => {
+        instance.endAnimation = true
+      }, instance.duration * 1000 + instance.layers.length * 75)
+    } else if (resetIsInViewport && instance.startAnimation && instance.endAnimation) {
+      instance.startAnimation = false
+      instance.endAnimation = false
+      instance.key++
     }
   }
 }
@@ -110,6 +122,16 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    duration: {
+      type: Number,
+      required: false,
+      default: 1.5
+    },
+    resetElement: {
+      type: String,
+      required: false,
+      default: ''
     }
   },
 
@@ -120,7 +142,9 @@ export default {
       borderRadius: 12.75,
       resize: false,
       scroll: false,
-      startAnimation: false
+      startAnimation: false,
+      endAnimation: false,
+      key: 0
     }
   },
 
@@ -156,16 +180,22 @@ export default {
     layerStyle (index, color) {
       const w = `width: calc(100% + ${2 * index * this.layerWidth}rem);`
       const h = `height: calc(100% + ${2 * index * this.layerWidth}rem);`
-      const fw = `--finalWidth: calc(100% + ${2 * index * this.layerWidth}rem);`
-      const fh = `--finalHeight: calc(100% + ${2 * index * this.layerWidth}rem);`
       const t = `top: ${-1 * index * this.layerWidth}rem;`
       const l = `left: ${-1 * index * this.layerWidth}rem;`
       const z = `z-index: ${-1 * index};`
       const c = `background-color: ${color};`
       const b = `border-radius: ${this.borderRadius + (this.layerWidth * (index - 1))}rem;`
+
+      if (!this.animate) {
+        return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
+      }
+
+      const fw = `--finalWidth: calc(100% + ${2 * index * this.layerWidth}rem);`
+      const fh = `--finalHeight: calc(100% + ${2 * index * this.layerWidth}rem);`
       const x = `--startPosX: ${index * this.layerWidth}rem;`
       const y = `--startPosY: ${index * this.layerWidth}rem;`
-      const d = `animation-delay: ${index * 75}ms`
+      const d = `animation-delay: ${index * 75}ms;`
+
       return `${w} ${h} ${fw} ${fh} ${t} ${l} ${z} ${c} ${b} ${x} ${y} ${d}`
     }
   }
@@ -202,12 +232,17 @@ export default {
   --startPosY: 0;
   --finalWidth: 100%;
   --finalHeight: 100%;
-  animation-duration: 0.75s;
+  width: 100%;
+  height: 100%;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-name: bubble;
   animation-play-state: paused;
   animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
+  &:not(.top-layer) {
+    opacity: 0;
+  }
   &.is-in-viewport {
     animation-play-state: running;
   }
@@ -218,11 +253,13 @@ export default {
     width: 100%;
     height: 100%;
     transform: translate(var(--startPosX), var(--startPosY));
+    opacity: 1;
   }
   to {
     width: --finalWidth;
     height: --finalHeight;
     transform: translate(0, 0);
+    opacity: 1;
   }
 }
 </style>
