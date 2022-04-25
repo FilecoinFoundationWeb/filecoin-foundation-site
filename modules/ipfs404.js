@@ -33,11 +33,11 @@ const saveGenerated404 = async (generateRoot, generate404Path) => {
   if (htmlFiles.length) {
     const sourcePath = htmlFiles[0]
     const sourceContents = Fs.readFileSync(sourcePath, 'utf8', (err, data) => {
-      if (err) throw err;
-      return data;
+      if (err) { throw err }
+      return data
     })
     Fs.writeFileSync(`${generateRoot}/ipfs-404.html`, sourceContents, (err) => {
-      if (err) throw err;
+      if (err) { throw err }
     })
   }
 }
