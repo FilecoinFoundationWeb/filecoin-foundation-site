@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: heading
@@ -12,14 +12,6 @@ sections:
 - type: heading
   label: Content
 - type: directory
-  path: content/blog
-  label: Blog
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - blog-post-front-matter
-- type: directory
   path: content/pages
   label: Pages
   create: documents
@@ -27,9 +19,9 @@ sections:
   exclude: general.json
   new_doc_ext: json
   templates:
+  - page-fil-austin
   - page-index
   - page-grants
-  - page-terms
   - page-policy
   - page-governance
   - page-about
@@ -39,14 +31,30 @@ sections:
   - page-basic-template-1
   - page-basic-template-2
   - page-get-involved
+- type: directory
+  path: content/data
+  label: Data
+  create: all
+  match: "**/*"
+  new_doc_ext: json
+- type: directory
+  path: content/blog
+  label: Blog Posts
+  create: all
+  match: "**/*"
+  new_doc_ext: json
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  install_dependencies_command: npm install
-  preview_docker_image: forestryio/node:12
+  preview_env:
+  - NODE_ENV=production
+  - SERVER_ENV=production
+  preview_output_directory: dist
+  install_dependencies_command: npm ci
+  preview_docker_image: forestryio/node:16
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run generate

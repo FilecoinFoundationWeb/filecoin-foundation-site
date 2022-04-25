@@ -7,19 +7,26 @@
           "layout": "large",
           "cols": {
             "num": "col-5_md-9_mi-10",
-            "push_left": "off-0_md-2_ti-1"
+            "push_left": "off-0_md-2_ti-1",
+            "push_right": ""
           },
           "heading": "Lorem Ipsum",
           "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-          "label": "Lorem ipsum dolor"
+          "label": "Lorem ipsum dolor",
+          "description": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-7_md-9_mi-10",
-            "push_left": "off-0_md-2_mi-1"
+            "push_left": "off-0_md-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/basic-1/basic-1-hero-image.png"
+          "src": "/images/basic-1/basic-1-hero-image.png",
+          "label": ""
         },
         "grid": [
           "middle"
@@ -34,11 +41,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "label": "Sed ut perspiciatis",
           "heading": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "banner_image": {
@@ -47,9 +59,11 @@
           "type": "image_block",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
-          "src": "/images/basic-1/basic-1-example-image.png"
+          "src": "/images/basic-1/basic-1-example-image.png",
+          "label": ""
         }
       },
       "basic_content_2": {
@@ -59,10 +73,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "heading": "Sed ut perspiciatis",
-          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione."
+          "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "panels_1": {
@@ -70,20 +90,27 @@
           "layout": "medium",
           "cols": {
             "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "label": "Sed ut perspiciatis",
           "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "type": "text_block"
+          "type": "text_block",
+          "subheading": "",
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
           "cols": {
             "num": "col-6_md-5_sm-7_mi-8",
-            "push_left": "off-1_mi-2_sm-2_mi-1"
+            "push_left": "off-1_mi-2_sm-2_mi-1",
+            "push_right": ""
           },
-          "src": "/images/square-connection.png"
+          "src": "/images/square-connection.png",
+          "label": ""
         }
       },
       "basic_content_3": {
@@ -93,10 +120,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "basic_content_4": {
@@ -106,10 +139,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "heading": "Architecto beatae vitae dicta sunt explicabo",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       },
       "basic_content_5": {
@@ -119,10 +158,16 @@
           "layout": "large",
           "cols": {
             "num": "col-10_ti-11",
-            "push_left": "off-1_md-2_ti-1"
+            "push_left": "off-1_md-2_ti-1",
+            "push_right": ""
           },
           "heading": "Nemo enim ipsam voluptatem",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
         }
       }
     },
@@ -182,6 +227,34 @@
               }
             ]
           }
+        }
+      },
+      "type": "",
+      "component": "",
+      "props": {
+        "intro": {
+          "cols": {
+            "num": "",
+            "push_left": "",
+            "push_right": ""
+          },
+          "heading": "",
+          "text": "",
+          "type": "",
+          "action": "",
+          "theme": "",
+          "url": "",
+          "icon": ""
+        },
+        "events": {
+          "cols": {
+            "num": "",
+            "push_left": "",
+            "push_right": ""
+          },
+          "cards": [
+
+          ]
         }
       }
     }

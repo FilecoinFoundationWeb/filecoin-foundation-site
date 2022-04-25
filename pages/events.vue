@@ -57,6 +57,16 @@ const sortEventsByDate = (events) => {
   })
 }
 
+const positionFeaturedFirst = (events) => {
+  const index = events.findIndex(item => item.featured)
+  if (index === 0 || index > 0) {
+    const featured = events[index]
+    events.splice(index, 1)
+    events.unshift(featured)
+  }
+  return events
+}
+
 // ====================================================================== Export
 export default {
   name: 'PageEvents',
@@ -102,8 +112,13 @@ export default {
     events () {
       const events = CloneDeep(this.siteContent.event_list)
       const selected = this.selected
-      if (selected === 'all') { return sortEventsByDate(events) }
-      return sortEventsByDate(events.filter(obj => obj.event_type === selected))
+      let sorted
+      if (selected === 'all') {
+        sorted = sortEventsByDate(events)
+        return positionFeaturedFirst(sorted)
+      }
+      sorted = sortEventsByDate(events.filter(obj => obj.event_type === selected))
+      return positionFeaturedFirst(sorted)
     },
     block () {
       return {

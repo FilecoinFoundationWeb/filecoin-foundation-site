@@ -40,13 +40,30 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 import BlogPageData from '@/content/pages/blog.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
+
+// =================================================================== Functions
+const unslugify = (slug, type = 'capitalize-first-character') => {
+  if (type === 'capitalize-first-character') {
+    const string = slug.toString().replace(/-/g, ' ')
+    return string.charAt(0).toUpperCase() + string.substring(1)
+  } else if (type === 'capitalize-all') {
+    return slug.toString()
+      .split('-')
+      .map(a => a.charAt(0).toUpperCase() + a.substring(1))
+      .join(' ')
+  } else if (type === 'no-capitals') {
+    return slug.toString().replace(/-/g, ' ')
+  } else {
+    return 'Incompatible "Type" specified. Must be type "capitalize-first-character", "capitalize-all" or "no-capitals". Default is "capitalize-first-character"'
+  }
+}
 
 // ====================================================================== Export
 export default {
@@ -105,13 +122,15 @@ export default {
         const card = {
           type: 'E',
           img: post.image,
-          img_type: 'nuxt_link',
+          img_type: 'background_image',
+          action: 'nuxt-link',
+          url: `/${post.slug}`,
           title: post.title,
           description: post.description,
           date: post.date || post.createdAt,
+          tags: post.tags,
           cta: {
             type: 'H',
-            action: 'nuxt-link',
             text: 'Read more',
             url: `/${post.slug}`
           }
@@ -175,6 +194,29 @@ export default {
       }
       return { section }
     }
+  },
+
+  watch: {
+    '$route' (route) {
+      if (route.query.hasOwnProperty('tags')) {
+        const value = unslugify(route.query.tags, 'capitalize-all')
+        this.setFilterValue(value)
+      }
+    }
+  },
+
+  mounted () {
+    if (this.$route.query.hasOwnProperty('tags')) {
+      const value = unslugify(this.$route.query.tags, 'capitalize-all')
+      this.setFilterValue(value)
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      setFilterValue: 'core/setFilterValue',
+      setRouteQuery: 'filters/setRouteQuery'
+    })
   }
 }
 </script>
@@ -198,6 +240,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
+  }
+
+  ::v-deep .card {
+    transform: scale(1);
+    transition: transform 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -317,6 +367,13 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 ::v-deep #blogposts-section {
   padding-top: 1.75rem;
+  .card {
+    .image {
+      height: 47%;
+      @include borderRadius_Large;
+      overflow: hidden;
+    }
+  }
 }
 
 </style>

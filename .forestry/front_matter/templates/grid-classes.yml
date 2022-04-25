@@ -1,5 +1,5 @@
 ---
-label: "[Comp] Grid Classes"
+label: "[Layout] Grid Classes"
 hide_body: true
 fields:
 - name: grid
@@ -26,3 +26,4 @@ fields:
     - equalHeight
     - noBottom
   label: Grid Classes
+  description: Changes CSS classes. DO NOT EDIT

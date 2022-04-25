@@ -1,0 +1,23 @@
+---
+label: "[Data] SEO"
+hide_body: true
+fields:
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The title for this web page
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+    description: Description for this web page
+  label: SEO
+  description: Populate the metadata associated with this content, like the page title
+    and description.

@@ -7,6 +7,7 @@ fields:
   config:
     required: false
   label: Section ID
+  description: CSS IDs of section. DO NOT EDIT
 - name: grid
   type: list
   config:
@@ -14,14 +15,17 @@ fields:
     min: 
     max: 
   label: Grid Classes
+  description: Classes of grids in subsection. DO NOT EDIT.
 - name: classNames
   type: text
   config:
     required: false
   label: Class Names
+  description: Class names of subsection. DO NOT EDIT
 - name: left
   type: blocks
   label: Left Block
+  description: Blocks that are positioned left. DO NOT EDIT
   template_types:
   - text-block
   - image-block
@@ -32,6 +36,7 @@ fields:
 - name: right
   type: blocks
   label: Right Block
+  description: Blocks that are position right. DO NOT EDIT
   template_types:
   - text-block
   - image-block
@@ -42,6 +47,7 @@ fields:
 - name: custom
   type: blocks
   label: Custom
+  description: Custom blocks. DO NOT EDIT
   template_types:
   - events-hackathons
   config:
