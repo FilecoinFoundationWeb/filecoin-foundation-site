@@ -215,6 +215,9 @@ export default {
       .social-icon {
         align-items: center;
         width: auto;
+        &:hover {
+          transform: scale(1.1);
+        }
         &:not(:last-child) {
           margin-right: 0;
           margin-bottom: 1rem;

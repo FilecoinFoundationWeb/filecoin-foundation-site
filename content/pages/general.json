@@ -256,5 +256,24 @@
       ],
       "copyright_text": "Content on this site is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a>."
     }
+  },
+  "error_page": {
+    "type": "text_block",
+    "layout": "large",
+    "cols": {
+      "num": "col-7_md-9",
+      "push_left": "off-3"
+    },
+    "label": "404",
+    "heading": "Whoops, this page doesn't exist!",
+    "ctas": [
+      {
+        "type": "D",
+        "action": "nuxt-link",
+        "text": "Back to Home",
+        "url": "/",
+        "theme": "dark"
+      }
+    ]
   }
 }

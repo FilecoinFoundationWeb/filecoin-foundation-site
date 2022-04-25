@@ -4,7 +4,7 @@
     <section class="site-footer-section-top">
 
       <div class="grid-middle">
-        <div class="col-4_mi-8_ti-10" data-push-left="off-2">
+        <div class="col-4_mi-8_ti-10" data-push-left="off-2_sm-3_mi-2">
           <div class="footer-content left">
 
             <div
@@ -16,7 +16,7 @@
 
           </div>
         </div>
-        <div class="col-5_mi-8_ti-10" data-push-left="off-1_sm-2">
+        <div class="col-5_mi-8_ti-10" data-push-left="off-1_sm-3_mi-2">
           <div class="footer-content right">
 
             <nav class="navigation">
@@ -39,12 +39,13 @@
         layers-array="1_2_3_4_5_6"
         :offset="{ mini: 0.25 }"
         shadow-strength="small"
-        border-radius-direction="reverse" />
+        border-radius-direction="reverse"
+        :breakpoints="footerLayersBreakpointData" />
 
     </section>
 
     <div class="grid">
-      <div class="col-12_sm-4_mi-8_ti-10" data-push-left="off-1_sm-2">
+      <div class="col-12_sm-4_mi-8_ti-10" data-push-left="off-1_sm-3_mi-2">
         <div class="panel-bottom-content">
 
           <nav class="panel-bottom-navigation">
@@ -82,6 +83,21 @@ export default {
     Button,
     SocialIcons,
     BackgroundLayers
+  },
+
+  data () {
+    return {
+      footerLayersBreakpointData: {
+        default: {
+          stroke: 1.5,
+          radius: 21
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 8
+        }
+      }
+    }
   },
 
   computed: {
