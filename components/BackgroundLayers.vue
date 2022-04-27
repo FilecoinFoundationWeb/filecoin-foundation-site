@@ -72,7 +72,7 @@ const viewportEntryCheck = (instance) => {
       instance.startAnimation = true
       setTimeout(() => {
         instance.endAnimation = true
-      }, instance.duration * 1000 + instance.layers.length * 75)
+      }, instance.duration + (instance.layers.length * instance.duration * instance.delayFactor))
     } else if (resetIsInViewport && instance.startAnimation && instance.endAnimation) {
       instance.startAnimation = false
       instance.endAnimation = false
@@ -123,10 +123,10 @@ export default {
       required: false,
       default: false
     },
-    duration: {
+    duration: { // animation duration in milliseconds
       type: Number,
       required: false,
-      default: 1.5
+      default: 1500
     },
     resetElement: {
       type: String,
@@ -144,7 +144,8 @@ export default {
       scroll: false,
       startAnimation: false,
       endAnimation: false,
-      key: 0
+      key: 0,
+      delayFactor: 0.3
     }
   },
 
@@ -190,13 +191,13 @@ export default {
         return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
       }
 
+      const iw = `--initialWidth: calc(100% + ${2 * this.layerWidth}rem);`
       const fw = `--finalWidth: calc(100% + ${2 * index * this.layerWidth}rem);`
-      const fh = `--finalHeight: calc(100% + ${2 * index * this.layerWidth}rem);`
-      const x = `--startPosX: ${index * this.layerWidth}rem;`
-      const y = `--startPosY: ${index * this.layerWidth}rem;`
-      const d = `animation-delay: ${index * 75}ms;`
+      const x = `--startPosX: ${(index - 1) * this.layerWidth}rem;`
+      const y = `--startPosY: ${(index - 1) * this.layerWidth}rem;`
+      const d = `animation-delay: ${(index - 1) * this.duration * this.delayFactor}ms;`
 
-      return `${w} ${h} ${fw} ${fh} ${t} ${l} ${z} ${c} ${b} ${x} ${y} ${d}`
+      return `${w} ${h} ${iw} ${fw} ${t} ${l} ${z} ${c} ${b} ${x} ${y} ${d}`
     }
   }
 }
@@ -230,8 +231,8 @@ export default {
 .animate {
   --startPosX: 0;
   --startPosY: 0;
+  --initialWidth: 100%;
   --finalWidth: 100%;
-  --finalHeight: 100%;
   width: 100%;
   height: 100%;
   animation-duration: 1.5s;
@@ -239,7 +240,8 @@ export default {
   animation-fill-mode: forwards;
   animation-name: bubble;
   animation-play-state: paused;
-  animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
+  // animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
+  animation-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.3);
   &:not(.top-layer) {
     opacity: 0;
   }
@@ -250,14 +252,14 @@ export default {
 
 @keyframes bubble {
   from {
-    width: 100%;
-    height: 100%;
+    width: var(--initialWidth);
+    height: var(--initialWidth);
     transform: translate(var(--startPosX), var(--startPosY));
     opacity: 1;
   }
   to {
-    width: --finalWidth;
-    height: --finalHeight;
+    width: var(--finalWidth);
+    height: var(--finalWidth);
     transform: translate(0, 0);
     opacity: 1;
   }
