@@ -1,7 +1,8 @@
 <template>
   <div
     ref="container"
-    class="background-layers">
+    class="background-layers"
+    :style="`--animationDuration: ${duration}ms;`">
 
     <div
       v-for="(layer, i) in layers"
@@ -206,47 +207,52 @@ export default {
 
 <style lang="scss" scoped>
 // ////////////////////////////////////////////////////////////////////// Layers
-.layer {
-  position: absolute;
-  &.shadow-strength-small {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
-  }
-  &.shadow-strength-large {
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  }
-  &.reverse {
-    filter: none;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
-  }
-  &.border-radius-direction-forward {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-  }
-  &.border-radius-direction-reverse {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-  }
-}
+.background-layers {
+  --animationDuration: 1.5s;
 
-.animate {
-  --startPosX: 0;
-  --startPosY: 0;
-  --initialWidth: 100%;
-  --finalWidth: 100%;
-  width: 100%;
-  height: 100%;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-name: bubble;
-  animation-play-state: paused;
-  // animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
-  animation-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.3);
-  &:not(.top-layer) {
-    opacity: 0;
+  .layer {
+    position: absolute;
+
+    &.shadow-strength-small {
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+    }
+    &.shadow-strength-large {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    }
+    &.reverse {
+      filter: none;
+      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+    }
+    &.border-radius-direction-forward {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    &.border-radius-direction-reverse {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
   }
-  &.is-in-viewport {
-    animation-play-state: running;
+
+  .animate {
+    --startPosX: 0;
+    --startPosY: 0;
+    --initialWidth: 100%;
+    --finalWidth: 100%;
+    width: 100%;
+    height: 100%;
+    animation-duration: var(--animationDuration);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: bubble;
+    animation-play-state: paused;
+    // animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
+    animation-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.3);
+    &:not(.top-layer) {
+      opacity: 0;
+    }
+    &.is-in-viewport {
+      animation-play-state: running;
+    }
   }
 }
 
