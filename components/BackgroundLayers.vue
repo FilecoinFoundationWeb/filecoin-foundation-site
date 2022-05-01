@@ -127,7 +127,7 @@ export default {
     duration: { // animation duration in milliseconds
       type: Number,
       required: false,
-      default: 1500
+      default: 1000
     },
     resetElement: {
       type: String,
