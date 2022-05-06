@@ -22,7 +22,8 @@
           "type": "video_block",
           "cols": {
             "num": "col-6_sm-9_mi-10",
-            "push_left": "off-0_sm-2_mi-1"
+            "push_left": "off-0_sm-2_mi-1",
+            "push_right": ""
           },
           "tint": true,
           "subtext": {
@@ -140,7 +141,10 @@
                     "radius": 12.75
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "mini": null
+                }
               }
             }
           },
@@ -204,32 +208,93 @@
           "type": "slider_block",
           "cols": {
             "num": "col-10_sm-8_mi-11_ti-8",
-            "push_left": "off-1_sm-2_mi-1_ti-2"
+            "push_left": "off-1_sm-2_mi-1_ti-2",
+            "push_right": ""
           },
           "cards": [
             {
               "type": "B",
               "img": "/images/about/marta-belcher@2x.png",
               "title": "Marta Belcher",
-              "description": "General Counsel, Protocol Labs (Board Chair)"
+              "description": "General Counsel, Protocol Labs (Board Chair)",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/about/marcia-hofmann@2x.png",
               "title": "Marcia Hofmann",
-              "description": "Electronic Privacy Attorney"
+              "description": "Electronic Privacy Attorney",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/about/brian-behlendorf@2x.png",
               "title": "Brian Behlendorf",
-              "description": "Executive Director, Hyperledger"
+              "description": "Executive Director, Hyperledger",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/about/nicole-wong@2x.png",
               "title": "Nicole Wong",
-              "description": "Former Deputy U.S. Chief Technology Officer"
+              "description": "Former Deputy U.S. Chief Technology Officer",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         }
@@ -279,7 +344,12 @@
                     "radius": 5
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "border-radius": null,
+                "offset": {
+                  "small": null,
+                  "mini": null
+                }
               }
             }
           },
@@ -288,43 +358,148 @@
               "type": "C",
               "img": "/images/about/katiebiber.png",
               "img_size": "full",
-              "description": "<b>Katie Biber</b>General Counsel, Brex"
+              "description": "<b>Katie Biber</b>General Counsel, Brex",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
               "img": "/images/about/alex-feerst@2x.png",
               "img_size": "full",
-              "description": "<b>Alex Feerst</b>CEO, Murmuration Labs"
+              "description": "<b>Alex Feerst</b>CEO, Murmuration Labs",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
               "img": "/images/about/wendy-hanamura@2x.png",
               "img_size": "full",
-              "description": "<b>Wendy Hanamura</b>Director of Partnerships, Internet Archive"
+              "description": "<b>Wendy Hanamura</b>Director of Partnerships, Internet Archive",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
               "img": "/images/about/brewster-kahle@2x.png",
               "img_size": "full",
-              "description": "<b>Brewster Kahle</b>Founder, Internet Archive"
+              "description": "<b>Brewster Kahle</b>Founder, Internet Archive",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
               "img": "/images/about/joe-lubin@2x.png",
               "img_size": "full",
-              "description": "<b>Joe Lubin</b>Founder of ConsenSys and Cofounder of Ethereum"
+              "description": "<b>Joe Lubin</b>Founder of ConsenSys and Cofounder of Ethereum",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
-              "img": "/images/about/georgia-quinn@2x.png",
+              "img": "/images/georgia_quinn_updated.jpg",
               "img_size": "full",
-              "description": "<b>Georgia Quinn</b>General Counsel, Anchorage"
+              "description": "<b>Georgia Quinn</b>General Counsel, Anchorage",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "C",
               "img": "/images/about/sandra-ro@2x.png",
               "img_size": "full",
-              "description": "<b>Sandra Ro</b>CEO, Global Blockchain Business Council"
+              "description": "<b>Sandra Ro</b>CEO, Global Blockchain Business Council",
+              "date": "",
+              "label": "",
+              "title": "",
+              "img_type": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         },
