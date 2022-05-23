@@ -27,7 +27,8 @@
                   <div
                     v-for="(item, index) in postTags"
                     :key="`${item}-${index}`"
-                    class="tag">
+                    class="tag"
+                    @click="setTagsQuery(item)">
                     {{ item }}
                   </div>
                 </div>
@@ -81,7 +82,7 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
@@ -236,6 +237,7 @@ export default {
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
+              tags: post.tags,
               cta: {
                 type: 'H',
                 text: 'Read more',
@@ -262,6 +264,19 @@ export default {
           }
         }
       }
+    }
+  },
+
+  methods: {
+    ...mapActions({
+      clearAllTags: 'filters/clearAllTags',
+      setRouteQuery: 'filters/setRouteQuery'
+    }),
+    setTagsQuery (val) {
+      const slug = this.$Slugify(val)
+      this.clearAllTags()
+      this.setRouteQuery({ key: 'tags', data: slug })
+      this.$router.push('/blog')
     }
   }
 }

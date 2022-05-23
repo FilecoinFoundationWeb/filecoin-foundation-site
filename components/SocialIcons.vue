@@ -73,6 +73,11 @@ export default {
 
 .social-icon {
   width: 2rem;
+  transition: 250ms ease-out;
+  &:hover {
+    transition: 250ms ease-in;
+    transform: scale(1.2);
+  }
   &:not(:last-child) {
     margin-right: 1rem;
   }
