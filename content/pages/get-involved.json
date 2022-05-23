@@ -75,27 +75,6 @@
           },
           "cards": [
             {
-              "date": "",
-              "label": "San Francisco, Remote",
-              "type": "D",
-              "title": "More Openings Coming Soon...",
-              "cta": {
-                "text": "See All",
-                "action": "link",
-                "theme": "light",
-                "url": "https://jobs.lever.co/filecoin",
-                "icon": "info",
-                "type": ""
-              },
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "",
-              "url": "",
-              "target": ""
-            },
-            {
               "type": "D",
               "date": "",
               "label": "San Francisco, Remote",
@@ -108,6 +87,27 @@
                 "text": "Apply Now",
                 "url": "https://jobs.lever.co/filecoin/0a9f641a-bdee-4e6b-a4a3-ab9d6c09c86e",
                 "theme": ""
+              },
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": ""
+            },
+            {
+              "date": "",
+              "label": "San Francisco, Remote",
+              "type": "D",
+              "title": "More Openings Coming Soon...",
+              "cta": {
+                "text": "See All",
+                "action": "link",
+                "theme": "light",
+                "url": "https://jobs.lever.co/filecoin",
+                "icon": "info",
+                "type": ""
               },
               "description": "",
               "img": "",
