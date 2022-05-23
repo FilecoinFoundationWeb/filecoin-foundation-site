@@ -78,66 +78,22 @@
               "type": "D",
               "date": "",
               "label": "San Francisco, Remote",
-              "title": "Communications Associate",
+              "title": "Technical Program Manager for Security",
               "cta": {
                 "type": "B",
-                "action": "a",
+                "action": "",
                 "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/980b4d88-6cff-4221-9ebe-b1634ae8a516",
+                "url": "https://jobs.lever.co/filecoin/0a9f641a-bdee-4e6b-a4a3-ab9d6c09c86e",
                 "theme": ""
               },
               "description": "",
               "img": "",
               "img_type": "",
               "img_size": "",
-              "action": "",
-              "url": "",
-              "target": ""
-            },
-            {
-              "type": "D",
-              "date": "",
-              "label": "San Francisco, Remote",
-              "title": "Developer Grants Coordinator",
-              "cta": {
-                "type": "B",
-                "action": "a",
-                "target": "_blank",
-                "icon": "plus",
-                "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/97883211-62bb-4ccd-8d3c-c7f13a3ab1f1",
-                "theme": ""
-              },
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "",
-              "url": "",
-              "target": ""
-            },
-            {
-              "type": "D",
-              "date": "",
-              "label": "San Francisco, Remote",
-              "title": "Program Manager, Filecoin Developer Grants",
-              "cta": {
-                "type": "B",
-                "action": "a",
-                "target": "_blank",
-                "icon": "plus",
-                "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/59ad6f75-2158-4ae8-aada-9cd551aa7594",
-                "theme": ""
-              },
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "",
-              "url": "",
+              "action": "a",
+              "url": "https://jobs.lever.co/filecoin/0a9f641a-bdee-4e6b-a4a3-ab9d6c09c86e",
               "target": ""
             }
           ]
@@ -189,7 +145,10 @@
                     "radius": 5
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "mini": null
+                }
               }
             }
           },
@@ -201,7 +160,19 @@
               "img": "/images/calendar.png",
               "title": "Attend an event",
               "description": "Join or watch a Filecoin ecosystem event",
-              "action": "nuxt-link"
+              "action": "nuxt-link",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -210,7 +181,19 @@
               "img": "/images/multi-person.png",
               "title": "Join a meetup group",
               "description": "Find a group of people in your area who connect regularly",
-              "action": "a"
+              "action": "a",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -219,7 +202,19 @@
               "img": "/images/speech-bubble.png",
               "title": "Contribute to the Filecoin project",
               "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
-              "action": "a"
+              "action": "a",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -228,7 +223,19 @@
               "img": "/images/hands-raised.png",
               "title": "Participate online",
               "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel",
-              "action": "a"
+              "action": "a",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -237,7 +244,19 @@
               "img": "/images/tool.png",
               "title": "Become a storage provider or builder",
               "description": "Dive right in and become an essential part of the ecosystem",
-              "action": "a"
+              "action": "a",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -246,7 +265,19 @@
               "img": "/images/magnifying-glass.png",
               "title": "Learn more on ProtoSchool",
               "description": "Understand how it all works with interactive tutorials from ProtoSchool",
-              "action": "a"
+              "action": "a",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         },
