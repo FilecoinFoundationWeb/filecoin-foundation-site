@@ -13,7 +13,7 @@
         `shadow-strength-${shadowStrength}`,
         `border-radius-direction-${borderRadiusDirection}`,
         { reverse },
-        { animate },
+        { 'animate': animationEnabled },
         { 'top-layer': i === 0 },
         { 'is-in-viewport': startAnimation }
       ]"
@@ -57,6 +57,16 @@ const setBackgroundLayerWidth = (instance) => {
         instance.layerWidth = 1.375
         instance.borderRadius = 12.75
       }
+    }
+  }
+
+  if (window.matchMedia(`(max-width: ${map.get('mini')})`).matches) {
+    if (instance.desktop) {
+      instance.desktop = false
+    }
+  } else {
+    if (!instance.desktop) {
+      instance.desktop = true
     }
   }
 }
@@ -127,7 +137,7 @@ export default {
     duration: { // animation duration in milliseconds
       type: Number,
       required: false,
-      default: 1000
+      default: 700
     },
     resetElement: {
       type: String,
@@ -146,7 +156,8 @@ export default {
       startAnimation: false,
       endAnimation: false,
       key: 0,
-      delayFactor: 0.3
+      delayFactor: 0.23,
+      desktop: true
     }
   },
 
@@ -159,6 +170,9 @@ export default {
         arr.push({ index: ind, color: this.colors[ind - 1] })
       }
       return arr
+    },
+    animationEnabled () {
+      return this.animate && this.desktop
     }
   },
 
@@ -208,7 +222,7 @@ export default {
 <style lang="scss" scoped>
 // ////////////////////////////////////////////////////////////////////// Layers
 .background-layers {
-  --animationDuration: 1.5s;
+  --animationDuration: 1s;
 
   .layer {
     position: absolute;
