@@ -38,6 +38,7 @@ fields:
     maxSize: 64
   label: Post Header Image
 pages:
+- content/blog/announcing-explorer-awards-by-filecoin-foundation-and-unfinished.md
 - content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-gain-momentum.json
 - content/blog/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space.md
 - content/blog/filecoin-storage-provider-spotlight-origin-storage.md
