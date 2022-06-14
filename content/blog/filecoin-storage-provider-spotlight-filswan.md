@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+- Filecoin Storage Provider Spotlight
 title: Filecoin Storage Provider Spotlight — FilSwan
 date: 2022-02-22
 author: ''
