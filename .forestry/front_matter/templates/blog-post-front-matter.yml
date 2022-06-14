@@ -39,6 +39,7 @@ fields:
   label: Post Header Image
 pages:
 - content/blog/announcing-explorer-awards-by-filecoin-foundation-and-unfinished.md
+- content/blog/announcing-the-filecoin-community-roadmap.md
 - content/blog/announcing-the-venushub-platform.md
 - content/blog/applications-are-open-for-filecoin-plus-notary-elections.md
 - content/blog/bela-supernova-awarded-chainlink-filecoin-joint-grant-to-support-public-health-data-oracle.md
