@@ -38,6 +38,7 @@ fields:
     maxSize: 64
   label: Post Header Image
 pages:
+- content/blog/2021-developer-grants-wrap.md
 - content/blog/announcing-explorer-awards-by-filecoin-foundation-and-unfinished.md
 - content/blog/announcing-the-filecoin-community-roadmap.md
 - content/blog/announcing-the-venushub-platform.md
