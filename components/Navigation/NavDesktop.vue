@@ -18,9 +18,11 @@
         @mouseover="setActiveItem(index)">
         <div
           class="nav-link top-level">
-          <div class="text">
+          <nuxt-link
+            :to="link.url"
+            class="text">
             {{ link.text }}
-          </div>
+          </nuxt-link>
         </div>
       </div>
 
