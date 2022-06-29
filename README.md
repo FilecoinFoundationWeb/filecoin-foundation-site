@@ -25,6 +25,16 @@ To build this site locally
 - To run locally, for features like hot reload
     - Run `npm ci && npm run dev`
     - The site will be available in real time via a localhost URL
+    - Resources are compiled in this process; for example, all SCSS styles are converted to CSS and tree-shaken
+
+## Structure
+Key areas of this repo include
+- `/pages` - All page templates
+- `/components` - Each reusable collection of elements is abstracted to a component, and most components accept various properties that determine the way they are rendered
+- `/static` - Static resources which will be available post-compile
+- `/assets/scss` - The global styles for the app are available here in SASS/SCSS, more specific styles can be found at the bottom of `.vue` pages and components ([single file components on vuejs.org](https://vuejs.org/guide/scaling-up/sfc.html))
+- `/assets/svgs` - Contains iconography or other small vectors, in SVG format
+- `/content` - The site's content, which is edited using the Forestry CMS
 
 ## URLs and branches
 - Staging - `develop` builds to `a non public url`
@@ -41,7 +51,6 @@ To build this site locally
 - Editing content via the CMS
   - Content can be edited via Forestry.io, and requires a login
   - Global site content, like default metadata, is editable in the `general` section
-  - Structured content is shown in blocks on a per-page basis (see the pages)
-  - Blog content is fully editable in a wysiwyg editor markdown editor
-  - Media can be uploaded directly to the repository via the `media`` section, after which point it can be used in any rich media field
-  
+  - Structured content is shown in blocks on a per-page basis (see `pages` section)
+  - Blog content is fully editable in a wysiwyg markdown editor
+  - Media can be uploaded directly to the repository via the `media` section, after which point it can be used in any rich media field
