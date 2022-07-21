@@ -76,6 +76,27 @@
           "cards": [
             {
               "type": "D",
+              "title": "Governance Project Manager (Remote)",
+              "label": "San Francisco, Remote",
+              "date": "",
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
+            },
+            {
+              "type": "D",
               "date": "",
               "label": "San Francisco, Remote",
               "title": "Technical Program Manager for Security",
