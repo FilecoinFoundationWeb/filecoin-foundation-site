@@ -164,6 +164,24 @@
   {
     "type": "D",
     "event_type": "event",
+    "featured": false,
+    "title": "FIL-Toronto",
+    "date": "2022-07-04",
+    "img": "",
+    "description": "Toronto, Canada",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://fil-toronto.com/",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
     "img": "/images/fil-austin.png",
