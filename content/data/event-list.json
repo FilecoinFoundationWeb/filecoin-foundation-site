@@ -2,6 +2,24 @@
   {
     "type": "D",
     "event_type": "event",
+    "featured": false,
+    "title": "EthCC 5",
+    "date": "2022-07-19",
+    "img": "",
+    "description": "Paris, France",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "featured": true,
     "title": "FIL-Singapore",
     "date": "2022-09-26",
@@ -15,6 +33,114 @@
       "theme": "light",
       "url": "https://fil-singapore.io/",
       "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "FIL Lisbon",
+    "date": "2022-10-31",
+    "img": "",
+    "description": "Lisbon, Portugal",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "Unfinished Live",
+    "date": "2022-09-21",
+    "img": "",
+    "description": "New York, NY",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://live.unfinished.com/",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "DWeb Camp",
+    "date": "2022-08-24",
+    "img": "",
+    "description": "Navarro, CA",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://dwebcamp.org/",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "ESPA Bootcamp Cohort #4",
+    "date": "2022-10-11",
+    "img": "",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://www.web3espa.io/",
+      "icon": "info"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "Singapore Storage Provider Meetup",
+    "date": "2022-09-28",
+    "img": "",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://lu.ma/singapore-sp-meetup",
+      "icon": "ticket"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "South Korea Storage Provider Meetup",
+    "date": "2022-08-12",
+    "img": "",
+    "description": "Seoul, Korea",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://lu.ma/sp-korea-meetup",
+      "icon": "ticket"
     }
   },
   {
