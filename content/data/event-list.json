@@ -2,24 +2,6 @@
   {
     "type": "D",
     "event_type": "event",
-    "featured": false,
-    "title": "EthCC 5",
-    "date": "2022-07-19",
-    "img": "",
-    "description": "Paris, France",
-    "cta": {
-      "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
-    }
-  },
-  {
-    "type": "D",
-    "event_type": "event",
     "featured": true,
     "title": "FIL-Singapore",
     "date": "2022-09-26",
@@ -159,6 +141,24 @@
       "theme": "dark",
       "url": "https://www.eventbrite.com/e/sustainable-blockchain-summit-tickets-336114797407",
       "icon": "ticket"
+    }
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "EthCC 5",
+    "date": "2022-07-19",
+    "img": "",
+    "description": "Paris, France",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
     }
   },
   {
