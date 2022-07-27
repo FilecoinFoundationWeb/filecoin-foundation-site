@@ -1,10 +1,22 @@
 <template>
-  <div class="background-layers">
+  <div
+    ref="container"
+    class="background-layers"
+    :style="`--animationDuration: ${duration}ms;`">
 
     <div
       v-for="(layer, i) in layers"
-      :key="layer.color"
-      :class="[`layer shadow__${layer.index} shadow-strength-${shadowStrength} border-radius-direction-${borderRadiusDirection}`, { reverse }]"
+      :key="`layer-${i}_refresh-${key}`"
+      :class="[
+        'layer',
+        `shadow__${layer.index}`,
+        `shadow-strength-${shadowStrength}`,
+        `border-radius-direction-${borderRadiusDirection}`,
+        { reverse },
+        { 'animate': animationEnabled },
+        { 'top-layer': i === 0 },
+        { 'is-in-viewport': startAnimation }
+      ]"
       :style="layerStyle(i + 1, layer.color)">
     </div>
 
@@ -47,6 +59,37 @@ const setBackgroundLayerWidth = (instance) => {
       }
     }
   }
+
+  if (window.matchMedia(`(max-width: ${map.get('mini')})`).matches) {
+    if (instance.desktop) {
+      instance.desktop = false
+    }
+  } else {
+    if (!instance.desktop) {
+      instance.desktop = true
+    }
+  }
+}
+
+const viewportEntryCheck = (instance) => {
+  if (instance.$refs.container && typeof window !== 'undefined' && typeof document !== 'undefined') {
+    const rect = instance.$refs.container.getBoundingClientRect()
+    const elementIsInViewport = (rect.top + rect.height / 2 >= 150 && rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight) - 150)
+
+    const reset = document.getElementById(instance.resetElement)?.getBoundingClientRect()
+    const resetIsInViewport = reset ? reset.top >= 0 && reset.top <= (window.innerHeight || document.documentElement.clientHeight) : false
+
+    if (!instance.startAnimation && elementIsInViewport) {
+      instance.startAnimation = true
+      setTimeout(() => {
+        instance.endAnimation = true
+      }, instance.duration + (instance.layers.length * instance.duration * instance.delayFactor))
+    } else if (resetIsInViewport && instance.startAnimation && instance.endAnimation) {
+      instance.startAnimation = false
+      instance.endAnimation = false
+      instance.key++
+    }
+  }
 }
 
 // ====================================================================== Export
@@ -85,6 +128,21 @@ export default {
       type: String, // 'forward', 'reverse'
       required: false,
       default: 'forward'
+    },
+    animate: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    duration: { // animation duration in milliseconds
+      type: Number,
+      required: false,
+      default: 700
+    },
+    resetElement: {
+      type: String,
+      required: false,
+      default: ''
     }
   },
 
@@ -93,7 +151,13 @@ export default {
       colors: ['#EFF6FC', '#D8EBFB', '#73B4ED', '#0090FF', '#154ED9', '#0621A4', '#06094E', '#08072E'],
       layerWidth: 1.375,
       borderRadius: 12.75,
-      resize: false
+      resize: false,
+      scroll: false,
+      startAnimation: false,
+      endAnimation: false,
+      key: 0,
+      delayFactor: 0.23,
+      desktop: true
     }
   },
 
@@ -106,6 +170,9 @@ export default {
         arr.push({ index: ind, color: this.colors[ind - 1] })
       }
       return arr
+    },
+    animationEnabled () {
+      return this.animate && this.desktop
     }
   },
 
@@ -113,10 +180,16 @@ export default {
     setBackgroundLayerWidth(this)
     this.resize = () => { setBackgroundLayerWidth(this) }
     window.addEventListener('resize', Throttle(this.resize, 50))
+
+    if (this.animate) {
+      this.scroll = () => { viewportEntryCheck(this) }
+      window.addEventListener('scroll', this.scroll)
+    }
   },
 
   beforeDestroy () {
     if (this.resize) { window.removeEventListener('resize', this.resize) }
+    if (this.scroll) { window.removeEventListener('scroll', this.scroll) }
   },
 
   methods: {
@@ -128,7 +201,18 @@ export default {
       const z = `z-index: ${-1 * index};`
       const c = `background-color: ${color};`
       const b = `border-radius: ${this.borderRadius + (this.layerWidth * (index - 1))}rem;`
-      return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
+
+      if (!this.animate) {
+        return `${w} ${h} ${t} ${l} ${z} ${c} ${b}`
+      }
+
+      const iw = `--initialWidth: calc(100% + ${2 * this.layerWidth}rem);`
+      const fw = `--finalWidth: calc(100% + ${2 * index * this.layerWidth}rem);`
+      const x = `--startPosX: ${(index - 1) * this.layerWidth}rem;`
+      const y = `--startPosY: ${(index - 1) * this.layerWidth}rem;`
+      const d = `animation-delay: ${(index - 1) * this.duration * this.delayFactor}ms;`
+
+      return `${w} ${h} ${iw} ${fw} ${t} ${l} ${z} ${c} ${b} ${x} ${y} ${d}`
     }
   }
 }
@@ -137,25 +221,67 @@ export default {
 
 <style lang="scss" scoped>
 // ////////////////////////////////////////////////////////////////////// Layers
-.layer {
-  position: absolute;
-  &.shadow-strength-small {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+.background-layers {
+  --animationDuration: 1s;
+
+  .layer {
+    position: absolute;
+
+    &.shadow-strength-small {
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+    }
+    &.shadow-strength-large {
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    }
+    &.reverse {
+      filter: none;
+      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+    }
+    &.border-radius-direction-forward {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    &.border-radius-direction-reverse {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
   }
-  &.shadow-strength-large {
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+
+  .animate {
+    --startPosX: 0;
+    --startPosY: 0;
+    --initialWidth: 100%;
+    --finalWidth: 100%;
+    width: 100%;
+    height: 100%;
+    animation-duration: var(--animationDuration);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: bubble;
+    animation-play-state: paused;
+    // animation-timing-function: cubic-bezier(0.54, 1.81, 0.63, 0.73);
+    animation-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.3);
+    &:not(.top-layer) {
+      opacity: 0;
+    }
+    &.is-in-viewport {
+      animation-play-state: running;
+    }
   }
-  &.reverse {
-    filter: none;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15) inset;
+}
+
+@keyframes bubble {
+  from {
+    width: var(--initialWidth);
+    height: var(--initialWidth);
+    transform: translate(var(--startPosX), var(--startPosY));
+    opacity: 1;
   }
-  &.border-radius-direction-forward {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-  }
-  &.border-radius-direction-reverse {
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+  to {
+    width: var(--finalWidth);
+    height: var(--finalWidth);
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 </style>

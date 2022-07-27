@@ -13,7 +13,7 @@ export default {
       siteUrl: 'https://fil.org'
     },
     redirects: [
-      // { from: '/blog', to: 'https://filecoinfoundation.medium.com/' },
+      { from: '/filaustin', to: 'https://events.bizzabo.com/filaustin' },
       { from: '/board', to: '/about/#panel_1' },
       { from: '/careers', to: '/get-involved/#careers_intro' },
       { from: '/community', to: '/about/#dive_deeper_intro' },
@@ -86,7 +86,8 @@ export default {
     // Doc: https://content.nuxtjs.org
     '@nuxt/content',
     // https://github.com/agency-undone/nuxt-module-matomo
-    '@agency-undone/nuxt-module-matomo'
+    '@agency-undone/nuxt-module-matomo',
+    '~/modules/ipfs404'
   ],
   // ///////////////////////////////////////////////////// [Module] Nuxt-content
   // ---------------------------------------------------------------------------
@@ -142,6 +143,10 @@ export default {
   // /////////////////////////////////////////////////////// Router + Middleware
   // ---------------------------------------------------------------------------
   router: {},
+  // //////////////////////////////////////////////////// Generate configuration
+  generate: {
+    fallback: '404.html'
+  },
   // /////////////////////////////////////////////////////// Build configuration
   // ------------------------------------------------ Extend webpack config here
   build: {

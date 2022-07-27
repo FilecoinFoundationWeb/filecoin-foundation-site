@@ -11,7 +11,7 @@
             "push_right": ""
           },
           "heading": "Let’s build the internet of everyone",
-          "subheading": "The Filecoin Foundation is the steward of the Filecoin community. We aspire to put the power of humanity’s most important information back into the hands of everyone.",
+          "subheading": "Filecoin Foundation is the steward of the Filecoin community. We aspire to put the power of humanity’s most important information back into the hands of everyone.",
           "ctas": [
             {
               "type": "A",
@@ -36,7 +36,7 @@
             "push_right": ""
           },
           "heading": "What we do",
-          "description": "We exist to help people build their vision on Filecoin to support the growth of the entire distributed web.",
+          "description": "We exist to help people build their vision on Filecoin and to support the growth of the decentralized web",
           "label": "",
           "subheading": "",
           "ctas": [
@@ -73,7 +73,9 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true,
+                "resetElement": "section_2"
               }
             }
           },
@@ -93,8 +95,8 @@
             "push_left": "off-2_mi-1",
             "push_right": ""
           },
-          "preview_image": "/images/page-index/intro-2-video-preview.png",
-          "url": "https://youtu.be/Sakannch1Dw"
+          "preview_image": "/images/01-lockheed.png",
+          "url": "https://youtu.be/WqwVq0921Y8"
         },
         "right": {
           "type": "text_block",
@@ -104,7 +106,7 @@
             "push_left": "off-1_sm-2_mi-1",
             "push_right": ""
           },
-          "heading": "Learn more about the Foundation, including its history, its mandate, and its mission.",
+          "heading": "Filecoin Foundation (FF) and Lockheed Martin are working together to develop a program for deploying the Interplanetary File System (IPFS) in space.",
           "description": "",
           "ctas": [
             {
@@ -113,7 +115,7 @@
               "action": "video",
               "icon": "play",
               "text": "Watch video",
-              "url": "https://youtu.be/Sakannch1Dw"
+              "url": "https://youtu.be/WqwVq0921Y8"
             }
           ],
           "label": "",
@@ -152,7 +154,9 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true,
+                "resetElement": "section_2"
               }
             }
           },
@@ -196,7 +200,7 @@
               "target": "_blank",
               "img_size": "mini",
               "img": "/images/outline-file.png",
-              "title": "Filecoin's Documentation",
+              "title": "Filecoin Documentation",
               "description": "Filecoin project documentation homepage offers the tools to contribute to the network.",
               "url": "//docs.filecoin.io",
               "date": "",
@@ -238,7 +242,7 @@
               "target": "_blank",
               "img_size": "mini",
               "img": "/images/outline-calendar.png",
-              "title": "Filecoin 2020 Mainnet Ignition & Liftoff",
+              "title": "Filecoin Mainnet Ignition & Liftoff",
               "description": "This covers the timeline of the Filecoin Mainnet Ignition & Liftoff.",
               "url": "//liftoff.filecoin.io",
               "date": "",
@@ -261,7 +265,7 @@
               "img": "/images/outline-filecoin-blue-logo.svg",
               "title": "Filecoin Network Status",
               "description": "This dashboard provides the latest update of the Filecoin Network.",
-              "url": "//status.filecoin.io",
+              "url": "https://dashboard.starboard.ventures/dashboard",
               "date": "",
               "label": "",
               "img_type": "",
@@ -280,9 +284,9 @@
               "target": "_blank",
               "img_size": "mini",
               "img": "/images/outline-multi-circle.png",
-              "title": "Filecoin 2021 Orbit",
-              "description": "Mark the one-year anniversary since Filecoin Mainnet launch with ecosystem events and celebrations around the world.",
-              "url": "//orbit.filecoin.io",
+              "title": "Filecoin Community Events",
+              "description": "Details on the latest events hosted by Filecoin Foundation and a full list of community events",
+              "url": "hub.fil.org/events",
               "date": "",
               "label": "",
               "img_type": "",
@@ -521,7 +525,8 @@
                 "offset": {
                   "medium": null,
                   "mini": null
-                }
+                },
+                "animate": true
               }
             }
           },

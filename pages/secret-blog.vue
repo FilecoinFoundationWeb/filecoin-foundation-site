@@ -237,7 +237,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #featured-post {
+::v-deep #featured-section {
   padding: 0;
   margin-bottom: 5.5rem;
   .heading {
@@ -316,7 +316,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #blogposts-list {
+::v-deep #blogposts-section {
   padding-top: 1.75rem;
 }
 </style>

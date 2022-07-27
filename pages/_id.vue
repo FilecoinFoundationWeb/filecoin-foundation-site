@@ -27,7 +27,8 @@
                   <div
                     v-for="(item, index) in postTags"
                     :key="`${item}-${index}`"
-                    class="tag">
+                    class="tag"
+                    @click="setTagsQuery(item)">
                     {{ item }}
                   </div>
                 </div>
@@ -81,7 +82,7 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import BlogPageData from '@/content/pages/blog.json'
@@ -230,13 +231,15 @@ export default {
             recommendedPosts.push({
               type: 'E',
               img: post.image,
-              img_type: 'nuxt_link',
+              img_type: 'background_image',
+              action: 'nuxt-link',
+              url: `/${post.slug}`,
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
+              tags: post.tags,
               cta: {
                 type: 'H',
-                action: 'nuxt-link',
                 text: 'Read more',
                 url: `/${post.slug}`
               }
@@ -262,6 +265,19 @@ export default {
         }
       }
     }
+  },
+
+  methods: {
+    ...mapActions({
+      clearAllTags: 'filters/clearAllTags',
+      setRouteQuery: 'filters/setRouteQuery'
+    }),
+    setTagsQuery (val) {
+      const slug = this.$Slugify(val)
+      this.clearAllTags()
+      this.setRouteQuery({ key: 'tags', data: slug })
+      this.$router.push('/blog')
+    }
   }
 }
 </script>
@@ -285,6 +301,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   @include mini {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Mini} + 5rem);
+  }
+
+  ::v-deep .card {
+    transform: scale(1);
+    transition: transform 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -352,7 +376,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading {
+::v-deep #post-heading-section {
   padding: 0;
   margin-bottom: 3.5rem;
   .heading {
@@ -580,6 +604,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     &.type__E {
       width: unset;
       margin: unset !important;
+      .image {
+        height: 47%;
+        @include borderRadius_Large;
+        overflow: hidden;
+      }
     }
   }
 }

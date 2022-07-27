@@ -14,6 +14,7 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+    export_format: YYYY-MM-DD
 - type: text
   name: author
   label: Author
@@ -36,3 +37,81 @@ fields:
   config:
     maxSize: 64
   label: Post Header Image
+pages:
+- content/blog/2021-developer-grants-wrap.md
+- content/blog/announcing-explorer-awards-by-filecoin-foundation-and-unfinished.md
+- content/blog/announcing-the-filecoin-community-roadmap.md
+- content/blog/announcing-the-starling-lab.md
+- content/blog/announcing-the-venushub-platform.md
+- content/blog/applications-are-open-for-filecoin-plus-notary-elections.md
+- content/blog/applications-are-open-for-the-filecoin-launchpad-accelerator-ii.md
+- content/blog/bbc-s-the-real-story-explores-the-promise-of-cryptocurrency.md
+- content/blog/bela-supernova-awarded-chainlink-filecoin-joint-grant-to-support-public-health-data-oracle.md
+- content/blog/blockchain-copyright-law.md
+- content/blog/building-a-flow-nft-pet-store-part-1.md
+- content/blog/building-an-nft-store-on-flow-part-2.md
+- content/blog/congratulations-to-the-hedera-x-filecoin-grant-program-winners.md
+- content/blog/dev-grant-spotlight-4everland.md
+- content/blog/dev-grant-spotlight-datastation.md
+- content/blog/dev-grant-spotlight-freenet-2.md
+- content/blog/dev-grant-spotlight-geo-web.md
+- content/blog/dev-grant-spotlight-jackal-storage.md
+- content/blog/dev-grant-spotlight-portrait.md
+- content/blog/dev-grant-spotlight-ukraine-art-collective.md
+- content/blog/dzk-foundation-awarded-chainlink-filecoin-joint-grant-to-support-zk-rollup-research.md
+- content/blog/filecoin-community-approves-change-to-storage-provider-terminology.md
+- content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-expand-boards.md
+- content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-gain-momentum.json
+- content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-gain-momentum.md
+- content/blog/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space.md
+- content/blog/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-on-the-filecoin-network.md
+- content/blog/filecoin-foundation-announces-board-of-directors.md
+- content/blog/filecoin-foundation-chair-marta-belcher-testifies-before-us-senate-banking-committee.md
+- content/blog/filecoin-foundation-joins-blockchain-for-europe.md
+- content/blog/filecoin-foundation-wave-9-dev-grant-proposals-due-friday-july-30.md
+- content/blog/filecoin-storage-provider-spotlight-dcent.md
+- content/blog/filecoin-storage-provider-spotlight-filswan.md
+- content/blog/filecoin-storage-provider-spotlight-linix.md
+- content/blog/filecoin-storage-provider-spotlight-meta-blockchain.md
+- content/blog/filecoin-storage-provider-spotlight-nonentropy.md
+- content/blog/filecoin-storage-provider-spotlight-origin-storage.md
+- content/blog/filecoin-storage-provider-spotlight-piknik.md
+- content/blog/filecoin-storage-provider-spotlight-seal-storage-technology.md
+- content/blog/filswan-awarded-chainlink-filecoin-joint-grant-to-create-multi-chain-decentralized-data-storage-payment-solution.md
+- content/blog/gathering-community-input-on-fip-0018-for-miner-to-storage-provider-terminology-change.md
+- content/blog/hack-away-in-summer-2021.md
+- content/blog/how-swash-is-leveraging-filecoin-s-decentralized-storage-network-to-preserve-and-protect-consumer-data.md
+- content/blog/introducing-co-rise-course-building-web3-applications-and-filecoin-ipfs.md
+- content/blog/introducing-the-filecoin-storage-provider-incubation-center.md
+- content/blog/introducing-the-future-rules-a-new-podcast-series-from-the-filecoin-foundation-and-forkast-news.md
+- content/blog/introducing-the-orbit-community-program.md
+- content/blog/introducing-the-storage-provider-bounty-board.md
+- content/blog/introducing-the-wave-7-developer-grant-recipients.md
+- content/blog/join-20-fascinating-startups-on-september-28-for-filecoin-launchpad-accelerator-demo-day.md
+- content/blog/join-the-filecoin-foundation-team-for-a-hiring-webinar.md
+- content/blog/join-us-as-we-build-a-better-web.md
+- content/blog/join-us-in-celebrating-filecoin-mainnet-s-one-year-milestone.md
+- content/blog/linkstorage-awarded-chainlink-filecoin-joint-grant-to-create-blockchain-data-storage-protocol.md
+- content/blog/look-back-and-look-forward-filecoin-foundation-in-2021-and-2022.md
+- content/blog/marta-belcher-talks-crypto-privacy-or-lack-thereof-at-consensus-2021.md
+- content/blog/meet-filecoin-foundation-developer-advocate-sonia-john.md
+- content/blog/meet-filecoin-foundation-senior-fellow-danny-o-brien.md
+- content/blog/meet-the-filecoin-foundation-and-the-filecoin-foundation-for-the-decentralized-web.md
+- content/blog/meet-the-newest-members-of-the-filecoin-foundation-team.md
+- content/blog/new-agreement-between-filecoin-foundation-and-electric-coin-co.simplifies-halo-licensing-and-creates-grant-pool-for-filecoin-zcash-projects.json
+- content/blog/new-wave-9-developer-grant-recipients.md
+- content/blog/participate-in-the-filecoin-network-s-poll-on-extending-the-maximum-lifetime-of-v1-sectors.md
+- content/blog/participating-in-the-filecoin-ecosystem-bounties-microgrants-and-fips.md
+- content/blog/recapping-filecoin-foundation-s-2021-governance-summit.md
+- content/blog/second-round-of-filecoin-plus-notaries-elected-5-pib-more-datacap-awarded.md
+- content/blog/storage-company-ewesion-leverages-filecoin-network-for-data-preservation.md
+- content/blog/storing-ai-datasets-on-the-decentralized-web.md
+- content/blog/supporting-the-community-the-filecoin-storage-provider-group.md
+- content/blog/surveying-the-filecoin-community-priorities-and-opportunities-for-2022.md
+- content/blog/thanks-for-participating-in-fip-0014.md
+- content/blog/the-filecoin-foundation-announces-50-000-fil-grant-to-the-internet-archive.md
+- content/blog/the-foundations-roles-in-the-filecoin-ecosystem.md
+- content/blog/venus-v1.0.0-passes-least-authority-security-audit.md
+- content/blog/wave-11-dev-grant-recipients.md
+- content/blog/welcome-to-the-forest-with-chainsafe-s-filecoin.md
+- content/blog/xinshu-technology-how-the-chinese-shutterfly-uses-the-filecoin-network-to-keep-a-competitive-edge-in-the-photo-sharing-industry.md

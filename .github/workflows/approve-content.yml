@@ -3,10 +3,11 @@ name: Auto approve
 on:
   pull_request:
     branches:    
-      - content
+      - master
 
 jobs:
   auto-approve:
+    if: ${{ github.head_ref == 'content'}}
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
