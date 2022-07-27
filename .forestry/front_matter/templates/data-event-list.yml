@@ -35,9 +35,19 @@ fields:
   - type: text
     name: title
     label: Title
-  - name: date
+  - name: date_start
     type: datetime
-    label: Date
+    label: Start Date
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+      export_format: YYYY-MM-DD
+  - name: date_end
+    type: datetime
+    label: End date
     description: ''
     config:
       required: false
