@@ -76,6 +76,27 @@
           "cards": [
             {
               "label": "San Francisco, Remote",
+              "title": "Governance Project Manager (Remote)",
+              "cta": {
+                "text": "Apply Now",
+                "type": "B",
+                "action": "link",
+                "theme": "light",
+                "url": "https://jobs.lever.co/filecoin/7632fd0c-f903-406f-bc11-18b44c65fe15",
+                "icon": "plus"
+              },
+              "type": "",
+              "date": "",
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": ""
+            },
+            {
+              "label": "San Francisco, Remote",
               "title": "Security Operations Engineer (Remote)",
               "type": "D",
               "date": "",
