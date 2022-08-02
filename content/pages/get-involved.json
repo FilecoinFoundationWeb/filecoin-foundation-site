@@ -75,6 +75,27 @@
           },
           "cards": [
             {
+              "label": "San Francisco, Remote",
+              "title": "Security Operations Engineer (Remote)",
+              "type": "",
+              "date": "",
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
+            },
+            {
               "type": "D",
               "date": "",
               "label": "San Francisco, Remote",
