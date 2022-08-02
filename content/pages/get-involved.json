@@ -43,7 +43,7 @@
           "ctas": [
             {
               "type": "B",
-              "action": "a",
+              "action": "",
               "target": "_blank",
               "icon": "plus",
               "text": "View All",
@@ -81,7 +81,7 @@
               "title": "Technical Program Manager for Security",
               "cta": {
                 "type": "B",
-                "action": "a",
+                "action": "",
                 "target": "_blank",
                 "icon": "plus",
                 "text": "Apply Now",
