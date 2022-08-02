@@ -77,7 +77,7 @@
             {
               "label": "San Francisco, Remote",
               "title": "Security Operations Engineer (Remote)",
-              "type": "",
+              "type": "D",
               "date": "",
               "description": "",
               "img": "",
@@ -87,12 +87,12 @@
               "url": "",
               "target": "",
               "cta": {
-                "text": "",
-                "type": "",
-                "action": "",
+                "text": "Apply Now",
+                "type": "B",
+                "action": "link",
                 "theme": "",
-                "url": "",
-                "icon": ""
+                "url": "https://jobs.lever.co/filecoin/93aaa3e8-fae6-406f-be58-3885b6f4c40d",
+                "icon": "plus"
               }
             },
             {
