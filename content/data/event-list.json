@@ -2,6 +2,186 @@
   {
     "type": "D",
     "event_type": "event",
+    "featured": true,
+    "title": "FIL-Singapore",
+    "date": "2022-09-26",
+    "img": "",
+    "description": "FIL-Singapore Summit will take place on September 26 to 27, 2022, a two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders. Our unmatched speaker lineup will dive into Filecoin and Web3, taking you through the Filecoin world of FVM, NFTs, the metaverse, and beyond.\n",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://fil-singapore.io/",
+      "icon": "info"
+    },
+    "date_start": "2022-09-26",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "FIL Lisbon",
+    "date": "2022-10-31",
+    "img": "",
+    "description": "Lisbon, Portugal",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "Unfinished Live",
+    "date": "2022-09-21",
+    "img": "",
+    "description": "New York, NY",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://live.unfinished.com/",
+      "icon": "info"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "DWeb Camp",
+    "date": "2022-08-24",
+    "img": "",
+    "description": "Navarro, CA",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://dwebcamp.org/",
+      "icon": "info"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "ESPA Bootcamp Cohort #4",
+    "date": "2022-10-11",
+    "img": "",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://www.web3espa.io/",
+      "icon": "info"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "Singapore Storage Provider Meetup",
+    "date": "2022-09-28",
+    "img": "",
+    "description": "",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "G",
+      "action": "link",
+      "theme": "light",
+      "url": "https://lu.ma/singapore-sp-meetup",
+      "icon": "ticket"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "South Korea Storage Provider Meetup",
+    "date": "2022-08-12",
+    "img": "",
+    "description": "Seoul, Korea",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://lu.ma/sp-korea-meetup",
+      "icon": "ticket"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "Sustainable Blockchain Summit",
+    "date": "2022-07-22",
+    "img": "",
+    "description": "Paris, France",
+    "cta": {
+      "target": "_blank",
+      "text": "Register",
+      "type": "G",
+      "action": "link",
+      "theme": "dark",
+      "url": "https://www.eventbrite.com/e/sustainable-blockchain-summit-tickets-336114797407",
+      "icon": "ticket"
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": false,
+    "title": "EthCC 5",
+    "date": "2022-07-19",
+    "img": "",
+    "description": "Paris, France",
+    "cta": {
+      "target": "_blank",
+      "text": "",
+      "type": "",
+      "action": "",
+      "theme": "",
+      "url": "",
+      "icon": ""
+    },
+    "date_start": "",
+    "date_end": ""
+  },
+  {
+    "type": "D",
+    "event_type": "event",
     "title": "FIL Austin",
     "date": "2022-06-07T16:00:00Z",
     "img": "/images/fil-austin.png",
@@ -15,7 +195,9 @@
       "url": "https://events.bizzabo.com/filaustin",
       "icon": "ticket"
     },
-    "featured": true
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -33,7 +215,9 @@
       "url": "",
       "icon": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -51,7 +235,9 @@
       "url": "",
       "icon": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -69,7 +255,9 @@
       "url": "",
       "icon": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -87,7 +275,9 @@
       "url": "https://www.youtube.com/watch?v=EHTFVtWDqJc&list=PLp3zrT1ewY0mvhUc7bvG2tsqHXYCukS9y",
       "icon": "play"
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -105,7 +295,9 @@
       "url": "",
       "icon": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -123,7 +315,9 @@
       "text": "Watch Recording",
       "type": "B"
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -141,7 +335,9 @@
       "url": "https://m.fil.org/filecoin-at-ethdenver",
       "icon": "info"
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -159,7 +355,9 @@
       "url": "https://kencloud.com/hack.html",
       "icon": "ticket"
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -177,7 +375,9 @@
       "url": "https://www.eventbrite.com/e/filecoin-orbit-lounge-at-dc-fintech-week-tickets-182039955407",
       "theme": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -198,7 +398,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -216,7 +418,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -234,7 +438,9 @@
     },
     "img": "",
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -252,7 +458,9 @@
     },
     "img": "",
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -270,7 +478,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -288,7 +498,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -306,7 +518,9 @@
     },
     "img": "",
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -328,7 +542,9 @@
       "url": "https://www.encode.club/filecoin-club",
       "theme": ""
     },
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -349,7 +565,9 @@
     },
     "img": "",
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -370,7 +588,9 @@
     },
     "img": "",
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -391,7 +611,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -412,7 +634,9 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   },
   {
     "type": "D",
@@ -433,6 +657,8 @@
       "theme": ""
     },
     "description": "",
-    "featured": false
+    "featured": false,
+    "date_start": "",
+    "date_end": ""
   }
 ]
