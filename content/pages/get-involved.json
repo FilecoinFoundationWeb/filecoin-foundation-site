@@ -168,7 +168,7 @@
                 },
                 "reverse": true,
                 "offset": {
-                  "mini": null
+                  "mini": 0.25
                 }
               }
             }
