@@ -198,11 +198,11 @@
             {
               "type": "A",
               "img_size": "regular",
-              "url": "/events",
+              "url": "http://hub.fil.org/events",
               "img": "/images/calendar.png",
               "title": "Attend an event",
               "description": "Join or watch a Filecoin ecosystem event",
-              "action": "nuxt-link",
+              "action": "a",
               "date": "",
               "label": "",
               "img_type": "",
