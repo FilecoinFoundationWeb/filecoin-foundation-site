@@ -60,11 +60,15 @@
                     "radius": 10
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "medium": null,
+                  "mini": null
+                }
               }
             }
           },
-          "description": "More than 230 organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
+          "description": "Hundreds of organizations are working together in the Filecoin ecosystem to build applications, developer tooling, infrastructure, and more.",
           "label": "",
           "heading": "",
           "subheading": "",
@@ -131,32 +135,93 @@
           "type": "slider_block",
           "cols": {
             "num": "col-9_sm-8_mi-10_ti-8",
-            "push_left": "off-3_sm-2_mi-1_ti-2"
+            "push_left": "off-3_sm-2_mi-1_ti-2",
+            "push_right": ""
           },
           "cards": [
             {
               "type": "B",
               "img": "/images/ecosystem/colinevran@2x.png",
               "title": "Colin Evran",
-              "description": "Ecosystem Lead, Protocol Labs"
+              "description": "Ecosystem Lead, Protocol Labs",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/ecosystem/mosh@2x.png",
               "title": "Michelle Lee",
-              "description": "Product, Protocol Labs"
+              "description": "Product, Protocol Labs",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/ecosystem/stefaan-vervaet.png",
               "title": "Stefaan Vervaet",
-              "description": "Ecosystems and Partnerships, Protocol Labs"
+              "description": "Ecosystems and Partnerships, Protocol Labs",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "B",
               "img": "/images/ecosystem/dietrich-ayala.jpg",
               "title": "Dietrich Ayala",
-              "description": "IPFS Ecosystem Growth Engineer, Protocol Labs"
+              "description": "IPFS Ecosystem Growth Engineer, Protocol Labs",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         }
@@ -214,7 +279,10 @@
                     "radius": 12.75
                   }
                 },
-                "reverse": true
+                "reverse": true,
+                "offset": {
+                  "mini": null
+                }
               }
             }
           },
@@ -226,7 +294,19 @@
               "img": "/icons/pencil.png",
               "img_size": "regular",
               "title": "FIlecoin Notary Portal",
-              "description": "The official client and notary portal, hosted by the Filecoin website"
+              "description": "The official client and notary portal, hosted by the Filecoin website",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -235,7 +315,19 @@
               "img": "/icons/plus.png",
               "img_size": "regular",
               "title": "Filecoin Plus GitHub",
-              "description": "The hub for client applications for DataCap at a large scale"
+              "description": "The hub for client applications for DataCap at a large scale",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -244,7 +336,19 @@
               "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
-              "description": "Putting the power in the hands of clients and incentivizing storage providers"
+              "description": "Putting the power in the hands of clients and incentivizing storage providers",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -253,7 +357,19 @@
               "img": "/icons/stamp.png",
               "img_size": "regular",
               "title": "Notary Governance Repo",
-              "description": "Join the Filecoin notary conversation on GitHub"
+              "description": "Join the Filecoin notary conversation on GitHub",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -262,7 +378,19 @@
               "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
-              "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions"
+              "description": "Root Key Holders exercise decisions made by the community governance on-chain, and take action on finalized decisions",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             },
             {
               "type": "A",
@@ -271,7 +399,19 @@
               "img": "/icons/calendar.png",
               "img_size": "regular",
               "title": "Community Calendar",
-              "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners"
+              "description": "The latest events and meetings hosted by the Foundation and our ecosystem partners",
+              "date": "",
+              "label": "",
+              "img_type": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
             }
           ]
         },
