@@ -10,7 +10,7 @@
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://fil-singapore.io/",
