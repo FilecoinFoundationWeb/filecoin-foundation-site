@@ -22,7 +22,7 @@
   {
     "type": "D",
     "event_type": "event",
-    "featured": false,
+    "featured": true,
     "title": "FIL Lisbon",
     "date": "2022-10-31",
     "img": "",
