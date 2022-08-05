@@ -477,8 +477,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
-                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                  "preview_image": "/images/screenshot-2022-08-04-204732.png",
+                  "url": "https://www.youtube.com/watch?v=hg8e3_gKtwU"
                 }
               },
               "right": {
@@ -495,7 +495,7 @@
                       "action": "video",
                       "icon": "play",
                       "text": "Watch video",
-                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                      "url": "https://www.youtube.com/watch?v=hg8e3_gKtwU"
                     }
                   ],
                   "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
