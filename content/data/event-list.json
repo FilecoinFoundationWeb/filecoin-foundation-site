@@ -50,7 +50,7 @@
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "dark",
       "url": "https://live.unfinished.com/",
@@ -130,7 +130,7 @@
     "cta": {
       "target": "_blank",
       "text": "Register",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "dark",
       "url": "https://lu.ma/sp-korea-meetup",
