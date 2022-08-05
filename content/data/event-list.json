@@ -149,12 +149,12 @@
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
-      "text": "Watch Highlights",
+      "text": "Learn More",
       "type": "B",
       "action": "link",
-      "theme": "dark",
-      "url": "https://www.youtube.com/watch?v=qjBXj2bHixk",
-      "icon": "play"
+      "theme": "light",
+      "url": "https://sbs.tech/",
+      "icon": "info"
     },
     "date_start": "",
     "date_end": ""
