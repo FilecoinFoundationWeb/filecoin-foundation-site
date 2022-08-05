@@ -356,6 +356,27 @@
           "cards": [
             {
               "type": "C",
+              "date": "",
+              "label": "",
+              "title": "<b>Kurt Opsahl</b>Deputy Executive Director and General Counsel, Electronic Frontier Foundation",
+              "description": "",
+              "img": "",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
+            },
+            {
+              "type": "C",
               "img": "/images/about/katiebiber.png",
               "img_size": "full",
               "description": "<b>Katie Biber</b>General Counsel, Brex",
