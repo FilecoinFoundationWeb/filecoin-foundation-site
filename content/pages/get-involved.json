@@ -198,11 +198,11 @@
             {
               "type": "A",
               "img_size": "regular",
-              "url": "/events",
+              "url": "http://hub.fil.org/events",
               "img": "/images/calendar.png",
               "title": "Attend an event",
               "description": "Join or watch a Filecoin ecosystem event",
-              "action": "nuxt-link",
+              "action": "a",
               "date": "",
               "label": "",
               "img_type": "",
@@ -282,7 +282,7 @@
             {
               "type": "A",
               "img_size": "regular",
-              "url": "//docs.filecoin.io/build",
+              "url": "https://sp.filecoin.io/",
               "img": "/images/tool.png",
               "title": "Become a storage provider or builder",
               "description": "Dive right in and become an essential part of the ecosystem",
