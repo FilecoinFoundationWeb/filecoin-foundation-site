@@ -3,10 +3,10 @@
     "type": "D",
     "event_type": "event",
     "featured": true,
-    "title": "FIL-Singapore",
+    "title": "FIL Singapore",
     "date": "2022-09-26",
-    "img": "",
-    "description": "FIL-Singapore Summit will take place on September 26 to 27, 2022, a two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders. Our unmatched speaker lineup will dive into Filecoin and Web3, taking you through the Filecoin world of FVM, NFTs, the metaverse, and beyond.\n",
+    "img": "/images/fil-singapore.png",
+    "description": "A two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders.",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
