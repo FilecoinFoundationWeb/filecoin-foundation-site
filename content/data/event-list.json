@@ -65,7 +65,7 @@
     "featured": false,
     "title": "DWeb Camp",
     "date": "2022-08-24",
-    "img": "",
+    "img": "/images/dweb-camp.png",
     "description": "Navarro, CA",
     "cta": {
       "target": "_blank",
@@ -76,8 +76,8 @@
       "url": "https://dwebcamp.org/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-24",
+    "date_end": "2022-08-28"
   },
   {
     "type": "D",
