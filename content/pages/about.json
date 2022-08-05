@@ -530,8 +530,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/screenshot-2022-08-05-124215.png",
-                  "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
+                  "preview_image": "/images/screenshot-2022-08-05-130026.png",
+                  "url": "https://www.youtube.com/watch?v=S91iwPGuV7A"
                 }
               },
               "right": {
@@ -549,11 +549,11 @@
                       "action": "video",
                       "icon": "play",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
+                      "url": "https://www.youtube.com/watch?v=S91iwPGuV7A"
                     }
                   ],
-                  "heading": "FIL Austin",
-                  "description": "The first major IRL meetup of the Filecoin Community gathered hundreds of contributors from across the Filecoin ecosystem."
+                  "heading": "Humanity's Most Important Records",
+                  "description": "This session highlights the amazing work Starling Labs has done in Ukraine and Syria, with the support of the Filecoin Foundation."
                 }
               }
             },
