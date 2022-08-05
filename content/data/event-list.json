@@ -149,12 +149,12 @@
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
-      "text": "Register",
-      "type": "G",
+      "text": "Watch Highlights",
+      "type": "B",
       "action": "link",
       "theme": "dark",
-      "url": "https://www.eventbrite.com/e/sustainable-blockchain-summit-tickets-336114797407",
-      "icon": "ticket"
+      "url": "https://www.youtube.com/watch?v=qjBXj2bHixk",
+      "icon": "play"
     },
     "date_start": "",
     "date_end": ""
