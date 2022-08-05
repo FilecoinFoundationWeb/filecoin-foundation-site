@@ -3,26 +3,6 @@
     "type": "D",
     "event_type": "event",
     "featured": true,
-    "title": "FIL Singapore",
-    "date": "2022-09-26",
-    "img": "/images/fil-singapore.png",
-    "description": "A two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders.",
-    "cta": {
-      "target": "_blank",
-      "text": "Learn More",
-      "type": "B",
-      "action": "link",
-      "theme": "light",
-      "url": "https://fil-singapore.io/",
-      "icon": "info"
-    },
-    "date_start": "2022-09-24",
-    "date_end": "2022-09-25"
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "featured": true,
     "title": "FIL Lisbon",
     "date": "2022-10-31",
     "img": "/images/fil-lisbon.png",
@@ -38,6 +18,26 @@
     },
     "date_start": "2022-10-31",
     "date_end": "2022-11-04"
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": true,
+    "title": "FIL Singapore",
+    "date": "2022-09-26",
+    "img": "/images/fil-singapore.png",
+    "description": "A two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders.",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://fil-singapore.io/",
+      "icon": "info"
+    },
+    "date_start": "2022-09-24",
+    "date_end": "2022-09-25"
   },
   {
     "type": "D",
@@ -105,19 +105,19 @@
     "featured": false,
     "title": "Singapore Storage Provider Meetup",
     "date": "2022-09-28",
-    "img": "",
+    "img": "/images/singapore-sp.png",
     "description": "",
     "cta": {
       "target": "_blank",
       "text": "Register",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://lu.ma/singapore-sp-meetup",
       "icon": "ticket"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-16",
+    "date_end": "2022-08-16"
   },
   {
     "type": "D",
