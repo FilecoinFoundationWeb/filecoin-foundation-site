@@ -45,7 +45,7 @@
     "featured": false,
     "title": "Unfinished Live",
     "date": "2022-09-21",
-    "img": "",
+    "img": "/images/unfinished-live.png",
     "description": "New York, NY",
     "cta": {
       "target": "_blank",
@@ -56,8 +56,8 @@
       "url": "https://live.unfinished.com/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-09-21",
+    "date_end": "2022-08-24"
   },
   {
     "type": "D",
