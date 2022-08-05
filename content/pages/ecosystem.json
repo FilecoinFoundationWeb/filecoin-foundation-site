@@ -442,8 +442,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
-                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                  "preview_image": "/images/screenshot-2022-08-05-124215.png",
+                  "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
                 }
               },
               "right": {
@@ -454,8 +454,8 @@
                 },
                 "props": {
                   "layout": "medium",
-                  "heading": "Accelerating the Filecoin Ecosystem",
-                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217",
+                  "heading": "FIL Austin",
+                  "description": "The first major IRL meetup of the Filecoin Community gathered hundreds of contributors from across the Filecoin ecosystem.",
                   "ctas": [
                     {
                       "type": "B",
@@ -463,7 +463,7 @@
                       "action": "video",
                       "icon": "play",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                      "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
                     }
                   ]
                 }
