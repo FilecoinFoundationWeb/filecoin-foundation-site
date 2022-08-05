@@ -156,8 +156,8 @@
       "url": "https://sbs.tech/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-07-22",
+    "date_end": "2022-07-23"
   },
   {
     "type": "D",
@@ -165,7 +165,7 @@
     "featured": false,
     "title": "EthCC 5",
     "date": "2022-07-19",
-    "img": "",
+    "img": "/images/ethcc.png",
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
@@ -176,8 +176,8 @@
       "url": "https://ethcc.io/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-07-19",
+    "date_end": "2022-07-21"
   },
   {
     "type": "D",
