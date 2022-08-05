@@ -169,12 +169,12 @@
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://ethcc.io/",
+      "icon": "info"
     },
     "date_start": "",
     "date_end": ""
