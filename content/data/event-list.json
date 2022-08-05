@@ -30,7 +30,7 @@
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "A",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://hub.fil.org/fil-lisbon",
