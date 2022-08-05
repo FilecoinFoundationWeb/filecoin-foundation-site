@@ -125,7 +125,7 @@
     "featured": false,
     "title": "South Korea Storage Provider Meetup",
     "date": "2022-08-12",
-    "img": "",
+    "img": "/images/korea-sp.png",
     "description": "Seoul, Korea",
     "cta": {
       "target": "_blank",
@@ -136,8 +136,8 @@
       "url": "https://lu.ma/sp-korea-meetup",
       "icon": "ticket"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-12",
+    "date_end": "2022-08-12"
   },
   {
     "type": "D",
