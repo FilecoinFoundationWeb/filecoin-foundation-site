@@ -11,8 +11,8 @@
       "target": "_blank",
       "text": "Learn More",
       "type": "B",
-      "action": "link",
-      "theme": "light",
+      "action": "",
+      "theme": "",
       "url": "https://hub.fil.org/fil-lisbon",
       "icon": "info"
     },
@@ -368,7 +368,7 @@
     "description": "DC Fintech Week convenes nonprofits, technologists, entrepreneurs and regulators to discuss emerging policy issues",
     "cta": {
       "type": "B",
-      "action": "a",
+      "action": "",
       "icon": "ticket",
       "text": "Register",
       "target": "_blank",
