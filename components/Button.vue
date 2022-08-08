@@ -83,6 +83,7 @@ export default {
       let tag
       switch (action) {
         case 'a' : tag = 'a'; break
+        case 'link': tag = 'a'; break
         case 'nuxt-link' : tag = 'nuxt-link'; break
         default : tag = 'button'; break
       }
