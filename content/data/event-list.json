@@ -11,8 +11,8 @@
       "target": "_blank",
       "text": "Learn More",
       "type": "B",
-      "action": "",
-      "theme": "",
+      "action": "button",
+      "theme": "light",
       "url": "https://hub.fil.org/fil-lisbon",
       "icon": "info"
     },
