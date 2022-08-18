@@ -368,7 +368,7 @@
     "description": "DC Fintech Week convenes nonprofits, technologists, entrepreneurs and regulators to discuss emerging policy issues",
     "cta": {
       "type": "B",
-      "action": "a",
+      "action": "",
       "icon": "ticket",
       "text": "Register",
       "target": "_blank",
