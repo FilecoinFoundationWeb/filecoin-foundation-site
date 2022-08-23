@@ -157,6 +157,12 @@ export default {
       return this.card.description
     },
     date () {
+      if (this.card.date_start && this.card.date_end) {
+        return [this.card.date_start, this.card.date_end]
+      }
+      if (this.card.date_start && !this.card.date) {
+        return this.card.date_start
+      }
       return this.card.date
     },
     label () {

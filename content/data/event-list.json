@@ -3,41 +3,41 @@
     "type": "D",
     "event_type": "event",
     "featured": true,
-    "title": "FIL-Singapore",
-    "date": "2022-09-26",
-    "img": "",
-    "description": "FIL-Singapore Summit will take place on September 26 to 27, 2022, a two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders. Our unmatched speaker lineup will dive into Filecoin and Web3, taking you through the Filecoin world of FVM, NFTs, the metaverse, and beyond.\n",
+    "title": "FIL Lisbon",
+    "date": "2022-10-31",
+    "img": "/images/fil-lisbon.png",
+    "description": "Lisbon, Portugal",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://hub.fil.org/fil-lisbon",
+      "icon": "info"
+    },
+    "date_start": "2022-10-31",
+    "date_end": "2022-11-04"
+  },
+  {
+    "type": "D",
+    "event_type": "event",
+    "featured": true,
+    "title": "FIL Singapore",
+    "date": "2022-09-26",
+    "img": "/images/fil-singapore.png",
+    "description": "A two-day event with insightful talks from top-notch speakers and panel discussions from the world's foremost Filecoin ecological participants and Web3 co-builders.",
+    "cta": {
+      "target": "_blank",
+      "text": "Learn More",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://fil-singapore.io/",
       "icon": "info"
     },
-    "date_start": "2022-09-26",
-    "date_end": ""
-  },
-  {
-    "type": "D",
-    "event_type": "event",
-    "featured": false,
-    "title": "FIL Lisbon",
-    "date": "2022-10-31",
-    "img": "",
-    "description": "Lisbon, Portugal",
-    "cta": {
-      "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
-    },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-09-24",
+    "date_end": "2022-09-25"
   },
   {
     "type": "D",
@@ -45,19 +45,19 @@
     "featured": false,
     "title": "Unfinished Live",
     "date": "2022-09-21",
-    "img": "",
+    "img": "/images/unfinished-live.png",
     "description": "New York, NY",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "dark",
       "url": "https://live.unfinished.com/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-09-21",
+    "date_end": "2022-08-24"
   },
   {
     "type": "D",
@@ -65,19 +65,19 @@
     "featured": false,
     "title": "DWeb Camp",
     "date": "2022-08-24",
-    "img": "",
+    "img": "/images/dweb-camp.png",
     "description": "Navarro, CA",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://dwebcamp.org/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-24",
+    "date_end": "2022-08-28"
   },
   {
     "type": "D",
@@ -85,19 +85,19 @@
     "featured": false,
     "title": "ESPA Bootcamp Cohort #4",
     "date": "2022-10-11",
-    "img": "",
+    "img": "/images/177648477-ed976b8e-ae0d-4f18-8d91-2d8512d3fb54_hua7fa79449114663eebf6af324bdad7a2_1514667_1333x0_resize_q90_linear_2.png",
     "description": "",
     "cta": {
       "target": "_blank",
       "text": "Learn More",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://www.web3espa.io/",
       "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-10-10",
+    "date_end": "2022-10-13"
   },
   {
     "type": "D",
@@ -105,19 +105,19 @@
     "featured": false,
     "title": "Singapore Storage Provider Meetup",
     "date": "2022-09-28",
-    "img": "",
+    "img": "/images/singapore-sp.png",
     "description": "",
     "cta": {
       "target": "_blank",
       "text": "Register",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "light",
       "url": "https://lu.ma/singapore-sp-meetup",
       "icon": "ticket"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-16",
+    "date_end": "2022-08-16"
   },
   {
     "type": "D",
@@ -125,19 +125,19 @@
     "featured": false,
     "title": "South Korea Storage Provider Meetup",
     "date": "2022-08-12",
-    "img": "",
+    "img": "/images/korea-sp.png",
     "description": "Seoul, Korea",
     "cta": {
       "target": "_blank",
       "text": "Register",
-      "type": "G",
+      "type": "B",
       "action": "link",
       "theme": "dark",
       "url": "https://lu.ma/sp-korea-meetup",
       "icon": "ticket"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-08-12",
+    "date_end": "2022-08-12"
   },
   {
     "type": "D",
@@ -145,19 +145,19 @@
     "featured": false,
     "title": "Sustainable Blockchain Summit",
     "date": "2022-07-22",
-    "img": "",
+    "img": "/images/sbs.png",
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
-      "text": "Register",
-      "type": "G",
+      "text": "Learn More",
+      "type": "B",
       "action": "link",
-      "theme": "dark",
-      "url": "https://www.eventbrite.com/e/sustainable-blockchain-summit-tickets-336114797407",
-      "icon": "ticket"
+      "theme": "light",
+      "url": "https://sbs.tech/",
+      "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-07-22",
+    "date_end": "2022-07-23"
   },
   {
     "type": "D",
@@ -165,19 +165,19 @@
     "featured": false,
     "title": "EthCC 5",
     "date": "2022-07-19",
-    "img": "",
+    "img": "/images/ethcc.png",
     "description": "Paris, France",
     "cta": {
       "target": "_blank",
-      "text": "",
-      "type": "",
-      "action": "",
-      "theme": "",
-      "url": "",
-      "icon": ""
+      "text": "Learn More",
+      "type": "B",
+      "action": "link",
+      "theme": "light",
+      "url": "https://ethcc.io/",
+      "icon": "info"
     },
-    "date_start": "",
-    "date_end": ""
+    "date_start": "2022-07-19",
+    "date_end": "2022-07-21"
   },
   {
     "type": "D",
@@ -368,7 +368,7 @@
     "description": "DC Fintech Week convenes nonprofits, technologists, entrepreneurs and regulators to discuss emerging policy issues",
     "cta": {
       "type": "B",
-      "action": "a",
+      "action": "",
       "icon": "ticket",
       "text": "Register",
       "target": "_blank",

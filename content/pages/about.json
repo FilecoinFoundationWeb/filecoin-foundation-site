@@ -356,6 +356,48 @@
           "cards": [
             {
               "type": "C",
+              "date": "",
+              "label": "",
+              "title": "",
+              "description": "<b>Veronica McGregor</b>Chief Legal Officer, Exodus",
+              "img": "/images/1539188922235.jpg",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
+            },
+            {
+              "type": "C",
+              "date": "",
+              "label": "",
+              "title": "",
+              "description": "<b>Kurt Opsahl</b>Deputy Executive Director, Electronic Frontier Foundation",
+              "img": "/images/def_con_26_portrait_by_eli_omen-142.jpg",
+              "img_type": "",
+              "img_size": "",
+              "action": "",
+              "url": "",
+              "target": "",
+              "cta": {
+                "text": "",
+                "type": "",
+                "action": "",
+                "theme": "",
+                "url": "",
+                "icon": ""
+              }
+            },
+            {
+              "type": "C",
               "img": "/images/about/katiebiber.png",
               "img_size": "full",
               "description": "<b>Katie Biber</b>General Counsel, Brex",
@@ -530,8 +572,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
-                  "url": "https://www.youtube.com/watch?v=S91iwPGuV7A "
+                  "preview_image": "/images/screenshot-2022-08-05-130026.png",
+                  "url": "https://www.youtube.com/watch?v=S91iwPGuV7A"
                 }
               },
               "right": {
@@ -549,11 +591,11 @@
                       "action": "video",
                       "icon": "play",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                      "url": "https://www.youtube.com/watch?v=S91iwPGuV7A"
                     }
                   ],
-                  "heading": "Preserving Humanity's Most Important Records ",
-                  "description": "A Conversation with Starling Lab's Jonathan Dotan and CoinDesk's Zack Seward at FIL Austin 2022"
+                  "heading": "Humanity's Most Important Records",
+                  "description": "This session highlights the amazing work Starling Labs has done in Ukraine and Syria, with the support of the Filecoin Foundation."
                 }
               }
             },
@@ -565,8 +607,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
-                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                  "preview_image": "/images/screenshot-2022-08-05-125741.png",
+                  "url": "https://www.youtube.com/watch?v=d_ey6CHjGys"
                 }
               },
               "right": {
@@ -584,11 +626,11 @@
                       "action": "video",
                       "icon": "play",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                      "url": "https://www.youtube.com/watch?v=d_ey6CHjGys"
                     }
                   ],
-                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
-                  "heading": "Welcome to Filecoin Plus Day"
+                  "description": "Learn about Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
+                  "heading": "Fil+ State of the Union 2022"
                 }
               }
             }

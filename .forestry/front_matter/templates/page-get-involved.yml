@@ -222,3 +222,5 @@ fields:
       template: comp-divedeeper
       label: Template → [Comp] DiveDeeper
       description: Video testimonials and accompanying text
+pages:
+- content/pages/get-involved.json

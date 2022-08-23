@@ -686,8 +686,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-1.png",
-                  "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                  "preview_image": "/images/screenshot-2022-08-05-124215.png",
+                  "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
                 }
               },
               "right": {
@@ -705,11 +705,11 @@
                       "action": "video",
                       "icon": "icon",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=o0nPBRM-aMQ"
+                      "url": "https://www.youtube.com/watch?v=9Db0rXvscYY"
                     }
                   ],
-                  "heading": "Accelerating the Filecoin Ecosystem",
-                  "description": "On these calls, we discussed recent DataCap allocation and application metrics, heard from various clients applying through the Large Dataset process, continued our discussion of Issue 217"
+                  "heading": "FIL Austin",
+                  "description": "The first major IRL meetup of the Filecoin Community gathered hundreds of contributors from across the Filecoin ecosystem."
                 }
               }
             },
@@ -721,8 +721,8 @@
                   "push_left": "off-1_sm-2_mi-1"
                 },
                 "props": {
-                  "preview_image": "/images/section-dive-deeper/diver-deeper-video-preview-2.png",
-                  "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                  "preview_image": "/images/screenshot-2022-08-04-204732.png",
+                  "url": "https://www.youtube.com/watch?v=hg8e3_gKtwU"
                 }
               },
               "right": {
@@ -733,8 +733,8 @@
                 },
                 "props": {
                   "layout": "medium",
-                  "heading": "Welcome to Filecoin Plus Day",
-                  "description": "Learn about the fundamentals of Filecoin Plus, a program designed to incentivize useful storage on the Filecoin network.",
+                  "heading": "DWeb Gateway @ Davos",
+                  "description": "The Decentralized Web Gateway brings together leaders, thinkers and activists to discuss the evolution of the internet and its ramifications for society.",
                   "ctas": [
                     {
                       "type": "B",
@@ -742,7 +742,7 @@
                       "action": "video",
                       "icon": "icon",
                       "text": "Watch Video",
-                      "url": "https://www.youtube.com/watch?v=wP4Bk8lBNUc"
+                      "url": "https://www.youtube.com/watch?v=hg8e3_gKtwU"
                     }
                   ]
                 }
