@@ -114,19 +114,6 @@ fields:
             label: Text
             default: See more
           hidden: true
-        - type: field_group
-          name: display
-          label: Display
-          fields:
-          - type: number
-            name: initial
-            label: Initial
-            default: 6
-          - type: number
-            name: next
-            label: Next
-            default: 6
-          hidden: true
         - name: card_customizations
           type: field_group
           config: {}
