@@ -140,6 +140,12 @@ fields:
               required: false
             label: Action
             default: a
+          - name: target
+            type: text
+            config:
+              required: false
+            label: Target
+            default: _blank
           - name: cta
             type: field_group
             config: {}
