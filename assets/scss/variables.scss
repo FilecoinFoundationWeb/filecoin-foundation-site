@@ -222,6 +222,10 @@ $letterSpacing_Large: 0.03em;
 @mixin leading_ExtraLarge { line-height: $leading_ExtraLarge; }
 @mixin leading_ExtraExtraLarge { line-height: $leading_ExtraExtraLarge; }
 
+@function leading($lineHeight, $fontSize) {
+  @return math.div(math.round(10 * math.div($lineHeight, $fontSize)), 10);
+}
+
 // --------------------------------------------------------- Typography | Groups
 @mixin h1 { // large heading often found in the Hero
   font-size: $fontSize_Huge;

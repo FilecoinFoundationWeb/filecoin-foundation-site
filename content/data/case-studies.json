@@ -1,0 +1,114 @@
+[
+  {
+    "featured": true,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 4,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 1,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 2,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 3,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 4,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 1,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  },
+  {
+    "featured": false,
+    "title": "FIL Lisbon",
+    "label": "Case Study",
+    "img": "/images/fil-lisbon.png",
+    "description": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks.",
+    "color": 2,
+    "toggle": {
+      "target": "",
+      "type": "D",
+      "action": "button",
+      "theme": "light",
+      "url": "",
+      "icon": ""
+    }
+  }
+]
