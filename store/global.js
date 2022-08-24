@@ -8,7 +8,7 @@ import Settings from '@/content/data/settings.json'
 const state = () => ({
   siteContent: {},
   modal: false,
-  jobPostings: {}
+  jobPostings: false
 })
 
 // ///////////////////////////////////////////////////////////////////// Getters

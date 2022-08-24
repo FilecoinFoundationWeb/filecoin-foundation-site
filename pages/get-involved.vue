@@ -82,12 +82,14 @@ export default {
       const jobs = this.postings
       const cardCustomizations = content.section_1.careers_list.left.card_customizations
       content.section_1.careers_list.left.cards = []
+      content.section_1.careers_list.left.display = { initial: cardCustomizations.number_job_postings, next: cardCustomizations.number_job_postings }
       const cards = content.section_1.careers_list.left.cards
       const cardsLength = jobs.length > cardCustomizations.number_job_postings ? cardCustomizations.number_job_postings : jobs.length
       for (let i = 0; i < cardsLength; i++) {
         const cardObj = {
           type: cardCustomizations.type,
           action: cardCustomizations.action,
+          target: cardCustomizations.target,
           url: jobs[i].hostedUrl,
           label: jobs[i].categories.location,
           title: jobs[i].text,

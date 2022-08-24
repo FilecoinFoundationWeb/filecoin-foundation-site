@@ -1,5 +1,7 @@
 <template>
-  <div class="block card-list-block">
+  <div
+    v-if="postings"
+    class="block card-list-block">
 
     <div class="grid-start">
 
@@ -33,6 +35,7 @@
 
 <script>
 // ====================================================================== Import
+import { mapGetters } from 'vuex'
 import Card from '@/components/Card'
 import Button from '@/components/Button'
 import IconCode from '@/components/icons/Code'
@@ -72,6 +75,9 @@ export default {
   },
 
   computed: {
+    ...mapGetters({
+      postings: 'global/jobPostings'
+    }),
     cards () {
       return this.block.cards
     },

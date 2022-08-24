@@ -69,21 +69,17 @@
             "theme": "dark",
             "text": "See more"
           },
-          "display": {
-            "initial": 6,
-            "next": 6
-          },
           "card_customizations": {
             "number_job_postings": 3,
             "type": "D",
             "action": "a",
+            "target": "_blank",
             "cta": {
               "type": "B",
               "target": "_blank",
               "icon": "plus",
               "text": "Apply Now"
-            },
-            "target": ""
+            }
           }
         },
         "grid": [
