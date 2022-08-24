@@ -43,11 +43,11 @@
           "ctas": [
             {
               "type": "B",
-              "action": "",
+              "action": "link",
               "target": "_blank",
               "icon": "plus",
               "text": "View All",
-              "url": "https://jobs.lever.co/filecoin",
+              "url": "https://jobs.lever.co/filecoin/",
               "theme": ""
             }
           ],
@@ -82,7 +82,8 @@
               "target": "_blank",
               "icon": "plus",
               "text": "Apply Now"
-            }
+            },
+            "target": ""
           }
         },
         "grid": [
