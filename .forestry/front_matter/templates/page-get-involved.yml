@@ -183,22 +183,6 @@ fields:
               default: Apply Now
             label: CTA
           label: Job Card Customizations
-        - name: cards
-          type: field_group_list
-          fields:
-          - name: cards
-            type: include
-            config: {}
-            template: card
-            label: Template → [Comp] Card
-          config:
-            min: 
-            max: 
-            labelField: 
-          label: Cards
-          description: 'Click ''Add Card to add a new card to the list.
-
-            '
     - type: field_group
       name: get_involved
       label: Get Involved
