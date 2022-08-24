@@ -127,6 +127,62 @@ fields:
             label: Next
             default: 6
           hidden: true
+        - name: card_customizations
+          type: field_group
+          config: {}
+          fields:
+          - name: number_job_postings
+            type: number
+            label: Number of Job Postings
+            description: ''
+            default: 2
+            required: true
+            config:
+              min: 
+              max: 
+              step: 
+          - name: type
+            type: text
+            config:
+              required: false
+            label: Card Type
+            default: D
+          - name: action
+            type: text
+            config:
+              required: false
+            label: Action
+            default: a
+          - name: cta
+            type: field_group
+            config: {}
+            fields:
+            - name: type
+              type: text
+              config:
+                required: false
+              label: Type
+              default: B
+            - name: target
+              type: text
+              config:
+                required: false
+              label: Target
+              default: _blank
+            - name: icon
+              type: text
+              config:
+                required: false
+              label: Icon
+              default: plus
+            - name: text
+              type: text
+              config:
+                required: false
+              label: Text
+              default: Apply Now
+            label: CTA
+          label: Job Card Customizations
         - name: cards
           type: field_group_list
           fields:
