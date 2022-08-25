@@ -67,4 +67,4 @@ With the new capabilities they offer, Xinshu continues to grow. Today, with a hy
 
 The company’s storage size is estimated to grow to 40–50 TiB per month (480–600 TiB a year) in the future, which showcases the potential for future applications with massive storage that will ultimately help preserve people’s most wonderful memories.
 
-By working with Bytebase, Xinshu was able to truly realize the value of blockchain and the Filecoin protocol for its unique business needs. To learn more about Filecoin, storage providers and developer use cases, please visit: [Filecoin.io](http://filecoin.io/)or [fil.org](http://fil.org/).
+By working with Bytebase, Xinshu was able to truly realize the value of blockchain and the Filecoin protocol for its unique business needs. To learn more about Filecoin, storage providers and developer use cases, please visit: [Filecoin.io](http://filecoin.io/)or [fil.org](http://fil.org/)..
