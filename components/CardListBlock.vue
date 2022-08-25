@@ -135,7 +135,7 @@ export default {
     }
   },
 
-  beforeDestroy() {
+  beforeDestroy () {
     if (this.resize) {
       window.removeEventListener('resize', this.resize)
     }

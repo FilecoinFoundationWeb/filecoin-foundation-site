@@ -1,7 +1,107 @@
 {
   "page_content": {
+    "section_0": {
+      "hero-header": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-7"
+          },
+          "layout": "large",
+          "theme": "light",
+          "heading": "Public Data Commons",
+          "subheading": "Data storage that is more resilient, because public data shapes our future."
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col"
+          },
+          "src": "/images/ecosystem/hero-image@2x.png",
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "section_1": {
-      "basic_hero": {
+      "before": {
+        "id": "section-1-background-layers",
+        "layers-array": "2_3_4",
+        "breakpoints": {
+          "default": {
+            "stroke": 1.375,
+            "radius": 18.75
+          },
+          "medium": {
+            "stroke": 0.75,
+            "radius": 12.75
+          },
+          "mini": {
+            "stroke": 0.25,
+            "radius": 10
+          }
+        }
+      },
+      "intro_1": {
+        "classNames": "basic-template-block-format",
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-5_sm-4_mi-6",
+            "push_left": "off-2_mi-1",
+            "push_right": ""
+          },
+          "src": "/images/upstairs.png",
+          "label": ""
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-4_sm-9_mi-10",
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
+          },
+          "label": "Nemo enim ipsam",
+          "heading": "Veritatis et Quasi",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Get Involved",
+              "url": "/get-involved",
+              "icon": ""
+            }
+          ],
+          "subheading": ""
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "intro_2": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -32,7 +132,7 @@
           "middle"
         ]
       },
-      "intro_1": {
+      "banner_1": {
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -73,103 +173,7 @@
           ]
         }
       },
-      "cta_banner_1": {
-        "classNames": "basic-template-block-format",
-        "left": {
-          "type": "image_block",
-          "cols": {
-            "num": "col-5_sm-4_mi-6",
-            "push_left": "off-2_mi-1",
-            "push_right": ""
-          },
-          "src": "/images/upstairs.png",
-          "label": ""
-        },
-        "right": {
-          "type": "text_block",
-          "layout": "medium",
-          "cols": {
-            "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1",
-            "push_right": ""
-          },
-          "label": "Nemo enim ipsam",
-          "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "ctas": [
-            {
-              "type": "A",
-              "theme": "light",
-              "action": "nuxt-link",
-              "text": "Get Involved",
-              "url": "/get-involved",
-              "icon": ""
-            }
-          ],
-          "subheading": ""
-        },
-        "grid": [
-          "middle"
-        ]
-      },
-      "basic_content_1": {
-        "classNames": "basic-template-block-format",
-        "left": {
-          "type": "text_block",
-          "layout": "large",
-          "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
-            "push_right": ""
-          },
-          "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "label": "",
-          "subheading": "",
-          "ctas": [
-
-          ]
-        }
-      },
-      "basic_content_2": {
-        "classNames": "basic-template-block-format",
-        "left": {
-          "type": "text_block",
-          "layout": "large",
-          "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
-            "push_right": ""
-          },
-          "heading": "Architecto beatae vitae dicta sunt explicabo",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "label": "",
-          "subheading": "",
-          "ctas": [
-
-          ]
-        }
-      },
-      "basic_content_3": {
-        "classNames": "basic-template-block-format",
-        "left": {
-          "type": "text_block",
-          "layout": "large",
-          "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
-            "push_right": ""
-          },
-          "heading": "Nemo enim ipsam voluptatem",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "label": "",
-          "subheading": "",
-          "ctas": [
-
-          ]
-        }
-      },
-      "panels_1": {
+      "intro_3": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "text_block",
@@ -203,157 +207,32 @@
       }
     },
     "section_2": {
-      "resources": {
+      "intro_4": {
         "left": {
           "type": "text_block",
-          "layout": "medium",
+          "layout": "large",
           "cols": {
-            "num": "col-3_sm-10_mi-9",
-            "push_left": "off-1_sm-2",
+            "num": "col-5_md-9_mi-10",
+            "push_left": "off-2_mi-1",
             "push_right": ""
           },
-          "label": "Resources",
-          "heading": "How to get involved and key links",
-          "description": "Join <a href='//filecoin.io/slack' target='_blank' style='color: white;'>Filecoin Slack</a> and participate in our bi-weekly community governance calls every other Tuesday",
+          "heading": "Lorem Ipsum",
+          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "label": "",
+          "description": "",
           "ctas": [
-            {
-              "type": "A",
-              "action": "a",
-              "theme": "light",
-              "target": "_blank",
-              "text": "Join the Community",
-              "url": "//filecoin.io/slack",
-              "icon": ""
-            }
-          ],
-          "subheading": ""
+
+          ]
         },
         "right": {
-          "type": "section_slider_block",
+          "type": "image_block",
           "cols": {
-            "num": "col-6_sm-7_mi-10_ti-9",
-            "push_left": "off-2_sm-3_mi-2"
+            "num": "col-5_md-9_mi-10",
+            "push_left": "off-0_md-2_mi-1",
+            "push_right": ""
           },
-          "customizations": {
-            "background_layers": {
-              "name": "BackgroundLayers",
-              "props": {
-                "layers-array": "8_6",
-                "breakpoints": {
-                  "default": {
-                    "stroke": 1.375,
-                    "radius": 12.75
-                  },
-                  "medium": {
-                    "stroke": 0.75,
-                    "radius": 12.75
-                  },
-                  "mini": {
-                    "stroke": 0.25,
-                    "radius": 12.75
-                  }
-                },
-                "reverse": true
-              }
-            }
-          },
-          "rows": 3,
-          "display": {
-            "mini": 1,
-            "default": 2
-          },
-          "cards": [
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//docs.filecoin.io",
-              "img": "/icons/outline-file.png",
-              "img_size": "mini",
-              "title": "Filecoin's Documentation",
-              "description": "Filecoin project documentation homepage offers the tools to contribute to the network."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//github.com/filecoin-project",
-              "img": "/icons/outline-github.png",
-              "img_size": "mini",
-              "title": "Filecoin GitHub",
-              "description": "Contribute to Filecoin and help improve it by engaging in the Filecoin GitHub repository."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//liftoff.filecoin.io",
-              "img": "/icons/outline-calendar.png",
-              "img_size": "mini",
-              "title": "Filecoin 2020 Mainnet Ignition & Liftoff",
-              "description": "This covers the timeline of the Filecoin Mainnet Ignition & Liftoff."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//status.filecoin.io",
-              "img": "/images/outline-filecoin-blue-logo.svg",
-              "img_size": "mini",
-              "title": "Filecoin Network Status",
-              "description": "This dashboard provides the latest update of the Filecoin Network."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//orbit.filecoin.io",
-              "img": "/icons/outline-multi-circle.png",
-              "img_size": "mini",
-              "title": "Filecoin 2021 Orbit",
-              "description": "Mark the one-year anniversary since Filecoin Mainnet launch with ecosystem events and celebrations around the world."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//github.com/filecoin-project/community/discussions",
-              "img": "/icons/outline-speech-bubble.png",
-              "img_size": "mini",
-              "title": "Filecoin Forums",
-              "description": "A public forum for the Filecoin protocol, implementation, community, and more."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//research.filecoin.io",
-              "img": "/icons/outline-beaker.png",
-              "img_size": "mini",
-              "title": "Filecoin Research",
-              "description": "Breakthroughs underpinning the Filecoin protocol, as well as future areas of exploration."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//filecoin.io/2020-engineering-filecoins-economy-en.pdf",
-              "img": "/icons/outline-moneybag.png",
-              "img_size": "mini",
-              "title": "Cryptoeconomics Overview",
-              "description": "This report describes the components of the Filecoin economy and how they interact."
-            },
-            {
-              "type": "A",
-              "action": "a",
-              "target": "_blank",
-              "url": "//proto.school",
-              "img": "/icons/outline-graduation-cap.png",
-              "img_size": "mini",
-              "title": "Filecoin Tutorials (ProtoSchool)",
-              "description": "This is a self-guided interactive Filecoin tutorial designed to introduce decentralized web concepts, protocols, and tools."
-            }
-          ]
+          "src": "/images/ecosystem/hero-image@2x.png",
+          "label": ""
         },
         "grid": [
           "middle"
@@ -433,21 +312,81 @@
       }
     },
     "section_5": {
-      "faq": {
+      "faq_accordion": {
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-3"
+            "num": "col-2"
           },
           "src": "/images/pencil.png"
         },
         "right": {
           "type": "text_block",
           "cols": {
-            "num": "col-6"
+            "num": "col-10",
+            "push_left": "off-0"
           },
-          "heading": "Join the movement",
-          "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective."
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Frequently Asked Questions",
+          "customizations": {
+            "accordion": {
+              "name": "AccordionBlock",
+              "props": {
+                "block": {
+                  "theme": "light",
+                  "sections": [
+                    {
+                      "heading": "What is Filecoin?",
+                      "content": "Filecoin is a decentralized network to store files, with built-in economic incentives to ensure files are stored reliably over time. The mission of Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information."
+                    },
+                    {
+                      "heading": "What is the Filecoin Foundation?",
+                      "content": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+                    },
+                    {
+                      "heading": "How do I get involved?",
+                      "content": "If you are a government official interested in having your city join the Public Data Commons, <a href='mailto:impact@fil.org'>reach out to us.</a><br><br>If you are from a civic technology group and want to leverage public datasets hosted on decentralized storage, <a href='https://example.com'>fill out this form</a> and we will notify you if there is a Public Data Awards program launched for your city."
+                    },
+                    {
+                      "heading": "What about the environmental impacts of blockchain?",
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at filecoin.energy! Learn more about the Filecoin community’s commitment to energy efficiency."
+                    }
+                  ]
+                }
+              }
+            },
+            "contact": {
+              "name": "TextBlock",
+              "props": {
+                "block": {
+                  "theme": "light",
+                  "description": "Have a question not addressed here? <a href='mailto:impact@fil.org'>Reach out to us.</a>"
+                }
+              }
+            },
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "5_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                },
+                "reverse": true
+              }
+            }
+          }
         }
       }
     },
@@ -456,8 +395,11 @@
         "left": {
           "type": "text_block",
           "cols": {
-            "num": "col-12"
+            "num": "col-8",
+            "push_left": "off-3"
           },
+          "theme": "light",
+          "layout": "medium",
           "heading": "Join the movement",
           "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
           "ctas": [
@@ -469,7 +411,29 @@
               "url": "/",
               "icon": ""
             }
-          ]
+          ],
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
