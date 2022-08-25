@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-basic-2">
+  <div class="page page-public-data-commons">
 
     <Modal />
 
@@ -77,7 +77,7 @@ const positionFeaturedFirst = (events) => {
 
 // ====================================================================== Export
 export default {
-  name: 'PageBasicTwo',
+  name: 'PublicDataCommonsPage',
 
   components: {
     Modal,
@@ -510,6 +510,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 ::v-deep #section_5 {
   position: relative;
   z-index: 2;
+  .block {
+    position: relative;
+    z-index: 10;
+  }
   .text-block {
     margin-left: 3.125rem;
     .heading {

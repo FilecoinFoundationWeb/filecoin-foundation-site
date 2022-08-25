@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 .accordion-block {
+  position: relative;
   &.theme__light {
     color: white;
   }
