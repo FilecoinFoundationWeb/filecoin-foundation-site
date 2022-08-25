@@ -1,6 +1,10 @@
 <template>
   <div class="block card-list-block">
 
+    <div v-if="heading" class="heading">
+      {{ heading }}
+    </div>
+
     <div class="grid-start">
 
       <div
@@ -93,6 +97,9 @@ export default {
   },
 
   computed: {
+    heading () {
+      return this.block.heading
+    },
     cards () {
       return this.block.cards
     },
@@ -161,6 +168,15 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
+.heading {
+  color: white;
+  font-size: 2.8125rem;
+  @include fontWeight_SemiBold;
+  letter-spacing: 0.4px;
+  line-height: leading(65, 45);
+  margin-bottom: 3.4375rem;
+}
+
 .icon-code {
   width: 1.25rem;
 }

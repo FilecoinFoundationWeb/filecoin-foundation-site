@@ -199,6 +199,17 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(214, 234, 251, 1) inset, 0 0 6px rgba(178, 215, 248, 1);
     z-index: 10;
   }
+  &.theme__pdc {
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    &:before {
+      background-color: $denim;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    }
+    &:after {
+      background-color: $azureRadiance;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    }
+  }
   &.theme__dark {
     &:hover {
       &:before {

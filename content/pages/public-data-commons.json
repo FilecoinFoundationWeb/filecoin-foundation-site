@@ -1,28 +1,20 @@
 {
   "page_content": {
     "section_0": {
-      "hero-header": {
+      "hero-header-image": {
+        "grid": ["noBottom"],
         "left": {
-          "type": "text_block",
-          "cols": {
-            "num": "col-7"
-          },
-          "layout": "large",
-          "theme": "light",
-          "heading": "Public Data Commons",
-          "subheading": "Data storage that is more resilient, because public data shapes our future."
-        },
-        "right": {
           "type": "image_block",
           "cols": {
-            "num": "col"
+            "num": "col-7",
+            "push_left": "off-5"
           },
           "src": "/images/ecosystem/hero-image@2x.png",
           "customizations": {
             "background_layers_v2": {
               "name": "EchoLayers",
               "props": {
-                "layers-array": "4_5_6_6_6",
+                "layers-array": "4_5_6_6_6_6",
                 "breakpoints": {
                   "default": {
                     "stroke": 1.375,
@@ -40,6 +32,18 @@
               }
             }
           }
+        }
+      },
+      "hero-header-text": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-9"
+          },
+          "layout": "large",
+          "theme": "light",
+          "heading": "Public Data Commons",
+          "subheading": "Data storage that is more resilient, because public data shapes our future."
         }
       }
     },
@@ -62,33 +66,62 @@
           }
         }
       },
+      "logo-gallery": {
+        "left": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-12"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/nyc-open-data-logo.png"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/filecoin-green-logo.png"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/university-of-maryland-logo.png"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/tech-congress-logo.png"
+            }
+          ]
+        }
+      },
       "intro_1": {
         "classNames": "basic-template-block-format",
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-5_sm-4_mi-6",
-            "push_left": "off-2_mi-1",
+            "num": "col-4",
+            "push_left": "off-0",
             "push_right": ""
           },
-          "src": "/images/upstairs.png",
+          "src": "/images/grants-hands-multistroke.svg",
           "label": ""
         },
         "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1",
+            "num": "col-7",
+            "push_left": "off-1",
             "push_right": ""
           },
-          "label": "Nemo enim ipsam",
           "heading": "Veritatis et Quasi",
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "ctas": [
             {
               "type": "A",
-              "theme": "light",
+              "theme": "pdc",
               "action": "nuxt-link",
               "text": "Get Involved",
               "url": "/get-involved",
@@ -104,25 +137,31 @@
       "intro_2": {
         "left": {
           "type": "text_block",
-          "layout": "large",
+          "layout": "medium",
           "cols": {
-            "num": "col-5_md-9_mi-10",
-            "push_left": "off-2_mi-1",
+            "num": "col-6",
+            "push_left": "off-0",
             "push_right": ""
           },
           "heading": "Lorem Ipsum",
-          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "label": "",
-          "description": "",
           "ctas": [
-
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "nuxt-link",
+              "text": "Learn More about Filecoin",
+              "url": "/",
+              "icon": ""
+            }
           ]
         },
         "right": {
           "type": "image_block",
           "cols": {
-            "num": "col-5_md-9_mi-10",
-            "push_left": "off-0_md-2_mi-1",
+            "num": "col-5",
+            "push_left": "off-1",
             "push_right": ""
           },
           "src": "/images/ecosystem/hero-image@2x.png",
@@ -138,14 +177,14 @@
           "layout": "small",
           "cols": {
             "num": "col-7_mi-8",
-            "push_left": "off-5_mi-4",
+            "push_left": "off-3_mi-4",
             "push_right": ""
           },
           "customizations": {
             "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "8_6_5_4_3",
+                "layers-array": "8_6_5_4_3_2",
                 "breakpoints": {
                   "default": {
                     "stroke": 1.375,
@@ -164,46 +203,52 @@
               }
             }
           },
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+          "description": "",
           "label": "",
-          "heading": "",
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Public data belongs in the hands of the people",
           "subheading": "",
           "ctas": [
-
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "nuxt-link",
+              "text": "Join the Public Data Commons",
+              "url": "/",
+              "icon": ""
+            }
           ]
         }
       },
       "intro_3": {
         "classNames": "basic-template-block-format",
         "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4",
+            "push_left": "off-0"
+          },
+          "src": "/images/hands-raised.png",
+          "label": ""
+        },
+        "grid": [
+        ],
+        "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-4_sm-9_mi-10",
-            "push_left": "off-2_md-2_mi-1_ti-1",
+            "num": "col-6",
+            "push_left": "off-2",
             "push_right": ""
           },
-          "label": "Sed ut perspiciatis",
           "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "subheading": "",
           "ctas": [
 
           ]
-        },
-        "right": {
-          "type": "image_block",
-          "cols": {
-            "num": "col-5_md-5_sm-7_mi-8",
-            "push_left": "off-1_mi-2_sm-2_mi-1",
-            "push_right": ""
-          },
-          "src": "/images/square-connection.png",
-          "label": ""
-        },
-        "grid": [
-          "middle"
-        ]
+        }
       }
     },
     "section_2": {
@@ -212,31 +257,37 @@
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-5_md-9_mi-10",
-            "push_left": "off-2_mi-1",
+            "num": "col-5",
+            "push_left": "off-0",
             "push_right": ""
           },
+          "theme": "light",
           "heading": "Lorem Ipsum",
           "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "label": "",
           "description": "",
           "ctas": [
-
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "nuxt-link",
+              "text": "Read more and Apply for Awards",
+              "url": "/",
+              "icon": ""
+            }
           ]
         },
         "right": {
           "type": "image_block",
           "cols": {
-            "num": "col-5_md-9_mi-10",
-            "push_left": "off-0_md-2_mi-1",
+            "num": "col-6",
+            "push_left": "off-1",
             "push_right": ""
           },
           "src": "/images/ecosystem/hero-image@2x.png",
           "label": ""
         },
-        "grid": [
-          "middle"
-        ]
+        "grid": []
       }
     },
     "section_3": {
@@ -245,16 +296,16 @@
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-6",
-            "push_left": "off-4",
-            "push_right": "off-2"
+            "num": "col-8",
+            "push_left": "off-3",
+            "push_right": "off-1"
           },
           "heading": "Join the movement",
           "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
           "ctas": [
             {
               "type": "A",
-              "theme": "light",
+              "theme": "pdc",
               "action": "nuxt-link",
               "text": "Learn more",
               "url": "/",
@@ -265,7 +316,7 @@
             "background_layers": {
               "name": "BackgroundLayers",
               "props": {
-                "layers-array": "2_3_4_5_6",
+                "layers-array": "1_2_3_4_5_6",
                 "breakpoints": {
                   "default": {
                     "stroke": 1.375,
@@ -306,6 +357,7 @@
             "initial": 5,
             "next": 5
           },
+          "heading": "Case Studies: See the value of public datasets in action",
           "case_study": true,
           "cards": []
         }
@@ -318,7 +370,7 @@
           "cols": {
             "num": "col-2"
           },
-          "src": "/images/pencil.png"
+          "src": "/images/question-mark.png"
         },
         "right": {
           "type": "text_block",
@@ -405,7 +457,7 @@
           "ctas": [
             {
               "type": "A",
-              "theme": "light",
+              "theme": "pdc",
               "action": "nuxt-link",
               "text": "Learn more",
               "url": "/",
@@ -439,12 +491,12 @@
     }
   },
   "seo": {
-    "title": "Basic Page - Filecoin Foundation",
+    "title": "Public Data Commons - Filecoin Foundation",
     "description": "Filecoin Foundation - Let's build the internet of everyone"
   },
   "og": {
-    "site_name": "Basic Page - Filecoin Foundation",
-    "url": "https://fil.org/basic-template-2",
+    "site_name": "Public Data Commons - Filecoin Foundation",
+    "url": "https://fil.org/public-data-commons",
     "type": "website",
     "image": "/images/open-graph.png"
   }
