@@ -378,6 +378,21 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
   }
 }
 
+::v-deep #intro_2 {
+  .text-block {
+    .heading {
+      margin-bottom: 1.75rem;
+      a {
+        color: #2E38E6;
+        @include fontWeight_SemiBold;
+      }
+    }
+  }
+  .image-block {
+    margin-right: calc(-1.5 * #{math.div($containerWidth, 12)});
+  }
+}
+
 ::v-deep #banner_1 {
   position: relative;
   padding-top: 14rem;
@@ -481,6 +496,15 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='68' height='58' viewBox='0 0 68 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.1543 28.8071H67.8904' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M28.6406 56.6979V0.913086' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M0.890625 56.5603L56.3955 1.05371' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M48.3643 48.5305L8.91797 9.08398' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3c/svg%3e ");
     }
   }
+  .text-block {
+    .description {
+      a {
+        color: #2E38E6;
+        @include fontSize_Regular;
+        @include fontWeight_SemiBold;
+      }
+    }
+  }
 }
 
 
@@ -492,6 +516,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
   padding-top: 6rem;
   .text-block {
     padding-top: 5rem;
+  }
+  .image-block {
+    margin-right: calc(-3 * #{math.div($containerWidth, 12)});
   }
 }
 // /////////////////////////////////////////////////////////////////// Section 3
@@ -530,6 +557,11 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 ::v-deep #case_studies {
   padding-top: 8rem;
   .card-list-block {
+    .heading {
+      .case-study-label {
+        @include fontWeight_Regular;
+      }
+    }
     .button-row {
       justify-content: center;
     }

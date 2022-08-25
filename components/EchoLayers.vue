@@ -194,7 +194,7 @@ export default {
 
   methods: {
     layerStyle (index, color) {
-      let coef = index > 2 ? Math.pow(index * 0.5, 3.3) : index
+      const coef = index > 2 ? Math.pow(index * 0.5, 3.3) : index
       const w = `width: calc(100% + ${2 * coef * this.layerWidth}rem);`
       const h = `height: calc(100% + ${2 * coef * this.layerWidth}rem);`
       const t = `top: ${-1 * coef * this.layerWidth}rem;`

@@ -9,7 +9,7 @@
             "num": "col-7",
             "push_left": "off-5"
           },
-          "src": "/images/ecosystem/hero-image@2x.png",
+          "src": "/images/pdc/congress.png",
           "customizations": {
             "background_layers_v2": {
               "name": "EchoLayers",
@@ -43,7 +43,7 @@
           "layout": "large",
           "theme": "light",
           "heading": "Public Data Commons",
-          "subheading": "Data storage that is more resilient, because public data shapes our future."
+          "subheading": "Data storage that <span id='hero-subheading-ticker'></span><br>because public data is important."
         }
       }
     },
@@ -76,22 +76,22 @@
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/nyc-open-data-logo.png"
+              "img": "/images/pdc/filecoin-green-logo.svg"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/filecoin-green-logo.png"
+              "img": "/images/pdc/uni-maryland-logo.svg"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/university-of-maryland-logo.png"
+              "img": "/images/pdc/tech-congress-logo.svg"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/tech-congress-logo.png"
+              "img": "/images/pdc/decentralized-future-council-logo.svg"
             }
           ]
         }
@@ -116,8 +116,8 @@
             "push_left": "off-1",
             "push_right": ""
           },
-          "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "heading": "Making public data more resilient, permanent, and cost-effective, while also increasing accessibility.",
+          "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe. This initiative brings together cutting-edge archival technologies and the most civic-minded public institutions to leverage the unique benefits of decentralized storage – because public data should be a useful resource, not a costly burden to store.<br><br>Open data in cities help foster trust in governments by allowing citizens and community organizations to play a role in advancing accountability for a more effective government.",
           "ctas": [],
           "subheading": ""
         },
@@ -134,8 +134,8 @@
             "push_left": "off-0",
             "push_right": ""
           },
-          "heading": "Lorem Ipsum",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "heading": "Control over today’s centralized internet is concentrated in the <a href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
+          "description": "These huge, ultra-powerful companies collect our data, control the information we get, and present vulnerable targets for malicious hackers.<br><br>All too often, we see some of these power players curate public data behind paywalls.  This undermines the original intention of making the data public to begin with.<br><br>We have seen these companies suffer blackouts in which vast swaths of the Web go down for hours, including websites that are massive contributors to the economy. That’s the problem with having single points of failure.<br><br>We seek to help governments and official organizations ensure that information remains open and accessible to their communities and constituents. We believe citizens and cities deserve a better version of the web - a decentralized one.",
           "label": "",
           "ctas": []
         },
@@ -146,7 +146,7 @@
             "push_left": "off-1",
             "push_right": ""
           },
-          "src": "/images/ecosystem/hero-image@2x.png",
+          "src": "/images/pdc/public-datasets-cluster.png",
           "label": ""
         },
         "grid": [
@@ -224,8 +224,8 @@
             "push_left": "off-2",
             "push_right": ""
           },
-          "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "heading": "What is decentralized storage?",
+          "description": "Governments and communities need accessible and cost-effective ways to store public datasets. Filecoin makes decentralized storage easy, and it costs <a href='https://file.app/'>a fraction</a> of the price of centralized cloud storage.<br><br>On the Filecoin network, files are stored on a distributed network of professional storage providers around the globe, with built-in economic incentives to ensure files are stored reliably over time. The mission of Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information. ",
           "subheading": "",
           "ctas": [
             {
@@ -251,8 +251,8 @@
             "push_right": ""
           },
           "theme": "light",
-          "heading": "Lorem Ipsum",
-          "subheading": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "heading": "Award Opportunities",
+          "subheading": "Filecoin Foundation’s Public Data Awards program funds the work of  local civic technology groups to store and/or access their community datasets on the decentralized web.",
           "label": "",
           "description": "",
           "ctas": [
@@ -273,7 +273,7 @@
             "push_left": "off-1",
             "push_right": ""
           },
-          "src": "/images/ecosystem/hero-image@2x.png",
+          "src": "/images/pdc/award-opportunities-cluster.png",
           "label": ""
         },
         "grid": []
@@ -346,7 +346,7 @@
             "initial": 5,
             "next": 5
           },
-          "heading": "Case Studies: See the value of public datasets in action",
+          "heading": "<span class='case-study-label'>Case Studies</span><br>See the value of public datasets in action",
           "case_study": true,
           "cards": []
         }
@@ -379,11 +379,11 @@
                   "sections": [
                     {
                       "heading": "What is Filecoin?",
-                      "content": "Filecoin is a decentralized network to store files, with built-in economic incentives to ensure files are stored reliably over time. The mission of Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information."
+                      "content": "Filecoin is a decentralized network to store files, with built-in economic incentives to ensure files are stored reliably over time. The mission of  Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information."
                     },
                     {
                       "heading": "What is the Filecoin Foundation?",
-                      "content": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+                      "content": "Filecoin Foundation is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
                     },
                     {
                       "heading": "How do I get involved?",
@@ -391,7 +391,7 @@
                     },
                     {
                       "heading": "What about the environmental impacts of blockchain?",
-                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at filecoin.energy! Learn more about the Filecoin community’s commitment to energy efficiency."
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> Learn more about the Filecoin community’s commitment to energy efficiency."
                     }
                   ]
                 }

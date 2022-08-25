@@ -9,9 +9,13 @@
     :data-id="dataIdAttribute"
     v-click-outside="closePanel">
 
-    <div :class="['content', { open: panelOpen }]">
+    <div
+      ref="contentPanel"
+      :class="['content', { open: panelOpen }]">
 
-      <div class="image-wrapper">
+      <div
+        class="image-wrapper"
+        :style="{ backgroundColor }">
         <div
           v-if="img"
           :style="{ backgroundImage: `url('${img}')`, backgroundPosition: imgBackgroundPosition }"
@@ -170,6 +174,7 @@ export default {
     },
     closePanel () {
       if (this.panelOpen) {
+        this.$refs.contentPanel.scrollTop = 0
         this.panelOpen = false
       }
     }
@@ -191,7 +196,7 @@ $caseStudyCardBorderWidth: 0.125rem;
   &.size-mini {
     width: 1.375rem;
   }
-  &.background-image {
+  &.background_image {
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -257,7 +262,7 @@ $caseStudyCardBorderWidth: 0.125rem;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2.5rem;
-  padding-top: 9.25rem;
+  padding-top: 3.1875rem;
   min-height: calc(36rem - #{2 * $caseStudyCardBorderWidth});
   transition: 250ms ease;
   &.expanded {

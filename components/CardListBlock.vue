@@ -1,9 +1,7 @@
 <template>
   <div class="block card-list-block">
 
-    <div v-if="heading" class="heading">
-      {{ heading }}
-    </div>
+    <div v-if="heading" class="heading" v-html="heading"></div>
 
     <div class="grid-start">
 
