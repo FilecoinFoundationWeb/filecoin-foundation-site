@@ -14,7 +14,8 @@
         { reverse },
         { 'animate': animationEnabled },
         { 'top-layer': i === 0 },
-        { 'is-in-viewport': startAnimation }
+        { 'is-in-viewport': startAnimation },
+        `echo_${i}`
       ]"
       :style="layerStyle(i + 1, layer.color)">
     </div>

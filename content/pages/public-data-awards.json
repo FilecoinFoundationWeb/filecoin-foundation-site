@@ -160,6 +160,53 @@
           ]
         }
       }
+    },
+    "section_3": {
+      "callout-2": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-8",
+            "push_left": "off-3"
+          },
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Join the movement",
+          "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "nuxt-link",
+              "text": "Learn more",
+              "url": "/",
+              "icon": ""
+            }
+          ],
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "seo": {
