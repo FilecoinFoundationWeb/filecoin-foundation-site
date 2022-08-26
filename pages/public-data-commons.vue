@@ -177,16 +177,7 @@ export default {
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-$backgroundLayers__Offset__Desktop: 1.75rem * 5;// TODO
-$backgroundLayers__Offset__Medium: 1rem * 5; // TODO
-$backgroundLayers__Offset__Mini: 0.25rem * 5; // TODO
-
-$backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset__Desktop}); // TODO
-
 $backgroundLayers__Left__Desktop: calc(50vw - (#{$containerWidth} / 2) - 9rem);
-$backgroundLayers__Left__Medium: 1rem * 6; // TODO
-$backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
-
 
 ::v-deep #section-a-background-layers {
   position: absolute;
@@ -194,12 +185,20 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
   left: $backgroundLayers__Left__Desktop;
   width: 100%;
   height: 100%;
-  // @include medium {
-  //   left: $backgroundLayers__Left__Medium;
-  // }
-  // @include mini {
-  //   left: $backgroundLayers__Left__Mini;
-  // }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -3;
+    bottom: 13rem;
+    left: -9999px;
+    right: -9999px;
+    margin: 0 auto;
+    width: 2105px;
+    height: 2480px;
+    transform: translateX(-14rem) translateY(100%);
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='2105' height='2480' viewBox='0 0 2105 2480' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1858.19 268.429C1824.61 246.004 1801.2 215.308 1790.47 183.846C1779.73 152.384 1781.68 120.213 1798.72 94.7074C1815.75 69.2019 1844.72 55.0756 1877.9 52.9397C1911.07 50.8036 1948.39 60.6705 1981.97 83.0954C2015.54 105.52 2038.96 136.216 2049.69 167.679C2060.42 199.141 2058.47 231.311 2041.44 256.817C2024.4 282.323 1995.43 296.449 1962.26 298.585C1929.08 300.721 1891.76 290.854 1858.19 268.429Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1625.82 616.408C1562.06 573.825 1517.58 515.519 1497.18 455.711C1476.77 395.905 1480.45 334.655 1512.91 286.054C1545.37 237.454 1600.54 210.59 1663.6 206.53C1726.67 202.47 1797.56 221.225 1861.32 263.809C1925.08 306.392 1969.56 364.698 1989.96 424.506C2010.37 484.312 2006.69 545.562 1974.23 594.163C1941.77 642.763 1886.6 669.627 1823.54 673.687C1760.48 677.747 1689.58 658.992 1625.82 616.408Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1389.96 969.552C1294.45 905.759 1227.8 818.4 1197.22 728.767C1166.64 639.136 1172.14 547.289 1220.83 474.388C1269.52 401.487 1352.25 361.221 1446.76 355.136C1541.27 349.051 1647.5 377.159 1743.01 440.953C1838.53 504.747 1905.18 592.106 1935.76 681.738C1966.34 771.37 1960.84 863.217 1912.15 936.117C1863.46 1009.02 1780.73 1049.28 1686.22 1055.37C1591.71 1061.45 1485.48 1033.35 1389.96 969.552Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1155.55 1320.35C1029.83 1236.38 942.078 1121.38 901.817 1003.37C861.556 885.366 868.793 764.409 932.925 668.39C997.056 572.37 1106.02 519.353 1230.44 511.341C1354.87 503.329 1494.71 540.336 1620.44 624.31C1746.17 708.283 1833.92 823.282 1874.18 941.289C1914.44 1059.3 1907.2 1180.25 1843.07 1276.27C1778.94 1372.29 1669.98 1425.31 1545.55 1433.32C1421.12 1441.33 1281.28 1404.33 1155.55 1320.35Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M918.437 1672.57C760.423 1567.03 650.132 1422.49 599.526 1274.17C548.92 1125.84 558.009 973.774 638.641 853.049C719.273 732.324 856.257 665.681 1012.66 655.61C1169.06 645.54 1344.81 692.056 1502.83 797.593C1660.84 903.13 1771.13 1047.67 1821.74 1195.99C1872.35 1344.32 1863.26 1496.39 1782.62 1617.11C1701.99 1737.84 1565.01 1804.48 1408.61 1814.55C1252.21 1824.62 1076.45 1778.1 918.437 1672.57Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M684.544 2022.75C496.024 1896.84 364.434 1724.4 304.053 1547.42C243.673 1370.44 254.512 1188.99 350.734 1044.92C446.957 900.851 610.421 821.333 797.029 809.318C983.638 797.302 1193.33 852.803 1381.85 978.715C1570.38 1104.63 1701.97 1277.07 1762.35 1454.05C1822.73 1631.03 1811.89 1812.48 1715.66 1956.55C1619.44 2100.62 1455.98 2180.14 1269.37 2192.15C1082.76 2204.17 873.065 2148.67 684.544 2022.75Z' stroke='%230621A4' stroke-width='2'/%3e%3c/svg%3e ");
+  }
 }
 
 ::v-deep #section-1-background-layers {
@@ -208,13 +207,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
   left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
   width: 100%;
   height: calc(100% - 4.125rem);
-  // height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
-  // @include medium {
-  //   left: $backgroundLayers__Left__Medium;
-  // }
-  // @include mini {
-  //   left: $backgroundLayers__Left__Mini;
-  // }
 }
 
 // /////////////////////////////////////////////////////////////////// Section 0
@@ -241,7 +233,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
       top: -25rem;
       left: -50rem;
       width: calc(100% + 100rem);
-      height: calc(100% + 50rem);
+      height: calc(100% + 70rem);
       background: radial-gradient(circle, rgba(6,33,164,0.7) 0%, rgba(0,212,255,0) 90%);
     }
   }
@@ -344,19 +336,35 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 ::v-deep #logo-gallery {
   position: relative;
   padding-bottom: 0;
+  height: 17.375rem;
   &:before {
     border-top-left-radius: 17.375rem;
+  }
+  .slider-block {
+    margin-left: -1rem;
   }
   .card-list {
     flex-wrap: nowrap;
     .card {
       margin: 0;
+      display: flex;
+      width: 25%;
+      &:nth-child(1) {
+        padding: 0 5%;
+      }
+      &:nth-child(3) {
+        padding: 0 5%;
+      }
+      &:nth-child(4) {
+        padding: 0 3%;
+      }
     }
   }
 }
 
 ::v-deep #intro_1 {
   position: relative;
+  padding-top: 0;
   &:before {
     border-bottom-left-radius: 5rem;
   }
@@ -379,6 +387,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 }
 
 ::v-deep #intro_2 {
+  padding-top: 9rem;
   .text-block {
     .heading {
       margin-bottom: 1.75rem;
@@ -513,9 +522,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 }
 
 ::v-deep #intro_4 {
-  padding-top: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
   .text-block {
     padding-top: 5rem;
+    .heading {
+      margin-bottom: 3.25rem;
+    }
+    .subheading {
+      margin-bottom: 1.5rem;
+    }
   }
   .image-block {
     margin-right: calc(-3 * #{math.div($containerWidth, 12)});
@@ -551,7 +567,8 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
 
 // /////////////////////////////////////////////////////////////////// Section 4
 #section_4 {
-
+  position: relative;
+  z-index: 2;
 }
 
 ::v-deep #case_studies {
@@ -568,6 +585,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
   }
 }
 
+// /////////////////////////////////////////////////////////////////// Section 5
 ::v-deep #section_5 {
   position: relative;
   z-index: 2;
@@ -591,6 +609,16 @@ $backgroundLayers__Left__Mini: 0.25rem * 6; // TODO
     height: calc(100% + 8.25rem);
     top: -4.125rem;
     left: calc(-1 * (#{math.div($containerWidth, 6)}) );
+  }
+}
+
+::v-deep #faq_accordion {
+  .image-block {
+    img {
+      width: 4.6875rem;
+      margin-left: auto;
+      transform: translate(1rem, 1rem);
+    }
   }
 }
 

@@ -42,16 +42,16 @@
           {{ title }}
         </div>
 
-        <Button
-          :button="openToggle"
-          :class="['toggle', { visible: !panelOpen }]"
-          @buttonClicked="openPanel" />
-
         <div
           v-if="description"
           class="description"
           v-html="description">
         </div>
+
+        <Button
+          :button="openToggle"
+          :class="['toggle', { visible: !panelOpen }]"
+          @buttonClicked="openPanel" />
 
       </div>
 
@@ -262,13 +262,24 @@ $caseStudyCardBorderWidth: 0.125rem;
   flex-direction: column;
   justify-content: flex-start;
   padding: 2.5rem;
-  padding-top: 3.1875rem;
+  padding-top: 3.125rem;
   min-height: calc(36rem - #{2 * $caseStudyCardBorderWidth});
   transition: 250ms ease;
+  .description {
+    margin-top: 0.25rem;
+    height: 6.625rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
   &.expanded {
     padding-top: 2rem;
     .description {
+      height: unset;
+      display: block;
       margin-top: 0rem;
+      overflow: unset;
     }
   }
 }
@@ -302,7 +313,8 @@ $caseStudyCardBorderWidth: 0.125rem;
 }
 
 .description {
-  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  line-height: leading(25, 14);
   @include mini {
     @include fontSize_Small;
   }
