@@ -516,7 +516,6 @@ $backgroundLayers__Left__Desktop: calc(50vw - (#{$containerWidth} / 2) - 9rem);
   }
 }
 
-
 // /////////////////////////////////////////////////////////////////// Section 2
 #section_2 {
 }

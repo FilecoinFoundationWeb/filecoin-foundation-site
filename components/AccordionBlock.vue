@@ -56,6 +56,11 @@ export default {
   }
   &.theme__dark {
     color: $blackPearl;
+    ::v-deep .accordion-header {
+      &:before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17.404' height='10.822' viewBox='0 0 17.404 10.822'%3e%3cg id='Group_3249' data-name='Group 3249' transform='translate(-21238.697 16442.6)'%3e%3cpath id='Path_6243' data-name='Path 6243' d='M4501.422-2575.9l6.581-6.581,6.581,6.581' transform='translate(16739.396 -13858)' fill='none' stroke='%2308072E' stroke-linecap='round' stroke-width='3'/%3e%3c/g%3e%3c/svg%3e");
+      }
+    }
   }
 }
 

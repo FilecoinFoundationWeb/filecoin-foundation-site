@@ -16,9 +16,9 @@
         :section="introSection" />
 
       <BackgroundLayers
-        id="page-basic-2-background-layers"
+        id="intro-wrapper-background-layers"
         layers-array="5_6"
-        :breakpoints="pageLayersBreakpointData" />
+        :breakpoints="wrapperLayersData" />
 
       <div class="main-content-section">
         <PageSection
@@ -26,9 +26,9 @@
           key="section_2"
           :section="mainSection" />
         <BackgroundLayers
-          id="page-basic-2-background-layers"
-          layers-array="3_4"
-          :breakpoints="pageLayersBreakpointData" />
+          id="main-content-background-layers"
+          layers-array="2_3_4"
+          :breakpoints="mainLayersData" />
       </div>
 
     </div>
@@ -65,10 +65,24 @@ export default {
   data () {
     return {
       tag: 'public_data_awards',
-      pageLayersBreakpointData: {
+      wrapperLayersData: {
         default: {
           stroke: 1.375,
+          radius: 25
+        },
+        medium: {
+          stroke: 1,
           radius: 12.75
+        },
+        mini: {
+          stroke: 0.25,
+          radius: 5
+        }
+      },
+      mainLayersData: {
+        default: {
+          stroke: 1.375,
+          radius: 21.5
         },
         medium: {
           stroke: 1,
@@ -116,66 +130,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$backgroundLayers__Offset__Desktop: 1.75rem * 5;
-$backgroundLayers__Offset__Medium: 1rem * 5;
-$backgroundLayers__Offset__Mini: 0.25rem * 5;
-
-$backgroundLayers__Top: calc(#{$navigationHeight + $backgroundLayers__Offset__Desktop});
-
-$backgroundLayers__Left__Desktop: calc(50% - (#{$containerWidth} / 2) + 1.75rem);
-$backgroundLayers__Left__Medium: 1rem * 6;
-$backgroundLayers__Left__Mini: 0.25rem * 6;
-
 // ///////////////////////////////////////////////////////////////////// General
 .main-intro-wrapper-section {
   position: relative;
-  z-index: 2;
+  z-index: 5;
+  margin-bottom: 8rem;
 }
 
 .main-content-section {
   position: relative;
-  z-index: 2;
-  margin-top: $backgroundLayers__Offset__Desktop;
-  @include medium {
-    margin-top: $backgroundLayers__Offset__Medium;
-  }
-  @include mini {
-    margin-top: $backgroundLayers__Offset__Mini;
-  }
-}
-
-#section_2 {
-  padding-top: 7rem; // 1.75rem * 4
-  @include mini {
-    padding-top: 5rem;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: $backgroundLayers__Left__Desktop;
-    width: calc(100% + 3.5rem);
-    height: 100%;
-    background-color: $hawkesBlue;
-    border-radius: 11.375rem 0 0 11.375rem;
-    filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.1));
-    z-index: -1;
-    @include medium {
-      left: $backgroundLayers__Left__Medium;
-      border-top-left-radius: 11.75rem;
-    }
-    @include mini {
-      left: $backgroundLayers__Left__Mini;
-      border-top-left-radius: 4.75rem;
-    }
-  }
-}
-
-#section_2 {
-  padding-top: 1rem;
-  @include small {
-    padding-bottom: 0;
-  }
+  z-index: 5;
 }
 
 ::v-deep .heading {
@@ -190,61 +154,233 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-basic-2-background-layers {
+$backgroundLayers__Left__Desktop: calc(50vw - (#{$containerWidth} / 2) - 9rem);
+
+::v-deep #intro-wrapper-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
   width: 100%;
-  height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
-  @include medium {
-    left: $backgroundLayers__Left__Medium;
+  height: calc(100% + 4.125rem);
+}
+
+::v-deep #main-content-background-layers {
+  position: absolute;
+  top: 0;
+  left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
+  width: 100%;
+  height: 100%;
+}
+
+// /////////////////////////////////////////////////////////////////// Section 0
+#section_0 {
+  position: relative;
+  z-index: 3;
+}
+
+::v-deep #hero-header {
+  padding-top: 0;
+  padding-bottom: 6rem;
+  position: relative;
+  z-index: 1;
+  [class~="grid"],
+  [class*="grid-"],
+  [class*="grid_"] {
+    div {
+      position: relative;
+      &:first-child {
+        z-index: 2;
+      }
+      &:last-child {
+        z-index: 1;
+      }
+    }
   }
-  @include mini {
-    left: $backgroundLayers__Left__Mini;
+  .text-block {
+    position: relative;
+    z-index: 2;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -12rem;
+      left: -6rem;
+      width: 69px;
+      height: 71px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='69' height='71' viewBox='0 0 69 71' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.9239 51.9736C33.9054 36.7989 34.2977 37.2627 39.2262 70.6935C35.1983 37.8319 35.7087 37.9361 66.2736 68.8915C36.6349 36.9688 36.5346 36.4363 67.9989 40.643C35.9896 35.4951 35.546 35.0866 50.075 19.438C35.0924 34.6134 34.7012 34.1489 29.7727 0.718212C33.7995 33.5797 33.2902 33.4761 2.72419 2.52011C32.364 34.4429 32.4643 34.9754 1 30.7686C33.0082 35.9165 33.4529 36.3257 18.9239 51.9736Z' stroke='%230718A6' stroke-width='1.58364' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+    }
+    .heading {
+      @include fontSize_Huge;
+      margin-bottom: 1.75rem;
+    }
+    .description {
+      @include fontSize_Large;
+    }
+  }
+  .image-block {
+    position: relative;
+    margin-left: -1rem;
+    margin-right: calc(-2 * #{math.div($containerWidth, 12)});
+    .image {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      content: '';
+      z-index: 0;
+      position: absolute;
+      top: -38rem;
+      left: -50rem;
+      width: calc(100% + 100rem);
+      height: calc(100% + 70rem);
+      background: radial-gradient(circle, rgba(0,33,191,1) 0%, rgba(6,23,108,1) 20%, rgba(8,7,46,0) 70%);
+    }
   }
 }
 
-// ////////////////////////////////////////////////////// Section Customizations
-::v-deep #intro_2,
-::v-deep #basic_content_1,
-::v-deep #basic_content_2,
-::v-deep #basic_content_3 {
-  img {
-    border-radius: unset;
-    box-shadow: unset;
+// /////////////////////////////////////////////////////////////////// Section 1
+::v-deep #intro_1 {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+  .image-block {
+    margin: 0 -2rem;
+    margin-top: 2rem;
+  }
+}
+
+// /////////////////////////////////////////////////////////////////// Section 2
+#section_2 {
+  padding-top: 0;
+  @include mini {
+    padding-top: 5rem;
   }
 }
 
 ::v-deep #intro_2 {
-  @include small {
-    padding-top: 4rem;
+  position: relative;
+  padding-bottom: 0;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
+    width: calc(100% + 3.5rem);
+    height: 100%;
+    background-color: $polar;
+    border-top-left-radius: 20.375rem;
+    z-index: -1;
   }
-  @include mini {
-    padding-top: 2rem;
-  }
-  .blocks {
-    &.right {
-      margin-top: 1rem;
+  .blocks.left {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      bottom: 0.5rem;
+      width: 45px;
+      height: 49px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='49' viewBox='0 0 45 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.042 7.56458L27.8637 44.2196' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M5.0572 25.3516L38.1787 16.4767' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M0.724351 8.85345L42.511 32.9781' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M13.0452 35.7629L30.1904 6.06653' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3c/svg%3e ");
     }
   }
-  .subheading {
-    font-size: $fontSize_Regular;
+  .image-block {
+    margin-left: -1rem;
+    border-radius: 7.8125rem;
+    border: 3px solid #73B4ED;
+    overflow: hidden;
+    transform: translateX(-2rem);
+  }
+  .text-block {
+    margin-left: -3rem;
+    .heading {
+      @include fontSize_ExtraExtraLarge;
+      @include fontWeight_Medium;
+      letter-spacing: 1.2px;
+      line-height: leading(50, 40);
+    }
+    .heading,
+    .description {
+      margin-bottom: 1.75rem;
+    }
+    .description {
+      @include fontSize_Regular;
+    }
   }
 }
 
-::v-deep #basic_content_1 {
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-::v-deep #basic_content_2 {
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-::v-deep #basic_content_3 {
+::v-deep #intro_2-bottom-images {
+  position: relative;
   padding-top: 0;
-  padding-bottom: 4rem;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
+    width: calc(100% + 3.5rem);
+    height: 100%;
+    background-color: $polar;
+    border-bottom-left-radius: 5rem;
+    z-index: -1;
+  }
+  .image-block {
+    height: 15rem;
+    min-width: 15rem;
+    margin-left: -1rem;
+    margin-right: 0.5rem;
+    border-radius: 7.8125rem;
+    border: 3px solid #73B4ED;
+    overflow: hidden;
+    transform: translateX(-2rem);
+    .image {
+      width: 100%;
+    }
+  }
+  .column-content.right {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -0.5rem;
+      width: 246px;
+      height: 249px;
+      transform: translateX(100%);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='246' height='249' viewBox='0 0 246 249' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M165.115 217.662C165.646 217.101 166.094 216.466 166.446 215.779C169.21 210.459 170.061 201.447 155.456 174.901C147.267 160.21 138.051 146.115 127.876 132.722C129.069 130.909 130.505 128.852 132.259 126.441C133.372 124.905 133.931 123.036 133.843 121.141C133.756 119.246 133.027 117.437 131.777 116.01L131.774 116.006C130.523 114.582 128.826 113.625 126.96 113.292C125.094 112.959 123.17 113.27 121.504 114.173C118.882 115.588 116.65 116.742 114.689 117.689C103.107 106.205 90.7467 95.5345 77.6962 85.7518C50.223 65.3371 40.939 66.0882 35.0001 69.9473C34.6621 70.1654 34.3413 70.4089 34.0405 70.6759L33.162 71.4465C32.7652 71.7907 32.4034 72.1733 32.0819 72.5888C26.7684 79.3914 28.9772 90.8637 39.4862 110.921C46.2614 123.865 69.6502 157.203 69.6502 157.203C68.454 159.018 67.0174 161.082 65.2803 163.491C64.1704 165.026 63.6145 166.891 63.7035 168.783C63.7925 170.674 64.5212 172.479 65.7702 173.903L65.7764 173.91C67.0268 175.337 68.7259 176.296 70.594 176.629C72.4621 176.962 74.3879 176.649 76.0545 175.742C78.5416 174.396 80.6722 173.28 82.5595 172.36C82.7223 172.556 109.525 197.139 122.026 206.21C145.695 223.385 154.504 223.566 160.014 221.477C160.509 221.284 160.985 221.043 161.434 220.759C161.818 220.539 162.183 220.288 162.526 220.009C162.768 219.84 163 219.657 163.221 219.462L164.172 218.628C164.51 218.33 164.825 218.007 165.115 217.662Z' stroke='%230621A4' stroke-width='1.72519' stroke-linejoin='round'/%3e%3cpath d='M175.683 208.643C176.215 208.081 176.663 207.447 177.015 206.759C179.779 201.439 180.629 192.427 166.023 165.883C157.835 151.191 148.62 137.095 138.444 123.703C139.637 121.89 141.073 119.833 142.827 117.421C143.94 115.885 144.499 114.016 144.411 112.121C144.323 110.226 143.595 108.417 142.345 106.99L142.342 106.987C141.091 105.562 139.394 104.605 137.528 104.272C135.662 103.939 133.739 104.25 132.073 105.154C129.451 106.568 127.219 107.722 125.258 108.669C113.675 97.1864 101.314 86.5159 88.2628 76.7338C60.7915 56.3176 51.5075 57.0686 45.5685 60.9278C45.2306 61.1459 44.9099 61.3895 44.6089 61.6563L43.7288 62.4284C43.3325 62.7721 42.9713 63.1542 42.6504 63.5692C37.3369 70.3718 39.5457 81.8441 50.0529 101.903C56.8298 114.846 80.2186 148.183 80.2186 148.183C79.0206 150 77.5859 152.063 75.8487 154.472C74.7388 156.006 74.1828 157.872 74.2718 159.763C74.3608 161.655 75.0895 163.46 76.3386 164.883L76.3448 164.89C77.5952 166.317 79.2943 167.277 81.1624 167.61C83.0305 167.943 84.9563 167.63 86.6228 166.722C89.11 165.376 91.2406 164.261 93.1279 163.34C93.2907 163.536 120.093 188.12 132.592 197.192C156.264 214.365 165.072 214.547 170.58 212.459C171.076 212.265 171.553 212.024 172.003 211.739C172.386 211.52 172.751 211.269 173.094 210.99C173.336 210.821 173.568 210.638 173.789 210.443L174.74 209.608C175.078 209.31 175.394 208.988 175.683 208.643Z' stroke='%231248DD' stroke-width='1.72519' stroke-linejoin='round'/%3e%3cpath d='M187.539 198.083C188.069 197.522 188.517 196.888 188.868 196.201C191.632 190.881 192.485 181.867 177.878 155.323C169.69 140.631 160.475 126.535 150.3 113.143C151.492 111.33 152.929 109.273 154.682 106.861C155.795 105.325 156.353 103.457 156.265 101.562C156.177 99.6671 155.449 97.8584 154.199 96.4319L154.195 96.4282C152.945 95.0038 151.249 94.0465 149.383 93.7131C147.517 93.3798 145.594 93.6903 143.928 94.5937C141.306 96.0082 139.074 97.1621 137.113 98.1094C125.531 86.6256 113.17 75.9551 100.118 66.1738C72.6468 45.7576 63.3628 46.5087 57.4238 50.3678C57.086 50.586 56.7652 50.8295 56.4643 51.0963L55.5839 51.8686C55.1877 52.2122 54.8265 52.5943 54.5057 53.0092C49.1922 59.8119 51.401 71.2842 61.9082 91.3432C68.6852 104.286 92.072 137.625 92.072 137.625C90.8758 139.44 89.4409 141.503 87.7021 143.913C86.5927 145.448 86.0369 147.313 86.1259 149.205C86.2149 151.096 86.9434 152.901 88.192 154.325L88.1982 154.332C89.4494 155.759 91.1489 156.717 93.0172 157.05C94.8855 157.383 96.8114 157.07 98.4782 156.162C100.965 154.816 103.094 153.702 104.981 152.782C105.146 152.977 131.948 177.56 144.448 186.632C168.117 203.807 176.927 203.987 182.436 201.9C182.931 201.706 183.407 201.465 183.856 201.181C184.241 200.961 184.606 200.709 184.949 200.43C185.191 200.261 185.423 200.078 185.644 199.883L186.596 199.048C186.934 198.75 187.249 198.428 187.539 198.083V198.083Z' stroke='%230090FF' stroke-width='1.72519' stroke-linejoin='round'/%3e%3cpath d='M199.207 188.274C199.738 187.713 200.187 187.079 200.538 186.391C203.302 181.071 204.153 172.059 189.548 145.513C181.359 130.821 172.144 116.726 161.97 103.333C163.162 101.52 164.597 99.4642 166.352 97.0511C167.465 95.515 168.023 93.6466 167.935 91.7519C167.847 89.8571 167.119 88.0484 165.869 86.6219L165.866 86.6183C164.615 85.194 162.918 84.2369 161.052 83.9039C159.186 83.5709 157.262 83.8817 155.596 84.7853C152.976 86.1982 150.744 87.3521 148.783 88.2995C137.201 76.8157 124.84 66.1451 111.788 56.3639C84.3168 35.9476 75.0328 36.6987 69.0939 40.5579C68.7553 40.7765 68.434 41.0206 68.1325 41.288L67.2539 42.0586C66.8572 42.4029 66.4954 42.7855 66.1739 43.2009C60.8621 50.0021 63.0692 61.4759 73.5782 81.5333C80.3552 94.4758 103.742 127.815 103.742 127.815C102.546 129.63 101.111 131.693 99.3722 134.104C98.2623 135.638 97.7063 137.503 97.7953 139.395C97.8843 141.286 98.613 143.092 99.8621 144.515L99.8683 144.522C101.119 145.948 102.818 146.907 104.686 147.24C106.554 147.573 108.479 147.26 110.146 146.354C112.635 145.006 114.764 143.892 116.651 142.972C116.816 143.167 143.618 167.75 156.117 176.822C179.787 193.997 188.597 194.177 194.106 192.09C194.601 191.895 195.076 191.655 195.526 191.371C195.91 191.151 196.276 190.9 196.619 190.62C196.86 190.451 197.092 190.269 197.312 190.074L198.265 189.238C198.603 188.941 198.918 188.619 199.207 188.274V188.274Z' stroke='%2373B4ED' stroke-width='1.72519' stroke-linejoin='round'/%3e%3cpath d='M213.404 176.559C213.935 175.998 214.382 175.364 214.734 174.677C217.497 169.357 218.348 160.345 203.743 133.799C195.554 119.108 186.338 105.013 176.165 91.6189C177.356 89.8079 178.792 87.7505 180.546 85.339C181.659 83.803 182.218 81.9343 182.13 80.0392C182.043 78.1441 181.314 76.335 180.064 74.9082L180.061 74.9045C178.81 73.4799 177.113 72.5226 175.247 72.1896C173.381 71.8565 171.457 72.1676 169.791 73.0717C167.171 74.4847 164.939 75.6384 162.978 76.5858C151.396 65.1029 139.035 54.4324 125.984 44.6502C98.5122 24.234 89.2282 24.9851 83.2874 28.8458C82.9495 29.0638 82.6287 29.3074 82.3279 29.5743L81.4493 30.345C81.0525 30.6892 80.6907 31.0718 80.3693 31.4872C75.0574 38.2884 77.2646 49.7622 87.7736 69.8196C94.5488 82.7637 117.937 116.101 117.937 116.101C116.741 117.917 115.305 119.981 113.568 122.39C112.458 123.924 111.902 125.79 111.991 127.681C112.08 129.573 112.808 131.378 114.057 132.801L114.064 132.808C115.314 134.235 117.013 135.194 118.881 135.527C120.749 135.86 122.675 135.547 124.342 134.64C126.829 133.294 128.959 132.179 130.847 131.258C131.009 131.454 157.812 156.038 170.313 165.109C193.983 182.283 202.791 182.465 208.301 180.376C208.796 180.182 209.272 179.941 209.722 179.657C210.106 179.437 210.471 179.186 210.815 178.906C211.056 178.737 211.287 178.555 211.508 178.36L212.459 177.526C212.798 177.228 213.114 176.904 213.404 176.559Z' stroke='%23D8EBFB' stroke-width='1.72519' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    }
+  }
+}
+
+::v-deep #faq-accordion-heading {
+  padding-top: 11.25rem;
+  padding-bottom: 0;
+  .text-block {
+    position: relative;
+    .heading {
+      @include fontSize_Huge;
+      @include fontWeight_SemiBold;
+      letter-spacing: 1.1px;
+      line-height: leading(65, 55);
+      margin-bottom: 3.625rem;
+    }
+  }
+}
+
+::v-deep #faq-accordion {
+  padding-top: 0;
+  padding-bottom: 7rem;
+  .column-content {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 4.6875rem;
+      height: 6.4375rem;
+      left: -3rem;
+      top: 0;
+      background-image: url('/images/question-mark.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateX(-100%);
+    }
+  }
 }
 
 // /////////////////////////////////////////////////////////////////// Section 3

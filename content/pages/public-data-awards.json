@@ -2,18 +2,18 @@
   "page_content": {
     "section_0": {
       "hero-header": {
-        "grid": ["noGutter"],
+        "grid": ["middle"],
         "left": {
           "type": "text_block",
           "layout": "large",
           "cols": {
-            "num": "col-6",
+            "num": "col-5",
             "push_left": "off-0",
             "push_right": ""
           },
           "theme": "light",
           "heading": "Public Data Awards",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "description": "The program encourages local civic technology groups to store and/or access their community data sets on the decentralized web.",
           "label": "",
           "subheading": "",
           "ctas": [
@@ -24,10 +24,10 @@
           "type": "image_block",
           "cols": {
             "num": "col-6",
-            "push_left": "off-0",
+            "push_left": "off-1",
             "push_right": ""
           },
-          "src": "/images/ecosystem/hero-image@2x.png",
+          "src": "/images/pdc/awards-header-cluster.png",
           "label": ""
         }
       }
@@ -37,11 +37,11 @@
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-5",
+            "num": "col-4",
             "push_left": "off-0",
             "push_right": ""
           },
-          "src": "/images/ecosystem/hero-image@2x.png",
+          "src": "/images/pdc/trophy-and-grid.png",
           "label": ""
         },
         "right": {
@@ -49,12 +49,12 @@
           "layout": "medium",
           "cols": {
             "num": "col-7",
-            "push_left": "off-0",
+            "push_left": "off-1",
             "push_right": ""
           },
           "theme": "light",
-          "heading": "Public Data Awards",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "heading": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups",
+          "description": "It will disperse awards sized between $5,000 and $20,000 USD to support projects that either leverage datasets or advance learning around datasets stored on decentralized technology.  Each iteration of the award has its own $50,000 pool. The program encourages local civic technology groups to store and/or access their community data sets on the decentralized web. The Public Data awards are specific to locations centered around governments with which Filecoin Foundation is partnering.<br><br>The award is intended to fund anything from a project analyzing air quality data recently uploaded to Filecoin to an educational seminar about how to access and use your city’s data stored on Filecoin or IPFS. To maximize public learning, all awards should result in at least one public output or outcome (e.g., a blog, event, data tool).<br><br>Note: This Awards program is contingent on the support and involvement of local government officials.",
           "label": "",
           "subheading": "",
           "ctas": [
@@ -69,31 +69,30 @@
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-5_sm-4_mi-6",
-            "push_left": "off-2_mi-1",
+            "num": "col-3",
+            "push_left": "off-1",
             "push_right": ""
           },
-          "src": "/images/upstairs.png",
+          "src": "/images/pdc/man-with-keyboard.png",
           "label": ""
         },
         "right": {
           "type": "text_block",
           "layout": "medium",
           "cols": {
-            "num": "col-4_sm-9_mi-10",
-            "push_left": "off-1_sm-2_mi-1",
+            "num": "col-7",
+            "push_left": "off-1",
             "push_right": ""
           },
-          "label": "Nemo enim ipsam",
-          "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "heading": "The first Public Data Awards program will be launched in partnership with Philadelphia.",
+          "description": "Lörem ipsum sylig orat ifall solig. Fugt kuhet krosat, sull. Pseudoment bens ovis behet temena. Igt por även om hyska.<br><br>Monoling omidat och funde den trir. Digisk niplade samt spel, tenat. Krolahet spelöligt huruvida tetras. Bemock sesk: lånat.",
           "ctas": [
             {
               "type": "A",
-              "theme": "light",
+              "theme": "pdc",
               "action": "nuxt-link",
-              "text": "Get Involved",
-              "url": "/get-involved",
+              "text": "Apply for a Public Data Award",
+              "url": "/",
               "icon": ""
             }
           ],
@@ -103,60 +102,83 @@
           "middle"
         ]
       },
-      "basic_content_1": {
-        "classNames": "basic-template-block-format",
+      "intro_2-bottom-images": {
         "left": {
-          "type": "text_block",
-          "layout": "large",
+          "type": "image_block",
           "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
-            "push_right": ""
+            "num": "col-6",
+            "push_left": "off-1"
           },
-          "heading": "Veritatis et Quasi",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "label": "",
-          "subheading": "",
-          "ctas": [
-
-          ]
+          "src": "/images/pdc/office-space.png"
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-3"
+          },
+          "src": "/images/pdc/woman-speaking.png"
         }
       },
-      "basic_content_2": {
-        "classNames": "basic-template-block-format",
+      "faq-accordion-heading": {
+        "grid": ["noBottom"],
         "left": {
           "type": "text_block",
-          "layout": "large",
+          "layout": "medium",
           "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
-            "push_right": ""
+            "num": "col-6",
+            "push_left": "off-0"
           },
-          "heading": "Architecto beatae vitae dicta sunt explicabo",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "heading": "Frequently Asked Questions",
           "label": "",
-          "subheading": "",
-          "ctas": [
-
-          ]
+          "subheading": ""
         }
       },
-      "basic_content_3": {
-        "classNames": "basic-template-block-format",
+      "faq-accordion": {
         "left": {
-          "type": "text_block",
-          "layout": "large",
+          "type": "accordion_block",
           "cols": {
-            "num": "col-10_ti-11",
-            "push_left": "off-2_md-2_mi-1_ti-1",
+            "num": "col-10",
+            "push_left": "off-2",
             "push_right": ""
           },
-          "heading": "Nemo enim ipsam voluptatem",
-          "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "label": "",
-          "subheading": "",
-          "ctas": [
-
+          "theme": "dark",
+          "sections": [
+            {
+              "heading": "Who is eligible for this award?",
+              "content": "Filecoin is a decentralized network to store files, with built-in economic incentives to ensure files are stored reliably over time. The mission of Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information."
+            },
+            {
+              "heading": "What strings are attached to this funding?",
+              "content": "None. We simply ask you to write up a short (one page) report within 30 days of your project concluding. The reports should help the public understand how you spent the money, what you learned, and who benefited from the project."
+            },
+            {
+              "heading": "What are the sizes of these Awards?",
+              "content": "While each location’s overall pool of funding is $50,000, the range for individual awards is $5,000 and $20,000 USD. An individual award will not exceed $20,000, even if your project costs more."
+            },
+            {
+              "heading": "How can I spend this money?",
+              "content": "Tell us in the application – it could be anything from food & drink for an in-person tutorial on how to access and use decentralized public data, to an hourly rate covering your team’s programming or engineering work to build a data egress or ingress pipeline. We expect the funds to cover as much of the costs as possible of your planned initiative, including paying for staff time."
+            },
+            {
+              "heading": "Is there a date by which I need to spend the money?",
+              "content": "This is a rapid-fire program designed to quickly spur new innovations and ideas in the decentralized technology space. To help with that goal, we hope that you will spend the money within 90 days of receipt."
+            },
+            {
+              "heading": "Can an individual without an organization apply?",
+              "content": "Yes, either an individual or an organization can apply."
+            },
+            {
+              "heading": "Can one individual or organization submit multiple applications?",
+              "content": "No, applications should be limited to one per person/organization."
+            },
+            {
+              "heading": "What if I want to apply, but I don’t live or work in the featured city?",
+              "content": "Tell us in the application – it could be anything from food & drink for an in-person tutorial on how to access and use decentralized public data, to an hourly rate covering your team’s programming or engineering work to build a data egress or ingress pipeline. We expect the funds to cover as much of the costs as possible of your planned initiative, including paying for staff time."
+            },
+            {
+              "heading": "Where can I send any additional questions?",
+              "content": "<a href='mailto:impact@fil.org'>You can reach out to us anytime with questions and thoughts.</a>"
+            }
           ]
         }
       }
