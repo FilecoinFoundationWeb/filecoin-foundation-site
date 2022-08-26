@@ -75,6 +75,20 @@ const positionFeaturedFirst = (events) => {
   return events
 }
 
+const updateTickerInnerHtml = (ticker) => {
+  if (ticker) {
+    const values = ticker.dataset.values.split(',')
+    const currentVal = ticker.innerHTML.replace(',', '')
+    if (currentVal) {
+      const lastIndex = values.indexOf(currentVal)
+      const index = (lastIndex + 1) % values.length
+      ticker.innerHTML = `${values[index]},`
+    } else {
+      ticker.innerHTML = `${values[0]},`
+    }
+  }
+}
+
 // ====================================================================== Export
 export default {
   name: 'PublicDataCommonsPage',
@@ -88,6 +102,7 @@ export default {
   data () {
     return {
       tag: 'public_data_commons',
+      interval: false,
       pageLayersBreakpointData: {
         default: {
           stroke: 1.375,
@@ -148,6 +163,22 @@ export default {
         section_5: this.pageContent.section_5,
         section_6: this.pageContent.section_6
       }
+    }
+  },
+
+  mounted () {
+    this.$nextTick(() => {
+      const ticker = document.getElementById('hero-subheading-ticker')
+      updateTickerInnerHtml(ticker)
+      this.interval = setInterval(() => {
+        updateTickerInnerHtml(ticker)
+      }, 1000)
+    })
+  },
+
+  beforeDestroy () {
+    if (this.interval) {
+      clearInterval(this.interval)
     }
   }
 }
@@ -323,6 +354,10 @@ $backgroundLayers__Left__Desktop: calc(50vw - (#{$containerWidth} / 2) - 9rem);
       line-height: leading(40, 34);
     }
   }
+}
+
+::v-deep #hero-subheading-ticker {
+  color: #0090FF;
 }
 
 // /////////////////////////////////////////////////////////////////// Section 1
