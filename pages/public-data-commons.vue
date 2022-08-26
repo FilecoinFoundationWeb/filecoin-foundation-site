@@ -20,7 +20,7 @@
           :section="section" />
 
         <BackgroundLayers
-          id="section-a-background-layers"
+          id="main-section-a-background-layers"
           layers-array="5_6"
           :breakpoints="pageLayersBreakpointData" />
 
@@ -109,8 +109,8 @@ export default {
           radius: 22.875
         },
         medium: {
-          stroke: 1,
-          radius: 12.75
+          stroke: 0.75,
+          radius: 14.5
         },
         mini: {
           stroke: 0.25,
@@ -212,12 +212,14 @@ export default {
 
 // /////////////////////////////////////////////////////////// Background Layers
 $backgroundLayers__Left__Desktop: calc(50vw - (#{$containerWidth} / 2) - 9rem);
+$backgroundLayers__Left__Medium: 2.25rem;
 $backgroundLayers__Left__Mini: 0.75rem;
-::v-deep #section-a-background-layers {
+
+::v-deep #main-section-a-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
-  width: 100%;
+  width: calc(100% + 50rem);
   height: 100%;
   &:before {
     content: '';
@@ -233,6 +235,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='2105' height='2480' viewBox='0 0 2105 2480' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1858.19 268.429C1824.61 246.004 1801.2 215.308 1790.47 183.846C1779.73 152.384 1781.68 120.213 1798.72 94.7074C1815.75 69.2019 1844.72 55.0756 1877.9 52.9397C1911.07 50.8036 1948.39 60.6705 1981.97 83.0954C2015.54 105.52 2038.96 136.216 2049.69 167.679C2060.42 199.141 2058.47 231.311 2041.44 256.817C2024.4 282.323 1995.43 296.449 1962.26 298.585C1929.08 300.721 1891.76 290.854 1858.19 268.429Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1625.82 616.408C1562.06 573.825 1517.58 515.519 1497.18 455.711C1476.77 395.905 1480.45 334.655 1512.91 286.054C1545.37 237.454 1600.54 210.59 1663.6 206.53C1726.67 202.47 1797.56 221.225 1861.32 263.809C1925.08 306.392 1969.56 364.698 1989.96 424.506C2010.37 484.312 2006.69 545.562 1974.23 594.163C1941.77 642.763 1886.6 669.627 1823.54 673.687C1760.48 677.747 1689.58 658.992 1625.82 616.408Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1389.96 969.552C1294.45 905.759 1227.8 818.4 1197.22 728.767C1166.64 639.136 1172.14 547.289 1220.83 474.388C1269.52 401.487 1352.25 361.221 1446.76 355.136C1541.27 349.051 1647.5 377.159 1743.01 440.953C1838.53 504.747 1905.18 592.106 1935.76 681.738C1966.34 771.37 1960.84 863.217 1912.15 936.117C1863.46 1009.02 1780.73 1049.28 1686.22 1055.37C1591.71 1061.45 1485.48 1033.35 1389.96 969.552Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1155.55 1320.35C1029.83 1236.38 942.078 1121.38 901.817 1003.37C861.556 885.366 868.793 764.409 932.925 668.39C997.056 572.37 1106.02 519.353 1230.44 511.341C1354.87 503.329 1494.71 540.336 1620.44 624.31C1746.17 708.283 1833.92 823.282 1874.18 941.289C1914.44 1059.3 1907.2 1180.25 1843.07 1276.27C1778.94 1372.29 1669.98 1425.31 1545.55 1433.32C1421.12 1441.33 1281.28 1404.33 1155.55 1320.35Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M918.437 1672.57C760.423 1567.03 650.132 1422.49 599.526 1274.17C548.92 1125.84 558.009 973.774 638.641 853.049C719.273 732.324 856.257 665.681 1012.66 655.61C1169.06 645.54 1344.81 692.056 1502.83 797.593C1660.84 903.13 1771.13 1047.67 1821.74 1195.99C1872.35 1344.32 1863.26 1496.39 1782.62 1617.11C1701.99 1737.84 1565.01 1804.48 1408.61 1814.55C1252.21 1824.62 1076.45 1778.1 918.437 1672.57Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M684.544 2022.75C496.024 1896.84 364.434 1724.4 304.053 1547.42C243.673 1370.44 254.512 1188.99 350.734 1044.92C446.957 900.851 610.421 821.333 797.029 809.318C983.638 797.302 1193.33 852.803 1381.85 978.715C1570.38 1104.63 1701.97 1277.07 1762.35 1454.05C1822.73 1631.03 1811.89 1812.48 1715.66 1956.55C1619.44 2100.62 1455.98 2180.14 1269.37 2192.15C1082.76 2204.17 873.065 2148.67 684.544 2022.75Z' stroke='%230621A4' stroke-width='2'/%3e%3c/svg%3e ");
   }
+  @include medium {
+    left: $backgroundLayers__Left__Medium;
+  }
   @include mini {
     left: $backgroundLayers__Left__Mini;
   }
@@ -242,8 +247,12 @@ $backgroundLayers__Left__Mini: 0.75rem;
   position: absolute;
   top: 4.125rem;
   left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
-  width: 100%;
+  width: calc(100% + 50rem);
   height: calc(100% - 4.125rem);
+  @include medium {
+    top: 2.25rem;
+    left: calc(#{$backgroundLayers__Left__Medium} + 2.25rem);
+  }
   @include mini {
     top: 0.75rem;
     left: calc(#{$backgroundLayers__Left__Mini} + 0.75rem);
@@ -420,6 +429,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
 // /////////////////////////////////////////////////////////////////// Section 1
 #section_1 {
   padding-top: 4.125rem; // 1.375rem * 3
+  @include medium {
+    padding-top: 2.25rem;
+  }
   @include mini {
     padding-top: 0.75rem;
   }
@@ -431,11 +443,18 @@ $backgroundLayers__Left__Mini: 0.75rem;
   height: 17.375rem;
   &:before {
     border-top-left-radius: 17.375rem;
+    @include medium {
+      border-top-left-radius: 12rem;
+    }
     @include mini {
       border-top-left-radius: 4.75rem;
     }
   }
+  @include small {
+    height: 13.375rem;
+  }
   @include mini {
+    height: 17.375rem;
     padding-top: 2.5rem;
   }
   .slider-block {
@@ -479,11 +498,13 @@ $backgroundLayers__Left__Mini: 0.75rem;
   img {
     box-shadow: none;
   }
-  @include mini {
-    padding-bottom: 3rem;
+  @include small {
     .image-block {
       margin-bottom: 3rem;
     }
+  }
+  @include mini {
+    padding-bottom: 3rem;
   }
 }
 
@@ -494,9 +515,14 @@ $backgroundLayers__Left__Mini: 0.75rem;
     position: absolute;
     top: 0;
     left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
-    width: 100%;
+    width: calc(100% + 50rem);
     height: 100%;
     background-color: $polar;
+  }
+  @include medium {
+    &:before {
+      left: calc(#{$backgroundLayers__Left__Medium} + 2.25rem);
+    }
   }
   @include mini {
     &:before {
@@ -519,12 +545,14 @@ $backgroundLayers__Left__Mini: 0.75rem;
   .image-block {
     margin-right: calc(-1.5 * #{math.div($containerWidth, 12)});
   }
-  @include mini {
-    padding-top: 5rem;
+  @include medium {
     .image-block {
       margin-right: 0;
       margin-left: -1rem;
     }
+  }
+  @include mini {
+    padding-top: 5rem;
   }
 }
 
@@ -534,17 +562,21 @@ $backgroundLayers__Left__Mini: 0.75rem;
   margin-top: 3rem;
   @include small {
     margin-top: 0;
-    margin-bottom: 2rem;
   }
   &:before {
     content: '';
     position: absolute;
     top: 0;
     left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
-    width: 100%;
+    width: calc(100% + 50rem);
     height: 100%;
     background-color: $polar;
     border-top-left-radius: 5rem;
+  }
+  @include medium {
+    &:before {
+      left: calc(#{$backgroundLayers__Left__Medium} + 2.25rem);
+    }
   }
   @include mini {
     padding-top: 10rem;
@@ -554,7 +586,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
   }
   .blocks {
-    @include mini {
+    @include small {
       .text-block {
         padding-top: 3rem;
         padding-bottom: calc(2rem + 294px);
@@ -573,11 +605,14 @@ $backgroundLayers__Left__Mini: 0.75rem;
         line-height: leading(65, 45);
         letter-spacing: 0.4px;
         padding-right: 1rem;
-        @include mini {
+        @include medium {
+          padding-right: 3rem;
+        }
+        @include small {
           padding-right: 0;
         }
       }
-      &:after {
+      &:after { // echo cone with stars
         content: '';
         position: absolute;
         right: 0;
@@ -586,7 +621,13 @@ $backgroundLayers__Left__Mini: 0.75rem;
         height: 294px;
         transform: translateX(100%);
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='268' height='294' viewBox='0 0 268 294' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M30.0518 219.551C32.5693 222.453 33.9233 225.834 34.1134 228.925C34.3034 232.015 33.3348 234.756 31.2832 236.536C29.2315 238.316 26.3806 238.888 23.3485 238.264C20.3152 237.639 17.1594 235.821 14.6419 232.919C12.1244 230.017 10.7704 226.636 10.5803 223.545C10.3903 220.456 11.3589 217.714 13.4105 215.934C15.4622 214.154 18.3131 213.582 21.3452 214.207C24.3785 214.831 27.5343 216.649 30.0518 219.551Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M61.5323 192.234C66.4189 197.867 69.0708 204.455 69.444 210.524C69.8171 216.591 67.917 222.081 63.7756 225.674C59.6341 229.267 53.931 230.373 47.9768 229.147C42.0215 227.92 35.8737 224.365 30.9871 218.732C26.1004 213.099 23.4486 206.511 23.0754 200.442C22.7022 194.374 24.6024 188.885 28.7438 185.292C32.8852 181.699 38.5884 180.593 44.5425 181.819C50.4979 183.045 56.6456 186.601 61.5323 192.234Z' stroke='%231248DD' stroke-width='2'/%3e%3cpath d='M93.4853 164.513C100.865 173.019 104.882 182.982 105.448 192.184C106.014 201.385 103.134 209.766 96.7933 215.267C90.453 220.767 81.7488 222.435 72.72 220.576C63.69 218.717 54.3941 213.333 47.0146 204.826C39.6351 196.32 35.6176 186.357 35.0517 177.155C34.4859 167.954 37.3663 159.572 43.7066 154.072C50.0468 148.572 58.7511 146.904 67.7799 148.763C76.8099 150.622 86.1058 156.006 93.4853 164.513Z' stroke='%230090FF' stroke-width='2'/%3e%3cpath d='M125.241 136.979C134.992 148.22 140.309 161.393 141.058 173.576C141.807 185.758 137.994 196.89 129.562 204.205C121.13 211.521 109.57 213.724 97.6162 211.262C85.6611 208.8 73.3701 201.677 63.6189 190.437C53.8676 179.196 48.5509 166.023 47.8017 153.84C47.0526 141.658 50.8656 130.525 59.2978 123.21C67.7301 115.895 79.2896 113.692 91.2435 116.154C103.199 118.615 115.49 125.739 125.241 136.979Z' stroke='%236CADE7' stroke-width='2'/%3e%3cpath d='M157.293 109.381C169.579 123.543 176.284 140.147 177.229 155.516C178.174 170.883 173.364 184.955 162.697 194.21C152.029 203.464 137.418 206.238 122.338 203.133C107.258 200.028 91.7659 191.046 79.4803 176.884C67.1947 162.722 60.4896 146.117 59.5445 130.749C58.5995 115.382 63.4091 101.309 74.0768 92.055C84.7445 82.8007 99.3551 80.0261 114.435 83.1312C129.516 86.2366 145.008 95.2187 157.293 109.381Z' stroke='%23D8ECFD' stroke-width='2'/%3e%3cpath d='M188.978 81.8914C203.658 98.8138 211.675 118.66 212.805 137.038C213.936 155.415 208.184 172.266 195.404 183.352C182.624 194.439 165.131 197.754 147.098 194.04C129.063 190.327 110.547 179.588 95.8671 162.666C81.1868 145.743 73.1699 125.897 72.0397 107.519C70.9096 89.1421 76.6608 72.2917 89.4408 61.205C102.221 50.1183 119.714 46.8037 137.748 50.5169C155.782 54.2305 174.298 64.969 188.978 81.8914Z' stroke='%23F0F7FD' stroke-width='2'/%3e%3cpath d='M22.3379 50.1289L32.1596 86.784' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M9.3531 67.9159L42.4746 59.041' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M5.02025 51.4178L46.8069 75.5425' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M17.3411 78.3272L34.4863 48.6309' stroke='%230090FF' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M174.322 254.631C187.19 238.82 187.476 238.765 189.37 252.117C188.029 238.511 187.574 238.542 194.668 239.391C188.488 237.395 188.769 237.583 208.236 228.44C188.722 237.201 188.594 237.057 201.003 221.147C188.137 236.959 187.85 237.013 185.955 223.662C187.296 237.268 187.751 237.237 180.658 236.387C186.837 238.384 186.556 238.195 167.089 247.338C186.603 238.578 186.732 238.721 174.322 254.631Z' stroke='%230621A4' stroke-width='1.58364' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-        @include mini {
+        @include medium {
+          right: 3rem;
+        }
+        // @include small {
+        //   right: 1rem;
+        // }
+        @include small {
           top: unset;
           right: unset;
           left: 0;
@@ -621,22 +662,31 @@ $backgroundLayers__Left__Mini: 0.75rem;
     position: absolute;
     top: 0;
     left: calc(#{$backgroundLayers__Left__Desktop} + 4.125rem);
-    width: 100%;
+    width: calc(100% + 50rem);
     height: 100%;
     background-color: $polar;
     border-bottom-left-radius: 17.375rem;
   }
-  @include mini {
-    padding-top: 1rem;
+  @include medium {
     &:before {
-      left: calc(#{$backgroundLayers__Left__Mini} + 0.75rem);
-      border-bottom-left-radius: 4.75rem;
-      height: calc(100% - 3.375rem);
+      height: calc(100% - 1.875rem);
+      border-bottom-left-radius: 12rem;
+      left: calc(#{$backgroundLayers__Left__Medium} + 2.25rem);
     }
+  }
+  @include small {
+    padding-top: 1rem;
     [class~="grid"],
     [class*="grid-"],
     [class*="grid_"] {
       flex-direction: column-reverse;
+    }
+  }
+  @include mini {
+    &:before {
+      left: calc(#{$backgroundLayers__Left__Mini} + 0.75rem);
+      border-bottom-left-radius: 4.75rem;
+      height: calc(100% - 3.375rem);
     }
   }
   .image-block {
@@ -657,7 +707,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
       border-radius: unset;
       box-shadow: unset;
     }
-    &:after { // start
+    &:after { // star
       content: '';
       position: absolute;
       top: 9rem;
@@ -666,9 +716,22 @@ $backgroundLayers__Left__Mini: 0.75rem;
       height: 55px;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='68' height='58' viewBox='0 0 68 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.1543 28.8071H67.8904' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M28.6406 56.6979V0.913086' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M0.890625 56.5603L56.3955 1.05371' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3cpath d='M48.3643 48.5305L8.91797 9.08398' stroke='%23154ED9' stroke-width='1.58364' stroke-linejoin='round'/%3e%3c/svg%3e ");
     }
-    @include mini {
+    @include medium {
+      &:after {
+        top: 4rem;
+      }
+    }
+    @include small {
       margin-left: -2rem;
       margin-right: 0;
+      margin-top: 2rem;
+      &:before {
+        transform: scale(0.8);
+      }
+    }
+    @include mini {
+      margin-left: 0;
+      margin-top: 0;
       &:before {
         transform: scale(0.6);
       }
@@ -710,6 +773,16 @@ $backgroundLayers__Left__Mini: 0.75rem;
   }
   .image-block {
     margin-right: calc(-3 * #{math.div($containerWidth, 12)});
+  }
+  @include medium {
+    .text-block {
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
+    .image-block {
+      margin: 0;
+      margin-left: -2rem;
+    }
   }
   @include mini {
     padding-top: 6rem;
@@ -896,6 +969,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
       right: -5rem;
       transform: translateX(100%) translateY(100%);
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='145' height='164' viewBox='0 0 145 164' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.8878 46.365C17.8699 43.1784 17.3735 39.4676 15.3897 37.9279C13.4059 36.3881 10.1194 37.1628 8.13738 40.3494C6.15531 43.5359 6.65171 47.2467 8.6355 48.7865C10.6193 50.3262 13.9058 49.5515 15.8878 46.365Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M33.2462 59.843C37.1575 53.5549 36.3568 45.8796 32.0684 42.551C27.7799 39.2225 21.0612 41.0614 17.1499 47.3496C13.2386 53.6377 14.0393 61.313 18.3277 64.6416C22.6162 67.9701 29.3349 66.1312 33.2462 59.843Z' stroke='%231248DD' stroke-width='2'/%3e%3cpath d='M50.8663 73.5203C56.8076 63.9686 55.6867 52.1219 48.9732 46.9111C42.2598 41.7004 31.9296 44.6592 25.9883 54.2109C20.047 63.7626 21.168 75.6093 27.8814 80.8201C34.5949 86.0308 44.925 83.072 50.8663 73.5203Z' stroke='%230090FF' stroke-width='2'/%3e%3cpath d='M68.3762 87.1018C76.2487 74.4452 74.8232 58.6298 65.8026 51.6284C56.7821 44.6269 43.016 48.6511 35.1434 61.3077C27.2709 73.9643 28.6964 89.7797 37.717 96.7812C46.7375 103.783 60.5036 99.7584 68.3762 87.1018Z' stroke='%236CADE7' stroke-width='2'/%3e%3cpath d='M86.0355 100.71C95.9719 84.7357 94.2208 64.6794 82.7348 55.7644C71.2489 46.8495 53.8112 52.0121 43.8749 67.9866C33.9385 83.9612 35.6897 104.017 47.1756 112.932C58.6615 121.847 76.0992 116.685 86.0355 100.71Z' stroke='%23D8ECFD' stroke-width='2'/%3e%3cpath d='M103.507 114.272C115.394 95.1622 113.335 71.0988 99.5197 60.3758C85.7043 49.6528 64.7974 55.8911 52.9111 75.0006C41.0247 94.1102 43.0834 118.174 56.8988 128.897C70.7142 139.62 91.6211 133.381 103.507 114.272Z' stroke='%23F0F7FD' stroke-width='2'/%3e%3c/svg%3e ");
+      @include small {
+        right: 3rem;
+      }
       @include mini {
         transform: scale(0.7);
         right: -3rem;
@@ -944,6 +1020,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
         bottom: 9rem;
         left: -8rem;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='88' height='56' viewBox='0 0 88 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M49.4909 6.69823C44.4895 26.96 45.0708 27.0751 75.203 15.2034C45.9953 27.5784 46.3387 27.969 87.3413 39.4356C46.0054 29.2357 45.5144 29.406 64.8478 54.5545C44.4614 29.3893 43.9 29.2032 38.2787 49.3027C43.2801 29.0397 42.6988 28.9259 12.5667 40.7976C41.7738 28.4216 41.4314 28.0316 0.427781 16.5644C41.7643 26.7653 42.2553 26.595 22.9219 1.44648C43.3077 26.6107 43.8701 26.7974 49.4909 6.69823Z' stroke='%230718A6' stroke-width='1.58364' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+        @include medium {
+          display: none;
+        }
       }
     }
   }
@@ -957,6 +1036,16 @@ $backgroundLayers__Left__Mini: 0.75rem;
 }
 
 ::v-deep #section_6 {
+  @include small {
+    .column-content.left {
+      padding-left: 3.5rem;
+      padding-right: 9rem;
+      margin-right: -9rem;
+      &:before {
+        top: -30rem;
+      }
+    }
+  }
   @include mini {
     .column-content.left {
       padding-left: 3.5rem;
