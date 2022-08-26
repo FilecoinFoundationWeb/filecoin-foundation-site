@@ -272,6 +272,10 @@ $caseStudyCardBorderWidth: 0.125rem;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    @include mini {
+      margin-bottom: 0.25rem;
+      height: 6rem;
+    }
   }
   &.expanded {
     padding-top: 2rem;
