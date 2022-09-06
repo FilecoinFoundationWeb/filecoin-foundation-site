@@ -3,7 +3,7 @@
 
     <div v-if="heading" class="heading" v-html="heading"></div>
 
-    <div class="grid-start">
+    <div :class="`grid-start${forceGrid}`">
 
       <div
         v-for="(card, index) in list"
@@ -118,6 +118,12 @@ export default {
     },
     cardType () {
       return this.caseStudy ? 'CaseStudyCard' : 'Card'
+    },
+    forceGrid () {
+      return this.block.forceGrid ? `-${this.block.forceGrid}` : ''
+    },
+    forceCardColumns () {
+      return this.block.forceCardColumns
     }
   },
 
@@ -155,9 +161,8 @@ export default {
       }
     },
     getColumns (index) {
-      if (this.caseStudy) {
-        return (index % this.pattern === 0) ? 'col-8_sm-12' : 'col-4_sm-6_mi-12'
-      }
+      if (this.forceCardColumns) { return this.forceCardColumns }
+      if (this.caseStudy) { return (index % this.pattern === 0) ? 'col-8_sm-12' : 'col-4_sm-6_mi-12' }
       return index === 0 ? this.firstColumnNum : 'col-4_sm-6_mi-12'
     }
   }

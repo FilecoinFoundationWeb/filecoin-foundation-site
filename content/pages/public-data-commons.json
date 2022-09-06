@@ -434,6 +434,51 @@
       }
     },
     "section_6": {
+      "events_hackathons": {
+        "grid": ["noGutter"],
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-4_md-7_mi-10",
+            "push_left": "off-0_md-1_mi-0"
+          },
+          "layout": "medium",
+          "theme": "light",
+          "heading": "Events & Hackathons",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Browse all FIL.org",
+              "url": "/",
+              "icon": ""
+            }
+          ]
+        },
+        "right": {
+          "type": "card_list_block",
+          "cols": {
+            "num": "col-8_md-10_mi-12",
+            "push_left": "off-0_md-1_mi-0"
+          },
+          "load_more_button": {
+            "type": "E",
+            "action": "load",
+            "theme": "dark",
+            "text": "See more"
+          },
+          "display": {
+            "initial": 3,
+            "next": 3
+          },
+          "forceGrid": "noGutter",
+          "forceCardColumns": "col-12",
+          "cards": []
+        }
+      }
+    },
+    "section_7": {
       "callout-2": {
         "left": {
           "type": "text_block",
@@ -459,7 +504,7 @@
             "background_layers_v2": {
               "name": "EchoLayers",
               "props": {
-                "layers-array": "4_5_6_6_6",
+                "layers-array": "4_5_6_6",
                 "breakpoints": {
                   "default": {
                     "stroke": 1.375,

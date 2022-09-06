@@ -70,7 +70,7 @@
       </div>
 
       <div
-        v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
+        v-if="description && type !== 'B' && type !== 'A' && type !== 'E' && type !== 'F'"
         class="panel-right">
         <div
           v-if="type === 'D'"
@@ -562,6 +562,37 @@ export default {
   }
   .cta {
     margin-top: auto;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] F
+.card.type__F {
+  color: $white;
+  border-top: 2px solid #73B4ED;
+  padding-top: 1.25rem;
+  padding-bottom: 1.75rem;
+  .image {
+    display: none;
+  }
+  .date {
+    @include fontSize_Small;
+    @include fontWeight_Bold;
+    color: $polar;
+    line-height: leading(40, 13);
+  }
+  .title {
+    @include fontSize_Large;
+    @include fontWeight_Medium;
+    color: $white;
+    line-height: leading(32, 20);
+    margin-bottom: 0.5rem;
+  }
+  .description {
+    @include fontSize_Regular;
+    @include fontWeight_Regular;
+    color: $white;
+    line-height: leading(28, 16);
+    margin-bottom: 1.125rem;
   }
 }
 

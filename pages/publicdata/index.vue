@@ -59,6 +59,7 @@ import CloneDeep from 'lodash/cloneDeep'
 
 import PublicDataCommonsPageData from '@/content/pages/public-data-commons.json'
 import CaseStudyData from '@/content/data/case-studies.json'
+import EventListData from '@/content/data/event-list.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -153,15 +154,26 @@ export default {
       const cards = CloneDeep(CaseStudyData)
       return positionFeaturedFirst(cards)
     },
+    events () {
+      const events = CloneDeep(EventListData)
+      events.forEach((card) => {
+        card.type = 'F'
+        card.cta.theme = 'light'
+      })
+      return events
+    },
     caseStudies () {
       const section = CloneDeep(this.pageContent.section_4)
       section.case_studies.left.cards = this.cards
       return section
     },
     finalSections () {
+      const section = CloneDeep(this.pageContent.section_6)
+      section.events_hackathons.right.cards = this.events
       return {
         section_5: this.pageContent.section_5,
-        section_6: this.pageContent.section_6
+        section_6: section,
+        section_7: this.pageContent.section_7
       }
     }
   },
@@ -857,6 +869,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
     .button-row {
       justify-content: center;
     }
+    .button.type__E {
+      color: $white;
+    }
   }
   @include mini {
     padding-top: 5rem;
@@ -907,6 +922,20 @@ $backgroundLayers__Left__Mini: 0.75rem;
       height: calc(100% + 15.5rem);
     }
   }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -3;
+    bottom: 13rem;
+    left: -9999px;
+    right: -9999px;
+    margin: 0 auto;
+    width: 2105px;
+    height: 2480px;
+    transform: translateX(-30rem) translateY(82%) scale(0.65);
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='2105' height='2480' viewBox='0 0 2105 2480' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1858.19 268.429C1824.61 246.004 1801.2 215.308 1790.47 183.846C1779.73 152.384 1781.68 120.213 1798.72 94.7074C1815.75 69.2019 1844.72 55.0756 1877.9 52.9397C1911.07 50.8036 1948.39 60.6705 1981.97 83.0954C2015.54 105.52 2038.96 136.216 2049.69 167.679C2060.42 199.141 2058.47 231.311 2041.44 256.817C2024.4 282.323 1995.43 296.449 1962.26 298.585C1929.08 300.721 1891.76 290.854 1858.19 268.429Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1625.82 616.408C1562.06 573.825 1517.58 515.519 1497.18 455.711C1476.77 395.905 1480.45 334.655 1512.91 286.054C1545.37 237.454 1600.54 210.59 1663.6 206.53C1726.67 202.47 1797.56 221.225 1861.32 263.809C1925.08 306.392 1969.56 364.698 1989.96 424.506C2010.37 484.312 2006.69 545.562 1974.23 594.163C1941.77 642.763 1886.6 669.627 1823.54 673.687C1760.48 677.747 1689.58 658.992 1625.82 616.408Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1389.96 969.552C1294.45 905.759 1227.8 818.4 1197.22 728.767C1166.64 639.136 1172.14 547.289 1220.83 474.388C1269.52 401.487 1352.25 361.221 1446.76 355.136C1541.27 349.051 1647.5 377.159 1743.01 440.953C1838.53 504.747 1905.18 592.106 1935.76 681.738C1966.34 771.37 1960.84 863.217 1912.15 936.117C1863.46 1009.02 1780.73 1049.28 1686.22 1055.37C1591.71 1061.45 1485.48 1033.35 1389.96 969.552Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M1155.55 1320.35C1029.83 1236.38 942.078 1121.38 901.817 1003.37C861.556 885.366 868.793 764.409 932.925 668.39C997.056 572.37 1106.02 519.353 1230.44 511.341C1354.87 503.329 1494.71 540.336 1620.44 624.31C1746.17 708.283 1833.92 823.282 1874.18 941.289C1914.44 1059.3 1907.2 1180.25 1843.07 1276.27C1778.94 1372.29 1669.98 1425.31 1545.55 1433.32C1421.12 1441.33 1281.28 1404.33 1155.55 1320.35Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M918.437 1672.57C760.423 1567.03 650.132 1422.49 599.526 1274.17C548.92 1125.84 558.009 973.774 638.641 853.049C719.273 732.324 856.257 665.681 1012.66 655.61C1169.06 645.54 1344.81 692.056 1502.83 797.593C1660.84 903.13 1771.13 1047.67 1821.74 1195.99C1872.35 1344.32 1863.26 1496.39 1782.62 1617.11C1701.99 1737.84 1565.01 1804.48 1408.61 1814.55C1252.21 1824.62 1076.45 1778.1 918.437 1672.57Z' stroke='%230621A4' stroke-width='2'/%3e%3cpath d='M684.544 2022.75C496.024 1896.84 364.434 1724.4 304.053 1547.42C243.673 1370.44 254.512 1188.99 350.734 1044.92C446.957 900.851 610.421 821.333 797.029 809.318C983.638 797.302 1193.33 852.803 1381.85 978.715C1570.38 1104.63 1701.97 1277.07 1762.35 1454.05C1822.73 1631.03 1811.89 1812.48 1715.66 1956.55C1619.44 2100.62 1455.98 2180.14 1269.37 2192.15C1082.76 2204.17 873.065 2148.67 684.544 2022.75Z' stroke='%230621A4' stroke-width='2'/%3e%3c/svg%3e ");
+  }
 }
 
 ::v-deep #faq_accordion {
@@ -924,7 +953,63 @@ $backgroundLayers__Left__Mini: 0.75rem;
 }
 
 // /////////////////////////////////////////////////////////////////// Section 6
-::v-deep #section_6 {
+::v-deep #events_hackathons {
+  padding-top: 6rem;
+  padding-top: 8rem;
+  .text-block {
+    transform: translateX(2rem);
+    @include medium {
+      transform: none;
+    }
+    .heading {
+      @include fontSize_Huge;
+    }
+  }
+  .card-list-block {
+    margin-top: 13rem;
+    position: relative;
+    @include medium {
+      margin-top: 2.875rem;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      right: -1rem;
+      width: 224px;
+      height: 230px;
+      transform: translateY(-100%);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='224' height='230' viewBox='0 0 224 230' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M119.282 110.741L111.23 107.67L111.501 117.219' stroke='%23F0F7FD' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M133.096 102.107L125.044 99.0355L125.317 108.585' stroke='%23D8EBFB' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M146.923 93.4718L138.872 90.4007L139.143 99.9496' stroke='%2373B4ED' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M160.742 84.837L152.691 81.7659L152.964 91.3157' stroke='%230090FF' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M174.563 76.2022L166.512 73.1312L166.783 82.68' stroke='%231248DD' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M190.353 66.6261L182.301 63.555L182.573 73.1039' stroke='%230621A4' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M182.292 63.5556C203.079 95.0716 204.182 133.735 184.756 149.913C165.33 166.091 132.731 153.657 111.945 122.14C91.1579 90.6244 90.0549 51.9609 109.481 35.7832C128.038 20.3285 158.617 30.9851 179.436 59.4444' stroke='%230621A4' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M166.509 73.1288C187.296 104.645 188.399 143.308 168.973 159.486C149.547 175.664 116.949 163.23 96.1619 131.714C75.3752 100.198 74.2721 61.5342 93.698 45.3564C112.256 29.9018 142.835 40.5583 163.653 69.0177' stroke='%231248DD' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M152.688 81.7636C173.475 113.28 174.578 151.943 155.152 168.121C135.726 184.299 103.127 171.865 82.3408 140.348C61.5542 108.832 60.4511 70.169 79.877 53.9911C98.4346 38.5365 129.014 49.193 149.832 77.6524' stroke='%230090FF' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M138.865 90.3983C159.652 121.914 160.755 160.578 141.329 176.756C121.903 192.933 89.3042 180.499 68.5176 148.983C47.731 117.467 46.6279 78.8037 66.0538 62.6259C84.6113 47.1713 115.19 57.8278 136.009 86.2872' stroke='%2373B4ED' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M111.232 107.673C132.019 139.189 133.122 177.852 113.696 194.03C94.2701 210.208 61.6714 197.774 40.8848 166.258C20.0981 134.742 18.995 96.0781 38.4209 79.9004C56.9785 64.4458 87.5575 75.1023 108.376 103.562' stroke='%23F0F7FD' stroke-width='2' stroke-miterlimit='10'/%3e%3cpath d='M125.058 99.038C145.845 130.554 146.948 169.218 127.522 185.395C108.096 201.573 75.4971 189.139 54.7105 157.623C33.9238 126.107 32.8207 87.4434 52.2466 71.2656C70.8042 55.811 101.383 66.4675 122.202 94.9269' stroke='%23D8EBFB' stroke-width='2' stroke-miterlimit='10'/%3e%3c/svg%3e ");
+      @include medium {
+        top: 0;
+        right: -3rem;
+        transform: translateY(-100%) scale(0.75);
+      }
+      @include mini {
+        top: -13rem;
+      }
+    }
+    .card-column {
+      &:last-child {
+        .card.type__F {
+          border-bottom: 2px solid #73B4ED;
+        }
+      }
+    }
+    .button-row {
+      margin-top: 2.875rem;
+      @include medium {
+        justify-content: center;
+      }
+    }
+    .button.type__E {
+      color: $white;
+    }
+  }
+}
+
+// /////////////////////////////////////////////////////////////////// Section 7
+::v-deep #section_7 {
   position: relative;
   z-index: 1;
   .column-content.left {
@@ -1035,7 +1120,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
   }
 }
 
-::v-deep #section_6 {
+::v-deep #section_7 {
   @include small {
     .column-content.left {
       padding-left: 3.5rem;
