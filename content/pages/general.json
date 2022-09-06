@@ -176,6 +176,12 @@
           "action": "nuxt-link",
           "url": "/grants/#section_4",
           "text": "Community Grants"
+        },
+        {
+          "type": "X",
+          "action": "nuxt-link",
+          "url": "/publicdata/awards",
+          "text": "Public Data Awards"
         }
       ]
     },
@@ -187,6 +193,12 @@
       "text": "Get Involved",
       "description": "<img src='/icons/hands-raised.png' class='image'></img><span class='title'>Get Involved</span><p class='text'>As an open-source project, the Filecoin Foundation governs the Filecoin ecosystem in a way that’s transparent, community-driven, and in line with open-source ethos.</p>",
       "links": [
+        {
+          "type": "X",
+          "action": "nuxt-link",
+          "url": "/publicdata",
+          "text": "Public Data Commons"
+        },
         {
           "type": "X",
           "action": "nuxt-link",
