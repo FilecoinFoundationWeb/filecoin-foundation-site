@@ -115,7 +115,7 @@
     "featured": false,
     "title": "Lockheed Martin",
     "label": "Case Study",
-    "img": "/images/pdc/case-study-placeholder.png",
+    "img": "/images/pdc/lockheed.png",
     "description": "Filecoin Foundation (FF) and Lockheed Martin are working together to develop a program for deploying the Interplanetary File System (IPFS) in space. The space economy is rapidly emerging, and space-based services are increasingly used for everything from communication, to GPS, to environmental monitoring. As more tools are put into orbit, and as private space development and exploration continues, building out communications infrastructure in space is key to ensuring the space economy can thrive. This collaboration is the next step in establishing critical infrastructure that will transform how we share and access data in space. <a href='https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264'>Read more here.</a>",
     "color": 2,
     "toggle": {
