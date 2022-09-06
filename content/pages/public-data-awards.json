@@ -200,9 +200,9 @@
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Learn more",
-              "url": "/",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": ""
             }
           ],

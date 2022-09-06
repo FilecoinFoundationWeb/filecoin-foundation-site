@@ -135,7 +135,7 @@
             "push_left": "off-0_md-1_sm-2_mi-1",
             "push_right": ""
           },
-          "heading": "Control over today’s centralized internet is concentrated in the <a href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
+          "heading": "Control over today’s centralized internet is concentrated in the <a target='_blank' href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
           "description": "These huge, ultra-powerful companies collect our data, control the information we get, and present vulnerable targets for malicious hackers.<br><br>All too often, we see some of these power players curate public data behind paywalls.  This undermines the original intention of making the data public to begin with.<br><br>We have seen these companies suffer blackouts in which vast swaths of the Web go down for hours, including websites that are massive contributors to the economy. That’s the problem with having single points of failure.<br><br>We seek to help governments and official organizations ensure that information remains open and accessible to their communities and constituents. We believe citizens and cities deserve a better version of the web - a decentralized one.",
           "label": "",
           "ctas": []
@@ -210,9 +210,9 @@
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Join the Public Data Commons",
-              "url": "/",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": ""
             }
           ]
@@ -246,9 +246,9 @@
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Learn More about Filecoin",
-              "url": "/",
+              "url": "https://filecoin.io/",
               "icon": ""
             }
           ]
@@ -276,7 +276,7 @@
               "theme": "pdc",
               "action": "nuxt-link",
               "text": "Read more and Apply for Awards",
-              "url": "/",
+              "url": "/publicdata/awards",
               "icon": ""
             }
           ]
@@ -310,9 +310,9 @@
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Learn more",
-              "url": "/",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": ""
             }
           ],
@@ -465,7 +465,7 @@
               "theme": "light",
               "action": "nuxt-link",
               "text": "Browse all FIL.org",
-              "url": "/",
+              "url": "/events",
               "icon": ""
             }
           ]
@@ -508,9 +508,9 @@
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Learn more",
-              "url": "/",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": ""
             }
           ],
