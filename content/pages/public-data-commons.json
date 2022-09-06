@@ -148,7 +148,21 @@
             "push_right": ""
           },
           "src": "/images/pdc/public-datasets-cluster.png",
-          "label": ""
+          "label": "",
+          "customizations": {
+            "video-cta-button": {
+              "name": "Button",
+              "props": {
+                "button": {
+                  "text": "Why Public Datasets are Stored on Filecoin",
+                  "action": "video",
+                  "icon": "play",
+                  "theme": "pdc-video-cta",
+                  "url": "https://www.youtube.com/watch?v=cZjX1ck_FbI"
+                }
+              }
+            }
+          }
         },
         "grid": [
           "middle"

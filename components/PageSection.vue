@@ -73,6 +73,7 @@ import BackgroundLayers from '@/components/BackgroundLayers'
 import EchoLayers from '@/components/EchoLayers'
 import FilAustinForm from '@/components/FilAustinForm'
 import AccordionBlock from '@/components/AccordionBlock'
+import Button from '@/components/Button'
 
 // ====================================================================== Export
 export default {
@@ -94,7 +95,8 @@ export default {
     BackgroundLayers,
     EchoLayers,
     FilAustinForm,
-    AccordionBlock
+    AccordionBlock,
+    Button
   },
 
   props: {

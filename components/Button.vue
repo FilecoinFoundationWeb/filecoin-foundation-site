@@ -447,4 +447,80 @@ $layerOffset: 0.25rem;
   color: $kleinBlue;
 }
 
+// --------------------------------------------------------------------- One off
+.theme__pdc-video-cta {
+  position: absolute;
+  background-color: $polar;
+  border-radius: 1.9375rem;
+  border: 2px solid #70B4F0;
+  padding: 0.125rem;
+  align-items: center;
+  transition: 250ms ease;
+  left: 35%;
+  top: 33%;
+  min-width: 15rem;
+  z-index: 100;
+  @include medium {
+    left: 50%;
+    top: 31%;
+    transform: translateX(-50%) scale(0.75);
+  }
+  @include small {
+    left: 50%;
+    top: 34%;
+    transform: translateX(-50%) scale(1);
+  }
+  @include mini {
+    left: 50%;
+    top: 33%;
+    transform: translateX(-50%) scale(0.75);
+  }
+  @include tiny {
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%) scale(0.6);
+  }
+  .text {
+    max-width: 8.9375rem;
+    white-space: normal;
+    @include fontSize_Small;
+    @include fontWeight_Medium;
+    line-height: leading(19, 13);
+    letter-spacing: 0.3px;
+    margin-right: 1rem;
+  }
+  ::v-deep .icon {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1.125rem;
+    background-color: $azureRadiance;
+    border: 4px solid $jordyBlue;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: 0.25rem;
+      left: 0.25rem;
+      border-radius: 50%;
+      background-color: $denim;
+    }
+    svg {
+      position: relative;
+      transform: translateX(1.5px);
+    }
+    .icon__play__triangle-inner {
+      fill: $white;
+    }
+  }
+  &:hover {
+    .text {
+      text-decoration: underline;
+    }
+  }
+}
+
 </style>
