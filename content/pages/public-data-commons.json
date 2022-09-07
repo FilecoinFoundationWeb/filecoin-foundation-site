@@ -555,11 +555,11 @@
   },
   "seo": {
     "title": "Public Data Commons - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe."
   },
   "og": {
     "site_name": "Public Data Commons - Filecoin Foundation",
-    "url": "https://fil.org/public-data-commons",
+    "url": "https://fil.org/public-data",
     "type": "website",
     "image": "/images/pdc/pdc-open-graph.png"
   }

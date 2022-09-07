@@ -233,12 +233,12 @@
     }
   },
   "seo": {
-    "title": "Basic Page - Filecoin Foundation",
-    "description": "Filecoin Foundation - Let's build the internet of everyone"
+    "title": "Public Data Awards - Filecoin Foundation",
+    "description": "The Public Data Awards is a location-specific funding pool for non-profits and civic technology groups from the Filecoin Foundation"
   },
   "og": {
-    "site_name": "Basic Page - Filecoin Foundation",
-    "url": "https://fil.org/basic-template-2",
+    "site_name": "Public Data Awards - Filecoin Foundation",
+    "url": "https://fil.org/public-data/awards",
     "type": "website",
     "image": "/images/pdc/pdc-awards-open-graph.png"
   }
