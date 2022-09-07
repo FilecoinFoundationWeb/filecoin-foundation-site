@@ -97,6 +97,10 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
+.ticker {
+  margin-bottom: 1.5rem;
+}
+
 .text-before,
 .ticker-slot,
 .text-after,
