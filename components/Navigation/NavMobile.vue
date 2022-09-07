@@ -128,7 +128,7 @@ export default {
     },
     checkForPdcPage () {
       const path = this.$route.path
-      if (path.includes('publicdata')) {
+      if (path.includes('public-data')) {
         this.pdcPage = true
       } else if (this.pdcPage) {
         this.pdcPage = false

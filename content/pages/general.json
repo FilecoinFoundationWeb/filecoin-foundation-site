@@ -180,7 +180,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/publicdata/awards",
+          "url": "/public-data/awards",
           "text": "Public Data Awards"
         }
       ]
@@ -196,7 +196,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/publicdata",
+          "url": "/public-data",
           "text": "Public Data Commons"
         },
         {
