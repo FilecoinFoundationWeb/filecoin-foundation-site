@@ -449,12 +449,6 @@ $backgroundLayers__Left__Mini: 0.75rem;
   }
   .column-content.left {
     .image-block {
-      @include medium {
-        .image {
-          min-height: 20rem;
-          width: unset;
-        }
-      }
       @include small {
         margin: 0;
         height: calc(41.6vw * (1 - (2 * 0.041665)) - 1rem);
