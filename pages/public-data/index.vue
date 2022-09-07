@@ -417,26 +417,12 @@ $backgroundLayers__Left__Mini: 0.75rem;
       line-height: leading(65, 70);
       margin-bottom: 1.5rem;
     }
-    .subheading {
-      font-size: 2.125rem;
-      @include fontWeight_SemiBold;
-      letter-spacing: 1.1px;
-      line-height: leading(40, 34);
-    }
     @include mini {
       .heading {
         @include fontSize_Huge;
       }
-      .subheading {
-        @include fontSize_ExtraLarge;
-        padding-right: 6rem;
-      }
     }
   }
-}
-
-::v-deep #hero-subheading-ticker {
-  color: #0090FF;
 }
 
 // /////////////////////////////////////////////////////////////////// Section 1

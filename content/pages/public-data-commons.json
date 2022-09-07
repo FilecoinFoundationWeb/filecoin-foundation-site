@@ -43,7 +43,21 @@
           "layout": "large",
           "theme": "light",
           "heading": "Public Data Commons",
-          "subheading": "Data storage that is <span id='hero-subheading-ticker' data-values='cheaper,transparent,more resilient,verifiable'></span><br>because public data is important."
+          "customizations": {
+            "hero-subheading-ticker": {
+              "name": "Ticker",
+              "props": {
+                "text-before": "Data storage that is",
+                "strings": [
+                  "cheaper,",
+                  "transparent,",
+                  "more resilient,",
+                  "verifiable,"
+                ],
+                "text-after": "because public data is important."
+              }
+            }
+          }
         }
       }
     },
