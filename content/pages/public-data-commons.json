@@ -72,7 +72,7 @@
         "left": {
           "type": "slider_block",
           "cols": {
-            "num": "col-12_sm-9_mi-9",
+            "num": "col-12_sm-8_mi-9",
             "push_left": "off-0_sm-2_mi-2"
           },
           "cards": [

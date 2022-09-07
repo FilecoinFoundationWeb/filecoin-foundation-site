@@ -465,15 +465,25 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
   }
   @include small {
-    height: 13.375rem;
-  }
-  @include mini {
-    height: 17.375rem;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
+    height: auto;
   }
   .slider-block {
     margin: 0 -2rem;
     transform: translateX(2rem);
+    @include medium {
+      margin: 0;
+      transform: translateX(3rem);
+    }
+    @include small {
+      transform: none;
+    }
+    @include mini {
+      margin-right: 2rem;
+    }
+    @include tiny {
+      margin-right: 1rem;
+    }
   }
   .card-list {
     flex-wrap: nowrap;
@@ -484,11 +494,28 @@ $backgroundLayers__Left__Mini: 0.75rem;
         margin-bottom: 0;
       }
     }
-    @include mini {
+    @include small {
       flex-wrap: wrap;
       .card {
-        width: 33.3%;
         margin-bottom: 1.5rem;
+        flex-grow: 1;
+        &:first-child {
+          margin: 0 5rem;
+        }
+        &:last-child {
+          margin: 0 5rem;
+        }
+      }
+    }
+    @include mini {
+      .card {
+        width: 50%;
+        &:first-child {
+          margin: 0 2.5rem;
+        }
+        &:last-child {
+          margin: 0 2.5rem;
+        }
       }
     }
   }
