@@ -452,6 +452,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
 
 ::v-deep #logo-gallery {
   position: relative;
+  padding-top: 6rem;
   padding-bottom: 0;
   height: 17.375rem;
   &:before {
@@ -471,28 +472,22 @@ $backgroundLayers__Left__Mini: 0.75rem;
     padding-top: 2.5rem;
   }
   .slider-block {
-    margin-left: -1rem;
+    margin: 0 -2rem;
+    transform: translateX(2rem);
   }
   .card-list {
     flex-wrap: nowrap;
     .card {
       margin: 0;
       display: flex;
-      width: 25%;
-      &:nth-child(1) {
-        padding: 0 5%;
-      }
-      &:nth-child(3) {
-        padding: 0 5%;
-      }
-      &:nth-child(4) {
-        padding: 0 3%;
+      .image {
+        margin-bottom: 0;
       }
     }
     @include mini {
       flex-wrap: wrap;
       .card {
-        width: 50%;
+        width: 33.3%;
         margin-bottom: 1.5rem;
       }
     }

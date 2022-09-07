@@ -35,7 +35,7 @@
     "featured": false,
     "title": "GenRAIT & Genomic Data",
     "label": "Case Study",
-    "img": "/images/pdc/case-study-placeholder.png",
+    "img": "/images/pdc/genrait-case-study-image.svg",
     "description": "GenRAIT will host over 100 terabytes of genome research data on the Filecoin network to enable scientists and researchers to make breakthroughs and experiment at scale.",
     "color": 4,
     "toggle": {

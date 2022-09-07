@@ -68,32 +68,43 @@
         }
       },
       "logo-gallery": {
+        "grid": ["noGutter"],
         "left": {
           "type": "slider_block",
           "cols": {
-            "num": "col-10_sm-9_mi-9",
-            "push_left": "off-1_sm-2_mi-2"
+            "num": "col-12_sm-9_mi-9",
+            "push_left": "off-0_sm-2_mi-2"
           },
           "cards": [
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/filecoin-green-logo.svg"
+              "img": "/images/pdc/logos/filecoin-green-logo.png"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/uni-maryland-logo.svg"
+              "img": "/images/pdc/logos/u-of-maryland-dep-geographical-sciences-logo.svg"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/tech-congress-logo.svg"
+              "img": "/images/pdc/logos/techcongress-logo.svg"
             },
             {
               "type": "A",
               "img_size": "full",
-              "img": "/images/pdc/decentralized-future-council-logo.svg"
+              "img": "/images/pdc/logos/decentralized-future-council-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/IFE-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/genrait-logo.svg"
             }
           ]
         }
