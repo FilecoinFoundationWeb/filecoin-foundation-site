@@ -230,6 +230,9 @@ export default {
 
     &.shadow-strength-small {
       filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+      @include mini {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+      }
     }
     &.shadow-strength-large {
       filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
