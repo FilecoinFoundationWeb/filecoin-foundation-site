@@ -209,7 +209,7 @@ $caseStudyCardBorderWidth: 0.125rem;
   justify-content: space-between;
   height: 36rem;
   padding: $caseStudyCardBorderWidth;
-  color: white;
+  color: $white;
   background-color: $azureRadiance;
   transform: scale(1);
   transition: 300ms ease;

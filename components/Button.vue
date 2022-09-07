@@ -229,7 +229,7 @@ $layerOffset: 0.25rem;
     }
     .text {
       background-color: $denim;
-      color: white;
+      color: $white;
       box-shadow: 0 0 6px rgba(6, 9, 78, 1);
     }
   }
@@ -238,7 +238,7 @@ $layerOffset: 0.25rem;
   }
   .text {
     padding: 10px 1.25rem 9px;
-    background-color: white;
+    background-color: $white;
     color: $kleinBlue;
     box-shadow: 0 0 6px rgba(178, 215, 248, 1);
     border-radius: inherit;
@@ -249,14 +249,14 @@ $layerOffset: 0.25rem;
 .type__B,
 .type__D {
   @include fontWeight_Medium;
-  color: white;
+  color: $white;
   align-items: center;
   &:hover {
     ::v-deep .icon {
       svg {
         .icon__play__triangle-inner,
         .icon__info__circle-inner {
-          fill: white;
+          fill: $white;
         }
         .icon__info__letter-i {
           fill: $kleinBlue;
@@ -275,7 +275,7 @@ $layerOffset: 0.25rem;
             fill: $kleinBlue;
           }
           .icon__info__letter-i {
-            fill: white;
+            fill: $white;
           }
         }
       }
@@ -309,7 +309,7 @@ $layerOffset: 0.25rem;
   padding: 10px 1.125rem;
   border-width: 2px;
   border-style: solid;
-  border-color: white;
+  border-color: $white;
   border-radius: 3rem;
   .text {
     padding-top: 1px;
@@ -345,7 +345,7 @@ $layerOffset: 0.25rem;
 .type__C {
   @include fontSize_Medium;
   @include fontWeight_Medium;
-  color: white;
+  color: $white;
   &.theme__dark {
     color: $blackPearl;
   }

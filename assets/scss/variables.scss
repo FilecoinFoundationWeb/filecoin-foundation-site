@@ -27,7 +27,7 @@ $gray700: #616161;
 $gray800: #424242;
 $gray900: #212121;
 
-$white: #FFFFFF;
+$white: #F0F7FD;
 $polar: #EFF6FC;
 $hawkesBlue: #D8EBFB;
 $jordyBlue: #73B4ED;
@@ -121,8 +121,8 @@ $letterSpacing_Large: 0.03em;
 }
 
 @mixin selection_Light {
-  ::-moz-selection { background: $translucentBlack; color: white; }
-  ::selection { background: $translucentBlack; color: white; }
+  ::-moz-selection { background: $translucentBlack; color: $white; }
+  ::selection { background: $translucentBlack; color: $white; }
 }
 
 @mixin selection_Invisible {

@@ -36,8 +36,8 @@ export default {
 .icon__code__slash,
 .icon__code__triangle-right {
   transition: 250ms ease-in-out;
-  fill: white;
-  stroke: white;
+  fill: $white;
+  stroke: $white;
   stroke-width: 1px;
 }
 </style>

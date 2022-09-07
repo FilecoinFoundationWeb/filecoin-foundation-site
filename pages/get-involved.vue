@@ -97,7 +97,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 // ///////////////////////////////////////////////////////////////////// General
 .page-get-involved {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
-  color: white;
+  color: $white;
   @include medium {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium});
   }

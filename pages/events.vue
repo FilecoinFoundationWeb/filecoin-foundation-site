@@ -151,7 +151,7 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 .page-events {
-  color: white;
+  color: $white;
   margin-bottom: 10rem;
   @include mini {
     margin-bottom: 5rem;

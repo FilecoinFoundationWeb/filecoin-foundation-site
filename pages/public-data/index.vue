@@ -334,7 +334,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
     .image-block {
       position: relative;
-      border: 0.375rem solid white;
+      border: 0.375rem solid $white;
       border-radius: 12rem;
       overflow: hidden;
     }

@@ -52,7 +52,7 @@ export default {
 .accordion-block {
   position: relative;
   &.theme__light {
-    color: white;
+    color: $white;
   }
   &.theme__dark {
     color: $blackPearl;

@@ -241,7 +241,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .blocks {
     &.left {
       padding: 3.5rem 0;
-      color: white;
+      color: $white;
       .description {
         @include fontSize_ExtraLarge;
         font-weight: $fontWeight_Regular;
@@ -299,7 +299,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .blocks {
     &.left {
       padding: 3.5rem 0;
-      color: white;
+      color: $white;
       .description {
         @include fontSize_ExtraLarge;
         font-weight: $fontWeight_Regular;

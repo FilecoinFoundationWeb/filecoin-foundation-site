@@ -172,7 +172,7 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 .heading {
-  color: white;
+  color: $white;
   font-size: 2.8125rem;
   @include fontWeight_SemiBold;
   letter-spacing: 0.4px;

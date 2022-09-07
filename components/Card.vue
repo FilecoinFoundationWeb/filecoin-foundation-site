@@ -265,7 +265,7 @@ export default {
     color: $azureRadiance;
   }
   ::v-deep .description {
-    color: white;
+    color: $white;
     a {
       color: $jordyBlue;
     }
@@ -322,7 +322,7 @@ export default {
     text-align: center;
     padding: 1rem 0.5rem 1rem 0.5rem;
     margin-bottom: 4rem;
-    color: white;
+    color: $white;
     z-index: -1;
     @include fontSize_Small;
     @include small {
@@ -389,7 +389,7 @@ export default {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: $white;
     font-size: 0.8125rem;
     @include tiny {
       margin: 1rem 0;
@@ -406,7 +406,7 @@ export default {
   justify-content: space-between;
   height: 36rem;
   padding: 0.25rem;
-  color: white;
+  color: $white;
   background-color: $azureRadiance;
   transform: scale(1);
   transition: 300ms ease;

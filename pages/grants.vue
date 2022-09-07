@@ -75,7 +75,7 @@ export default {
 .page-grants {
   position: relative;
   top: -1 * $navigationHeight;
-  color: white;
+  color: $white;
 }
 
 .main-content {
