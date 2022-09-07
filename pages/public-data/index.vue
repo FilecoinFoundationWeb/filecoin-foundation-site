@@ -22,7 +22,8 @@
         <BackgroundLayers
           id="main-section-a-background-layers"
           layers-array="5_6"
-          :breakpoints="pageLayersBreakpointData" />
+          :breakpoints="pageLayersBreakpointData"
+          shadow-strength="small" />
 
       </section>
 

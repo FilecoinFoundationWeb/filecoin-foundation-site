@@ -76,7 +76,8 @@ const viewportEntryCheck = (instance) => {
     const rect = instance.$refs.container.getBoundingClientRect()
     const elementIsInViewport = (rect.top + rect.height / 2 >= 150 && rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight) - 150)
 
-    const reset = document.getElementById(instance.resetElement)?.getBoundingClientRect()
+    const element = document.getElementById(instance.resetElement)
+    const reset = element ? element.getBoundingClientRect() : false
     const resetIsInViewport = reset ? reset.top >= 0 && reset.top <= (window.innerHeight || document.documentElement.clientHeight) : false
 
     if (!instance.startAnimation && elementIsInViewport) {

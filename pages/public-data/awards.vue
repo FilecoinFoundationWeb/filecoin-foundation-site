@@ -18,7 +18,8 @@
       <BackgroundLayers
         id="intro-wrapper-background-layers"
         layers-array="5_6"
-        :breakpoints="wrapperLayersData" />
+        :breakpoints="wrapperLayersData"
+        shadow-strength="small" />
 
       <div class="main-content-section">
         <PageSection
@@ -28,7 +29,8 @@
         <BackgroundLayers
           id="main-content-background-layers"
           layers-array="2_3_4"
-          :breakpoints="mainLayersData" />
+          :breakpoints="mainLayersData"
+          shadow-strength="small" />
       </div>
 
     </div>

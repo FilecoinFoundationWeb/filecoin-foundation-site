@@ -51,6 +51,7 @@
       "before": {
         "id": "section-1-background-layers",
         "layers-array": "2_3_4",
+        "shadow-strength": "small",
         "breakpoints": {
           "default": {
             "stroke": 1.375,
@@ -321,6 +322,7 @@
               "name": "BackgroundLayers",
               "props": {
                 "layers-array": "1_2_3_4_5_6",
+                "shadow-strength": "small",
                 "breakpoints": {
                   "default": {
                     "stroke": 1.375,

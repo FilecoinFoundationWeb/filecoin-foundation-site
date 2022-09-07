@@ -1,13 +1,13 @@
 <template>
   <component
     :is="tag"
+    v-click-outside="closePanel"
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
     :target="target"
     :class="['case-study-card', { 'with-image': img, 'is-link': tag !== 'div' }]"
     :style="{ backgroundColor: borderColor }"
-    :data-id="dataIdAttribute"
-    v-click-outside="closePanel">
+    :data-id="dataIdAttribute">
 
     <div
       ref="contentPanel"
