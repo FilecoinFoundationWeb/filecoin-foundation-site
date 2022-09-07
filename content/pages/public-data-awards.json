@@ -84,15 +84,15 @@
             "push_left": "off-1_md-1_sm-2_mi-1",
             "push_right": ""
           },
-          "heading": "The first Public Data Awards program will be launched in partnership with Philadelphia.",
-          "description": "Lörem ipsum sylig orat ifall solig. Fugt kuhet krosat, sull. Pseudoment bens ovis behet temena. Igt por även om hyska.<br><br>Monoling omidat och funde den trir. Digisk niplade samt spel, tenat. Krolahet spelöligt huruvida tetras. Bemock sesk: lånat.",
+          "heading": "The first Public Data Awards program will be launched soon. Stay tuned!",
+          "description": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups that will disperse awards sized between $5,000 and $20,000 USD to support projects that leverage datasets or advance learning around datasets stored on decentralized technology.",
           "ctas": [
             {
               "type": "A",
               "theme": "pdc",
-              "action": "nuxt-link",
+              "action": "a",
               "text": "Apply for a Public Data Award",
-              "url": "/",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": ""
             }
           ],

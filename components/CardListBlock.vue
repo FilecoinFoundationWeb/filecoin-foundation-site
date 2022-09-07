@@ -89,7 +89,7 @@ export default {
     return {
       list: [],
       current: 0,
-      pattern: 6,
+      pattern: 16,
       resize: false
     }
   },
