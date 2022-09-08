@@ -1,0 +1,515 @@
+---
+label: "[Page] Public Data Awards"
+hide_body: true
+fields:
+- type: field_group
+  name: page_content
+  label: page_content
+  fields:
+  - type: field_group
+    name: section_0
+    label: section_0
+    fields:
+    - type: field_group
+      name: hero-header
+      label: hero-header
+      fields:
+      - type: list
+        name: grid
+        label: grid
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: text
+          name: layout
+          label: layout
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: text
+          name: theme
+          label: theme
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: subheading
+          label: subheading
+        - type: list
+          name: ctas
+          label: ctas
+      - type: field_group
+        name: right
+        label: right
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: file
+          name: src
+          label: src
+        - type: text
+          name: label
+          label: label
+  - type: field_group
+    name: section_1
+    label: section_1
+    fields:
+    - type: field_group
+      name: intro_1
+      label: intro_1
+      fields:
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: file
+          name: src
+          label: src
+        - type: text
+          name: label
+          label: label
+      - type: field_group
+        name: right
+        label: right
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: text
+          name: layout
+          label: layout
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: text
+          name: theme
+          label: theme
+        - type: textarea
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: subheading
+          label: subheading
+        - type: list
+          name: ctas
+          label: ctas
+  - type: field_group
+    name: section_2
+    label: section_2
+    fields:
+    - type: field_group
+      name: intro_2
+      label: intro_2
+      fields:
+      - type: text
+        name: classNames
+        label: classNames
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: file
+          name: src
+          label: src
+        - type: text
+          name: label
+          label: label
+      - type: field_group
+        name: right
+        label: right
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: text
+          name: layout
+          label: layout
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: field_group_list
+          name: ctas
+          label: ctas
+          fields:
+          - type: text
+            name: type
+            label: type
+          - type: text
+            name: theme
+            label: theme
+          - type: text
+            name: action
+            label: action
+          - type: text
+            name: text
+            label: text
+          - type: text
+            name: url
+            label: url
+          - type: text
+            name: icon
+            label: icon
+          - type: text
+            name: target
+            label: target
+        - type: text
+          name: subheading
+          label: subheading
+      - type: list
+        name: grid
+        label: grid
+    - type: field_group
+      name: intro_2-bottom-images
+      label: intro_2-bottom-images
+      fields:
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: file
+          name: src
+          label: src
+      - type: field_group
+        name: right
+        label: right
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: file
+          name: src
+          label: src
+    - type: field_group
+      name: faq-accordion-heading
+      label: faq-accordion-heading
+      fields:
+      - type: list
+        name: grid
+        label: grid
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: text
+          name: layout
+          label: layout
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: text
+          name: heading
+          label: heading
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: subheading
+          label: subheading
+    - type: field_group
+      name: faq-accordion
+      label: faq-accordion
+      fields:
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+          - type: text
+            name: push_right
+            label: push_right
+        - type: text
+          name: theme
+          label: theme
+        - type: field_group_list
+          name: sections
+          label: sections
+          fields:
+          - type: text
+            name: heading
+            label: heading
+          - type: textarea
+            name: content
+            label: content
+  - type: field_group
+    name: section_3
+    label: section_3
+    fields:
+    - type: field_group
+      name: callout-2
+      label: callout-2
+      fields:
+      - type: field_group
+        name: left
+        label: left
+        fields:
+        - type: text
+          name: type
+          label: type
+        - type: field_group
+          name: cols
+          label: cols
+          fields:
+          - type: text
+            name: num
+            label: num
+          - type: text
+            name: push_left
+            label: push_left
+        - type: text
+          name: theme
+          label: theme
+        - type: text
+          name: layout
+          label: layout
+        - type: text
+          name: heading
+          label: heading
+        - type: textarea
+          name: description
+          label: description
+        - type: field_group_list
+          name: ctas
+          label: ctas
+          fields:
+          - type: text
+            name: type
+            label: type
+          - type: text
+            name: theme
+            label: theme
+          - type: text
+            name: action
+            label: action
+          - type: text
+            name: text
+            label: text
+          - type: text
+            name: url
+            label: url
+          - type: text
+            name: icon
+            label: icon
+          - type: text
+            name: target
+            label: target
+        - type: field_group
+          name: customizations
+          label: customizations
+          fields:
+          - type: field_group
+            name: background_layers_v2
+            label: background_layers_v2
+            fields:
+            - type: text
+              name: name
+              label: name
+            - type: field_group
+              name: props
+              label: props
+              fields:
+              - type: text
+                name: layers-array
+                label: layers-array
+              - type: field_group
+                name: breakpoints
+                label: breakpoints
+                fields:
+                - type: field_group
+                  name: default
+                  label: default
+                  fields:
+                  - type: number
+                    name: stroke
+                    label: stroke
+                  - type: number
+                    name: radius
+                    label: radius
+                - type: field_group
+                  name: medium
+                  label: medium
+                  fields:
+                  - type: number
+                    name: stroke
+                    label: stroke
+                  - type: number
+                    name: radius
+                    label: radius
+                - type: field_group
+                  name: mini
+                  label: mini
+                  fields:
+                  - type: number
+                    name: stroke
+                    label: stroke
+                  - type: number
+                    name: radius
+                    label: radius
+- type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site_name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
