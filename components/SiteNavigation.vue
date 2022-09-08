@@ -2,14 +2,14 @@
   <div id="site-navigation" :class="{ 'noscroll': mobilePanelOpen }">
     <div class="grid-noGutter">
       <div class="col">
-        <div class="content">
+        <div :class="['content', { pdcPage }]">
 
           <component
             :is="navigationComponentType"
             :is-pdc-page="pdcPage"
             @panel-open="toggleScrollClass" />
 
-          <!-- <Zero_Core__Breadcrumbs /> -->
+          <Breadcrumbs v-if="pdcPage" />
 
         </div>
       </div>
@@ -24,6 +24,7 @@ import Throttle from 'lodash/throttle'
 
 import NavMobile from '@/components/Navigation/NavMobile'
 import NavDesktop from '@/components/Navigation/NavDesktop'
+import Breadcrumbs from '@/components/Breadcrumbs'
 
 // =================================================================== Functions
 const setNavigationType = (instance) => {
@@ -44,7 +45,8 @@ export default {
 
   components: {
     NavMobile,
-    NavDesktop
+    NavDesktop,
+    Breadcrumbs
   },
 
   data () {
@@ -115,16 +117,25 @@ export default {
       width: 100%;
     }
   }
+  &.pdcPage {
+
+  }
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   height: $navigationHeight;
   .nuxt-link-active {
     z-index: 10;
+  }
+  &.pdcPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: calc(#{$navigationHeight} + 0.125rem);
+    ::v-deep .site-nav {
+      height: auto;
+    }
   }
 }
 

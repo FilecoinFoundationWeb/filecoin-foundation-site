@@ -227,6 +227,11 @@
       "sidebar": true
     }
   ],
+  "breadcrumbs_mapping": {
+    "index": "Home",
+    "public-data": "Public Data Commons",
+    "public-data-awards": "Public Data Awards"
+  },
   "footer": {
     "text": {
       "item_1": "Contact Us",
