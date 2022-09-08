@@ -61,7 +61,6 @@ import CloneDeep from 'lodash/cloneDeep'
 
 import PublicDataCommonsPageData from '@/content/pages/public-data-commons.json'
 import CaseStudyData from '@/content/data/case-studies.json'
-import EventListData from '@/content/data/event-list.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -157,12 +156,22 @@ export default {
       return positionFeaturedFirst(cards)
     },
     events () {
-      const events = CloneDeep(EventListData)
-      events.forEach((card) => {
-        card.type = 'F'
-        card.cta.theme = 'light'
-      })
-      return events
+      const events = CloneDeep(this.pageContent.section_6.events_hackathons.right.cards)
+      const upcoming = events.filter((card) => {
+        const date = this.$moment.utc(new Date(card.date_start))
+        return this.$moment.utc(new Date()).isBefore(date, 'day')
+      }).sort((a, b) => a.date_start.localeCompare(b.date_start))
+      const past = events.filter((card) => {
+        const date = this.$moment.utc(new Date(card.date_start))
+        return this.$moment.utc(new Date()).isAfter(date, 'day')
+      }).sort((a, b) => a.date_start.localeCompare(b.date_start))
+      const stayTuned = {
+        type: 'F',
+        event_type: 'event',
+        title: 'Stay Tuned',
+        description: 'More information to come soon on future events, such as the World Economic Forum and SXSW in 2023.'
+      }
+      return upcoming.concat(stayTuned, past)
     },
     caseStudies () {
       const section = CloneDeep(this.pageContent.section_4)

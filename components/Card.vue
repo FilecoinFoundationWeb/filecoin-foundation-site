@@ -4,7 +4,7 @@
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
     :target="target"
-    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }]"
+    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }, { pastEvent }]"
     :data-id="dataIdAttribute">
 
     <div
@@ -26,7 +26,7 @@
     </nuxt-link>
 
     <div
-      v-if="date && !img"
+      v-if="date && !img && type !== 'F'"
       class="date-large"
       v-html="getDate('large')">
     </div>
@@ -173,6 +173,11 @@ export default {
     },
     dataIdAttribute () {
       return this.card.data_id
+    },
+    pastEvent () {
+      const date = this.date
+      const end = Array.isArray(date) ? this.$moment.utc(new Date(date[1])) : this.$moment.utc(new Date(date))
+      return this.$moment.utc(new Date()).isAfter(end, 'day')
     }
   },
 
@@ -579,6 +584,7 @@ export default {
     @include fontWeight_Bold;
     color: $polar;
     line-height: leading(40, 13);
+    opacity: 0.7;
   }
   .title {
     @include fontSize_Large;
@@ -593,6 +599,11 @@ export default {
     color: $white;
     line-height: leading(28, 16);
     margin-bottom: 1.125rem;
+  }
+  &.pastEvent {
+    .content {
+      opacity: 0.7;
+    }
   }
 }
 
