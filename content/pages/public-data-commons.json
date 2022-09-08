@@ -239,7 +239,8 @@
               "action": "a",
               "text": "Join the Public Data Commons",
               "url": "https://airtable.com/shrmNURZt1khzB00M",
-              "icon": ""
+              "icon": "",
+              "target": "_blank"
             }
           ]
         }
@@ -249,8 +250,8 @@
         "left": {
           "type": "image_block",
           "cols": {
-            "num": "col-4_md-3_sm-5_mi-6",
-            "push_left": "off-0_md-1_sm-4_mi-3"
+            "num": "col-4_md-3_sm-5_mi-8",
+            "push_left": "off-0_md-1_sm-4_mi-2"
           },
           "src": "/images/hands-raised.png",
           "label": ""
@@ -293,9 +294,9 @@
           },
           "theme": "light",
           "heading": "Award Opportunities",
-          "subheading": "Filecoin Foundation’s Public Data Awards program funds the work of  local civic technology groups to store and/or access their community datasets on the decentralized web.",
+          "subheading": "",
+          "description": "Filecoin Foundation’s Public Data Awards program funds the work of  local civic technology groups to store and/or access their community datasets on the decentralized web.",
           "label": "",
-          "description": "",
           "ctas": [
             {
               "type": "A",
@@ -339,7 +340,8 @@
               "action": "a",
               "text": "Learn more",
               "url": "https://airtable.com/shrmNURZt1khzB00M",
-              "icon": ""
+              "icon": "",
+              "target": "_blank"
             }
           ],
           "customizations": {
@@ -430,7 +432,7 @@
                     },
                     {
                       "heading": "How do I get involved?",
-                      "content": "If you are a government official interested in having your city join the Public Data Commons, <a href='mailto:impact@fil.org'>reach out to us.</a><br><br>If you are from a civic technology group and want to leverage public datasets hosted on decentralized storage, <a href='https://example.com'>fill out this form</a> and we will notify you if there is a Public Data Awards program launched for your city."
+                      "content": "If you are a government official interested in having your city join the Public Data Commons, <a href='mailto:impact@fil.org'>reach out to us.</a><br><br>If you are from a civic technology group and want to leverage public datasets hosted on decentralized storage, <a href='https://airtable.com/shrmNURZt1khzB00M'>fill out this form</a> and we will notify you if there is a Public Data Awards program launched for your city."
                     },
                     {
                       "heading": "What about the environmental impacts of blockchain?",
@@ -538,7 +540,8 @@
               "action": "a",
               "text": "Learn more",
               "url": "https://airtable.com/shrmNURZt1khzB00M",
-              "icon": ""
+              "icon": "",
+              "target": "_blank"
             }
           ],
           "customizations": {

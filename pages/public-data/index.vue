@@ -414,13 +414,18 @@ $backgroundLayers__Left__Mini: 0.75rem;
   .text-block {
     .heading {
       font-size: 4.375rem;
-      line-height: leading(65, 70);
+      line-height: leading(75, 70);
       margin-bottom: 1.5rem;
     }
     @include mini {
       .heading {
         @include fontSize_Huge;
       }
+    }
+  }
+  .ticker {
+    @include mini {
+      padding-right: 6rem;
     }
   }
 }
@@ -527,6 +532,12 @@ $backgroundLayers__Left__Mini: 0.75rem;
   @include mini {
     padding-bottom: 3rem;
   }
+  .text-block {
+    .heading {
+      line-height: leading(32, 24);
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 
 ::v-deep #logo-gallery,
@@ -557,9 +568,13 @@ $backgroundLayers__Left__Mini: 0.75rem;
   .text-block {
     .heading {
       margin-bottom: 1.75rem;
+      @include fontSize_ExtraLarge;
+      line-height: leading(40, 24);
       a {
         color: #2E38E6;
+        @include fontSize_ExtraLarge;
         @include fontWeight_SemiBold;
+        line-height: leading(40, 24);
       }
     }
   }
@@ -645,9 +660,6 @@ $backgroundLayers__Left__Mini: 0.75rem;
         @include medium {
           right: 3rem;
         }
-        // @include small {
-        //   right: 1rem;
-        // }
         @include small {
           top: unset;
           right: unset;
@@ -787,8 +799,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
     padding-top: 5rem;
     .heading {
       margin-bottom: 3.25rem;
+      line-height: leading(60, 55);
     }
-    .subheading {
+    .description {
       margin-bottom: 1.5rem;
     }
   }
@@ -880,6 +893,11 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
     .button.type__E {
       color: $white;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+      transition: 200ms ease;
+      &:hover {
+        box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+      }
     }
   }
   @include mini {
@@ -959,9 +977,23 @@ $backgroundLayers__Left__Mini: 0.75rem;
       transform: translateX(2rem);
     }
   }
+  .text-block {
+    .description {
+      a {
+        @include fontWeight_SemiBold;
+      }
+    }
+  }
 }
 
 // /////////////////////////////////////////////////////////////////// Section 6
+::v-deep #section_6 {
+  padding-bottom: 6.25rem;
+  @include mini {
+    padding-bottom: 0;
+  }
+}
+
 ::v-deep #events_hackathons {
   padding-top: 6rem;
   padding-top: 8rem;
@@ -1013,6 +1045,11 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
     .button.type__E {
       color: $white;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+      transition: 200ms ease;
+      &:hover {
+        box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+      }
     }
   }
 }

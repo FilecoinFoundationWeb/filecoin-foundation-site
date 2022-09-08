@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['site-nav', { pdcPage }]" role="navigation">
+  <nav :class="['site-nav', { isPdcPage }]" role="navigation">
 
     <div :class="['top-panel', { 'top-open': mobilePanelOpen }]">
       <nuxt-link to="/">
@@ -80,10 +80,17 @@ export default {
     Button
   },
 
+  props: {
+    isPdcPage: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+
   data () {
     return {
-      mobilePanelOpen: false,
-      pdcPage: false
+      mobilePanelOpen: false
     }
   },
 
@@ -103,15 +110,10 @@ export default {
       if (newHash !== oldHash) {
         this.toggleMobileNav()
       }
-      this.checkForPdcPage()
     },
     mobilePanelOpen (val) {
       this.$emit('panel-open', val)
     }
-  },
-
-  mounted () {
-    this.checkForPdcPage()
   },
 
   methods: {
@@ -124,14 +126,6 @@ export default {
         action: 'nuxt-link',
         url: link.url,
         text: link.text
-      }
-    },
-    checkForPdcPage () {
-      const path = this.$route.path
-      if (path.includes('public-data')) {
-        this.pdcPage = true
-      } else if (this.pdcPage) {
-        this.pdcPage = false
       }
     }
   }
@@ -155,7 +149,7 @@ export default {
   @include mini {
     flex-direction: column;
   }
-  &.pdcPage {
+  &.isPdcPage {
     background-color: transparent;
   }
 }

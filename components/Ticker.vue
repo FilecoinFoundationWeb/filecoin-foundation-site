@@ -109,10 +109,11 @@ export default {
   font-size: 2.125rem;
   @include fontWeight_SemiBold;
   letter-spacing: 1.1px;
-  line-height: leading(40, 34);
+  line-height: leading(50, 34);
   color: $white;
   @include mini {
     @include fontSize_ExtraLarge;
+    line-height: leading(32, 24);
   }
 }
 
@@ -121,6 +122,7 @@ export default {
   white-space: nowrap;
   width: fit-content;
   height: fit-content;
+  display: inline-flex;
 }
 
 .spacer-text {
@@ -130,7 +132,7 @@ export default {
 
 .ticker-text {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -138,9 +140,6 @@ export default {
   opacity: 0;
   white-space: nowrap;
   transition: 250ms ease;
-  @include mini {
-    top: -1px;
-  }
   &.visible {
     opacity: 1;
   }

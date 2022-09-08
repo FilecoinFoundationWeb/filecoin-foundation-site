@@ -3,9 +3,14 @@
     <div class="grid-noGutter">
       <div class="col">
         <div class="content">
+
           <component
             :is="navigationComponentType"
+            :is-pdc-page="pdcPage"
             @panel-open="toggleScrollClass" />
+
+          <Zero_Core__Breadcrumbs />
+          
         </div>
       </div>
     </div>
@@ -45,7 +50,8 @@ export default {
   data () {
     return {
       mobile: false,
-      mobilePanelOpen: false
+      mobilePanelOpen: false,
+      pdcPage: false
     }
   },
 
@@ -61,10 +67,17 @@ export default {
     }
   },
 
+  watch: {
+    '$route' () {
+      this.checkForPdcPage()
+    }
+  },
+
   mounted () {
     setNavigationType(this)
     this.resize = () => { setNavigationType(this) }
     window.addEventListener('resize', Throttle(this.resize, 10))
+    this.checkForPdcPage()
   },
 
   beforeDestroy () {
@@ -74,6 +87,14 @@ export default {
   methods: {
     toggleScrollClass (val) {
       this.mobilePanelOpen = val
+    },
+    checkForPdcPage () {
+      const path = this.$route.path
+      if (path.includes('public-data')) {
+        this.pdcPage = true
+      } else if (this.pdcPage) {
+        this.pdcPage = false
+      }
     }
   }
 }

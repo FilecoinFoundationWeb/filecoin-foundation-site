@@ -201,6 +201,10 @@ $layerOffset: 0.25rem;
   }
   &.theme__pdc {
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    transition: 200ms ease;
+    &:hover {
+      box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+    }
     &:before {
       background-color: $denim;
       box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
@@ -455,11 +459,18 @@ $layerOffset: 0.25rem;
   border: 2px solid #70B4F0;
   padding: 0.125rem;
   align-items: center;
-  transition: 250ms ease;
   left: 35%;
   top: 33%;
   min-width: 15rem;
   z-index: 100;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+  transition: 250ms ease;
+  &:hover {
+    box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+    .text {
+      text-decoration: underline;
+    }
+  }
   @include medium {
     left: 50%;
     top: 31%;
@@ -471,14 +482,15 @@ $layerOffset: 0.25rem;
     transform: translateX(-50%) scale(1);
   }
   @include mini {
-    left: 50%;
-    top: 33%;
-    transform: translateX(-50%) scale(0.75);
+    left: unset;
+    right: 0rem;
+    top: 32%;
+    transform: scale(0.75);
   }
   @include tiny {
-    left: 50%;
     top: 30%;
-    transform: translateX(-50%) scale(0.6);
+    right: -2rem;
+    transform: scale(0.6);
   }
   .text {
     max-width: 8.9375rem;
@@ -514,11 +526,6 @@ $layerOffset: 0.25rem;
     }
     .icon__play__triangle-inner {
       fill: $white;
-    }
-  }
-  &:hover {
-    .text {
-      text-decoration: underline;
     }
   }
 }
