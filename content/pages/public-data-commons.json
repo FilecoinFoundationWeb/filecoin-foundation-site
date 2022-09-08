@@ -2,7 +2,9 @@
   "page_content": {
     "section_0": {
       "hero-header-image": {
-        "grid": ["noBottom"],
+        "grid": [
+          "noBottom"
+        ],
         "left": {
           "type": "image_block",
           "cols": {
@@ -82,7 +84,9 @@
         }
       },
       "logo-gallery": {
-        "grid": ["noGutter"],
+        "grid": [
+          "noGutter"
+        ],
         "left": {
           "type": "slider_block",
           "cols": {
@@ -145,7 +149,9 @@
           },
           "heading": "Making public data more resilient, permanent, and cost-effective, while also increasing accessibility.",
           "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe. This initiative brings together cutting-edge archival technologies and the most civic-minded public institutions to leverage the unique benefits of decentralized storage – because public data should be a useful resource, not a costly burden to store.<br><br>Open data in cities help foster trust in governments by allowing citizens and community organizations to play a role in advancing accountability for a more effective government.",
-          "ctas": [],
+          "ctas": [
+
+          ],
           "subheading": ""
         },
         "grid": [
@@ -164,7 +170,9 @@
           "heading": "Control over today’s centralized internet is concentrated in the <a target='_blank' href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
           "description": "These huge, ultra-powerful companies collect our data, control the information we get, and present vulnerable targets for malicious hackers.<br><br>All too often, we see some of these power players curate public data behind paywalls.  This undermines the original intention of making the data public to begin with.<br><br>We have seen these companies suffer blackouts in which vast swaths of the Web go down for hours, including websites that are massive contributors to the economy. That’s the problem with having single points of failure.<br><br>We seek to help governments and official organizations ensure that information remains open and accessible to their communities and constituents. We believe citizens and cities deserve a better version of the web - a decentralized one.",
           "label": "",
-          "ctas": []
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
@@ -197,7 +205,7 @@
       "banner_1": {
         "left": {
           "type": "text_block",
-          "layout": "small",
+          "layout": "medium",
           "cols": {
             "num": "col-7_sm-8_mi-9",
             "push_left": "off-3_sm-4_mi-3",
@@ -229,7 +237,6 @@
           "description": "",
           "label": "",
           "theme": "light",
-          "layout": "medium",
           "heading": "Public data belongs in the hands of the people",
           "subheading": "",
           "ctas": [
@@ -257,6 +264,7 @@
           "label": ""
         },
         "grid": [
+
         ],
         "right": {
           "type": "text_block",
@@ -318,7 +326,9 @@
           "src": "/images/pdc/award-opportunities-cluster.png",
           "label": ""
         },
-        "grid": []
+        "grid": [
+
+        ]
       }
     },
     "section_3": {
@@ -392,7 +402,9 @@
           },
           "heading": "<span class='case-study-label'>Case Studies</span><br>See the value of public datasets in action",
           "case_study": true,
-          "cards": []
+          "cards": [
+
+          ]
         }
       }
     },
@@ -478,7 +490,9 @@
     },
     "section_6": {
       "events_hackathons": {
-        "grid": ["noGutter"],
+        "grid": [
+          "noGutter"
+        ],
         "left": {
           "type": "text_block",
           "cols": {
