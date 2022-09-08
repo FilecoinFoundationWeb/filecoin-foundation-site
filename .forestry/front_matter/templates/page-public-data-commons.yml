@@ -4,7 +4,7 @@ hide_body: true
 fields:
 - type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_0
