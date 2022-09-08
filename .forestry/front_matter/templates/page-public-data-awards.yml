@@ -4,30 +4,42 @@ hide_body: true
 fields:
 - type: field_group
   name: seo
-  label: seo
+  label: SEO
   fields:
   - type: text
     name: title
-    label: title
+    label: Title
+    description: The title for this web page
   - type: textarea
     name: description
-    label: description
+    label: Description
+    description: Description for this web page
+  description: Populate the metadata associated with this content, like the page title
+    and description.
 - type: field_group
   name: og
-  label: og
+  label: Open Graph and Social
   fields:
   - type: text
     name: site_name
-    label: site_name
+    label: Site Name
+    description: Name of the site.
   - type: text
     name: url
-    label: url
+    label: URL
+    description: The full URL/path of the page.
   - type: text
     name: type
-    label: type
+    label: Type
+    description: The social metadata page or content type. In most cases this will
+      be website or article. See open graph types, for everything available in the
+      spec.
   - type: file
     name: image
-    label: image
+    label: Image
+    description: Upload an image to appear in social previews for this page.
+  description: Populate these fields to create a preview that will be displayed when
+    this page is shared.
 - type: field_group
   name: page_content
   label: Page Content
