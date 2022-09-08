@@ -683,7 +683,7 @@ fields:
           description: Edit or add buttons that will appear below the description
         - type: field_group
           name: customizations
-          label: customizations
+          label: Background Element Customizations
           fields:
           - type: field_group
             name: background_layers_v2
@@ -692,6 +692,7 @@ fields:
             - type: text
               name: name
               label: name
+              default: EchoLayers
             - type: field_group
               name: props
               label: props
@@ -699,6 +700,7 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '4_5_6_6_6'
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -710,9 +712,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 12
                 - type: field_group
                   name: medium
                   label: medium
@@ -720,9 +724,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -730,8 +736,13 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 7
+          description: The fields within this section control the background elements
+            of the callout section. Admin use only, do not edit
+          hidden: true
     description: This section appears between the blue gradient border section and
       the page footer
