@@ -199,6 +199,21 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(214, 234, 251, 1) inset, 0 0 6px rgba(178, 215, 248, 1);
     z-index: 10;
   }
+  &.theme__pdc {
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    transition: 200ms ease;
+    &:hover {
+      box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+    }
+    &:before {
+      background-color: $denim;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    }
+    &:after {
+      background-color: $azureRadiance;
+      box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+    }
+  }
   &.theme__dark {
     &:hover {
       &:before {
@@ -218,7 +233,7 @@ $layerOffset: 0.25rem;
     }
     .text {
       background-color: $denim;
-      color: white;
+      color: $white;
       box-shadow: 0 0 6px rgba(6, 9, 78, 1);
     }
   }
@@ -227,7 +242,7 @@ $layerOffset: 0.25rem;
   }
   .text {
     padding: 10px 1.25rem 9px;
-    background-color: white;
+    background-color: $white;
     color: $kleinBlue;
     box-shadow: 0 0 6px rgba(178, 215, 248, 1);
     border-radius: inherit;
@@ -238,14 +253,14 @@ $layerOffset: 0.25rem;
 .type__B,
 .type__D {
   @include fontWeight_Medium;
-  color: white;
+  color: $white;
   align-items: center;
   &:hover {
     ::v-deep .icon {
       svg {
         .icon__play__triangle-inner,
         .icon__info__circle-inner {
-          fill: white;
+          fill: $white;
         }
         .icon__info__letter-i {
           fill: $kleinBlue;
@@ -264,7 +279,7 @@ $layerOffset: 0.25rem;
             fill: $kleinBlue;
           }
           .icon__info__letter-i {
-            fill: white;
+            fill: $white;
           }
         }
       }
@@ -298,7 +313,7 @@ $layerOffset: 0.25rem;
   padding: 10px 1.125rem;
   border-width: 2px;
   border-style: solid;
-  border-color: white;
+  border-color: $white;
   border-radius: 3rem;
   .text {
     padding-top: 1px;
@@ -334,7 +349,7 @@ $layerOffset: 0.25rem;
 .type__C {
   @include fontSize_Medium;
   @include fontWeight_Medium;
-  color: white;
+  color: $white;
   &.theme__dark {
     color: $blackPearl;
   }
@@ -434,6 +449,85 @@ $layerOffset: 0.25rem;
   @include fontSize_Small;
   @include fontWeight_SemiBold;
   color: $kleinBlue;
+}
+
+// --------------------------------------------------------------------- One off
+.theme__pdc-video-cta {
+  position: absolute;
+  background-color: $polar;
+  border-radius: 1.9375rem;
+  border: 2px solid #70B4F0;
+  padding: 0.125rem;
+  align-items: center;
+  left: 35%;
+  top: 33%;
+  min-width: 15rem;
+  z-index: 100;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
+  transition: 250ms ease;
+  &:hover {
+    box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+    .text {
+      text-decoration: underline;
+    }
+  }
+  @include medium {
+    left: 50%;
+    top: 31%;
+    transform: translateX(-50%) scale(0.75);
+  }
+  @include small {
+    left: 50%;
+    top: 34%;
+    transform: translateX(-50%) scale(1);
+  }
+  @include mini {
+    left: unset;
+    right: 0rem;
+    top: 32%;
+    transform: scale(0.75);
+  }
+  @include tiny {
+    top: 30%;
+    right: -2rem;
+    transform: scale(0.6);
+  }
+  .text {
+    max-width: 8.9375rem;
+    white-space: normal;
+    @include fontSize_Small;
+    @include fontWeight_Medium;
+    line-height: leading(19, 13);
+    letter-spacing: 0.3px;
+    margin-right: 1rem;
+  }
+  ::v-deep .icon {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1.125rem;
+    background-color: $azureRadiance;
+    border: 4px solid $jordyBlue;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: 0.25rem;
+      left: 0.25rem;
+      border-radius: 50%;
+      background-color: $denim;
+    }
+    svg {
+      position: relative;
+      transform: translateX(1.5px);
+    }
+    .icon__play__triangle-inner {
+      fill: $white;
+    }
+  }
 }
 
 </style>

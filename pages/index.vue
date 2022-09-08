@@ -211,7 +211,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .blocks {
     &.right {
       padding: 2rem 0;
-      color: white;
+      color: $white;
       @include small {
         margin-top: 5rem;
       }
@@ -278,7 +278,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   .blocks {
     &.left {
       padding: 2rem 0;
-      color: white;
+      color: $white;
       @include mini {
         padding: 5rem 0;
       }

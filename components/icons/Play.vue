@@ -31,6 +31,6 @@ export default {
 }
 
 .icon__play__triangle-outer {
-  fill: white;
+  fill: $white;
 }
 </style>

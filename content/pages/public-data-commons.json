@@ -1,0 +1,669 @@
+{
+  "page_content": {
+    "section_0": {
+      "hero-header-image": {
+        "grid": ["noBottom"],
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-7",
+            "push_left": "off-5"
+          },
+          "src": "/images/pdc/congress.png",
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 13
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "hero-header-text": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-9_sm-10_mi-12"
+          },
+          "layout": "large",
+          "theme": "light",
+          "heading": "Public Data Commons",
+          "customizations": {
+            "hero-subheading-ticker": {
+              "name": "Ticker",
+              "props": {
+                "text-before": "Data storage that is",
+                "strings": [
+                  "cheaper,",
+                  "transparent,",
+                  "more resilient,",
+                  "verifiable,"
+                ],
+                "text-after": "because public data is important."
+              }
+            }
+          }
+        }
+      }
+    },
+    "section_1": {
+      "before": {
+        "id": "section-1-background-layers",
+        "layers-array": "2_3_4",
+        "shadow-strength": "small",
+        "breakpoints": {
+          "default": {
+            "stroke": 1.375,
+            "radius": 18.75
+          },
+          "medium": {
+            "stroke": 0.75,
+            "radius": 12.75
+          },
+          "mini": {
+            "stroke": 0.25,
+            "radius": 5
+          }
+        }
+      },
+      "logo-gallery": {
+        "grid": ["noGutter"],
+        "left": {
+          "type": "slider_block",
+          "cols": {
+            "num": "col-12_sm-8_mi-9",
+            "push_left": "off-0_sm-2_mi-2"
+          },
+          "cards": [
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/filecoin-green-logo.png"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/u-of-maryland-dep-geographical-sciences-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/techcongress-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/decentralized-future-council-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/IFE-logo.svg"
+            },
+            {
+              "type": "A",
+              "img_size": "full",
+              "img": "/images/pdc/logos/genrait-logo.svg"
+            }
+          ]
+        }
+      },
+      "intro_1": {
+        "classNames": "basic-template-block-format",
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_md-3_sm-4_mi-6",
+            "push_left": "off-0_md-1_sm-4_mi-3",
+            "push_right": ""
+          },
+          "src": "/images/grants-hands-multistroke.svg",
+          "label": ""
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-7_sm-11_mi-11",
+            "push_left": "off-1_sm-1_mi-1",
+            "push_right": ""
+          },
+          "heading": "Making public data more resilient, permanent, and cost-effective, while also increasing accessibility.",
+          "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe. This initiative brings together cutting-edge archival technologies and the most civic-minded public institutions to leverage the unique benefits of decentralized storage – because public data should be a useful resource, not a costly burden to store.<br><br>Open data in cities help foster trust in governments by allowing citizens and community organizations to play a role in advancing accountability for a more effective government.",
+          "ctas": [],
+          "subheading": ""
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "intro_2": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-6_md-5_sm-9_mi-11",
+            "push_left": "off-0_md-1_sm-2_mi-1",
+            "push_right": ""
+          },
+          "heading": "Control over today’s centralized internet is concentrated in the <a target='_blank' href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
+          "description": "These huge, ultra-powerful companies collect our data, control the information we get, and present vulnerable targets for malicious hackers.<br><br>All too often, we see some of these power players curate public data behind paywalls.  This undermines the original intention of making the data public to begin with.<br><br>We have seen these companies suffer blackouts in which vast swaths of the Web go down for hours, including websites that are massive contributors to the economy. That’s the problem with having single points of failure.<br><br>We seek to help governments and official organizations ensure that information remains open and accessible to their communities and constituents. We believe citizens and cities deserve a better version of the web - a decentralized one.",
+          "label": "",
+          "ctas": []
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-5_sm-9_mi-11",
+            "push_left": "off-1_sm-2_mi-1",
+            "push_right": ""
+          },
+          "src": "/images/pdc/public-datasets-cluster.png",
+          "label": "",
+          "customizations": {
+            "video-cta-button": {
+              "name": "Button",
+              "props": {
+                "button": {
+                  "text": "Why Public Datasets are Stored on Filecoin",
+                  "action": "video",
+                  "icon": "play",
+                  "theme": "pdc-video-cta",
+                  "url": "https://www.youtube.com/watch?v=cZjX1ck_FbI"
+                }
+              }
+            }
+          }
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "banner_1": {
+        "left": {
+          "type": "text_block",
+          "layout": "small",
+          "cols": {
+            "num": "col-7_sm-8_mi-9",
+            "push_left": "off-3_sm-4_mi-3",
+            "push_right": ""
+          },
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "8_6_5_4_3_2",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                },
+                "reverse": true
+              }
+            }
+          },
+          "description": "",
+          "label": "",
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Public data belongs in the hands of the people",
+          "subheading": "",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Join the Public Data Commons",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
+              "icon": "",
+              "target": "_blank"
+            }
+          ]
+        }
+      },
+      "intro_3": {
+        "classNames": "basic-template-block-format",
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_md-3_sm-5_mi-8",
+            "push_left": "off-0_md-1_sm-4_mi-2"
+          },
+          "src": "/images/hands-raised.png",
+          "label": ""
+        },
+        "grid": [
+        ],
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-6_sm-9_mi-11",
+            "push_left": "off-2_sm-2_mi-1",
+            "push_right": ""
+          },
+          "heading": "What is decentralized storage?",
+          "description": "Governments and communities need accessible and cost-effective ways to store public datasets. Filecoin makes decentralized storage easy, and it costs <a href='https://file.app/'>a fraction</a> of the price of centralized cloud storage.<br><br>On the Filecoin network, files are stored on a distributed network of professional storage providers around the globe, with built-in economic incentives to ensure files are stored reliably over time. The mission of Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information. ",
+          "subheading": "",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Learn More about Filecoin",
+              "url": "https://filecoin.io/",
+              "icon": ""
+            }
+          ]
+        }
+      }
+    },
+    "section_2": {
+      "intro_4": {
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-6_md-5_mi-11",
+            "push_left": "off-0_md-1_mi-1",
+            "push_right": ""
+          },
+          "theme": "light",
+          "heading": "Award Opportunities",
+          "subheading": "",
+          "description": "Filecoin Foundation’s Public Data Awards program funds the work of  local civic technology groups to store and/or access their community datasets on the decentralized web.",
+          "label": "",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "nuxt-link",
+              "text": "Read more and Apply for Awards",
+              "url": "/publicdata/awards",
+              "icon": ""
+            }
+          ]
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-5_mi-11",
+            "push_left": "off-1_mi-1",
+            "push_right": ""
+          },
+          "src": "/images/pdc/award-opportunities-cluster.png",
+          "label": ""
+        },
+        "grid": []
+      }
+    },
+    "section_3": {
+      "callout-1": {
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-8_mi-9",
+            "push_left": "off-3_mi-3",
+            "push_right": "off-1_mi-0"
+          },
+          "heading": "Join the movement",
+          "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Learn more",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
+              "icon": "",
+              "target": "_blank"
+            }
+          ],
+          "customizations": {
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "1_2_3_4_5_6",
+                "shadow-strength": "small",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                },
+                "reverse": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "section_4": {
+      "case_studies": {
+        "left": {
+          "type": "card_list_block",
+          "cols": {
+            "num": "col",
+            "push_left": "",
+            "push_right": ""
+          },
+          "load_more_button": {
+            "type": "E",
+            "action": "load",
+            "theme": "dark",
+            "text": "See more"
+          },
+          "display": {
+            "initial": 5,
+            "next": 5
+          },
+          "heading": "<span class='case-study-label'>Case Studies</span><br>See the value of public datasets in action",
+          "case_study": true,
+          "cards": []
+        }
+      }
+    },
+    "section_5": {
+      "faq_accordion": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-2"
+          },
+          "src": "/images/question-mark.png"
+        },
+        "right": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-9_mi-11",
+            "push_left": "off-0_mi-1",
+            "push_right": "off-1_mi-0"
+          },
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Frequently Asked Questions",
+          "customizations": {
+            "accordion": {
+              "name": "AccordionBlock",
+              "props": {
+                "block": {
+                  "theme": "light",
+                  "sections": [
+                    {
+                      "heading": "What is Filecoin?",
+                      "content": "Filecoin is a decentralized network to store files, with built-in economic incentives to ensure files are stored reliably over time. The mission of  Filecoin is to create a decentralized, efficient, and robust foundation for humanity’s information."
+                    },
+                    {
+                      "heading": "What is the Filecoin Foundation?",
+                      "content": "Filecoin Foundation is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+                    },
+                    {
+                      "heading": "How do I get involved?",
+                      "content": "If you are a government official interested in having your city join the Public Data Commons, <a href='mailto:impact@fil.org'>reach out to us.</a><br><br>If you are from a civic technology group and want to leverage public datasets hosted on decentralized storage, <a href='https://airtable.com/shrmNURZt1khzB00M'>fill out this form</a> and we will notify you if there is a Public Data Awards program launched for your city."
+                    },
+                    {
+                      "heading": "What about the environmental impacts of blockchain?",
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> Learn more about the Filecoin community’s commitment to energy efficiency."
+                    }
+                  ]
+                }
+              }
+            },
+            "contact": {
+              "name": "TextBlock",
+              "props": {
+                "block": {
+                  "theme": "light",
+                  "description": "Have a question not addressed here? <a href='mailto:impact@fil.org'>Reach out to us.</a>"
+                }
+              }
+            },
+            "background_layers": {
+              "name": "BackgroundLayers",
+              "props": {
+                "layers-array": "5_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12.75
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 10
+                  }
+                },
+                "reverse": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "section_6": {
+      "events_hackathons": {
+        "grid": ["noGutter"],
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-4_md-7_mi-10",
+            "push_left": "off-0_md-1_mi-0"
+          },
+          "layout": "medium",
+          "theme": "light",
+          "heading": "Events & Hackathons",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "light",
+              "action": "nuxt-link",
+              "text": "Browse all FIL.org",
+              "url": "/events",
+              "icon": ""
+            }
+          ]
+        },
+        "right": {
+          "type": "card_list_block",
+          "cols": {
+            "num": "col-8_md-10_mi-12",
+            "push_left": "off-0_md-1_mi-0"
+          },
+          "load_more_button": {
+            "type": "E",
+            "action": "load",
+            "theme": "dark",
+            "text": "See more"
+          },
+          "display": {
+            "initial": 3,
+            "next": 3
+          },
+          "forceGrid": "noGutter",
+          "forceCardColumns": "col-12",
+          "cards": [
+            {
+              "type": "F",
+              "event_type": "event",
+              "title": "Smart Cities Expo",
+              "date_start": "2022-09-14",
+              "date_end": "2022-09-15",
+              "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Co-Founder Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’.",
+              "cta": {
+                "target": "",
+                "text": "More Info",
+                "type": "B",
+                "action": "",
+                "theme": "light",
+                "url": "",
+                "icon": "info"
+              }
+            },
+            {
+              "type": "F",
+              "event_type": "event",
+              "title": "Smart Cities Expo: Filecoin Foundation Breakfast",
+              "date_start": "2022-09-14",
+              "date_end": "2022-09-15",
+              "description": "We will be hosting a Filecoin Foundation Breakfast at Smart Cities Expo in Miami.",
+              "cta": {
+                "target": "",
+                "text": "More Info",
+                "type": "B",
+                "action": "",
+                "theme": "light",
+                "url": "",
+                "icon": "info"
+              }
+            },
+            {
+              "type": "F",
+              "event_type": "event",
+              "title": "FIL-Singapore",
+              "date_start": "2022-08-26",
+              "date_end": "2022-08-27",
+              "description": "John Paul Farmer, former CTO of NYC, will be in conversation with Singaporean government official Aaron Maniam at FIL-Singapore.",
+              "cta": {
+                "target": "",
+                "text": "More Info",
+                "type": "B",
+                "action": "",
+                "theme": "light",
+                "url": "",
+                "icon": "info"
+              }
+            },
+            {
+              "type": "F",
+              "event_type": "event",
+              "title": "World Economic Forum",
+              "date_start": "2022-05-22",
+              "date_end": "2022-05-26",
+              "description": "The Decentralized Web Gateway at Davos was hosted by Filecoin and held at the World Economic Forum in Davos, hosted by Filecoin Foundation and sponsored by CNBC International.",
+              "cta": {
+                "target": "",
+                "text": "More Info",
+                "type": "B",
+                "action": "",
+                "theme": "light",
+                "url": "",
+                "icon": "info"
+              }
+            },
+            {
+              "type": "F",
+              "event_type": "event",
+              "title": "Events at SXSW in 2022",
+              "date_start": "2022-03-11",
+              "date_end": "2022-03-18",
+              "description": "Events ranged from NFT showcases and discussions on sustainability in blockchains to hackathons.",
+              "cta": {
+                "target": "",
+                "text": "More Info",
+                "type": "B",
+                "action": "",
+                "theme": "light",
+                "url": "",
+                "icon": "info"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "section_7": {
+      "callout-2": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-8_sm-9_mi-11",
+            "push_left": "off-3_sm-3_mi-1"
+          },
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Join the movement",
+          "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Learn more",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
+              "icon": "",
+              "target": "_blank"
+            }
+          ],
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 7
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Public Data Commons - Filecoin Foundation",
+    "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe."
+  },
+  "og": {
+    "site_name": "Public Data Commons - Filecoin Foundation",
+    "url": "https://fil.org/public-data",
+    "type": "website",
+    "image": "/images/pdc/pdc-open-graph.png"
+  }
+}

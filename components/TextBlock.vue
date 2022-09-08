@@ -124,7 +124,7 @@ export default {
 // ///////////////////////////////////////////////////////////////////// General
 .text-block {
   &.theme__light {
-    color: white;
+    color: $white;
   }
 }
 
@@ -159,7 +159,7 @@ export default {
   margin-bottom: 1rem;
   a {
     @include fontWeight_Bold;
-    color: white;
+    color: $white;
     &:hover {
       text-decoration: underline;
     }

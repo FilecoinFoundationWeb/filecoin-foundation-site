@@ -131,8 +131,10 @@ $backgroundLayer__Height: 12.25rem;
 
 // ///////////////////////////////////////////////////////////////////// General
 #site-footer {
+  position: relative;
+  z-index: 5;
   padding-bottom: 2rem;
-  color: white;
+  color: $white;
 }
 
 .site-footer-section-top {
