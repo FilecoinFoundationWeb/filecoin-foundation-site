@@ -52,6 +52,9 @@ fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          description: Determines the block type used for this section. Changes will
+            affect the display of the page. Admin use only, do not edit.
         - type: text
           name: layout
           label: Layout
@@ -262,22 +265,30 @@ fields:
       and end at the section with the white background and blue-gradient border.
   - type: field_group
     name: section_2
-    label: section_2
+    label: Info and FAQs
     fields:
     - type: field_group
       name: intro_2
-      label: intro_2
+      label: Section Intro
       fields:
       - type: text
         name: classNames
         label: classNames
+        default: basic-template-block-format
+        description: Edits to this field will change the classes of the html element.
+          Admin use only, do not edit.
+        hidden: true
       - type: field_group
         name: left
-        label: left
+        label: Left Image
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          description: The type of block being used for the section. Admin use only,
+            do not edit.
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -285,28 +296,43 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-3_md-3_sm-4_mi-6
           - type: text
             name: push_left
             label: push_left
+            default: off-1_md-2_sm-2_mi-2
           - type: text
             name: push_right
             label: push_right
+            default: off-0
+          hidden: true
+          description: Edits affect the section layout. Admin use only, do not edit
         - type: file
           name: src
-          label: src
+          label: Image src
+          description: Upload or change the image
         - type: text
           name: label
-          label: label
+          label: Label
+          hidden: false
+          description: Edit the label for the image
       - type: field_group
         name: right
-        label: right
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
+          description: The block type used for the section. Admin use only, do not
+            edit.
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
+          default: medium
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -314,60 +340,94 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-7_md-6_sm-8_sm-11
           - type: text
             name: push_left
             label: push_left
+            default: off-1_md-1_sm-2_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading
+          description: Edit the heading for this text section
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the description text for this section. Appears as paragraph
+            text beneath the heading.
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
             label: type
+            default: A
+            hidden: true
           - type: text
             name: theme
             label: theme
+            default: pdc
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: The determines what kind of html element will be used. Use
+              "a" for external links and "nuxt-link" for internal links
           - type: text
             name: text
-            label: text
+            label: Text
+            description: Edit the button text.
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the url to which the user is directed when the button
+              is clicked
           - type: text
             name: icon
             label: icon
+            hidden: true
           - type: text
             name: target
-            label: target
+            label: Target
+            description: This field determines whether a link will open in a new tab
+              or not.  For internal links leave this field empty, for external links
+              enter "_blank"
+          description: Edit or add buttons that appear below this text section
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+          description: 'Edit or add the subheading text for this text section.  '
+        label: Right Text
+        description: Edit the text that appears to the right side of the section
       - type: list
         name: grid
         label: grid
+        config:
+          use_select: true
+          source:
+            type: simple
+          options:
+          - middle
+      description: The content contained within the white background section
     - type: field_group
       name: intro_2-bottom-images
-      label: intro_2-bottom-images
+      label: Section Intro Bottom Images
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Left Image
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          default: image_block
+          hidden: true
+          description: Changes to this field will affect the display of the section.
+            Admin use only, do not edit.
         - type: field_group
           name: cols
           label: cols
@@ -375,19 +435,27 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_md-6_sm-10_mi-12
           - type: text
             name: push_left
             label: push_left
+            default: off-1_md-2_sm-1_mi-0
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image src
+          description: Upload or change the left image
       - type: field_group
         name: right
-        label: right
+        label: Right Image
         fields:
         - type: text
           name: type
           label: type
+          default: image_block
+          hidden: true
+          description: The block type used for this section. Changes will affect the
+            display of this section. Admin use only, do not edit
         - type: field_group
           name: cols
           label: cols
@@ -395,29 +463,48 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-3_sm-5_mi-6
           - type: text
             name: push_left
             label: push_left
+            default: off-0_sm-1_mi-0
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image src
+          description: Upload or change the right image
+        description: Edit the right image
+      description: Edit the two images that appear below the image/text section
     - type: field_group
       name: faq-accordion-heading
-      label: faq-accordion-heading
+      label: FAQ Accordion Heading
       fields:
       - type: list
         name: grid
         label: grid
+        hidden: false
+        config:
+          use_select: true
+          source:
+            type: simple
       - type: field_group
         name: left
-        label: left
+        label: Heading
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          description: The block type used for this section. Changes to this field
+            will affect the section's display. Admin use only, do not edit.
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: medium
+          description: This field determines the size and layout of the text-block.
+            Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -425,29 +512,41 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_md-6_sm-10_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-2_sm-2_mi-1
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: text
           name: label
-          label: label
+          label: Label
+          description: If content is provided the label will appear above the heading
+            text
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+          description: If content is provided the subheading will appear below the
+            heading text
+        description: Edit the heading for the accordion section
     - type: field_group
       name: faq-accordion
-      label: faq-accordion
+      label: FAQ Accordion Content
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Content
         fields:
         - type: text
           name: type
           label: type
+          description: The block type used for this section.  Changes to this field
+            can affect the section's display. Admin use only, do not edit.
+          default: accordion_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -455,40 +554,55 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-10_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-2_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: The them determines the text color for the section. "light"
+            will set the text color as white and "dark" will set the text color to
+            a dark blue (almost black)
+          default: dark
         - type: field_group_list
           name: sections
-          label: sections
+          label: Accordion Sections
           fields:
           - type: text
             name: heading
-            label: heading
+            label: Section Heading
           - type: textarea
             name: content
-            label: content
+            label: Section Content
+          description: Add or edit the accordion sections
+      description: Edit the content displayed in the FAQ accordion
+    description: This section starts with the gradient border and white background
+      and ends after the FAQ accordion
   - type: field_group
     name: section_3
-    label: section_3
+    label: Callout Section
     fields:
     - type: field_group
       name: callout-2
-      label: callout-2
+      label: Callout
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Content
         fields:
         - type: text
           name: type
           label: type
+          description: The block type used for this section. Changes to this field
+            will affect the section's display. Admin use only, do not edit.
+          hidden: true
+          default: text_block
         - type: field_group
           name: cols
           label: cols
@@ -496,46 +610,77 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-8_sm-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-3_sm-3_mi-1
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the section's text color. "light" will
+            set the text color to white and "dark" will set the text color to dark
+            blue (almost black)
+          default: light
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
+          hidden: true
+          default: medium
         - type: text
           name: heading
-          label: heading
+          label: Heading text
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: The paragraph text that appears below the heading text
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
             label: type
+            description: The style of button. Admin use only, do not edit.
+            default: A
+            hidden: true
           - type: text
             name: theme
             label: theme
+            default: pdc
+            description: Field affects the button styling. Admin use only, do not
+              edit.
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: This field determines which html element is used. For external
+              links enter "a", for internal links enter "nuxt-link"
+            default: a
           - type: text
             name: text
-            label: text
+            label: Button text
+            description: Edit the button's text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the url that a user is directed to when the button is
+              clicked
           - type: text
             name: icon
             label: icon
+            hidden: true
           - type: text
             name: target
-            label: target
+            label: Target
+            default: _blank
+            description: This field determines whether a link will open in a new tab
+              or now. Enter "_blank" to open in new tab or leave field empty to redirect
+              in the same tab
+          description: Edit or add buttons that will appear below the description
         - type: field_group
           name: customizations
           label: customizations
@@ -588,3 +733,5 @@ fields:
                   - type: number
                     name: radius
                     label: radius
+    description: This section appears between the blue gradient border section and
+      the page footer
