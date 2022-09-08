@@ -526,12 +526,12 @@
               "date_end": "2022-09-15",
               "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Co-Founder Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Afe7e079b-cbcd-3033-b473-06c1f86a5e74&viewer%21megaVerb=group-discover",
                 "icon": "info"
               }
             },
@@ -543,12 +543,12 @@
               "date_end": "2022-09-15",
               "description": "We will be hosting a Filecoin Foundation Breakfast at Smart Cities Expo in Miami.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Afe7e079b-cbcd-3033-b473-06c1f86a5e74&viewer%21megaVerb=group-discover",
                 "icon": "info"
               }
             },
@@ -560,12 +560,12 @@
               "date_end": "2022-08-27",
               "description": "John Paul Farmer, former CTO of NYC, will be in conversation with Singaporean government official Aaron Maniam at FIL-Singapore.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://www.fil-singapore.io/",
                 "icon": "info"
               }
             },
@@ -577,12 +577,12 @@
               "date_end": "2022-05-26",
               "description": "The Decentralized Web Gateway at Davos was hosted by Filecoin and held at the World Economic Forum in Davos, hosted by Filecoin Foundation and sponsored by CNBC International.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://hub.fil.org/davos",
                 "icon": "info"
               }
             },
@@ -594,12 +594,12 @@
               "date_end": "2022-03-18",
               "description": "Events ranged from NFT showcases and discussions on sustainability in blockchains to hackathons.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://hub.fil.org/fil-sxsw",
                 "icon": "info"
               }
             }
