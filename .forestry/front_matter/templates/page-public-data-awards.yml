@@ -42,17 +42,22 @@ fields:
       fields:
       - type: list
         name: grid
-        label: grid
+        label: Grid
+        description: Changes to this field can affect the page layout. Admin use only
+        config:
+          use_select: false
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
           label: type
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          description: Determines the size of the text within this section.  Changes
+            to this field can affect the layout/appearance of the page. Admin us only.
+          default: large
         - type: field_group
           name: cols
           label: cols
@@ -60,37 +65,59 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-5_sm-6_mi-12
           - type: text
             name: push_left
             label: push_left
+            default: off-0
           - type: text
             name: push_right
             label: push_right
+          description: Changes to the any fields within can affect the page layout.
+            Admin use only.
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: Changes to the theme can affect the appearance of the section.
+            "light" will set the text color to white and "dark" dark will set the
+            text color to a deep blue (almost black). Admin use only.
         - type: text
           name: heading
-          label: heading
+          label: Heading
+          description: Large bolded text that appears as the title at the top of this
+            page.
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the text that appears below the heading text.
         - type: text
           name: label
-          label: label
+          label: Label
+          description: The label text will appear above the heading text.
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+          description: When there is content to display the subheading text will appear
+            directly after the heading text and before the description.
         - type: list
           name: ctas
-          label: ctas
+          config:
+            use_select: false
+          label: CTAs
+          hidden: true
+        label: Left Column
+        description: The content displayed in the left side of the hero section is
+          editable here.
       - type: field_group
         name: right
-        label: right
+        label: Right Column
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -98,42 +125,48 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_sm-5_mi-10
           - type: text
             name: push_left
             label: push_left
+            default: off-1_sm-1_mi-2
           - type: text
             name: push_right
             label: push_right
+          description: Changes to this field will affect the layout/appearance of
+            the section. Admin use only.
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image Source
+          description: Upload or change the image that is displayed to the right of
+            the text in the hero section.
         - type: text
           name: label
-          label: label
-      - name: grid-
-        type: include
-        config: {}
-        template: grid-classes
-        label: Grid
-        description: Changes made to this field can affect the page layout. Admin
-          use only.
+          label: Label
+          hidden: true
+        description: The content displayed on the right side of the hero section is
+          editable here.
     description: This section starts at the top of the page and ends where the curved
       royal blue section begins
   - type: field_group
     name: section_1
-    label: section_1
+    label: Intro Section 1
     fields:
     - type: field_group
       name: intro_1
-      label: intro_1
+      label: Intro 1
       fields:
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
           label: type
+          default: image_block
+          hidden: true
+          description: Defines the type of block used. Changes to this will affect
+            the layout of the page. Admin use only, do not edit.
         - type: field_group
           name: cols
           label: cols
@@ -141,28 +174,43 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-4_sm-6_mi-6_ti-10
           - type: text
             name: push_left
             label: push_left
+            default: off-0_sm-3_mi-3_ti-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
+          description: Changes to this field will affect the section layout. Admin
+            use only, do not edit.
         - type: file
           name: src
-          label: src
+          label: Image src
+          description: Upload or change the image/icon that will appear to the left
+            of the text
         - type: text
           name: label
           label: label
+        label: Left Column
+        description: Edit the image that appears to the left of the section text.
       - type: field_group
         name: right
-        label: right
+        label: Right Column
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: medium
+          description: Changes to this field will affect the layout and appearance
+            of the section. Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -170,30 +218,48 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-7_sm-8_mi-9_ti-11
           - type: text
             name: push_left
             label: push_left
+            default: off-1_sm-2_mi-2_ti-1
           - type: text
             name: push_right
             label: push_right
+          description: Changes to any of these fields will affect the layout/appearance
+            of the section. Admin use only, do not use.
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: Changes to the theme can affect the appearance of the section.
+            "light" will set the text color to white and "dark" dark will set the
+            text color to a deep blue (almost black). Admin use only.
+          default: light
         - type: textarea
           name: heading
-          label: heading
+          label: Heading
+          description: Large bolded text that appears as the title at the top of this
+            section.
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the text that appears below the heading text.
         - type: text
           name: label
-          label: label
+          label: Label
+          description: The label text will appear above the heading text.
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+          description: When there is content to display the subheading text will appear
+            directly after the heading text and before the description.
         - type: list
           name: ctas
           label: ctas
+          hidden: true
+        description: Edit the text that displayed on the right side of the section
+    description: This section starts where the royal blue curved background begins
+      and end at the section with the white background and blue-gradient border.
   - type: field_group
     name: section_2
     label: section_2
