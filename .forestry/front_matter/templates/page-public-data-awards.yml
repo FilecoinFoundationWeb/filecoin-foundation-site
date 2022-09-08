@@ -3,16 +3,42 @@ label: "[Page] Public Data Awards"
 hide_body: true
 fields:
 - type: field_group
+  name: seo
+  label: seo
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: description
+    label: description
+- type: field_group
+  name: og
+  label: og
+  fields:
+  - type: text
+    name: site_name
+    label: site_name
+  - type: text
+    name: url
+    label: url
+  - type: text
+    name: type
+    label: type
+  - type: file
+    name: image
+    label: image
+- type: field_group
   name: page_content
-  label: page_content
+  label: Page Content
   fields:
   - type: field_group
     name: section_0
-    label: section_0
+    label: Hero Section
     fields:
     - type: field_group
       name: hero-header
-      label: hero-header
+      label: Page Header
       fields:
       - type: list
         name: grid
@@ -84,6 +110,15 @@ fields:
         - type: text
           name: label
           label: label
+      - name: grid-
+        type: include
+        config: {}
+        template: grid-classes
+        label: Grid
+        description: Changes made to this field can affect the page layout. Admin
+          use only.
+    description: This section starts at the top of the page and ends where the curved
+      royal blue section begins
   - type: field_group
     name: section_1
     label: section_1
@@ -487,29 +522,3 @@ fields:
                   - type: number
                     name: radius
                     label: radius
-- type: field_group
-  name: seo
-  label: seo
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: textarea
-    name: description
-    label: description
-- type: field_group
-  name: og
-  label: og
-  fields:
-  - type: text
-    name: site_name
-    label: site_name
-  - type: text
-    name: url
-    label: url
-  - type: text
-    name: type
-    label: type
-  - type: file
-    name: image
-    label: image
