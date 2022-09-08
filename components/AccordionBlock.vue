@@ -112,7 +112,13 @@ export default {
     margin-left: 3.125rem;
     a {
       @include fontWeight_Bold;
+      opacity: 1;
+      transition: 200ms ease;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
+
 </style>

@@ -165,4 +165,16 @@ export default {
     }
   }
 }
+
+::v-deep .heading,
+::v-deep .subheading,
+::v-deep .description {
+  a {
+    opacity: 1;
+    transition: 200ms ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
 </style>
