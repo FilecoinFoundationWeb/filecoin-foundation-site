@@ -9,8 +9,8 @@
             :is-pdc-page="pdcPage"
             @panel-open="toggleScrollClass" />
 
-          <Zero_Core__Breadcrumbs />
-          
+          <!-- <Zero_Core__Breadcrumbs /> -->
+
         </div>
       </div>
     </div>

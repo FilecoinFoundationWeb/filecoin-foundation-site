@@ -19,7 +19,7 @@
         <div
           v-if="img"
           :style="{ backgroundImage: `url('${img}')`, backgroundPosition: imgBackgroundPosition }"
-          :class="['image', `size-${imgSize}`, 'background_image']">
+          :class="['image', imgStyle]">
         </div>
       </div>
 
@@ -114,8 +114,8 @@ export default {
     img () {
       return this.card.img
     },
-    imgSize () {
-      return this.card.img_size || 'full'
+    imgStyle () {
+      return this.card.img_style || 'auto'
     },
     imgType () {
       const force = this.forceImageType
@@ -187,18 +187,13 @@ export default {
 $caseStudyCardBorderWidth: 0.125rem;
 
 .image {
-  &.size-full {
+  background-repeat: no-repeat;
+  &.full-height {
+    background-size: auto 100%;
+  }
+  &.auto {
     width: 100%;
-  }
-  &.size-regular {
-    width: 2.5rem;
-  }
-  &.size-mini {
-    width: 1.375rem;
-  }
-  &.background_image {
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: auto;
   }
 }
 
@@ -245,6 +240,11 @@ $caseStudyCardBorderWidth: 0.125rem;
   }
 }
 
+.image-wrapper {
+  padding: 0.3125rem;
+  padding-bottom: 0;
+}
+
 .image {
   @include borderRadius_Large;
   display: block;
@@ -261,7 +261,7 @@ $caseStudyCardBorderWidth: 0.125rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2.5rem;
+  padding: 1.75rem;
   padding-top: 3.125rem;
   min-height: calc(36rem - #{2 * $caseStudyCardBorderWidth});
   transition: 250ms ease;

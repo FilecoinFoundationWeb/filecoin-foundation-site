@@ -162,7 +162,7 @@ export default {
     },
     getColumns (index) {
       if (this.forceCardColumns) { return this.forceCardColumns }
-      if (this.caseStudy) { return (index % this.pattern === 0) ? 'col-8_sm-12' : 'col-4_sm-6_mi-12' }
+      if (this.caseStudy) { return (index === 0) ? 'col-8_sm-12' : 'col-4_sm-6_mi-12' }
       return index === 0 ? this.firstColumnNum : 'col-4_sm-6_mi-12'
     }
   }

@@ -4,6 +4,7 @@
     "title": "New York City",
     "label": "Case Study",
     "img": "/images/pdc/nyc-open-data-graph.png",
+    "img_background_position": "center 25%",
     "description": "In collaboration with the New York City’s Chief Technology Officer, <a href='https://filecoinfoundation.medium.com/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-99f6585c8630'>Filecoin Foundation and Protocol Labs launched a pilot program</a> to store open datasets on Filecoin. This project enables New York City, at no cost, to explore decentralized storage and how it can be an asset to the City.",
     "color": 2,
     "toggle": {
@@ -100,6 +101,7 @@
     "title": "Institute for Education Dinners",
     "label": "Case Study",
     "img": "/images/pdc/institute-for-educational-dinners.png",
+    "img_style": "full-height",
     "description": "Filecoin Foundation has been supporting dialogues among international embassies with the Institute for Education to educate key policymakers and international partners on decentralized file storage and introduce them to pressing cryptocurrency topics through interactive small group convenings.",
     "color": 4,
     "toggle": {
@@ -116,6 +118,8 @@
     "title": "Lockheed Martin",
     "label": "Case Study",
     "img": "/images/pdc/lockheed-martin.png",
+    "img_style": "full-height",
+    "img_background_position": "100% center",
     "description": "Filecoin Foundation (FF) and Lockheed Martin are working together to develop a program for deploying the Interplanetary File System (IPFS) in space. The space economy is rapidly emerging, and space-based services are increasingly used for everything from communication, to GPS, to environmental monitoring. As more tools are put into orbit, and as private space development and exploration continues, building out communications infrastructure in space is key to ensuring the space economy can thrive. This collaboration is the next step in establishing critical infrastructure that will transform how we share and access data in space. <a href='https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264'>Read more here.</a>",
     "color": 3,
     "toggle": {
