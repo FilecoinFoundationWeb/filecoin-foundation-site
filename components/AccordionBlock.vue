@@ -107,7 +107,7 @@ export default {
   .content-slot {
     @include fontSize_Regular;
     @include fontWeight_Regular;
-    letter-spacing: 0.48px;
+    letter-spacing: 0.3px;
     line-height: leading(28, 16);
     margin-left: 3.125rem;
     a {

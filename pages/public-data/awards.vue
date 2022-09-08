@@ -235,6 +235,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
     .heading {
       @include fontSize_Huge;
       margin-bottom: 1.75rem;
+      line-height: leading(60, 55);
     }
     .description {
       @include fontSize_Large;
@@ -288,6 +289,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
   .text-block {
     .heading {
       margin-bottom: 1.5rem;
+      line-height: leading(40, 24);
     }
   }
 }
@@ -677,6 +679,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
   }
   .heading {
     font-size: 2.8125rem;
+    line-height: leading(65, 45);
   }
   .button-row {
     justify-content: flex-end;

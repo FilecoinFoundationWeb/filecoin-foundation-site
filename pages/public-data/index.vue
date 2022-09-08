@@ -1,4 +1,5 @@
-<template>
+
+line-height: leading(65, 45);<template>
   <div class="page page-public-data-commons">
 
     <Modal />
@@ -1159,6 +1160,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
   }
   .heading {
     font-size: 2.8125rem;
+    line-height: leading(65, 45);
   }
   .button-row {
     justify-content: flex-end;
