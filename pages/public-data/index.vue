@@ -546,6 +546,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
     .heading {
       line-height: leading(32, 24);
       margin-bottom: 1.5rem;
+      @include mini {
+        margin-bottom: 0.75rem;
+      }
     }
   }
 }
