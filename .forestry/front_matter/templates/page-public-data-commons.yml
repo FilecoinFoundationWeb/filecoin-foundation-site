@@ -1668,6 +1668,7 @@ fields:
             label: Event Type
             default: event
             description: Enter the type event
+            hidden: true
           - type: text
             name: title
             label: Event Title
