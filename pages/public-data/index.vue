@@ -1014,6 +1014,8 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
     .heading {
       @include fontSize_Huge;
+      @include fontWeight_SemiBold;
+      line-height: leading(65, 55);
       margin-right: -10rem;
       @include medium {
         margin-right: 0;
@@ -1025,9 +1027,12 @@ $backgroundLayers__Left__Mini: 0.75rem;
         margin-right: 0;
       }
     }
+    .button-row {
+      margin-top: 2.5rem;
+    }
   }
   .card-list-block {
-    margin-top: 13rem;
+    margin-top: 12.5rem;
     position: relative;
     @include medium {
       margin-top: 2.875rem;
