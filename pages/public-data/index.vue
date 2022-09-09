@@ -810,6 +810,12 @@ $backgroundLayers__Left__Mini: 0.75rem;
     .heading {
       margin-bottom: 3.25rem;
       line-height: leading(60, 55);
+      @include mini {
+        @include fontWeight_Medium;
+        line-height: leading(65, 45);
+        letter-spacing: 0.4px;
+        margin-bottom: 1.5rem;
+      }
     }
     .description {
       margin-bottom: 1.5rem;
