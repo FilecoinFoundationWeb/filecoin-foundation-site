@@ -874,10 +874,11 @@ $backgroundLayers__Left__Mini: 0.75rem;
     padding: 1rem 0;
     padding-left: 5.25rem;
     .heading {
-      @include fontSize_Huge;
+      font-size: 2.8125rem;
       @include fontWeight_SemiBold;
-      line-height: leading(60, 55);
+      line-height: leading(60, 45);
       letter-spacing: 0.72px;
+      margin-bottom: 0.75rem;
     }
   }
   .background-layers {
