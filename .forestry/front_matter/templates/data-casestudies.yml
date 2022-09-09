@@ -1,0 +1,51 @@
+---
+label: "[Data] Casestudies"
+hide_body: true
+fields:
+- type: field_group_list
+  name: Case studies
+  label: Case studies
+  fields:
+  - type: boolean
+    name: featured
+    label: featured
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: label
+    label: label
+  - type: file
+    name: img
+    label: img
+  - type: text
+    name: img_background_position
+    label: img_background_position
+  - type: textarea
+    name: description
+    label: description
+  - type: number
+    name: color
+    label: color
+  - type: field_group
+    name: toggle
+    label: toggle
+    fields:
+    - type: text
+      name: target
+      label: target
+    - type: text
+      name: type
+      label: type
+    - type: text
+      name: action
+      label: action
+    - type: text
+      name: theme
+      label: theme
+    - type: text
+      name: url
+      label: url
+    - type: text
+      name: icon
+      label: icon
