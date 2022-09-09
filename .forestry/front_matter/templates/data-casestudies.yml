@@ -1,0 +1,129 @@
+---
+label: "[Data] Casestudies"
+hide_body: true
+fields:
+- type: field_group_list
+  name: Case studies
+  label: Case studies
+  fields:
+  - type: boolean
+    name: featured
+    label: Featured
+    description: Toggle this field if you would like this case study to appear at
+      the top of the card list
+    hidden: true
+  - type: text
+    name: title
+    label: Title
+    description: Edit the title for the case study
+  - type: text
+    name: label
+    label: Label
+    default: Case Study
+  - type: file
+    name: img
+    label: Image
+    description: Upload an image for the case study card
+  - type: text
+    name: img_background_position
+    label: img_background_position
+    hidden: true
+    default: center center
+  - name: preview_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Preview Text
+  - type: textarea
+    name: description
+    label: Description
+  - type: number
+    name: color
+    label: Background Color
+    description: This field controls the background color of the card. Select a number
+      between 1 and 4 (1 being the lightest blue and 4 the darkest blue).
+    default: 1
+  - name: cta
+    type: field_group
+    config: {}
+    fields:
+    - name: target
+      type: text
+      config:
+        required: false
+      label: Target
+      default: _blank
+      hidden: true
+      description: Admin use only, do not edit
+    - name: type
+      type: text
+      config:
+        required: false
+      label: Type
+      default: D
+      hidden: true
+    - name: action
+      type: select
+      default: []
+      config:
+        required: false
+        options:
+        - a
+        - nuxt-link
+        - video
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Action
+      description: Select "a" for external links, "nuxt-link" for internal links and
+        "video" to open a video in a modal on the page
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Button Text
+    - name: url
+      type: text
+      config:
+        required: false
+      label: URL
+    - name: theme
+      type: text
+      config:
+        required: false
+      label: Theme
+      default: light
+      hidden: true
+    label: CTA
+    description: Edit or add a cta to the case study card
+  - type: field_group
+    name: toggle
+    label: toggle
+    fields:
+    - type: text
+      name: target
+      label: target
+    - type: text
+      name: type
+      label: type
+    - type: text
+      name: action
+      label: action
+    - type: text
+      name: theme
+      label: theme
+    - type: text
+      name: url
+      label: url
+    - type: text
+      name: icon
+      label: icon
+    hidden: true
+pages:
+- content/data/case-studies.json

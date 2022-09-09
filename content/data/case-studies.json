@@ -22,8 +22,7 @@
       "action": "link",
       "theme": "light",
       "text": "Read more",
-      "url": "https://example.com",
-      "icon": ""
+      "url": "https://example.com"
     }
   },
   {
@@ -42,14 +41,14 @@
       "url": "",
       "icon": ""
     },
+    "img_background_position": "",
     "cta": {
       "target": "_blank",
       "type": "D",
       "action": "link",
       "theme": "light",
       "text": "Read more about web3 and the sustainable data movement here.",
-      "url": "https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85",
-      "icon": ""
+      "url": "https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85"
     }
   },
   {
@@ -68,14 +67,14 @@
       "url": "",
       "icon": ""
     },
+    "img_background_position": "",
     "cta": {
       "target": "_blank",
       "type": "D",
       "action": "link",
       "theme": "light",
       "text": "Read more here",
-      "url": "https://filecoinfoundation.medium.com/case-study-genrait-leverages-filecoin-network-for-greater-visibility-access-and-storage-of-1d56897a2d73",
-      "icon": ""
+      "url": "https://filecoinfoundation.medium.com/case-study-genrait-leverages-filecoin-network-for-greater-visibility-access-and-storage-of-1d56897a2d73"
     }
   },
   {
@@ -95,14 +94,14 @@
       "url": "",
       "icon": ""
     },
+    "img_background_position": "",
     "cta": {
       "target": "_blank",
       "type": "D",
       "action": "link",
       "theme": "light",
       "text": "Read more here",
-      "url": "https://medium.com/@FFDWeb/filecoin-foundation-for-the-decentralized-web-and-techcongress-will-work-together-to-place-more-3a414c84961",
-      "icon": ""
+      "url": "https://medium.com/@FFDWeb/filecoin-foundation-for-the-decentralized-web-and-techcongress-will-work-together-to-place-more-3a414c84961"
     }
   },
   {
@@ -122,14 +121,14 @@
       "url": "",
       "icon": ""
     },
+    "img_background_position": "",
     "cta": {
       "target": "_blank",
       "type": "D",
       "action": "link",
       "theme": "light",
       "text": "Read more here",
-      "url": "https://medium.com/@FFDWeb/announcing-the-decentralized-future-council-aaadeffde7d6",
-      "icon": ""
+      "url": "https://medium.com/@FFDWeb/announcing-the-decentralized-future-council-aaadeffde7d6"
     }
   },
   {
@@ -147,6 +146,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -165,6 +173,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -191,8 +208,7 @@
       "action": "link",
       "theme": "light",
       "text": "Read more here",
-      "url": "https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264",
-      "icon": ""
+      "url": "https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264"
     }
   }
 ]
