@@ -134,6 +134,7 @@ export default {
       return this.card.title
     },
     description () {
+      if (this.card.preview_text) { return this.panelOpen ? this.card.description : this.card.preview_text }
       return this.card.description
     },
     cta () {

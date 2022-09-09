@@ -276,7 +276,8 @@
               "action": "a",
               "text": "Learn More about Filecoin",
               "url": "https://filecoin.io/",
-              "icon": ""
+              "icon": "",
+              "target": "_blank"
             }
           ]
         }
