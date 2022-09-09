@@ -93,7 +93,7 @@ $borderWidth__Mini: 0.5rem;
       transition: 250ms ease-in;
       transform: scale(1.1);
       .icon__play__triangle-inner {
-        fill: white;
+        fill: $white;
       }
     }
   }

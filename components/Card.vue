@@ -4,7 +4,7 @@
     :to="tag === 'nuxt-link' ? url : undefined"
     :href="tag === 'a' ? url : undefined"
     :target="target"
-    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }]"
+    :class="['card', `type__${type}`, { 'with-image': img, 'is-link': tag !== 'div' }, { pastEvent }]"
     :data-id="dataIdAttribute">
 
     <div
@@ -26,7 +26,7 @@
     </nuxt-link>
 
     <div
-      v-if="date && !img"
+      v-if="date && !img && type !== 'F'"
       class="date-large"
       v-html="getDate('large')">
     </div>
@@ -70,7 +70,7 @@
       </div>
 
       <div
-        v-if="description && type !== 'B' && type !== 'A' && type !== 'E'"
+        v-if="description && type !== 'B' && type !== 'A' && type !== 'E' && type !== 'F'"
         class="panel-right">
         <div
           v-if="type === 'D'"
@@ -173,6 +173,11 @@ export default {
     },
     dataIdAttribute () {
       return this.card.data_id
+    },
+    pastEvent () {
+      const date = this.date
+      const end = Array.isArray(date) ? this.$moment.utc(new Date(date[1])) : this.$moment.utc(new Date(date))
+      return this.$moment.utc(new Date()).isAfter(end, 'day')
     }
   },
 
@@ -265,7 +270,7 @@ export default {
     color: $azureRadiance;
   }
   ::v-deep .description {
-    color: white;
+    color: $white;
     a {
       color: $jordyBlue;
     }
@@ -322,7 +327,7 @@ export default {
     text-align: center;
     padding: 1rem 0.5rem 1rem 0.5rem;
     margin-bottom: 4rem;
-    color: white;
+    color: $white;
     z-index: -1;
     @include fontSize_Small;
     @include small {
@@ -389,7 +394,7 @@ export default {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: $white;
     font-size: 0.8125rem;
     @include tiny {
       margin: 1rem 0;
@@ -406,7 +411,7 @@ export default {
   justify-content: space-between;
   height: 36rem;
   padding: 0.25rem;
-  color: white;
+  color: $white;
   background-color: $azureRadiance;
   transform: scale(1);
   transition: 300ms ease;
@@ -562,6 +567,43 @@ export default {
   }
   .cta {
     margin-top: auto;
+  }
+}
+
+// -------------------------------------------------------------------- [Type] F
+.card.type__F {
+  color: $white;
+  border-top: 2px solid #73B4ED;
+  padding-top: 1.25rem;
+  padding-bottom: 1.75rem;
+  .image {
+    display: none;
+  }
+  .date {
+    @include fontSize_Small;
+    @include fontWeight_Bold;
+    color: $polar;
+    line-height: leading(40, 13);
+    opacity: 0.7;
+  }
+  .title {
+    @include fontSize_Large;
+    @include fontWeight_Medium;
+    color: $white;
+    line-height: leading(32, 20);
+    margin-bottom: 0.5rem;
+  }
+  .description {
+    @include fontSize_Regular;
+    @include fontWeight_Regular;
+    color: $white;
+    line-height: leading(28, 16);
+    margin-bottom: 1.125rem;
+  }
+  &.pastEvent {
+    .content {
+      opacity: 0.7;
+    }
   }
 }
 

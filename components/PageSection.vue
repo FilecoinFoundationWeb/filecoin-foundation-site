@@ -5,6 +5,7 @@
       v-for="(block, key) in section"
       :id="key"
       :key="key"
+      v-if="key !== 'before'"
       class="content-section">
 
       <div v-if="block.type !== 'custom'" :class="[getGridClasses(block.grid), block.classNames]">
@@ -47,6 +48,10 @@
 
     </section>
 
+    <BackgroundLayers
+      v-else
+      v-bind="block" />
+
   </section>
 </template>
 
@@ -65,7 +70,11 @@ import DiveDeeper from '@/components/DiveDeeper'
 import EventsHackathons from '@/components/EventsHackathons'
 import TabbedSlider from '@/components/TabbedSlider'
 import BackgroundLayers from '@/components/BackgroundLayers'
+import EchoLayers from '@/components/EchoLayers'
 import FilAustinForm from '@/components/FilAustinForm'
+import AccordionBlock from '@/components/AccordionBlock'
+import Button from '@/components/Button'
+import Ticker from '@/components/Ticker'
 
 // ====================================================================== Export
 export default {
@@ -85,7 +94,11 @@ export default {
     EventsHackathons,
     TabbedSlider,
     BackgroundLayers,
-    FilAustinForm
+    EchoLayers,
+    FilAustinForm,
+    AccordionBlock,
+    Button,
+    Ticker
   },
 
   props: {
@@ -129,6 +142,7 @@ export default {
         case 'section_slider_block' : name = 'SectionSlider'; break
         case 'paginated_cards' : name = 'PaginatedCards'; break
         case 'card_list_block' : name = 'CardListBlock'; break
+        case 'accordion_block' : name = 'AccordionBlock'; break
         case 'custom' : name = block.component; break
       }
       return name

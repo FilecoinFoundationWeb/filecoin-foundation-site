@@ -1,0 +1,247 @@
+{
+  "page_content": {
+    "section_0": {
+      "hero-header": {
+        "grid": ["middle"],
+        "left": {
+          "type": "text_block",
+          "layout": "large",
+          "cols": {
+            "num": "col-5_sm-6_mi-12",
+            "push_left": "off-0",
+            "push_right": ""
+          },
+          "theme": "light",
+          "heading": "Public Data Awards",
+          "description": "The program encourages local civic technology groups to store and/or access their community data sets on the decentralized web.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-6_sm-5_mi-10",
+            "push_left": "off-1_sm-1_mi-2",
+            "push_right": ""
+          },
+          "src": "/images/pdc/awards-header-cluster.png",
+          "label": ""
+        }
+      }
+    },
+    "section_1": {
+      "intro_1": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-4_sm-6_mi-6_ti-10",
+            "push_left": "off-0_sm-3_mi-3_ti-1",
+            "push_right": ""
+          },
+          "src": "/images/pdc/trophy-and-grid.svg",
+          "label": ""
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-7_sm-8_mi-9_ti-11",
+            "push_left": "off-1_sm-2_mi-2_ti-1",
+            "push_right": ""
+          },
+          "theme": "light",
+          "heading": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups",
+          "description": "It will disperse awards sized between $5,000 and $20,000 USD to support projects that either leverage datasets or advance learning around datasets stored on decentralized technology.  Each iteration of the award has its own $50,000 pool. The program encourages local civic technology groups to store and/or access their community data sets on the decentralized web. The Public Data awards are specific to locations centered around governments with which Filecoin Foundation is partnering.<br><br>The award is intended to fund anything from a project analyzing air quality data recently uploaded to Filecoin to an educational seminar about how to access and use your city’s data stored on Filecoin or IPFS. To maximize public learning, all awards should result in at least one public output or outcome (e.g., a blog, event, data tool).<br><br>Note: This Awards program is contingent on the support and involvement of local government officials.",
+          "label": "",
+          "subheading": "",
+          "ctas": [
+
+          ]
+        }
+      }
+    },
+    "section_2": {
+      "intro_2": {
+        "classNames": "basic-template-block-format",
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-3_md-3_sm-4_mi-6",
+            "push_left": "off-1_md-2_sm-2_mi-2",
+            "push_right": "off-0"
+          },
+          "src": "/images/pdc/man-with-keyboard.png",
+          "label": ""
+        },
+        "right": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-7_md-6_sm-8_sm-11",
+            "push_left": "off-1_md-1_sm-2_mi-1",
+            "push_right": ""
+          },
+          "heading": "The first Public Data Awards program will be launched soon. Stay tuned!",
+          "description": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups that will disperse awards sized between $5,000 and $20,000 USD to support projects that leverage datasets or advance learning around datasets stored on decentralized technology.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Apply for a Public Data Award",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
+              "icon": "",
+              "target": "_blank"
+            }
+          ],
+          "subheading": ""
+        },
+        "grid": [
+          "middle"
+        ]
+      },
+      "intro_2-bottom-images": {
+        "left": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-6_md-6_sm-10_mi-12",
+            "push_left": "off-1_md-2_sm-1_mi-0"
+          },
+          "src": "/images/pdc/office-space.png"
+        },
+        "right": {
+          "type": "image_block",
+          "cols": {
+            "num": "col-3_sm-5_mi-6",
+            "push_left": "off-0_sm-1_mi-0"
+          },
+          "src": "/images/pdc/woman-speaking.png"
+        }
+      },
+      "faq-accordion-heading": {
+        "grid": ["noBottom"],
+        "left": {
+          "type": "text_block",
+          "layout": "medium",
+          "cols": {
+            "num": "col-6_md-6_sm-10_mi-11",
+            "push_left": "off-0_md-2_sm-2_mi-1"
+          },
+          "heading": "Frequently Asked Questions",
+          "label": "",
+          "subheading": ""
+        }
+      },
+      "faq-accordion": {
+        "left": {
+          "type": "accordion_block",
+          "cols": {
+            "num": "col-10_mi-11",
+            "push_left": "off-2_mi-1",
+            "push_right": ""
+          },
+          "theme": "dark",
+          "sections": [
+            {
+              "heading": "Who is eligible for this award?",
+              "content": "Only individuals and organizations based in or working directly in the featured city or jurisdiction are eligible at this time."
+            },
+            {
+              "heading": "What strings are attached to this funding?",
+              "content": "None. We simply ask you to write up a short (one page) report within 30 days of your project concluding. The reports should help the public understand how you spent the money, what you learned, and who benefited from the project."
+            },
+            {
+              "heading": "What are the sizes of these Awards?",
+              "content": "While each location’s overall pool of funding is $50,000, the range for individual awards is $5,000 and $20,000 USD. An individual award will not exceed $20,000, even if your project costs more."
+            },
+            {
+              "heading": "How can I spend this money?",
+              "content": "Tell us in the application – it could be anything from food & drink for an in-person tutorial on how to access and use decentralized public data, to an hourly rate covering your team’s programming or engineering work to build a data egress or ingress pipeline. We expect the funds to cover as much of the costs as possible of your planned initiative, including paying for staff time."
+            },
+            {
+              "heading": "Is there a date by which I need to spend the money?",
+              "content": "This is a rapid-fire program designed to quickly spur new innovations and ideas in the decentralized technology space. To help with that goal, we hope that you will spend the money within 90 days of receipt."
+            },
+            {
+              "heading": "Can an individual without an organization apply?",
+              "content": "Yes, either an individual or an organization can apply."
+            },
+            {
+              "heading": "Can one individual or organization submit multiple applications?",
+              "content": "No, applications should be limited to one per person/organization."
+            },
+            {
+              "heading": "What if I want to apply, but I don’t live or work in the featured city?",
+              "content": "Tell us in the application – it could be anything from food & drink for an in-person tutorial on how to access and use decentralized public data, to an hourly rate covering your team’s programming or engineering work to build a data egress or ingress pipeline. We expect the funds to cover as much of the costs as possible of your planned initiative, including paying for staff time."
+            },
+            {
+              "heading": "Where can I send any additional questions?",
+              "content": "<a href='mailto:impact@fil.org'>You can reach out to us anytime with questions and thoughts.</a>"
+            }
+          ]
+        }
+      }
+    },
+    "section_3": {
+      "callout-2": {
+        "left": {
+          "type": "text_block",
+          "cols": {
+            "num": "col-8_sm-9_mi-11",
+            "push_left": "off-3_sm-3_mi-1"
+          },
+          "theme": "light",
+          "layout": "medium",
+          "heading": "Join the movement",
+          "description": "Join the movement to create the Public Data Commons, an initiative to make public data more resilient, accessible, and cost-effective.",
+          "ctas": [
+            {
+              "type": "A",
+              "theme": "pdc",
+              "action": "a",
+              "text": "Learn more",
+              "url": "https://airtable.com/shrmNURZt1khzB00M",
+              "icon": "",
+              "target": "_blank"
+            }
+          ],
+          "customizations": {
+            "background_layers_v2": {
+              "name": "EchoLayers",
+              "props": {
+                "layers-array": "4_5_6_6_6",
+                "breakpoints": {
+                  "default": {
+                    "stroke": 1.375,
+                    "radius": 12
+                  },
+                  "medium": {
+                    "stroke": 0.75,
+                    "radius": 12.75
+                  },
+                  "mini": {
+                    "stroke": 0.25,
+                    "radius": 7
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "seo": {
+    "title": "Public Data Awards - Filecoin Foundation",
+    "description": "The Public Data Awards is a location-specific funding pool for non-profits and civic technology groups from the Filecoin Foundation"
+  },
+  "og": {
+    "site_name": "Public Data Awards - Filecoin Foundation",
+    "url": "https://fil.org/public-data/awards",
+    "type": "website",
+    "image": "/images/pdc/pdc-awards-open-graph.png"
+  }
+}

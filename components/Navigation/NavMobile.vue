@@ -1,5 +1,5 @@
 <template>
-  <nav class="site-nav" role="navigation">
+  <nav :class="['site-nav', { isPdcPage }]" role="navigation">
 
     <div :class="['top-panel', { 'top-open': mobilePanelOpen }]">
       <nuxt-link to="/">
@@ -80,6 +80,14 @@ export default {
     Button
   },
 
+  props: {
+    isPdcPage: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+
   data () {
     return {
       mobilePanelOpen: false
@@ -140,6 +148,9 @@ export default {
   }
   @include mini {
     flex-direction: column;
+  }
+  &.isPdcPage {
+    background-color: transparent;
   }
 }
 
@@ -364,7 +375,7 @@ export default {
     position: absolute;
     width: 20px;
     height: 4px;
-    background-image: url("data:image/svg+xml,<svg class='middle' xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4'><line x2='16' transform='translate(2 2)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='3'/></svg>");
+    background-image: url("data:image/svg+xml,<svg class='middle' xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4'><line x2='16' transform='translate(2 2)' fill='none' stroke='%23F0F7FD' stroke-linecap='round' stroke-width='3'/></svg>");
     transition: 300ms cubic-bezier(0.4, 0.0, 0.2, 1.0);
   }
   .middle {

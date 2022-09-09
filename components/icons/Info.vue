@@ -37,6 +37,6 @@ export default {
 
 .icon__info__circle-outer,
 .icon__info__letter-i {
-  fill: white;
+  fill: $white;
 }
 </style>
