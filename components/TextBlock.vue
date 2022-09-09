@@ -129,6 +129,22 @@ export default {
     color: $white;
     ::-moz-selection { background: $white; color: $blackPearl; }
     ::selection { background: $white; color: $blackPearl; }
+    ::v-deep .theme__pdc {
+      &:hover {
+        &:before {
+          background-color: $polar;
+        }
+      }
+    }
+  }
+  &.theme__dark {
+    ::v-deep .theme__pdc {
+      &:hover {
+        &:before {
+          background-color: $kleinBlue;
+        }
+      }
+    }
   }
 }
 
