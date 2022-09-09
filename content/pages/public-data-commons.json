@@ -518,6 +518,7 @@
           },
           "forceGrid": "noGutter",
           "forceCardColumns": "col-12",
+          "event_list": true,
           "cards": [
             {
               "type": "F",

@@ -181,6 +181,7 @@ export default {
     finalSections () {
       const section = CloneDeep(this.pageContent.section_6)
       section.events_hackathons.right.cards = this.events
+      console.log(this.events)
       return {
         section_5: this.pageContent.section_5,
         section_6: section,
@@ -1241,6 +1242,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
 }
 
 ::v-deep #section_7 {
+  z-index: 5;
   @include small {
     .column-content.left {
       padding-left: 3.5rem;
