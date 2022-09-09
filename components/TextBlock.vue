@@ -161,7 +161,7 @@ export default {
     @include fontWeight_Bold;
     color: $white;
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid;
     }
   }
 }
@@ -170,10 +170,8 @@ export default {
 ::v-deep .subheading,
 ::v-deep .description {
   a {
-    opacity: 1;
-    transition: 200ms ease;
     &:hover {
-      opacity: 0.8;
+      border-bottom: 1px solid;
     }
   }
 }

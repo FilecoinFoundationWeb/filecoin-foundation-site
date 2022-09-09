@@ -14,6 +14,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "cta": {
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more",
+      "url": "https://example.com",
+      "icon": ""
     }
   },
   {
@@ -21,7 +30,7 @@
     "title": "GainForest",
     "label": "Case Study",
     "img": "/images/pdc/filecoin-green-case-study-logo.svg",
-    "description": "The built-in immutability that comes with storing data on Filecoin is extremely beneficial for groups like GainForest, a non-profit organization focused on reversing deforestation and climate change through blockchain tech. GainForest founder David Dao states, “Nature-based solutions need to be permanent and transparent for stakeholders. That is why it is so crucial that the data…must be permanent and transparent as well. Decentralized data storage guarantees just that. At any point in time, anyone everywhere in the world can look up, reproduce, and audit our analysis. Low-quality projects can’t hide anymore in static PDFs.” <a href='https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85'>Read more about web3 and the sustainable data movement here.</a>",
+    "description": "The built-in immutability that comes with storing data on Filecoin is extremely beneficial for groups like GainForest, a non-profit organization focused on reversing deforestation and climate change through blockchain tech. GainForest founder David Dao states, “Nature-based solutions need to be permanent and transparent for stakeholders. That is why it is so crucial that the data…must be permanent and transparent as well. Decentralized data storage guarantees just that. At any point in time, anyone everywhere in the world can look up, reproduce, and audit our analysis. Low-quality projects can’t hide anymore in static PDFs.”",
     "color": 3,
     "toggle": {
       "target": "",
@@ -29,6 +38,15 @@
       "action": "button",
       "theme": "light",
       "url": "",
+      "icon": ""
+    },
+    "cta": {
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more about web3 and the sustainable data movement here.",
+      "url": "https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85",
       "icon": ""
     }
   },
