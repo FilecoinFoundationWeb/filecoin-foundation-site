@@ -4,7 +4,7 @@
     <Zero_Core__Accordion
       v-slot="{ active }"
       :multiple="true"
-      :toggle-on-load="true">
+      :toggle-on-load="false">
       <Zero_Core__Accordion_Section
         v-for="(section, index) in sections"
         :key="`accordion-section-${index}`"

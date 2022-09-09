@@ -303,7 +303,7 @@
               "type": "A",
               "theme": "pdc",
               "action": "nuxt-link",
-              "text": "Read more and Apply for Awards",
+              "text": "Read More and Apply for Awards",
               "url": "/publicdata/awards",
               "icon": ""
             }
@@ -339,7 +339,7 @@
               "type": "A",
               "theme": "pdc",
               "action": "a",
-              "text": "Learn more",
+              "text": "Learn More",
               "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": "",
               "target": "_blank"
@@ -429,7 +429,7 @@
                     },
                     {
                       "heading": "What is the Filecoin Foundation?",
-                      "content": "Filecoin Foundation is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+                      "content": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
                     },
                     {
                       "heading": "How do I get involved?",
@@ -437,7 +437,7 @@
                     },
                     {
                       "heading": "What about the environmental impacts of blockchain?",
-                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> Learn more about the Filecoin community’s commitment to energy efficiency."
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> <a target='_blank' href='https://green.filecoin.io/'>Learn more</a> about the Filecoin community’s commitment to energy efficiency."
                     }
                   ]
                 }
@@ -488,7 +488,7 @@
           },
           "layout": "medium",
           "theme": "light",
-          "heading": "Events & Hackathons",
+          "heading": "Highlighted Open Data Events",
           "ctas": [
             {
               "type": "A",
@@ -525,7 +525,7 @@
               "title": "Smart Cities Expo",
               "date_start": "2022-09-14",
               "date_end": "2022-09-15",
-              "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Co-Founder Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’.",
+              "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Founding Officer Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’,",
               "cta": {
                 "target": "_blank",
                 "text": "More Info",
@@ -557,8 +557,8 @@
               "type": "F",
               "event_type": "event",
               "title": "FIL-Singapore",
-              "date_start": "2022-08-26",
-              "date_end": "2022-08-27",
+              "date_start": "2022-09-26",
+              "date_end": "2022-09-27",
               "description": "John Paul Farmer, former CTO of NYC, will be in conversation with Singaporean government official Aaron Maniam at FIL-Singapore.",
               "cta": {
                 "target": "_blank",
@@ -576,7 +576,7 @@
               "title": "World Economic Forum",
               "date_start": "2022-05-22",
               "date_end": "2022-05-26",
-              "description": "The Decentralized Web Gateway at Davos was hosted by Filecoin and held at the World Economic Forum in Davos, hosted by Filecoin Foundation and sponsored by CNBC International.",
+              "description": "The Decentralized Web Gateway at the World Economic Forum in Davos was hosted by Filecoin Foundation and sponsored by CNBC International.",
               "cta": {
                 "target": "_blank",
                 "text": "More Info",
