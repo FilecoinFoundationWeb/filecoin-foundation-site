@@ -14,6 +14,14 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -30,6 +38,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -46,6 +63,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -62,6 +88,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -78,6 +113,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -94,6 +138,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -111,6 +164,15 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "img_background_position": "",
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   },
   {
@@ -129,6 +191,14 @@
       "theme": "light",
       "url": "",
       "icon": ""
+    },
+    "cta": {
+      "target": "",
+      "type": "",
+      "action": "",
+      "text": "",
+      "url": "",
+      "theme": ""
     }
   }
 ]
