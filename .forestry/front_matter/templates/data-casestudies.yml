@@ -29,6 +29,15 @@ fields:
     label: img_background_position
     hidden: true
     default: center center
+  - name: preview_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Preview Text
   - type: textarea
     name: description
     label: Description
