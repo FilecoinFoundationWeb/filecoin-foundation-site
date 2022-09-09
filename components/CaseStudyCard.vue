@@ -200,6 +200,9 @@ $caseStudyCardBorderWidth: 0.125rem;
   &.full-height {
     background-size: auto 100%;
   }
+  &.full-width {
+    background-size: 100%;
+  }
   &.auto {
     width: 100%;
     background-size: auto;
