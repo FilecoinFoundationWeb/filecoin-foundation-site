@@ -925,9 +925,9 @@ $backgroundLayers__Left__Mini: 0.75rem;
     .button.type__E {
       color: $white;
       box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
-      transition: 200ms ease;
+      transition: 250ms ease;
       &:hover {
-        box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+        background-color: $azureRadiance;
       }
     }
     .card-column {
@@ -1123,7 +1123,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
       box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
       transition: 200ms ease;
       &:hover {
-        box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
+        background-color: $azureRadiance;
       }
     }
   }
