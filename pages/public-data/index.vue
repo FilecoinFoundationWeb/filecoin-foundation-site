@@ -181,7 +181,6 @@ export default {
     finalSections () {
       const section = CloneDeep(this.pageContent.section_6)
       section.events_hackathons.right.cards = this.events
-      console.log(this.events)
       return {
         section_5: this.pageContent.section_5,
         section_6: section,
