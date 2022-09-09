@@ -8,22 +8,31 @@ fields:
   fields:
   - type: field_group
     name: section_0
-    label: section_0
     fields:
     - type: field_group
       name: hero-header-image
-      label: hero-header-image
+      label: Hero Header Image
       fields:
       - type: list
         name: grid
         label: grid
+        config:
+          use_select: false
+          source:
+            type: simple
+        description: Changes to this field will affect the sections layout. Admin
+          use only, do not edit.
       - type: field_group
         name: left
         label: left
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          default: image_block
+          description: The block type used for the section. Changes to this field
+            will affect the section's display. Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -31,15 +40,19 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-7
           - type: text
             name: push_left
             label: push_left
+            default: off-5
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image source
+          description: Upload or edit the header image
         - type: field_group
           name: customizations
-          label: customizations
+          label: Background Element Customizations
           fields:
           - type: field_group
             name: background_layers_v2
@@ -48,6 +61,7 @@ fields:
             - type: text
               name: name
               label: name
+              default: EchoLayers
             - type: field_group
               name: props
               label: props
@@ -55,6 +69,7 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '4_5_6_6_6_6'
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -66,9 +81,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 13
                 - type: field_group
                   name: medium
                   label: medium
@@ -76,9 +93,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -86,20 +105,30 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 10
+          hidden: true
+          description: Fields within this section control the background elements
+            appearance. Admin use only, do not edit.
+      description: Edit the image that appears at the center of the ripple element
+        on the right side of the header
     - type: field_group
       name: hero-header-text
-      label: hero-header-text
+      label: Hero Header Text
       fields:
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          default: text_block
+          description: The block type used for the section. Changes to this field
+            will affect the section's display. Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -107,56 +136,86 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-9_sm-10_mi-12
+          hidden: true
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          hidden: true
+          default: Large
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the text color for this text block. Enter
+            "light" to set the text color to white and "dark" to set the text color
+            to dark blue (almost black)
+          default: light
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: field_group
           name: customizations
-          label: customizations
+          label: Subheading Text
           fields:
           - type: field_group
             name: hero-subheading-ticker
-            label: hero-subheading-ticker
+            label: Hero Subheading Ticker
             fields:
             - type: text
               name: name
               label: name
+              default: Ticker
+              hidden: true
             - type: field_group
               name: props
               label: props
               fields:
               - type: text
                 name: text-before
-                label: text-before
+                label: Text Before Ticker
+                description: Edit the text that appears before the changing text
               - type: list
                 name: strings
                 label: strings
+                config:
+                  use_select: false
+                description: Add or edit the words that the text ticker cycles through
+                  in the subheading
               - type: text
                 name: text-after
-                label: text-after
+                label: Text After Ticker
+                description: Edit the text that appears after the changing text.
+            description: Edit the hero subheading, including the changing text
+        label: Header Text
+      description: Edit the text that appears to the left and below the hero header
+        image.
+    label: Hero Section
+    description: This section starts below the nav and ends at the blue gradient curved
+      border
   - type: field_group
     name: section_1
-    label: section_1
+    label: Intro Section
     fields:
     - type: field_group
       name: before
-      label: before
+      label: Background Elements
       fields:
       - type: text
         name: id
-        label: id
+        label: ID
+        default: section-1-background-layers
+        description: Edit the id for this html element. Admin use only, do not edit.
+        hidden: true
       - type: text
         name: layers-array
         label: layers-array
+        default: '2_3_4'
       - type: text
         name: shadow-strength
         label: shadow-strength
+        default: small
       - type: field_group
         name: breakpoints
         label: breakpoints
@@ -168,9 +227,11 @@ fields:
           - type: number
             name: stroke
             label: stroke
+            default: 1.375
           - type: number
             name: radius
             label: radius
+            default: 18.75
         - type: field_group
           name: medium
           label: medium
@@ -178,9 +239,11 @@ fields:
           - type: number
             name: stroke
             label: stroke
+            default: 0.75
           - type: number
             name: radius
             label: radius
+            default: 12.75
         - type: field_group
           name: mini
           label: mini
@@ -188,23 +251,36 @@ fields:
           - type: number
             name: stroke
             label: stroke
+            default: 0.25
           - type: number
             name: radius
             label: radius
+            default: 5
+      description: Edits to this field will affect the display of the section's background
+        elements. Admin use only, do not edit.
+      hidden: true
     - type: field_group
       name: logo-gallery
-      label: logo-gallery
+      label: Logo Gallery
       fields:
       - type: list
         name: grid
-        label: grid
+        label: Grid
+        config:
+          use_select: false
+        description: Changes to this field will affect the section's display. Admin
+          use only, do not edit.
       - type: field_group
         name: left
-        label: left
+        label: Logos
         fields:
         - type: text
           name: type
           label: type
+          description: The block type used for this section. Admin use only, do not
+            edit.
+          default: slider_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -212,36 +288,55 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-12_sm-8_mi-9
           - type: text
             name: push_left
             label: push_left
+            default: off-0_sm-2_mi-2
+          hidden: true
         - type: field_group_list
           name: cards
-          label: cards
+          label: Logo Cards
           fields:
           - type: text
             name: type
-            label: type
+            label: Type
+            default: A
+            description: Edit the card type used. Admin use only, do not edit.
+            hidden: true
           - type: text
             name: img_size
-            label: img_size
+            label: Image Size
+            default: full
+            description: This field controls the size of the logo in the card. Default
+              for this card is "full". Admin use only, do not edit.
+            hidden: true
           - type: file
             name: img
-            label: img
+            label: Logo
+            description: Upload or edit the logo displayed in this card.
+          description: Edit the logo displayed in a given logo card
     - type: field_group
       name: intro_1
-      label: intro_1
+      label: Intro Section 1
       fields:
       - type: text
         name: classNames
         label: classNames
+        default: basic-template-block-format
+        description: Edits to this field will change the class names of the html element
+          and will affect the section's display. Admin use only, do not edit.
+        hidden: true
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
           label: type
+          description: The block type used for this section. Admin use only, do not
+            edit.
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -249,28 +344,42 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-4_md-3_sm-4_mi-6
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_sm-4_mi-3
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image source
+          description: Upload or change the image for this intro section
         - type: text
           name: label
-          label: label
+          label: Image Label
+        description: Edit the image for this intro section.
+        label: Image
       - type: field_group
         name: right
-        label: right
+        label: Text
         fields:
         - type: text
           name: type
           label: type
+          description: The block type used for this section. Admin use only, do not
+            edit
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: medium
+          description: This field determines the size and layout of the text block.
+            Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -278,41 +387,60 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-7_sm-11_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-1_sm-1_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: textarea
           name: heading
-          label: heading
+          label: 'Heading '
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the paragraph text that is displayed below the heading
         - type: list
           name: ctas
-          label: ctas
+          label: CTAs
+          description: Add or edit the buttons that are displayed below the text block
+          hidden: true
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+          description: Edit the subheading for the text block
+        description: Edit the text that appears on the right side of this intro section
       - type: list
         name: grid
         label: grid
+        config:
+          use_select: false
+        description: Admin use only, do not edit.
+      description: This section appears below the logo gallery and is composed of
+        an image on the left and a text block on the right.
     - type: field_group
       name: intro_2
-      label: intro_2
+      label: Intro Section 2
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Text
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          hidden: true
+          default: medium
+          description: This field controls the size and layout of this text block.
+            Admin use only, do not edit.
         - type: field_group
           name: cols
           label: cols
@@ -320,31 +448,43 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_md-5_sm-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_sm-2_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: textarea
           name: heading
-          label: heading
+          label: Heading
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the description paragraph text that appears below the
+            heading
         - type: text
           name: label
-          label: label
+          label: Label
+          description: Add or edit the label text. If this field has content the label
+            will appear above the heading text.
         - type: list
           name: ctas
-          label: ctas
+          label: CTAs
+          description: Add or edit the buttons that will appear below this text block
+          hidden: true
+        description: Edit the text block of this intro section
       - type: field_group
         name: right
-        label: right
+        label: Image
         fields:
         - type: text
           name: type
-          label: type
+          label: Type
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -352,69 +492,103 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-5_sm-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-1_sm-2_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image source
+          description: Upload or change the image
         - type: text
           name: label
-          label: label
+          label: Image label
         - type: field_group
           name: customizations
           label: customizations
           fields:
           - type: field_group
             name: video-cta-button
-            label: video-cta-button
+            label: Video Button
             fields:
             - type: text
               name: name
               label: name
+              default: Button
+              hidden: true
             - type: field_group
               name: props
-              label: props
+              label: Button Properties
               fields:
               - type: field_group
                 name: button
-                label: button
+                label: Button
                 fields:
                 - type: text
                   name: text
-                  label: text
+                  label: Button Text
                 - type: text
                   name: action
-                  label: action
+                  label: Action
+                  default: video
+                  hidden: true
+                  description: This field affects the html element used. Admin use
+                    only, do not edit.
                 - type: text
                   name: icon
                   label: icon
+                  default: play
+                  hidden: true
                 - type: text
                   name: theme
                   label: theme
+                  default: pdc-video-cta
+                  hidden: true
+                  description: Control the button's appearance. Admin use only, do
+                    not use.
                 - type: text
                   name: url
-                  label: url
+                  label: URL
+                  description: Edit the URL that a user will be directed to when the
+                    button is clicked
+            description: Edit the video play button that appears in the middle of
+              the image
+        description: Edit the image of this intro section
       - type: list
         name: grid
-        label: grid
+        label: Grid
+        config:
+          use_select: false
+        description: Changes to this field will affect the display/layout of this
+          section. Admin use only, do not edit.
+      description: This section has a light blue background and appears directly below
+        Intro Section 1. It consists of a text block on the left and an image on the
+        right.
     - type: field_group
       name: banner_1
-      label: banner_1
+      label: Banner 1
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Banner Content
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          default: medium
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -422,15 +596,18 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-7_sm-8_mi-9
           - type: text
             name: push_left
             label: push_left
+            default: off-3_sm-4_mi-3
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: field_group
           name: customizations
-          label: customizations
+          label: Background Elements
           fields:
           - type: field_group
             name: background_layers
@@ -439,6 +616,7 @@ fields:
             - type: text
               name: name
               label: name
+              default: BackgroundLayers
             - type: field_group
               name: props
               label: props
@@ -446,6 +624,7 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '8_6_5_4_3_2'
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -457,9 +636,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: medium
                   label: medium
@@ -467,9 +648,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -477,66 +660,105 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 10
               - type: boolean
                 name: reverse
                 label: reverse
-        - type: text
-          name: description
-          label: description
-        - type: text
-          name: label
-          label: label
-        - type: text
-          name: theme
-          label: theme
+                default: true
+                hidden: true
+          hidden: true
+          description: The fields within this section control the background elements.
+            Admin use only, do not edit.
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
+        - type: text
+          name: description
+          label: Description
+          description: Edit the description paragraph displayed below the heading
+        - type: text
+          name: label
+          label: Label
+          description: Edit the text block label.  If this field has content the label
+            will appear above the heading.
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
+        - type: text
+          name: theme
+          label: Theme
+          description: This field controls the text color. Enter "light" to set the
+            text color to white and "dark" to have the text color set to dark blue
+            (almost black)
+          default: light
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            default: A
+            description: Admin use only, do not edit.
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Theme
+            default: pdc
+            description: Admin use only, do not edit.
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: This field controls the html element in use. For an external
+              link enter "a" for an internal link enter "nuxt-link"
+            default: a
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the URL that the user will be directed to when the button
+              is clicked.
           - type: text
             name: icon
-            label: icon
+            label: Icon
+            hidden: true
+            description: Edit the button icon. Only available for certain button types.
+              Admin use only, do not edit.
           - type: text
             name: target
-            label: target
+            label: Target
+            description: This field controls whether the link will open in the new
+              tab or not. To open the link in a new tab enter "_blank" to open in
+              the same tab leave this field empty
+            default: _blank
+          description: Edit or add buttons displayed below the text block.
+      description: Banner 1 is displayed below Intro Section 2. It was a blue-gradient
+        curved border and is displayed coming from the right side of screen.
     - type: field_group
       name: intro_3
-      label: intro_3
+      label: Intro Section 3
       fields:
       - type: text
         name: classNames
         label: classNames
+        default: basic-template-block-format
+        description: Changes to this field will edit the classes for the html element.
+          Admin use only, do not edit.
       - type: field_group
         name: left
-        label: left
+        label: Image
         fields:
         - type: text
           name: type
           label: type
+          default: image_block
         - type: field_group
           name: cols
           label: cols
@@ -544,28 +766,41 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-4_md-3_sm-5_mi-8
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_sm-4_mi-2
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image source
+          description: Upload or edit the image
         - type: text
           name: label
-          label: label
+          label: Image label
       - type: list
         name: grid
         label: grid
+        description: Changes to this field will affect the sections display and layout.
+          Admin use only, do not edit.
+        hidden: true
       - type: field_group
         name: right
-        label: right
+        label: Text Block
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          description: This field determines the size and layout of this text block.
+            Admin use only, do not edit.
+          default: medium
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -573,61 +808,87 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_sm-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-2_sm-2_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the paragraph text that appears below the heading
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
         - type: field_group_list
           name: ctas
           label: ctas
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            description: Admin use only, do not edit
+            default: A
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Theme
+            default: pdc
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: 'This field determines the html element used for the button.
+              Enter "a" for external links and "nuxt-link" for internal links. '
+            default: a
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the URL that these user is directed to when the button
+              is clicked
           - type: text
             name: icon
             label: icon
+            description: This option is not available for all button types. Admin
+              use only, do not edit.
+            hidden: true
+      description: This section appears below Banner 1 and consists of an image on
+        the left and text block on the right
+    description: The starts at the blue-gradient curved border and everything within
+      that border
   - type: field_group
     name: section_2
-    label: section_2
+    label: Award Opportunities Section
     fields:
     - type: field_group
       name: intro_4
-      label: intro_4
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Text Block
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: large
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -635,56 +896,80 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-6_md-5_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the text color of the section. Enter "light"
+            to set the text color to white and "dark" to set the text color to dark
+            blue (almost black).
+          default: light
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: text
           name: subheading
-          label: subheading
+          label: Subheading
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the description paragraph that appears below the heading
         - type: text
           name: label
-          label: label
+          label: Label
+          description: If this field has content it will be displayed as a label above
+            the heading text.
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            default: A
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Button Theme
+            default: pdc
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: This field determines the html element in use for the button.
+              Enter "a" for external links and "nuxt-link" for internal links.
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the URL that the user will be directed to when the button
+              is clicked.
           - type: text
             name: icon
-            label: icon
+            label: Icon
+            description: Not all button types support this field. Admin use only,
+              do not edit.
+            hidden: true
+          description: Edit or add buttons that will appear below the text block
       - type: field_group
         name: right
-        label: right
+        label: Image Block
         fields:
         - type: text
           name: type
           label: type
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -692,39 +977,54 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-5_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-1_mi-1
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image Source
+          description: Upload or change the image
         - type: text
           name: label
-          label: label
+          label: Image Label
       - type: list
         name: grid
-        label: grid
+        label: Grid
+        description: Edits to this field will affect the section's display and layout.
+          Admin use only, do not edit.
+        hidden: true
+      label: Content
+    description: This section appears below the blue-gradient border and has a cobalt
+      blue background with a darker blue border.
   - type: field_group
     name: section_3
-    label: section_3
+    label: Join The Movement Banner
     fields:
     - type: field_group
       name: callout-1
-      label: callout-1
+      label: Banner Content
       fields:
       - type: field_group
         name: left
-        label: left
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: medium
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -732,46 +1032,69 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-8_mi-9
           - type: text
             name: push_left
             label: push_left
+            default: off-3_mi-3
           - type: text
             name: push_right
             label: push_right
+            default: off-1_mi-0
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the paragraph text that appears below the heading
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            description: Admin use only, do not edit.
+            default: A
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Button Theme
+            description: Admin use only, do not edit.
+            default: pdc
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: This field determines the html element in use for the button.
+              Enter "a" for external links and "nuxt-link" for internal links.
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the URL that the user will be directed to when the button
+              is clicked
           - type: text
             name: icon
             label: icon
+            description: The field does not apply to all button types. Admin use only,
+              do not edit
+            hidden: true
           - type: text
             name: target
-            label: target
+            label: Target
+            description: This field determines whether the link will open in a new
+              tab or not. To have the link open in a new tab enter "_blank". To have
+              the link open in the same tab leave his field empty.
+            default: _blank
+          description: Edit or add buttons that will be displayed below the text block
         - type: field_group
           name: customizations
-          label: customizations
+          label: Background Elements
           fields:
           - type: field_group
             name: background_layers
@@ -780,6 +1103,7 @@ fields:
             - type: text
               name: name
               label: name
+              default: BackgroundLayers
             - type: field_group
               name: props
               label: props
@@ -787,9 +1111,11 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '1_2_3_4_5_6'
               - type: text
                 name: shadow-strength
                 label: shadow-strength
+                default: small
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -801,9 +1127,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: medium
                   label: medium
@@ -811,9 +1139,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -821,27 +1151,38 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 10
               - type: boolean
                 name: reverse
                 label: reverse
+                hidden: true
+          hidden: true
+          description: Edits to the fields within this section will affect the display
+            of the background elements. Admin use only, do not edit.
+        label: Content
+    description: This section consists of a banner with a blue-gradient border that
+      extends from the right side of the screen.
   - type: field_group
     name: section_4
-    label: section_4
+    label: Case Studies Section
     fields:
     - type: field_group
       name: case_studies
-      label: case_studies
+      label: Case Studies Content
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Card Block
         fields:
         - type: text
           name: type
           label: type
+          default: card_list_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -849,62 +1190,86 @@ fields:
           - type: text
             name: num
             label: num
+            default: col
           - type: text
             name: push_left
             label: push_left
           - type: text
             name: push_right
             label: push_right
+          hidden: true
         - type: field_group
           name: load_more_button
-          label: load_more_button
+          label: Load More Button
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            default: E
+            description: Admin use only, do not edit.
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Button Action
+            default: load
+            description: Admin use only, do not edit.
+            hidden: true
           - type: text
             name: theme
             label: theme
+            default: dark
+            hidden: true
           - type: text
             name: text
-            label: text
+            label: Button Text
         - type: field_group
           name: display
-          label: display
+          label: Number of Cards Displayed
           fields:
           - type: number
             name: initial
-            label: initial
+            label: Initial
+            description: Edit the initial number of case study cards displayed. Default
+              is 5.
+            default: 5
           - type: number
             name: next
-            label: next
+            label: Next
+            description: Edit the number of case study cards that will be loaded when
+              the load more button is clicked.
+            default: 5
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: boolean
           name: case_study
           label: case_study
+          hidden: true
+          default: true
         - type: list
           name: cards
           label: cards
+          config:
+            use_select: false
+          hidden: true
+    description: This section consists of the case study cards
   - type: field_group
     name: section_5
-    label: section_5
+    label: FAQ Section
     fields:
     - type: field_group
       name: faq_accordion
-      label: faq_accordion
+      label: FAQ Accordion
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Image
         fields:
         - type: text
           name: type
           label: type
+          default: image_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -912,16 +1277,22 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-2
+          hidden: true
         - type: file
           name: src
-          label: src
+          label: Image source
+          description: Upload or change the image
+        description: Edit the image displayed to the left of the section heading
       - type: field_group
         name: right
-        label: right
+        label: Accordion
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -929,81 +1300,104 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-0_mi-1
           - type: text
             name: push_right
             label: push_right
+            default: off-1_mi-0
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the text color. Enter "light" for white
+            text and "dark" for dark blue (almost black) text.
+          default: light
         - type: text
           name: layout
           label: layout
+          description: This field determines the size and layout of the text block.
+            Admin use only, do not edit.
+          default: medium
         - type: text
           name: heading
-          label: heading
+          label: Accordion Heading
         - type: field_group
           name: customizations
-          label: customizations
+          label: Accordion Content
           fields:
           - type: field_group
             name: accordion
-            label: accordion
+            label: Accordion
             fields:
             - type: text
               name: name
               label: name
+              default: AccordionBlock
+              hidden: true
             - type: field_group
               name: props
-              label: props
+              label: Properties
               fields:
               - type: field_group
                 name: block
-                label: block
+                label: Block Content
                 fields:
                 - type: text
                   name: theme
                   label: theme
+                  default: light
+                  hidden: true
                 - type: field_group_list
                   name: sections
-                  label: sections
+                  label: Accordion Sections
                   fields:
                   - type: text
                     name: heading
-                    label: heading
+                    label: Section Heading
                   - type: textarea
                     name: content
-                    label: content
+                    label: Section Content
           - type: field_group
             name: contact
-            label: contact
+            label: Contact
             fields:
             - type: text
               name: name
               label: name
+              default: TextBlock
+              hidden: true
             - type: field_group
               name: props
-              label: props
+              label: Properties
               fields:
               - type: field_group
                 name: block
-                label: block
+                label: Content
                 fields:
                 - type: text
                   name: theme
-                  label: theme
+                  label: Theme
+                  default: light
+                  description: This field controls the text color. Enter "light" for
+                    white text and "dark" for dark blue (almost black) text
                 - type: text
                   name: description
-                  label: description
+                  label: Text
+                  description: Edit the contact us text
+              description: The callout content is editable in this section
+            description: Edit the contact us callout that is displayed below the accordion
           - type: field_group
             name: background_layers
-            label: background_layers
+            label: Background Elements
             fields:
             - type: text
               name: name
               label: name
+              default: BackgroundLayers
             - type: field_group
               name: props
               label: props
@@ -1011,6 +1405,7 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '5_6'
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -1022,9 +1417,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: medium
                   label: medium
@@ -1032,9 +1429,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -1042,30 +1441,43 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 10
               - type: boolean
                 name: reverse
                 label: reverse
+                default: true
+            description: This section controls the background elements. Admin use
+              only, do not edit.
+            hidden: true
+    description: This section consist of the FAQ accordion
   - type: field_group
     name: section_6
-    label: section_6
+    label: Events and Hackathons Section
     fields:
     - type: field_group
       name: events_hackathons
-      label: events_hackathons
+      label: Events and Hackathons
       fields:
       - type: list
         name: grid
-        label: grid
+        label: Grid
+        config:
+          use_select: false
+        description: Edits to this field will affect the section's display and layout.
+          Admin use only, do not edit.
       - type: field_group
         name: left
-        label: left
+        label: Section Header
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -1073,47 +1485,73 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-4_md-7_mi-10
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_mi-0
+          hidden: true
         - type: text
           name: layout
           label: layout
+          default: medium
+          description: This field controls the size and layout of the text block.
+            Admin use only, do not edit.
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the text color. Enter "light" for white
+            text and "dark" for dark blue (almost black) text
+          default: light
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            description: Admin use only, do not edit.
+            default: A
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Button Theme
+            default: Light
+            description: Admin use only, do not edit
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            description: This field determines the html element in use for this button.
+              For external links enter "a" and for internal links enter "nuxt-link"
+            default: nuxt-link
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Enter the URL that the user is directed to when the button
+              is clicked
           - type: text
             name: icon
             label: icon
+            description: Not all button types support this field. Admin use only,
+              do not edit.
+            hidden: true
+          description: Add or edit the button(s) that will appear below the heading
       - type: field_group
         name: right
-        label: right
+        label: Event Cards
         fields:
         - type: text
           name: type
           label: type
+          default: card_list_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -1121,103 +1559,148 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-8_md-10_mi-12
           - type: text
             name: push_left
             label: push_left
+            default: off-0_md-1_mi-0
+          hidden: true
         - type: field_group
           name: load_more_button
-          label: load_more_button
+          label: Load More Button
           fields:
           - type: text
             name: type
             label: type
+            default: E
+            hidden: true
           - type: text
             name: action
             label: action
+            default: load
+            hidden: true
           - type: text
             name: theme
             label: theme
+            default: dark
+            hidden: true
           - type: text
             name: text
-            label: text
+            label: Button Text
         - type: field_group
           name: display
-          label: display
+          label: Number of Event Cards Displayed
           fields:
           - type: number
             name: initial
-            label: initial
+            label: Initial
+            description: Edit the number of event cards that are displayed on page
+              load. Default is 3.
+            default: 3
           - type: number
             name: next
-            label: next
+            label: Next
+            description: Edit the number of subsequent cards that will be displayed
+              when the Load More button is clicked. Default is 3.
+            default: 3
         - type: text
           name: forceGrid
           label: forceGrid
+          default: noGutter
+          description: Admin use only, do not edit.
+          hidden: true
         - type: text
           name: forceCardColumns
           label: forceCardColumns
+          default: col-12
+          hidden: true
+          description: Admin use only, do not edit.
         - type: field_group_list
           name: cards
-          label: cards
+          label: Cards
           fields:
           - type: text
             name: type
-            label: type
+            label: Card Type
+            default: F
+            description: Admin use only, do not edit
+            hidden: true
           - type: text
             name: event_type
-            label: event_type
+            label: Event Type
+            default: event
+            description: Enter the type event
           - type: text
             name: title
-            label: title
+            label: Event Title
           - type: datetime
             name: date_start
-            label: date_start
+            label: Event Start Data
+            description: Enter in format YYYY-MM-DD
           - type: datetime
             name: date_end
-            label: date_end
+            label: Event End Date
+            description: Enter in format YYYY-MM-DD
           - type: textarea
             name: description
-            label: description
+            label: Event Description
           - type: field_group
             name: cta
-            label: cta
+            label: Card Button
             fields:
             - type: text
               name: target
               label: target
+              hidden: true
             - type: text
               name: text
-              label: text
+              label: Button Text
+              default: More Info
             - type: text
               name: type
               label: type
+              default: B
+              hidden: true
+              description: Admin use only, do not edit
             - type: text
               name: action
               label: action
+              hidden: true
             - type: text
               name: theme
               label: theme
+              default: light
+              hidden: true
             - type: text
               name: url
-              label: url
+              label: URL
+              description: Edit the URL to which the user will be directed when the
+                button is clicked
             - type: text
               name: icon
-              label: icon
+              default: info
+              label: Button Icon
+              description: Edit the icon displayed in the button to the left of the
+                text
+        description: Edit the event/hackathon cards
+    description: This section consists of the events and hackathons heading and the
+      event card list
   - type: field_group
     name: section_7
-    label: section_7
+    label: Join the Movement Callout
     fields:
     - type: field_group
       name: callout-2
-      label: callout-2
       fields:
       - type: field_group
         name: left
-        label: left
+        label: Callout Text
         fields:
         - type: text
           name: type
           label: type
+          default: text_block
+          hidden: true
         - type: field_group
           name: cols
           label: cols
@@ -1225,49 +1708,78 @@ fields:
           - type: text
             name: num
             label: num
+            default: col-8_sm-9_mi-11
           - type: text
             name: push_left
             label: push_left
+            default: off-3_sm-3_mi-1
+          hidden: true
         - type: text
           name: theme
-          label: theme
+          label: Theme
+          description: This field controls the text color. Enter "light" for white
+            text and "dark" for dark blue (almost black) text
+          default: light
         - type: text
           name: layout
-          label: layout
+          label: Layout
+          description: This field determines the size and layout of the text block.
+            Admin use only, do not edit.
+          default: medium
+          hidden: true
         - type: text
           name: heading
-          label: heading
+          label: Heading Text
         - type: textarea
           name: description
-          label: description
+          label: Description
+          description: Edit the paragraph text that appears below the heading
         - type: field_group_list
           name: ctas
-          label: ctas
+          label: CTAs
           fields:
           - type: text
             name: type
-            label: type
+            label: Button Type
+            default: A
+            hidden: true
           - type: text
             name: theme
-            label: theme
+            label: Button Theme
+            default: pdc
+            description: Admin use only, do not edit
+            hidden: true
           - type: text
             name: action
-            label: action
+            label: Action
+            default: a
+            description: This field determines the html element used for this button.
+              Enter "a" for external links and "nuxt-link" for internal links.
           - type: text
             name: text
-            label: text
+            label: Button Text
           - type: text
             name: url
-            label: url
+            label: URL
+            description: Edit the URL that the user is directed to when the button
+              is clicked
           - type: text
             name: icon
             label: icon
+            hidden: true
+            description: This field is not applicable to every button type. Admin
+              use only, do not edit.
           - type: text
             name: target
-            label: target
+            label: Target
+            description: This field determines whether a link will open in a new tab
+              or not. Enter "_blank" to open the link in a new tab or leave the field
+              empty to open the link in the same tab
+          description: Edit or add button(s) that will be be displayed below the text
+            block
         - type: field_group
           name: customizations
-          label: customizations
+          label: Background Elements
           fields:
           - type: field_group
             name: background_layers_v2
@@ -1276,6 +1788,7 @@ fields:
             - type: text
               name: name
               label: name
+              default: EchoLayers
             - type: field_group
               name: props
               label: props
@@ -1283,6 +1796,7 @@ fields:
               - type: text
                 name: layers-array
                 label: layers-array
+                default: '4_5_6_6'
               - type: field_group
                 name: breakpoints
                 label: breakpoints
@@ -1294,9 +1808,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 1.375
                   - type: number
                     name: radius
                     label: radius
+                    default: 12
                 - type: field_group
                   name: medium
                   label: medium
@@ -1304,9 +1820,11 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.75
                   - type: number
                     name: radius
                     label: radius
+                    default: 12.75
                 - type: field_group
                   name: mini
                   label: mini
@@ -1314,9 +1832,16 @@ fields:
                   - type: number
                     name: stroke
                     label: stroke
+                    default: 0.25
                   - type: number
                     name: radius
                     label: radius
+                    default: 7
+          description: This section controls the background elements. Admin use only,
+            do not edit.
+          hidden: true
+      label: Callout Content
+    description: This section appears just above the page footer
 - type: field_group
   name: seo
   label: seo
