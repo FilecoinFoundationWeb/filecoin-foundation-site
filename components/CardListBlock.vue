@@ -1,5 +1,7 @@
 <template>
-  <div class="block card-list-block">
+  <div
+    v-if="postings"
+    class="block card-list-block">
 
     <div v-if="heading" class="heading" v-html="heading"></div>
 
@@ -36,6 +38,7 @@
 
 <script>
 // ====================================================================== Import
+import { mapGetters } from 'vuex'
 import Card from '@/components/Card'
 import CaseStudyCard from '@/components/CaseStudyCard'
 import Button from '@/components/Button'
@@ -95,6 +98,9 @@ export default {
   },
 
   computed: {
+    ...mapGetters({
+      postings: 'global/jobPostings'
+    }),
     heading () {
       return this.block.heading
     },

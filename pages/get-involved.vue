@@ -65,6 +65,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'get_involved', data: GetInvolvedPageData })
+    await store.dispatch('global/getLeverPostings')
   },
 
   head () {
@@ -73,10 +74,35 @@ export default {
 
   computed: {
     ...mapGetters({
-      siteContent: 'global/siteContent'
+      siteContent: 'global/siteContent',
+      postings: 'global/jobPostings'
     }),
     sections () {
       const content = CloneDeep(this.siteContent.get_involved.page_content)
+      const jobs = this.postings
+      const cardCustomizations = content.section_1.careers_list.left.card_customizations
+      content.section_1.careers_list.left.cards = []
+      content.section_1.careers_list.left.display = { initial: cardCustomizations.number_job_postings, next: cardCustomizations.number_job_postings }
+      const cards = content.section_1.careers_list.left.cards
+      const cardsLength = jobs.length > cardCustomizations.number_job_postings ? cardCustomizations.number_job_postings : jobs.length
+      for (let i = 0; i < cardsLength; i++) {
+        const cardObj = {
+          type: cardCustomizations.type,
+          action: cardCustomizations.action,
+          target: cardCustomizations.target,
+          url: jobs[i].hostedUrl,
+          label: jobs[i].categories.location,
+          title: jobs[i].text,
+          cta: {
+            type: cardCustomizations.cta.type,
+            target: cardCustomizations.cta.target,
+            icon: cardCustomizations.cta.icon,
+            text: cardCustomizations.cta.text,
+            url: jobs[i].hostedUrl
+          }
+        }
+        cards.push(cardObj)
+      }
       return content
     }
   }
