@@ -123,8 +123,12 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 .text-block {
+  ::-moz-selection { background: $deepCove; color: $white; }
+  ::selection { background: $deepCove; color: $white; }
   &.theme__light {
     color: $white;
+    ::-moz-selection { background: $white; color: $blackPearl; }
+    ::selection { background: $white; color: $blackPearl; }
   }
 }
 
