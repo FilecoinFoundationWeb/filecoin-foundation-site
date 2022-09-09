@@ -788,6 +788,14 @@ $backgroundLayers__Left__Mini: 0.75rem;
     }
   }
   .text-block {
+    .heading {
+      @include fontWeight_SemiBold;
+      margin-bottom: 1.25rem;
+      @include mini {
+        @include fontWeight_Medium;
+        margin-bottom: 0.625rem;
+      }
+    }
     .description {
       a {
         color: #2E38E6;
