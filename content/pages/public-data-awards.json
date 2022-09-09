@@ -219,11 +219,11 @@
                     "radius": 12
                   },
                   "medium": {
-                    "stroke": 0.75,
+                    "stroke": 1.375,
                     "radius": 12.75
                   },
                   "mini": {
-                    "stroke": 0.25,
+                    "stroke": 1.375,
                     "radius": 7
                   }
                 }
