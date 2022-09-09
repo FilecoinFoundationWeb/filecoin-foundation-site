@@ -5,7 +5,8 @@
     "label": "Case Study",
     "img": "/images/pdc/nyc-open-data-graph.png",
     "img_background_position": "center 25%",
-    "description": "In collaboration with the New York City’s Chief Technology Officer, <a href='https://filecoinfoundation.medium.com/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-99f6585c8630'>Filecoin Foundation and Protocol Labs launched a pilot program</a> to store open datasets on Filecoin. This project enables New York City, at no cost, to explore decentralized storage and how it can be an asset to the City.",
+    "preview_text": "",
+    "description": "In collaboration with the New York City’s Chief Technology Officer, <a target='_blank' href='https://filecoinfoundation.medium.com/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-99f6585c8630'>Filecoin Foundation and Protocol Labs launched a pilot program</a> to store open datasets on Filecoin. This project enables New York City, at no cost, to explore decentralized storage and how it can be an asset to the City.",
     "color": 2,
     "toggle": {
       "target": "",
@@ -16,12 +17,12 @@
       "icon": ""
     },
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more",
+      "url": "https://example.com"
     }
   },
   {
@@ -29,7 +30,8 @@
     "title": "GainForest",
     "label": "Case Study",
     "img": "/images/pdc/filecoin-green-case-study-logo.svg",
-    "description": "The built-in immutability that comes with storing data on Filecoin is extremely beneficial for groups like GainForest, a non-profit organization focused on reversing deforestation and climate change through blockchain tech. GainForest founder David Dao states, “Nature-based solutions need to be permanent and transparent for stakeholders. That is why it is so crucial that the data…must be permanent and transparent as well. Decentralized data storage guarantees just that. At any point in time, anyone everywhere in the world can look up, reproduce, and audit our analysis. Low-quality projects can’t hide anymore in static PDFs.” <a href='https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85'>Read more about web3 and the sustainable data movement here.</a>",
+    "preview_text": "Reversing deforestation and climate change through blockchain tech",
+    "description": "The built-in immutability that comes with storing data on Filecoin is extremely beneficial for groups like GainForest, a non-profit organization focused on reversing deforestation and climate change through blockchain tech. GainForest founder David Dao states, “Nature-based solutions need to be permanent and transparent for stakeholders. That is why it is so crucial that the data…must be permanent and transparent as well. Decentralized data storage guarantees just that. At any point in time, anyone everywhere in the world can look up, reproduce, and audit our analysis. Low-quality projects can’t hide anymore in static PDFs.”",
     "color": 3,
     "toggle": {
       "target": "",
@@ -41,12 +43,12 @@
     },
     "img_background_position": "",
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more about web3 and the sustainable data movement here.",
+      "url": "https://medium.com/@filecoingreen/web3-and-the-sustainable-data-movement-8660173b5e85"
     }
   },
   {
@@ -54,6 +56,7 @@
     "title": "GenRAIT & Genomic Data",
     "label": "Case Study",
     "img": "/images/pdc/genrait-case-study-image.svg",
+    "preview_text": "Storing genomic data on Filecoin",
     "description": "GenRAIT will host over 100 terabytes of genome research data on the Filecoin network to enable scientists and researchers to make breakthroughs and experiment at scale.",
     "color": 4,
     "toggle": {
@@ -66,12 +69,12 @@
     },
     "img_background_position": "",
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more here",
+      "url": "https://filecoinfoundation.medium.com/case-study-genrait-leverages-filecoin-network-for-greater-visibility-access-and-storage-of-1d56897a2d73"
     }
   },
   {
@@ -79,6 +82,7 @@
     "title": "TechCongress",
     "label": "Case Study",
     "img": "/images/pdc/tech-congress-case-study.png",
+    "preview_text": "Providing fellowships so technologists can advise legislators",
     "description": "Filecoin Foundation for the Decentralized Web (FFDW) is partnering with TechCongress, an organization that provides fellowships to bridge the informational gap between technologists and policymakers in Congress. TechCongress does this by placing computer scientists, engineers, and other technologists on Capitol Hill to serve as technology advisors to members of Congress. For instance, Sunmin Kim, fellow and alumni with Sen. Brian Schatz, led the effort to pass the OPEN Government Data Act into law in 2018 and 2019. The law requires all non-sensitive federal government data to be open and machine readable, and requires every federal agency to create a Chief Data Officer.",
     "color": 3,
     "toggle": {
@@ -91,12 +95,12 @@
     },
     "img_background_position": "",
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more here",
+      "url": "https://medium.com/@FFDWeb/filecoin-foundation-for-the-decentralized-web-and-techcongress-will-work-together-to-place-more-3a414c84961"
     }
   },
   {
@@ -104,6 +108,7 @@
     "title": "Decentralized Future Council",
     "label": "Case Study",
     "img": "/images/pdc/decentralized-future-council.png",
+    "preview_text": "Educating policymakers on emerging technologies",
     "description": "Filecoin Foundation for the Decentralized Web (FFDW) is partnering with the Decentralized Future Council to support the Council’s work to raise awareness for the larger ecosystem of new technologies, from blockchain to cryptocurrency. The Council works to educate policymakers around new and upcoming challenges that correspond with these emerging technologies including privacy, security, democracy, online trust and safety, and more.",
     "color": 2,
     "toggle": {
@@ -116,12 +121,12 @@
     },
     "img_background_position": "",
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more here",
+      "url": "https://medium.com/@FFDWeb/announcing-the-decentralized-future-council-aaadeffde7d6"
     }
   },
   {
@@ -129,7 +134,8 @@
     "title": "University of Maryland’s Department of Geographical Sciences",
     "label": "Case Study",
     "img": "/images/pdc/university-of-maryland-case-study.svg",
-    "description": "Filecoin Foundation has partnered with researchers from the University of Maryland in the Department of Geographical Sciences to ensure that large geospatial datasets are accessible by research organizations and the general public.  This project has the potential to benefit in particular those organizations responsible for planning, research, and decision-making where location matters.  Some expected uses of this data include predicting weather patterns and responding to extreme weather events, understanding the many implications of climate change, promoting sustainable, just, and optimized cities, and ensuring national security.",
+    "preview_text": "Pioneering storage of large geospatial datasets from satellites on the decentralized web",
+    "description": "FFDW has partnered with researchers from the University of Maryland in the Department of Geographical Sciences to ensure that large geospatial datasets are accessible by research organizations and the general public.  This project has the potential to benefit in particular those organizations responsible for planning, research, and decision-making where location matters.  Some expected uses of this data include predicting weather patterns and responding to extreme weather events, understanding the many implications of climate change, promoting sustainable, just, and optimized cities, and ensuring national security.",
     "color": 1,
     "toggle": {
       "target": "",
@@ -155,6 +161,7 @@
     "label": "Case Study",
     "img": "/images/pdc/institute-for-educational-dinners.png",
     "img_style": "full-height",
+    "preview_text": "Introducing policymakers to cryptocurrency topics through salon-style gatherings",
     "description": "Filecoin Foundation has been supporting dialogues among international embassies with the Institute for Education to educate key policymakers and international partners on decentralized file storage and introduce them to pressing cryptocurrency topics through interactive small group convenings.",
     "color": 4,
     "toggle": {
@@ -182,7 +189,8 @@
     "img": "/images/pdc/lockheed-martin.png",
     "img_style": "full-height",
     "img_background_position": "100% center",
-    "description": "Filecoin Foundation (FF) and Lockheed Martin are working together to develop a program for deploying the Interplanetary File System (IPFS) in space. The space economy is rapidly emerging, and space-based services are increasingly used for everything from communication, to GPS, to environmental monitoring. As more tools are put into orbit, and as private space development and exploration continues, building out communications infrastructure in space is key to ensuring the space economy can thrive. This collaboration is the next step in establishing critical infrastructure that will transform how we share and access data in space. <a href='https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264'>Read more here.</a>",
+    "preview_text": "Using decentralized storage for space-based services",
+    "description": "Filecoin Foundation (FF) and Lockheed Martin are working together to develop a program for deploying the Interplanetary File System (IPFS) in space. The space economy is rapidly emerging, and space-based services are increasingly used for everything from communication, to GPS, to environmental monitoring. As more tools are put into orbit, and as private space development and exploration continues, building out communications infrastructure in space is key to ensuring the space economy can thrive. This collaboration is the next step in establishing critical infrastructure that will transform how we share and access data in space.",
     "color": 3,
     "toggle": {
       "target": "",
@@ -193,12 +201,12 @@
       "icon": ""
     },
     "cta": {
-      "target": "",
-      "type": "",
-      "action": "",
-      "text": "",
-      "url": "",
-      "theme": ""
+      "target": "_blank",
+      "type": "D",
+      "action": "link",
+      "theme": "light",
+      "text": "Read more here",
+      "url": "https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264"
     }
   }
 ]

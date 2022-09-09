@@ -4,7 +4,7 @@
     <Zero_Core__Accordion
       v-slot="{ active }"
       :multiple="true"
-      :toggle-on-load="true">
+      :toggle-on-load="false">
       <Zero_Core__Accordion_Section
         v-for="(section, index) in sections"
         :key="`accordion-section-${index}`"
@@ -53,9 +53,13 @@ export default {
   position: relative;
   &.theme__light {
     color: $white;
+    ::-moz-selection { background: $white; color: $blackPearl; }
+    ::selection { background: $white; color: $blackPearl; }
   }
   &.theme__dark {
     color: $blackPearl;
+    ::-moz-selection { background: $deepCove; color: $white; }
+    ::selection { background: $deepCove; color: $white; }
     ::v-deep .accordion-header {
       &:before {
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17.404' height='10.822' viewBox='0 0 17.404 10.822'%3e%3cg id='Group_3249' data-name='Group 3249' transform='translate(-21238.697 16442.6)'%3e%3cpath id='Path_6243' data-name='Path 6243' d='M4501.422-2575.9l6.581-6.581,6.581,6.581' transform='translate(16739.396 -13858)' fill='none' stroke='%2308072E' stroke-linecap='round' stroke-width='3'/%3e%3c/g%3e%3c/svg%3e");
@@ -112,7 +116,11 @@ export default {
     margin-left: 3.125rem;
     a {
       @include fontWeight_Bold;
+      &:hover {
+        border-bottom: 1px solid;
+      }
     }
   }
 }
+
 </style>

@@ -38,8 +38,8 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  ::-moz-selection { background: $white; color: black; }
-  ::selection { background: $white; color: black; }
+  ::-moz-selection { background: $white; color: $blackPearl; }
+  ::selection { background: $white; color: $blackPearl; }
   &.no-scroll {
     overflow-y: hidden;
   }

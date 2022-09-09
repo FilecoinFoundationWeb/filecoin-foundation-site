@@ -49,6 +49,11 @@
         </div>
 
         <Button
+          v-if="cta && panelOpen"
+          :button="cta"
+          class="cta" />
+
+        <Button
           :button="openToggle"
           :class="['toggle', { visible: !panelOpen }]"
           @buttonClicked="openPanel" />
@@ -129,7 +134,11 @@ export default {
       return this.card.title
     },
     description () {
+      if (this.card.preview_text) { return this.panelOpen ? this.card.description : this.card.preview_text }
       return this.card.description
+    },
+    cta () {
+      return this.card.cta
     },
     label () {
       return this.card.label
@@ -283,6 +292,7 @@ $caseStudyCardBorderWidth: 0.125rem;
       height: unset;
       display: block;
       margin-top: 0rem;
+      margin-bottom: 1rem;
       overflow: unset;
     }
   }
@@ -324,6 +334,16 @@ $caseStudyCardBorderWidth: 0.125rem;
   }
 }
 
+::v-deep .title,
+::v-deep .description {
+  a {
+    @include fontWeight_SemiBold;
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
 ::v-deep .toggle {
   cursor: default;
   opacity: 0;
@@ -332,6 +352,10 @@ $caseStudyCardBorderWidth: 0.125rem;
     cursor: pointer;
     opacity: 1;
   }
+}
+
+::v-deep .toggle,
+::v-deep .cta {
   .text {
     font-size: 0.875rem;
     @include fontWeight_Bold;
