@@ -1241,6 +1241,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
 }
 
 ::v-deep #section_7 {
+  z-index: 5;
   @include small {
     .column-content.left {
       padding-left: 3.5rem;

@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="postings"
+    v-if="postings || caseStudy || eventList"
     class="block card-list-block">
 
     <div v-if="heading" class="heading" v-html="heading"></div>
@@ -118,6 +118,9 @@ export default {
     },
     showLoadMoreButton () {
       return this.cards.length > this.current
+    },
+    eventList () {
+      return this.block.event_list
     },
     caseStudy () {
       return this.block.case_study
