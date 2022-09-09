@@ -253,7 +253,7 @@
             "num": "col-4_md-3_sm-5_mi-8",
             "push_left": "off-0_md-1_sm-4_mi-2"
           },
-          "src": "/images/hands-raised.png",
+          "src": "/images/pdc/raised-hands.svg",
           "label": ""
         },
         "grid": [
@@ -437,7 +437,7 @@
                     },
                     {
                       "heading": "What about the environmental impacts of blockchain?",
-                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> <a target='_blank' href='https://green.filecoin.io/'>Learn more</a> about the Filecoin community’s commitment to energy efficiency."
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a target='_blank' href='https://filecoin.energy/'>filecoin.energy!</a> <a target='_blank' href='https://green.filecoin.io/'>Learn more</a> about the Filecoin community’s commitment to energy efficiency."
                     }
                   ]
                 }
