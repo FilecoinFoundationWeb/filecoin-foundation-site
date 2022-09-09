@@ -83,7 +83,7 @@ export default {
       updateTickerValue(this)
       this.interval = setInterval(() => {
         updateTickerValue(this)
-      }, 1200)
+      }, 1750)
     })
   },
 
@@ -139,7 +139,7 @@ export default {
   color: #0090FF;
   opacity: 0;
   white-space: nowrap;
-  transition: 250ms ease;
+  transition: all 625ms ease-in-out;
   &.visible {
     opacity: 1;
   }
