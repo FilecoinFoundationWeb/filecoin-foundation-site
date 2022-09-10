@@ -5,7 +5,7 @@
     "label": "Case Study",
     "img": "/images/pdc/nyc-open-data-graph.png",
     "img_background_position": "center 25%",
-    "preview_text": "",
+    "preview_text": "Piloting NYC Open Data on Filecoin",
     "description": "In collaboration with the New York City’s Chief Technology Officer, <a target='_blank' href='https://filecoinfoundation.medium.com/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-99f6585c8630'>Filecoin Foundation and Protocol Labs launched a pilot program</a> to store open datasets on Filecoin. This project enables New York City, at no cost, to explore decentralized storage and how it can be an asset to the City.",
     "color": 2,
     "toggle": {
@@ -22,7 +22,7 @@
       "action": "link",
       "theme": "light",
       "text": "Read more",
-      "url": "https://example.com"
+      "url": "https://filecoinfoundation.medium.com/filecoin-foundation-and-protocol-labs-embark-on-experimental-project-to-put-new-york-city-open-data-99f6585c8630"
     }
   },
   {
@@ -73,7 +73,7 @@
       "type": "D",
       "action": "link",
       "theme": "light",
-      "text": "Read more here",
+      "text": "Read more",
       "url": "https://filecoinfoundation.medium.com/case-study-genrait-leverages-filecoin-network-for-greater-visibility-access-and-storage-of-1d56897a2d73"
     }
   },
@@ -127,7 +127,7 @@
       "type": "D",
       "action": "link",
       "theme": "light",
-      "text": "Read more here",
+      "text": "Read more",
       "url": "https://medium.com/@FFDWeb/announcing-the-decentralized-future-council-aaadeffde7d6"
     }
   },
@@ -207,7 +207,7 @@
       "type": "D",
       "action": "link",
       "theme": "light",
-      "text": "Read more here",
+      "text": "Read more",
       "url": "https://filecoinfoundation.medium.com/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space-db9a15e66264"
     }
   }
