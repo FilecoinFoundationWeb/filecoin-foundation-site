@@ -23,6 +23,6 @@ export default {
 }
 
 .icon__ticket__outer {
-  fill: white;
+  fill: $white;
 }
 </style>

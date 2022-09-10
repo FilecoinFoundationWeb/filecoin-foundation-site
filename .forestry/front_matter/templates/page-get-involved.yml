@@ -114,35 +114,102 @@ fields:
             label: Text
             default: See more
           hidden: true
-        - type: field_group
-          name: display
-          label: Display
+        - name: card_customizations
+          type: field_group
+          config: {}
           fields:
-          - type: number
-            name: initial
-            label: Initial
-            default: 6
-          - type: number
-            name: next
-            label: Next
-            default: 6
-          hidden: true
-        - name: cards
-          type: field_group_list
-          fields:
-          - name: cards
-            type: include
+          - name: number_job_postings
+            type: number
+            label: Number of Job Postings
+            description: Edit the number of job post cards that are shown. Default
+              is 2.
+            default: 2
+            required: true
+            config:
+              min: 
+              max: 
+              step: 
+          - name: type
+            type: text
+            config:
+              required: false
+            label: Card Type
+            default: D
+            description: 'Edit the card type for this section we recommend A:<br>(A)
+              Stacked vertically beginning with an image, a title and a descrption
+              (eg. on Grants page, list of types of grants)<br><br>(B) Image with
+              title below and on hover, image slides up to reveal description (eg.
+              Board of Directors section on About page)<br>(C) Card has image on left
+              and description on right (eg. on About page , Advisors section)<br>(D)
+              Stacked vertically beginning with image and date , title and a button
+              (eg. Events and Hackathons section on Governance page) <br>*Note: editing
+              the card type can change the section layout [ADMIN USE ONLY]'
+          - name: action
+            type: text
+            config:
+              required: false
+            label: Action
+            default: a
+            description: The HTML tag of the element. "a" is used for external links
+              and should always be used for these cards.
+          - name: target
+            type: text
+            config:
+              required: false
+            label: Target
+            default: _blank
+            description: Edit the target of the CTA/button. "_blank" will cause the
+              link to open in a new tab. Leaving this field blank will cause the link
+              to open in the same tab. Default is _blank
+          - name: cta
+            type: field_group
             config: {}
-            template: card
-            label: Template → [Comp] Card
-          config:
-            min: 
-            max: 
-            labelField: 
-          label: Cards
-          description: 'Click ''Add Card to add a new card to the list.
-
-            '
+            fields:
+            - name: type
+              type: text
+              config:
+                required: false
+              label: Type
+              default: B
+              description: 'Edit the type for the button at the bottom of the job
+                posting card, we recommend B<br>(A) Traditional button with blue gradient
+                edges, choose light in theme to get white button with blue gradient
+                border (eg. "Learn More" button on Home page) or dark in theme to
+                get dark blue button with dark blue gradient border (eg. "Learn More"
+                button on Grants page")<br>(B) Transparent button with white border
+                and white text (eg. "Watch Video" button on Home page)<br>(C) Not
+                in use.<br>(D) No button styling, only blue text (eg. "Watch: Meet
+                the Filecoin Foundation" on About page )<br>(E) Not in use<br>(F)
+                No button styling, only text in either light-themed or dark-themed
+                - light is white (eg. "Terms of Use" and "Data and Privacy" in footer)
+                and dark (eg.. "Future Rules Podcast" in footer) is blue<br>(G) Reserved
+                for "Events and Hackathons" navigation <br>(H) Not in use'
+            - name: target
+              type: text
+              config:
+                required: false
+              label: Target
+              default: _blank
+              description: Edit the target of the CTA/button. "_blank" will cause
+                the link to open in a new tab. Leaving this field blank will cause
+                the link to open in the same tab. Default is _blank
+            - name: icon
+              type: text
+              config:
+                required: false
+              label: Icon
+              default: plus
+              description: 'Edit the icon that appears to the left of the button text.
+                Options are: play, info, icon, code, ticket, plus. Default is plus'
+            - name: text
+              type: text
+              config:
+                required: false
+              label: Text
+              default: Apply Now
+              description: Edit the button's text
+            label: CTA
+          label: Job Card Customizations
     - type: field_group
       name: get_involved
       label: Get Involved

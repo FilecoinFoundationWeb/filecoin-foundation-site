@@ -123,8 +123,28 @@ export default {
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// General
 .text-block {
+  ::-moz-selection { background: $deepCove; color: $white; }
+  ::selection { background: $deepCove; color: $white; }
   &.theme__light {
-    color: white;
+    color: $white;
+    ::-moz-selection { background: $white; color: $blackPearl; }
+    ::selection { background: $white; color: $blackPearl; }
+    ::v-deep .theme__pdc {
+      &:hover {
+        &:before {
+          background-color: $polar;
+        }
+      }
+    }
+  }
+  &.theme__dark {
+    ::v-deep .theme__pdc {
+      &:hover {
+        &:before {
+          background-color: $kleinBlue;
+        }
+      }
+    }
   }
 }
 
@@ -159,9 +179,19 @@ export default {
   margin-bottom: 1rem;
   a {
     @include fontWeight_Bold;
-    color: white;
+    color: $white;
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+::v-deep .heading,
+::v-deep .subheading,
+::v-deep .description {
+  a {
+    &:hover {
+      border-bottom: 1px solid;
     }
   }
 }

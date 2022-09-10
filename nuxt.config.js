@@ -21,7 +21,9 @@ export default {
       { from: '/filplus', to: '/governance/#panel-3-title' },
       { from: '/fips', to: '/governance/#panel-1-title' },
       { from: '/philosophy', to: '/about/#intro_1' },
-      { from: '/team', to: '/about/#panel_1' }
+      { from: '/team', to: '/about/#panel_1' },
+      { from: '/publicdata', to: '/public-data' },
+      { from: '/publicdata/awards', to: '/public-data/awards' }
     ]
   },
   // --------------------------------------------------------- [Runtime] Private

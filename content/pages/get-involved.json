@@ -43,11 +43,11 @@
           "ctas": [
             {
               "type": "B",
-              "action": "",
+              "action": "link",
               "target": "_blank",
               "icon": "plus",
               "text": "View All",
-              "url": "https://jobs.lever.co/filecoin",
+              "url": "https://jobs.lever.co/filecoin/",
               "theme": ""
             }
           ],
@@ -69,76 +69,18 @@
             "theme": "dark",
             "text": "See more"
           },
-          "display": {
-            "initial": 6,
-            "next": 6
-          },
-          "cards": [
-            {
-              "label": "San Francisco, Remote",
-              "title": "Community Events Manager, Orbit Program",
-              "cta": {
-                "text": "Apply Now",
-                "type": "B",
-                "action": "link",
-                "theme": "light",
-                "url": "https://jobs.lever.co/filecoin/3fadf14a-0ba7-4d1b-b3fe-8ae9b948cfa4",
-                "icon": "plus"
-              },
-              "type": "D",
-              "date": "",
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "a",
-              "url": "https://jobs.lever.co/filecoin/3fadf14a-0ba7-4d1b-b3fe-8ae9b948cfa4",
-              "target": ""
-            },
-            {
-              "label": "San Francisco, Remote",
-              "title": "Solutions Architect for Social Impact",
-              "type": "D",
-              "date": "",
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "a",
-              "url": "https://jobs.lever.co/filecoin/70eab244-7c03-4e97-8a10-3380a89cb3f6",
-              "target": "",
-              "cta": {
-                "text": "Apply Now",
-                "type": "B",
-                "action": "link",
-                "theme": "",
-                "url": "https://jobs.lever.co/filecoin/70eab244-7c03-4e97-8a10-3380a89cb3f6",
-                "icon": "plus"
-              }
-            },
-            {
-              "type": "D",
-              "date": "",
-              "label": "San Francisco, Remote",
-              "title": "Technical Program Manager for Security",
-              "cta": {
-                "type": "B",
-                "action": "",
-                "target": "_blank",
-                "icon": "plus",
-                "text": "Apply Now",
-                "url": "https://jobs.lever.co/filecoin/0a9f641a-bdee-4e6b-a4a3-ab9d6c09c86e",
-                "theme": ""
-              },
-              "description": "",
-              "img": "",
-              "img_type": "",
-              "img_size": "",
-              "action": "a",
-              "url": "https://jobs.lever.co/filecoin/0a9f641a-bdee-4e6b-a4a3-ab9d6c09c86e",
-              "target": ""
+          "card_customizations": {
+            "number_job_postings": 3,
+            "type": "D",
+            "action": "a",
+            "target": "_blank",
+            "cta": {
+              "type": "B",
+              "target": "_blank",
+              "icon": "plus",
+              "text": "Apply Now"
             }
-          ]
+          }
         },
         "grid": [
           "noGutter"

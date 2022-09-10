@@ -1,17 +1,14 @@
-{
-  "tags": [
+---
+tags: []
+title: "New agreement between Filecoin Foundation and Electric Coin Co. simplifies Halo licensing and creates grant pool for Filecoin-Zcash projects"
+date: "2022-04-13T16:00:00Z"
+author: Filecoin Foundation
+description: 
+featured: false
+recommendedPosts: []
+image: "/images/0211-zcash-twitter.png"
 
-  ],
-  "title": "New agreement between Filecoin Foundation and Electric Coin Co. simplifies Halo licensing and creates grant pool for Filecoin-Zcash projects",
-  "date": "2022-04-13T16:00:00Z",
-  "author": "",
-  "description": "",
-  "featured": false,
-  "recommendedPosts": [
-
-  ],
-  "image": "/images/0211-zcash-twitter.png"
-}
+---
 Filecoin Foundation and Electric Coin Co. (ECC) are working together to empower the Filecoin, Zcash, and greater Web3 ecosystems through a new agreement that creates a joint grants pool with $5 million available for Filecoin and Zcash projects.
 
 Under the new agreement, ECC’s Halo 2 codebase is also now shared via the MIT license — simpler and more permissive than its previous open-source license — in addition to the launch of the RFP-style grants program.

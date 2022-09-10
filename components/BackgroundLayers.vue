@@ -76,7 +76,8 @@ const viewportEntryCheck = (instance) => {
     const rect = instance.$refs.container.getBoundingClientRect()
     const elementIsInViewport = (rect.top + rect.height / 2 >= 150 && rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight) - 150)
 
-    const reset = document.getElementById(instance.resetElement)?.getBoundingClientRect()
+    const element = document.getElementById(instance.resetElement)
+    const reset = element ? element.getBoundingClientRect() : false
     const resetIsInViewport = reset ? reset.top >= 0 && reset.top <= (window.innerHeight || document.documentElement.clientHeight) : false
 
     if (!instance.startAnimation && elementIsInViewport) {
@@ -229,6 +230,9 @@ export default {
 
     &.shadow-strength-small {
       filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+      @include mini {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.15));
+      }
     }
     &.shadow-strength-large {
       filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
