@@ -114,6 +114,7 @@ export default {
 }
 
 .breadcrumb {
+  white-space: nowrap;
   &.link {
     @include fontSize_Small;
     @include fontWeight_SemiBold;

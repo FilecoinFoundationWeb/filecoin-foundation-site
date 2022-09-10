@@ -202,9 +202,6 @@ $layerOffset: 0.25rem;
   &.theme__pdc {
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
     transition: 200ms ease;
-    &:hover {
-      box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
-    }
     &:before {
       background-color: $denim;
       box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
@@ -465,6 +462,7 @@ $layerOffset: 0.25rem;
   z-index: 100;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.15);
   transition: 250ms ease;
+  transform: translateY(-3px);
   &:hover {
     box-shadow: 0 0 37px 0 rgba(#70B4F0, 0.9);
     .text {

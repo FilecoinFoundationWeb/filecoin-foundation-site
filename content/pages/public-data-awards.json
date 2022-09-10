@@ -53,8 +53,8 @@
             "push_right": ""
           },
           "theme": "light",
-          "heading": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups",
-          "description": "It will disperse awards sized between $5,000 and $20,000 USD to support projects that either leverage datasets or advance learning around datasets stored on decentralized technology.  Each iteration of the award has its own $50,000 pool. The program encourages local civic technology groups to store and/or access their community data sets on the decentralized web. The Public Data awards are specific to locations centered around governments with which Filecoin Foundation is partnering.<br><br>The award is intended to fund anything from a project analyzing air quality data recently uploaded to Filecoin to an educational seminar about how to access and use your city’s data stored on Filecoin or IPFS. To maximize public learning, all awards should result in at least one public output or outcome (e.g., a blog, event, data tool).<br><br>Note: This Awards program is contingent on the support and involvement of local government officials.",
+          "heading": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups.",
+          "description": "It will disperse awards up to $10,000 USD to support projects that either leverage datasets or advance learning around datasets stored on decentralized technology.  Each iteration of the award has its own $50,000 pool. The Public Data Awards are specific to locations centered around governments with which Filecoin Foundation is partnering.<br><br>The award is intended to fund anything from a project analyzing air quality data recently uploaded to Filecoin to an educational seminar about how to access and use your city’s data stored on Filecoin or IPFS. To maximize public learning, all awards should result in at least one public output or outcome (e.g., a blog, event, data tool).<br><br>Note: <i>This Awards program is contingent on the support and involvement of local government officials.</i>",
           "label": "",
           "subheading": "",
           "ctas": [
@@ -85,7 +85,7 @@
             "push_right": ""
           },
           "heading": "The first Public Data Awards program will be launched soon. Stay tuned!",
-          "description": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups that will disperse awards sized between $5,000 and $20,000 USD to support projects that leverage datasets or advance learning around datasets stored on decentralized technology.",
+          "description": "The Public Data Awards is a location-specific $50,000 funding pool for non-profits and civic technology groups that will disperse awards up to $10,000 USD to support projects that leverage datasets or advance learning around datasets stored on decentralized technology.",
           "ctas": [
             {
               "type": "A",
@@ -147,7 +147,7 @@
           "sections": [
             {
               "heading": "Who is eligible for this award?",
-              "content": "Only individuals and organizations based in or working directly in the featured city or jurisdiction are eligible at this time."
+              "content": "Only individuals and non-profit or civic technology organizations based in or working directly in the featured city or jurisdiction are eligible at this time."
             },
             {
               "heading": "What strings are attached to this funding?",
@@ -155,7 +155,7 @@
             },
             {
               "heading": "What are the sizes of these Awards?",
-              "content": "While each location’s overall pool of funding is $50,000, the range for individual awards is $5,000 and $20,000 USD. An individual award will not exceed $20,000, even if your project costs more."
+              "content": "While each location’s overall pool of funding is $50,000, the range for individual awards is up to $10,000 USD. An individual award will not exceed $10,000, even if your project costs more."
             },
             {
               "heading": "How can I spend this money?",
@@ -175,7 +175,7 @@
             },
             {
               "heading": "What if I want to apply, but I don’t live or work in the featured city?",
-              "content": "Tell us in the application – it could be anything from food & drink for an in-person tutorial on how to access and use decentralized public data, to an hourly rate covering your team’s programming or engineering work to build a data egress or ingress pipeline. We expect the funds to cover as much of the costs as possible of your planned initiative, including paying for staff time."
+              "content": "If you’re an individual, group, or organization in the civic tech space that would be interested in applying for this program, <a target='_blank' href='https://airtable.com/shrmNURZt1khzB00M'>fill out this form</a>, and we will reach out if a Public Data Awards program is launched for your city or region. Please note in the form if you would also be interested in learning about some of our non-location specific funding opportunities."
             },
             {
               "heading": "Where can I send any additional questions?",
@@ -219,11 +219,11 @@
                     "radius": 12
                   },
                   "medium": {
-                    "stroke": 0.75,
+                    "stroke": 1.375,
                     "radius": 12.75
                   },
                   "mini": {
-                    "stroke": 0.25,
+                    "stroke": 1.375,
                     "radius": 7
                   }
                 }

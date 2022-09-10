@@ -2,7 +2,9 @@
   "page_content": {
     "section_0": {
       "hero-header-image": {
-        "grid": ["noBottom"],
+        "grid": [
+          "noBottom"
+        ],
         "left": {
           "type": "image_block",
           "cols": {
@@ -21,11 +23,11 @@
                     "radius": 13
                   },
                   "medium": {
-                    "stroke": 0.75,
+                    "stroke": 1.375,
                     "radius": 12.75
                   },
                   "mini": {
-                    "stroke": 0.25,
+                    "stroke": 1.375,
                     "radius": 10
                   }
                 }
@@ -82,7 +84,9 @@
         }
       },
       "logo-gallery": {
-        "grid": ["noGutter"],
+        "grid": [
+          "noGutter"
+        ],
         "left": {
           "type": "slider_block",
           "cols": {
@@ -145,7 +149,9 @@
           },
           "heading": "Making public data more resilient, permanent, and cost-effective, while also increasing accessibility.",
           "description": "The Public Data Commons exists to support open data initiatives in partnership with governments and official organizations across the globe. This initiative brings together cutting-edge archival technologies and the most civic-minded public institutions to leverage the unique benefits of decentralized storage – because public data should be a useful resource, not a costly burden to store.<br><br>Open data in cities help foster trust in governments by allowing citizens and community organizations to play a role in advancing accountability for a more effective government.",
-          "ctas": [],
+          "ctas": [
+
+          ],
           "subheading": ""
         },
         "grid": [
@@ -164,7 +170,9 @@
           "heading": "Control over today’s centralized internet is concentrated in the <a target='_blank' href='https://www.inc.com/magazine/201805/jeff-bercovici/big-tech-monopoly-startup-competition.html'>hands of a few, for-profit power players.</a>",
           "description": "These huge, ultra-powerful companies collect our data, control the information we get, and present vulnerable targets for malicious hackers.<br><br>All too often, we see some of these power players curate public data behind paywalls.  This undermines the original intention of making the data public to begin with.<br><br>We have seen these companies suffer blackouts in which vast swaths of the Web go down for hours, including websites that are massive contributors to the economy. That’s the problem with having single points of failure.<br><br>We seek to help governments and official organizations ensure that information remains open and accessible to their communities and constituents. We believe citizens and cities deserve a better version of the web - a decentralized one.",
           "label": "",
-          "ctas": []
+          "ctas": [
+
+          ]
         },
         "right": {
           "type": "image_block",
@@ -197,7 +205,7 @@
       "banner_1": {
         "left": {
           "type": "text_block",
-          "layout": "small",
+          "layout": "medium",
           "cols": {
             "num": "col-7_sm-8_mi-9",
             "push_left": "off-3_sm-4_mi-3",
@@ -229,7 +237,6 @@
           "description": "",
           "label": "",
           "theme": "light",
-          "layout": "medium",
           "heading": "Public data belongs in the hands of the people",
           "subheading": "",
           "ctas": [
@@ -253,10 +260,11 @@
             "num": "col-4_md-3_sm-5_mi-8",
             "push_left": "off-0_md-1_sm-4_mi-2"
           },
-          "src": "/images/hands-raised.png",
+          "src": "/images/pdc/raised-hands.svg",
           "label": ""
         },
         "grid": [
+
         ],
         "right": {
           "type": "text_block",
@@ -276,7 +284,8 @@
               "action": "a",
               "text": "Learn More about Filecoin",
               "url": "https://filecoin.io/",
-              "icon": ""
+              "icon": "",
+              "target": "_blank"
             }
           ]
         }
@@ -302,7 +311,7 @@
               "type": "A",
               "theme": "pdc",
               "action": "nuxt-link",
-              "text": "Read more and Apply for Awards",
+              "text": "Read More and Apply for Awards",
               "url": "/publicdata/awards",
               "icon": ""
             }
@@ -318,7 +327,9 @@
           "src": "/images/pdc/award-opportunities-cluster.png",
           "label": ""
         },
-        "grid": []
+        "grid": [
+
+        ]
       }
     },
     "section_3": {
@@ -338,7 +349,7 @@
               "type": "A",
               "theme": "pdc",
               "action": "a",
-              "text": "Learn more",
+              "text": "Learn More",
               "url": "https://airtable.com/shrmNURZt1khzB00M",
               "icon": "",
               "target": "_blank"
@@ -392,7 +403,9 @@
           },
           "heading": "<span class='case-study-label'>Case Studies</span><br>See the value of public datasets in action",
           "case_study": true,
-          "cards": []
+          "cards": [
+
+          ]
         }
       }
     },
@@ -428,7 +441,7 @@
                     },
                     {
                       "heading": "What is the Filecoin Foundation?",
-                      "content": "Filecoin Foundation is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
+                      "content": "Filecoin Foundation (FF) is an independent organization that facilitates governance of the Filecoin network, funds critical development projects, supports the growth of the Filecoin ecosystem, and advocates for Filecoin and the decentralized web. FF does this by coordinating and supporting the creation and improvement of open-source software and open protocols for decentralized data storage and retrieval networks."
                     },
                     {
                       "heading": "How do I get involved?",
@@ -436,7 +449,7 @@
                     },
                     {
                       "heading": "What about the environmental impacts of blockchain?",
-                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a href='https://filecoin.energy/'>filecoin.energy!</a> Learn more about the Filecoin community’s commitment to energy efficiency."
+                      "content": "Filecoin is the world’s most transparent blockchain when it comes to electricity consumption. Check the network’s energy use right now at <a target='_blank' href='https://filecoin.energy/'>filecoin.energy!</a> <a target='_blank' href='https://green.filecoin.io/'>Learn more</a> about the Filecoin community’s commitment to energy efficiency."
                     }
                   ]
                 }
@@ -478,7 +491,9 @@
     },
     "section_6": {
       "events_hackathons": {
-        "grid": ["noGutter"],
+        "grid": [
+          "noGutter"
+        ],
         "left": {
           "type": "text_block",
           "cols": {
@@ -487,7 +502,7 @@
           },
           "layout": "medium",
           "theme": "light",
-          "heading": "Events & Hackathons",
+          "heading": "Highlighted Open Data Events",
           "ctas": [
             {
               "type": "A",
@@ -517,6 +532,7 @@
           },
           "forceGrid": "noGutter",
           "forceCardColumns": "col-12",
+          "event_list": true,
           "cards": [
             {
               "type": "F",
@@ -524,14 +540,14 @@
               "title": "Smart Cities Expo",
               "date_start": "2022-09-14",
               "date_end": "2022-09-15",
-              "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Co-Founder Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’.",
+              "description": " At Smart Cities Expo in Miami, Philadelphia CIO Mark Wheeler will be on a panel–with FF Founding Officer Clara Tsao–titled, ‘Open Data, Digital Privacy, and Citizen Trust’,",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Afe7e079b-cbcd-3033-b473-06c1f86a5e74&viewer%21megaVerb=group-discover",
                 "icon": "info"
               }
             },
@@ -543,12 +559,12 @@
               "date_end": "2022-09-15",
               "description": "We will be hosting a Filecoin Foundation Breakfast at Smart Cities Expo in Miami.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Afe7e079b-cbcd-3033-b473-06c1f86a5e74&viewer%21megaVerb=group-discover",
                 "icon": "info"
               }
             },
@@ -556,16 +572,16 @@
               "type": "F",
               "event_type": "event",
               "title": "FIL-Singapore",
-              "date_start": "2022-08-26",
-              "date_end": "2022-08-27",
+              "date_start": "2022-09-26",
+              "date_end": "2022-09-27",
               "description": "John Paul Farmer, former CTO of NYC, will be in conversation with Singaporean government official Aaron Maniam at FIL-Singapore.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://www.fil-singapore.io/",
                 "icon": "info"
               }
             },
@@ -575,14 +591,14 @@
               "title": "World Economic Forum",
               "date_start": "2022-05-22",
               "date_end": "2022-05-26",
-              "description": "The Decentralized Web Gateway at Davos was hosted by Filecoin and held at the World Economic Forum in Davos, hosted by Filecoin Foundation and sponsored by CNBC International.",
+              "description": "The Decentralized Web Gateway at the World Economic Forum in Davos was hosted by Filecoin Foundation and sponsored by CNBC International.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://hub.fil.org/davos",
                 "icon": "info"
               }
             },
@@ -594,12 +610,12 @@
               "date_end": "2022-03-18",
               "description": "Events ranged from NFT showcases and discussions on sustainability in blockchains to hackathons.",
               "cta": {
-                "target": "",
+                "target": "_blank",
                 "text": "More Info",
                 "type": "B",
-                "action": "",
+                "action": "link",
                 "theme": "light",
-                "url": "",
+                "url": "https://hub.fil.org/fil-sxsw",
                 "icon": "info"
               }
             }
@@ -641,11 +657,11 @@
                     "radius": 12
                   },
                   "medium": {
-                    "stroke": 0.75,
+                    "stroke": 1.375,
                     "radius": 12.75
                   },
                   "mini": {
-                    "stroke": 0.25,
+                    "stroke": 1.375,
                     "radius": 7
                   }
                 }

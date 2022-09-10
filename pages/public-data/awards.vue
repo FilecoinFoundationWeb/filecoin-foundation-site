@@ -682,8 +682,7 @@ $backgroundLayers__Left__Mini: 0.75rem;
     line-height: leading(65, 45);
   }
   .button-row {
-    justify-content: flex-end;
-    margin-top: 0.625rem;
+    margin-top: 1rem;
   }
 }
 

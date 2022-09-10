@@ -19,6 +19,8 @@ sections:
   exclude: general.json
   new_doc_ext: json
   templates:
+  - page-public-data-awards
+  - page-public-data-commons
   - page-fil-austin
   - page-index
   - page-grants
