@@ -305,7 +305,10 @@ export default {
     transition: ease-in-out 350ms;
     margin-bottom: 0;
   }
-  &:hover {
+  &:focus-visible {
+    outline: 0;
+  }
+  &:hover, &:focus-visible {
     .image {
       bottom: 100%;
     }
