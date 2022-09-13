@@ -337,6 +337,9 @@ export default {
 
 ::v-deep #tabbed-slider {
   padding: 3.875rem 0 2rem 0;
+  .tab:focus-visible {
+    outline: 0;
+  }
   @include small {
     padding-top: 0;
   }
