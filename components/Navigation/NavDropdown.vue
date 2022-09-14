@@ -9,7 +9,9 @@
 
       <nuxt-link
         v-if="link.description"
+        ref="description"
         :to="link.url"
+        :tabindex="tabOrder"
         class="extras"
         v-html="link.description">
       </nuxt-link>
@@ -20,6 +22,7 @@
 
             <Button
               :button="sublink"
+              :tabindex="tabOrder"
               class="nav-link first-level">
               {{ sublink.text }}
             </Button>
@@ -37,7 +40,7 @@
         <div class="panel-right-title">
           Community Links
         </div>
-        <SocialIcons />
+        <SocialIcons :tabindex="tabOrder" />
       </div>
     </div>
 
@@ -64,6 +67,11 @@ export default {
       type: Object,
       required: false,
       default: () => {}
+    },
+    tabOrder: {
+      type: Number,
+      required: false,
+      default: 0
     }
   },
 

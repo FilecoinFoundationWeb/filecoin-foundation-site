@@ -20,7 +20,9 @@
           class="nav-link top-level">
           <nuxt-link
             :to="link.url"
-            class="text">
+            class="text"
+            :tabindex="(index + 1)"
+            @focus.native="setActiveItem(index)">
             {{ link.text }}
           </nuxt-link>
         </div>
@@ -28,16 +30,16 @@
 
       <NavMegaMenu
         :panel="true"
+        :active="activeItem >= 0"
         :active-index="activeItem"
         :nested-display="true">
         <NavDropdown
           v-for="(link, index) in links"
           :key="`$dropdown-${index}-${componentKey}`"
+          ref="dropdowns"
           :link="link"
-          :scroll="false"
-          :nested-display="true"
-          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']"
-          behavior="hover">
+          :tab-order="index === activeItem ? (index + 1) : -1"
+          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']">
         </NavDropdown>
       </NavMegaMenu>
 
@@ -139,21 +141,9 @@ export default {
   z-index: 10;
 }
 
-::v-deep .navigation {
-  &:hover {
-    .nav-dropdown-container {
-      opacity: 1;
-      transition: opacity 250ms cubic-bezier(.33, 0, .66, .33),
-        visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
-      visibility: visible;
-      z-index: 5;
-    }
-  }
-}
-
 .nav-item-wrapper {
   position: relative;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   flex-grow: 1;
   // height: calc(100% + 2rem);
   @include small {
@@ -197,11 +187,14 @@ export default {
 .nav-link {
   color: $white;
   text-align: center;
-
   &.top-level {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    .text {
+      display: block;
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
 
