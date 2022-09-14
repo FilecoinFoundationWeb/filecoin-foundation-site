@@ -23,7 +23,8 @@
             <Button
               :button="sublink"
               :tabindex="tabOrder"
-              class="nav-link first-level">
+              class="nav-link first-level"
+              @keyup.native.enter="sublinkClicked(sublink)">
               {{ sublink.text }}
             </Button>
 
