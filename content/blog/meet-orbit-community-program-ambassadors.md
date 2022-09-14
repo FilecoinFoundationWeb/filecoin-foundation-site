@@ -9,7 +9,7 @@ description: Though geographically distant, Berlin, Dar es Salaam, Lagos, and Na
   and libp2p communities.
 featured: false
 recommendedPosts: []
-image: ''
+image: "/images/0713-orbitcommunity.png"
 
 ---
 Though geographically distant, Berlin, Dar es Salaam, Lagos, and Nairobi, are cities unified through the [Filecoin Orbit Community Program](https://orbitcommunity.filecoin.io/), a program powered by Filecoin Foundation and Protocol Labs to amplify the voice of the Filecoin, IPFS, and libp2p communities.
@@ -99,3 +99,5 @@ Head over to the [Orbit Tanzania Meetup Group](https://www.meetup.com/orbit-comm
 Joining the Filecoin community is easy and has a place for everyone of all interests, backgrounds, and skill sets. Follow [Filecoin](https://twitter.com/Filecoin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) and [Filecoin Foundation](https://twitter.com/FilFoundation?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)on Twitter to stay up to date on the latest information, then join the conversation on [Slack](https://filecoinproject.slack.com/).
 
 Want to dive deeper? Get involved with the specialized Filecoin groups and teams below to help you take your next steps into the community. [Join the second cohort of Orbit Ambassadors here](https://orbitcommunity.filecoin.io/#apply-now), and subscribe to the [Filecoin Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=ZmlsZWNvaW4ub3JnX2o3bW1ldjI0ZzgwcmVsbzU2cHFtMWVsMWUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to stay up to date on our community events.
+
+![](/images/dsc05157-collage.jpg)
