@@ -230,7 +230,13 @@
   "breadcrumbs_mapping": {
     "index": "Home",
     "public-data": "Public Data Commons",
-    "public-data-awards": "Public Data Awards"
+    "public-data-awards": "Public Data Awards",
+    "about": "About",
+    "governance": "Governance",
+    "ecosystem": "Ecosystem",
+    "grants": "Grants",
+    "get-involved": "Get Involved",
+    "events": "Events"
   },
   "footer": {
     "text": {
