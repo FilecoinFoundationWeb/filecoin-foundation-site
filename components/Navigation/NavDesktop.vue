@@ -1,7 +1,7 @@
 <template>
   <div class="site-nav">
 
-    <nuxt-link to="/">
+    <nuxt-link to="/" class="site-logo">
       <LogoHorizontal id="logo-horizontal" />
     </nuxt-link>
 
@@ -122,6 +122,14 @@ export default {
 }
 
 // //////////////////////////////////////////////////////////////////////// Logo
+.site-logo {
+  transform: scale(1);
+  transition: 250ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 #logo-horizontal {
   height: 2.5rem;
   margin-right: 4rem;

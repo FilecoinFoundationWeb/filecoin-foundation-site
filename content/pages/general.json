@@ -277,7 +277,7 @@
           "text": "Terms of Use"
         }
       ],
-      "copyright_text": "Content on this site is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a>."
+      "copyright_text": "<span>Content on this site is licensed under a </span><a href='https://creativecommons.org/licenses/by/4.0/' target='_blank'>Creative Commons Attribution 4.0 International license</a>."
     }
   },
   "error_page": {

@@ -159,6 +159,11 @@ $backgroundLayer__Height: 12.25rem;
   a {
     @include fontWeight_SemiBold;
     color: $azureRadiance;
+    border-bottom: 0px solid;
+    transition: 100ms ease;
+    &:hover {
+      border-bottom: 1px solid;
+    }
   }
 }
 
@@ -216,14 +221,21 @@ $backgroundLayer__Height: 12.25rem;
 ::v-deep .copyright-text {
   @include fontSize_Small;
   @include leading_Regular;
-  opacity: 0.5;
   padding-left: 3rem;
   @include small {
     padding-left: 0;
     margin-top: 2rem;
   }
+  span {
+    opacity: 0.75;
+  }
   a {
     @include fontWeight_SemiBold;
+    opacity: 0.75;
+    transition: 200ms ease;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
