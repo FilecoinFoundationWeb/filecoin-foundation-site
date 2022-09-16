@@ -78,9 +78,8 @@ export default {
 
   methods: {
     sublinkClicked (sublink) {
-      const currentPath = this.$route.fullPath
       const hash = this.$route.hash.replace('#', '')
-      if (!sublink.hasOwnProperty('links') && sublink.url === currentPath) {
+      if (!sublink.hasOwnProperty('links') && sublink.url) {
         const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
         if (element) {
           this.$scrollToElement(element, 0, -50)
