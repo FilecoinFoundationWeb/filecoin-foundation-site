@@ -316,11 +316,20 @@ $layerOffset: 0.25rem;
     padding-top: 1px;
   }
   ::v-deep .icon {
+    transform: rotate(0deg);
+    transition: 250ms ease;
     &.plus {
       width: 0.75rem;
     }
     &.ticket {
       width: 1.125rem;
+    }
+  }
+  &:hover {
+    ::v-deep .icon {
+      &.plus {
+        transform: rotate(180deg);
+      }
     }
   }
 }

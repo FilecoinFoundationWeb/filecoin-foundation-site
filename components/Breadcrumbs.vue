@@ -7,6 +7,7 @@
         v-if="link.url"
         :key="`link-${index}`"
         :button="link"
+        tabindex="0"
         class="breadcrumb link">
         {{ link.text }}
       </Button>
@@ -72,20 +73,19 @@ export default {
   methods: {
     setBreadcrumbLinks () {
       const labels = this.breadcrumbsMapping
-      const route = this.$route
-      const path = route.path.split('/')
-      path.shift()
+      const path = this.$route.path
+      const items = path.split('/').filter(string => string !== '/' && string !== '')
       const links = [{ // contains index route by default
         type: 'X',
         action: 'nuxt-link',
         url: '/',
         text: labels.index
       }]
-      path.forEach((item, index) => {
-        const url = `/${path.slice(0, index + 1).join('/')}`
-        const routeName = path.slice(0, index + 1).join('-')
+      items.forEach((item, index) => {
+        const url = `/${items.slice(0, index + 1).join('/')}`
+        const routeName = items.slice(0, index + 1).join('-')
         const text = labels[routeName]
-        if (index !== path.length - 1) {
+        if (index !== items.length - 1) {
           links.push({
             type: 'X',
             action: 'nuxt-link',
