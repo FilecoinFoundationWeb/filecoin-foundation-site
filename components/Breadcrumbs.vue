@@ -7,6 +7,7 @@
         v-if="link.url"
         :key="`link-${index}`"
         :button="link"
+        tabindex="0"
         class="breadcrumb link">
         {{ link.text }}
       </Button>
