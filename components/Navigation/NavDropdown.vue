@@ -78,12 +78,15 @@ export default {
 
   methods: {
     sublinkClicked (sublink) {
+      const currentRoute = this.$route.fullPath
       const hash = this.$route.hash.replace('#', '')
-      if (!sublink.hasOwnProperty('links') && sublink.url) {
-        const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
-        if (element) {
-          this.$scrollToElement(element, 0, -50)
-        }
+      if (!sublink.hasOwnProperty('links') && sublink.url === currentRoute) {
+        this.$nextTick(() => {
+          const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
+          if (element) {
+            this.$scrollToElement(element, 0, -50)
+          }
+        })
       }
     }
   }
