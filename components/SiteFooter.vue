@@ -166,9 +166,11 @@ $backgroundLayer__Height: 12.25rem;
 .footer-nav-link {
   @include leading_Regular;
   color: $azureRadiance;
+  padding: 0 0.125rem;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
+  margin-left: -0.125rem;
 }
 
 ::v-deep .social-icons {

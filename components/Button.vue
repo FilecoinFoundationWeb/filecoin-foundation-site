@@ -140,6 +140,9 @@ $layerOffset: 0.25rem;
   @include leading_Tiny;
   display: inline-flex;
   flex-direction: row;
+  &:focus-visible {
+    outline: solid $azureRadiance 2px;
+  }
 }
 
 .icon {
@@ -244,6 +247,12 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(178, 215, 248, 1);
     border-radius: inherit;
   }
+  &:focus {
+    outline: none;
+    &:before {
+      background-color: $azureRadiance;
+    }
+  }
 }
 
 // ---------------------------------------------------------------- [Type] B & D
@@ -264,6 +273,9 @@ $layerOffset: 0.25rem;
         }
       }
     }
+  }
+  &:focus {
+    outline: none;
   }
   &.theme__dark {
     color: $kleinBlue;

@@ -95,4 +95,8 @@ export default {
   }
 }
 
+li {
+  padding-left: 0.125rem;
+}
+
 </style>
