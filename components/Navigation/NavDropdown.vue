@@ -79,8 +79,9 @@ export default {
   methods: {
     sublinkClicked (sublink) {
       const currentRoute = this.$route.fullPath
-      const hash = this.$route.hash.replace('#', '')
-      if (!sublink.hasOwnProperty('links') && sublink.url === currentRoute) {
+      const hash = sublink.url.substring(sublink.url.indexOf('#') + 1)
+      const sublinkOnCurrentPage = sublink.url === currentRoute || sublink.url.startsWith(currentRoute)
+      if (!sublink.hasOwnProperty('links') && sublinkOnCurrentPage) {
         this.$nextTick(() => {
           const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
           if (element) {
