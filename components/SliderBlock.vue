@@ -5,7 +5,8 @@
       <Card
         v-for="(card, index) in cards"
         :key="index"
-        :card="card" />
+        :card="card"
+        :tabindex="tabbable ? '0' : ''" />
     </div>
 
   </div>
@@ -33,6 +34,11 @@ export default {
   computed: {
     cards () {
       return this.block.cards
+    },
+    tabbable () {
+      if (this.block.tabindex) {
+        return this.block.tabindex
+      } return false
     }
   }
 }

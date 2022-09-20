@@ -219,6 +219,9 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// Content
+.card:focus {
+  outline: none;
+}
 .image {
   margin-bottom: 0.5rem;
   &.size-full {
@@ -245,7 +248,7 @@ export default {
 .card.type__A {
   &.is-link {
     position: relative;
-    &:hover {
+    &:hover, &:focus-visible {
       &:before {
         transition: 250ms ease-in;
         opacity: 1;
@@ -273,6 +276,22 @@ export default {
     color: $white;
     a {
       color: $jordyBlue;
+    }
+  }
+
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+    .safari_only {
+      .card.type__A {
+        &:focus {
+          &:before {
+            transition: 250ms ease-in;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
@@ -305,7 +324,10 @@ export default {
     transition: ease-in-out 350ms;
     margin-bottom: 0;
   }
-  &:hover {
+  &:focus-visible {
+    outline: 0;
+  }
+  &:hover, &:focus-visible {
     .image {
       bottom: 100%;
     }

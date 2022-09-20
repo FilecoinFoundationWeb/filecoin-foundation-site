@@ -138,6 +138,7 @@
             "push_left": "off-3_sm-2_mi-1_ti-2",
             "push_right": ""
           },
+          "tabindex": true,
           "cards": [
             {
               "type": "B",
