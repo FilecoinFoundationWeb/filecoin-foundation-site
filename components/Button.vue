@@ -140,6 +140,11 @@ $layerOffset: 0.25rem;
   @include leading_Tiny;
   display: inline-flex;
   flex-direction: row;
+  transition: box-shadow 250ms ease-out;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba($azureRadiance, 1), 0px 0px 0px 4px $white;
+  }
 }
 
 .icon {
@@ -244,6 +249,12 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(178, 215, 248, 1);
     border-radius: inherit;
   }
+  &:focus {
+    outline: none;
+    &:before {
+      background-color: $azureRadiance;
+    }
+  }
 }
 
 // ---------------------------------------------------------------- [Type] B & D
@@ -265,6 +276,9 @@ $layerOffset: 0.25rem;
       }
     }
   }
+  &:focus {
+    outline: none;
+  }
   &.theme__dark {
     color: $kleinBlue;
     border-color: $kleinBlue;
@@ -280,6 +294,10 @@ $layerOffset: 0.25rem;
           }
         }
       }
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px rgba($polar, 1), 0px 0px 0px 4px $kleinBlue;
     }
     ::v-deep .icon {
       svg {

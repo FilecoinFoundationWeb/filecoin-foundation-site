@@ -152,7 +152,8 @@ $borderWidth__Mini: 0.5rem;
 // ///////////////////////////////////////////////////////////////////// Subtext
 ::v-deep .subtext {
   margin-top: 0.75rem;
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
+  padding: 0 0.25rem;
   &:hover {
     .icon {
       svg {
