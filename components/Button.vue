@@ -140,8 +140,10 @@ $layerOffset: 0.25rem;
   @include leading_Tiny;
   display: inline-flex;
   flex-direction: row;
+  transition: box-shadow 250ms ease-out;
   &:focus-visible {
-    outline: solid $azureRadiance 2px;
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba($azureRadiance, 1), 0px 0px 0px 4px $white;
   }
 }
 
@@ -292,6 +294,10 @@ $layerOffset: 0.25rem;
           }
         }
       }
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px rgba($polar, 1), 0px 0px 0px 4px $kleinBlue;
     }
     ::v-deep .icon {
       svg {
