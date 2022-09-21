@@ -2,14 +2,14 @@
   <div id="site-navigation" :class="{ 'noscroll': mobilePanelOpen }">
     <div class="grid-noGutter">
       <div class="col">
-        <div :class="['content', { pdcPage }]">
+        <div :class="['content', { breadcrumbs }]">
 
           <component
             :is="navigationComponentType"
             :is-pdc-page="pdcPage"
             @panel-open="toggleScrollClass" />
 
-          <Breadcrumbs v-if="pdcPage" />
+          <Breadcrumbs v-if="breadcrumbs" />
 
         </div>
       </div>
@@ -66,6 +66,9 @@ export default {
     },
     navigationComponentType () {
       return this.mobile ? 'NavMobile' : 'NavDesktop'
+    },
+    breadcrumbs () {
+      return this.$route.path !== '/'
     }
   },
 
@@ -117,18 +120,12 @@ export default {
       width: 100%;
     }
   }
-  &.pdcPage {
-
-  }
 }
 
 .content {
   display: block;
   height: $navigationHeight;
-  .nuxt-link-active {
-    z-index: 10;
-  }
-  &.pdcPage {
+  &.breadcrumbs {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -136,6 +133,9 @@ export default {
     ::v-deep .site-nav {
       height: auto;
     }
+  }
+  .nuxt-link-active {
+    z-index: 10;
   }
 }
 

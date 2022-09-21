@@ -19,6 +19,8 @@
           <li
             v-for="(item, itemIndex) in entry.items"
             :key="`entry-${itemIndex}`"
+            tabindex="0"
+            @keyup.tab="scope.jump(item.id)"
             @click="scope.jump(item.id)">
             {{ item.text }}
           </li>
@@ -91,6 +93,10 @@ export default {
   @include mini {
     z-index: -1;
   }
+}
+
+li {
+  padding-left: 0.125rem;
 }
 
 </style>

@@ -1,33 +1,52 @@
 <template>
   <div :class="['block', 'accordion-block', `theme__${theme}`]">
 
-    <Zero_Core__Accordion
+    <Accordion
       v-slot="{ active }"
       :multiple="true"
       :toggle-on-load="false">
-      <Zero_Core__Accordion_Section
+      <AccordionSection
         v-for="(section, index) in sections"
         :key="`accordion-section-${index}`"
         :active="active">
 
-        <Zero_Core__Accordion_Header>
-          <div class="header-slot" v-html="section.heading"></div>
-        </Zero_Core__Accordion_Header>
+        <AccordionHeader>
+          <div
+            class="header-slot"
+            tabindex="0"
+            v-html="section.heading">
+          </div>
+        </AccordionHeader>
 
-        <Zero_Core__Accordion_Content>
-          <div class="content-slot" v-html="section.content"></div>
-        </Zero_Core__Accordion_Content>
+        <AccordionContent>
+          <div
+            class="content-slot"
+            v-html="section.content">
+          </div>
+        </AccordionContent>
 
-      </Zero_Core__Accordion_Section>
-    </Zero_Core__Accordion>
+      </AccordionSection>
+    </Accordion>
 
   </div>
 </template>
 
 <script>
+// ====================================================================== Import
+import Accordion from '@/components/Accordion/accordion'
+import AccordionSection from '@/components/Accordion/accordion-section'
+import AccordionHeader from '@/components/Accordion/accordion-header'
+import AccordionContent from '@/components/Accordion/accordion-content'
 // ====================================================================== Export
 export default {
   name: 'AccordionBlock',
+
+  components: {
+    Accordion,
+    AccordionSection,
+    AccordionHeader,
+    AccordionContent
+  },
 
   props: {
     block: {
@@ -90,8 +109,8 @@ export default {
     @include fontWeight_Medium;
     letter-spacing: 0.72px;
     line-height: leading(40, 24);
-    margin-left: 3.125rem;
-    margin-bottom: 0.3125rem;
+    padding-left: 0.5rem;
+    margin: 0.3125rem 0.3125rem 0.3125rem 2.625rem;
   }
   &:before {
     content: '';
