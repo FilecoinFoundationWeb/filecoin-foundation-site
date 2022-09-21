@@ -21,7 +21,7 @@
           <div class="first-level-wrapper" @click="sublinkClicked(sublink)">
 
             <Button
-              :button="sublink"
+              :button="getButtonData(sublink)"
               :tabindex="tabOrder"
               class="nav-link first-level"
               @keyup.native.enter="sublinkClicked(sublink)">
@@ -51,6 +51,8 @@
 
 <script>
 // ===================================================================== Imports
+import CloneDeep from 'lodash/cloneDeep'
+
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
 
@@ -76,14 +78,25 @@ export default {
     }
   },
 
+  computed: {
+    currentPath () {
+      return this.$route.fullPath.includes(this.link.url)
+    }
+  },
+
   methods: {
+    getButtonData (sublink) {
+      const obj = CloneDeep(sublink)
+      if (this.currentPath) {
+        obj.action = 'button'
+      }
+      return obj
+    },
     sublinkClicked (sublink) {
-      const currentRoute = this.$route.fullPath
-      const hash = sublink.url.substring(sublink.url.indexOf('#') + 1)
-      const sublinkOnCurrentPage = sublink.url === currentRoute || sublink.url.startsWith(currentRoute)
-      if (!sublink.hasOwnProperty('links') && sublinkOnCurrentPage) {
+      if (this.currentPath) {
         this.$nextTick(() => {
-          const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
+          const id = sublink.url.substring(sublink.url.indexOf('#') + 1)
+          const element = document.getElementById(id) || document.querySelector(`[data-id='${id}']`)
           if (element) {
             this.$scrollToElement(element, 0, -50)
           }

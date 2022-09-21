@@ -1,7 +1,9 @@
 <template>
   <div class="site-nav">
 
-    <nuxt-link to="/">
+    <nuxt-link
+      to="/"
+      tabindex="1">
       <LogoHorizontal id="logo-horizontal" />
     </nuxt-link>
 
@@ -71,7 +73,8 @@ export default {
       activeItem: -1,
       lastItem: -1,
       componentKey: 0,
-      entryAnimation: true
+      entryAnimation: true,
+      keyup: false
     }
   },
 
@@ -90,6 +93,15 @@ export default {
     }
   },
 
+  mounted () {
+    this.keyup = (e) => { this.checkForActiveElement(e) }
+    window.addEventListener('keyup', this.keyup)
+  },
+
+  beforeDestroy () {
+    if (this.keyup) { window.removeEventListener('keyup', this.keyup) }
+  },
+
   methods: {
     setActiveItem (newIndex) {
       if (newIndex >= 0) {
@@ -101,6 +113,14 @@ export default {
         }
       } else {
         this.activeItem = -1
+      }
+    },
+    checkForActiveElement (e) {
+      if (e.keyCode === 9 || e.key === 'Tab') {
+        const navActive = this.$refs.navigation.contains(document.activeElement)
+        if (!navActive) {
+          this.activeItem = -1
+        }
       }
     }
   }
