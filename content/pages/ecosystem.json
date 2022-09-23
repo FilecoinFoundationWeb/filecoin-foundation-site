@@ -320,7 +320,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -333,7 +333,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
               "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
@@ -341,7 +341,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -362,7 +362,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",

@@ -286,7 +286,7 @@
               "img": "/images/outline-multi-circle.png",
               "title": "Filecoin Community Events",
               "description": "Details on the latest events hosted by Filecoin Foundation and a full list of community events",
-              "url": "hub.fil.org/events",
+              "url": "https://fil.org/events/",
               "date": "",
               "label": "",
               "img_type": "",
@@ -563,7 +563,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -584,7 +584,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -605,7 +605,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -626,7 +626,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -647,7 +647,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
