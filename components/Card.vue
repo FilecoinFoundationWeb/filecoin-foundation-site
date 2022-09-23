@@ -405,6 +405,7 @@ export default {
     height: 6.25rem;
     border-radius: 4rem;
     margin-bottom: unset;
+    object-fit: cover;
     @include tiny {
       position: relative;
       left: 50%;
