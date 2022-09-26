@@ -340,6 +340,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   width: calc(100% - 2rem);
   height: 2.5rem;
   @include blogPageOutline;
+  &:after {
+    background-color: $white;
+  }
   .icon-container {
     margin: 0 0.5rem;
     height: 100%;
@@ -351,7 +354,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     font-size: 14px;
     @include fontWeight_Medium;
     letter-spacing: $letterSpacing_Large;
-    color: $white;
+    color: $azureRadiance;
     background-color: transparent;
     outline: none;
     border: none;
