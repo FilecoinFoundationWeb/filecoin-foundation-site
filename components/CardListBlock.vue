@@ -40,6 +40,7 @@ import Card from '@/components/Card'
 import CaseStudyCard from '@/components/CaseStudyCard'
 import Button from '@/components/Button'
 import IconCode from '@/components/icons/Code'
+
 // =================================================================== Functions
 const setColumnWidths = (instance) => {
   if (window.matchMedia('(max-width: 53.125rem)').matches) {

@@ -555,4 +555,53 @@ $layerOffset: 0.25rem;
   }
 }
 
+// /////////////////////////////////////////////////////////////////////// Icons
+.icon {
+  &.readme {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    transform: translateY(1px) scale(0.9);
+    width: 2px;
+    height: 17px;
+    border-bottom: 4px solid;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    margin-right: 1.25rem;
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      width: 8px;
+      height: 12px;
+      box-shadow: 0 0 0 2px;
+      border-radius: 1px;
+      bottom: -1px;
+      background:
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 5px/4px 2px,
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 2px/4px 2px,
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 8px/4px 2px;
+    }
+
+    &:before {
+      border-top-right-radius: 3px;
+      left: -8px;
+    }
+
+    &:after {
+      border-top-left-radius: 3px;
+      right: -8px;
+    }
+  }
+}
+
 </style>

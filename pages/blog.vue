@@ -161,7 +161,7 @@ export default {
                 type: 'B',
                 action: 'nuxt-link',
                 text: 'Read more',
-                icon: 'play',
+                icon: 'readme',
                 url: `/${featured.slug}`
               }
             ]
