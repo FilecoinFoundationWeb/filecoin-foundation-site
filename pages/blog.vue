@@ -11,10 +11,11 @@
         :section="featuredPost" />
 
       <div class="grid">
-        <div class="col-8_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
+        <div class="col-12_md-11_sm-10_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
           <Zero_Core__FilterBar
             id="zero-filter-bar"
             :filter-value="filterValue"
+            :placeholder="searchBarPlaceholder"
             action="store">
             <template #icon>
               <img src="~assets/svgs/searchicon.svg" />
@@ -115,6 +116,15 @@ export default {
       siteContent: 'global/siteContent',
       filterValue: 'core/filterValue'
     }),
+    pageContent () {
+      return this.siteContent.blog
+    },
+    searchBarPlaceholder () {
+      return this.pageContent.searchBar.placeholder
+    },
+    blogpostsPerPage () {
+      return this.pageContent.blogposts.display_amount
+    },
     posts () {
       const arr = []
       for (let i = 0; i < this.markdownFiles.length; i++) {
@@ -189,6 +199,7 @@ export default {
             push_left: 'off-0_md-1_sm-2_ti-1'
           },
           cards: this.posts,
+          display: this.blogpostsPerPage,
           displayControls: true
         }
       }
@@ -337,6 +348,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 ::v-deep #zero-filter-bar {
   position: relative;
   margin-left: 0.5rem;
+  margin-right: 3rem;
   width: calc(100% - 2rem);
   height: 2.5rem;
   @include blogPageOutline;

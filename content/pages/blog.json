@@ -34,5 +34,11 @@
       "component": "LinkedInIcon",
       "label": "LinkedIn"
     }
-  ]
+  ],
+  "searchBar": {
+    "placeholder": "Search all blog posts"
+  },
+  "blogposts": {
+    "display_amount": 9
+  }
 }

@@ -48,8 +48,8 @@
         </div>
 
         <template v-if="type === 'E'">
-          <div class="title" v-html="shortenString(title, 50)"></div>
-          <div class="description" v-html="shortenString(description, 50)"></div>
+          <div class="title" v-html="title"></div>
+          <div class="description" v-html="description"></div>
         </template>
 
         <div v-if="title && type !== 'E'" class="title">
@@ -576,10 +576,6 @@ export default {
     @include leading_Regular;
     letter-spacing: $letterSpacing_Large;
     color: $kleinBlue;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .description {
     @include fontSize_Small;
@@ -589,6 +585,13 @@ export default {
   }
   .cta {
     margin-top: auto;
+  }
+  .title,
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
