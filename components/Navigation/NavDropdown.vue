@@ -87,7 +87,7 @@ export default {
   methods: {
     getButtonData (sublink) {
       const obj = CloneDeep(sublink)
-      if (this.currentPath) {
+      if (this.currentPath && sublink.url.startsWith(this.link.url)) {
         obj.action = 'button'
       }
       return obj
