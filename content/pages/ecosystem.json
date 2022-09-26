@@ -291,7 +291,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://plus.fil.org/wallet",
               "img": "/icons/pencil.png",
               "img_size": "regular",
               "title": "FIlecoin Notary Portal",
@@ -299,7 +299,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -375,7 +375,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://plus.fil.org/wallet",
               "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
@@ -383,7 +383,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -404,7 +404,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
