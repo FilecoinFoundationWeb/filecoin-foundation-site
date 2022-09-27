@@ -76,7 +76,6 @@ export default {
       return this.block.cards
     },
     display () {
-      console.log(this.block)
       return this.block.display ? this.block.display : 3
     },
     controls () {
