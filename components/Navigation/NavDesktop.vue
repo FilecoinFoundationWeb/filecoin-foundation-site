@@ -1,7 +1,10 @@
 <template>
   <div class="site-nav">
 
-    <nuxt-link to="/" class="site-logo">
+    <nuxt-link
+      to="/"
+      tabindex="1"
+      class="site-logo">
       <LogoHorizontal id="logo-horizontal" />
     </nuxt-link>
 
@@ -20,7 +23,9 @@
           class="nav-link top-level">
           <nuxt-link
             :to="link.url"
-            class="text">
+            class="text"
+            :tabindex="(index + 1)"
+            @focus.native="setActiveItem(index)">
             {{ link.text }}
           </nuxt-link>
         </div>
@@ -28,16 +33,16 @@
 
       <NavMegaMenu
         :panel="true"
+        :active="activeItem >= 0"
         :active-index="activeItem"
         :nested-display="true">
         <NavDropdown
           v-for="(link, index) in links"
           :key="`$dropdown-${index}-${componentKey}`"
+          ref="dropdowns"
           :link="link"
-          :scroll="false"
-          :nested-display="true"
-          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']"
-          behavior="hover">
+          :tab-order="index === activeItem ? (index + 1) : -1"
+          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']">
         </NavDropdown>
       </NavMegaMenu>
 
@@ -69,7 +74,8 @@ export default {
       activeItem: -1,
       lastItem: -1,
       componentKey: 0,
-      entryAnimation: true
+      entryAnimation: true,
+      keyup: false
     }
   },
 
@@ -88,6 +94,15 @@ export default {
     }
   },
 
+  mounted () {
+    this.keyup = (e) => { this.checkForActiveElement(e) }
+    window.addEventListener('keyup', this.keyup)
+  },
+
+  beforeDestroy () {
+    if (this.keyup) { window.removeEventListener('keyup', this.keyup) }
+  },
+
   methods: {
     setActiveItem (newIndex) {
       if (newIndex >= 0) {
@@ -99,6 +114,14 @@ export default {
         }
       } else {
         this.activeItem = -1
+      }
+    },
+    checkForActiveElement (e) {
+      if (e.keyCode === 9 || e.key === 'Tab') {
+        const navActive = this.$refs.navigation.contains(document.activeElement)
+        if (!navActive) {
+          this.activeItem = -1
+        }
       }
     }
   }
@@ -147,21 +170,9 @@ export default {
   z-index: 10;
 }
 
-::v-deep .navigation {
-  &:hover {
-    .nav-dropdown-container {
-      opacity: 1;
-      transition: opacity 250ms cubic-bezier(.33, 0, .66, .33),
-        visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
-      visibility: visible;
-      z-index: 5;
-    }
-  }
-}
-
 .nav-item-wrapper {
   position: relative;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   flex-grow: 1;
   // height: calc(100% + 2rem);
   @include small {
@@ -206,11 +217,14 @@ export default {
 .nav-link {
   color: $white;
   text-align: center;
-
   &.top-level {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    .text {
+      display: block;
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
 

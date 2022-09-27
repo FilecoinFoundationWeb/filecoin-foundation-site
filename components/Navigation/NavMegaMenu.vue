@@ -1,7 +1,7 @@
 <template>
   <div
     ref="container"
-    :class="['nav-dropdown-container', animationClass]"
+    :class="['nav-dropdown-container', animationClass, { active }]"
     :style="containerStyles">
 
     <div
@@ -71,6 +71,11 @@ export default {
     panel: {
       type: Boolean,
       required: false,
+      default: false
+    },
+    active: {
+      type: Boolean,
+      required: true,
       default: false
     },
     activeIndex: {
@@ -202,6 +207,13 @@ export default {
   animation-duration: 250ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  &.active {
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(.33, 0, .66, .33),
+      visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
+    visibility: visible;
+    z-index: 5;
+  }
   &.enter {
     animation-timing-function: ease-out;
     animation-name: swingdown;

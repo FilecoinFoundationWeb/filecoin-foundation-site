@@ -9,7 +9,9 @@
 
       <nuxt-link
         v-if="link.description"
+        ref="description"
         :to="link.url"
+        :tabindex="tabOrder"
         class="extras"
         v-html="link.description">
       </nuxt-link>
@@ -19,8 +21,10 @@
           <div class="first-level-wrapper" @click="sublinkClicked(sublink)">
 
             <Button
-              :button="sublink"
-              class="nav-link first-level">
+              :button="getButtonData(sublink)"
+              :tabindex="tabOrder"
+              class="nav-link first-level"
+              @keyup.native.enter="sublinkClicked(sublink)">
               {{ sublink.text }}
             </Button>
 
@@ -37,7 +41,7 @@
         <div class="panel-right-title">
           Community Links
         </div>
-        <SocialIcons />
+        <SocialIcons :tabindex="tabOrder" />
       </div>
     </div>
 
@@ -47,6 +51,8 @@
 
 <script>
 // ===================================================================== Imports
+import CloneDeep from 'lodash/cloneDeep'
+
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
 
@@ -64,18 +70,37 @@ export default {
       type: Object,
       required: false,
       default: () => {}
+    },
+    tabOrder: {
+      type: Number,
+      required: false,
+      default: 0
+    }
+  },
+
+  computed: {
+    currentPath () {
+      return this.$route.fullPath.includes(this.link.url)
     }
   },
 
   methods: {
+    getButtonData (sublink) {
+      const obj = CloneDeep(sublink)
+      if (this.currentPath && sublink.url.startsWith(this.link.url)) {
+        obj.action = 'button'
+      }
+      return obj
+    },
     sublinkClicked (sublink) {
-      const currentPath = this.$route.fullPath
-      const hash = this.$route.hash.replace('#', '')
-      if (!sublink.hasOwnProperty('links') && sublink.url === currentPath) {
-        const element = document.getElementById(hash) || document.querySelector(`[data-id='${hash}']`)
-        if (element) {
-          this.$scrollToElement(element, 0, -50)
-        }
+      if (this.currentPath) {
+        this.$nextTick(() => {
+          const id = sublink.url.substring(sublink.url.indexOf('#') + 1)
+          const element = document.getElementById(id) || document.querySelector(`[data-id='${id}']`)
+          if (element) {
+            this.$scrollToElement(element, 0, -50)
+          }
+        })
       }
     }
   }

@@ -5,6 +5,7 @@
       v-for="(icon, index) in icons"
       :key="index"
       :button="icon"
+      :tabindex="tabindex"
       class="social-icon">
 
       <component :is="icon.component" />
@@ -50,6 +51,11 @@ export default {
       type: Array,
       required: false,
       default: () => []
+    },
+    tabindex: {
+      type: Number,
+      required: false,
+      default: 0
     }
   },
 
