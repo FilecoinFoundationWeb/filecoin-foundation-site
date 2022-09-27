@@ -407,6 +407,13 @@ $layerOffset: 0.25rem;
   .icon {
     display: none;
   }
+  &.theme__light {
+    background-color: $azureRadiance;
+    color: $white;
+    &:before {
+      background-color: $denim;
+    }
+  }
 }
 
 // -------------------------------------------------------------------- [Type] F

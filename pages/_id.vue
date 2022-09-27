@@ -66,9 +66,13 @@
       </section>
 
       <PageSection
-        v-if="recommendations"
+        v-if="recommendations.recommended_posts.left.cards.length"
         id="blogposts-section"
         :section="recommendations" />
+
+      <div class="button-row">
+        <Button :button="viewAllPostsButton" />
+      </div>
 
       <BackgroundLayers
         id="page-singular-background-layers"
@@ -91,6 +95,7 @@ import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
 import SocialIcons from '@/components/SocialIcons'
+import Button from '@/components/Button'
 
 // ====================================================================== Export
 export default {
@@ -100,7 +105,8 @@ export default {
     Modal,
     PageSection,
     BackgroundLayers,
-    SocialIcons
+    SocialIcons,
+    Button
   },
 
   async asyncData ({ $content, app, store, route, error }) {
@@ -225,6 +231,15 @@ export default {
         return `/${slug}`
       }
       return false
+    },
+    viewAllPostsButton () {
+      return {
+        type: 'E',
+        action: 'a',
+        url: '/blog',
+        theme: 'light',
+        text: 'View all posts'
+      }
     },
     recommendations () {
       const recommendedPosts = []
@@ -601,8 +616,22 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   justify-content: space-between;
 }
 
-::v-deep #blogposts-section {
+.button-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 3rem;
+  margin-top: 4rem;
+  ::v-deep .button {
+    transition: 200ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+::v-deep #blogposts-section {
   .card {
     &.type__E {
       width: unset;
@@ -614,5 +643,9 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       }
     }
   }
+}
+
+::v-deep #recommended_posts {
+  padding-bottom: 0rem;
 }
 </style>
