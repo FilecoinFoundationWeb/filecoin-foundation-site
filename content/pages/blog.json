@@ -30,7 +30,7 @@
       "type": "X",
       "action": "a",
       "target": "_blank",
-      "url": "https://www.linkedin.com/sharing/share-offsite/?url={slug}",
+      "url": "https://www.linkedin.com/sharing/share-offsite/?url=slug",
       "component": "LinkedInIcon",
       "label": "LinkedIn"
     }
