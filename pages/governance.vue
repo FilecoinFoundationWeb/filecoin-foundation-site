@@ -31,6 +31,7 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import GovernancePageData from '@/content/pages/governance.json'
+import EventListData from '@/content/data/event-list.json'
 
 import PageSection from '@/components/PageSection'
 import BackgroundLayers from '@/components/BackgroundLayers'
@@ -65,6 +66,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'governance', data: GovernancePageData })
+    await store.dispatch('global/getBaseData', { key: 'event_list', data: EventListData })
   },
 
   head () {

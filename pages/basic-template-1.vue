@@ -27,6 +27,7 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import BasicPageOneData from '@/content/pages/basic-template-1.json'
+import EventListData from '@/content/data/event-list.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -66,6 +67,7 @@ export default {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', 'settings')
     await store.dispatch('global/getBaseData', { key: 'basic_one', data: BasicPageOneData })
+    await store.dispatch('global/getBaseData', { key: 'event_list', data: EventListData })
   },
 
   head () {

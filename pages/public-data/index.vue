@@ -61,6 +61,7 @@ import CloneDeep from 'lodash/cloneDeep'
 
 import PublicDataCommonsPageData from '@/content/pages/public-data-commons.json'
 import CaseStudyData from '@/content/data/case-studies.json'
+import EventListData from '@/content/data/event-list.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -125,6 +126,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'public_data_commons', data: PublicDataCommonsPageData })
+    await store.dispatch('global/getBaseData', { key: 'event_list', data: EventListData })
   },
 
   head () {
