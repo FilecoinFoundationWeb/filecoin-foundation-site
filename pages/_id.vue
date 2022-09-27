@@ -207,19 +207,22 @@ export default {
       }
       return false
     },
+    postIndex () {
+      return this.allPosts.findIndex(post => post.slug === this.markdown.slug)
+    },
     previousPost () {
-      for (let i = 1; i < this.allPosts.length; i++) {
-        if (this.allPosts[i].updatedAt === this.markdown.updatedAt) {
-          return `/${this.allPosts[i - 1].slug}`
-        }
+      const index = this.postIndex
+      if (index > 0) {
+        const slug = this.allPosts[index].slug
+        return `/${slug}`
       }
       return false
     },
     nextPost () {
-      for (let i = 0; i < (this.allPosts.length - 1); i++) {
-        if (this.allPosts[i].updatedAt === this.markdown.updatedAt) {
-          return `/${this.allPosts[i + 1].slug}`
-        }
+      const index = this.postIndex
+      if (index < this.allPosts.length - 1) {
+        const slug = this.allPosts[index].slug
+        return `/${slug}`
       }
       return false
     },

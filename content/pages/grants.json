@@ -15,10 +15,10 @@
           "ctas": [
             {
               "type": "B",
-              "action": "nuxt-link",
+              "action": "a",
               "icon": "info",
-              "text": "Request Info",
-              "url": "/get-involved",
+              "text": "Email for more info",
+              "url": "mailto:devgrants@fil.org",
               "theme": ""
             }
           ],
