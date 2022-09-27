@@ -148,7 +148,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -169,7 +169,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -182,7 +182,7 @@
             {
               "type": "A",
               "img_size": "regular",
-              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute\"",
+              "url": "https://docs.filecoin.io/about-filecoin/ways-to-contribute/",
               "img": "/images/speech-bubble.png",
               "title": "Contribute to the Filecoin project",
               "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
@@ -190,7 +190,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -211,7 +211,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -232,7 +232,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -253,7 +253,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",

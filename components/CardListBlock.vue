@@ -1,7 +1,5 @@
 <template>
-  <div
-    v-if="postings || caseStudy || eventList"
-    class="block card-list-block">
+  <div class="block card-list-block">
 
     <div v-if="heading" class="heading" v-html="heading"></div>
 
@@ -38,11 +36,11 @@
 
 <script>
 // ====================================================================== Import
-import { mapGetters } from 'vuex'
 import Card from '@/components/Card'
 import CaseStudyCard from '@/components/CaseStudyCard'
 import Button from '@/components/Button'
 import IconCode from '@/components/icons/Code'
+
 // =================================================================== Functions
 const setColumnWidths = (instance) => {
   if (window.matchMedia('(max-width: 53.125rem)').matches) {
@@ -98,9 +96,6 @@ export default {
   },
 
   computed: {
-    ...mapGetters({
-      postings: 'global/jobPostings'
-    }),
     heading () {
       return this.block.heading
     },
@@ -118,9 +113,6 @@ export default {
     },
     showLoadMoreButton () {
       return this.cards.length > this.current
-    },
-    eventList () {
-      return this.block.event_list
     },
     caseStudy () {
       return this.block.case_study

@@ -3,7 +3,7 @@
 
     <Zero_Pagination__Paginate
       v-slot="{ paginated }"
-      :display="3"
+      :display="display"
       :collection="searchResults"
       class="card-list">
       <Card
@@ -76,7 +76,7 @@ export default {
       return this.block.cards
     },
     display () {
-      return this.routeQuery.results
+      return this.block.display ? this.block.display : 3
     },
     controls () {
       return this.block.displayControls

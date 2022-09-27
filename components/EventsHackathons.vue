@@ -41,6 +41,9 @@
 
 <script>
 // ====================================================================== Import
+import { mapGetters } from 'vuex'
+import CloneDeep from 'lodash/cloneDeep'
+
 import Button from '@/components/Button'
 import Card from '@/components/Card'
 
@@ -65,6 +68,28 @@ export default {
   },
 
   computed: {
+    ...mapGetters({
+      siteContent: 'global/siteContent'
+    }),
+    eventList () {
+      const eventList = CloneDeep(this.siteContent.event_list)
+      const sorted = eventList.sort((a, b) => {
+        const dateA = Array.isArray(a.date) ? a.date[1] : a.date_end ? a.date_end : a.date
+        const dateB = Array.isArray(b.date) ? b.date[1] : b.date_end ? b.date_end : b.date
+        if (dateA && dateB) {
+          return this.$moment.utc(new Date(dateA)) - this.$moment.utc(new Date(dateB))
+        }
+        return false
+      })
+      const upcoming = eventList.filter((evt) => {
+        const date = Array.isArray(evt.date) ? evt.date[1] : evt.date_end ? evt.date_end : evt.date
+        return this.$moment.utc(new Date(date)).isAfter(new Date())
+      })
+      if (upcoming.length > 1) {
+        return upcoming.reverse()
+      }
+      return sorted.reverse()
+    },
     heading () {
       return this.intro.heading
     },
@@ -72,6 +97,11 @@ export default {
       return this.intro.cta
     },
     cards () {
+      if (Array.isArray(this.eventList) && this.eventList.length > 1) {
+        const cards = this.eventList.slice(0, 2)
+        cards.forEach((card) => { card.img_type = 'background_image' })
+        return cards
+      }
       return this.events.cards
     }
   }
