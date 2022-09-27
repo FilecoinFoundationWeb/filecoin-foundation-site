@@ -213,7 +213,7 @@ export default {
     previousPost () {
       const index = this.postIndex
       if (index > 0) {
-        const slug = this.allPosts[index].slug
+        const slug = this.allPosts[index - 1].slug
         return `/${slug}`
       }
       return false
@@ -221,7 +221,7 @@ export default {
     nextPost () {
       const index = this.postIndex
       if (index < this.allPosts.length - 1) {
-        const slug = this.allPosts[index].slug
+        const slug = this.allPosts[index + 1].slug
         return `/${slug}`
       }
       return false
