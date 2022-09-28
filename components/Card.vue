@@ -48,8 +48,8 @@
         </div>
 
         <template v-if="type === 'E'">
-          <div class="title" v-html="shortenString(title, 50)"></div>
-          <div class="description" v-html="shortenString(description, 50)"></div>
+          <div class="title" v-html="title"></div>
+          <div class="description" v-html="description"></div>
         </template>
 
         <div v-if="title && type !== 'E'" class="title">
@@ -219,6 +219,9 @@ export default {
 
 <style lang="scss" scoped>
 // ///////////////////////////////////////////////////////////////////// Content
+.card:focus {
+  outline: none;
+}
 .image {
   margin-bottom: 0.5rem;
   &.size-full {
@@ -245,7 +248,7 @@ export default {
 .card.type__A {
   &.is-link {
     position: relative;
-    &:hover {
+    &:hover, &:focus-visible {
       &:before {
         transition: 250ms ease-in;
         opacity: 1;
@@ -273,6 +276,22 @@ export default {
     color: $white;
     a {
       color: $jordyBlue;
+    }
+  }
+
+}
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+    .safari_only {
+      .card.type__A {
+        &:focus {
+          &:before {
+            transition: 250ms ease-in;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
@@ -305,7 +324,10 @@ export default {
     transition: ease-in-out 350ms;
     margin-bottom: 0;
   }
-  &:hover {
+  &:focus-visible {
+    outline: 0;
+  }
+  &:hover, &:focus-visible {
     .image {
       bottom: 100%;
     }
@@ -383,6 +405,7 @@ export default {
     height: 6.25rem;
     border-radius: 4rem;
     margin-bottom: unset;
+    object-fit: cover;
     @include tiny {
       position: relative;
       left: 50%;
@@ -554,10 +577,6 @@ export default {
     @include leading_Regular;
     letter-spacing: $letterSpacing_Large;
     color: $kleinBlue;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .description {
     @include fontSize_Small;
@@ -567,6 +586,13 @@ export default {
   }
   .cta {
     margin-top: auto;
+  }
+  .title,
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 

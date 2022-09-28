@@ -1,7 +1,10 @@
 <template>
   <div class="site-nav">
 
-    <nuxt-link to="/">
+    <nuxt-link
+      to="/"
+      tabindex="1"
+      class="site-logo">
       <LogoHorizontal id="logo-horizontal" />
     </nuxt-link>
 
@@ -20,7 +23,9 @@
           class="nav-link top-level">
           <nuxt-link
             :to="link.url"
-            class="text">
+            class="text"
+            :tabindex="(index + 1)"
+            @focus.native="setActiveItem(index)">
             {{ link.text }}
           </nuxt-link>
         </div>
@@ -28,16 +33,16 @@
 
       <NavMegaMenu
         :panel="true"
+        :active="activeItem >= 0"
         :active-index="activeItem"
         :nested-display="true">
         <NavDropdown
           v-for="(link, index) in links"
           :key="`$dropdown-${index}-${componentKey}`"
+          ref="dropdowns"
           :link="link"
-          :scroll="false"
-          :nested-display="true"
-          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']"
-          behavior="hover">
+          :tab-order="index === activeItem ? (index + 1) : -1"
+          :class="[{ active: index === activeItem }, { last: index === lastItem && activeItem >= 0 }, index === lastItem || index === activeItem ? direction : '']">
         </NavDropdown>
       </NavMegaMenu>
 
@@ -69,7 +74,8 @@ export default {
       activeItem: -1,
       lastItem: -1,
       componentKey: 0,
-      entryAnimation: true
+      entryAnimation: true,
+      keyup: false
     }
   },
 
@@ -88,6 +94,15 @@ export default {
     }
   },
 
+  mounted () {
+    this.keyup = (e) => { this.checkForActiveElement(e) }
+    window.addEventListener('keyup', this.keyup)
+  },
+
+  beforeDestroy () {
+    if (this.keyup) { window.removeEventListener('keyup', this.keyup) }
+  },
+
   methods: {
     setActiveItem (newIndex) {
       if (newIndex >= 0) {
@@ -99,6 +114,14 @@ export default {
         }
       } else {
         this.activeItem = -1
+      }
+    },
+    checkForActiveElement (e) {
+      if (e.keyCode === 9 || e.key === 'Tab') {
+        const navActive = this.$refs.navigation.contains(document.activeElement)
+        if (!navActive) {
+          this.activeItem = -1
+        }
       }
     }
   }
@@ -122,6 +145,14 @@ export default {
 }
 
 // //////////////////////////////////////////////////////////////////////// Logo
+.site-logo {
+  transform: scale(1);
+  transition: 250ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 #logo-horizontal {
   height: 2.5rem;
   margin-right: 4rem;
@@ -139,21 +170,9 @@ export default {
   z-index: 10;
 }
 
-::v-deep .navigation {
-  &:hover {
-    .nav-dropdown-container {
-      opacity: 1;
-      transition: opacity 250ms cubic-bezier(.33, 0, .66, .33),
-        visibility 250ms linear, left 250ms ease-out, width 250ms, height 250ms, transform 250ms;
-      visibility: visible;
-      z-index: 5;
-    }
-  }
-}
-
 .nav-item-wrapper {
   position: relative;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   flex-grow: 1;
   // height: calc(100% + 2rem);
   @include small {
@@ -172,7 +191,8 @@ export default {
       height: 14px;
       transition: 200ms ease;
       border-radius: 3px;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='47.5' height='15' viewBox='0 0 47.5 15'%3e%3cline id='Line_81' data-name='Line 81' x2='47.5' transform='translate(47.5 7.5) rotate(180)' fill='none' stroke='%231890fd' stroke-width='3'/%3e%3cline id='Line_84' data-name='Line 84' x2='47.5' transform='translate(47.5 4.5) rotate(180)' fill='none' stroke='%23154ed9' stroke-width='3'/%3e%3cline id='Line_85' data-name='Line 85' x2='47.5' transform='translate(47.5 1.5) rotate(180)' fill='none' stroke='%230520a2' stroke-width='3'/%3e%3cline id='Line_82' data-name='Line 82' x2='47.5' transform='translate(47.5 10.5) rotate(180)' fill='none' stroke='%2373b4ed' stroke-width='3'/%3e%3cline id='Line_83' data-name='Line 83' x2='47.5' transform='translate(47.5 13.5) rotate(180)' fill='none' stroke='%23eff6fc' stroke-width='3'/%3e%3c/svg%3e ");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='84' height='10' viewBox='0 0 84 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.92564e-06 4L84 4V6L1.92564e-06 6V4Z' fill='%231890FD'/%3e%3cpath d='M1.92564e-06 2L84 2V4L1.92564e-06 4V2Z' fill='%23154ED9'/%3e%3cpath d='M1.92564e-06 5.87242e-08L84 5.87243e-08V2L1.92564e-06 2V5.87242e-08Z' fill='%230520A2'/%3e%3cpath d='M1.92564e-06 6L84 6V8L1.92564e-06 8V6Z' fill='%2373B4ED'/%3e%3cpath d='M1.92564e-06 8L84 8V10L1.92564e-06 10V8Z' fill='%23EFF6FC'/%3e%3c/svg%3e ");
+      background-size: cover;
       transform: translateY(-1rem);
     }
     &:after {
@@ -197,11 +217,14 @@ export default {
 .nav-link {
   color: $white;
   text-align: center;
-
   &.top-level {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    .text {
+      display: block;
+      padding: 0.5rem 0.75rem;
+    }
   }
 }
 

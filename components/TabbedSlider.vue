@@ -18,6 +18,8 @@
               v-for="slide in slides"
               :key="slide.label"
               :class="['tab', { selected: slide.label === content.label }]"
+              tabindex="0"
+              @keyup.tab="select(slide.label)"
               @click="select(slide.label)">
               <img :src="slide.icon"></img>
               <div class="label">

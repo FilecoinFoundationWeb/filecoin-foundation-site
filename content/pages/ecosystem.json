@@ -138,6 +138,7 @@
             "push_left": "off-3_sm-2_mi-1_ti-2",
             "push_right": ""
           },
+          "tabindex": true,
           "cards": [
             {
               "type": "B",
@@ -290,7 +291,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://plus.fil.org/wallet",
               "img": "/icons/pencil.png",
               "img_size": "regular",
               "title": "FIlecoin Notary Portal",
@@ -298,7 +299,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -319,7 +320,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -332,7 +333,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://github.com/filecoin-project/filecoin-plus-client-onboarding",
               "img": "/icons/upstairs.png",
               "img_size": "regular",
               "title": "Client Onboarding Repo",
@@ -340,7 +341,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -361,7 +362,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -374,7 +375,7 @@
             {
               "type": "A",
               "action": "a",
-              "url": "",
+              "url": "https://plus.fil.org/wallet",
               "img": "/icons/key.png",
               "img_size": "regular",
               "title": "Root Key Holder Governance",
@@ -382,7 +383,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",
@@ -403,7 +404,7 @@
               "date": "",
               "label": "",
               "img_type": "",
-              "target": "",
+              "target": "_blank",
               "cta": {
                 "text": "",
                 "type": "",

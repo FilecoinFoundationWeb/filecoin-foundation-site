@@ -421,7 +421,7 @@
               "img": "/images/filecoin-layered.png",
               "img_size": "mini",
               "title": "Apply for DataCap",
-              "description": "If you are looking to apply for DataCap as a client, head over to the <a href='http://plus.fil.org/'>Filecoin Plus app portal.</a>",
+              "description": "If you are looking to apply for DataCap as a client, head over to the <a href='http://plus.fil.org/' target='_blank'>Filecoin Plus app portal.</a>",
               "data_id": "section_5-b",
               "date": "",
               "label": "",
@@ -443,7 +443,7 @@
               "img": "/images/cross.png",
               "img_size": "mini",
               "title": "Filecoin Plus Notary",
-              "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/'>notary governance repository.</a>",
+              "description": "If you are interested in applying to become a Filecoin Plus notary, head to the <a href='https://github.com/filecoin-project/notary-governance/' target='_blank'>notary governance repository.</a>",
               "data_id": "section_5-c",
               "date": "",
               "label": "",
@@ -509,7 +509,7 @@
             "push_right": ""
           },
           "subheading": "Community governance calls happen every other Tuesday.",
-          "description": "Visit the <a href='hub.fil.org/events'>Filecoin community events hub</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>",
+          "description": "Visit the <a href='/events'>Filecoin community events hub</a> and join the conversation in the <a href='https://filecoinproject.slack.com/archives/C01DLAPKDGX'>#fil-plus Slack channel.</a>",
           "ctas": [
             {
               "type": "A",

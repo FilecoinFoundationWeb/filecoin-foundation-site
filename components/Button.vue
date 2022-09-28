@@ -140,6 +140,11 @@ $layerOffset: 0.25rem;
   @include leading_Tiny;
   display: inline-flex;
   flex-direction: row;
+  transition: box-shadow 250ms ease-out;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px rgba($azureRadiance, 1), 0px 0px 0px 4px $white;
+  }
 }
 
 .icon {
@@ -244,6 +249,12 @@ $layerOffset: 0.25rem;
     box-shadow: 0 0 6px rgba(178, 215, 248, 1);
     border-radius: inherit;
   }
+  &:focus {
+    outline: none;
+    &:before {
+      background-color: $azureRadiance;
+    }
+  }
 }
 
 // ---------------------------------------------------------------- [Type] B & D
@@ -265,6 +276,9 @@ $layerOffset: 0.25rem;
       }
     }
   }
+  &:focus {
+    outline: none;
+  }
   &.theme__dark {
     color: $kleinBlue;
     border-color: $kleinBlue;
@@ -280,6 +294,10 @@ $layerOffset: 0.25rem;
           }
         }
       }
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px rgba($polar, 1), 0px 0px 0px 4px $kleinBlue;
     }
     ::v-deep .icon {
       svg {
@@ -316,11 +334,20 @@ $layerOffset: 0.25rem;
     padding-top: 1px;
   }
   ::v-deep .icon {
+    transform: rotate(0deg);
+    transition: 250ms ease;
     &.plus {
       width: 0.75rem;
     }
     &.ticket {
       width: 1.125rem;
+    }
+  }
+  &:hover {
+    ::v-deep .icon {
+      &.plus {
+        transform: rotate(180deg);
+      }
     }
   }
 }
@@ -379,6 +406,13 @@ $layerOffset: 0.25rem;
   }
   .icon {
     display: none;
+  }
+  &.theme__light {
+    background-color: $azureRadiance;
+    color: $white;
+    &:before {
+      background-color: $denim;
+    }
   }
 }
 
@@ -524,6 +558,55 @@ $layerOffset: 0.25rem;
     }
     .icon__play__triangle-inner {
       fill: $white;
+    }
+  }
+}
+
+// /////////////////////////////////////////////////////////////////////// Icons
+.icon {
+  &.readme {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    transform: translateY(1px) scale(0.9);
+    width: 2px;
+    height: 17px;
+    border-bottom: 4px solid;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    margin-right: 1.25rem;
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      width: 8px;
+      height: 12px;
+      box-shadow: 0 0 0 2px;
+      border-radius: 1px;
+      bottom: -1px;
+      background:
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 5px/4px 2px,
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 2px/4px 2px,
+      linear-gradient(to left,
+          currentColor 4px,transparent 0)
+          no-repeat center 8px/4px 2px;
+    }
+
+    &:before {
+      border-top-right-radius: 3px;
+      left: -8px;
+    }
+
+    &:after {
+      border-top-left-radius: 3px;
+      right: -8px;
     }
   }
 }

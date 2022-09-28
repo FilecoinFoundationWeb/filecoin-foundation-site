@@ -30,6 +30,7 @@ import { mapGetters } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import GrantsPageData from '@/content/pages/grants.json'
+import EventListData from '@/content/data/event-list.json'
 
 import Modal from '@/components/Modal'
 import PageSection from '@/components/PageSection'
@@ -52,6 +53,7 @@ export default {
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
     await store.dispatch('global/getBaseData', { key: 'grants', data: GrantsPageData })
+    await store.dispatch('global/getBaseData', { key: 'event_list', data: EventListData })
   },
 
   head () {
@@ -337,6 +339,9 @@ export default {
 
 ::v-deep #tabbed-slider {
   padding: 3.875rem 0 2rem 0;
+  .tab:focus-visible {
+    outline: 0;
+  }
   @include small {
     padding-top: 0;
   }

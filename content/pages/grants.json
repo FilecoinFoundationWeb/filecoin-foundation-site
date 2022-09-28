@@ -15,10 +15,10 @@
           "ctas": [
             {
               "type": "B",
-              "action": "nuxt-link",
+              "action": "a",
               "icon": "info",
-              "text": "Request Info",
-              "url": "/get-involved",
+              "text": "Email for more info",
+              "url": "mailto:devgrants@fil.org",
               "theme": ""
             }
           ],
@@ -367,7 +367,8 @@
               "img": "/images/multi-person.png",
               "title": "Join a meetup group",
               "description": "Find a group of people in your area who connect regularly",
-              "url": "//www.meetup.com/Filecoin-San-Francisco"
+              "url": "//www.meetup.com/Filecoin-San-Francisco",
+              "target": "_blank"
             },
             {
               "type": "A",
@@ -376,7 +377,8 @@
               "img": "/images/speech-bubble.png",
               "title": "Contribute to the Filecoin project",
               "description": "Shape the future by contributing to Filecoin’s code, research, or docs",
-              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute"
+              "url": "//docs.filecoin.io/community/contribute/ways-to-contribute",
+              "target": "_blank"
             },
             {
               "type": "A",
@@ -385,16 +387,18 @@
               "img": "/images/hands-raised.png",
               "title": "Participate online",
               "description": "Participate in one of the many online forums about Filecoin, events, or the Filecoin Slack channel",
-              "url": "//filecoin.io/slack"
+              "url": "//filecoin.io/slack",
+              "target": "_blank"
             },
             {
               "type": "A",
-              "action": "nuxt-link",
+              "action": "a",
               "img_size": "regular",
               "img": "/images/tool.png",
               "title": "Become a storage provider or builder",
               "description": "Dive right in and become an essential part of the ecosystem",
-              "url": "//docs.filecoin.io/build"
+              "url": "https://docs.filecoin.io/build/overview/",
+              "target": "_blank"
             },
             {
               "type": "A",
@@ -403,7 +407,8 @@
               "img": "/images/magnifying-glass.png",
               "title": "Learn more on ProtoSchool",
               "description": "Understand how it all works with interactive tutorials from ProtoSchool",
-              "url": "//proto.school"
+              "url": "//proto.school",
+              "target": "_blank"
             }
           ]
         },
