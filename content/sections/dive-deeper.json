@@ -1,6 +1,6 @@
 [
   {
-    "id": "dive_deeper_intro",
+    "id": "dive-deeper_intro",
     "left": {
       "type": "text_block",
       "layout": "large",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "id": "dive_deeper_video_1",
+    "id": "dive-deeper_video_1",
     "grid": ["middle"],
     "left": {
       "type": "video_block",
@@ -46,7 +46,7 @@
     }
   },
   {
-    "id": "dive_deeper_video_2",
+    "id": "dive-deeper_video_2",
     "grid": ["middle"],
     "left": {
       "type": "video_block",

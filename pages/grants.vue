@@ -197,7 +197,7 @@ export default {
   padding: 0;
 }
 
-::v-deep #gallery-1-cards {
+::v-deep #open-grants {
   padding: 4rem 0 0 0;
   @include mini {
     padding: 3rem 0 0 0;

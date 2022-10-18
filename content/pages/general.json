@@ -71,19 +71,19 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/about/#panel_1",
+          "url": "/about/#board-panel",
           "text": "Board of Directors"
         },
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/about/#explore_1",
+          "url": "/about/#advisors",
           "text": "Advisors"
         },
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/about/#dive_deeper",
+          "url": "/about/#dive-deeper",
           "text": "Community"
         },
         {
@@ -106,25 +106,25 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/governance/#panel-1-title",
+          "url": "/governance/#improving-filecoin",
           "text": "Improving Filecoin"
         },
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/governance/#panel-2-title",
+          "url": "/governance/#security",
           "text": "Security"
         },
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/governance/#panel-3-title",
+          "url": "/governance/#fil-plus",
           "text": "Filecoin Plus"
         },
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/governance/#panel-4-title",
+          "url": "/governance/#get-involved",
           "text": "Get Involved"
         }
       ]
@@ -140,7 +140,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/ecosystem/#panel_1",
+          "url": "/ecosystem/#board-panel",
           "text": "Ecosystem Advisors"
         },
         {
@@ -168,7 +168,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/grants/#gallery-1-cards",
+          "url": "/grants/#open-grants",
           "text": "Request for Proposals"
         },
         {
@@ -202,7 +202,7 @@
         {
           "type": "X",
           "action": "nuxt-link",
-          "url": "/get-involved/#careers_intro",
+          "url": "/get-involved/#careers-intro",
           "text": "Careers"
         },
         {

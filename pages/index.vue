@@ -300,7 +300,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #explore_1 {
+::v-deep #advisors {
   margin-top: 5rem;
   margin-bottom: 1rem;
   @include small {
@@ -414,7 +414,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper {
+::v-deep #dive-deeper {
   padding-bottom: 10rem;
 }
 
