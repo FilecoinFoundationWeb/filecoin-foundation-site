@@ -55,7 +55,7 @@
         }
       }
     },
-    "section_2": {
+    "dev-grants": {
       "gallery-1-header": {
         "left": {
           "type": "text_block",
@@ -169,7 +169,7 @@
         }
       }
     },
-    "section_4": {
+    "community-grants": {
       "gallery-2": {
         "left": {
           "type": "text_block",

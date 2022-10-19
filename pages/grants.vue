@@ -94,7 +94,7 @@ export default {
   }
 }
 
-#section_2 {
+#dev-grants {
   padding-top: 15rem;
   margin-bottom: 1.5rem;
   @include small {
