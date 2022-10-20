@@ -488,7 +488,7 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/get-involved/#section-1",
+              "url": "/get-involved",
               "theme": "",
               "icon": ""
             }
