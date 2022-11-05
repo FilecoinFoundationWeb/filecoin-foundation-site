@@ -361,7 +361,7 @@
       }
     },
     "section_3": {
-      "dive_deeper": {
+      "dive-deeper": {
         "type": "custom",
         "component": "DiveDeeper",
         "props": {

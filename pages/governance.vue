@@ -308,7 +308,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
   }
 }
 
-::v-deep #panel-1-title {
+::v-deep #improving-filecoin {
   padding: 0;
   margin-bottom: 1.5rem;
   @include mini {
@@ -374,7 +374,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 // ----------------------------------------------------------------- [Section] 4
-::v-deep #panel-2-title {
+::v-deep #security {
   padding: 5.5rem 0 0 0;
   margin-bottom: 1rem;
   @include mini {
@@ -483,7 +483,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 // ----------------------------------------------------------------- [Section] 5
-::v-deep #panel-3-title {
+::v-deep #fil-plus {
   padding: 3.75rem 0 0 0;
   @include mini {
     padding: 1rem 0 0 0;
@@ -546,7 +546,7 @@ $indentedFill__Left: calc(50% - (#{$containerWidth} / 2) + (14 * 1.75rem));
 }
 
 // ----------------------------------------------------------------- [Section] 6
-::v-deep #panel-4-title {
+::v-deep #get-involved {
   padding: 0;
   .social-icons {
     width: 75%;

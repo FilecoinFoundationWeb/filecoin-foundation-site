@@ -74,7 +74,7 @@
       }
     },
     "section_3": {
-      "panel-1-title": {
+      "improving-filecoin": {
         "left": {
           "type": "text_block",
           "layout": "small",
@@ -251,7 +251,7 @@
       }
     },
     "section_4": {
-      "panel-2-title": {
+      "security": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -341,7 +341,7 @@
       }
     },
     "section_5": {
-      "panel-3-title": {
+      "fil-plus": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -465,7 +465,7 @@
       }
     },
     "section_6": {
-      "panel-4-title": {
+      "get-involved": {
         "left": {
           "type": "text_block",
           "layout": "large",

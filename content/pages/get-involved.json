@@ -29,7 +29,7 @@
           "label": ""
         }
       },
-      "careers_intro": {
+      "careers-intro": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -269,7 +269,7 @@
           "middle"
         ]
       },
-      "dive_deeper": {
+      "dive-deeper": {
         "type": "custom",
         "component": "DiveDeeper",
         "props": {

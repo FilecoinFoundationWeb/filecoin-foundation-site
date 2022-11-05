@@ -306,7 +306,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #panel_1 {
+::v-deep #board-panel {
   padding-bottom: 0;
   @include small {
     padding-top: 2rem;
@@ -316,7 +316,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #panel_1_cards {
+::v-deep #board-panel-cards {
   padding-top: 0;
   padding-bottom: 9rem;
   @include tiny {
@@ -375,7 +375,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper {
+::v-deep #dive-deeper {
   padding-bottom: 10rem;
 }
 
