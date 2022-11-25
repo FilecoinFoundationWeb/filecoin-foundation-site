@@ -94,7 +94,7 @@ export default {
   }
 }
 
-#section_2 {
+#dev-grants {
   padding-top: 15rem;
   margin-bottom: 1.5rem;
   @include small {
@@ -197,7 +197,7 @@ export default {
   padding: 0;
 }
 
-::v-deep #gallery-1-cards {
+::v-deep #open-grants {
   padding: 4rem 0 0 0;
   @include mini {
     padding: 3rem 0 0 0;

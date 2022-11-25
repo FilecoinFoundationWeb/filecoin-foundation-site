@@ -112,7 +112,7 @@
           ]
         }
       },
-      "panel_1": {
+      "board-panel": {
         "left": {
           "type": "text_block",
           "layout": "large",
@@ -130,7 +130,7 @@
           ]
         }
       },
-      "panel_1_cards": {
+      "board-panel-cards": {
         "left": {
           "type": "slider_block",
           "cols": {
@@ -422,7 +422,7 @@
       }
     },
     "section_3": {
-      "dive_deeper": {
+      "dive-deeper": {
         "type": "custom",
         "component": "DiveDeeper",
         "props": {

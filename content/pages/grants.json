@@ -55,7 +55,7 @@
         }
       }
     },
-    "section_2": {
+    "dev-grants": {
       "gallery-1-header": {
         "left": {
           "type": "text_block",
@@ -74,7 +74,7 @@
           ]
         }
       },
-      "gallery-1-cards": {
+      "open-grants": {
         "left": {
           "type": "image_block",
           "cols": {
@@ -169,7 +169,7 @@
         }
       }
     },
-    "section_4": {
+    "community-grants": {
       "gallery-2": {
         "left": {
           "type": "text_block",

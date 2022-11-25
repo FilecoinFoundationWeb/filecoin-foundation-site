@@ -169,7 +169,7 @@
           ]
         }
       },
-      "explore_1": {
+      "advisors": {
         "left": {
           "type": "text_block",
           "layout": "medium",
@@ -488,7 +488,7 @@
               "type": "A",
               "action": "nuxt-link",
               "text": "Learn More",
-              "url": "/get-involved/#section-1",
+              "url": "/get-involved",
               "theme": "",
               "icon": ""
             }
@@ -665,7 +665,7 @@
       }
     },
     "section_3": {
-      "dive_deeper": {
+      "dive-deeper": {
         "type": "custom",
         "component": "DiveDeeper",
         "props": {

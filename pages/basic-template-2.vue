@@ -367,7 +367,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper {
+::v-deep #dive-deeper {
   padding-bottom: 10rem;
 }
 </style>

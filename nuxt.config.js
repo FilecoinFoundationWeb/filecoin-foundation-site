@@ -14,14 +14,14 @@ export default {
     },
     redirects: [
       { from: '/filaustin', to: 'https://events.bizzabo.com/filaustin' },
-      { from: '/board', to: '/about/#panel_1' },
-      { from: '/careers', to: '/get-involved/#careers_intro' },
-      { from: '/community', to: '/about/#dive_deeper_intro' },
+      { from: '/board', to: '/about/#board-panel' },
+      { from: '/careers', to: '/get-involved/#careers-intro' },
+      { from: '/community', to: '/about/#dive-deeper_intro' },
       { from: '/contact', to: '/about/#site-footer' },
-      { from: '/filplus', to: '/governance/#panel-3-title' },
-      { from: '/fips', to: '/governance/#panel-1-title' },
+      { from: '/filplus', to: '/governance/#fil-plus' },
+      { from: '/fips', to: '/governance/#improving-filecoin' },
       { from: '/philosophy', to: '/about/#intro_1' },
-      { from: '/team', to: '/about/#panel_1' },
+      { from: '/team', to: '/about/#board-panel' },
       { from: '/publicdata', to: '/public-data' },
       { from: '/publicdata/awards', to: '/public-data/awards' }
     ]

@@ -191,7 +191,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #careers_intro {
+::v-deep #careers-intro {
   padding-top: 2.5rem;
   @include mini {
     padding-bottom: 0;
@@ -248,7 +248,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
-::v-deep #dive_deeper {
+::v-deep #dive-deeper {
   padding-bottom: 10rem;
   a {
     @include fontWeight_SemiBold;
