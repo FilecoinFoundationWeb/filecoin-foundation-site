@@ -114,6 +114,7 @@ export default {
       const markdown = await $content(`blog/${route.params.id}`).fetch()
       const posts = await $content('blog').without(['body']).fetch()
       markdown.allPosts = posts.sort((a, b) => a.updatedAt.localeCompare(b.updatedAt))
+      await store.dispatch('global/getBaseData', { key: 'markdown', data: markdown })
       return { markdown }
     } catch (e) {
       return error('This project does not exist')
@@ -301,7 +302,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$backgroundLayers__Offset__Desktop: 1.75rem * 3;
+$backgroundLayers__Offset__Desktop: 1.75rem * 5;
 $backgroundLayers__Offset__Medium: 1rem * 5;
 $backgroundLayers__Offset__Mini: 0.25rem * 5;
 

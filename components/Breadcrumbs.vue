@@ -84,7 +84,10 @@ export default {
       items.forEach((item, index) => {
         const url = `/${items.slice(0, index + 1).join('/')}`
         const routeName = items.slice(0, index + 1).join('-')
-        const text = labels[routeName]
+        let text = labels[routeName]
+        if (!text && this.siteContent.hasOwnProperty('blog')) {
+          text = this.siteContent.markdown.title
+        }
         if (index !== items.length - 1) {
           links.push({
             type: 'X',
