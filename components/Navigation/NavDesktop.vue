@@ -84,7 +84,7 @@ export default {
       siteContent: 'global/siteContent'
     }),
     links () {
-      return this.siteContent.general.navigation
+      return this.siteContent.general ? this.siteContent.general.navigation : []
     },
     direction () {
       if (this.activeItem === this.lastItem || this.entryAnimation) {

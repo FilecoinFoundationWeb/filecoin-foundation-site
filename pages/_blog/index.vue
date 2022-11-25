@@ -142,7 +142,7 @@ export default {
           cta: {
             type: 'H',
             text: 'Read more',
-            url: `/${post.slug}`
+            url: `/blog/${post.slug}`
           }
         }
         arr.push(card)
@@ -172,7 +172,7 @@ export default {
                 action: 'nuxt-link',
                 text: 'Read more',
                 icon: 'readme',
-                url: `/${featured.slug}`
+                url: `/blog/${featured.slug}`
               }
             ]
           },

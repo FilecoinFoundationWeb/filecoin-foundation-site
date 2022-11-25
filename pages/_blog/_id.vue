@@ -190,7 +190,7 @@ export default {
                 action: 'nuxt-link',
                 text: this.markdown.author,
                 icon: 'play',
-                url: `/${this.markdown.slug}`
+                url: `/blog/${this.markdown.slug}`
               }
             ]
           },
@@ -252,7 +252,7 @@ export default {
               img: post.image,
               img_type: 'background_image',
               action: 'nuxt-link',
-              url: `/${post.slug}`,
+              url: `/blog/${post.slug}`,
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
@@ -260,7 +260,7 @@ export default {
               cta: {
                 type: 'H',
                 text: 'Read more',
-                url: `/${post.slug}`
+                url: `/blog/${post.slug}`
               }
             })
           }
