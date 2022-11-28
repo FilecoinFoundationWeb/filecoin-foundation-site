@@ -232,7 +232,7 @@ export default {
       const index = this.postIndex
       if (index > 0) {
         const slug = this.allPosts[index - 1].slug
-        return `/${slug}`
+        return `/blog/${slug}`
       }
       return false
     },
@@ -240,7 +240,7 @@ export default {
       const index = this.postIndex
       if (index < this.allPosts.length - 1) {
         const slug = this.allPosts[index + 1].slug
-        return `/${slug}`
+        return `/blog/${slug}`
       }
       return false
     },

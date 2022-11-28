@@ -16,7 +16,8 @@
         v-else
         :key="`text-${index}`"
         class="breadcrumb text">
-        {{ link.text }}
+        <span class="slug">{{ link.text }}</span>
+        <span class="mobile-slug">{{ limitChars(link.text) }}</span>
       </div>
 
       <div
@@ -105,6 +106,9 @@ export default {
         })
         this.links = links
       }
+    },
+    limitChars (text) {
+      return `${text.substring(0, 30)}...`
     }
   }
 }
@@ -153,4 +157,18 @@ export default {
 ::v-deep .button.type__X {
   color: $white;
 }
+
+.slug {
+  @include mini {
+    display: none;
+  }
+}
+
+.mobile-slug {
+  display: none;
+  @include mini {
+    display: inline;
+  }
+}
+
 </style>
