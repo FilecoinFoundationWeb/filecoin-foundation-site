@@ -148,7 +148,18 @@ export default {
   },
 
   head () {
-    return this.$CompileSeo(this.$GetSeo(this.tag))
+    const head = CloneDeep(this.$CompileSeo(this.$GetSeo(this.tag)))
+    head.title = this.markdown.title
+    head.meta.forEach((item) => {
+      if (item.hid === 'description' || item.hid === 'og:description' || item.hid === 'twitter:description') { item.content = this.markdown.description }
+      if (item.hid === 'og:title' || item.hid === 'twitter:title') { item.content = this.markdown.title }
+      if (item.hid === 'og:image' || item.hid === 'twitter:image') { item.content = `https://fil.org${this.markdown.image}` }
+      if (item.hid === 'og:url') { item.content = `${item.content}/${this.markdown.slug}` }
+    })
+    head.link.forEach((item) => {
+      item.href = `${item.href}/${this.markdown.slug}`
+    })
+    return head
   },
 
   computed: {
