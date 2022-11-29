@@ -209,8 +209,8 @@ export default {
             type: 'image_block',
             src: this.markdown.image,
             cols: {
-              num: 'col-7_md-9_mi-10',
-              push_left: 'off-0_md-2_mi-1'
+              num: 'col-6_md-9_mi-10',
+              push_left: 'off-1_md-2_mi-1'
             }
           }
         }
@@ -353,10 +353,60 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
 }
 
+// /////////////////////////////////////////////////////////// Background Layers
+::v-deep #page-singular-background-layers {
+  position: absolute;
+  top: 0;
+  left: $backgroundLayers__Left__Desktop;
+  width: 100%;
+  height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
+  z-index: -10;
+  @include medium {
+    left: $backgroundLayers__Left__Medium;
+  }
+  @include mini {
+    left: $backgroundLayers__Left__Mini;
+  }
+}
+
+// ////////////////////////////////////////////////////// Section Customizations
 #post-heading-section {
   padding-top: 5rem; // 1.75rem * 4
   @include mini {
     padding-top: 5rem;
+  }
+  ::v-deep .text-block {
+    .label,
+    .heading,
+    .description {
+      margin-bottom: 0.625rem;
+    }
+    .label {
+      @include fontWeight_Bold;
+      font-size: 0.9375rem;
+      letter-spacing: toRem(0.45);
+      line-height: leading(35, 15);
+    }
+    .heading {
+      @include fontWeight_Medium;
+      font-size: toRem(35);
+      line-height: leading(40, 35);
+      letter-spacing: toRem(1.2);
+    }
+    .description {
+      @include fontSize_Regular;
+      @include fontWeight_Regular;
+      line-height: leading(28, 16);
+      letter-spacing: toRem(0.48);
+    }
+  }
+  ::v-deep .image-block {
+    margin-right: calc(-1.5 * #{math.div($containerWidth, 12)});
+    .image {
+      border-radius: 1.25rem;
+      border: 0.5rem solid $polar;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
+    }
   }
 }
 
@@ -385,69 +435,6 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
     @include mini {
       left: $backgroundLayers__Left__Mini;
       border-top-left-radius: 4.75rem;
-    }
-  }
-}
-
-// /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-singular-background-layers {
-  position: absolute;
-  top: 0;
-  left: $backgroundLayers__Left__Desktop;
-  width: 100%;
-  height: calc(100% + #{$backgroundLayers__Top / 2} - 1.75rem * 2);
-  z-index: -10;
-  @include medium {
-    left: $backgroundLayers__Left__Medium;
-  }
-  @include mini {
-    left: $backgroundLayers__Left__Mini;
-  }
-}
-
-// ////////////////////////////////////////////////////// Section Customizations
-::v-deep #post-heading-section {
-  padding: 0;
-  margin-bottom: 3.5rem;
-  .heading {
-    @include fontSize_ExtraExtraLarge;
-    @include fontWeight_Bold;
-    @include leading_Small;
-    letter-spacing: $letterSpacing_Large;
-  }
-  .subheading {
-    @include fontSize_Regular;
-    @include leading_MediumLarge;
-    letter-spacing: $letterSpacing_Large;
-  }
-  .column-content {
-    &.left {
-      margin-bottom: 3rem;
-    }
-    &.right {
-      width: 48vw;
-      height: 100%;
-      left: 1.75rem;
-    }
-  }
-  .right,
-  .image-block {
-    width: 100%;
-    height: 100%;
-  }
-  .image {
-    width: 70vw;
-    border-radius: 35vw 3rem 3rem 35vw;
-    border: 1.375rem solid #EFF6FC;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
-    @include medium {
-      width: 80vw;
-      border-radius: 40vw 3rem 3rem 40vw;
-    }
-    @include mini {
-      width: 100vw;
-      border: 0.25rem solid #EFF6FC;
-      border-radius: 50vw 3rem 3rem 50vw;
     }
   }
 }
@@ -644,15 +631,13 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #blogposts-section {
-  .card {
-    &.type__E {
-      width: unset;
-      margin: unset !important;
-      .image {
-        height: 47%;
-        @include borderRadius_Large;
-        overflow: hidden;
-      }
+  .card.type__E {
+    width: unset;
+    margin: unset !important;
+    .image {
+      width: 100%;
+      height: unset;
+      border-radius: 0;
     }
   }
 }

@@ -120,6 +120,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 2.4375rem;
   @include small {
     padding: 0 1rem;
   }

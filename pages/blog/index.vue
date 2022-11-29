@@ -6,19 +6,22 @@
     <div class="main-content">
 
       <PageSection
-        v-if="featuredPost"
-        id="featured-section"
-        :section="featuredPost" />
+        v-if="featuredPostImage"
+        :section="featuredPostImage" />
 
-      <div class="grid">
-        <div class="col-12_md-11_sm-10_mi-9_ti-10" data-push-left="off-0_md-1_sm-2_ti-1">
+      <PageSection
+        v-if="featuredPostText"
+        :section="featuredPostText" />
+
+      <div class="grid-noBottom">
+        <div class="col-8_sm-10_mi-9_ti-10" data-push-left="off-0_sm-2_ti-1">
           <Zero_Core__FilterBar
             id="zero-filter-bar"
             :filter-value="filterValue"
             :placeholder="searchBarPlaceholder"
             action="store">
             <template #icon>
-              <img src="~assets/svgs/searchicon.svg" />
+              <div class="magnifying-glass"></div>
             </template>
           </Zero_Core__FilterBar>
         </div>
@@ -28,11 +31,11 @@
         v-if="blogPosts"
         id="blogposts-section"
         :section="blogPosts" />
-
+<!--
       <BackgroundLayers
         id="page-blog-background-layers"
         layers-array="3_4_5_6"
-        :breakpoints="pageLayersBreakpointData" />
+        :breakpoints="pageLayersBreakpointData" /> -->
 
     </div>
 
@@ -132,7 +135,7 @@ export default {
         const card = {
           type: 'E',
           img: post.image,
-          img_type: 'background_image',
+          img_type: 'image',
           action: 'nuxt-link',
           url: `/blog/${post.slug}`,
           title: post.title,
@@ -149,23 +152,72 @@ export default {
       }
       return arr
     },
-    featuredPost () {
+    featuredPostImage () {
       const featured = this.markdownFiles.find(file => file.hasOwnProperty('featured') && file.featured)
-
       if (featured) {
         const section = {
-          id: 'featured-post',
-          grid: ['middle'],
+          grid: ['noGutter'],
+          left: {
+            type: 'image_block',
+            src: featured.image,
+            cols: {
+              num: 'col-12',
+              push_left: 'off-0'
+            },
+            customizations: {
+              'background_layers': {
+                name: 'BackgroundLayers',
+                props: {
+                  'layers-array': '2_3_4_5',
+                  breakpoints: {
+                    default: {
+                      stroke: 0.75,
+                      radius: 2.125
+                    },
+                    medium: {
+                      stroke: 0.75,
+                      radius: 2.125
+                    },
+                    mini: {
+                      stroke: 0.25,
+                      radius: 2.125
+                    }
+                  },
+                  reverse: true,
+                  'border-radius-direction': ''
+                }
+              }
+            }
+          }
+        }
+        return { 'featured-post-image': section }
+      }
+      return false
+    },
+    featuredPostText () {
+      const featured = this.markdownFiles.find(file => file.hasOwnProperty('featured') && file.featured)
+      if (featured) {
+        const section = {
           left: {
             type: 'text_block',
             layout: 'large',
             cols: {
-              num: 'col-5_md-9_mi-10',
-              push_left: 'off-0_md-2_ti-1'
+              num: 'col-6_sm-12',
+              push_left: 'off-0'
             },
+            theme: 'light',
             heading: featured.title,
+            label: 'Featured Blog'
+          },
+          right: {
+            type: 'text_block',
+            layout: 'large',
+            cols: {
+              num: 'col-6_sm-12',
+              push_left: 'off-0'
+            },
+            theme: 'light',
             subheading: featured.description,
-            label: 'Featured Blog',
             ctas: [
               {
                 type: 'B',
@@ -175,17 +227,9 @@ export default {
                 url: `/blog/${featured.slug}`
               }
             ]
-          },
-          right: {
-            type: 'image_block',
-            src: featured.image,
-            cols: {
-              num: 'col-7_md-9_mi-10',
-              push_left: 'off-0_md-2_mi-1'
-            }
           }
         }
-        return { section }
+        return { 'featured-post-text': section }
       }
       return false
     },
@@ -264,20 +308,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 .main-content {
   position: relative;
-  margin-top: $backgroundLayers__Offset__Desktop;
-  @include medium {
-    margin-top: $backgroundLayers__Offset__Medium;
-  }
-  @include mini {
-    margin-top: $backgroundLayers__Offset__Mini;
-  }
-}
-
-#featured-section {
-  padding-top: 7rem;
-  @include mini {
-    padding-top: 5rem;
-  }
+  padding-top: 1rem;
+  // margin-top: $backgroundLayers__Offset__Desktop;
+  // @include medium {
+  //   margin-top: $backgroundLayers__Offset__Medium;
+  // }
+  // @include mini {
+  //   margin-top: $backgroundLayers__Offset__Mini;
+  // }
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
@@ -297,96 +335,142 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // ////////////////////////////////////////////////////// Section Customizations
-::v-deep #featured-section {
-  padding: 0;
-  margin-bottom: 5.5rem;
-  .heading {
-    @include fontSize_ExtraExtraLarge;
-    @include fontWeight_Bold;
-    @include leading_Small;
-    letter-spacing: $letterSpacing_Large;
-  }
-  .subheading {
-    @include fontSize_Regular;
-    @include leading_MediumLarge;
-    letter-spacing: $letterSpacing_Large;
-  }
-  .column-content {
-    &.left {
-      @include medium {
-        margin-bottom: 3rem;
-      }
-    }
-    &.right {
-      width: 48vw;
-      height: 100%;
-      left: 1.75rem;
-    }
-  }
-  .right,
+::v-deep #featured-post-image {
   .image-block {
-    width: 100%;
-    height: 100%;
-  }
-  .image {
-    width: 70vw;
-    border-radius: 35vw 3rem 3rem 35vw;
-    border: 1.375rem solid #EFF6FC;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
-    @include medium {
-      width: 80vw;
-      border-radius: 40vw 3rem 3rem 40vw;
+    .image {
+      border-radius: 1.375rem;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.15));
     }
-    @include mini {
-      width: 100vw;
-      border: 0.25rem solid #EFF6FC;
-      border-radius: 50vw 3rem 3rem 50vw;
+  }
+}
+
+::v-deep #featured-post-text {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  @include mini {
+    padding-top: 5rem;
+  }
+  .text-block {
+    padding: 0 2rem;
+    .label,
+    .heading,
+    .description {
+      margin-bottom: 0.8125rem;
+    }
+    .label {
+      @include fontWeight_SemiBold;
+      font-size: 0.9375rem;
+      letter-spacing: toRem(0.45);
+      line-height: leading(35, 15);
+    }
+    .heading {
+      @include fontWeight_Medium;
+      font-size: toRem(30);
+      line-height: leading(40, 30);
+      letter-spacing: toRem(1.2);
+    }
+    .description {
+      @include fontSize_Regular;
+      @include fontWeight_Regular;
+      line-height: leading(28, 16);
+      letter-spacing: toRem(0.48);
     }
   }
 }
 
 ::v-deep #zero-filter-bar {
   position: relative;
-  margin-left: 0.5rem;
-  margin-right: 3rem;
-  width: calc(100% - 2rem);
-  height: 2.5rem;
-  @include blogPageOutline;
+  width: calc(100% - 1rem);
+  height: toRem(60);
+  &:before {
+    content: '';
+    position: absolute;
+    top: -0.3125rem;
+    left: -0.3125rem;
+    width: calc(100% + 0.625rem);
+    height: calc(100% + 0.625rem);
+    transition: all 200ms ease;
+    background-color: rgba($azureRadiance, 0);
+    border-radius: 0.9375rem;
+  }
   &:after {
-    background-color: $white;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hawkesBlue;
+    border-radius: 0.625rem;
+    border: 0.3125rem solid $jordyBlue;
+  }
+  &.focused {
+    &:before {
+      background-color: $azureRadiance;
+    }
   }
   .icon-container {
-    margin: 0 0.5rem;
+    position: relative;
+    margin: 0 1rem;
     height: 100%;
+    width: 1.25rem;
     z-index: 10;
+    .magnifying-glass {
+      position: relative;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_1060_8904)'%3e%3ccircle cx='8.5' cy='8.5' r='7.5' stroke='%2308072E' stroke-width='2' stroke-linecap='round'/%3e%3cpath d='M14 14L20 20' stroke='%2308072E' stroke-width='2' stroke-linecap='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_1060_8904'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    }
   }
   .input {
     position: relative;
     left: -1px;
-    font-size: 14px;
+    font-size: toRem(17);
     @include fontWeight_Medium;
-    letter-spacing: $letterSpacing_Large;
-    color: $azureRadiance;
+    font-style: italic;
+    letter-spacing: toRem(0.48);
+    line-height: leading(28, 17);
+    color: #201F4B;
     background-color: transparent;
     outline: none;
     border: none;
     z-index: 10;
     &::placeholder {
-      font-size: 14px;
-      color: $azureRadiance;
+      font-size: toRem(17);
       @include fontWeight_Medium;
-      letter-spacing: $letterSpacing_Large;
+      font-style: italic;
+      letter-spacing: toRem(0.48);
+      line-height: leading(28, 17);
+      color: #201F4B;
     }
   }
 }
 
 ::v-deep #blogposts-section {
-  padding-top: 1.75rem;
-  .card {
+  padding-top: 2.6875rem;
+  .content-section {
+    padding: 0;
+  }
+  .card.type__E {
+    background-color: $hawkesBlue;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
     .image {
-      height: 47%;
-      @include borderRadius_Large;
-      overflow: hidden;
+      width: 100%;
+      height: unset;
+      border-radius: 0.3125rem;
+    }
+    .panel-left {
+      position: relative;
+    }
+    .date {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 0;
+    }
+    .button {
+      align-self: flex-end;
     }
   }
 }
