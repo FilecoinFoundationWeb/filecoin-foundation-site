@@ -134,7 +134,7 @@ export default {
           img: post.image,
           img_type: 'background_image',
           action: 'nuxt-link',
-          url: `/${post.slug}`,
+          url: `/blog/${post.slug}`,
           title: post.title,
           description: post.description,
           date: post.date || post.createdAt,
@@ -142,7 +142,7 @@ export default {
           cta: {
             type: 'H',
             text: 'Read more',
-            url: `/${post.slug}`
+            url: `/blog/${post.slug}`
           }
         }
         arr.push(card)
@@ -172,7 +172,7 @@ export default {
                 action: 'nuxt-link',
                 text: 'Read more',
                 icon: 'readme',
-                url: `/${featured.slug}`
+                url: `/blog/${featured.slug}`
               }
             ]
           },
@@ -233,7 +233,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$backgroundLayers__Offset__Desktop: 1.75rem * 3;
+$backgroundLayers__Offset__Desktop: 1.75rem * 5;
 $backgroundLayers__Offset__Medium: 1rem * 5;
 $backgroundLayers__Offset__Mini: 0.25rem * 5;
 

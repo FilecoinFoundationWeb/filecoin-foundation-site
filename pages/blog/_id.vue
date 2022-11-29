@@ -114,6 +114,7 @@ export default {
       const markdown = await $content(`blog/${route.params.id}`).fetch()
       const posts = await $content('blog').without(['body']).fetch()
       markdown.allPosts = posts.sort((a, b) => a.updatedAt.localeCompare(b.updatedAt))
+      await store.dispatch('global/getBaseData', { key: 'markdown', data: markdown })
       return { markdown }
     } catch (e) {
       return error('This project does not exist')
@@ -147,7 +148,18 @@ export default {
   },
 
   head () {
-    return this.$CompileSeo(this.$GetSeo(this.tag))
+    const head = CloneDeep(this.$CompileSeo(this.$GetSeo(this.tag)))
+    head.title = this.markdown.title
+    head.meta.forEach((item) => {
+      if (item.hid === 'description' || item.hid === 'og:description' || item.hid === 'twitter:description') { item.content = this.markdown.description }
+      if (item.hid === 'og:title' || item.hid === 'twitter:title') { item.content = this.markdown.title }
+      if (item.hid === 'og:image' || item.hid === 'twitter:image') { item.content = `https://fil.org${this.markdown.image}` }
+      if (item.hid === 'og:url') { item.content = `${item.content}/${this.markdown.slug}` }
+    })
+    head.link.forEach((item) => {
+      item.href = `${item.href}/${this.markdown.slug}`
+    })
+    return head
   },
 
   computed: {
@@ -189,7 +201,7 @@ export default {
                 action: 'nuxt-link',
                 text: this.markdown.author,
                 icon: 'play',
-                url: `/${this.markdown.slug}`
+                url: `/blog/${this.markdown.slug}`
               }
             ]
           },
@@ -220,7 +232,7 @@ export default {
       const index = this.postIndex
       if (index > 0) {
         const slug = this.allPosts[index - 1].slug
-        return `/${slug}`
+        return `/blog/${slug}`
       }
       return false
     },
@@ -228,7 +240,7 @@ export default {
       const index = this.postIndex
       if (index < this.allPosts.length - 1) {
         const slug = this.allPosts[index + 1].slug
-        return `/${slug}`
+        return `/blog/${slug}`
       }
       return false
     },
@@ -251,7 +263,7 @@ export default {
               img: post.image,
               img_type: 'background_image',
               action: 'nuxt-link',
-              url: `/${post.slug}`,
+              url: `/blog/${post.slug}`,
               title: post.title,
               description: post.description,
               date: post.date || post.createdAt,
@@ -259,7 +271,7 @@ export default {
               cta: {
                 type: 'H',
                 text: 'Read more',
-                url: `/${post.slug}`
+                url: `/blog/${post.slug}`
               }
             })
           }
@@ -301,7 +313,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$backgroundLayers__Offset__Desktop: 1.75rem * 3;
+$backgroundLayers__Offset__Desktop: 1.75rem * 5;
 $backgroundLayers__Offset__Medium: 1rem * 5;
 $backgroundLayers__Offset__Mini: 0.25rem * 5;
 

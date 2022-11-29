@@ -1,5 +1,5 @@
 <template>
-  <div class="error-page">
+  <div v-if="loaded" class="error-page">
 
     <div class="main-content">
 
@@ -21,7 +21,7 @@
 
 <script>
 // ===================================================================== Imports
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import CloneDeep from 'lodash/cloneDeep'
 
 import PageSection from '../components/PageSection'
@@ -38,6 +38,7 @@ export default {
 
   data () {
     return {
+      loaded: false,
       pageLayersBreakpointData: {
         default: {
           stroke: 1.5,
@@ -55,20 +56,44 @@ export default {
     }
   },
 
+  head () {
+    if (this.loaded) {
+      return this.$CompileSeo(this.$GetSeo())
+    }
+  },
+
   computed: {
     ...mapGetters({
       siteContent: 'global/siteContent'
     }),
     sections () {
-      const content = CloneDeep(this.siteContent.general.error_page)
-      return {
-        section_1: {
-          error_message: {
-            left: content
+      if (this.siteContent.general) {
+        const content = CloneDeep(this.siteContent.general.error_page)
+        return {
+          section_1: {
+            error_message: {
+              left: content
+            }
           }
         }
       }
+      return {}
     }
+  },
+
+  mounted () {
+    this.getData()
+    this.setPage404(true)
+  },
+
+  methods: {
+    getData () {
+      this.$store.dispatch('global/getBaseData', 'general')
+      this.loaded = true
+    },
+    ...mapActions({
+      setPage404: 'global/setPage404'
+    })
   }
 }
 </script>

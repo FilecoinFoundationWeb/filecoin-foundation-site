@@ -105,7 +105,7 @@ export default {
       siteContent: 'global/siteContent'
     }),
     footer () {
-      return this.siteContent.general.footer
+      return this.siteContent.general ? this.siteContent.general.footer : {}
     },
     text () {
       return this.footer.text
@@ -117,10 +117,10 @@ export default {
       return this.footer.panel_bottom
     },
     panelBottomLinks () {
-      return this.panelBottom.links
+      return this.panelBottom ? this.panelBottom.links : []
     },
     panelBottomCopyrightText () {
-      return this.panelBottom.copyright_text
+      return this.panelBottom ? this.panelBottom.copyright_text : ''
     }
   }
 }

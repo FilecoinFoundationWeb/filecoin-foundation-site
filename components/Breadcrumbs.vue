@@ -16,7 +16,8 @@
         v-else
         :key="`text-${index}`"
         class="breadcrumb text">
-        {{ link.text }}
+        <span class="slug">{{ link.text }}</span>
+        <span class="mobile-slug">{{ limitChars(link.text) }}</span>
       </div>
 
       <div
@@ -56,7 +57,10 @@ export default {
       siteContent: 'global/siteContent'
     }),
     breadcrumbsMapping () {
-      return this.siteContent.general.breadcrumbs_mapping
+      if (this.siteContent.general) {
+        return this.siteContent.general.breadcrumbs_mapping
+      }
+      return false
     }
   },
 
@@ -72,31 +76,39 @@ export default {
 
   methods: {
     setBreadcrumbLinks () {
-      const labels = this.breadcrumbsMapping
-      const path = this.$route.path
-      const items = path.split('/').filter(string => string !== '/' && string !== '')
-      const links = [{ // contains index route by default
-        type: 'X',
-        action: 'nuxt-link',
-        url: '/',
-        text: labels.index
-      }]
-      items.forEach((item, index) => {
-        const url = `/${items.slice(0, index + 1).join('/')}`
-        const routeName = items.slice(0, index + 1).join('-')
-        const text = labels[routeName]
-        if (index !== items.length - 1) {
-          links.push({
-            type: 'X',
-            action: 'nuxt-link',
-            url,
-            text
-          })
-        } else {
-          links.push({ text })
-        }
-      })
-      this.links = links
+      if (this.breadcrumbsMapping) {
+        const labels = this.breadcrumbsMapping
+        const path = this.$route.path
+        const items = path.split('/').filter(string => string !== '/' && string !== '')
+        const links = [{ // contains index route by default
+          type: 'X',
+          action: 'nuxt-link',
+          url: '/',
+          text: labels.index
+        }]
+        items.forEach((item, index) => {
+          const url = `/${items.slice(0, index + 1).join('/')}`
+          const routeName = items.slice(0, index + 1).join('-')
+          let text = labels[routeName]
+          if (!text && this.siteContent.hasOwnProperty('blog')) {
+            text = this.siteContent.markdown.title
+          }
+          if (index !== items.length - 1) {
+            links.push({
+              type: 'X',
+              action: 'nuxt-link',
+              url,
+              text
+            })
+          } else {
+            links.push({ text })
+          }
+        })
+        this.links = links
+      }
+    },
+    limitChars (text) {
+      return `${text.substring(0, 30)}...`
     }
   }
 }
@@ -145,4 +157,18 @@ export default {
 ::v-deep .button.type__X {
   color: $white;
 }
+
+.slug {
+  @include mini {
+    display: none;
+  }
+}
+
+.mobile-slug {
+  display: none;
+  @include mini {
+    display: inline;
+  }
+}
+
 </style>
