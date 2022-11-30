@@ -418,7 +418,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 #post-body-section {
   position: relative;
-  padding: 6.625rem 0;
+  padding: 5rem 0;
   @include mini {
     padding-top: 1.75rem;
   }
@@ -465,6 +465,14 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   }
   a {
     position: relative;
+  }
+  p {
+    margin-bottom: 3rem;
+    font-weight: 350;
+    font-size: 1.2rem;
+    &:first-child {
+      @include fontWeight_Medium;
+    }
   }
   p > a {
     &:before {
@@ -578,9 +586,15 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 #bottom-controls {
   .button {
-    font-size: 14px;
+    @include fontSize_Large;
+    @include fontWeight_SemiBold;
     text-align: center;
     color: $kleinBlue;
+    transition: 200ms ease;
+    transform: scale(1);
+    &:hover {
+      transform: scale(1.075);
+    }
   }
 }
 
@@ -685,6 +699,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       line-height: leading(25, 19);
       letter-spacing: toRem(0.5);
       margin-bottom: 0.625rem;
+      color: #0A07E2;
     }
     .description {
       font-size: toRem(15);
