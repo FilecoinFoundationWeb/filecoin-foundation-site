@@ -10,7 +10,10 @@ description: The Filecoin Foundation, an independent organization that supports 
   and maintain New York City Open Data on the decentralized web for the next five
   years.
 featured: false
-recommendedPosts: []
+recommendedPosts:
+- applications-are-open-for-filecoin-plus-notary-elections
+- announcing-the-venushub-platform
+- announcing-the-starling-lab
 image: "/images/1-_l1pjw5m2ayuddshdifbcg.png"
 
 ---

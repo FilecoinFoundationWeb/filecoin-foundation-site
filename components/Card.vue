@@ -516,8 +516,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 27rem;
-  margin: 0 1rem 3rem 0 !important;
+  min-height: 27rem;
+  margin: 0 1rem 1.25rem 0 !important;
   width: calc(33% - 1rem);
   padding: 0.75rem;
   color: $blackPearl;
