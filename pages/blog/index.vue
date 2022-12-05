@@ -73,7 +73,10 @@ export default {
   },
 
   async asyncData ({ $content }) {
-    const markdownFiles = await $content('blog').without(['body']).fetch()
+    const markdownFiles = await $content('blog')
+      .without(['body'])
+      .sortBy('date', 'desc')
+      .fetch()
     return { markdownFiles }
   },
 

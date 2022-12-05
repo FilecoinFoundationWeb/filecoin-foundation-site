@@ -112,8 +112,11 @@ export default {
   async asyncData ({ $content, app, store, route, error }) {
     try {
       const markdown = await $content(`blog/${route.params.id}`).fetch()
-      const posts = await $content('blog').without(['body']).fetch()
-      markdown.allPosts = posts.sort((a, b) => a.updatedAt.localeCompare(b.updatedAt))
+      const markdownFiles = await $content('blog')
+        .without(['body'])
+        .sortBy('date', 'desc')
+        .fetch()
+      markdown.allPosts = markdownFiles
       await store.dispatch('global/getBaseData', { key: 'markdown', data: markdown })
       return { markdown }
     } catch (e) {
@@ -394,6 +397,10 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
       font-size: toRem(35);
       line-height: leading(50, 35);
       letter-spacing: toRem(1.2);
+      @include small {
+        font-size: 1.8rem;
+        line-height: 1.3;
+      }
     }
     .subheading {
       font-size: toRem(18);
@@ -457,6 +464,8 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 ::v-deep #post-body {
+  ::-moz-selection { background: $deepCove; color: $white; }
+  ::selection { background: $deepCove; color: $white; }
   h1 {
     margin-bottom: 3rem;
   }

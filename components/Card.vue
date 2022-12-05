@@ -587,12 +587,18 @@ export default {
   .cta {
     margin-top: auto;
   }
-  .title,
-  .description {
+  .title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 }
 
