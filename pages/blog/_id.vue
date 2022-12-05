@@ -210,7 +210,7 @@ export default {
               num: 'col-10_md-8_sm-10_mi-12',
               push_left: 'off-1_md-2_sm-1_mi-0',
               push_right: 'off-1_md-2_sm-1_mi-0'
-            },
+            }
           }
         }
       }
