@@ -100,7 +100,7 @@ import Button from '@/components/Button'
 // =================================================================== Functions
 const formatCardDescription = (string) => {
   if (string) {
-    const sanitized = string.replace(/(\r\n|\n|\r)/gm,'')
+    const sanitized = string.replace(/(\r\n|\n|\r)/gm, '')
     return sanitized
   }
   return ''

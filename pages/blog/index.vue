@@ -65,7 +65,7 @@ const unslugify = (slug, type = 'capitalize-first-character') => {
 
 const formatCardDescription = (string) => {
   if (string) {
-    const sanitized = string.replace(/(\r\n|\n|\r)/gm,'')
+    const sanitized = string.replace(/(\r\n|\n|\r)/gm, '')
     return sanitized
   }
   return ''
