@@ -97,6 +97,15 @@ import BackgroundLayers from '@/components/BackgroundLayers'
 import SocialIcons from '@/components/SocialIcons'
 import Button from '@/components/Button'
 
+// =================================================================== Functions
+const formatCardDescription = (string) => {
+  if (string) {
+    const sanitized = string.replace(/(\r\n|\n|\r)/gm,'')
+    return sanitized
+  }
+  return ''
+}
+
 // ====================================================================== Export
 export default {
   name: 'PageSingular',
@@ -264,7 +273,7 @@ export default {
               action: 'nuxt-link',
               url: `/blog/${post.slug}`,
               title: post.title,
-              description: post.description,
+              description: formatCardDescription(post.description),
               date: post.date || post.createdAt,
               tags: post.tags,
               cta: {

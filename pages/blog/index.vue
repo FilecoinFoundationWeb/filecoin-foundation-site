@@ -63,6 +63,14 @@ const unslugify = (slug, type = 'capitalize-first-character') => {
   }
 }
 
+const formatCardDescription = (string) => {
+  if (string) {
+    const sanitized = string.replace(/(\r\n|\n|\r)/gm,'')
+    return sanitized
+  }
+  return ''
+}
+
 // ====================================================================== Export
 export default {
   name: 'PageBlog',
@@ -135,7 +143,7 @@ export default {
           action: 'nuxt-link',
           url: `/blog/${post.slug}`,
           title: post.title,
-          description: post.description,
+          description: formatCardDescription(post.description),
           date: post.date || post.createdAt,
           tags: post.tags,
           cta: {
