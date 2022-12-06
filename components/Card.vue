@@ -516,7 +516,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 27rem;
+  min-height: 31.25rem;
   margin: 0 1rem 1.25rem 0 !important;
   width: calc(33% - 1rem);
   padding: 0.75rem;
@@ -589,7 +589,7 @@ export default {
   }
   .title {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
