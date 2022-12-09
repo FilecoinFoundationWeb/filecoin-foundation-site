@@ -1,7 +1,5 @@
 ---
-tags:
-- Survey
-- Data
+tags: []
 title: 'New Survey: American Consumers Are Ready to Change Up to Web3'
 date: 2022-11-01
 author: Filecoin Foundation
