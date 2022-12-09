@@ -2,6 +2,7 @@
 tags:
 - FIL Lisbon
 - Lisbon
+- Event
 title: Filecoin Foundation Introduces FIL Lisbon 2022 to Bring the Web3 Community
   Together, Announces Speakers
 date: 2022-10-17
