@@ -64,7 +64,10 @@ export default {
       siteContent: 'global/siteContent'
     }),
     icons () {
-      return this.forceList.length ? this.forceList : this.siteContent.general.social
+      if (this.siteContent.general) {
+        return this.forceList.length ? this.forceList : this.siteContent.general.social
+      }
+      return []
     }
   }
 }

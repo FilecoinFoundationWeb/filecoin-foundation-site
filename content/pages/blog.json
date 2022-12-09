@@ -36,7 +36,7 @@
     }
   ],
   "searchBar": {
-    "placeholder": "Search all blog posts"
+    "placeholder": "search blog articles"
   },
   "blogposts": {
     "display_amount": 9

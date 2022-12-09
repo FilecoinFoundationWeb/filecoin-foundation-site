@@ -4,7 +4,7 @@ title: Applications are Open for Filecoin Plus Notary Elections
 date: 2022-02-21
 author: Filecoin Foundation
 description: 'This month, the Filecoin Plus program will kick off its third round
-  of elections. '
+  of elections.'
 featured: false
 recommendedPosts: []
 image: "/images/1-hqcdvvvtl_59qgtoz8btwg.png"

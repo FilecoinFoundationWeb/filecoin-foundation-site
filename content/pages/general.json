@@ -88,9 +88,8 @@
         },
         {
           "type": "X",
-          "action": "a",
-          "target": "_blank",
-          "url": "//filecoinfoundation.medium.com",
+          "action": "nuxt-link",
+          "url": "/blog",
           "text": "Blog"
         }
       ]
@@ -236,7 +235,8 @@
     "ecosystem": "Ecosystem",
     "grants": "Grants",
     "get-involved": "Get Involved",
-    "events": "Events"
+    "events": "Events",
+    "blog": "Blog"
   },
   "footer": {
     "text": {
