@@ -16,8 +16,8 @@
         v-else
         :key="`text-${index}`"
         class="breadcrumb text">
-        <span class="slug">{{ link.text }}</span>
-        <span class="mobile-slug">{{ limitChars(link.text) }}</span>
+        <span class="slug">{{ limitChars(50, link.text) }}</span>
+        <span class="mobile-slug">{{ limitChars(30, link.text) }}</span>
       </div>
 
       <div
@@ -107,8 +107,11 @@ export default {
         this.links = links
       }
     },
-    limitChars (text) {
-      return `${text.substring(0, 30)}...`
+    limitChars (amt, text) {
+      if (text.length > amt) {
+        return `${text.substring(0, amt)}...`
+      }
+      return text
     }
   }
 }
@@ -120,6 +123,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-left: 2.4375rem;
   @include small {
     padding: 0 1rem;
   }

@@ -88,9 +88,8 @@
         },
         {
           "type": "X",
-          "action": "a",
-          "target": "_blank",
-          "url": "//filecoinfoundation.medium.com",
+          "action": "nuxt-link",
+          "url": "/blog",
           "text": "Blog"
         }
       ]

@@ -516,8 +516,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 27rem;
-  margin: 0 1rem 3rem 0 !important;
+  min-height: 31.25rem;
+  margin: 0 1rem 1.25rem 0 !important;
   width: calc(33% - 1rem);
   padding: 0.75rem;
   color: $blackPearl;
@@ -587,12 +587,18 @@ export default {
   .cta {
     margin-top: auto;
   }
-  .title,
-  .description {
+  .title {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 }
 
