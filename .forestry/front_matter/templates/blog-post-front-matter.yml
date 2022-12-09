@@ -42,6 +42,7 @@ pages:
 - content/blog/announcing-explorer-awards-by-filecoin-foundation-and-unfinished.md
 - content/blog/announcing-network-upgrade-skyr.md
 - content/blog/announcing-the-filecoin-community-roadmap.md
+- content/blog/announcing-the-public-data-commons-and-awards-program.md
 - content/blog/announcing-the-starling-lab.md
 - content/blog/announcing-the-venushub-platform.md
 - content/blog/applications-are-open-for-filecoin-plus-notary-elections.md
@@ -52,6 +53,7 @@ pages:
 - content/blog/building-a-flow-nft-pet-store-part-1.md
 - content/blog/building-an-nft-store-on-flow-part-2.md
 - content/blog/case-study-genrait-leverages-filecoin-network-for-greater-visibility-access-and-storage-of-genomic-data.md
+- content/blog/case-study-seal-storage-making-web3-accessible-for-all-through-ecosystem-leadership-and-the-filecoin-network-1.md
 - content/blog/case-study-seal-storage-making-web3-accessible-for-all-through-ecosystem-leadership-and-the-filecoin-network.md
 - content/blog/congratulations-to-the-hedera-x-filecoin-grant-program-winners.md
 - content/blog/dev-grant-spotlight-4everland.md
@@ -65,10 +67,13 @@ pages:
 - content/blog/dev-grant-spotlight-ukraine-art-collective.md
 - content/blog/dev-grant-spotlight-webrecorder.md
 - content/blog/dzk-foundation-awarded-chainlink-filecoin-joint-grant-to-support-zk-rollup-research.md
+- content/blog/everything-you-need-to-know-about-fip0036-deliberation-discussion-and-next-steps.md
 - content/blog/fil-austin-2022-recap-fil-ling-you-in.md
 - content/blog/fil-toronto-2022-recap.md
 - content/blog/filecoin-community-approves-change-to-storage-provider-terminology.md
+- content/blog/filecoin-foundation-and-blockchain-law-for-social-good-center-accelerate-web3-education-1.md
 - content/blog/filecoin-foundation-and-blockchain-law-for-social-good-center-accelerate-web3-education.md
+- content/blog/filecoin-foundation-and-ffdw-team-up-with-the-internet-archive-to-preserve-government-datasets-in-new-democracy-s-library-initiative.md
 - content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-expand-boards.md
 - content/blog/filecoin-foundation-and-filecoin-foundation-for-the-decentralized-web-gain-momentum.md
 - content/blog/filecoin-foundation-and-lockheed-martin-bring-decentralized-storage-to-space.md
@@ -76,6 +81,7 @@ pages:
 - content/blog/filecoin-foundation-announces-board-of-directors.md
 - content/blog/filecoin-foundation-chair-marta-belcher-testifies-before-us-senate-banking-committee.md
 - content/blog/filecoin-foundation-first-half-year-in-review.md
+- content/blog/filecoin-foundation-introduces-fil-lisbon-2022-to-bring-the-web3-community-together-announces-speakers.md
 - content/blog/filecoin-foundation-joins-blockchain-for-europe.md
 - content/blog/filecoin-foundation-wave-9-dev-grant-proposals-due-friday-july-30.md
 - content/blog/filecoin-storage-provider-spotlight-dcent.md
@@ -109,11 +115,14 @@ pages:
 - content/blog/meet-orbit-community-program-ambassadors.md
 - content/blog/meet-the-filecoin-foundation-and-the-filecoin-foundation-for-the-decentralized-web.md
 - content/blog/meet-the-newest-members-of-the-filecoin-foundation-team.md
+- content/blog/new-survey-american-consumers-are-ready-to-change-up-to-web3.md
 - content/blog/new-wave-9-developer-grant-recipients.md
 - content/blog/participate-in-the-filecoin-network-s-poll-on-extending-the-maximum-lifetime-of-v1-sectors.md
 - content/blog/participating-in-the-filecoin-ecosystem-bounties-microgrants-and-fips.md
 - content/blog/recapping-filecoin-foundation-s-2021-governance-summit.md
 - content/blog/second-round-of-filecoin-plus-notaries-elected-5-pib-more-datacap-awarded.md
+- content/blog/social-media-on-the-decentralized-web.md
+- content/blog/spotlight-new-filecoin-virtual-machine-projects-unlocking-smart-contract-programmability-1.md
 - content/blog/spotlight-new-filecoin-virtual-machine-projects-unlocking-smart-contract-programmability.md
 - content/blog/storage-company-ewesion-leverages-filecoin-network-for-data-preservation.md
 - content/blog/storing-ai-datasets-on-the-decentralized-web.md
