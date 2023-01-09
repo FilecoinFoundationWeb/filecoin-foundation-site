@@ -39,4 +39,4 @@ The Filecoin Station testnet is live and the beta launch is expected in March 20
 
 Learn how to participate and what is coming next for the Filecoin Saturn by watching the FIL Lisbon talk [Coming Soon Earn Filecoin From Your Desktop](https://www.youtube.com/watch?v=GzDkm1Kscqk&list=PLp3zrT1ewY0kWhcrnEWz1r3r2k97TjPz2&index=8).
 
-**![](https://lh6.googleusercontent.com/-3LsVjpQu2xs_ueugfnqH2afw275a7O-YfncZ0YYlzyWBlBJ3BFOxyH81R11LomHplXh1zi_EhmPOtcMxuFdGUNqlAMGV-zXzDlw0bQ6KVTLY7yRHonV244LCU2dY4WZYOrTrHaQJJmTUg8mG7ZoFnKE7UqwQaFdl-6eHMjXKtQ7Y06y5OkgFl5wNzM0kg =624x311)**
+**![](https://lh6.googleusercontent.com/-3LsVjpQu2xs_ueugfnqH2afw275a7O-YfncZ0YYlzyWBlBJ3BFOxyH81R11LomHplXh1zi_EhmPOtcMxuFdGUNqlAMGV-zXzDlw0bQ6KVTLY7yRHonV244LCU2dY4WZYOrTrHaQJJmTUg8mG7ZoFnKE7UqwQaFdl-6eHMjXKtQ7Y06y5OkgFl5wNzM0kg "FIL Lisbon session" =624x311)**
