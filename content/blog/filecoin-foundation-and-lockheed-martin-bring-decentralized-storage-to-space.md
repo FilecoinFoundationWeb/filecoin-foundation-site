@@ -1,7 +1,7 @@
 ---
 tags: []
 title: Filecoin Foundation and Lockheed Martin Bring Decentralized Storage to Space
-date: 2022-05-22T16:00:00Z
+date: 2022-05-22
 author: Filecoin Foundation
 description: |-
   The companies are working together to deploy the Interplanetary File System in space as key digital infrastructure to transform how data is shared in the space economy

@@ -8,7 +8,8 @@ import Settings from '@/content/data/settings.json'
 const state = () => ({
   siteContent: {},
   modal: false,
-  jobPostings: false
+  jobPostings: false,
+  page404: false
 })
 
 // ///////////////////////////////////////////////////////////////////// Getters
@@ -16,7 +17,8 @@ const state = () => ({
 const getters = {
   siteContent: state => state.siteContent,
   modal: state => state.modal,
-  jobPostings: state => state.jobPostings
+  jobPostings: state => state.jobPostings,
+  page404: state => state.page404
 }
 
 // ///////////////////////////////////////////////////////////////////// Actions
@@ -61,6 +63,10 @@ const actions = {
   },
   setJobPostings ({ commit }, payload) {
     commit('SET_JOB_POSTINGS', payload)
+  },
+  // //////////////////////////////////////////////////////////////// setPage404
+  setPage404 ({ commit }, toggle) {
+    commit('SET_PAGE_404', toggle)
   }
 }
 
@@ -78,6 +84,9 @@ const mutations = {
   },
   SET_JOB_POSTINGS (state, payload) {
     state.jobPostings = payload
+  },
+  SET_PAGE_404 (state, toggle) {
+    state.page404 = toggle
   }
 }
 

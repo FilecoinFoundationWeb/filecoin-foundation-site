@@ -1,9 +1,9 @@
 ---
 tags: []
 title: "New agreement between Filecoin Foundation and Electric Coin Co. simplifies Halo licensing and creates grant pool for Filecoin-Zcash projects"
-date: "2022-04-13T16:00:00Z"
+date: 2022-04-13
 author: Filecoin Foundation
-description: 
+description:
 featured: false
 recommendedPosts: []
 image: "/images/0211-zcash-twitter.png"

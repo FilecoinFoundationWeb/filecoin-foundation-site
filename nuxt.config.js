@@ -81,8 +81,7 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    // https://github.com/agency-undone/au-nuxt-module-zero
-    '@agency-undone/au-nuxt-module-zero',
+    '~/modules/zero',
     // Doc: https://sitemap.nuxtjs.org
     '@nuxtjs/sitemap',
     // Doc: https://content.nuxtjs.org
