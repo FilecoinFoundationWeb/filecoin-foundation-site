@@ -3,8 +3,8 @@
 
     <div class="slider">
       <div
-        class="slider-row-container"
-        ref="rowContainer">
+        ref="rowContainer"
+        class="slider-row-container">
         <div
           class="slider-row"
           :class="{ sliding: animate }"
