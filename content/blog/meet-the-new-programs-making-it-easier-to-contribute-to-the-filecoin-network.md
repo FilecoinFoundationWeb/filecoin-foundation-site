@@ -1,7 +1,7 @@
 ---
 tags: []
 title: Meet the New Programs Making it Easier to Contribute to the Filecoin Network
-date: 
+date: 2023-01-16
 author: ''
 description: ''
 featured: true
