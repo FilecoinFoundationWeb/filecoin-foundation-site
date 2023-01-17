@@ -236,7 +236,9 @@
     "grants": "Grants",
     "get-involved": "Get Involved",
     "events": "Events",
-    "blog": "Blog"
+    "blog": "Blog",
+    "terms": "Terms of Use",
+    "policy": "Data & Privacy Policy"
   },
   "footer": {
     "text": {
@@ -267,7 +269,7 @@
         {
           "type": "F",
           "action": "nuxt-link",
-          "url": "/policy/#site-navigation",
+          "url": "/policy",
           "text": "Data & Privacy Policy"
         },
         {
