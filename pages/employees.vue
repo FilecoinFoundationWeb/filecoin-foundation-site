@@ -1,18 +1,20 @@
 <template>
-  <div class="page page-policy">
+  <div class="page page-employees">
 
     <div class="main-content">
 
       <div class="grid">
         <div class="col-10_mi-11" data-push-left="off-2_mi-1">
           <div class="content">
+
             <nuxt-content :document="markdown" />
+
           </div>
         </div>
       </div>
 
       <BackgroundLayers
-        id="page-policy-background-layers"
+        id="page-employees-background-layers"
         layers-array="3_4_5_6"
         :breakpoints="pageLayersBreakpointData" />
 
@@ -20,16 +22,16 @@
 
   </div>
 </template>
-
+  
 <script>
 // ====================================================================== Import
-import PolicyPageData from '@/content/pages/policy.json'
+import EmployeesPageData from '@/content/pages/employees.json'
 
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PagePolicy',
+  name: 'PageEmployees',
 
   components: {
     BackgroundLayers
@@ -37,16 +39,16 @@ export default {
 
   async asyncData ({ $content, app, store, route, error }) {
     try {
-      const markdown = await $content('privacy-policy').fetch()
+      const markdown = await $content('employees').fetch()
       return { markdown }
     } catch (e) {
-      return error('Could not find privacy policy content')
+      return error('Could not find privacy employees content')
     }
   },
 
   data () {
     return {
-      tag: 'policy',
+      tag: 'employees',
       pageLayersBreakpointData: {
         medium: {
           stroke: 1,
@@ -62,7 +64,7 @@ export default {
 
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
-    await store.dispatch('global/getBaseData', { key: 'policy', data: PolicyPageData })
+    await store.dispatch('global/getBaseData', { key: 'employees', data: EmployeesPageData })
   },
 
   head () {
@@ -70,7 +72,7 @@ export default {
   }
 }
 </script>
-
+  
 <style lang="scss" scoped>
 $backgroundLayers__Offset__Desktop: 1.75rem * 5;
 $backgroundLayers__Offset__Medium: 1rem * 5;
@@ -83,7 +85,7 @@ $backgroundLayers__Left__Medium: 1rem * 6;
 $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 // ///////////////////////////////////////////////////////////////////// General
-.page-policy {
+.page-employees {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
   @include medium {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium} + 5rem);
@@ -164,7 +166,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-policy-background-layers {
+::v-deep #page-employees-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
