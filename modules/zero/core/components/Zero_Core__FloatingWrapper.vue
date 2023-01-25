@@ -1,5 +1,5 @@
 <template>
-  <div class="anchor-container" ref="parent">
+  <div ref="parent" class="anchor-container">
     <div
       :class="['floating-content', { 'info-fixed': sticky }]"
       :style="{ width, transform }">
@@ -20,7 +20,6 @@ const stickyElementInViewport = (instance) => {
   const cutoffElement = document.getElementById(instance.cutoffid)
 
   if (anchorElement && cutoffElement) {
-
     const anchor = getElementDocumentCoords(anchorElement)
     const anchorWidth = `${Math.round(anchor.width)}px`
     const cutoff = getElementDocumentCoords(cutoffElement)
@@ -49,7 +48,6 @@ const stickyElementInViewport = (instance) => {
         instance.transform = 'translate(0px, 0px)'
       }
     }
-
   }
 }
 
@@ -83,7 +81,8 @@ export default {
     },
     cutoffid: {
       type: String,
-      required: false
+      required: false,
+      default: ''
     },
     bottomoffset: {
       type: Number,

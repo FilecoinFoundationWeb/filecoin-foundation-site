@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-terms">
+  <div class="page page-employees">
 
     <div class="main-content">
 
@@ -14,7 +14,7 @@
       </div>
 
       <BackgroundLayers
-        id="page-terms-background-layers"
+        id="page-employees-background-layers"
         layers-array="3_4_5_6"
         :breakpoints="pageLayersBreakpointData" />
 
@@ -22,16 +22,16 @@
 
   </div>
 </template>
-
+  
 <script>
 // ====================================================================== Import
-import TermsPageData from '@/content/pages/terms.json'
+import EmployeesPageData from '@/content/pages/employees.json'
 
 import BackgroundLayers from '@/components/BackgroundLayers'
 
 // ====================================================================== Export
 export default {
-  name: 'PageTerms',
+  name: 'PageEmployees',
 
   components: {
     BackgroundLayers
@@ -39,16 +39,16 @@ export default {
 
   async asyncData ({ $content, app, store, route, error }) {
     try {
-      const markdown = await $content('terms-of-use').fetch()
+      const markdown = await $content('employees').fetch()
       return { markdown }
     } catch (e) {
-      return error('Could not find terms content')
+      return error('Could not find privacy employees content')
     }
   },
 
   data () {
     return {
-      tag: 'terms',
+      tag: 'employees',
       pageLayersBreakpointData: {
         medium: {
           stroke: 1,
@@ -64,7 +64,7 @@ export default {
 
   async fetch ({ store }) {
     await store.dispatch('global/getBaseData', 'general')
-    await store.dispatch('global/getBaseData', { key: 'terms', data: TermsPageData })
+    await store.dispatch('global/getBaseData', { key: 'employees', data: EmployeesPageData })
   },
 
   head () {
@@ -72,7 +72,7 @@ export default {
   }
 }
 </script>
-
+  
 <style lang="scss" scoped>
 $backgroundLayers__Offset__Desktop: 1.75rem * 5;
 $backgroundLayers__Offset__Medium: 1rem * 5;
@@ -85,7 +85,7 @@ $backgroundLayers__Left__Medium: 1rem * 6;
 $backgroundLayers__Left__Mini: 0.25rem * 6;
 
 // ///////////////////////////////////////////////////////////////////// General
-.page-terms {
+.page-employees {
   padding-bottom: calc(#{$backgroundLayers__Top} + 10rem);
   @include medium {
     padding-bottom: calc(#{$navigationHeight + $backgroundLayers__Offset__Medium} + 5rem);
@@ -114,11 +114,21 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
   margin-bottom: 2rem;
 }
 
-::v-deep p a {
-  @include fontWeight_Bold;
-  &:hover {
-    text-decoration: underline;
+::v-deep p {
+  a {
+    @include fontWeight_Bold;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+  strong {
+    @include fontWeight_SemiBold;
+  }
+}
+
+::v-deep ul {
+  margin-left: 1.125rem;
+  margin-bottom: 2rem;
 }
 
 .main-content {
@@ -156,7 +166,7 @@ $backgroundLayers__Left__Mini: 0.25rem * 6;
 }
 
 // /////////////////////////////////////////////////////////// Background Layers
-::v-deep #page-terms-background-layers {
+::v-deep #page-employees-background-layers {
   position: absolute;
   top: 0;
   left: $backgroundLayers__Left__Desktop;
