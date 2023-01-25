@@ -1,0 +1,12 @@
+{
+    "seo": {
+      "title": "Employee Policy - Filecoin Foundation",
+      "description": "Employee and Job Applicant Privacy Policy"
+    },
+    "og": {
+      "site_name": "Employee Policy - Filecoin Foundation",
+      "url": "https://fil.org/employees",
+      "type": "website",
+      "image": "/images/open-graph.png"
+    }
+  }
