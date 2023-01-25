@@ -13,6 +13,5 @@ fields:
   template: data-open-graph-social
   label: Template → [Data] Open Graph & Social
 pages:
-- content/pages/employees.json
 - content/pages/policy.json
 - content/pages/terms.json
