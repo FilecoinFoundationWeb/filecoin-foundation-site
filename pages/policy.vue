@@ -6,9 +6,7 @@
       <div class="grid">
         <div class="col-10_mi-11" data-push-left="off-2_mi-1">
           <div class="content">
-
             <nuxt-content :document="markdown" />
-
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ Spritely’s fundamental research will provide four important benefits to future
 * Support granular and revocable trust that is persona-specific, with local human-meaningful mapping to decentralized identifiers, allowing discoverable names across networks, and credential management.
 * Offer a suite of distributed debugging tools that allow for time-traveling to the state of the system when the error occurred.
 
-Filecoin Foundation for the Decentralized Web (FFDW) recently [announced](https://medium.com/@FFDWeb/ffdw-supports-spritely-networked-communities-institute-to-develop-decentralized-social-media-36833f7273c9)an award to Spritely to further efforts to give people autonomy over identity and their relationships online.
+Filecoin Foundation for the Decentralized Web (FFDW) recently [announced](https://medium.com/@FFDWeb/ffdw-supports-spritely-networked-communities-institute-to-develop-decentralized-social-media-36833f7273c9) an award to Spritely to further efforts to give people autonomy over identity and their relationships online.
 
 **Audius**
 
