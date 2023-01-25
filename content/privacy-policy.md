@@ -1,7 +1,7 @@
 # Privacy Policy
-_Last Updated: December 31, 2022_
+_Last Updated: January 25, 2023_
 
-Filecoin Foundation and Filecoin Foundation for the Decentralized Web (collectively, "Filecoin Foundation," "we," "us") provide this Privacy Policy to explain our practices regarding the collection, use, and disclosure of your personal information both online and offline. This Privacy Policy applies to the fil.org and ffdweb.org websites ("Websites") and any websites, apps, or services that link to this Privacy Policy ("Services"), unless otherwise indicated.
+Filecoin Foundation and Filecoin Foundation for the Decentralized Web (collectively, "Filecoin Foundation," "we," "us") provide this Privacy Policy to explain our practices regarding the collection, use, and disclosure of your personal information both online and offline. This Privacy Policy applies to the fil.org and ffdweb.org websites ("Websites") and any websites, apps, or services that link to this Privacy Policy ("Services"), unless otherwise indicated. The Privacy Policy that applies to information obtained as part of job applications can be found at [fil.org/employees](https://fil.org/employees).
 
 ## I. What Personal Information is Collected
 Depending on how you interact with us, we may collect the following categories of personal information, some of which may be considered sensitive personal information under applicable laws, when you use our Services:

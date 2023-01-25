@@ -2,7 +2,7 @@
 
 _Last Updated: January 13, 2023_
 
-This employee Privacy Policy explains how Filecoin Foundation  (collectively, "Filecoin Foundation," "we," "us") collects, uses, and discloses your personal information both online and offline. This Privacy Policy does not cover your use of Filecoin Foundation services in other contexts outside of your employment- or applicant-related activities with Filecoin Foundation. The Privacy Policy that applies to your use of Filecoin Foundation services in other contexts is located at [https://fil.org/policy](https://fil.org/policy)
+This employee Privacy Policy explains how Filecoin Foundation  (collectively, "Filecoin Foundation," "we," "us") collects, uses, and discloses your personal information both online and offline. This Privacy Policy does not cover your use of Filecoin Foundation services in other contexts outside of your employment- or applicant-related activities with Filecoin Foundation. The Privacy Policy that applies to your use of Filecoin Foundation services in other contexts is located at [fil.org/policy](https://fil.org/policy)
 
 ## I. PERSONAL INFORMATION WE COLLECT
 
