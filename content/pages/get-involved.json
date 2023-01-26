@@ -55,7 +55,7 @@
           "description": ""
         }
       },
-      /*"careers_list": {
+      "careers_list": {
         "left": {
           "type": "card_list_block",
           "cols": {
@@ -85,7 +85,7 @@
         "grid": [
           "noGutter"
         ]
-      },*/
+      },
       "get_involved": {
         "left": {
           "type": "text_block",
