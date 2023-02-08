@@ -51,4 +51,6 @@ The FVM Open Hack Days are a great opportunity for developers, storage providers
 
 FVM Open Hack Days are run through the Filecoin Orbit program. Filecoin Orbit is a community of ambassadors and Filecoin storage providers dedicated to amplifying the voice of Filecoin and IPFS. This program is designed to educate and engage the community about the potential of the Filecoin network.
 
+![](/images/unnamed-13.png)
+
 Filecoin Orbit members receive support from the Filecoin Foundation to host events and hackathons, translate Filecoin documentation to other languages, and create original content. Interested in learning more about Filecoin Orbit? Learn more on our [Notion](https://www.notion.so/filecoin/Filecoin-Orbit-Community-Program-3d8a03c8d5444d3491908249664e55e9) and complete the [Orbit Volunteer Application](https://docs.google.com/forms/d/e/1FAIpQLSfIjth-qWpuYqSYtGwlZ9HxllcZ_5zCT80tCd7XF2P5mYfh2Q/viewform).
