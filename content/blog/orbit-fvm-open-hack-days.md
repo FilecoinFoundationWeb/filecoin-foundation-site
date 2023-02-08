@@ -33,7 +33,7 @@ The upcoming FVM Open Hack Days will take place around the world:
 
 **2/24**: FVM Open Hack Day with Ethereum Nigeria in [Lagos, Nigeria](https://lu.ma/w38yjnn8)
 
-**2/24:** FVM x New Web Group Open Hack Day in[ Shen Zen, China](https://docs.qq.com/form/page/DVW9VSlp2cm5rZ0RQ?from_page=doc_list_new_form&templateId=30558&create_type=2#/fill)
+**2/24:** FVM x New Web Group Open Hack Day in[ Shenzhen, China](https://docs.qq.com/form/page/DVW9VSlp2cm5rZ0RQ?from_page=doc_list_new_form&templateId=30558&create_type=2#/fill)
 
 **2/25**: FVM Open Hack Day with Filecoin Orbit Uganda in [Kampala, Uganda](https://www.meetup.com/orbit-community-kampala-uganda/events/290428092/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link)
 
