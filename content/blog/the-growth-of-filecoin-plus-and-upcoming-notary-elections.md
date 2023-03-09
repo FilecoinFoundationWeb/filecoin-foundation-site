@@ -11,8 +11,6 @@ recommendedPosts: []
 image: "/images/0202-filpluselection.png"
 
 ---
-**The Growth of Filecoin Plus and Upcoming Notary Elections**
-
 The [Filecoin Plus](https://fil.org/governance/#fil-plus) (Fil+) program is a layer of social trust on top of the Filecoin network to help incentivize the storage of real, valuable data sets. Clients looking to onboard data storage onto the network apply to community-selected Notaries to receive DataCap, which can then be used to incentivize storage providers to take storage deals.
 
 This winter, Filecoin Plus held its fourth round of Notary elections. The Filecoin Plus team solicited applications from hundreds of community members and organizations, and a final list of [Notaries](https://github.com/filecoin-project/notary-governance/tree/main/notaries) was selected are are now active.
