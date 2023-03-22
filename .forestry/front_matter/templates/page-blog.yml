@@ -87,5 +87,3 @@ fields:
   config:
     labelField: label
     max: 5
-pages:
-- content/blog/FIP0056.md
