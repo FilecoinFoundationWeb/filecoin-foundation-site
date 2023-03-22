@@ -8,7 +8,7 @@ description: Last year, we joined forces with Unfinished to launch the Explorer 
   technology with the support to learn more about Web3.
 featured: false
 recommendedPosts: []
-image: "/images/1030-consumersurvey.png"
+image: "/images/0609-ffxunfinished.png"
 
 ---
 Last year, we joined forces with [Unfinished](https://unfinished.com/) to launch the [Explorer Awards](https://explorerawards.org/), a series of grants to provide organizations and individuals using decentralized technology with the support to learn more about Web3. As a designer and developer of systems for a healthier digital society, Unfinished was an ideal partner for this initiative. The grants stem from a $200,000 funding pool that was dispersed in amounts between $1,000 and $10,000 to support projects that advanced learning and development in decentralized technology. The award was intended to fund anything from an NFT workshop to a metaverse exhibition to a Web3 dinner event.
