@@ -1,7 +1,5 @@
 # Filecoin Foundation Website
 
-> Note: these docs will be expanded upon in a future iteration of the site
-
 ## Overview
 
 - This is the repository for the _Filecoin Foundation_ website ([fil.org](https://fil.org))
