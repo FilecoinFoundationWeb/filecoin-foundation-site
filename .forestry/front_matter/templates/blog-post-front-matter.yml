@@ -43,7 +43,6 @@ pages:
 - content/blog/announcing-network-upgrade-skyr.md
 - content/blog/announcing-the-filecoin-community-roadmap.md
 - content/blog/announcing-the-public-data-commons-and-awards-program.md
-- content/blog/announcing-the-quality-phase-for-filecoin-plus-aligning-on-the-filecoin-plus-vision-mission-statement-and-roadmap.md
 - content/blog/announcing-the-starling-lab.md
 - content/blog/announcing-the-venushub-platform.md
 - content/blog/applications-are-open-for-filecoin-plus-notary-elections.md
@@ -71,7 +70,6 @@ pages:
 - content/blog/dzk-foundation-awarded-chainlink-filecoin-joint-grant-to-support-zk-rollup-research.md
 - content/blog/everything-you-need-to-know-about-fip0036-deliberation-discussion-and-next-steps.md
 - content/blog/ff-x-lockheed-martin-mission-announcement.md
-- content/blog/ffdw-and-connect-humanity-empowering-an-equitable-digital-future.md
 - content/blog/fil-austin-2022-recap-fil-ling-you-in.md
 - content/blog/fil-toronto-2022-recap.md
 - content/blog/filecoin-community-approves-change-to-storage-provider-terminology.md
@@ -138,7 +136,6 @@ pages:
 - content/blog/storing-ai-datasets-on-the-decentralized-web.md
 - content/blog/supporting-the-community-the-filecoin-storage-provider-group.md
 - content/blog/surveying-the-filecoin-community-priorities-and-opportunities-for-2022.md
-- content/blog/test.md
 - content/blog/thanks-for-participating-in-fip-0014.md
 - content/blog/the-filecoin-foundation-announces-50-000-fil-grant-to-the-internet-archive.md
 - content/blog/the-filecoin-virtual-machine-has-arrived.md
