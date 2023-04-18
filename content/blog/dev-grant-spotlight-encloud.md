@@ -21,7 +21,7 @@ Today, many companies are forced to invest significant resources into the cloud 
 
 Funded by a developer grant from Filecoin Foundation, [encloud](http://encloud.tech/) enables the next generation of scaling tech companies to commercialize sensitive data by solving these issues.
 
-Encloud is creating an off-the-shelf web services portal for the decentralized cloud. The application will be the entry point to access cost-effective and privacy oriented cloud services. The offering includes enterprise standard envelope encryption as default, privacy enhanced compute, and a non custodial key management service. It also leverages the distributed and resilient design of Filecoin via a frictionless and intuitive user interface. More, encloud’s application enable recurring commercial collaboration through technology, like data unions.
+Encloud is creating an off-the-shelf web services portal for the decentralized cloud. The application will be the entry point to access cost-effective and privacy oriented cloud services. The offering includes enterprise standard envelope encryption as default, privacy enhanced compute, and a non custodial key management service. It also leverages the distributed and resilient design of Filecoin via a frictionless and intuitive user interface. More, encloud’s application enables recurring commercial collaboration through technology, like data unions.
 
 With the grant, encloud is building privacy services at scale for data on IPFS and Filecoin. This grant is the second in a series of dev grants which is ultimately intended to enable encloud to offer its command line interface and user application on an open-source basis to a wide audience.
 
