@@ -23,7 +23,7 @@ export default {
       { from: '/philosophy', to: '/about/#intro_1' },
       { from: '/team', to: '/about/#board-panel' },
       { from: '/publicdata', to: '/public-data' },
-      { from: '/publicdata/awards', to: '/public-data/awards' }
+      { from: '/publicdata/awards', to: '/public-data/awards' },
       { from: 'https://plus.fil.org', to: 'https://filplus.fil.org' }
     ]
   },
