@@ -7,7 +7,7 @@ on:
 
 jobs:
   auto-approve:
-    if: ${{ github.head_ref == 'content'}}
+    if: ${{ github.head_ref == 'manual-update'}}
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
